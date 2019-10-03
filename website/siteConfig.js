@@ -27,25 +27,24 @@ const users = [
 const siteConfig = {
   title: "Open Attestation", // Title for your website.
   tagline: "Document Notarisation Framework",
-  url: "https://your-docusaurus-test-site.com", // Your website URL
+  url: "https://openattestation.com", // Your website URL
   baseUrl: "/", // Base URL for your project */
   // For github.io type URLs, you would set the url and baseUrl like:
   //   url: 'https://facebook.github.io',
   //   baseUrl: '/test-site/',
 
   // Used for publishing and more
-  projectName: "test-site",
-  organizationName: "facebook",
+  projectName: "website",
+  organizationName: "Open-Attestation",
   // For top-level user or org sites, the organization is still the same.
   // e.g., for the https://JoelMarcey.github.io site, it would be set like...
   //   organizationName: 'JoelMarcey'
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    { doc: "doc1", label: "Docs" },
-    { doc: "doc4", label: "API" },
+    { doc: "getting-started", label: "Docs" },
     { page: "help", label: "Help" },
-    { blog: true, label: "Blog" }
+    // { blog: true, label: "Blog" }
   ],
 
   // If you have users set above, you add it here:
@@ -69,7 +68,7 @@ const siteConfig = {
   // },
 
   // This copyright info is used in /core/Footer.js and blog RSS/Atom feeds.
-  copyright: `Copyright © ${new Date().getFullYear()} Your Name or Your Company Name`,
+  copyright: `Copyright © ${new Date().getFullYear()} GovTech Singapore`,
 
   highlight: {
     // Highlight.js theme to use for syntax highlighting in code blocks.

@@ -20,7 +20,8 @@ body {
 }
 
 #feature img {
-  min-height: 80px;
+  min-height: 120px;
+  transform: scale(1.5);
 }
 
 #feature .blockContent h2 {

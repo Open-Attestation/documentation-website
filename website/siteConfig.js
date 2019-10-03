@@ -13,13 +13,13 @@ const users = [
   {
     caption: "OpenCerts",
     image: "/img/partners/opencerts.svg",
-    infoLink: "https://www.facebook.com",
+    infoLink: "https://opencerts.io",
     pinned: true
   },
   {
     caption: "TradeTrust",
     image: "/img/partners/tradetrust.svg",
-    infoLink: "https://www.facebook.com",
+    infoLink: "https://tradetrust.io",
     pinned: true
   }
 ];

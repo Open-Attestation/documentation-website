@@ -209,7 +209,12 @@ class Index extends React.Component {
               src={user.image}
               alt={user.caption}
               title={user.caption}
-              style={{ width: 200, height: "auto" }}
+              style={{
+                width: 300,
+                height: "auto",
+                filter: "contrast(0) sepia(100%) hue-rotate(170deg) brightness(0.5)",
+                opacity: 0.5
+              }}
             />
           </a>
         ));

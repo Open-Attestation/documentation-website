@@ -58,9 +58,7 @@ class HomeSplash extends React.Component {
           <img src={`${baseUrl}img/logo.gif`} />
           <ProjectTitle siteConfig={siteConfig} />
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl("doc1.html")}>Example Link</Button>
-            <Button href={docUrl("doc2.html")}>Example Link 2</Button>
+            <Button href={docUrl("getting-started.html")}>Get Started</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -212,7 +210,8 @@ class Index extends React.Component {
               style={{
                 width: 300,
                 height: "auto",
-                filter: "contrast(0) sepia(100%) hue-rotate(170deg) brightness(0.5)",
+                filter:
+                  "contrast(0) sepia(100%) hue-rotate(170deg) brightness(0.5)",
                 opacity: 0.5
               }}
             />

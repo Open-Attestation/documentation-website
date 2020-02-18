@@ -27,3 +27,8 @@ body {
 #feature .blockContent h2 {
   font-size: 1.5em;
 }
+
+header a:hover {
+  color: white;
+  text-decoration: none;
+}

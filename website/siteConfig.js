@@ -22,11 +22,20 @@ const siteConfig = {
   organizationName: "Open-Attestation",
   headerLinks: [
     { doc: "getting-started", label: "Docs" },
-    { page: "help", label: "Help" },
+    { page: "help", label: "Help" }
     // { blog: true, label: "Blog" }
   ],
   users,
-
+  presets: [
+    [
+      "@docusaurus/preset-classic",
+      {
+        theme: {
+          customCss: require.resolve("./static/css/bootstrap.css")
+        }
+      }
+    ]
+  ],
   /* path to images for header/footer */
   // headerIcon: 'img/favicon.ico',
   // footerIcon: 'img/favicon.ico',

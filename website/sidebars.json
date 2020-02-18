@@ -1,10 +1,31 @@
 {
   "docs": {
-    "Getting Started": ["getting-started"],
-    "First Category": ["doc2"],
-    "Second Category": ["doc3", "doc6", "doc7", "doc8"]
-  },
-  "docs-other": {
-    "First Category": ["doc4", "doc5"]
+    "Overview": ["getting-started", "roadmap"],
+    "Verifiable Document": [
+      "verifiable-document/overview",
+      "verifiable-document/document-store",
+      "verifiable-document/dns-proof",
+      "verifiable-document/document-data",
+      "verifiable-document/document-template",
+      "verifiable-document/issuing-document"
+    ],
+    "Transferable Record": [
+      "transferable-record/overview",
+      "transferable-record/token-registry",
+      "transferable-record/issuing-transferable-record"
+    ],
+    "OpenAttestation Components": [
+      "component/overview",
+      "component/identity-wallet",
+      "component/open-attestation",
+      "component/oa-verify",
+      "component/decentralized-renderer-react-components",
+      "component/oa-encryption"
+    ],
+    "Extending OpenAttestation": [
+      "extension/overview",
+      "extension/verification-methods",
+      "extension/identity-proofs"
+    ]
   }
 }

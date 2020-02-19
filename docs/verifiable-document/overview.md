@@ -16,7 +16,7 @@ By the end of this tutorial you would be able to create your "Certificate of Com
 
 ## Overview of Components
 
-![Overview of Components](./overview.png)
+![Overview of Components](/docs/verifiable-document/overview/overview.png)
 
 ### Document Store Smart Contract
 

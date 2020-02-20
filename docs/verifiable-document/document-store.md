@@ -50,4 +50,4 @@ After clicking on "Deploy", you will be asked to confirm the transaction in a se
 
 Once your document store smart contract has been successfully deployed, you will see the success message with the `Store Address`.
 
-Save this value for future reference.
+> Save this value for future reference.

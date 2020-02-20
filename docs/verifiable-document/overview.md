@@ -4,15 +4,17 @@ title: Verifiable Document Overview
 sidebar_label: Overview
 ---
 
-Verifiable documents forms the core of the OpenAttestation(OA) Framework. In this quick start guide, you will be deploying your first verifiable document.
+Verifiable documents form the core of the OpenAttestation(OA) Framework. In this quick start guide, you will be deploying your first verifiable document.
 
 ## Goal
 
-By the end of this tutorial you would be able to create your "Certificate of Completion" that is valid on any OA Viewer connected to the Ethereum ropsten network. From there, you may:
+By the end of this tutorial you would be able to create your "Certificate of Completion" that is valid on any OA Viewer connected to the Ethereum ropsten network.
 
-1. Change the data structure of the document to suite your needs
-1. Change the rendering of the document to reflect your document styles
-1. Change the backend to use Ethereum main network
+With these knowledge you will be able to create OA documents according to your own business needs by:
+
+1. Changing the data structure of the document to suite your needs
+1. Changing the rendering of the document to reflect your document styles
+1. Changing the backend to use Ethereum main network
 
 ## Overview of Components
 
@@ -24,7 +26,7 @@ When a document is being issued, a proof of the issuance is store onto the Ether
 
 ### DNS Records
 
-A domain is required to issue an OA file. A DNS record will be inserted to the DNS to assert the identity of the OA document creator.
+A domain is required to issue an OA file. A DNS record must be inserted to the DNS to assert the identity of the OA document creator.
 
 ### Verifiable Document File
 
@@ -33,7 +35,6 @@ Machine-readable data of the document is stored in a .json file. On top of the d
 - claim of issuer's identity
 - document rendering information
 - document store smart contract
-- cryptographic setup to enable selective privacy within the document
 
 ### Decentralized Renderer
 

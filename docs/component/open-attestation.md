@@ -4,7 +4,15 @@ title: OpenAttestation Wrapper SDK (javascript)
 sidebar_label: Wrapper SDK (javascript)
 ---
 
-OA provides a wrapper tool for node platform, to prepare your documents before issuing them into the Blockchain.
+The OpenAttestation SDK (javascript) is a npm module that allows you to manipulate OA documents programmatically. This is useful if you are building your own API or web components. Some common use cases where you need this module:
+- [Generating OA documents from external data sources programmatically](#wrapping-documents)
+- [Extracting data from OA documents programmatically](#retrieving-document-data)
+- [Programmatic selective disclosure of data fields from issued OA documents](#obfuscating-data)
+
+This module does not provide the following functionality:
+- Programmatic verification of OA documents (refer to [Verification SDK (javascript)](/docs/component/oa-verify))
+- Encryption or decryption of OA documents (refer to [Encryption SDK (javascript)](/docs/component/oa-encryption))
+- Programmatic issuance/revocation of document on the Ethereum blockchain
 
 ## Installation
 

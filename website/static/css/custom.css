@@ -15,10 +15,6 @@
 @media only screen and (min-width: 1500px) {
 }
 
-body {
-  font-family: "Source Code Pro", "monospace";
-}
-
 #feature img {
   min-height: 120px;
   transform: scale(1.5);

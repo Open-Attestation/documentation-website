@@ -15,7 +15,7 @@ For the moment, the application is not available on Apple store or Android store
 
 <img src="/docs/component/identity-wallet/identity-wallet-qr-code.png" alt="identity wallet qr code" title="scan the qr code with expo" width="200"/>
 
-<img src="/img/common/party-popper.png" alt="Congratulations" style="display:inline-block; width: 1.3rem"/> Congratulations, you are now able to use Identity Wallet application.
+🎉 Congratulations, you are now able to use Identity Wallet application.
 
 ## Documents
 

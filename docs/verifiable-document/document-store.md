@@ -9,8 +9,7 @@ The document store is a smart contract on the Ethereum network that records the 
 ## Pre-requisite
 
 - Chrome browser
-- Metamask connected to `ropsten` network
-- Ethereum wallet initialized with `ropsten ethers`
+- Metamask setup
 
 A guide to setting up metamask is available in ["Test Account Setup"](/docs/appendix/ropsten-setup) in the appendix.
 

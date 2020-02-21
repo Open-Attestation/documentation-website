@@ -247,7 +247,7 @@ const wrappedDocumentData = getData(wrapDocument); // wrappedDocumentData and do
 ### Obfuscating data
 `obfuscateDocument` removes a key-value pair from the document's data section, without causing the file hash to change. This can be used to generate a new document containing a subset of the original data, yet allow the recipient to prove the provenance of the document.
 
-Let's hide the "transcript.name" field:
+Let's hide the `transcript.name` field:
 ```
 const { wrapDocument, obfuscateDocument } = require("@govtechsg/open-attestation");
 const util = require("util");
@@ -297,15 +297,15 @@ In the output, the `transcript.name` field is not available anymore, and a new h
 ```
 
 ### Typescript
-This module has been build with typescript and provide useful types:
+This module is built with typescript and provides useful types:
 - `import {v2} from "@govtechsg/open-attestation"` to get correct typings over [OA schema](https://raw.githubusercontent.com/Open-Attestation/open-attestation/master/src/schema/2.0/schema.json). For instance `v2.OpenAttestationDocument` to get full details about a valid document structure.
 - `import {WrappedDocument} from "@govtechsg/open-attestation"` to get correct typings for wrapped documents. You can provide a specific type to this helper: `WrappedDocument<v2.OpenAttestationDocument>`. Using this helper is specifically useful when combining with `getData`, so that the return of the function is correctly typed.
 - `import {utils} from "@govtechsg/open-attestation"`:
   - `utils.isWrappedV2Document`: type guard.
 
 ## Additional information
-- Found a bug ? Having a question ? Want to share an idea ? Reach us out on the [Github repository](https://github.com/Open-Attestation/open-attestation).
-- We are currently building a new version of the schema, compatible with W3C VC. This is very experimental and whatever is available for v2 document is also available for v3 documents:
+- Found a bug? Have a question? Want to share an idea? Reach us on the [Github repository](https://github.com/Open-Attestation/open-attestation).
+- We are currently building a new version of the schema, compatible with W3C VC. This is very experimental and whatever is available for v2 documents are also available for v3 documents:
   - [OA schema v3](https://raw.githubusercontent.com/Open-Attestation/open-attestation/master/src/schema/3.0/schema.json)
   - Typings: `import {v3} from "@govtechsg/open-attestation"`.
   - Type guard: `utils.isWrappedV3Document`.

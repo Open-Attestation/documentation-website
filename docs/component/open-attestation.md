@@ -241,7 +241,7 @@ const { wrapDocument, getData } = require("@govtechsg/open-attestation");
 const document = require("./document.json");
 
 const wrappedDocument = wrapDocument(document);
-const wrappedDocumentData = getData(wrapDocument); // wrappedDocumentData and document are identical
+const wrappedDocumentData = getData(wrappedDocument); // wrappedDocumentData and document are identical
 ```
 
 ### Obfuscating data

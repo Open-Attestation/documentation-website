@@ -201,9 +201,9 @@ console.log(validateSchema(wrappedDocument)); // true
 ```
 
 #### Validating the content
-`verifysignature` checks that the signature of the document corresponds to the actual content in the document. In addition, it checks that the target hash (hash of the document content), is part of the set of documents wrapped in the batch using the proofs.
+`verifySignature` checks that the signature of the document matches the content in the document. If the document was wrapped in a batch, it also checks that the document was indeed part of the batch by using `proof` and `merkleRoot`.
 
-Note that this method does not check against the blockchain or any registry if this document has been published. The merkle root of this document need to be checked against a publicly accessible document store (can be a smart contract on the blockchain).
+Note that this method does not check if the document was published on the blockchain or any registry. To verify whether it was published, the merkle root of this document needs to be checked against a publicly accessible document store (can be a smart contract on the blockchain).
 ```javascript
 const { verifySignature } = require("@govtechsg/open-attestation");
 const wrappedDocument = {

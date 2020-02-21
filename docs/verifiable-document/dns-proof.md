@@ -6,13 +6,13 @@ sidebar_label: Configuring DNS
 
 Every OA document's provenance can be verified and traced back to it's creator or issuer. This is achieved by embedding an `identityProof` in the document which serves as a claim of identity. During the verification phase, the claim is checked against external records.
 
-In this guide, we will use tie the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in a complaint viewer.
+In this guide, we will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in a complaint viewer.
 
 ## Example
 
 ![Example Issuer Identity](/docs/verifiable-document/dns-proof/example.png)
 
-In this example, the document's issuer is `DEMO.TRADETRUST.IO`.
+In this example, the document's issuer is bound to `DEMO.TRADETRUST.IO`.
 
 ## Pre-requisite
 
@@ -22,7 +22,7 @@ To bind the domain name to the issuer's identity, you must be able to change the
 
 ## Inserting the DNS Record
 
-As an issuer, you will need to add a DNS TXT record to your domain name. The exact steps to achieve this can be confirmed with your domain name registrar, this is usually achieved through your domain administration web UI.
+You will need to add a DNS TXT record to your domain name. The exact steps to achieve this can be confirmed with your domain name registrar, this is usually achieved through your domain administration web UI.
 
 Select a domain name that you will like to associate with your documents. The domain can either be the root domain (ie. openattestation.com) or a subdomain (ie issuer.openattestation.com). Using the root domain will be recommended as it will be easier for viewers of your documents to recognize.
 

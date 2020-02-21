@@ -44,7 +44,7 @@ openatts net=ethereum netId=3 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812
 
 ![Google DNS to Test](/docs/verifiable-document/dns-proof/google-dns.png)
 
-> After the update, you may need to wait up to 24 hrs for the DNS to propagate.
+> After the update, you may need to wait up to 24 hrs for the DNS to propagate. You may continue with the other parts of the guide while waiting for DNS to propagate.
 
 After adding the `TXT`record, you may check that the record has been inserted correctly by viewing with https://dns.google.com/.
 

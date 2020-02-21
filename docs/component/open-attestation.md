@@ -77,8 +77,8 @@ Will display:
 }
 ```
 Note: 
-- Every time you run `wrapDocument`, it will create different hashes (in front of every field in the data object), `targetHash` and `merkleRoot`.
-- `targetHash` and `merkleRoot` are always the same when wrapping one document.
+- Every time you run `wrapDocument`, a salt is generated in front of each field in the data object to prevent reversing the obfuscation on fields with easily guessable content. `targetHash` and `merkleRoot` also change.
+- If you are wrapping one document, `targetHash` and `merkleRoot` are equivalent.
 
 #### Wrapping multiple documents
 ```javascript

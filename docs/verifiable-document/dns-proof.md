@@ -4,15 +4,15 @@ title: Configuring DNS
 sidebar_label: Configuring DNS
 ---
 
-Every OA document's provenance can be verified and traced back to it's creator or issuer. This is achieved by embedding an `identityProof` in the document which serves as a claim of identity. During the verification phase, the claim is checked against external records.
+Every OA document's provenance can be verified and traced back to its creator or issuer. This is achieved by embedding an `identityProof` in the document which serves as a claim for identity. During the verification phase, the claim is checked against external records.
 
-In this guide, we will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in a complaint viewer.
+In this guide, we will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in a compliant viewer.
 
 ## Example
 
 ![Example Issuer Identity](/docs/verifiable-document/dns-proof/example.png)
 
-In this example, the document's issuer is bound to `DEMO.TRADETRUST.IO`.
+In this example, the document's issuer is bound to `DEMO.OPENATTESTATION.COM`.
 
 ## Pre-requisite
 
@@ -32,7 +32,7 @@ Using the domain web UI, insert a `TXT` record into the DNS in the following for
 openatts net=ethereum netId=3 addr=&lt;DOCUMENT_STORE_ADDRESS&gt;
 ```
 
-where `DOCUMENT_STORE_ADDRESS` is the document store smart contract address obtained [in the previous guide](/docs/verifiable-document/document-store/).
+where `<DOCUMENT_STORE_ADDRESS>` is the document store smart contract address obtained [in the previous guide](/docs/verifiable-document/document-store/).
 
 An example of a valid `TXT` record is as shown:
 

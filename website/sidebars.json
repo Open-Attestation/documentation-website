@@ -5,8 +5,8 @@
       "verifiable-document/overview",
       "verifiable-document/document-store",
       "verifiable-document/dns-proof",
-      "verifiable-document/document-data",
       "verifiable-document/document-template",
+      "verifiable-document/document-data",
       "verifiable-document/issuing-document"
     ],
     "Transferable Record": [

@@ -4,8 +4,285 @@ title: Deploying Document Renderer
 sidebar_label: Deploying Document Renderer
 ---
 
-Overview
+OA documents are both readable by machines as well as humans. Every OA document file is stored in `.json` format, allowing any applications to process the content within. To present the data file in a human readable format, a renderer need to be written to display the data in a familiar format to humans. This renderer is a static website that will be embedded in compliant OA viewer.
 
-## Header
+In this guide, we will build and deploy the renderer to display data from a "Certificate of Completion".
 
-TBD
+## Pre-requisite
+
+- [git](https://git-scm.com/downloads)
+- [node.js](https://nodejs.org/en/download/)
+- [Github account](https://github.com/)
+- [Netlify account](https://www.netlify.com/)
+- [Basic react.js knowledge](https://reactjs.org/)
+
+## Clone Decentralized Renderer React Template
+
+A template for building your own document renderer has been created for you at https://github.com/Open-Attestation/decentralized-renderer-react-template.
+
+### Clone code repository locally
+
+```sh
+git clone https://github.com/Open-Attestation/decentralized-renderer-react-template.git
+```
+
+### Install code dependencies
+
+```sh
+cd decentralized-renderer-react-template
+npm install
+```
+
+### Run development preview
+
+```sh
+npm run storybook
+```
+
+### Development environment
+
+![Default Story Book View](/docs/verifiable-document/document-template/default-storybook.png)
+
+After running the storybook, you should be able to see the default template provided at http://localhost:6006/.
+
+This is a live preview where you can:
+
+1. edit the raw document data in the "Knobs" tab
+1. edit the template code to render the data
+
+## Creating raw document data
+
+In the "Knobs" tab of storybook, replace the document data with the following:
+
+```json
+{
+  "$template": {
+    "name": "COC",
+    "type": "EMBEDDED_RENDERER",
+    "url": "http://localhost:3000"
+  },
+  "name": "OpenAttestation Tutorial Certificate of Completion",
+  "recipient": {
+    "name": "John Doe"
+  }
+}
+```
+
+In the above document data, you see three root objects:
+
+### 1. \$template
+
+The `$template` key to describe the template name used to render this display.
+
+`$template.type` will always take the value of `EMBEDDED_RENDERER` for documents rendered in this manner.
+
+`$template.name` is the name of the template used to render a given OA document. This allows a single document renderer to render for multiple types of OA documents; each with a different template name.
+
+### 2. name
+
+The `name` key is a compulsory key to describe the type of OA document. In this case, we are creating a `OpenAttestation Tutorial Certificate of Completion`.
+
+### 3. recipient
+
+OA documents do not have strict data structure and allows issuers of documents to define their own data schema. The `recipient` object is a user-defined object that describes who the certificate is conferred to. In this case, you may replace `John Doe` with your name.
+
+In the next section, you will learn more about the OA document schema and how you may defined your own data structure, but for now, we will stick to this simple document data.
+
+## Developing the renderer
+
+### Copying the provided template
+
+```sh
+cp -r src/templates/customTemplate src/templates/coc
+```
+
+Copy the entire "customTemplate" folder in `src/templates/customTemplate` and renamed it as "coc" in `src/templates/coc`.
+
+This will create an unique template just to render `COC` templates later.
+
+### Preparing template storybook
+
+Update the storybook code in `src/templates/coc/CustomTemplate.stories.mdx` to the following to create a new storybook story for the new COC template.
+
+```md
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { CustomTemplate } from "./customTemplate";
+import { customTemplateCertificate } from "../sample";
+
+<Meta title="MDX|COC Template" component={CustomTemplate} />
+
+# CustomTemplate component
+
+<Description of={CustomTemplate} />
+
+# Props
+
+<Props of={CustomTemplate} />
+
+# Usage
+
+<Preview>
+  <Story name="basic sample">
+    <CustomTemplate document={object("document", customTemplateCertificate)} />
+  </Story>
+</Preview>
+```
+
+### Update sample document data and type
+
+To update the raw document data and the corresponding data type, you will need to update the data definition file in `src/templates/coc/samples.ts`:
+
+```js
+import { Document } from "@govtechsg/decentralized-renderer-react-components";
+
+export interface CustomTemplateCertificate extends Document {
+  name: string;
+  recipient: {
+    name: string
+  };
+}
+
+export const customTemplateCertificate: CustomTemplateCertificate = {
+  name: "OpenAttestation Tutorial Certificate of Completion",
+  recipient: {
+    name: "John Doe"
+  },
+  $template: {
+    name: "custom",
+    type: "EMBEDDED_RENDERER",
+    url: "http://localhost:3000"
+  }
+};
+```
+
+### Registering the COC template
+
+`src/templates/index.tsx` is a directory of all the templates available in this renderer.
+
+To register a new template, simply add it as a key to the `registry` constant. Take note that the key will be the `$template.name` value defined in the document data.
+
+Replace `src/templates/index.tsx` with the following code to add the new `COC` template:
+
+```js
+import { TemplateRegistry } from "@govtechsg/decentralized-renderer-react-components";
+import { templates as defaultTemplate } from "./customTemplate";
+import { templates as cocTemplate } from "./coc";
+
+export const registry: TemplateRegistry<any> = {
+  default: defaultTemplate,
+  COC: cocTemplate
+};
+```
+
+### Multiple views for a Template
+
+An OA document may have multiple views, each of them rendered in a separate tabs. The views are defined in the `templates` array in `index.tsx` of the template folder. Each of these views can have its own id, label and template code.
+
+For our Certificate of Completion, we will only use a single view. So we will remove any additional views and rename the first view's label as "Certificate".
+
+Replace the code in `src/templates/coc/index.tsx` with the following:
+
+```js
+import { CustomTemplate } from "./customTemplate";
+
+export const templates = [
+  {
+    id: "certificate",
+    label: "Certificate",
+    template: CustomTemplate
+  }
+];
+```
+
+### Developing the COC Template View
+
+Finally, once all the components have been wired up, we may proceed to style our Certificate of Completion.
+
+To change how the data is being renderered, we simply create a React component that takes in the raw document in the `document` props and render the corresponding HTML code.
+
+For our COC, we will simply display the following text:
+
+```text
+OpenAttestation Tutorial Certificate of Completion
+awarded to
+John Doe
+```
+
+To do so, you may update the template code in `src/templates/coc/customTemplate.tsx` to the following:
+
+```js
+import React, { FunctionComponent } from "react";
+import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
+import { css } from "@emotion/core";
+import { CustomTemplateCertificate } from "../sample";
+import { PrintWatermark } from "../../core/PrintWatermark";
+
+const containerStyle = css`
+  background-color: #324353;
+  color: #ffffff;
+  padding: 15px;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+`;
+
+export const CustomTemplate: FunctionComponent<
+  TemplateProps<CustomTemplateCertificate> & { className?: string }
+> = ({ document, className = "" }) => {
+  return (
+    <div css={containerStyle} className={className} id="custom-template">
+      <PrintWatermark />
+      <h1>{document.name}</h1>
+      <div>awarded to</div>
+      <h2>{document.recipient.name}</h2>
+    </div>
+  );
+};
+```
+
+### Completion
+
+![Completed Story Book View](/docs/verifiable-document/document-template/completed-storybook.png)
+
+Once that template code has been updated, you will see that the storybook component has been updated to reflect the change.
+
+Now, your document renderer is ready to be built and deployed online.
+
+## Deploying Document Renderer
+
+### Remove existing git data
+
+```sh
+rm -rf .git
+```
+
+### Push code to github.com
+
+Create a new repository in github and the code to the new repository. For a step-by-step guide to import source code to github, you may read [this guide](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line).
+
+### Deploy site from netlify.com
+
+Once you have your code on github.com, you may build and deploy the site from netlify.com.
+
+![Create a new site on netlify](/docs/verifiable-document/document-template/netlify-new.png)
+
+Select "New Site From Git" and then "GitHub".
+
+![Build settings](/docs/verifiable-document/document-template/netlify-build.png)
+
+On the build page, enter `npm run build` as the "Build command" and `dist` as the "Publish Directory" and click on "Deploy Site".
+
+![Sample Deployed URL](/docs/verifiable-document/document-template/netlify-deployed.png)
+
+Once the site has been deployed, you will obtain the url to the document renderer site. In the above example, the url is `https://frosty-joliot-c02c3d.netlify.com/`.
+
+Note that the website will be an empty page when viewed directly.
+
+> Save the website url for future reference.
+
+## Additional Note for Production Document Renderer
+
+It is recommended to use a custom domain you own for the document renderer website in production. This prevents locking in to any specific third party hosting provider.
+
+If you are using netlify, you may check out [how to enable custom domains](https://docs.netlify.com/domains-https/custom-domains/).

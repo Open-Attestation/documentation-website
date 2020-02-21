@@ -23,7 +23,7 @@ This module does not provide the following functionality:
 
 ### Wrapping documents
 
-Before starting to play with the library, create a file name `document.json` with the following content:
+Before starting to play with the library, create a file named `document.json` with the following content:
 ```json
 {
   "issuers": [
@@ -116,7 +116,7 @@ const wrappedDocument = wrapDocument(document);
 console.log(util.inspect(wrappedDocument, { showHidden: false, depth: null }));
 ```
 
-Running the code will output that the document is not valid, because the issuers property is required:
+Running the code will output that the document is not valid, because the `issuers` property is required:
 ```javascript
 Error: Invalid document
     at new SchemaValidationError
@@ -133,9 +133,9 @@ validationErrors: [
 ```
 
 #### Adding data
-You are free to add the data you want in the document. OA only cares about the data it needs to work and doesn't perform extra verification on the additional data you provide.
+You are free to add additional data you want in the document. OA only cares about the data it needs to work and doesn't perform extra verification on the additional data you provide.
 
-Let' add more data into the document:
+Let's add more data into the document:
 ```json
 {
   "issuers": [

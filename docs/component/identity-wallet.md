@@ -27,5 +27,4 @@ In the gallery you will find 2 different kinds of documents, viewable and storab
 
 ## Additional information
 - Identity Wallet implementation follow our [Universal Actions ADR](https://github.com/Open-Attestation/adr/blob/master/universal_actions.md).
-- Found a bug ? Having a question ? Want to share an idea ? Reach us out on the [Github repository](https://github.com/Open-Attestation/identity-wallet).
-
+- Found a bug? Have a question? Want to share an idea? Reach us on the [Github repository](https://github.com/Open-Attestation/identity-wallet).

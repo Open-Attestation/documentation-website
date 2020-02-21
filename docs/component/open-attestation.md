@@ -23,7 +23,7 @@ This module does not provide the following functionality:
 
 ### Wrapping documents
 
-Before starting to play with the library, create a file name `document.json` having the following content:
+Before starting to play with the library, create a file name `document.json` with the following content:
 ```json
 {
   "issuers": [
@@ -77,7 +77,7 @@ Will display:
 }
 ```
 Note: 
-- Every time you run `wrapDocument`, it will create different hashes (in front of every fields in the data object), `targetHash` and `merkleRoot`.
+- Every time you run `wrapDocument`, it will create different hashes (in front of every field in the data object), `targetHash` and `merkleRoot`.
 - `targetHash` and `merkleRoot` are always the same when wrapping one document.
 
 #### Wrapping multiple documents

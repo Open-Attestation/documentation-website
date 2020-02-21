@@ -4,7 +4,7 @@ title: OpenAttestation Wrapper SDK (javascript)
 sidebar_label: Wrapper SDK (javascript)
 ---
 
-The OpenAttestation SDK (javascript) is a npm module that allows you to manipulate OA documents programmatically. This is useful if you are building your own API or web components. Some common use cases where you need this module:
+The OpenAttestation SDK (JavaScript) is a npm module that allows you to manipulate OA documents programmatically. This is useful if you are building your own API or web components. Some common use cases of this module:
 - [Generating OA documents from external data sources programmatically](#wrapping-documents)
 - [Extracting data from OA documents programmatically](#retrieving-document-data)
 - [Programmatic selective disclosure of data fields from issued OA documents](#obfuscating-data)

@@ -4,9 +4,11 @@ title: Deploying Document Renderer
 sidebar_label: Deploying Document Renderer
 ---
 
-OA documents are both readable by machines as well as humans. Every OA document file is stored in `.json` format, allowing any applications to process the content within. To present the data file in a human readable format, a renderer need to be written to display the data in a familiar format to humans. This renderer is a static website that will be embedded in compliant OA viewer.
+OA documents are both readable by machines as well as by humans. Every OA document file is stored in `.json` format, allowing any applications to process the content within. To present the data file in a human readable format, a renderer needs to be written.
 
 In this guide, we will build and deploy the renderer to display data from a "Certificate of Completion".
+
+This renderer is a static website that will be embedded in compliant OA viewer. It will take in the OA document in the unwrapped form and generates the corresponding HTML code for rendering.
 
 ## Pre-requisite
 
@@ -24,6 +26,7 @@ A template for building your own document renderer has been created for you at h
 
 ```sh
 git clone https://github.com/Open-Attestation/decentralized-renderer-react-template.git
+rm -rf .git
 ```
 
 ### Install code dependencies
@@ -45,12 +48,12 @@ npm run storybook
 
 After running the storybook, you should be able to see the default template provided at http://localhost:6006/.
 
-This is a live preview where you can:
+This is a live preview where you can see the changes when you:
 
-1. edit the raw document data in the "Knobs" tab
+1. edit the unwrapped document data in the "Knobs" tab
 1. edit the template code to render the data
 
-## Creating raw document data
+## Creating unwrapped document data
 
 In the "Knobs" tab of storybook, replace the document data with the following:
 
@@ -98,7 +101,7 @@ cp -r src/templates/customTemplate src/templates/coc
 
 Copy the entire "customTemplate" folder in `src/templates/customTemplate` and renamed it as "coc" in `src/templates/coc`.
 
-This will create an unique template just to render `COC` templates later.
+This will create a unique template just to render `COC` templates later.
 
 ### Preparing template storybook
 
@@ -131,7 +134,7 @@ import { customTemplateCertificate } from "../sample";
 
 ### Update sample document data and type
 
-To update the raw document data and the corresponding data type, you will need to update the data definition file in `src/templates/coc/samples.ts`:
+To update the unwrapped document data and the corresponding data type, you will need to update the data definition file in `src/templates/coc/samples.ts`:
 
 ```js
 import { Document } from "@govtechsg/decentralized-renderer-react-components";
@@ -199,7 +202,7 @@ export const templates = [
 
 Finally, once all the components have been wired up, we may proceed to style our Certificate of Completion.
 
-To change how the data is being renderered, we simply create a React component that takes in the raw document in the `document` props and render the corresponding HTML code.
+To change how the data is being renderered, we simply create a React component that takes in the unwrapped document in the `document` props and render the corresponding HTML code.
 
 For our COC, we will simply display the following text:
 
@@ -250,12 +253,6 @@ Once that template code has been updated, you will see that the storybook compon
 Now, your document renderer is ready to be built and deployed online.
 
 ## Deploying Document Renderer
-
-### Remove existing git data
-
-```sh
-rm -rf .git
-```
 
 ### Push code to github.com
 

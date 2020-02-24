@@ -53,22 +53,35 @@ This is a live preview where you can see the changes when you:
 1. edit the unwrapped document data in the "Knobs" tab
 1. edit the template code to render the data
 
-## Creating unwrapped document data
+## Developing the renderer
 
-In the "Knobs" tab of storybook, replace the document data with the following:
+Now that we have set up the development environment, we can start writing our renderer. We will first define the data structure of our Certificate of Completion, followed by writing the renderer to render the HTML code corresponding to the data provided.
 
-```json
-{
-  "$template": {
-    "name": "COC",
-    "type": "EMBEDDED_RENDERER",
-    "url": "http://localhost:3000"
-  },
-  "name": "OpenAttestation Tutorial Certificate of Completion",
-  "recipient": {
-    "name": "John Doe"
-  }
+### Update sample document data and type
+
+To update the unwrapped document data and the corresponding data type, you will need to update the data definition file in `src/templates/customTemplate/samples.ts`:
+
+```js
+import { Document } from "@govtechsg/decentralized-renderer-react-components";
+
+export interface CustomTemplateCertificate extends Document {
+  name: string;
+  recipient: {
+    name: string
+  };
 }
+
+export const customTemplateCertificate: CustomTemplateCertificate = {
+  name: "OpenAttestation Tutorial Certificate of Completion",
+  recipient: {
+    name: "John Doe"
+  },
+  $template: {
+    name: "COC",
+    type: "EMBEDDED_RENDERER",
+    url: "http://localhost:3000"
+  }
+};
 ```
 
 In the above document data, you see three root objects:
@@ -91,74 +104,6 @@ OA documents do not have strict data structure and allows issuers of documents t
 
 In the next section, you will learn more about the OA document schema and how you may defined your own data structure, but for now, we will stick to this simple document data.
 
-## Developing the renderer
-
-### Copying the provided template
-
-```sh
-cp -r src/templates/customTemplate src/templates/coc
-```
-
-Copy the entire "customTemplate" folder in `src/templates/customTemplate` and renamed it as "coc" in `src/templates/coc`.
-
-This will create a unique template just to render `COC` templates later.
-
-### Preparing template storybook
-
-Update the storybook code in `src/templates/coc/CustomTemplate.stories.mdx` to the following to create a new storybook story for the new COC template.
-
-```md
-import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
-import { object } from "@storybook/addon-knobs";
-import { CustomTemplate } from "./customTemplate";
-import { customTemplateCertificate } from "../sample";
-
-<Meta title="MDX|COC Template" component={CustomTemplate} />
-
-# CustomTemplate component
-
-<Description of={CustomTemplate} />
-
-# Props
-
-<Props of={CustomTemplate} />
-
-# Usage
-
-<Preview>
-  <Story name="basic sample">
-    <CustomTemplate document={object("document", customTemplateCertificate)} />
-  </Story>
-</Preview>
-```
-
-### Update sample document data and type
-
-To update the unwrapped document data and the corresponding data type, you will need to update the data definition file in `src/templates/coc/samples.ts`:
-
-```js
-import { Document } from "@govtechsg/decentralized-renderer-react-components";
-
-export interface CustomTemplateCertificate extends Document {
-  name: string;
-  recipient: {
-    name: string
-  };
-}
-
-export const customTemplateCertificate: CustomTemplateCertificate = {
-  name: "OpenAttestation Tutorial Certificate of Completion",
-  recipient: {
-    name: "John Doe"
-  },
-  $template: {
-    name: "custom",
-    type: "EMBEDDED_RENDERER",
-    url: "http://localhost:3000"
-  }
-};
-```
-
 ### Registering the COC template
 
 `src/templates/index.tsx` is a directory of all the templates available in this renderer.
@@ -169,14 +114,15 @@ Replace `src/templates/index.tsx` with the following code to add the new `COC` t
 
 ```js
 import { TemplateRegistry } from "@govtechsg/decentralized-renderer-react-components";
-import { templates as defaultTemplate } from "./customTemplate";
-import { templates as cocTemplate } from "./coc";
+import { templates } from "./customTemplate";
 
 export const registry: TemplateRegistry<any> = {
-  default: defaultTemplate,
-  COC: cocTemplate
+  default: templates,
+  COC: templates
 };
 ```
+
+*Note: The `default` template is a special template that will be used as the fallback template when a template of the correct name cannot be found.*
 
 ### Multiple views for a Template
 
@@ -184,7 +130,7 @@ An OA document may have multiple views, each of them rendered in a separate tabs
 
 For our Certificate of Completion, we will only use a single view. So we will remove any additional views and rename the first view's label as "Certificate".
 
-Replace the code in `src/templates/coc/index.tsx` with the following:
+Replace the code in `src/templates/customTemplate/index.tsx` with the following:
 
 ```js
 import { CustomTemplate } from "./customTemplate";
@@ -212,7 +158,7 @@ awarded to
 John Doe
 ```
 
-To do so, you may update the template code in `src/templates/coc/customTemplate.tsx` to the following:
+To do so, you may update the template code in `src/templates/customTemplate/customTemplate.tsx` to the following:
 
 ```js
 import React, { FunctionComponent } from "react";

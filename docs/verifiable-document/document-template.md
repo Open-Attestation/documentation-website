@@ -199,7 +199,7 @@ Now, your document renderer is ready to be built and deployed online.
 
 ### Push code to github.com
 
-Create a new repository in github and the code to the new repository. For a step-by-step guide to import source code to github, you may read [this guide](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line).
+Create a new repository in github and push the code to the new repository. For a step-by-step guide to import source code to github, you may read [this guide](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line).
 
 ### Deploy site from netlify.com
 

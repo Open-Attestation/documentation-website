@@ -26,13 +26,13 @@ A template for building your own document renderer has been created for you at h
 
 ```sh
 git clone https://github.com/Open-Attestation/decentralized-renderer-react-template.git
+cd decentralized-renderer-react-template
 rm -rf .git
 ```
 
 ### Install code dependencies
 
 ```sh
-cd decentralized-renderer-react-template
 npm install
 ```
 
@@ -106,9 +106,9 @@ In the next section, you will learn more about the OA document schema and how yo
 
 ### Registering the COC template
 
-`src/templates/index.tsx` is a directory of all the templates available in this renderer.
+`src/templates/index.tsx` is a file containing the configuration of all the templates available in this renderer.
 
-To register a new template, simply add it as a key to the `registry` constant. Take note that the key will be the `$template.name` value defined in the document data.
+To register a new template, simply add it as a key to the `registry` constant. Take note that the key is case sensitive and must match the `$template.name` value defined in the document data.
 
 Replace `src/templates/index.tsx` with the following code to add the new `COC` template:
 
@@ -117,16 +117,13 @@ import { TemplateRegistry } from "@govtechsg/decentralized-renderer-react-compon
 import { templates } from "./customTemplate";
 
 export const registry: TemplateRegistry<any> = {
-  default: templates,
   COC: templates
 };
 ```
 
-*Note: The `default` template is a special template that will be used as the fallback template when a template of the correct name cannot be found.*
-
 ### Multiple views for a Template
 
-An OA document may have multiple views, each of them rendered in a separate tabs. The views are defined in the `templates` array in `index.tsx` of the template folder. Each of these views can have its own id, label and template code.
+An OA document may have multiple views, each of them rendered in a separate tabs. The views are defined in the configuration withing the specific templates. In the repository, one view is declared in `src/templates/customTemplate/index.tsx` within the `templates` array variable.
 
 For our Certificate of Completion, we will only use a single view. So we will remove any additional views and rename the first view's label as "Certificate".
 

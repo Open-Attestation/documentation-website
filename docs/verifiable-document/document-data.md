@@ -55,7 +55,7 @@ The common subcommands you might be interested in are:
 
 The OpenAttestation v2.0 defines the shape of data for the `unwrapped document` - the data before the wrapping process. It is defined in [JSON Schema](https://json-schema.org/) format.
 
-The official OpenAttestation v2.0 schema can be found at https://github.com/Open-Attestation/open-attestation/blob/master/src/schema/2.0/schema.json
+The official OpenAttestation v2.0 schema can be found at https://schema.openattestation.com/2.0/schema.json
 
 ### Using Online Schema Validator
 
@@ -65,7 +65,7 @@ For this guide, we will be using an online JSON Schema validator to help us writ
 
 Visit https://www.jsonschemavalidator.net/
 
-Paste the contents from https://github.com/Open-Attestation/open-attestation/blob/master/src/schema/2.0/schema.json into the left panel under "Select Schema".
+Paste the contents from https://schema.openattestation.com/2.0/schema.json into the left panel under "Select Schema".
 
 This will setup the JSON schema validator to validate the JSON inputs on the right against the defined schema.
 

@@ -22,7 +22,7 @@ This module does not provide the following functionality:
 const { encryptString } = require("@govtechsg/oa-encryption");
 
 const document = {
-  version: "open-attestation/2.0",
+  version: "https://schema.openattestation.com/2.0/schema.json",
   data: {
     issuers: [
       {

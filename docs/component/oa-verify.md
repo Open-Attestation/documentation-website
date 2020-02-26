@@ -21,10 +21,9 @@ This module does not provide the following functionality:
 
 ## Verifying a document
 
-A verification happens on a wrapped document, and it consists of answering to 4 questions:
+A verification happens on a wrapped document, and it consists of answering to some questions:
 - Has the document been tampered with ?
-- Has the document been issued on the Blockchain ?
-- Has the document been revoked ?
+- Is the issuance state of the document valid ?
 - Is the document issuer identity valid ? (see [identity proof](/docs/extension/identity-proofs))
 
 Before starting to play with the library, create a file `document.json` having the following content:

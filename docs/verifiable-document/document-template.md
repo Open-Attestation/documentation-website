@@ -123,7 +123,7 @@ export const registry: TemplateRegistry<any> = {
 
 ### Multiple views for a Template
 
-An OA document may have multiple views, each of them rendered in a separate tabs. The views are defined in the configuration withing the specific templates. In the repository, one view is declared in `src/templates/customTemplate/index.tsx` within the `templates` array variable.
+An OA document may have multiple views, each of them rendered in a separate tabs. The views are defined in the configuration within the specific templates. In the repository, one view is declared in `src/templates/customTemplate/index.tsx` within the `templates` array variable.
 
 For our Certificate of Completion, we will only use a single view. So we will remove any additional views and rename the first view's label as "Certificate".
 

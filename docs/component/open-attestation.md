@@ -54,7 +54,7 @@ Will display:
 
 ```javascript
 {
-  version: 'open-attestation/2.0',
+  version: 'https://schema.openattestation.com/2.0/schema.json',
   data: {
     issuers: [
       {
@@ -176,7 +176,7 @@ console.log(util.inspect(wrappedDocument, { showHidden: false, depth: null }));
 ```javascript
 const { validateSchema } = require("@govtechsg/open-attestation");
 const wrappedDocument = {
-  version: "open-attestation/2.0",
+  version: "https://schema.openattestation.com/2.0/schema.json",
   data: {
     issuers: [
       {
@@ -207,7 +207,7 @@ Note that this method does not check if the document was published on the blockc
 ```javascript
 const { verifySignature } = require("@govtechsg/open-attestation");
 const wrappedDocument = {
-  version: "open-attestation/2.0",
+  version: "https://schema.openattestation.com/2.0/schema.json",
   data: {
     issuers: [
       {
@@ -262,7 +262,7 @@ console.log(util.inspect(obfuscatedDocument, { showHidden: false, depth: null })
 In the output, the `transcript.name` field is not available anymore, and a new hash has been added to `privacy.obfuscatedData`:
 ```javascript
 {
-  version: 'open-attestation/2.0',
+  version: 'https://schema.openattestation.com/2.0/schema.json',
   data: {
     issuers: [
       {

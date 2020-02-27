@@ -28,3 +28,15 @@ header a:hover {
   color: white;
   text-decoration: none;
 }
+
+.productShowcaseSection .blockImage {
+  margin-right: 20px;
+  margin-left: 20px;
+}
+
+.productShowcaseSection .container h2 {
+  font-size: 1.1rem;
+}
+.productShowcaseSection .container h2 div {
+  text-align: center;
+}

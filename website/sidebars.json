@@ -26,13 +26,6 @@
       "extension/verification-methods",
       "extension/identity-proofs"
     ],
-    "Products": [
-      "products/overview",
-      "products/identity-wallet",
-      "products/gallery",
-      "products/opencerts",
-      "products/tradetrust"
-    ],
-    "Appendix": ["appendix/ropsten-setup"]
+    "Appendix": ["appendix/ropsten-setup", "appendix/identity-wallet"]
   }
 }

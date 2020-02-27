@@ -1,3 +1,31 @@
+const products = [
+  {
+    title: "OpenCerts",
+    image: "/img/products/opencerts.png",
+    infoLink: "https://opencerts.io",
+    pinned: true
+  },
+  {
+    title: "OpenAttestation Gallery",
+    image: "/img/products/gallery.png",
+    infoLink: "https://gallery.openattestation.com",
+    pinned: true
+  },
+  {
+    title: "Identity Wallet",
+    image:
+      "/img/products/identity-wallet.png",
+    infoLink: "/docs/appendix/identity-wallet",
+    pinned: true
+  },
+  {
+    title: "TradeTrust",
+    image: "/img/products/tradetrust.png",
+    infoLink: "https://tradetrust.io",
+    pinned: true
+  }
+];
+
 const users = [
   {
     caption: "OpenCerts",
@@ -25,6 +53,7 @@ const siteConfig = {
     { page: "help", label: "Help" }
     // { blog: true, label: "Blog" }
   ],
+  products,
   users,
   presets: [
     [

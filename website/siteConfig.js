@@ -7,7 +7,7 @@ const products = [
   },
   {
     title: "OpenAttestation Gallery",
-    image: "/img/products/gallery.png",
+    image: "/img/products/oa-gallery.png",
     infoLink: "https://gallery.openattestation.com",
     pinned: true
   },

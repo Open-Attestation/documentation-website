@@ -22,7 +22,7 @@ class HomeSplash extends React.Component {
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
     const SplashContainer = props => (
-      <div className="homeContainer">
+      <div className="homeContainer py-5">
         <div className="homeSplashFade">
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
@@ -200,9 +200,9 @@ class Index extends React.Component {
       }
 
       return (
-        <div className="productShowcaseSection paddingTop paddingBottom">
+        <div className="products productShowcaseSection paddingTop paddingBottom">
           <h2>Products built using OpenAttestation</h2>
-          <Block layout="fourColumn">
+          <Block layout="twoColumn">
             {siteConfig.products
               .filter(product => product.pinned)
               .map((product) => ({
@@ -217,10 +217,9 @@ class Index extends React.Component {
     };
 
     return (
-      <div>
+      <div class="content-home">
         <HomeSplash siteConfig={siteConfig} language={language} />
-        <div className="mainContainer">
-          <hr />
+        <div className="mainContainer p-0">
           <WhatIs />
           <Features />
           <Showcase />

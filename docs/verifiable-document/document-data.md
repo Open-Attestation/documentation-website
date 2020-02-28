@@ -205,3 +205,4 @@ oa-documents
 ```
 
 In the `wrapped-document` directory, you will find the wrapped document which can be sent to the recipient later once the document has been issued in the document store in the [next guide](/docs/verifiable-document/issuing-document).
+

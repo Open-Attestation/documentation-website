@@ -16,7 +16,6 @@
     ],
     "OpenAttestation Components": [
       "component/overview",
-      "component/identity-wallet",
       "component/open-attestation",
       "component/oa-verify",
       "component/decentralized-renderer-react-components",
@@ -27,6 +26,6 @@
       "extension/verification-methods",
       "extension/identity-proofs"
     ],
-    "Appendix": ["appendix/ropsten-setup"]
+    "Appendix": ["appendix/ropsten-setup", "appendix/identity-wallet"]
   }
 }

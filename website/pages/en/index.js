@@ -22,7 +22,7 @@ class HomeSplash extends React.Component {
     const docUrl = doc => `${baseUrl}${docsPart}${langPart}${doc}`;
 
     const SplashContainer = props => (
-      <div className="homeContainer">
+      <div className="homeContainer py-5">
         <div className="homeSplashFade">
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
@@ -195,44 +195,31 @@ class Index extends React.Component {
     );
 
     const Showcase = () => {
-      if ((siteConfig.users || []).length === 0) {
+      if ((siteConfig.products || []).length === 0) {
         return null;
       }
 
-      const showcase = siteConfig.users
-        .filter(user => user.pinned)
-        .map(user => (
-          <a href={user.infoLink} key={user.infoLink}>
-            <img
-              src={user.image}
-              alt={user.caption}
-              title={user.caption}
-              style={{
-                width: 300,
-                height: "auto",
-                filter:
-                  "contrast(0) sepia(100%) hue-rotate(170deg) brightness(0.5)",
-                opacity: 0.5
-              }}
-            />
-          </a>
-        ));
-
-      const pageUrl = page => baseUrl + (language ? `${language}/` : "") + page;
-
       return (
-        <div className="productShowcaseSection paddingTop paddingBottom">
-          <h2>Who is Using This?</h2>
-          <div className="logos">{showcase}</div>
+        <div className="products productShowcaseSection paddingTop paddingBottom">
+          <h2>Products built using OpenAttestation</h2>
+          <Block layout="twoColumn">
+            {siteConfig.products
+              .filter(product => product.pinned)
+              .map((product) => ({
+                title: product.title,
+                image: product.image,
+                imageAlt: product.title,
+                imageLink: product.infoLink
+              }))}
+          </Block>
         </div>
       );
     };
 
     return (
-      <div>
+      <div class="content-home">
         <HomeSplash siteConfig={siteConfig} language={language} />
-        <div className="mainContainer">
-          <hr />
+        <div className="mainContainer p-0">
           <WhatIs />
           <Features />
           <Showcase />

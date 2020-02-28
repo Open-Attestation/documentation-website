@@ -28,3 +28,34 @@ header a:hover {
   color: white;
   text-decoration: none;
 }
+
+.content-home .productShowcaseSection:nth-child(odd) {
+  background-color: #f3f3f3;
+}
+
+.content-home .products .blockElement h2 {
+  font-size: 1.1rem;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.content-home .products .blockImage img {
+  max-height: 260px;
+}
+
+.content-home .products .blockElement {
+  margin-bottom: 20px;
+}
+
+.content-home .products .twoByGridBlock {
+  margin-left: 0;
+  margin-right: 0;
+}
+
+.content-home .products .twoByGridBlock .blockImage {
+  flex: 0 1 100%;
+  display: block;
+  margin-left: 10px;
+  margin-right: 10px;
+  max-width: none;
+}

@@ -101,7 +101,7 @@ We will now create the data for your Certificate of Completion. Paste the follow
 }
 ```
 
-We will need to replace a few value from the schema for it to be valid for you:
+Replace the following values for your own Certificate of Completion:
 
 ##### 1. \$template.url
 
@@ -121,7 +121,7 @@ Once all the values are configured and the unwrapped document conforms to the sc
 
 ## Wrapping the document file
 
-Now that we have manually created one unwrapped document data, we will use the CLI to wrap the unwrapped document file. In this step, we will issue an additional Certificate of Completion to another person at the same time to see how the CLI tool can wrap multiple unwrapped documents at the same time.
+Now that we have manually created one unwrapped document data, we will use the CLI to wrap it. In this step, we will issue an additional Certificate of Completion to another person at the same time to see how the CLI tool can wrap multiple unwrapped documents at the same time.
 
 ### Creating the unwrapped document file
 

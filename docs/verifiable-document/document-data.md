@@ -39,7 +39,7 @@ Open Attestation document issuing, verification and revocation tool.
 Commands:
   index.js filter <source> <destination>    Obfuscate fields in the document
   [fields..]
-  index.js batch <raw-dir> <batched-dir>    Combine a directory of documents
+  index.js wrap <unwrapped-dir> <wrapped-dir>    Combine a directory of documents
   [schema]                                  into a document batch
 
 Options:
@@ -47,7 +47,7 @@ Options:
   --version  Show version number                                       [boolean]
 
 The common subcommands you might be interested in are:
-- batch
+- wrap
 - filter
 ```
 
@@ -183,7 +183,7 @@ At the same time a `merkle root`, a 64 character long string prepended with `0x`
 In `oa-documents`:
 
 ```sh
-./open-attestation-linux batch unwrapped-documents wrapped-documents
+./open-attestation-linux wrap unwrapped-documents wrapped-documents
 ✔  success   Batch Document Root: 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff
 ```
 

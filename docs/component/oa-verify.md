@@ -92,12 +92,12 @@ verify(document, { network: "mainnet" }).then(fragments => {
 
 Let's try to understand the different results:
 - `isValid(fragments, ["DOCUMENT_INTEGRITY"])` returns true because the integrity of the document is not dependant on the network it has been published to.
-- `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because the document has been published on ropsten network only.
-- `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because the [DNS-TXT record](/docs/verifiable-document/dns-proof.md) associated with the document is only available for rospten network.
+- `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because the document has not been published on Ethereum main network.
+- `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because there is no [DNS-TXT record](/docs/verifiable-document/dns-proof.md) associated with the Ethereum main network's document store.
 - `isValid(fragments)` returns false because at least one of the above returns false.
 
 ### Listening to individual verification method
-The `verify` function has an option to listen to every verification method individually. It might be useful if you want for instance to provide individual loader on your UI.
+The `verify` function has an option to listen to individual verification methods. It might be useful if you want for instance to provide individual loader on your UI.
 
 ```javascript
 const { verify, isValid } = require("@govtechsg/oa-verify");

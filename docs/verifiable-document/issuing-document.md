@@ -6,7 +6,7 @@ sidebar_label: Issuing Documents
 
 After wrapping the documents and obtaining the merkle root. The documents are now ready to be issued on the document store smart contract. To issue a document, the merkle root is simply appended to the list of issued documents on the document store.
 
-In this guide, we will make use of a web application to issue the document.
+In this guide, we will make use of a web application to issue the documents.
 
 ## Pre-requisite
 

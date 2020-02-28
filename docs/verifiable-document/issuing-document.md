@@ -15,7 +15,7 @@ In this guide, we will make use of a web application to issue the documents.
 
 ## Issuing via Web Application
 
-We will use the same web application used to create the document store smart contract, https://admin.tradetrust.io, to issue the documents.
+To issue the documents, we will use the same application than previously, when we created the document store smart contract: https://admin.tradetrust.io.
 
 ![Issuing Interface](/docs/verifiable-document/issuing-document/issuing.png)
 

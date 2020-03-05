@@ -6,7 +6,7 @@ sidebar_label: Verification SDK (javascript)
 
 The OpenAttestation Verification SDK (javascript) is a npm module that allows you to  verify [wrapped document](/docs/component/open-attestation) programmatically. This is useful if you are building your own API or web components. Some common use cases where you need this module:
 - [Verifying a document](#verifying-a-document)
-- [Building custom verifiers](#custom-verification)
+- [Building custom verifier](#custom-verification)
 - [Building custom validation](#custom-validation)
 
 This module does not provide the following functionality:
@@ -29,7 +29,7 @@ A verification happens on a wrapped document, and it consists of answering to so
 Before starting to play with the library, create a file `document.json` having the following content:
 ```json
 {
-  "version": "open-attestation/2.0",
+  "version": "https://schema.openattestation.com/2.0/schema.json",
   "data": {
     "issuers": [
       {
@@ -65,50 +65,7 @@ verify(document, { network: "ropsten" }).then(fragments => {
 ```
 
 ### Custom verification
-The `verify` function is built to run a list of verifiers. Each verifier will produce a fragment that will help to determine if the document is valid. Open Attestation comes with it's own set of verifiers.
-
-The `verificationBuilder` function help you to create custom verification method. You can reuse the default verifiers exported by the library.
-
-```javascript
-const document = require("./document.json");
-const { verificationBuilder, openAttestationVerifiers, isValid } = require("@govtechsg/oa-verify");
-
-// our custom verifier will be valid only if the document version is not open-attestation/2.0
-const customVerifier = {
-  skip: () => {
-    throw new Error("this verifier is never skipped");
-  },
-  test: () => true,
-  verify: async document => {
-    if (document.version === "open-attestation/2.0") {
-      return {
-        type: "DOCUMENT_INTEGRITY",
-        name: "CustomVerifier",
-        data: document.version,
-        status: "INVALID"
-      };
-    }
-    return {
-      type: "DOCUMENT_INTEGRITY",
-      name: "CustomVerifier",
-      data: document.version,
-      status: "VALID"
-    };
-  }
-};
-
-// create your own verify function with all verifiers and your custom one
-const verify = verificationBuilder([
-  ...openAttestationVerifiers,
-  customVerifier
-]);
-
-verify(document, { network: "ropsten" }).then(fragments => {
-  console.log(isValid(fragments)); // return false
-});
-```
-
-Try to change the version of the wrapped document to anything else and see the result.
+In some cases, you will need to perform more verification on a document than the one provided by default. Fortunately the library is configurable in a way you can create your own [verification methods](/docs/extension/verification-methods.md) and distribute your verifier.  
 
 ### Custom validation
 The `isValid` function will execute over fragments and determine if the fragments produced a valid result. By default the function will return true if a document fulfill the following conditions:
@@ -119,51 +76,28 @@ The `isValid` function will execute over fragments and determine if the fragment
 
 However in some conditions, the result of the function might not be useful: Why is the document not valid ? Is it because it has been tampered ? Or maybe the issuer identity is invalid ?
 
-The function allow to specify as a second parameters the list of types on which to perform the checks. Let's try it with our custom verifiers over the initial wrapped document:
+The function allow to specify as a second parameters the list of types on which to perform the checks. Let's try to run the verifier on `mainnet` network :
 
 ```javascript
-const { verificationBuilder, isValid, openAttestationVerifiers } = require("@govtechsg/oa-verify");
+const { verify, isValid } = require("@govtechsg/oa-verify");
 const document = require("./document.json");
 
-// our custom verifier will be valid only if the document version is not open-attestation/2.0
-const customVerifier = {
-  skip: () => {
-    throw new Error("this verifier is never skipped");
-  },
-  test: () => true,
-  verify: async document => {
-    if (document.version === "open-attestation/2.0") {
-      return {
-        type: "DOCUMENT_INTEGRITY",
-        name: "CustomVerifier",
-        data: document.version,
-        status: "INVALID"
-      };
-    }
-    return {
-      type: "DOCUMENT_INTEGRITY",
-      name: "CustomVerifier",
-      data: document.version,
-      status: "VALID"
-    };
-  }
-};
-
-const verify = verificationBuilder([
-  ...openAttestationVerifiers,
-  customVerifier // see above
-]);
-
-verify(document, { network: "ropsten" }).then(fragments => {
+verify(document, { network: "mainnet" }).then(fragments => {
   console.log(isValid(fragments)); // output false
-  console.log(isValid(fragments, ["DOCUMENT_INTEGRITY"])); // output false
-  console.log(isValid(fragments, ["DOCUMENT_STATUS"])); // output true
-  console.log(isValid(fragments, ["ISSUER_IDENTITY"])); // output true
+  console.log(isValid(fragments, ["DOCUMENT_INTEGRITY"])); // output true
+  console.log(isValid(fragments, ["DOCUMENT_STATUS"])); // output false
+  console.log(isValid(fragments, ["ISSUER_IDENTITY"])); // output false
 });
 ```
 
-### Listening to individual verifiers
-The `verify` function has an option to listen to every verifiers individually. It might be useful if you want for instance to provide individual loader on your UI.
+Let's try to understand the different results:
+- `isValid(fragments, ["DOCUMENT_INTEGRITY"])` returns true because the integrity of the document is not dependant on the network it has been published to.
+- `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because the document has not been published on Ethereum main network.
+- `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because there is no [DNS-TXT record](/docs/verifiable-document/dns-proof.md) associated with the Ethereum main network's document store.
+- `isValid(fragments)` returns false because at least one of the above returns false.
+
+### Listening to individual verification method
+The `verify` function has an option to listen to individual verification methods. It might be useful if you want for instance to provide individual loader on your UI.
 
 ```javascript
 const { verify, isValid } = require("@govtechsg/oa-verify");
@@ -171,9 +105,9 @@ const document = require("./document.json");
 
 verify(document, {
   network: "ropsten",
-  promisesCallback: verifiers => {
-    for (const verifier of verifiers) {
-      verifier.then(fragment =>
+  promisesCallback: verificationMethods => {
+    for (const verificationMethod of verificationMethods) {
+      verificationMethod.then(fragment =>
         console.log(
           `${fragment.name} has been resolved with status ${fragment.status}`
         )

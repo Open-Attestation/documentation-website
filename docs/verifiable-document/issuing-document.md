@@ -35,7 +35,8 @@ Example:
     ],
     "merkleRoot": **"76a934e2ce9db63cb5e54bed8ac965a8937ee9e823b894ccf6569141187a475c"**
   }
-``
+```
+
 For this document, `76a934e2ce9db63cb5e54bed8ac965a8937ee9e823b894ccf6569141187a475c` is the value you need to issue.
 ![Issuance Success](/docs/verifiable-document/issuing-document/success.png)
 

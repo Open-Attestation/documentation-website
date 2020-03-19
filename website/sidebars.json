@@ -15,14 +15,14 @@
       "transferable-record/token-registry",
       "transferable-record/issuing-transferable-record"
     ],
-    "OpenAttestation Components": [
+    "Components": [
       "component/overview",
       "component/open-attestation",
       "component/oa-verify",
       "component/decentralized-renderer-react-components",
       "component/oa-encryption"
     ],
-    "Extending OpenAttestation": [
+    "Advanced": [
       "extension/overview",
       "extension/verification-methods",
       "extension/identity-proofs"

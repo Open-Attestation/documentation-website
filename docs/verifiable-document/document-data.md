@@ -4,11 +4,11 @@ title: Defining Document Schema
 sidebar_label: Defining Document Schema
 ---
 
-Every OA document has a checksum that provides it a tamper-proof property. At the same time, because the checksum can be used to uniquely identify a document, the checksum (or its derived value) is stored onto the document store as evidence of issuance. To compute the checksum, an `unwrapped document` goes through a process known as `wrapping` to become a `wrapped document`. Only then, the document is ready to be issued onto the blockchain.
+Every OA document has a checksum that provides it a tamper-proof property. At the same time, because the checksum can be used to uniquely identify a document, the checksum (or its derived value) is stored onto the document store as evidence of issuance. To compute the checksum, a `raw document` goes through a process known as `wrapping` to become a `wrapped document`. Only then, the document is ready to be issued onto the blockchain.
 
-Multiple documents can be wrapped at the same time in a single batch operation, creating a single checksum for the entire batch of unwrapped documents. This is especially useful when using document store on the Ethereum blockchain to lower the transaction cost and time.
+Multiple documents can be wrapped at the same time in a single batch operation, creating a single checksum for the entire batch of raw documents. This is especially useful when using document store on the Ethereum blockchain to lower the transaction cost and time.
 
-In this guide, we will learn how to create the unwrapped document that conforms to the OpenAttestation v2 Schema, and then wrap the document to form the wrapped document.
+In this guide, we will learn how to create the raw document that conforms to the OpenAttestation v2 Schema, and then wrap the document to form the wrapped document.
 
 ## Installing the CLI
 
@@ -34,32 +34,33 @@ In `oa-documents`:
 
 ```sh
 ./open-attestation-linux
-Open Attestation document issuing, verification and revocation tool.
+open-attestation <command>
 
 Commands:
-  index.js filter <source> <destination>    Obfuscate fields in the document
-  [fields..]
-  index.js wrap <unwrapped-dir> <wrapped-dir>    Combine a directory of documents
-  [schema]                                  into a document batch
+  open-attestation deploy <contract-type>   Deploys a smart contract on the
+                                            blockchain
+  open-attestation encrypt <wrapped-file>   Encrypt a document in order to share
+  <encrypted-file>                          and store it safely
+  open-attestation filter <source>          Obfuscate fields in the document
+  <destination> [fields..]
+  open-attestation wrap                     Wrap a directory of documents into a
+  <raw-documents-dir>                       document batch
+  <wrapped-documents-dir> [schema]
 
 Options:
-  --help     Show help                                                 [boolean]
   --version  Show version number                                       [boolean]
-
-The common subcommands you might be interested in are:
-- wrap
-- filter
+  --help     Show help                                                 [boolean]
 ```
 
 ## Understanding the OA Document Schema
 
-The OpenAttestation v2.0 defines the shape of data for the `unwrapped document` - the data before the wrapping process. It is defined in [JSON Schema](https://json-schema.org/) format.
+The OpenAttestation v2.0 defines the shape of data for the `raw document` - the data before the wrapping process. It is defined in [JSON Schema](https://json-schema.org/) format.
 
 The official OpenAttestation v2.0 schema can be found at https://schema.openattestation.com/2.0/schema.json
 
 ### Using Online Schema Validator
 
-For this guide, we will be using an online JSON Schema validator to help us write the unwrapped document.
+For this guide, we will be using an online JSON Schema validator to help us write the raw document.
 
 #### Setting up the JSON Schema Validator with OA Schema
 
@@ -73,7 +74,7 @@ This will setup the JSON schema validator to validate the JSON inputs on the rig
 
 If you start editing the JSON data on the right you should see errors if the data does not conform to the OpenAttestation v2.0 schema. A summary of the number of errors is found on top of the right panel and the details of the errors are found below the two panels.
 
-#### Creating unwrapped document
+#### Creating raw document
 
 We will now create the data for your Certificate of Completion. Paste the following JSON data into the right panel of the JSON schema validator tool:
 
@@ -117,21 +118,21 @@ You will need to replace the value of `issuers[0].documentStore.identityProof.lo
 
 ![Validator Completed](/docs/verifiable-document/document-data/validator-completed.png)
 
-Once all the values are configured and the unwrapped document conforms to the schema, you will see the message `No errors found. JSON validates against the schema`
+Once all the values are configured and the raw document conforms to the schema, you will see the message `No errors found. JSON validates against the schema`
 
 ## Wrapping the document file
 
-Now that we have manually created one unwrapped document data, we will use the CLI to wrap it. In this step, we will issue an additional Certificate of Completion to another person at the same time to see how the CLI tool can wrap multiple unwrapped documents at the same time.
+Now that we have manually created one raw document, we will use the CLI to wrap it. In this step, we will issue an additional Certificate of Completion to another person at the same time to see how the CLI tool can wrap multiple unwrapped documents at the same time.
 
-### Creating the unwrapped document file
+### Creating the raw document file
 
-In a directory of your choice, create a folder named `unwrapped-documents`:
+In a directory of your choice, create a folder named `raw-documents`:
 
 In `oa-documents`:
 
 ```sh
-mkdir unwrapped-documents
-cd unwrapped-documents
+mkdir raw-documents
+cd raw-documents
 ```
 
 Create a file named `coc-1.json` and paste the validated JSON into the file:
@@ -169,21 +170,21 @@ At this point in time, your directory should look like the following:
 ```text
 oa-documents
 |--open-attestation-linux (downloaded binary, optional if added to execution path)
-|--unwrapped-documents
+|--raw-documents
     |-- coc-1.json
     |-- coc-2.json
 ```
 
 ### Wrapping the documents with the CLI tool
 
-Now that we have all the unwrapped documents in a single folder, we will use the CLI tool to read all the files in that folder, wrap documents and then output the files in another directory `wrapped-documents`.
+Now that we have all the raw documents in a single folder, we will use the CLI tool to read all the files in that folder, wrap documents and then output the files in another directory `wrapped-documents`.
 
 At the same time a `merkle root`, a 64 character long string prepended with `0x` will be generated. The merkle root is the only information that will be stored onto the blockchain to verify the issuance status of an OA document.
 
 In `oa-documents`:
 
 ```sh
-./open-attestation-linux wrap unwrapped-documents wrapped-documents
+./open-attestation-linux wrap raw-documents wrapped-documents
 ✔  success   Batch Document Root: 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff
 ```
 
@@ -196,7 +197,7 @@ At the same time, you will notice that another directory, `wrapped-document`, ha
 ```text
 oa-documents
 |--open-attestation-linux
-|--unwrapped-documents
+|--raw-documents
     |-- coc-1.json
     |-- coc-2.json
 |--wrapped-documents
@@ -205,4 +206,3 @@ oa-documents
 ```
 
 In the `wrapped-document` directory, you will find the wrapped document which can be sent to the recipient later once the document has been issued in the document store in the [next guide](/docs/verifiable-document/issuing-document).
-

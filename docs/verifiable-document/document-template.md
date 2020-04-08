@@ -8,7 +8,7 @@ OA documents are both readable by machines as well as by humans. Every OA docume
 
 In this guide, we will build and deploy the renderer to display data from a "Certificate of Completion".
 
-This renderer is a static website that will be embedded in compliant OA viewer. It will take in the OA document in the unwrapped form and generates the corresponding HTML code for rendering.
+This renderer is a static website that will be embedded in compliant OA viewer. It will take in the OA document in the raw form and generates the corresponding HTML code for rendering.
 
 ## Pre-requisite
 
@@ -50,7 +50,7 @@ After running the storybook, you should be able to see the default template prov
 
 This is a live preview where you can see the changes when you:
 
-1. edit the unwrapped document data in the "Knobs" tab
+1. edit the raw document data in the "Knobs" tab
 1. edit the template code to render the data
 
 ## Developing the renderer
@@ -59,7 +59,7 @@ Now that we have set up the development environment, we can start writing our re
 
 ### Update sample document data and type
 
-To update the unwrapped document data and the corresponding data type, you will need to update the data definition file in `src/templates/customTemplate/samples.ts`:
+To update the raw document data and the corresponding data type, you will need to update the data definition file in `src/templates/customTemplate/samples.ts`:
 
 ```js
 import { Document } from "@govtechsg/decentralized-renderer-react-components";
@@ -145,7 +145,7 @@ export const templates = [
 
 Finally, once all the components have been wired up, we may proceed to style our Certificate of Completion.
 
-To change how the data is being renderered, we simply create a React component that takes in the unwrapped document in the `document` props and render the corresponding HTML code.
+To change how the data is being renderered, we simply create a React component that takes in the raw document in the `document` props and render the corresponding HTML code.
 
 For our COC, we will simply display the following text:
 

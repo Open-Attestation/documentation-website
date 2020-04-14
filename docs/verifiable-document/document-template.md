@@ -59,7 +59,7 @@ Now that we have set up the development environment, we can start writing our re
 
 ### Update sample document data and type
 
-To update the raw document data and the corresponding data type, you will need to update the data definition file in `src/templates/customTemplate/samples.ts`:
+To update the raw document data and the corresponding data type, you will need to update the data definition file in `src/templates/sample.ts`:
 
 ```js
 import { Document } from "@govtechsg/decentralized-renderer-react-components";

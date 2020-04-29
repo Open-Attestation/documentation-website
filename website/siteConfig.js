@@ -13,8 +13,7 @@ const products = [
   },
   {
     title: "Identity Wallet",
-    image:
-      "/img/products/identity-wallet.png",
+    image: "/img/products/identity-wallet.png",
     infoLink: "/docs/appendix/identity-wallet",
     pinned: true
   },
@@ -80,7 +79,12 @@ const siteConfig = {
     theme: "default"
   },
 
-  scripts: ["https://buttons.github.io/buttons.js"],
+  scripts: [
+    "https://buttons.github.io/buttons.js",
+    "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.0/clipboard.min.js",
+    "/js/code-block-buttons.js"
+  ],
+  stylesheets: ["/css/code-block-buttons.css"],
 
   onPageNav: "separate",
   cleanUrl: true,

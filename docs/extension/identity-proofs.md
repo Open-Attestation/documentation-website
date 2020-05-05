@@ -28,14 +28,16 @@ A deeper technical discussion of this topic can be found at [OpenCerts 2.0 DNS-T
 
 As an issuer, you will need to add a DNS TXT record to your domain name. The exact steps to achieve this can be confirmed with your domain name registrar, this is usually achieved through your domain administration web UI.
 
-The following is an example for an issuer 1. on Ethereum Main Net 1. has a Document Store address of 0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d
+The following is an example for an issuer
+1. on `Ethereum Main Net`
+1. has a Document Store address of `0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d`
 ```text
 openatts net=ethereum netId=1 addr=0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d
 ```
 
 The following is an example for an issuer:
-1. on `Ethereum Main Net`
-1. has a Document Store address of `0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d`
+1. on `Ethereum Test Net (Ropsten)`
+1. has a Document Store address of `0x9db35C07350e9a16C828dAda37fd9c2923c75812`
 
 ```text
 openatts net=ethereum netId=3 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812

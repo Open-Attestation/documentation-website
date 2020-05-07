@@ -54,7 +54,7 @@ Make sure to select `TXT` in the "RR Type" dropdown.
 
 The `TXT` record above is for use for documents issued on the `ropsten` network. To bind the identity in production where your documents are issued in the Ethereum main net, you will have to change `netId` to `1`.
 
-The `netId` corresponds to the [network ID for the different Ethereum networks](https://ethereum.stackexchange.com/questions/17051/how-to-select-a-network-id-or-is-there-a-list-of-network-ids).
+The `netId` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/).
 
 An example of a valid `TXT` record for Ethereum main network is as shown:
 

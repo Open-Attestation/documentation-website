@@ -8,7 +8,7 @@ After wrapping the documents and obtaining a merkle root, the documents are read
 
 In this guide, we will make use of a web application to issue the documents.
 
-## Pre-requisite
+## Prerequisites
 
 - Chrome browser
 - Metamask setup

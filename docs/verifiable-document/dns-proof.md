@@ -12,52 +12,70 @@ In this guide, we will bind the document issuer's identity to a valid domain nam
 
 ![Example Issuer Identity](/docs/verifiable-document/dns-proof/example.png)
 
-In this example, the document's issuer is bound to `DEMO.OPENATTESTATION.COM`.
+In this example, the document's issuer is bound to `demo.openattestation.com`.
 
-## Pre-requisite
+## Prerequisites
 
-- Domain Name
+- Domain name
+- Edit access to your domain's DNS records
 
 To bind the domain name to the issuer's identity, you must be able to change the DNS record of the domain name.
 
 ## Inserting the DNS Record
 
-You will need to add a DNS TXT record to your domain name. The exact steps to achieve this can be confirmed with your domain name registrar, this is usually achieved through your domain administration web UI.
+You will need to add a DNS `TXT` record to your domain name. The exact steps to achieve this can be confirmed with your domain registrar, this is usually achieved through your domain registrar or DNS provider's web UI.
 
-Select a domain name that you will like to associate with your documents. The domain can either be the root domain (ie. openattestation.com) or a subdomain (ie issuer.openattestation.com). Using the root domain will be recommended as it will be easier for viewers of your documents to recognize.
+> While we have provided [links to guides](#additional-note-for-adding-DNS-TXT-records) on adding DNS `TXT` records for some common domain registrars and DNS providers, the steps below is a generic procedure for any DNS provider.
 
-Using the domain web UI, insert a `TXT` record into the DNS in the following format:
+Select a domain name that you will like to associate with your documents. The domain can either be the root domain (e.g. `openattestation.com`) or a subdomain (e.g. `issuer.openattestation.com`). Using the root domain is recommended as it will be easier for viewers of your documents to recognize visually, as shown in the [example](#example) above.
 
-```text
-openatts net=ethereum netId=3 addr=&lt;DOCUMENT_STORE_ADDRESS&gt;
-```
+Within your domain registrar or DNS provider's web UI, insert a `TXT` record into the DNS in the following format:
 
-where `<DOCUMENT_STORE_ADDRESS>` is the document store smart contract address obtained [in the previous guide](/docs/verifiable-document/document-store/).
+| Type  | Name                  | Value                                                         |
+|-------|-----------------------|---------------------------------------------------------------|
+| `TXT` | `openattestation.com` | `openatts net=ethereum netId=3 addr=<DOCUMENT_STORE_ADDRESS>` |
+
+The `<DOCUMENT_STORE_ADDRESS>` in the `Value` field above is the document store smart contract address obtained [in the previous guide](/docs/verifiable-document/document-store/).
 
 An example of a valid `TXT` record is as shown:
 
-```text
-openatts net=ethereum netId=3 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812
-```
+| Type  | Name                       | Value                                                         |
+|-------|----------------------------|---------------------------------------------------------------|
+| `TXT` | `demo.openattestation.com` | `openatts net=ethereum netId=3 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812` |
 
 ## Testing the DNS Record
 
 ![Google DNS to Test](/docs/verifiable-document/dns-proof/google-dns.png)
 
-> After the update, you may need to wait up to 24 hrs for the DNS to propagate. You may continue with the other parts of the guide while waiting for DNS to propagate.
+> After the update, you may need to wait up to 24 hours for the DNS to propagate. You may continue with the other parts of the guide while waiting for DNS to propagate.
 
-After adding the `TXT`record, you may check that the record has been inserted correctly by viewing with https://dns.google.com/.
+After adding the `TXT` record, you may want to check that the record has been inserted correctly by viewing with [Google DNS](https://dns.google.com/).
 
-Make sure to select `TXT` in the "RR Type" dropdown.
+Make sure to select `TXT` in the `RR Type` dropdown.
 
 ## Additional Note for Identity Proof in Production
 
-The `TXT` record above is for use for documents issued on the `ropsten` network. To bind the identity in production where your documents are issued in the Ethereum main net, you will have to change `netId` to `1`.
+The `TXT` record above is for use for documents issued on the Ethereum `ropsten` network. To bind the identity in production where your documents are issued in the Ethereum mainnet, you will have to change `netId` to `1`. The `netId` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/).
 
-The `netId` corresponds to the [network ID for the different Ethereum networks](https://ethereum.stackexchange.com/questions/17051/how-to-select-a-network-id-or-is-there-a-list-of-network-ids).
+Throughout our documentation, we generally use only the following networks:
 
-An example of a valid `TXT` record for Ethereum main network is as shown:
+| Network ID   | Name                     | Network   |
+|--------------|--------------------------|-----------|
+| `1`          | Ethereum Mainnet         | `mainnet` |
+| `3`          | Ethereum Testnet Ropsten | `ropsten` |
 
-```text
-openatts net=ethereum netId=1 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812
-```
+An example of a valid `TXT` record for Ethereum mainnet is as shown:
+
+| Type  | Name                       | Value                                                         |
+|-------|----------------------------|---------------------------------------------------------------|
+| `TXT` | `demo.openattestation.com` | `openatts net=ethereum netId=1 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812` |
+
+## Additional Note for Adding DNS `TXT` Records
+
+Below is a list of guides provided by some of the common domain registrars and DNS providers. This list is by no means comprehensive.
+
+- [Amazon Route 53](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/dns-txt-records.html)
+- [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/360019093151-Managing-DNS-records-in-Cloudflare)
+- [Name.com](https://www.name.com/support/articles/115004972547-Adding-a-TXT-Record)
+- [Namecheap](https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain)
+- [GoDaddy](https://sg.godaddy.com/help/add-a-txt-record-19232)

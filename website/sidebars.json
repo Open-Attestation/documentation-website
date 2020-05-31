@@ -27,6 +27,6 @@
       "extension/verification-methods",
       "extension/identity-proofs"
     ],
-    "Appendix": ["appendix/ropsten-setup", "appendix/identity-wallet"]
+    "Appendix": ["appendix/ropsten-setup", "appendix/identity-wallet", "appendix/glossary"]
   }
 }

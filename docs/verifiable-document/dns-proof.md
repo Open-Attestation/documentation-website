@@ -4,9 +4,9 @@ title: Configuring DNS
 sidebar_label: Configuring DNS
 ---
 
-Every OA document's provenance can be verified and traced back to its creator or issuer. This is achieved by embedding an `identityProof` in the document which serves as a claim for identity. During the verification phase, the claim is checked against external records.
+Every OA document's provenance can be verified and traced back to its creator or issuer. This is achieved by embedding an `identityProof` property in the document, which serves as a claim for identity. During the verification phase, the claim is checked against external records.
 
-In this guide, we will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in a compliant viewer.
+In this guide, we will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in an OA-compliant decentralized renderer.
 
 ## Example
 
@@ -27,13 +27,15 @@ You will need to add a DNS `TXT` record to your domain name. The exact steps to 
 
 > While we have provided [links to guides](#additional-note-for-adding-DNS-TXT-records) on adding DNS `TXT` records for some common domain registrars and DNS providers, the steps below is a generic procedure for any DNS provider.
 
-Select a domain name that you will like to associate with your documents. The domain can either be the root domain (e.g. `openattestation.com`) or a subdomain (e.g. `issuer.openattestation.com`). Using the root domain is recommended as it will be easier for viewers of your documents to recognize visually, as shown in the [example](#example) above.
+Select a domain name that you will like to associate with your documents. The domain can either be the root domain (e.g. `openattestation.com`) or a subdomain (e.g. `issuer.openattestation.com`). Using the root domain is recommended as it will be easier for viewers of your documents to recognize visually.
 
 Within your domain registrar or DNS provider's web UI, insert a `TXT` record into the DNS in the following format:
 
 | Type  | Name                  | Value                                                         |
 |-------|-----------------------|---------------------------------------------------------------|
-| `TXT` | `openattestation.com` | `openatts net=ethereum netId=3 addr=<DOCUMENT_STORE_ADDRESS>` |
+| TXT | openattestation.com | openatts net=ethereum netId=3 addr=`<DOCUMENT_STORE_ADDRESS>` |
+
+> The document store address needs to be prepended with `addr`.
 
 The `<DOCUMENT_STORE_ADDRESS>` in the `Value` field above is the document store smart contract address obtained [in the previous guide](/docs/verifiable-document/document-store/).
 
@@ -41,17 +43,15 @@ An example of a valid `TXT` record is as shown:
 
 | Type  | Name                       | Value                                                         |
 |-------|----------------------------|---------------------------------------------------------------|
-| `TXT` | `demo.openattestation.com` | `openatts net=ethereum netId=3 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812` |
+| TXT | demo.openattestation.com | openatts net=ethereum netId=3 addr=0xED2E50434Ac3623bAD763a35213DAD79b43208E4 |
 
 ## Testing the DNS Record
 
 ![Google DNS to Test](/docs/verifiable-document/dns-proof/google-dns.png)
 
-> After the update, you may need to wait up to 24 hours for the DNS to propagate. You may continue with the other parts of the guide while waiting for DNS to propagate.
+> The DNS propagation should take a few minutes, though in some cases you may need to wait up to 24 hours. Continue with the other parts of the guide while waiting for DNS to propagate.
 
-After adding the `TXT` record, you may want to check that the record has been inserted correctly by viewing with [Google DNS](https://dns.google.com/).
-
-Make sure to select `TXT` in the `RR Type` dropdown.
+After adding the `TXT` record, we recommend you to check that the record has been inserted correctly by viewing with [Google DNS](https://dns.google.com/). Make sure to select `TXT` in the `RR Type` dropdown.
 
 ## Additional Note for Identity Proof in Production
 

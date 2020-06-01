@@ -25,21 +25,21 @@ To bind the domain name to the issuer's identity, you must be able to change the
 
 You will need to add a DNS `TXT` record to your domain name. The exact steps to achieve this can be confirmed with your domain registrar, this is usually achieved through your domain registrar or DNS provider's web UI.
 
-> While we have provided [links to guides](#additional-note-for-adding-DNS-TXT-records) on adding DNS `TXT` records for some common domain registrars and DNS providers, the steps below is a generic procedure for any DNS provider.
+While we have provided [links to guides](#additional-note-for-adding-dns-txt-records) on adding DNS `TXT` records for some common domain registrars and DNS providers, the steps below is a generic procedure for any DNS provider.
 
 Select a domain name that you will like to associate with your documents. The domain can either be the root domain (e.g. `openattestation.com`) or a subdomain (e.g. `issuer.openattestation.com`). Using the root domain is recommended as it will be easier for viewers of your documents to recognize visually.
 
 Within your domain registrar or DNS provider's web UI, insert a `TXT` record into the DNS in the following format:
 
-| Type  | Name                  | Value                                                         |
-|-------|-----------------------|---------------------------------------------------------------|
-| TXT | openattestation.com | openatts net=ethereum netId=3 addr=`<DOCUMENT_STORE_ADDRESS>` |
+| Type  | Name        | Value                                                         |
+|-------|-------------|---------------------------------------------------------------|
+| TXT   | example.com | openatts net=ethereum netId=3 addr=`<DOCUMENT_STORE_ADDRESS>` |
 
 > The document store address needs to be prepended with `addr`.
 
 The `<DOCUMENT_STORE_ADDRESS>` in the `Value` field above is the document store smart contract address obtained [in the previous guide](/docs/verifiable-document/document-store/).
 
-An example of a valid `TXT` record is as shown:
+An example of a valid DNS `TXT` record is as shown:
 
 | Type  | Name                       | Value                                                         |
 |-------|----------------------------|---------------------------------------------------------------|
@@ -51,13 +51,11 @@ An example of a valid `TXT` record is as shown:
 
 > The DNS propagation should take a few minutes, though in some cases you may need to wait up to 24 hours. Continue with the other parts of the guide while waiting for DNS to propagate.
 
-After adding the `TXT` record, we recommend you to check that the record has been inserted correctly by viewing with [Google DNS](https://dns.google.com/). Make sure to select `TXT` in the `RR Type` dropdown.
+After adding the `TXT` record, we recommend you to check that the record has been inserted correctly by viewing with [Google DNS](https://dns.google.com/). Make sure to select `TXT` in the _RR Type_ dropdown.
 
 ## Additional Note for Identity Proof in Production
 
-The `TXT` record above is for use for documents issued on the Ethereum `ropsten` network. To bind the identity in production where your documents are issued in the Ethereum mainnet, you will have to change `netId` to `1`. The `netId` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/).
-
-Throughout our documentation, we generally use only the following networks:
+The `TXT` record above is for use for documents issued on the Ethereum `ropsten` network. To bind the identity in production where your documents are issued in the Ethereum `mainnet` network, you will have to change `netId` to `1`. The `netId` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). We generally use only the following networks:
 
 | Network ID   | Name                     | Network   |
 |--------------|--------------------------|-----------|

@@ -53,9 +53,9 @@ This is a live preview where you can see the changes when you:
 1. edit the raw document data in the `Knobs` tab
 1. edit the template code to render the data
 
-## Developing the renderer
+## Developing the Document Renderer
 
-Now that we have set up the development environment, we can start writing our renderer. We will first define the data structure of our 📜 Certificate of Completion, followed by writing the renderer to render the HTML code corresponding to the data provided.
+Now that we have set up the development environment, we can start writing our document renderer. We will first define the data structure of our 📜 Certificate of Completion, followed by writing the renderer to render the HTML code corresponding to the data provided.
 
 ### Update sample document data and type
 
@@ -84,9 +84,11 @@ export const customTemplateCertificate: CustomTemplateCertificate = {
 };
 ```
 
+### Document objects explained
+
 In the above OA document, you will see three root objects:
 
-### 1. `$template`
+#### `$template`
 
 The `$template` key to describe the template name used to render this display. It should have the following keys:
 
@@ -96,11 +98,11 @@ The `$template` key to describe the template name used to render this display. I
 
 - `$template.url` will be the remote URL where your OA decentralized renderer resides. For now, we set it to `https://localhost:3000` but we will change this value later on in the [Deploying Document Renderer](#deploying-document-renderer) section.
 
-### 2. `name`
+#### `name`
 
 The `name` key is a compulsory key to describe the type of OA document. In this case, we are creating an `OpenAttestation Tutorial Certificate of Completion`.
 
-### 3. `recipient`
+#### `recipient`
 
 OA documents do not have a strict data structure and allows issuers of documents to define their own data schema. The `recipient` object is a user-defined object that describes who the certificate is conferred to. In this case, you may replace `John Doe` with your name.
 
@@ -221,7 +223,7 @@ On the build page, enter `npm run build` as the "Build command" and `dist` as th
 
 Once the site has been deployed, you will obtain the URL to the document renderer site. In the above example, the URL is `https://frosty-joliot-c02c3d.netlify.com/`.
 
-Note that the website will be an empty page when viewed directly. This is normal because it is not meant to be viewed directly through a web browser.
+Note that the website will be an empty page when viewed directly. **This is normal because it is not meant to be viewed directly through a web browser.**
 
 > Save the website url for future reference. You should also update the `$template.url` in your OA document.
 

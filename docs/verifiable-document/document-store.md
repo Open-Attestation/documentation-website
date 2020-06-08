@@ -4,7 +4,7 @@ title: Deploying Document Store Smart Contract
 sidebar_label: Deploying Document Store
 ---
 
-The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `ropsten` network, which is a test network that does not require actual [ethers] for transactions.
+The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `ropsten` network, which is a test network that does not require actual [ethers](/docs/appendix/glossary#ether) for transactions.
 
 ## Prerequisites
 
@@ -18,9 +18,7 @@ Currently, we provide two ways of deploying the document store smart contract on
 - [TradeTrust Admin Portal](https://admin.tradetrust.io/), a web app
 - [Open Attestation CLI](https://github.com/Open-Attestation/open-attestation-cli), a command line tool
 
-They are both decentralized apps (Dapps) as both enable you to interact with smart contracts on the Ethereum blockchain.
-
-In this guide however, we will only be using the web app since it provides a no-code option to deploy the document store.
+They are both decentralized apps (Dapps) as both enable you to interact with smart contracts on the Ethereum blockchain. In this guide however, we will only be using the TradeTrust Admin Portal since it provides a no-code option to deploy the document store.
 
 ![Admin Interface](/docs/verifiable-document/document-store/interface.png)
 
@@ -52,6 +50,6 @@ After clicking on _Deploy_, you will be asked to confirm the transaction in a se
 
 ![Successful deployment](/docs/verifiable-document/document-store/success.png)
 
-Once your document store smart contract has been successfully deployed, you will see the success message with the document store address. In the example above, the document store address is `0xED2E50434Ac3623bAD763a35213DAD79b43208E4` and is **NOT** the Transaction ID.
+Once your document store smart contract has been successfully deployed, you will see the success message with the document store address. In the example above, the document store address is `0xED2E50434Ac3623bAD763a35213DAD79b43208E4`, please do **NOT** use the Transaction ID.
 
-**Please save this address in your notepad as the web app does not keep track of your document store addresses.** You will need this address to complete the tutorial.
+**Save the document store address in your notepad as the web app does not keep track of your document store addresses.** You will need this address to complete the tutorial.

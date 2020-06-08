@@ -62,11 +62,11 @@ The `TXT` record above is for use for documents issued on the Ethereum `ropsten`
 | `1`          | Ethereum Mainnet         | `mainnet` |
 | `3`          | Ethereum Testnet Ropsten | `ropsten` |
 
-An example of a valid `TXT` record for Ethereum mainnet is as shown:
+In other words, an example of a valid `TXT` record for Ethereum `mainnet` network means changing the `netId` to `1`:
 
 | Type  | Name                       | Value                                                         |
 |-------|----------------------------|---------------------------------------------------------------|
-| `TXT` | `demo.openattestation.com` | `openatts net=ethereum netId=1 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812` |
+| TXT   | demo.openattestation.com   | openatts net=ethereum netId=1 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812 |
 
 ## Additional Note for Adding DNS `TXT` Records
 

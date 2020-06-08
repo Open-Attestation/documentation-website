@@ -17,7 +17,7 @@ In this guide, we will deploy a token registry smart contract on the Ethereum `r
 
 ### Creating the key file
 
-Create a file `key.txt` with the private key of your Ethereum wallet and save it in your working directory.
+Create a file `key.txt` with the private key of your Ethereum wallet and save it in your working directory. If you are using Metamask, you may retrieve this key from the extension in [this guide](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
 
 Sample `key.txt` file content (replace with your private key):
 
@@ -29,10 +29,16 @@ d8f30c982fc23245a2cc4ec8271edcb4637f539d490ce750cdb5085241ffb41c
 
 ### Deploying the token registry
 
-Simply run the following command, replacing `<registry-name>` and `<registry-symbol>` with a suitable name and symbol (usually 3 characters).
+Simply run the following command. You may replace the `<registry-name>` and `<registry-symbol>` with a suitable name and symbol (usually 3 characters).
 
 ```sh
-open-attestation deploy token-registry <registry-name> <registry-symbol> -n ropsten -f key.txt
+open-attestation deploy token-registry "My Token Registry" MTR -n ropsten -f key.txt
 ```
 
-This will deploy the token registry on the `ropsten` network. To deploy on the main Ethereum network, simply omit the `-n ropsten` flag. You will need to have sufficient funds on Ethereum for that to work as well.
+This will deploy the token registry on the `ropsten` network. You should see a similar output when the deployment is successful:
+
+```txt
+
+```
+
+> Save the token registry address for future reference

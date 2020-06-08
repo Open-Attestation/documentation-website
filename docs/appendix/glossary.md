@@ -24,7 +24,7 @@ Placeholder
 
 ### Document store
 
-A document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. The document store allows the owner to perform the following actions:
+A document store is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation (OA) documents. The document store allows the owner to perform the following actions:
 
 - issue new OA documents
 - revoke an existing OA document

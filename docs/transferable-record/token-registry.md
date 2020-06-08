@@ -38,7 +38,13 @@ open-attestation deploy token-registry "My Token Registry" MTR -n ropsten -f key
 This will deploy the token registry on the `ropsten` network. You should see a similar output when the deployment is successful:
 
 ```txt
-
+ℹ  info      Deploying token registry My Token Registry
+…  awaiting  Sending transaction to pool
+…  awaiting  Waiting for transaction 0x7e3eea01c42bb10b3160f19c9f55fe3de24ed05abb9d6f4363c80c0d0f1be355 to be mined
+✔  success   Token registry deployed at 0x8431012Bc040942B59e3C5bf428221eab0b2f723
+ℹ  info      Find more details at https://ropsten.etherscan.io/address/0x8431012Bc040942B59e3C5bf428221eab0b2f723
 ```
 
-> Save the token registry address for future reference
+In this case, our contract has been successfully deployed on ropsten at the address `0x8431012Bc040942B59e3C5bf428221eab0b2f723`.
+
+> Save YOUR token registry address for future reference

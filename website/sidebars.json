@@ -17,6 +17,7 @@
     ],
     "Components": [
       "component/overview",
+      "component/open-attestation-cli",
       "component/open-attestation",
       "component/oa-verify",
       "component/decentralized-renderer-react-components",

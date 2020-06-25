@@ -8,14 +8,14 @@ After wrapping the documents and obtaining a merkle root, the documents are read
 
 In this guide, we will make use of a web application to issue the documents.
 
-## Pre-requisite
+## Prerequisites
 
 - Chrome browser
 - Metamask setup
 
 ## Issuing via Web Application
 
-To issue the documents, we will use the application that we previously used when we created the document store smart contract: https://admin.tradetrust.io.
+To issue the documents, we will use the application that we previously used when we created the document store smart contract: <https://admin.tradetrust.io>.
 
 ![Issuing Interface](/docs/verifiable-document/issuing-document/issuing.png)
 

@@ -127,7 +127,7 @@ export const registry: TemplateRegistry<any> = {
 
 ### Multiple views for a template
 
-An OA document may have multiple views, each of them rendered in separate tabs. For example, an OA document that is a degree certificate may have the actual certificate as one view, and the transcript as another view in a single template. A demo with can be found [here](https://opencerts.io/?q={%22type%22:%22DOCUMENT%22,%22payload%22:{%22uri%22:%22https://opencerts.io/static/demo/mainnet.opencerts%22,%22permittedActions%22:[%22STORE%22],%22redirect%22:%22https://opencerts.io%22}}).
+An OA document may have multiple views, each of them rendered in separate tabs. For example, an OA document that is a degree certificate may have the actual certificate as one view, and the transcript as another view in a single template. A demo of the multiple views feature can be found [here](https://opencerts.io/?q={%22type%22:%22DOCUMENT%22,%22payload%22:{%22uri%22:%22https://opencerts.io/static/demo/mainnet.opencerts%22,%22permittedActions%22:[%22STORE%22],%22redirect%22:%22https://opencerts.io%22}}).
 
 The views are defined in the configuration within the specific templates. In the repository, one view is declared in `src/templates/customTemplate/index.tsx` within the `templates` array variable.
 

@@ -49,6 +49,7 @@ The `netId` corresponds to the [network ID for the different Ethereum networks](
 |--------------|--------------------------|-----------|
 | `1`          | Ethereum Mainnet         | `mainnet` |
 | `3`          | Ethereum Testnet Ropsten | `ropsten` |
+| `4`          | Ethereum Testnet Rinkeby | `rinkeby` |
 
 For more information on switching to production mode, refer to the [Additional Note for Identity Proof in Production](#additional-note-for-identity-proof-in-production) section below.
 

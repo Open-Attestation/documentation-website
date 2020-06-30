@@ -7,6 +7,7 @@
       "verifiable-document/dns-proof",
       "verifiable-document/document-template",
       "verifiable-document/document-data",
+      "verifiable-document/wrapping-document",
       "verifiable-document/issuing-document",
       "verifiable-document/next-steps"
     ],

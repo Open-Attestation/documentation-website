@@ -10,14 +10,14 @@ Multiple documents can be wrapped at the same time in a single batch operation, 
 
 In this guide, we will learn how to generate the checksum by running the `wrapping` process.
 
-## Pre-requisite
+## Prerequisites
 
 - [OpenAttestation CLI](../component/open-attestation-cli) installed
 - [Understanding the OA Document Schema](/docs/verifiable-document/document-data)
 
 ## Wrapping
 
-[In the previous guide](/docs/verifiable-document/document-data) we have learnt how to create one raw document. We will now learn how to use the CLI to wrap it. In this step, we will issue an additional Certificate of Completion to another person at the same time to see how the CLI tool can wrap multiple unwrapped documents at the same time.
+[In the previous guide](/docs/verifiable-document/document-data) we have learnt how to create one raw document. We will now learn how to use the CLI to wrap it. In this step, we will issue an additional Certificate of Completion to another person at the same time to see how the CLI tool can wrap multiple unwrapped documents concurrently.
 
 ### Creating the raw document file
 
@@ -70,7 +70,7 @@ raw-documents
 
 Now that we have all the raw documents in a single folder, we will use the CLI tool to read all the files in that folder, wrap documents and then output the files in another directory `wrapped-documents`.
 
-At the same time a `merkle root`, a 64 character long string prepended with `0x` will be generated. The merkle root is the only information that will be stored onto the blockchain to verify the issuance status of an OA document.
+At the same time a `merkleRoot`, a 64 character long string prepended with `0x` will be generated. The `merkleRoot` is the only information that will be stored onto the Blockchain to verify the issuance status of an OA document.
 
 From the folder containing the `raw-documents` folder, run:
 

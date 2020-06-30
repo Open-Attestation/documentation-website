@@ -31,3 +31,5 @@ For usage instructions, refer to the [CLI README](https://github.com/Open-Attest
 ```sh
 open-attestation --help
 ```
+
+> In all the guides, we will refer to the CLI as `open-attestation` when running a command. That means we will assume the CLI is available in your execution path. If it's not the case, you will to change `open-attestation` by the full path to the executable.

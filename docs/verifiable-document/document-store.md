@@ -6,19 +6,48 @@ sidebar_label: Deploying Document Store
 
 The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `ropsten` network, which is a test network that does not require actual [ethers](/docs/appendix/glossary#ether) for transactions.
 
-## Prerequisites
-
-- Google Chrome web browser
-- Metamask setup, refer to the [Test Account Setup](/docs/appendix/ropsten-setup) section for the setup guide
-
 ## Deployment Methods
 
 Currently, we provide two ways of deploying the document store smart contract onto Ethereum:
 
-- [TradeTrust Admin Portal](https://admin.tradetrust.io/), a web app
+- [TradeTrust Admin Portal](https://admin.tradetrust.io/) or [Opencerts Admin Portal](https://admin.opencerts.io/) , a web app
 - [Open Attestation CLI](https://github.com/Open-Attestation/open-attestation-cli), a command line tool
 
-They are both decentralized apps (Dapps) as both enable you to interact with smart contracts on the Ethereum blockchain. In this guide however, we will only be using the TradeTrust Admin Portal since it provides a no-code option to deploy the document store.
+They are both decentralized apps (Dapps) as both enable you to interact with smart contracts on the Ethereum blockchain.
+
+## Using Open Attestation CLI
+
+### Prerequisites
+
+- [OpenAttestation CLI](../../component/open-attestation-cli) installed
+- A wallet on ropsten network (for instance using [Metamask](/docs/appendix/ropsten-setup))
+- The wallet private key
+- [Exposing the wallet private key to the CLI for write operations](../../component/open-attestation-cli#writing-operations)
+
+### Deploying the store
+
+```bash
+open-attestation deploy document-store "My first document store" --network ropsten
+```
+
+Once your document store smart contract has been successfully deployed, you will see the success message with the document store address.
+
+```text
+✔  success   Document store My first document store deployed at 0xE1aF9E29c9548659e8b2D93a8750f40CE912ef15
+```
+
+In the example above, the document store address is `0xE1aF9E29c9548659e8b2D93a8750f40CE912ef15`, please do **NOT** use the Transaction ID.
+
+**Save the document store address in your notepad as the web app does not keep track of your document store addresses.** You will need this address to complete the tutorial.
+
+You can now continue to the [next guide](./dns-proof)
+
+## Using a web app
+
+### Prerequisites
+
+- Google Chrome web browser
+- Metamask setup, refer to the [Test Account Setup](/docs/appendix/ropsten-setup) section for the setup guide
 
 ![Admin Interface](/docs/verifiable-document/document-store/interface.png)
 

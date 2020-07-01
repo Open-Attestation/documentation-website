@@ -1,7 +1,7 @@
 ---
 id: wrapping-document
-title: Wrapping Document
-sidebar_label: Wrapping Document
+title: Wrapping Documents
+sidebar_label: Wrapping Documents
 ---
 
 Every OA document has a checksum that provides it a tamper-proof property. At the same time, because the checksum can be used to uniquely identify a document, the checksum (or its derived value) is stored onto the document store as evidence of issuance. To compute the checksum, a `raw document` goes through a process known as `wrapping` to become a `wrapped document`. Only then, the document is ready to be issued onto the blockchain.
@@ -12,7 +12,7 @@ In this guide, we will learn how to generate the checksum by running the `wrappi
 
 ## Prerequisites
 
-- [OpenAttestation CLI](../component/open-attestation-cli) installed
+- [OpenAttestation CLI](../../component/open-attestation-cli) installed
 - [Understanding the OA Document Schema](/docs/verifiable-document/document-data)
 
 ## Wrapping

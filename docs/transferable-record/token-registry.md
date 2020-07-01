@@ -10,7 +10,7 @@ In this guide, we will deploy a token registry smart contract on the Ethereum `r
 
 ## Pre-requisite
 
-- [OpenAttestation CLI](../component/open-attestation-cli) installed
+- [OpenAttestation CLI](/docs/component/open-attestation-cli) installed
 - Private key to an Ethereum wallet with sufficient ethers
 
 ## Deploying via OpenAttestation CLI

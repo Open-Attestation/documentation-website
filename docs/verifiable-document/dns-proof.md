@@ -20,7 +20,7 @@ The OpenAttestation CLI is a good solution when starting with OpenAttestation as
 
 ### Prerequisites
 
-- [OpenAttestation CLI](../../component/open-attestation-cli) installed
+- [OpenAttestation CLI](/docs/component/open-attestation-cli) installed
 - A document store (for instance created from the [previous guide](./document-store))
 
 ### Creating the DNS TXT record

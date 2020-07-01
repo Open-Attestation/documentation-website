@@ -12,7 +12,7 @@ In this guide, we will learn how to generate the checksum by running the `wrappi
 
 ## Prerequisites
 
-- [OpenAttestation CLI](../../component/open-attestation-cli) installed
+- [OpenAttestation CLI](/docs/component/open-attestation-cli) installed
 - [Understanding the OA Document Schema](/docs/verifiable-document/document-data)
 
 ## Wrapping

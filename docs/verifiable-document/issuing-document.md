@@ -12,7 +12,7 @@ In this guide, we will make use of a web application to issue the documents.
 
 Currently, we provide two ways of issuing documents onto Ethereum:
 
-- [TradeTrust Admin Portal](https://admin.tradetrust.io/) or [Opencerts Admin Portal](https://admin.opencerts.io/) , a web app
+- [TradeTrust Admin Portal](https://admin.tradetrust.io/) or [OpenCerts Admin Portal](https://admin.opencerts.io/), a web app
 - [Open Attestation CLI](https://github.com/Open-Attestation/open-attestation-cli), a command line tool
 
 They are both decentralized apps (Dapps) as both enable you to interact with smart contracts on the Ethereum blockchain.
@@ -21,10 +21,10 @@ They are both decentralized apps (Dapps) as both enable you to interact with sma
 
 ### Prerequisites
 
-- [OpenAttestation CLI](../../component/open-attestation-cli) installed
+- [OpenAttestation CLI](/docs/component/open-attestation-cli) installed
 - A wallet on ropsten network (for instance using [Metamask](/docs/appendix/ropsten-setup))
 - The wallet private key
-- [Exposing the wallet private key to the CLI for write operations](../../component/open-attestation-cli#writing-operations)
+- [Exposing the wallet private key to the CLI for write operations](/docs/component/open-attestation-cli#writing-operations)
 - A document store (for instance created from the [previous guide](./document-store))
 - A merkle root (for instance generated from the [previous guide](./wrapping-document))
 

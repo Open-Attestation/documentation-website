@@ -3,13 +3,14 @@
     "Overview": ["getting-started", "roadmap"],
     "Verifiable Document": [
       "verifiable-document/overview",
+      "verifiable-document/prerequisites",
+      "verifiable-document/wallet",
       "verifiable-document/document-store",
       "verifiable-document/dns-proof",
-      "verifiable-document/document-template",
-      "verifiable-document/document-data",
+      "verifiable-document/raw-document",
       "verifiable-document/wrapping-document",
       "verifiable-document/issuing-document",
-      "verifiable-document/next-steps"
+      "verifiable-document/going-further"
     ],
     "Transferable Record": [
       "transferable-record/overview",
@@ -27,8 +28,16 @@
     "Advanced": [
       "extension/overview",
       "extension/verification-methods",
-      "extension/identity-proofs"
+      "extension/identity-proofs",
+      "extension/custom-renderer",
+      "extension/configuring-dns"
     ],
-    "Appendix": ["appendix/ropsten-setup", "appendix/identity-wallet", "appendix/glossary"]
+    "Appendix": [
+      "appendix/glossary",
+      "appendix/ropsten-setup",
+      "appendix/identity-wallet",
+      "appendix/document-store-webapp",
+      "appendix/issuing-webapp"
+    ]
   }
 }

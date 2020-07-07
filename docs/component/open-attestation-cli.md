@@ -35,35 +35,3 @@ open-attestation --help
 ```
 
 > In all the guides, we will refer to the CLI as `open-attestation` when running a command. That means we will assume the CLI is available in your execution path. If it's not the case, you will to change `open-attestation` by the full path to the executable.
-
-## Writing operations
-
-When writing data to the Blockchain you will **need** to provide your private key. All functions - when the private key is required - will provide 3 ways for you to pass it in:
-
-1. Using `OA_PRIVATE_KEY` environment variable holding the private key(recommended).
-1. Using `--key-file` option where you provide a path to a file containing the private key.
-1. Using `--key` option where you provide the private key directly to the command (**Note that for this method, the private key may be stored in the machine's bash history**).
-
-### Using `OA_PRIVATE_KEY` environment variable
-
-```bash
-export OA_PRIVATE_KEY=0000000000000000000000000000000000000000000000000000000000000001
-open-attestation deploy document-store "My Name" --network ropsten
-unset OA_PRIVATE_KEY
-```
-
-### Using `--key-file` option
-
-```bash
-echo -n 0000000000000000000000000000000000000000000000000000000000000002 >> ./examples/sample-key
-open-attestation deploy document-store "My Name" --network ropsten --key-file ./examples/sample-key
-rm ./examples/sample-key
-```
-
-### Using `--key` option
-
-```bash
-open-attestation deploy document-store "My Name" --network ropsten --key 0000000000000000000000000000000000000000000000000000000000000003
-```
-
-> In the different guides we will indicate when the private key will be needed, but we won't display how to provide it. It's up to you to pick up your preferred way.

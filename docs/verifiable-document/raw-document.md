@@ -1,7 +1,7 @@
 ---
-id: document-data
-title: Defining Document Schema
-sidebar_label: Defining Document Schema
+id: raw-document
+title: Creating Raw Document
+sidebar_label: Creating Raw Document
 ---
 
 Every OA document has a checksum that provides it a tamper-proof property. At the same time, because the checksum can be used to uniquely identify a document, the checksum (or its derived value) is stored onto the document store as evidence of issuance. To compute the checksum, a `raw document` goes through a process known as `wrapping` to become a `wrapped document`. Only then, the document is ready to be issued onto the blockchain.
@@ -14,11 +14,11 @@ The OpenAttestation v2.0 defines the shape of data for the `raw document` - the 
 
 The official OpenAttestation v2.0 schema can be found at https://schema.openattestation.com/2.0/schema.json
 
-### Using Online Schema Validator
+## Using Online Schema Validator
 
 For this guide, we will be using an online JSON Schema validator to help us write the raw document.
 
-#### Setting up the JSON Schema Validator with OA Schema
+### Setting up the JSON Schema Validator with OA Schema
 
 Visit https://www.jsonschemavalidator.net/
 
@@ -30,17 +30,16 @@ This will setup the JSON schema validator to validate the JSON inputs on the rig
 
 If you start editing the JSON data on the right you should see errors if the data does not conform to the OpenAttestation v2.0 schema. A summary of the number of errors is found on top of the right panel and the details of the errors are found below the two panels.
 
-#### Creating raw document
+### Creating raw document
 
-We will now create the data for your Certificate of Completion. Paste the following JSON data into the right panel of the JSON schema validator tool:
+We will now create the data for your certificate. Paste the following JSON data into the right panel of the JSON schema validator tool:
 
 ```json
 {
-  "name": "OpenAttestation Tutorial Certificate of Completion",
   "$template": {
-    "name": "COC",
+    "name": "main",
     "type": "EMBEDDED_RENDERER",
-    "url": "http://localhost:3000"
+    "url": "https://tutorial-renderer.openattestation.com"
   },
   "recipient": {
     "name": "John Doe"
@@ -48,32 +47,43 @@ We will now create the data for your Certificate of Completion. Paste the follow
   "issuers": [
     {
       "name": "Demo Issuer",
-      "documentStore": "0x0000000000000000000000000000000000000000",
+      "documentStore": "0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b",
       "identityProof": {
         "type": "DNS-TXT",
-        "location": "demo.openattestation.com"
+        "location": "few-green-cat.sandbox.openattestation.com"
       }
     }
   ]
 }
 ```
 
-Replace the following values for your own Certificate of Completion:
+To makes things simple, we will use an existing deployed renderer (at https://tutorial-renderer.openattestation.com). However you will still need to replace the following values for your own certificate:
 
-##### 1. \$template.url
+#### 1. issuers[0].documentStore
 
-You will need to replace the value of `$template.url` from `http://localhost:3000` to the url of the hosted document renderer in the [previous steps](/docs/verifiable-document/document-template)
+Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b` to the smart contract address of your document store in the [previous steps](/docs/verifiable-document/document-store)
 
-##### 2. issuers[0].documentStore
+#### 1. issuers[0].documentStore.identityProof.location
 
-You will need to replace the value of `issuers[0].documentStore` from `0x0000000000000000000000000000000000000000` to the smart contract address of your document store in the [previous steps](/docs/verifiable-document/document-store)
-
-##### 3. issuers[0].documentStore.identityProof.location
-
-You will need to replace the value of `issuers[0].documentStore.identityProof.location` from `demo.openattestation.com` to the dns name used to bind the document store's identity in the [previous steps](/docs/verifiable-document/dns-proof)
+Replace the value of `issuers[0].documentStore.identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the dns name used to bind the document store's identity in the [previous steps](/docs/verifiable-document/dns-proof)
 
 ![Validator Completed](/docs/verifiable-document/document-data/validator-completed.png)
 
 Once all the values are configured and the raw document conforms to the schema, you will see the message `No errors found. JSON validates against the schema`
 
-Now that we have learnt how to structure our documents, we are ready to wrap them in the [next guide](/docs/verifiable-document/wrapping-document).
+## Saving the raw document
+
+Near the `wallet.json` file, create a folder named `raw-documents`. Inside that folder create a file names `certificate-1.json` and paste the validated JSON from above.
+
+Create another file named `certificate-2.json` and paste the same validated JSON into the file, changing the `recipient.name` to a different name.
+
+At this point in time, your directory should look like the following:
+
+```text
+wallet.json
+raw-documents
+  |-- certificate-1.json
+  |-- certificate-2.json
+```
+
+We are now ready to wrap the certificates.

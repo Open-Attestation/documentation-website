@@ -12,7 +12,7 @@ In this guide, we will bind the document issuer's identity to a valid domain nam
 
 In this example above, the document's issuer is bound to `demo.openattestation.com`.
 
-With your [document store](/docs/verifiable-document/document-store)), run the following command:
+With your [document store](/docs/verifiable-document/document-store), run the following command:
 
 ```bash
 open-attestation dns txt-record create --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --network-id 3

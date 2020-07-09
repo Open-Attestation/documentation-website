@@ -1,7 +1,7 @@
 ---
 id: configuring-dns
-title: Configuring DNS
-sidebar_label: Configuring DNS
+title: Configuring DNS with Domain Registrar
+sidebar_label: Configuring DNS with Domain Registrar
 ---
 
 Every OA document's provenance can be verified and traced back to its creator or issuer. This is achieved by embedding an `identityProof` property in the document, which serves as a claim for identity. During the verification phase, the claim is checked against external records.

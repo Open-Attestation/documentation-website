@@ -26,11 +26,11 @@
       "component/oa-encryption"
     ],
     "Advanced": [
-      "extension/overview",
-      "extension/verification-methods",
-      "extension/identity-proofs",
-      "extension/custom-renderer",
-      "extension/configuring-dns"
+      "advanced/overview",
+      "advanced/verification-methods",
+      "advanced/identity-proofs",
+      "advanced/custom-renderer",
+      "advanced/configuring-dns"
     ],
     "Appendix": [
       "appendix/glossary",

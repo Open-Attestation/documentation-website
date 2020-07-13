@@ -1,3 +1,5 @@
+const extlink = require("remarkable-extlink");
+
 const products = [
   {
     title: "OpenCerts",
@@ -76,7 +78,8 @@ const siteConfig = {
   copyright: `Copyright © ${new Date().getFullYear()} Government Technology Agency (Singapore)`,
 
   highlight: {
-    theme: "default"
+    theme: "nord",
+    version: "10.1.1"
   },
 
   scripts: [
@@ -95,7 +98,14 @@ const siteConfig = {
   docsSideNavCollapsible: true,
 
   enableUpdateBy: true,
-  enableUpdateTime: true
+  enableUpdateTime: true,
+  markdownPlugins: [
+    function(md) {
+      extlink(md, {
+        host: "openattestation.com" // The hrefs that you DON'T want to be external
+      });
+    }
+  ],
 };
 
 module.exports = siteConfig;

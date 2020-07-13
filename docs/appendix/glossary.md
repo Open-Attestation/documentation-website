@@ -22,6 +22,10 @@ Placeholder
 
 Placeholder
 
+### Wallet
+
+Placeholder
+
 ### Document store
 
 A document store is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation (OA) documents. The document store allows the owner to perform the following actions:

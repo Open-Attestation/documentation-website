@@ -10,67 +10,9 @@ Multiple documents can be wrapped at the same time in a single batch operation, 
 
 In this guide, we will learn how to generate the checksum by running the `wrapping` process.
 
-## Prerequisites
+We will use the CLI tool to read all the files in the `raw-documents` folder, wrap them and then output the files in another directory `wrapped-documents`.
 
-- [OpenAttestation CLI](/docs/component/open-attestation-cli) installed
-- [Understanding the OA Document Schema](/docs/verifiable-document/document-data)
-
-## Wrapping
-
-[In the previous guide](/docs/verifiable-document/document-data) we have learnt how to create one raw document. We will now learn how to use the CLI to wrap it. In this step, we will issue an additional Certificate of Completion to another person at the same time to see how the CLI tool can wrap multiple unwrapped documents concurrently.
-
-### Creating the raw document file
-
-In a directory of your choice, create a folder named `raw-documents`:
-
-```sh
-mkdir raw-documents
-cd raw-documents
-```
-
-Create a file named `coc-1.json` and paste the validated JSON from the previous guide into the file:
-
-`coc-1.json`
-
-```text
-{
-  "name": "OpenAttestation Tutorial Certificate of Completion",
-  "$template": {
-    "name": "COC",
-    "type": "EMBEDDED_RENDERER",
-    "url": "http://localhost:3000"
-  },
-  "recipient": {
-    "name": "John Doe"
-  },
-  "issuers": [
-    {
-      "name": "Demo Issuer",
-      "documentStore": "0x0000000000000000000000000000000000000000",
-      "identityProof": {
-        "type": "DNS-TXT",
-        "location": "demo.openattestation.com"
-      }
-    }
-  ]
-}
-```
-
-Create another file named `coc-2.json` and paste the same validated JSON into the file, changing the `recipient.name` from your name to another person's name.
-
-At this point in time, your directory should look like the following:
-
-```text
-raw-documents
-  |-- coc-1.json
-  |-- coc-2.json
-```
-
-### Wrapping the documents with the CLI tool
-
-Now that we have all the raw documents in a single folder, we will use the CLI tool to read all the files in that folder, wrap documents and then output the files in another directory `wrapped-documents`.
-
-At the same time a `merkleRoot`, a 64 character long string prepended with `0x` will be generated. The `merkleRoot` is the only information that will be stored onto the Blockchain to verify the issuance status of an OA document.
+A `merkleRoot`, a 64 character long string prepended with `0x` will be generated. The `merkleRoot` is the only information that will be stored onto the Blockchain to verify the issuance status of an OA document.
 
 From the folder containing the `raw-documents` folder, run:
 
@@ -86,12 +28,13 @@ After running the CLI you will see the success message with the `Batch Document 
 At the same time, you will notice that another directory, `wrapped-document`, has been created:
 
 ```text
+wallet.json
 raw-documents
-  |-- coc-1.json
-  |-- coc-2.json
+  |-- certificate-1.json
+  |-- certificate-2.json
 wrapped-documents
-  |-- coc-1.json
-  |-- coc-2.json
+  |-- certificate-1.json
+  |-- certificate-2.json
 ```
 
-In the `wrapped-document` directory, you will find the wrapped document which can be sent to the recipient later once the document has been issued in the document store in the [next guide](/docs/verifiable-document/issuing-document).
+In the `wrapped-document` directory, you will find the wrapped document which can be sent to the recipient later once the `merkleRoot` has been issued to the document store.

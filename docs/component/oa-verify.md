@@ -24,7 +24,7 @@ This module does not provide the following functionality:
 A verification happens on a wrapped document, and it consists of answering to some questions:
 - Has the document been tampered with ?
 - Is the issuance state of the document valid ?
-- Is the document issuer identity valid ? (see [identity proof](/docs/extension/identity-proofs))
+- Is the document issuer identity valid ? (see [identity proof](/docs/advanced/identity-proofs))
 
 Before starting to play with the library, create a file `document.json` having the following content:
 ```json
@@ -65,7 +65,7 @@ verify(document, { network: "ropsten" }).then(fragments => {
 ```
 
 ### Custom verification
-In some cases, you will need to perform more verification on a document than the one provided by default. Fortunately the library is configurable in a way you can create your own [verification methods](/docs/extension/verification-methods.md) and distribute your verifier.  
+In some cases, you will need to perform more verification on a document than the one provided by default. Fortunately the library is configurable in a way you can create your own [verification methods](/docs/advanced/verification-methods.md) and distribute your verifier.  
 
 ### Custom validation
 The `isValid` function will execute over fragments and determine if the fragments produced a valid result. By default the function will return true if a document fulfill the following conditions:

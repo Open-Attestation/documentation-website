@@ -6,86 +6,27 @@ sidebar_label: Issuing Documents
 
 After wrapping the documents and obtaining a merkle root, the documents are ready to be issued on the document store smart contract. To issue a batch of documents, we will use the merkle root that will be appended to the list of issued documents on the document store. This issuance only needs to be done once for all documents in a batch.
 
-In this guide, we will make use of a web application to issue the documents.
-
-## Issuing Methods
-
-Currently, we provide two ways of issuing documents onto Ethereum:
-
-- [TradeTrust Admin Portal](https://admin.tradetrust.io/) or [OpenCerts Admin Portal](https://admin.opencerts.io/), a web app
-- [Open Attestation CLI](https://github.com/Open-Attestation/open-attestation-cli), a command line tool
-
-They are both decentralized apps (Dapps) as both enable you to interact with smart contracts on the Ethereum blockchain.
-
-## Using Open Attestation CLI
-
-### Prerequisites
-
-- [OpenAttestation CLI](/docs/component/open-attestation-cli) installed
-- A wallet on ropsten network (for instance using [Metamask](/docs/appendix/ropsten-setup))
-- The wallet private key
-- [Exposing the wallet private key to the CLI for write operations](/docs/component/open-attestation-cli#writing-operations)
-- A document store (for instance created from the [previous guide](./document-store))
-- A merkle root (for instance generated from the [previous guide](./wrapping-document))
-
-### Issuing the document
+## Issuing the certificates
 
 ```bash
-open-attestation document-store issue --address 0xE1aF9E29c9548659e8b2D93a8750f40CE912ef15 --hash 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff  --network ropsten
+open-attestation document-store issue --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --hash 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff  --network ropsten --encrypted-wallet-path wallet.json
 ```
 
 In the example above:
 
-- `address` is the document store address, for instance the one created with the [Deploying Document Store](./document-store) guide.
-- `hash` is the merkle root hash, for instance generated while [Wrapping Documents](./wrapping-document)
+- `address` is the document store address, for instance the one created with the [Deploying Document Store](/docs/verifiable-document/document-store) guide.
+- `hash` is the merkle root hash, for instance generated while [Wrapping Documents](/docs/verifiable-document/wrapping-document)
 
-Once issuing is finished, you will see the success message.
+You will be prompted for the password that you used while creating the wallet. You will see a message after completion of the command:
 
 ```text
-✔  success   Document/Document Batch with hash 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff has been issued on 0xE1aF9E29c9548659e8b2D93a8750f40CE912ef15
+✔  success   Document/Document Batch with hash 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff has been issued on 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b
 ```
 
-🎉 Congratulations, you have completed the getting started guide to create your own Verifiable Document! You may wish to visit the topic on "[Next Steps](/docs/verifiable-document/next-steps)" to learn how to issue verifiable documents in the production environment.
+## Verifying the certificates
 
-## Using a web app
+Head to `dev.opencerts.io` or `dev.tradetrust.io` and drag and drop one of the wrapped certificates. The certificate will be verified, then displayed.
 
-### Prerequisites
+![Successful verification](/docs/verifiable-document/issuing-document/verifying.png)
 
-- Chrome browser
-- Metamask setup
-- A document store (for instance created from the [previous guide](./document-store))
-- A merkle root (for instance generated from the [previous guide](./wrapping-document))
-
-### Issuing the document
-
-To issue the documents, we will use the application that we previously used when we created the document store smart contract: <https://admin.tradetrust.io>.
-
-![Issuing Interface](/docs/verifiable-document/issuing-document/issuing.png)
-
-After connecting Metamask, you will be logged into the web application. First, you need to enter the `document store smart contract address` from the [previous guide](/docs/verifiable-document/document-store/) into the "Store address" field. Then, select "Issue Document Batch" on the navigation on the left.
-
-Paste the value of `merkleRoot` from the document into the field and click on "Issue". You will need to confirm your transaction on Metamask.
-
-Example:
-
-```json
-  "signature": {
-    "type": "SHA3MerkleProof",
-    "targetHash": "aca8c3aac94fcdb68b504b38fda22633c798d76c744e5ac37f945c314f03637a",
-    "proof": [
-      "e27b0fac7c5e59c76a8d719a5dc46971cd43c23a5825fcb78aafeb5abd3f5ffa",
-      "802ad0e0a625c8c12a61c9fc42ffd6bdd50dfeac10fd7929a4ff93ef97622ede"
-    ],
-    "merkleRoot": **"76a934e2ce9db63cb5e54bed8ac965a8937ee9e823b894ccf6569141187a475c"**
-  }
-```
-
-For this document, `76a934e2ce9db63cb5e54bed8ac965a8937ee9e823b894ccf6569141187a475c` is the value you need to issue.
-
-![Issuance Success](/docs/verifiable-document/issuing-document/success.png)
-
-Once the merkle root has been issued, you will see the success message "Batch has been issued".
-
-At this point, all the documents in the same batch will become valid OpenAttestation documents. You may drop any of the documents that was generated in the `wrapped-documents` folder during the [previous step](/docs/verifiable-document/document-data) into a valid OA compliant website connected to the **_ropsten_** test network like https://dev.tradetrust.io or https://dev.opencerts.io to view it.
-
-🎉 Congratulations, you have completed the getting started guide to create your own Verifiable Document! You may wish to visit the topic on "[Next Steps](/docs/verifiable-document/next-steps)" to learn how to issue verifiable documents in the production environment.
+🎉 Congratulations, you have completed the getting started guide to create your own Verifiable Document!

@@ -1,7 +1,7 @@
 ---
-id: document-template
-title: Deploying Document Renderer
-sidebar_label: Deploying Document Renderer
+id: custom-renderer
+title: Creating Document Renderer
+sidebar_label: Creating Document Renderer
 ---
 
 OA documents are both readable by machines as well as by humans. Every OA document file is stored in a `.json` format, allowing any application to process the content within. To present the data file in a human-readable format, a renderer needs to be written.
@@ -44,7 +44,7 @@ npm run storybook
 
 ### Development environment
 
-![Default Story Book View](/docs/verifiable-document/document-template/default-storybook.png)
+![Default Story Book View](/docs/advanced/custom-renderer/default-storybook.png)
 
 After running the Storybook, you should be able to see the default template provided at `http://localhost:6006/`.
 
@@ -195,7 +195,7 @@ export const CustomTemplate: FunctionComponent<
 
 ### Completion
 
-![Completed Story Book View](/docs/verifiable-document/document-template/completed-storybook.png)
+![Completed Story Book View](/docs/advanced/custom-renderer/completed-storybook.png)
 
 Once that template code has been updated, you will see that the storybook component has been updated to reflect the change.
 
@@ -211,15 +211,15 @@ Create a new repository in GitHub and push the code to the new repository. For a
 
 Once you have your code on GitHub, you may build and deploy the site onto [Netlify](https://netlify.com).
 
-![Create a new site on netlify](/docs/verifiable-document/document-template/netlify-new.png)
+![Create a new site on netlify](/docs/advanced/custom-renderer/netlify-new.png)
 
 Select "New Site From Git" and then "GitHub".
 
-![Build settings](/docs/verifiable-document/document-template/netlify-build.png)
+![Build settings](/docs/advanced/custom-renderer/netlify-build.png)
 
 On the build page, enter `npm run build` as the "Build command" and `dist` as the "Publish Directory" and click on "Deploy Site".
 
-![Sample Deployed URL](/docs/verifiable-document/document-template/netlify-deployed.png)
+![Sample Deployed URL](/docs/advanced/custom-renderer/netlify-deployed.png)
 
 Once the site has been deployed, you will obtain the URL to the document renderer site. In the above example, the URL is `https://frosty-joliot-c02c3d.netlify.com/`.
 

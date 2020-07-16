@@ -18,7 +18,7 @@ Check out [this transaction example](https://ropsten.etherscan.io/tx/0x342a1586c
 
 ## What is the cost of revoking a merkle root from a document store ?
 
-The smart contract requires `45,052` gas to revoke, and at a safe Gas Price of 10 GWei you will require 0.000045052 Eth to successfully revoke.
+The smart contract requires `45,052` gas to revoke, and at a safe Gas Price of 10 GWei you will require 0.00045052 Eth to successfully revoke.
 
 Check out [this transaction example](https://ropsten.etherscan.io/tx/0xd6c95e6ba33abbcffb3424e31db215e59095ea509aad4ae858de78efe44287d5) to get more details (take note that the example used a Gas Price of 1 Gwei).
 

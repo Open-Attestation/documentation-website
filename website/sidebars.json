@@ -1,6 +1,6 @@
 {
   "docs": {
-    "Overview": ["getting-started", "roadmap"],
+    "Overview": ["getting-started", "faq"],
     "Verifiable Document": [
       "verifiable-document/overview",
       "verifiable-document/prerequisites",

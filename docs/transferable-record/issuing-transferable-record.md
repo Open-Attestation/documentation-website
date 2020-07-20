@@ -6,6 +6,6 @@ sidebar_label: Issuing Transferable Record
 
 Overview
 
-## Header
+## Issuing Transferable Records
 
 TBD

@@ -10,6 +10,7 @@
       "verifiable-document/raw-document",
       "verifiable-document/wrapping-document",
       "verifiable-document/issuing-document",
+      "verifiable-document/revoking-document",
       "verifiable-document/going-further"
     ],
     "Transferable Record": [

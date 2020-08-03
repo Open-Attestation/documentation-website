@@ -55,23 +55,23 @@ This is a live preview where you can see the changes when you:
 
 ## Developing the Document Renderer
 
-Now that we have set up the development environment, we can start writing our document renderer. We will first define the data structure of our 📜 Certificate of Completion, followed by writing the renderer to render the HTML code corresponding to the data provided.
+Now that we have set up the development environment, we can start writing our document renderer. We will first define the data structure of our 📜 Certificate of Completion (COC), followed by writing the renderer to render the HTML code corresponding to the data provided.
 
 ### Update sample document data and type
 
 To update the raw document data and the corresponding data type, you will need to update the data definition file in `src/templates/sample.ts`:
 
-```js
+```typescript jsx
 import { Document } from "@govtechsg/decentralized-renderer-react-components";
 
-export interface CustomTemplateCertificate extends Document {
+export interface CocTemplateCertificate extends Document {
   name: string;
   recipient: {
-    name: string
+    name: string;
   };
 }
 
-export const customTemplateCertificate: CustomTemplateCertificate = {
+export const cocTemplateCertificate: CocTemplateCertificate = {
   name: "OpenAttestation Tutorial Certificate of Completion",
   recipient: {
     name: "John Doe"
@@ -108,48 +108,9 @@ OA documents do not have a strict data structure and allows issuers of documents
 
 In the next section, you will learn more about the OA document schema and how you may define your own data structure. For this guide, we will stick to this simple document.
 
-### Registering the COC template with `TemplateRegistry`
-
-`src/templates/index.tsx` is a file containing the configuration of all the templates available in this renderer.
-
-To register a new template, simply add it as a key to the `registry` constant. Take note that the key is case sensitive and must match the `$template.name` value defined in the document data.
-
-Replace `src/templates/index.tsx` with the following code to add the new `COC` template:
-
-```js
-import { TemplateRegistry } from "@govtechsg/decentralized-renderer-react-components";
-import { templates } from "./customTemplate";
-
-export const registry: TemplateRegistry<any> = {
-  COC: templates
-};
-```
-
-### Multiple views for a template
-
-An OA document may have multiple views, each of them rendered in separate tabs. For example, an OA document that is a degree certificate may have the actual certificate as one view, and the transcript as another view in a single template. A demo of the multiple views feature can be found [here](https://opencerts.io/?q={%22type%22:%22DOCUMENT%22,%22payload%22:{%22uri%22:%22https://opencerts.io/static/demo/mainnet.opencerts%22,%22permittedActions%22:[%22STORE%22],%22redirect%22:%22https://opencerts.io%22}}).
-
-The views are defined in the configuration within the specific templates. In the repository, one view is declared in `src/templates/customTemplate/index.tsx` within the `templates` array variable.
-
-For our 📜 Certificate of Completion, we will only use a single view. So we will remove any additional views and rename the first view's label as `Certificate`.
-
-Replace the code in `src/templates/customTemplate/index.tsx` with the following:
-
-```js
-import { CustomTemplate } from "./customTemplate";
-
-export const templates = [
-  {
-    id: "certificate",
-    label: "Certificate",
-    template: CustomTemplate
-  }
-];
-```
-
 ### Developing the COC Template View
 
-Finally, once all the components have been wired up, we may proceed to style our 📜 Certificate of Completion.
+Now that the structure of the data has been defined, we may proceed to style our 📜 Certificate of Completion.
 
 To change how the data is being renderered, we simply create a React component that takes in the raw document in the `document` props and render the corresponding HTML code.
 
@@ -161,14 +122,13 @@ awarded to
 John Doe
 ```
 
-To do so, you may update the template code in `src/templates/customTemplate/customTemplate.tsx` to the following:
+The first step consist of removing the folder `src/templates/customTemplate` which is an example automatically provided. Then we can create a file `src/templates/coc/template.tsx` with the following content:
 
-```js
+```jsx harmony
 import React, { FunctionComponent } from "react";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
 import { css } from "@emotion/core";
-import { CustomTemplateCertificate } from "../sample";
-import { PrintWatermark } from "../../core/PrintWatermark";
+import { CocTemplateCertificate } from "../sample";
 
 const containerStyle = css`
   background-color: #324353;
@@ -179,12 +139,11 @@ const containerStyle = css`
   text-align: center;
 `;
 
-export const CustomTemplate: FunctionComponent<
-  TemplateProps<CustomTemplateCertificate> & { className?: string }
+export const CocTemplate: FunctionComponent<
+  TemplateProps<CocTemplateCertificate> & { className?: string }
 > = ({ document, className = "" }) => {
   return (
     <div css={containerStyle} className={className} id="custom-template">
-      <PrintWatermark />
       <h1>{document.name}</h1>
       <div>awarded to</div>
       <h2>{document.recipient.name}</h2>
@@ -193,11 +152,79 @@ export const CustomTemplate: FunctionComponent<
 };
 ```
 
-### Completion
+Now that the component has been created, we can add a story to view it. Next to `src/templates/coc/template.tsx` create a file called `template.stories.mdx` with the following content:
+
+```markdown
+import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
+import { object } from "@storybook/addon-knobs";
+import { CocTemplate } from "./template";
+import { cocTemplateCertificate } from "../sample";
+
+<Meta title="MDX|CocTemplate" component={CocTemplate} />
+
+# CocTemplate component
+
+<Description of={CocTemplate} />
+
+# Props
+
+<Props of={CocTemplate} />
+
+# Usage
+
+<Preview>
+  <Story name="basic sample">
+    <CocTemplate document={object("document", cocTemplateCertificate)} />
+  </Story>
+</Preview>
+```
+
+We can now [start storybook](#run-development-preview) and make sure our component looks like expected.
 
 ![Completed Story Book View](/docs/advanced/custom-renderer/completed-storybook.png)
 
-Once that template code has been updated, you will see that the storybook component has been updated to reflect the change.
+### Certificate of Completion template configuration
+
+An OA document may have multiple views, each of them rendered in separate tabs. For example, an OA document that is a degree certificate may have the actual certificate as one view, and the transcript as another view in a single template. A demo of the multiple views feature can be found [here](https://opencerts.io/?q={%22type%22:%22DOCUMENT%22,%22payload%22:{%22uri%22:%22https://opencerts.io/static/demo/mainnet.opencerts%22,%22permittedActions%22:[%22STORE%22],%22redirect%22:%22https://opencerts.io%22}}).
+
+For our 📜 Certificate of Completion, we will only use a single view. Create a file `src/templates/coc/index.tsx` with the following content:
+
+```js
+import { CocTemplate } from "./template";
+
+export const templates = [
+  {
+    id: "certificate",
+    label: "Certificate",
+    template: CocTemplate
+  }
+];
+```
+
+- `templates` must be an array where each element correspond to a view (or a tab). Here we need only one view.
+- Each view must define the following property:
+  - `id` which must be a uniq identifier for this template configuration.
+  - `label` which will be displayed by tab in the application loading the renderer.
+  - `template` which is is the component that will be displayed.
+
+### Renderer template configuration
+
+`src/templates/index.tsx` is a file containing the configuration of all the templates available in this renderer.
+
+To register a new template, simply add it as a key to the `registry` constant. Take note that the key is case sensitive and must match the `$template.name` value defined in the [document data](#template).
+
+Replace `src/templates/index.tsx` with the following code to add the new `COC` template:
+
+```js
+import { TemplateRegistry } from "@govtechsg/decentralized-renderer-react-components";
+import { templates } from "./coc";
+
+export const registry: TemplateRegistry<any> = {
+  COC: templates
+};
+```
+
+If you open `src/index.tsx` you will notice that the `registry` defined above is used and provided to a component called `FramedDocumentRenderer`. This component will handle automatically the connection to the application and will display the correct component depending on your configuration. You can find more information in [this github repository](https://github.com/Open-Attestation/decentralized-renderer-react-components)
 
 Now, your document renderer is ready to be built and deployed online.
 

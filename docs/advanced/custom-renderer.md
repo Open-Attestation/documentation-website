@@ -30,6 +30,14 @@ cd decentralized-renderer-react-template
 rm -rf .git
 ```
 
+### Clean the template
+
+In order to fully understand how developing a renderer work, we will start by cleaning it a bit:
+- remove the folder `src/templates/customTemplate`
+- remove the folder `src/integration`
+
+Once you have finished the tutorial feel free to clone the repository again and have a look into the deleted files.
+
 ### Install code dependencies
 
 ```sh
@@ -122,7 +130,7 @@ awarded to
 John Doe
 ```
 
-The first step consist of removing the folder `src/templates/customTemplate` which is an example automatically provided. Then we can create a file `src/templates/coc/template.tsx` with the following content:
+The first step consist of creating a file `src/templates/coc/template.tsx` with the following content:
 
 ```jsx harmony
 import React, { FunctionComponent } from "react";
@@ -185,7 +193,7 @@ We can now [start storybook](#run-development-preview) and make sure our compone
 
 ### Certificate of Completion template configuration
 
-An OA document may have multiple views, each of them rendered in separate tabs. For example, an OA document that is a degree certificate may have the actual certificate as one view, and the transcript as another view in a single template. A demo of the multiple views feature can be found [here](https://opencerts.io/?q={%22type%22:%22DOCUMENT%22,%22payload%22:{%22uri%22:%22https://opencerts.io/static/demo/mainnet.opencerts%22,%22permittedActions%22:[%22STORE%22],%22redirect%22:%22https://opencerts.io%22}}).
+An OA document may have multiple views, each of them rendered in separate tabs. For example, an OA document that is a degree certificate may have the actual certificate as one view, and the transcript as another view in a single template. A demo of the multiple views feature can be found [here](https://opencerts.io/?q={%22type%22:%22DOCUMENT%22,%22payload%22:{%22uri%22:%22https://opencerts.io/static/demo/homestead.opencert%22,%22permittedActions%22:[%22STORE%22],%22redirect%22:%22https://opencerts.io%22}}).
 
 For our 📜 Certificate of Completion, we will only use a single view. Create a file `src/templates/coc/index.tsx` with the following content:
 

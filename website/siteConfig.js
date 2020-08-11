@@ -106,6 +106,12 @@ const siteConfig = {
       });
     }
   ],
+  algolia: {
+    apiKey: "1c7e0f08161cfc504494cff933eb8a37",
+    indexName: "openattestation",
+
+    algoliaOptions: {} // Optional, if provided by Algolia
+  }
 };
 
 module.exports = siteConfig;

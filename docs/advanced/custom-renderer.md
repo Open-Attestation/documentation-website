@@ -54,7 +54,7 @@ npm run storybook
 
 ![Default Story Book View](/docs/advanced/custom-renderer/default-storybook.png)
 
-After running the Storybook, you should be able to see the default template provided at `http://localhost:6006/`.
+After running the Storybook, you should be able to see the templates samples provided at `http://localhost:6006/`.
 
 This is a live preview where you can see the changes when you:
 
@@ -67,12 +67,12 @@ Now that we have set up the development environment, we can start writing our do
 
 ### Update sample document data and type
 
-To update the raw document data and the corresponding data type, you will need to update the data definition file in `src/templates/sample.ts`:
+To update the raw document data and the corresponding data type, you will need to update the data definition file in `src/templates/samples/customTemplateSample.ts`:
 
 ```typescript jsx
-import { Document } from "@govtechsg/decentralized-renderer-react-components";
+import { v2 } from "@govtechsg/decentralized-renderer-react-components";
 
-export interface CocTemplateCertificate extends Document {
+export interface CocTemplateCertificate extends v2.OpenAttestationDocument {
   name: string;
   recipient: {
     name: string;
@@ -81,20 +81,31 @@ export interface CocTemplateCertificate extends Document {
 
 export const cocTemplateCertificate: CocTemplateCertificate = {
   name: "OpenAttestation Tutorial Certificate of Completion",
+  issuers: [
+    {
+      name: "My name",
+      documentStore: "0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b",
+      identityProof: {
+        location: "few-green-cat.sandbox.openattestation.com",
+        type: v2.IdentityProofType.DNSTxt
+      }
+    }
+  ],
   recipient: {
     name: "John Doe"
   },
   $template: {
     name: "COC",
-    type: "EMBEDDED_RENDERER",
+    type: v2.TemplateType.EmbeddedRenderer,
     url: "http://localhost:3000"
   }
 };
+
 ```
 
 ### Document objects explained
 
-In the above OA document, you will see three root objects:
+In the above OA document, you will see four root objects:
 
 #### `$template`
 
@@ -116,11 +127,14 @@ OA documents do not have a strict data structure and allows issuers of documents
 
 In the next section, you will learn more about the OA document schema and how you may define your own data structure. For this guide, we will stick to this simple document.
 
+#### `issuers`
+See [Creating Raw Document](/docs/verifiable-document/raw-document#creating-raw-document).
+
 ### Developing the COC Template View
 
 Now that the structure of the data has been defined, we may proceed to style our 📜 Certificate of Completion.
 
-To change how the data is being renderered, we simply create a React component that takes in the raw document in the `document` props and render the corresponding HTML code.
+To change how the data is being rendered, we simply create a React component that takes in the raw document in the `document` props and render the corresponding HTML code.
 
 For our 📜 Certificate of Completion, we will simply display the following text:
 
@@ -136,7 +150,7 @@ The first step consist of creating a file `src/templates/coc/template.tsx` with 
 import React, { FunctionComponent } from "react";
 import { TemplateProps } from "@govtechsg/decentralized-renderer-react-components";
 import { css } from "@emotion/core";
-import { CocTemplateCertificate } from "../sample";
+import { CocTemplateCertificate } from "../samples/customTemplateSample";
 
 const containerStyle = css`
   background-color: #324353;
@@ -166,7 +180,7 @@ Now that the component has been created, we can add a story to view it. Next to 
 import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
 import { object } from "@storybook/addon-knobs";
 import { CocTemplate } from "./template";
-import { cocTemplateCertificate } from "../sample";
+import { cocTemplateCertificate } from "../samples/customTemplateSample";
 
 <Meta title="MDX|CocTemplate" component={CocTemplate} />
 

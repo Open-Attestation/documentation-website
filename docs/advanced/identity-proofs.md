@@ -32,7 +32,7 @@ The following is an example for an issuer:
 1. on `Ethereum Main Net`
 1. has a Document Store address of `0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d`
 ```text
-openatts net=ethereum netId=1 addr=0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d
+"openatts net=ethereum netId=1 addr=0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"
 ```
 
 The following is an example for an issuer:
@@ -40,7 +40,7 @@ The following is an example for an issuer:
 1. has a Document Store address of `0x9db35C07350e9a16C828dAda37fd9c2923c75812`
 
 ```text
-openatts net=ethereum netId=3 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812
+"openatts net=ethereum netId=3 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812"
 ```
 
 Optionally, you may also publish an A record at the same address so that the if the user clicks on the URL, they can see a helpful website with your information on it.

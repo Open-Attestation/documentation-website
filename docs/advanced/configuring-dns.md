@@ -26,17 +26,19 @@ Select a domain name that you will like to associate with your documents. The do
 
 Within your domain registrar or DNS provider's web UI, insert a `TXT` record into the DNS in the following format:
 
-| Type | Name        | Value                                                         |
-| ---- | ----------- | ------------------------------------------------------------- |
-| TXT  | example.com | openatts net=ethereum netId=3 addr=`<DOCUMENT_STORE_ADDRESS>` |
+| Type | Name        | Value                                                           |
+| ---- | ----------- | --------------------------------------------------------------- |
+| TXT  | example.com | "openatts net=ethereum netId=3 addr=`<DOCUMENT_STORE_ADDRESS>`" |
 
 The `<DOCUMENT_STORE_ADDRESS>` in the `Value` field above is the document store smart contract address obtained. Please note that the document store address needs to be prepended with `addr`.
 
+> The quotes around the value are necessary. They are used to delimit each different records that you might have to be bound to the same domain.
+
 An example of a valid DNS `TXT` record is as shown:
 
-| Type | Name                     | Value                                                                         |
-| ---- | ------------------------ | ----------------------------------------------------------------------------- |
-| TXT  | demo.openattestation.com | openatts net=ethereum netId=3 addr=0xED2E50434Ac3623bAD763a35213DAD79b43208E4 |
+| Type | Name                     | Value                                                                           |
+| ---- | ------------------------ | ------------------------------------------------------------------------------- |
+| TXT  | demo.openattestation.com | "openatts net=ethereum netId=3 addr=0xED2E50434Ac3623bAD763a35213DAD79b43208E4" |
 
 The `netId` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). We generally use only the following networks:
 
@@ -62,9 +64,9 @@ The `TXT` record above is for use for documents issued on the Ethereum `ropsten`
 
 An example of a valid `TXT` record for Ethereum `mainnet` network is as shown:
 
-| Type | Name                     | Value                                                                         |
-| ---- | ------------------------ | ----------------------------------------------------------------------------- |
-| TXT  | demo.openattestation.com | openatts net=ethereum netId=1 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812 |
+| Type | Name                     | Value                                                                           |
+| ---- | ------------------------ | ------------------------------------------------------------------------------- |
+| TXT  | demo.openattestation.com | "openatts net=ethereum netId=1 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812" |
 
 ## Additional Note for Adding DNS `TXT` Records
 

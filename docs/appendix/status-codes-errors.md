@@ -20,6 +20,8 @@ This section details all status codes returned in the `DOCUMENT_STATUS` verifica
 |------|---------------------|
 | 0    | UNEXPECTED_ERROR    |
 
+This is an OpenAttestation error that we have yet to handle at this moment.
+
 #### `DOCUMENT_NOT_ISSUED`
 
 | code | codeString             |
@@ -50,7 +52,7 @@ The document store address provided is invalid, most likely because it's not of 
 |------|------------------------|
 | 3    | ETHERS_UNHANDLED_ERROR |
 
-This is an error that we have yet to handle it at this moment.
+This is an Ethers error that we have yet to handle at this moment.
 
 #### `SKIPPED`
 

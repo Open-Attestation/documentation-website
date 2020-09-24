@@ -30,6 +30,7 @@
     ],
     "Advanced": [
       "advanced/overview",
+      "advanced/how-it-works",
       "advanced/verification-methods",
       "advanced/identity-proofs",
       "advanced/custom-renderer",

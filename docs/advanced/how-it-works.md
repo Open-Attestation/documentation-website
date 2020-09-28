@@ -1,7 +1,7 @@
 ---
 id: how-it-works
-title: How it works ?
-sidebar_label: How it works ?
+title: How does it work?
+sidebar_label: How does it work?
 ---
 
 In the tutorial, we have learnt how to [wrap a document](/docs/verifiable-document/wrapping-document) and [issue it](/docs/verifiable-document/issuing-document) into a document store. However, we didn't explain what these actions were doing and why they are necessary.
@@ -35,18 +35,18 @@ As a reminder, wrapping a document works on JSON object. A single wrapped docume
 }
 ```
 
-Multiple interesting things happened that we will dig in:
+A few interesting transformations happened that we will dive into below:
 
-- A `data` has been created and holds the content of the file provided for wrapping with some weird-looking extra data.
+- A `data`  key has been created and its value holds the contents of the file previously provided when wrapping, along with some weird-looking extra (hexadecimal) data.
 - A `signature` object has been created.
 
 ### The `data` object
 
-The first step of wrapping consists of running through and transforming all the object properties provided as input:
+The first step of wrapping consists of transforming all the object properties provided as input using the following algorithm:
 
-1. For each properties
+1. For each property
 1. Generate a salt [using uuid v4](https://www.npmjs.com/package/uuid) in order to prevent [rainbow table attack](https://en.wikipedia.org/wiki/Rainbow_table).
-1. Find the type original property.
+1. Determine the type of original property.
 1. Transform the original value to `<salt>:<original-type>:<original-value>`.
 
 > The shape of the input object remains untouched.
@@ -58,16 +58,16 @@ The first step of wrapping consists of running through and transforming all the 
 Once the `data` object has been computed we will be able to create an unique hash for the document that we will set into `targetHash`:
 
 1. List each properties' path from the `data` object and associate its value. The path follows the [flatley](https://github.com/antony/flatley) path convention.
-1. For each properties' path, compute a hash using the properties' path and value. To compute the hash we use [keccack256](https://en.wikipedia.org/wiki/SHA-3).
-1. Sort all the hashes from the previous step alphabetically and hash them all together: this will provide the `targetHash` of the document. To compute the `targetHash` we also use [keccack256](https://en.wikipedia.org/wiki/SHA-3).
+1. For each properties' path, compute a hash using the properties' path and value. To compute the hash we use [keccak256](https://en.wikipedia.org/wiki/SHA-3).
+1. Sort all the hashes from the previous step alphabetically and hash them all together: this will provide the `targetHash` of the document. To compute the `targetHash` we also use [keccak256](https://en.wikipedia.org/wiki/SHA-3).
 
 > The `targetHash` of a document is an unique identifier.
 
-We follow exactly the same steps to verify that a document has not been tampered.
+Later on, during verification of the document, the same exact steps are performed again to assert that the contents of the document has not been tampered with. This works as the final targetHash will be completely different if any part of the wrapped document is different from the original.
 
-The [document store](/docs/verifiable-document/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It will store hashes of wrapped documents that proves that the owner of the document store really issued the document.
+The [document store](/docs/verifiable-document/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It stores the hashes of wrapped documents, which are the records of the owner of the document store having issued the documents.
 
-Imagine that you wrap a thousand of file and had to issue the `targetHash` for each of them. It would be extremely inefficient. That's where the `merkleRoot` will come handy.
+Imagine that you wrap a thousand of file and had to issue the `targetHash` for each of them. It would be extremely inefficient. That's where the `merkleRoot` will come in handy.
 
 #### merkleRoot
 
@@ -75,13 +75,13 @@ Once the `targetHash` of a document is computed, OpenAttestation will determine 
 
 In the document above we can notice that the `targetHash` and the `merkelRoot` are identical and that the `proof` is empty. This is normal and happen when you wrap only one document at a time. Try to wrap at least 2 documents at the same time, and you will see a difference between `targetHash` and the `merkelRoot`, and you will be proofs appended.
 
-> The `merkleRoot` will always be the same for all the documents wrapped together (at the same time). It will be different for documents wrapped separately.
+> The `merkleRoot` will always be the same for all the documents wrapped together (in a batch). It will be different for documents wrapped separately.
 
 Now that our batch of documents have a common identifier and that we can prove (thanks to the merkle tree algorithm) that the `targetHash` of a document was used to create a specific `merkleRoot`, we can use the `merkleRoot` in our document store and issue it.
 
 #### Data Obfuscation
 
-Thanks to the way we compute `targetHash`, OpenAttestation allows for one to obfuscate data they don't want to make public. For this just need to compute the hash of a specific field and add it into the documents. Let's try it with the [CLI](/docs/component/open-attestation-cli) and the document above:
+Thanks to the way we compute `targetHash`, OpenAttestation allows for one to obfuscate data they don't want to make public. For this we can simply compute the hash of a specific field and add it into the documents. Let's try it with the [CLI](/docs/component/open-attestation-cli) and the document above:
 
 ```bash
 open-attestation filter ./path/to/file.json ./output.json name
@@ -128,7 +128,7 @@ Thanks to data obfuscation a user can decide to selectively disclose a subset of
 
 ### Document Store
 
-As discussed above, issuance of documents can happen individually or by batch. Choosing to batch documents by far the most efficient way.
+As discussed above, issuance of documents can happen individually or by batch. Issuing a batch documents is by far the more efficient way.
 
 When it comes to revocation both values can also be used:
 

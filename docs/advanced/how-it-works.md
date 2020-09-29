@@ -37,7 +37,7 @@ As a reminder, wrapping a document works on JSON object. A single wrapped docume
 
 A few interesting transformations happened that we will dive into below:
 
-- A `data`  key has been created and its value holds the contents of the file previously provided when wrapping, along with some weird-looking extra (hexadecimal) data.
+- A `data` key has been created and its value holds the contents of the file previously provided when wrapping, along with some weird-looking extra (hexadecimal) data.
 - A `signature` object has been created.
 
 ### The `data` object
@@ -57,7 +57,7 @@ The first step of wrapping consists of transforming all the object properties pr
 
 Once the `data` object has been computed we will be able to create an unique hash for the document that we will set into `targetHash`:
 
-1. List each properties' path from the `data` object and associate its value. The path follows the [flatley](https://github.com/antony/flatley) path convention.
+1. List each properties' path from the `data` object and associate its value. The path follows the [flatley](https://github.com/antony/flatley) path convention. For instance: `name`, `issuers.0.tokenRegistry`, etc.
 1. For each properties' path, compute a hash using the properties' path and value. To compute the hash we use [keccak256](https://en.wikipedia.org/wiki/SHA-3).
 1. Sort all the hashes from the previous step alphabetically and hash them all together: this will provide the `targetHash` of the document. To compute the `targetHash` we also use [keccak256](https://en.wikipedia.org/wiki/SHA-3).
 
@@ -71,9 +71,9 @@ Imagine that you wrap a thousand of file and had to issue the `targetHash` for e
 
 #### merkleRoot
 
-Once the `targetHash` of a document is computed, OpenAttestation will determine the `merkleRoot`. The `merkleRoot` value is the merkle root hash computed from the [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree) using the `targetHash` of all the document wrapped together. After computing the merkle tree, the `merkleRoot` associated to a document will be added to it as well as the proofs (intermediate hashes) needed to ensure that the `targetHash` has been used to compute the `merkleRoot`. The proofs are added into the `proof` property.
+Once the `targetHash` of a document is computed, OpenAttestation will determine the `merkleRoot`. The `merkleRoot` value is the merkle root hash computed from the [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree) using the `targetHash` of all the document wrapped together. Each `targetHash` is a leaf in the tree. After computing the merkle tree, the `merkleRoot` associated to a document will be added to it as well as the proofs (intermediate hashes) needed to ensure that the `targetHash` has been used to compute the `merkleRoot`. The proofs are added into the `proof` property.
 
-In the document above we can notice that the `targetHash` and the `merkelRoot` are identical and that the `proof` is empty. This is normal and happen when you wrap only one document at a time. Try to wrap at least 2 documents at the same time, and you will see a difference between `targetHash` and the `merkelRoot`, and you will be proofs appended.
+In the document above we can notice that the `targetHash` and the `merkelRoot` are identical and that the `proof` is empty. This is normal and happen when you wrap only one document at a time. Try to wrap at least 2 documents at the same time, and you will see a difference between `targetHash` and the `merkelRoot`, and you will see proofs appended.
 
 > The `merkleRoot` will always be the same for all the documents wrapped together (in a batch). It will be different for documents wrapped separately.
 
@@ -81,7 +81,7 @@ Now that our batch of documents have a common identifier and that we can prove (
 
 #### Data Obfuscation
 
-Thanks to the way we compute `targetHash`, OpenAttestation allows for one to obfuscate data they don't want to make public. For this we can simply compute the hash of a specific field and add it into the documents. Let's try it with the [CLI](/docs/component/open-attestation-cli) and the document above:
+Due to the way we compute `targetHash`, OpenAttestation allows for one to obfuscate data they don't want to make public. For this we can simply compute the hash of a specific field and add it into the documents. Let's try it with the [CLI](/docs/component/open-attestation-cli) and the document above:
 
 ```bash
 open-attestation filter ./path/to/file.json ./output.json name
@@ -122,9 +122,16 @@ The `name` field is not available anymore in the `data` object, and the hash ass
 
 > More importantly, the document remains valid.
 
-The hash added is the one used when computing the [`targetHash`](#targethash). Like said above, we follow the same steps to compute a `targetHash` and verify that a document remained untouched, with one subtle difference: all the hashes available in `privacy.obfuscatedData` are added to the list of computed hashes from the data object before sorting them. That way we can rebuild the `targetHash` with obfuscated values.
+The hash added into `privacy.obfuscatedData` is the one used when computing the [`targetHash`](#targethash). To verify that a document remained untouched, OpenAttestation computes the `targetHash` of the provided document and compare it to `signature.targetHash`. There is one subtle difference during verification. All the hashes available in `privacy.obfuscatedData` are added to the list of computed hashes. So for verification the steps are as follows:
 
-Thanks to data obfuscation a user can decide to selectively disclose a subset of data he wants to share.
+1. List each properties' path from the `data` object and associate its value.
+1. For each properties' path, compute a hash using the properties' path and value.
+1. Append the hashes from `privacy.obfuscatedData` to the list of computed hashes from the previous step.
+1. Sort all the hashes from the previous step alphabetically and hash them all together: this will provide the `targetHash` of the document.
+
+The only difference with the [`targetHash`](#targethash) computation is the step 3.
+
+With the help of data obfuscation a user can decide to selectively disclose a subset of data he wants to share.
 
 ### Document Store
 

@@ -18,7 +18,8 @@
       "transferable-record/token-registry",
       "transferable-record/preparing-transferable-record",
       "transferable-record/title-escrow",
-      "transferable-record/issuing-transferable-record"
+      "transferable-record/issuing-transferable-record",
+      "transferable-record/going-further"
     ],
     "Components": [
       "component/overview",

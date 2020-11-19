@@ -31,7 +31,7 @@
     ],
     "Advanced": [
       "advanced/overview",
-      "advanced/how-it-works",
+      "advanced/how-does-it-work",
       "advanced/verification-methods",
       "advanced/identity-proofs",
       "advanced/custom-renderer",

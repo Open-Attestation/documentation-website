@@ -1,5 +1,5 @@
 ---
-id: how-it-works
+id: how-does-it-work
 title: How does it work?
 sidebar_label: How does it work?
 ---
@@ -62,6 +62,8 @@ Once the `data` object has been computed we will be able to create an unique has
 1. Sort all the hashes from the previous step alphabetically and hash them all together: this will provide the `targetHash` of the document. To compute the `targetHash` we also use [keccak256](https://en.wikipedia.org/wiki/SHA-3).
 
 > The `targetHash` of a document is an unique identifier.
+
+![Compute target hash](/docs/advanced/how-does-it-work/target-hash.png)
 
 Later on, during verification of the document, the same exact steps are performed again to assert that the contents of the document has not been tampered with. This works as the final targetHash will be completely different if any part of the wrapped document is different from the original.
 
@@ -130,6 +132,8 @@ The hash added into `privacy.obfuscatedData` is the one used when computing the 
 1. Sort all the hashes from the previous step alphabetically and hash them all together: this will provide the `targetHash` of the document.
 
 The only difference with the [`targetHash`](#targethash) computation is the step 3.
+
+![Compute target hash with data obfuscation](/docs/advanced/how-does-it-work/target-hash-with-data-obfuscation.png)
 
 With the help of data obfuscation a user can decide to selectively disclose a subset of data he wants to share.
 

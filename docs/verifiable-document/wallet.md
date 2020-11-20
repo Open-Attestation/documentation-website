@@ -26,3 +26,10 @@ During the creation, you will be prompted for a password. Make sure to remember 
 A wallet will be created in the current folder, in the `wallet.json` file.
 
 > In the example above, the public address for the wallet is `0x10cFd56E11e7d66C8d0716Cd2D6B847Cb17ABeeD`. You will definitely get a different value.
+
+Make sure ethers have been added into your wallet. You will need some for the next steps. Head to etherscan (https://ropsten.etherscan.io/address/PUT_YOUR_ADDRESS_HERE}) and verify the balance. You should have 1 ether. For instance, for the wallet created above, the URL is https://ropsten.etherscan.io/address/0x10cFd56E11e7d66C8d0716Cd2D6B847Cb17ABeeD.
+
+After few minutes, if your balance stays empty, you can try to use a different ether faucet for ropsten network. For instance :
+
+- https://faucet.metamask.io/
+- https://faucet.dimensions.network/

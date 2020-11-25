@@ -1,0 +1,66 @@
+/* stylelint-disable docusaurus/copyright-header */
+a {
+  color: #324353;
+}
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background-color: #f0f3f6;
+  color: #324353;
+}
+
+@media screen and (max-width: 966px) {
+  .heroBanner {
+    padding: 2rem;
+  }
+}
+
+.getStarted {
+  background-color: #324353;
+  color: white !important;
+}
+.getStarted:hover {
+  background-color: #41576c;
+}
+
+.buttons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.featureImage {
+  height: 200px;
+  width: 200px;
+}
+
+.product {
+  margin-top: 40px;
+}
+.productImage {
+  max-height: 260px;
+}
+
+section {
+  padding: 80px 20px 80px;
+  text-align: center;
+}
+
+section:nth-child(even) {
+  background-color: #f0f3f6;
+}
+
+html[data-theme="dark"] .heroBanner {
+  background-color: #324353;
+  color: white;
+}
+html[data-theme="dark"] section:nth-child(even) {
+  background-color: #324353;
+  color: white;
+}
+html[data-theme="dark"] a {
+  color: #7693ad;
+}

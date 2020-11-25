@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Components Overview 
+title: Components Overview
 sidebar_label: Overview
 ---
 

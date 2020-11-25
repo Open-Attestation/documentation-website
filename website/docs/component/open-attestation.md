@@ -1,6 +1,6 @@
 ---
 id: open-attestation
-title: OpenAttestation Wrapper SDK (javascript) 
+title: OpenAttestation Wrapper SDK (javascript)
 sidebar_label: Wrapper SDK (javascript)
 ---
 

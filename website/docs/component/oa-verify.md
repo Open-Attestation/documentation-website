@@ -1,6 +1,6 @@
 ---
 id: oa-verify
-title: Verification SDK (javascript) 
+title: Verification SDK (javascript)
 sidebar_label: Verification SDK (javascript)
 ---
 
@@ -65,7 +65,7 @@ verify(document, { network: "ropsten" }).then(fragments => {
 ```
 
 ### Custom verification
-In some cases, you will need to perform more verification on a document than the one provided by default. Fortunately the library is configurable in a way you can create your own [verification methods](/docs/advanced/verification-methods.md) and distribute your verifier.  
+In some cases, you will need to perform more verification on a document than the one provided by default. Fortunately the library is configurable in a way you can create your own [verification methods](/docs/advanced/verification-methods) and distribute your verifier.  
 
 ### Custom validation
 The `isValid` function will execute over fragments and determine if the fragments produced a valid result. By default the function will return true if a document fulfill the following conditions:
@@ -93,7 +93,7 @@ verify(document, { network: "mainnet" }).then(fragments => {
 Let's try to understand the different results:
 - `isValid(fragments, ["DOCUMENT_INTEGRITY"])` returns true because the integrity of the document is not dependant on the network it has been published to.
 - `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because the document has not been published on Ethereum main network.
-- `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because there is no [DNS-TXT record](/docs/verifiable-document/dns-proof.md) associated with the Ethereum main network's document store.
+- `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because there is no [DNS-TXT record](/docs/verifiable-document/dns-proof) associated with the Ethereum main network's document store.
 - `isValid(fragments)` returns false because at least one of the above returns false.
 
 ### Listening to individual verification method

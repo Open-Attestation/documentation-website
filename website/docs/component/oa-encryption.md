@@ -1,6 +1,6 @@
 ---
 id: oa-encryption
-title: Encryption SDK (javascript) 
+title: Encryption SDK (javascript)
 sidebar_label: Encryption SDK (javascript)
 ---
 

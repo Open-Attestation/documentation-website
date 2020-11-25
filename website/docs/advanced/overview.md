@@ -1,6 +1,6 @@
 ---
 id: overview
-title: Extensions Overview 
+title: Extensions Overview
 sidebar_label: Overview
 ---
 

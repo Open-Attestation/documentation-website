@@ -1,5 +1,5 @@
 /* stylelint-disable docusaurus/copyright-header */
-a {
+.layout a {
   color: #324353;
 }
 
@@ -44,12 +44,12 @@ a {
   max-height: 260px;
 }
 
-section {
+.layout section {
   padding: 80px 20px 80px;
   text-align: center;
 }
 
-section:nth-child(even) {
+.layout section:nth-child(even) {
   background-color: #f0f3f6;
 }
 
@@ -57,10 +57,10 @@ html[data-theme="dark"] .heroBanner {
   background-color: #324353;
   color: white;
 }
-html[data-theme="dark"] section:nth-child(even) {
+html[data-theme="dark"] .layout section:nth-child(even) {
   background-color: #324353;
   color: white;
 }
-html[data-theme="dark"] a {
+html[data-theme="dark"] .layout a {
   color: #7693ad;
 }

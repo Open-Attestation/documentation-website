@@ -63,9 +63,9 @@ To makes things simple, we will use an existing deployed renderer (at https://tu
 
 Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b` to the smart contract address of your document store in the [previous steps](/docs/verifiable-document/document-store)
 
-#### 1. issuers[0].documentStore.identityProof.location
+#### 1. issuers[0].identityProof.location
 
-Replace the value of `issuers[0].documentStore.identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the dns name used to bind the document store's identity in the [previous steps](/docs/verifiable-document/dns-proof)
+Replace the value of `issuers[0].identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the dns name used to bind the document store's identity in the [previous steps](/docs/verifiable-document/dns-proof)
 
 ![Validator Completed](/docs/verifiable-document/document-data/validator-completed.png)
 

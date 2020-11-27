@@ -4,14 +4,34 @@
     "Verifiable Document": [
       "verifiable-document/overview",
       "verifiable-document/prerequisites",
-      "verifiable-document/wallet",
-      "verifiable-document/document-store",
-      "verifiable-document/dns-proof",
-      "verifiable-document/raw-document",
-      "verifiable-document/wrapping-document",
-      "verifiable-document/issuing-document",
-      "verifiable-document/revoking-document",
-      "verifiable-document/going-further"
+      {
+        "label": "Ethereum",
+        "type": "category",
+        "items": [
+          "verifiable-document/overview-document-store",
+          "verifiable-document/wallet",
+          "verifiable-document/document-store",
+          "verifiable-document/dns-proof",
+          "verifiable-document/raw-document",
+          "verifiable-document/wrapping-document",
+          "verifiable-document/issuing-document",
+          "verifiable-document/revoking-document",
+          "verifiable-document/going-further"
+        ]
+      },
+      {
+        "label": "DID",
+        "type": "category",
+        "items": [
+          "verifiable-document/did/create",
+          "verifiable-document/did/dns",
+          "verifiable-document/did/raw-document",
+          "verifiable-document/did/wrapping-document",
+          "verifiable-document/did/signing-document",
+          "verifiable-document/did/revoking-document"
+        ]
+      },
+      "verifiable-document/comparison"
     ],
     "Transferable Record": [
       "transferable-record/overview",

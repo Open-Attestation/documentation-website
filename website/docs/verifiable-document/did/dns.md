@@ -5,7 +5,7 @@ sidebar_label: Configuring DNS
 
 The explanation about why we need to configure the DNS are available [in the Ethereum tutorial](/docs/verifiable-document/dns-proof).
 
-THe principles stay. We will only use our the wallet address as a proof and bind it to a domain.
+The principles are similar, but we will only use the wallet address as signing credentials and bind it to a domain.
 
 ## Creating Temporary DNS Proof with CLI
 
@@ -15,7 +15,7 @@ With your [wallet address](/docs/verifiable-document/did/create), run the follow
 open-attestation dns txt-record create --public-key did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller
 ```
 
-Take note that you need to prepend your wallet address by `did:ethr:` and append it with `#controller`. Indeed, open again your own DID on uniresolver (see previous step). Check the value of `didDocument.publicKey`. It should look like:
+Take note that you need to prepend your wallet address by `did:ethr:` and append `#controller` to it. Indeed, open again your own DID on uniresolver (see previous step). Check the value of `didDocument.publicKey`. It should look like:
 
 ```json
 [

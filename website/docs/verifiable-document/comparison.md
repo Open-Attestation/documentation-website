@@ -7,15 +7,15 @@ In this section, we will discuss the differences between Ethereum Smart Contract
 
 ## Infrastructure
 
-By using Ethereum Smart Contracts, you will of course be bound to the Ethereum infrastructure. Every transaction will be stored in the Blockchain. Forever. You won't need to maintain any infrastructure on your own. On top of that you will be able to monitor every transaction that happened, and detect abnormal activities. For instance if one user manage to steal your wallet private key, you will find evidence directly un the Blockchain.
+By using Ethereum Smart Contracts, you will of course be bound to the Ethereum infrastructure. Every transaction will be stored in the Blockchain. Forever. For basic issuance, you won't need to maintain any infrastructure on your own. On top of that you will be able to monitor every transaction that happened, and detect abnormal activities. For instance if someone manages to steal your wallet private key, you will find evidence directly on the Blockchain.
 
 Regarding DID, you won't need to maintain any infrastructure as well... or maybe you will need. It will depend on your needs. Indeed, No records of your transactions will be made by default. DID will work straight, out of the box. However, if you want to keep track on every transaction, you will have to do it yourself. One could ask: "Why would I need to track every transaction ?". Unlike for Ethereum Smart Contracts, if a user manage to steal your signing private key, you will never be aware of it.
 
 ## Environment
 
-Ethereum Smart Contracts are bound to the different Ethereum network. That means if you create a document store on the ropsten network, you won't be able to use the same document store on a different network (mainnet, rinkeby, etc...). It's very convenient for the separation of test and production use cases (like in centralized architecture, when you have staging and production environment). Sometimes you might prefer to have everything working everywhere.
+Ethereum Smart Contracts are bound to the different Ethereum network. That means if you create a document store on the ropsten network, you won't be able to use the same document store on a different network (mainnet, rinkeby, etc...). It's very convenient for the separation of test and production use cases (like in centralized architecture, when you have staging and production environment).
 
-This is where DID come handy. Even if technically a DID could be bound to a specific environment, like `did:ethr:ropsten:0xabcd`, it's easy to use working everywhere, like `did:ethr:0xabc`. Of course while this is true for ethr DID, it might not be true for any DID.
+This is where DID come handy. Even if technically a DID could be bound to a specific environment, like `did:ethr:ropsten:0xabcd`, it's also possible to allow it to be used everywhere, like `did:ethr:0xabc`. Of course while this is true for ethr DID, it might not be true for any DID.
 
 ## Price
 
@@ -31,7 +31,7 @@ With DID, you don't need money of any sort. It works out of the box.
 
 ## Privacy
 
-When using Ethereum Smart Contracts, everything will be publicly available. As long as someone knows your document store contract address, they will be able to issue how many times you issued, revoked, etc. There are ways to hide data. However, you have to keep in mind that if someone really wants to find the information, he will find it. It's still public.
+When using Ethereum Smart Contracts, all issuance and revocation events will be publicly viewable. As long as someone knows your document store contract address, they will be able to see how many times you issued, revoked, etc. 
 
 For DID, it's the opposite, everything is private.
 
@@ -46,4 +46,4 @@ DID will have to rely on any kind of [CRL](https://en.wikipedia.org/wiki/Certifi
 
 Because of Ethereum, you will never have control on how long a transaction happens with Ethereum Smart Contracts. You can pay more gas to speed up the transaction but in the end you have no control. It's also worth to consider the workflow. If you issue a lot of documents and have to pay a transaction for each document issuance individually, it will quickly cost a lot. That's why we recommend batching issuance. Whether you do it hourly, weekly or monthly will depend on your need. Keep in mind that issuing document individually is a bad option and can become very costly (unless you issue one document every month for instance). Issuing hourly or daily are viable options in terms of price.
 
-DID is a perfect match when you need to sign document in real-time. This way, your issuer will directly receive the certificate and won't have to wait (in the event of waiting a day, for instance is not a solution). You can of course use it as well to sign document at a specific rate (hourly, daily, etc),
+DID is a perfect match when you need to sign document in real-time. Unlike issuing with the smart contract methods, there is no requirement to wait for a blockchain transaction to be finalised and the issued document is immediately valid.

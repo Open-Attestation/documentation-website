@@ -16,7 +16,7 @@ In this guide, we will bind the document issuer's identity to a valid domain nam
 
 To bind the domain name to the issuer's identity, you must be able to change the DNS record of the domain name.
 
-## Inserting the DNS Record
+## Inserting the DNS Record for Ethereum Smart contracts
 
 You will need to add a DNS `TXT` record to your domain name. The exact steps to achieve this can be confirmed with your domain registrar, this is usually achieved through your domain registrar or DNS provider's web UI.
 
@@ -50,7 +50,7 @@ The `netId` corresponds to the [network ID for the different Ethereum networks](
 
 For more information on switching to production mode, refer to the [Additional Note for Identity Proof in Production](#additional-note-for-identity-proof-in-production) section below.
 
-## Testing the DNS Record
+### Testing the DNS Record
 
 ![Google DNS to Test](/docs/advanced/configuring-dns/google-dns.png)
 
@@ -58,7 +58,7 @@ For more information on switching to production mode, refer to the [Additional N
 
 After adding the `TXT` record, we recommend you to check that the record has been inserted correctly by viewing with [Google DNS](https://dns.google.com/). Make sure to select `TXT` in the _RR Type_ dropdown.
 
-## Additional Note for Identity Proof in Production
+### Additional Note for Identity Proof in Production
 
 The `TXT` record above is for use for documents issued on the Ethereum `ropsten` network. To bind the identity in production where your documents are issued in the Ethereum `mainnet` network, you will have to change `netId` to `1`.
 
@@ -67,6 +67,17 @@ An example of a valid `TXT` record for Ethereum `mainnet` network is as shown:
 | Type | Name                     | Value                                                                           |
 | ---- | ------------------------ | ------------------------------------------------------------------------------- |
 | TXT  | demo.openattestation.com | "openatts net=ethereum netId=1 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812" |
+
+## Inserting the DNS Record for DID
+
+This is very similar to Ethereum Smart Contracts. Only the shape of the data change.
+Within your domain registrar or DNS provider's web UI, insert a `TXT` record into the DNS in the following format:
+
+| Type | Name        | Value                                 |
+| ---- | ----------- | ------------------------------------- |
+| TXT  | example.com | "openatts a=dns-did; p=`<DID>`; v=1.0;" |
+
+The `<DID>` in the `Value` field above is DID public key id, as resolved by your DID. For instance, check [this DID](https://dev.uniresolver.io/1.0/identifiers/did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D). The expected value is `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller`, similar to `didDocument.publicKey[0].id`.
 
 ## Additional Note for Adding DNS `TXT` Records
 

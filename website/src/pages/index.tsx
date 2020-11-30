@@ -10,46 +10,46 @@ const products = [
   {
     title: "OpenCerts",
     imageUrl: "img/products/opencerts.png",
-    infoLink: "https://opencerts.io"
+    infoLink: "https://opencerts.io",
   },
   {
     title: "OpenAttestation Gallery",
     imageUrl: "img/products/oa-gallery.png",
-    infoLink: "https://gallery.openattestation.com"
+    infoLink: "https://gallery.openattestation.com",
   },
   {
     title: "Identity Wallet",
     imageUrl: "img/products/identity-wallet.png",
-    infoLink: "/docs/appendix/identity-wallet"
+    infoLink: "/docs/appendix/identity-wallet",
   },
   {
     title: "TradeTrust",
     imageUrl: "img/products/tradetrust.png",
-    infoLink: "https://tradetrust.io"
-  }
+    infoLink: "https://tradetrust.io",
+  },
 ];
 
 const features = [
   {
     title: "Verifiable Credentials",
     imageUrl: `img/undraw_certificate.svg`,
-    description: "Verified provenance of tamper-proof documents"
+    description: "Verified provenance of tamper-proof documents",
   },
   {
     title: "Selective Disclosure",
     imageUrl: `img/undraw_options.svg`,
-    description: "User controls what data to share"
+    description: "User controls what data to share",
   },
   {
     imageUrl: `img/undraw_experience_design.svg`,
     description: "Render your document with custom templates",
-    title: "Decentralised Rendering"
+    title: "Decentralised Rendering",
   },
   {
     title: "Verified Issuer's Identity",
     imageUrl: `img/undraw_hologram.svg`,
-    description: "Issuers identified with DNS records"
-  }
+    description: "Issuers identified with DNS records",
+  },
 ];
 
 function Feature({ imageUrl, title, description }) {
@@ -85,7 +85,7 @@ function Home() {
   const { siteConfig = {} } = context;
   return (
     <Layout title={siteConfig.title} description="Description will go into a meta tag in <head />">
-      <header className={clsx("hero hero--primary", styles.heroBanner)}>
+      <header className={clsx("hero hero--primary", styles.heroBanner, styles.layout)}>
         <div className="container">
           <img src={useBaseUrl("img/logo.gif")} alt="OpenAttestation logo" />
           <h1 className="hero__title">{siteConfig.title}</h1>
@@ -100,7 +100,7 @@ function Home() {
           </div>
         </div>
       </header>
-      <main>
+      <main className={styles.layout}>
         <section>
           <div className="productShowcaseSection paddingTop paddingBottom">
             <h2>What Is OpenAttestation?</h2>

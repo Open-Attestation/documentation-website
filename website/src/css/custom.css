@@ -10,3 +10,8 @@
 .footer__title {
   text-align: center;
 }
+
+blockquote {
+  border-left-color: #fcd34d;
+  background-color: #fffbeb;
+}

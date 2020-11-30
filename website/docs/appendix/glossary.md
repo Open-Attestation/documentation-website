@@ -24,7 +24,11 @@ Placeholder
 
 ### Wallet
 
-Placeholder
+[Ethereum Wallets](https://ethereum.org/en/wallets/#:~:text=Ethereum%20wallets%20are%20applications%20that,funds%20and%20manage%20your%20ETH%20)
+
+### DID
+
+[DID](https://www.w3.org/TR/did-core/)
 
 ### Document store
 

@@ -69,7 +69,7 @@ Later on, during verification of the document, the same exact steps are performe
 
 The [document store](/docs/verifiable-document/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It stores the hashes of wrapped documents, which are the records of the owner of the document store having issued the documents.
 
-Imagine that you wrap a thousand of file and had to issue the `targetHash` for each of them. It would be extremely inefficient. That's where the `merkleRoot` will come in handy.
+Imagine that you wrap thousands of files and had to issue the `targetHash` for each of them. It would be extremely inefficient. That's where the `merkleRoot` will come in handy.
 
 #### merkleRoot
 

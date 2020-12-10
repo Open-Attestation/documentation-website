@@ -87,7 +87,7 @@ function Home() {
     <Layout title={siteConfig.title} description="Description will go into a meta tag in <head />">
       <header className={clsx("hero hero--primary", styles.heroBanner, styles.layout)}>
         <div className="container">
-          <img src={useBaseUrl("img/logo.gif")} alt="OpenAttestation logo" />
+          <img src={useBaseUrl("img/logos/oa.svg")} alt="OpenAttestation logo" style={{ maxWidth: "240px" }} />
           <h1 className="hero__title">{siteConfig.title}</h1>
           <p className="hero__subtitle">{siteConfig.tagline}</p>
           <div className={styles.buttons}>

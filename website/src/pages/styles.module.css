@@ -54,11 +54,11 @@
 }
 
 html[data-theme="dark"] .heroBanner {
-  background-color: #324353;
+  background-color: #1c1e21;
   color: white;
 }
 html[data-theme="dark"] .layout section:nth-child(even) {
-  background-color: #324353;
+  background-color: #1c1e21;
   color: white;
 }
 html[data-theme="dark"] .layout a {

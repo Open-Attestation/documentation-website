@@ -55,6 +55,7 @@
       "advanced/verification-methods",
       "advanced/identity-proofs",
       "advanced/custom-renderer",
+      "advanced/gas-station-network",
       "advanced/configuring-dns"
     ],
     "Appendix": [

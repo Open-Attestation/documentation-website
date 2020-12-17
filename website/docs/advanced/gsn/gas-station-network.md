@@ -6,7 +6,7 @@ sidebar_label: What is GSN?
 
 Anyone who sends an Ethereum transaction needs to have ETH to pay for gas fees. This forces new users to pass [KYC (Know Your Customer)](../../appendix/glossary#know-your-customer-kyc) and purchase ETH before they can start using any dapp. This can be a major hurdle for users without prior crypto experience that are unfamiliar with the concept of needing to keep ETH in their wallet for gas.
 
-Ethereum Gas Station Network (GSN) abstracts away gas to minimize onboarding & UX friction for dapps. With GSN, gasless clients can interact with Ethereum contracts without users needing ETH for transaction fees.
+Ethereum Gas Station Network (GSN) abstracts away gas to minimize onboarding & UX friction for dapps. With GSN, clients with no Ethereum can interact with Ethereum contracts without them having to pay for gas fees.
 
 ## How it works
 
@@ -14,11 +14,11 @@ Ethereum Gas Station Network (GSN) abstracts away gas to minimize onboarding & U
 
 _Source: [Open GSN](https://docs.opengsn.org/learn/index.html)_
 
-Instead of signing an Ethereum transaction, which would require ETH for gas, a user signs a message containing information about a transaction they would like to execute and sends it to a relay server. Before the relay server pays for gas it verifies it will get refunded by a Paymaster contract.
+Instead of signing an Ethereum transaction, which would require ETH for gas, a user signs a message containing information about a transaction they would like to execute and sends it to a relay server. Before the relay server pays, it verifies that it will get refunded by a Paymaster contract.
 
-A [paymaster](https://docs.opengsn.org/learn/index.html#paymaster) holds ETH and can implement any business logic to decide whether to accept or reject a meta transaction. For example, accepting only transactions by whitelisted users, or to the contracts methods required for onboarding users, or only transactions that include a repayment in tokens to the Paymaster, etc.
+A [Paymaster](https://docs.opengsn.org/learn/index.html#paymaster) holds ETH and can implement any business logic to decide whether to accept or reject a meta transaction. For example, accepting only transactions by whitelisted users, or to the contracts methods required for onboarding users, or only transactions that include a repayment in tokens to the Paymaster, etc.
 
-Assuming that the paymaster is willing to pay for transaction, the transaction gets forwarded to our contract, executing the function logic of issue, revocation, minting etc.
+Assuming that the Paymaster is willing to pay for transaction, the transaction gets forwarded to our contract, executing the function logic of issue, revocation, minting etc.
 
 ## Next steps
 

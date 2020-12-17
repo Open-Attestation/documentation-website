@@ -4,15 +4,15 @@ title: Creating a Paymaster
 sidebar_label: Creating a Paymaster
 ---
 
-A [paymaster](https://docs.opengsn.org/learn/index.html#paymaster) holds ETH and can implement any business logic to decide whether to accept or reject a meta transaction. For example, accepting only transactions by whitelisted users, or to the contracts methods required for onboarding users, or only transactions that include a repayment in tokens to the Paymaster, etc.
+A [Paymaster](https://docs.opengsn.org/learn/index.html#paymaster) holds ETH and can implement any business logic to decide whether to accept or reject a meta transaction. For example, accepting only transactions by whitelisted users, or to the contracts methods required for onboarding users, or only transactions that include a repayment in tokens to the Paymaster, etc.
 
-A paymaster is useful for any party willing to pay for a relayed transaction to a given address using the GSN network.
+A Paymaster is useful for any party willing to pay for a relayed transaction to a given address using the GSN network.
 
 ## Implementation of Paymaster
 
 We provided a implementation of the Paymaster which allows for multiple payable address set by you.
 
-You can refer to the source code of our Paymaster [here](https://github.com/Open-Attestation/document-store/blob/master/contracts/NaivePaymaster.sol)
+You can refer to the source code of our Paymaster [here](https://github.com/Open-Attestation/document-store/blob/master/contracts/NaivePaymaster.sol).
 
 ## Deploying Paymaster
 
@@ -23,7 +23,7 @@ You can refer to the source code of our Paymaster [here](https://github.com/Open
 
 ### Deploying via OpenAttestation CLI
 
-Simply run the following command. You may replace the `<paymaster-name>` with a suitable name
+Simply run the following command. You may replace the `<paymaster-name>` with a suitable name.
 
 ```bash
 open-attestation deploy paymaster  "My Paymaster" --network ropsten --encrypted-wallet-path wallet.json

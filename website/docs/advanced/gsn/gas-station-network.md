@@ -4,7 +4,7 @@ title: What is GSN?
 sidebar_label: What is GSN?
 ---
 
-Anyone who sends an Ethereum transaction needs to have ETH to pay for gas fees. This forces new users to pass KYC and purchase ETH before they can start using any dapp. This can be a major hurdle for users without prior crypto experience that are unfamiliar with the concept of needing to keep ETH in their wallet for gas.
+Anyone who sends an Ethereum transaction needs to have ETH to pay for gas fees. This forces new users to pass [KYC (Know Your Customer)](../../appendix/glossary#know-your-customer-kyc) and purchase ETH before they can start using any dapp. This can be a major hurdle for users without prior crypto experience that are unfamiliar with the concept of needing to keep ETH in their wallet for gas.
 
 Ethereum Gas Station Network (GSN) abstracts away gas to minimize onboarding & UX friction for dapps. With GSN, gasless clients can interact with Ethereum contracts without users needing ETH for transaction fees.
 

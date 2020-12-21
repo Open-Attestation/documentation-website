@@ -8,9 +8,11 @@ A [Paymaster](https://docs.opengsn.org/learn/index.html#paymaster) holds ETH and
 
 A Paymaster is useful for any party willing to pay for a relayed transaction to a given address using the GSN network.
 
+This guide is for developers who want to setup a paymaster wallet to sponsor all transactions to a given smart contract.
+
 ## Implementation of Paymaster
 
-We provided a implementation of the Paymaster which allows for multiple payable address set by you.
+We provided an implementation of the Paymaster which allows for multiple payable address.
 
 You can refer to the source code of our Paymaster [here](https://github.com/Open-Attestation/document-store/blob/master/contracts/NaivePaymaster.sol).
 
@@ -19,11 +21,13 @@ You can refer to the source code of our Paymaster [here](https://github.com/Open
 ### Pre-requisite
 
 - [OpenAttestation CLI](/docs/component/open-attestation-cli) installed
-- Private key to an Ethereum wallet with sufficient ethers or a [wallet](/docs/verifiable-document/wallet)
+- [Ethereum wallet with sufficient ethers](/docs/verifiable-document/wallet)
+
+> We will only show example for the wallet and one must change the command accordingly if using another method
 
 ### Deploying via OpenAttestation CLI
 
-Simply run the following command. You may replace the `<paymaster-name>` with a suitable name.
+Simply run the following command. You may replace the `<paymaster-name>` with a suitable name (the name does not matter).
 
 ```bash
 open-attestation deploy paymaster  "My Paymaster" --network ropsten --encrypted-wallet-path wallet.json
@@ -43,7 +47,7 @@ This will deploy the paymaster on the `ropsten` network. You should see a simila
 
 > Save YOUR paymaster address for future reference
 
-After deploying your paymaster, you will need to fund it so that the paymaster would be able to pay for relayed transactions made. We can use this command to transfer 1 ETH to the paymaster for now. Replace `<paymaster-address> `with your own paymaster's address and `<value>` with the amount you want to send.
+After deploying your paymaster, you will need to fund it so that the paymaster will be able to pay for relayed transactions made. We can use this command to transfer 1 ETH to the paymaster for now. Replace `<paymaster-address>` with your own paymaster's address and `<value>` with the amount you want to send.
 
 ```bash
 npx @ethersproject/cli --account wallet.json --network ropsten send 0xC234Fb1F1ef0ABCD1faC90ad12F4DfC97D583F95 1
@@ -54,6 +58,8 @@ npx @ethersproject/cli --account wallet.json --network ropsten send 0xC234Fb1F1e
 You can read more about `ethers-cli` [here](https://docs.ethers.io/v5/cli/ethers/#sandbox-utility--help).
 
 ## Paymaster Configuration
+
+The paymaster is ready. You have to wait for clients to deploy their gsn capable document store before proceeding further.
 
 In order to authorize your paymaster to pay for your contract we will need to configure the paymaster deployed earlier. We can use the `add-target` method to do so. You need to replace `<paymaster-address>` with your own paymaster and `<target-address>` with the address off the contract you intend to allow payment for.
 

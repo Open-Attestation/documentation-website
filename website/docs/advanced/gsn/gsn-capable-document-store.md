@@ -6,16 +6,22 @@ sidebar_label: Deploy GsnCapableDocumentStore
 
 The GsnCapableDocumentStore is a variant of Document Store which allows for relayed transactions. The rest of the functionality mimics that of Document Store.
 
+This guide is for developers who have Ethereum and want to set up a document store that accept gsn relayed transactions for their users.
+
 ## Pre-requisite
 
 - [OpenAttestation CLI](/docs/component/open-attestation-cli) installed
-- Private key to an Ethereum wallet with sufficient ethers or a [wallet](/docs/verifiable-document/wallet)
+- [Ethereum wallet with sufficient ethers](/docs/verifiable-document/wallet)
+
+> We will only show example for the wallet and one must change the command accordingly if using another methodwallet)
 
 ## Deploying via OpenAttestation CLI
 
-To deploy a GsnCapableDocumentStore you can do so using the following command.You may replace the `<document-store-name>` with a suitable name.
+You will also need the corresponding address of the [Trust Forwarder](https://docs.opengsn.org/learn/index.html#forwarder) for your network provided by GSN. You can find the most updated list [here](https://docs.opengsn.org/gsn-provider/networks.html) or the highlighted below.
 
-You will also need the corresponding address of the [Trust Forwarder](https://docs.opengsn.org/learn/index.html#forwarder) for your network provided by GSN. You can find a the most updated list [here](https://docs.opengsn.org/gsn-provider/networks.html).
+![GSN Networks](/docs/advanced/gas-station-network/gsn_network_address.png)
+
+To deploy a GsnCapableDocumentStore you can do so by using the following command. You may replace the `<document-store-name>` with a suitable name (the name does not matter).
 
 ```bash
 open-attestation deploy gsn-capable-document-store "My Name" 0x25CEd1955423BA34332Ec1B60154967750a0297D --network ropsten
@@ -38,7 +44,7 @@ After successfully deploying the GsnCapableDocumentStore, you will need to set t
 open-attestation gsn-capable set-paymaster --network ropsten --gsn-capable-address 0x0d3dFdd82FF13Ff06a336e28CABE465B64fD8168 --paymaster-address 0xcB94584760bCA09e9fa7117C4eE966814f17a306
 ```
 
-> This allows our dapps to look up the paymaster address for your contract without additional declaration.
+> This allows our client to look up the paymaster address for your contract without additional declaration.
 
 ### DNS Configuration
 

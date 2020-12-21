@@ -4,13 +4,15 @@ title: What is GSN?
 sidebar_label: What is GSN?
 ---
 
-Anyone who sends an Ethereum transaction needs to have ETH to pay for gas fees. This forces new users to pass [KYC (Know Your Customer)](../../appendix/glossary#know-your-customer-kyc) and purchase ETH before they can start using any dapp. This can be a major hurdle for users without prior crypto experience that are unfamiliar with the concept of needing to keep ETH in their wallet for gas.
+Anyone who sends an Ethereum transaction needs to have ETH to pay for gas fees. This forces new users to pass [KYC (Know Your Customer)](../../appendix/glossary#know-your-customer-kyc) and purchase ETH before they can start using any [Decentralized Application (dapp)](../../appendix/glossary#decentralized-application-dapp). This can be a major hurdle for users without prior crypto experience that are unfamiliar with the concept of needing to keep ETH in their wallet for gas.
 
 Ethereum Gas Station Network (GSN) abstracts away gas to minimize onboarding & UX friction for dapps. With GSN, clients with no Ethereum can interact with Ethereum contracts without them having to pay for gas fees.
 
-## How it works
+This guide targets developers who have Ethereum and wish to sponsor their users in making transactions to a given contract.
 
-![Google DNS to Test](/docs/advanced/gas-station-network/gsn_flow_full_layered.jpg)
+## How does it work?
+
+![GSN Flow](/docs/advanced/gas-station-network/gsn_flow_full_layered.jpg)
 
 _Source: [Open GSN](https://docs.opengsn.org/learn/index.html)_
 
@@ -19,6 +21,10 @@ Instead of signing an Ethereum transaction, which would require ETH for gas, a u
 A [Paymaster](https://docs.opengsn.org/learn/index.html#paymaster) holds ETH and can implement any business logic to decide whether to accept or reject a meta transaction. For example, accepting only transactions by whitelisted users, or to the contracts methods required for onboarding users, or only transactions that include a repayment in tokens to the Paymaster, etc.
 
 Assuming that the Paymaster is willing to pay for transaction, the transaction gets forwarded to our contract, executing the function logic of issue, revocation, minting etc.
+
+## Initial idea
+
+Given a service provided, we wanted a way for the provider to pay for the transaction (this means that clients would not need to own any Ethereum to interact with the Smart Contract). For example, GovTech could be holding on to a Paymaster while subsidiaries are only required to have a empty wallet address to interact with GovTech's Smart Contracts.
 
 ## Next steps
 

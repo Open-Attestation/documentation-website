@@ -1,10 +1,12 @@
 ---
-id: use-relay-provider
-title: Using a RelayProvider
-sidebar_label: Using a RelayProvider
+id: creating-a-custom-relay-provider
+title: Creating a Custom RelayProvider
+sidebar_label: Creating a Custom RelayProvider
 ---
 
 A RelayProvider allows a client to send signed transaction to the blockchain.
+
+We provided our own implementation (link) and you can do your own by following this guide (link)
 
 This guide aims to give an example on how developers can use GsnCapable interface in conjunction with GsnRelayProvider to send relayed transactions.
 

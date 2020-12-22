@@ -62,7 +62,7 @@
           "advanced/gsn/gas-station-network",
           "advanced/gsn/setup-paymaster",
           "advanced/gsn/gsn-capable-document-store",
-          "advanced/gsn/use-relay-provider"
+          "advanced/gsn/creating-a-custom-relay-provider"
         ]
       },
       "advanced/configuring-dns"

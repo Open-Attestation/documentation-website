@@ -1,8 +1,9 @@
 ---
-id: how-does-it-work
-title: How does it work?
-sidebar_label: How does it work?
+title: Document integrity
+sidebar_label: Document integrity
 ---
+
+OpenAttestation ensures that the content of the document has not been modified since the document has been created, with exception of data removed using the built-in [obfuscation mechanism](/docs/component/open-attestation#obfuscating-data). Let's explore how it works.
 
 In the tutorial, we have learnt how to [wrap a document](/docs/verifiable-document/wrapping-document) and [issue it](/docs/verifiable-document/issuing-document) into a document store. However, we didn't explain what these actions were doing and why they are necessary.
 
@@ -54,6 +55,7 @@ The first step of wrapping consists of transforming all the object properties pr
 ### The `signature` object
 
 #### targetHash
+See [issuance status](/docs/how-does-it-work/issuance-status#merkleroot).
 
 Once the `data` object has been computed we will be able to create an unique hash for the document that we will set into `targetHash`:
 
@@ -61,25 +63,11 @@ Once the `data` object has been computed we will be able to create an unique has
 1. For each properties' path, compute a hash using the properties' path and value. To compute the hash we use [keccak256](https://en.wikipedia.org/wiki/SHA-3).
 1. Sort all the hashes from the previous step alphabetically and hash them all together: this will provide the `targetHash` of the document. To compute the `targetHash` we also use [keccak256](https://en.wikipedia.org/wiki/SHA-3).
 
-> The `targetHash` of a document is an unique identifier.
+> The `targetHash` of a document is a unique identifier.
 
-![Compute target hash](/docs/advanced/how-does-it-work/target-hash.png)
+![Compute target hash](/docs/how-does-it-work/target-hash.png)
 
-Later on, during verification of the document, the same exact steps are performed again to assert that the contents of the document has not been tampered with. This works as the final targetHash will be completely different if any part of the wrapped document is different from the original.
-
-The [document store](/docs/verifiable-document/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It stores the hashes of wrapped documents, which are the records of the owner of the document store having issued the documents.
-
-Imagine that you wrap thousands of files and had to issue the `targetHash` for each of them. It would be extremely inefficient. That's where the `merkleRoot` will come in handy.
-
-#### merkleRoot
-
-Once the `targetHash` of a document is computed, OpenAttestation will determine the `merkleRoot`. The `merkleRoot` value is the merkle root hash computed from the [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree) using the `targetHash` of all the document wrapped together. Each `targetHash` is a leaf in the tree. After computing the merkle tree, the `merkleRoot` associated to a document will be added to it as well as the proofs (intermediate hashes) needed to ensure that the `targetHash` has been used to compute the `merkleRoot`. The proofs are added into the `proof` property.
-
-In the document above we can notice that the `targetHash` and the `merkelRoot` are identical and that the `proof` is empty. This is normal and happen when you wrap only one document at a time. Try to wrap at least 2 documents at the same time, and you will see a difference between `targetHash` and the `merkelRoot`, and you will see proofs appended.
-
-> The `merkleRoot` will always be the same for all the documents wrapped together (in a batch). It will be different for documents wrapped separately.
-
-Now that our batch of documents have a common identifier and that we can prove (thanks to the merkle tree algorithm) that the `targetHash` of a document was used to create a specific `merkleRoot`, we can use the `merkleRoot` in our document store and issue it.
+Later on, during verification of the document, the same exact steps are performed again to assert that the contents of the document has not been tampered with. This works as the final `targetHash` will be completely different if any part of the wrapped document is different from the original.
 
 #### Data Obfuscation
 
@@ -113,9 +101,7 @@ The content of `output.json` will be:
     "merkleRoot": "11d456db211d68cc8a6eac5e293422dec669b54812e4975497d7099467335987"
   },
   "privacy": {
-    "obfuscatedData": [
-      "9d22655fcee6bf3eb10ba280cfa40e662f004a819be0b64e2fe9d0cebba6788f"
-    ]
+    "obfuscatedData": ["9d22655fcee6bf3eb10ba280cfa40e662f004a819be0b64e2fe9d0cebba6788f"]
   }
 }
 ```
@@ -133,18 +119,9 @@ The hash added into `privacy.obfuscatedData` is the one used when computing the 
 
 The only difference with the [`targetHash`](#targethash) computation is the step 3.
 
-![Compute target hash with data obfuscation](/docs/advanced/how-does-it-work/target-hash-with-data-obfuscation.png)
+![Compute target hash with data obfuscation](/docs/how-does-it-work/target-hash-with-data-obfuscation.png)
 
 With the help of data obfuscation a user can decide to selectively disclose a subset of data he wants to share.
-
-### Document Store
-
-As discussed above, issuance of documents can happen individually or by batch. Issuing a batch documents is by far the more efficient way.
-
-When it comes to revocation both values can also be used:
-
-- `targetHash` will allow for the revocation of a specific document.
-- `merkleRoot` will allow for the revocation of the whole batch of documents.
 
 ## Additional information
 

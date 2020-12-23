@@ -91,7 +91,7 @@ verify(document, { network: "mainnet" }).then(fragments => {
 ```
 
 Let's try to understand the different results:
-- `isValid(fragments, ["DOCUMENT_INTEGRITY"])` returns true because the integrity of the document is not dependant on the network it has been published to.
+- `isValid(fragments, ["DOCUMENT_INTEGRITY"])` returns true because the integrity of the document is not dependent on the network it has been published to.
 - `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because the document has not been published on Ethereum main network.
 - `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because there is no [DNS-TXT record](/docs/verifiable-document/dns-proof) associated with the Ethereum main network's document store.
 - `isValid(fragments)` returns false because at least one of the above returns false.

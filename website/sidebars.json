@@ -41,6 +41,11 @@
       "transferable-record/issuing-transferable-record",
       "transferable-record/going-further"
     ],
+    "How does it work ?": [
+      "how-does-it-work/introduction",
+      "how-does-it-work/document-integrity",
+      "how-does-it-work/issuance-status"
+    ],
     "Components": [
       "component/overview",
       "component/open-attestation-cli",
@@ -51,7 +56,6 @@
     ],
     "Advanced": [
       "advanced/overview",
-      "advanced/how-does-it-work",
       "advanced/verification-methods",
       "advanced/identity-proofs",
       "advanced/custom-renderer",

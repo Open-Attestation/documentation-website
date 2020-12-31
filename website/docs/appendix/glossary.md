@@ -38,3 +38,11 @@ A document store is a smart contract on the Ethereum network that records the is
 - revoke an existing OA document
 - check for the validity of an OA document
 - transferring the document store to another owner
+
+### Know Your Customer (KYC)
+
+The know your customer or know your client (KYC) guidelines in financial services requires that professionals make an effort to verify the identity, suitability, and risks involved with maintaining a business relationship.
+
+### Decentralized Application (dapp)
+
+A DApp has its backend code running on a decentralized peer-to-peer network. Contrast this with an app where the backend code is running on centralized servers.

@@ -55,6 +55,16 @@
       "advanced/verification-methods",
       "advanced/identity-proofs",
       "advanced/custom-renderer",
+      {
+        "label": "Gas Station network",
+        "type": "category",
+        "items": [
+          "advanced/gsn/gas-station-network",
+          "advanced/gsn/setup-paymaster",
+          "advanced/gsn/gsn-capable-document-store",
+          "advanced/gsn/creating-a-custom-relay-provider"
+        ]
+      },
       "advanced/configuring-dns"
     ],
     "Appendix": [

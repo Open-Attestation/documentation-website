@@ -11,7 +11,7 @@ After issuing a document, you might want to revoke it for any reason:
 - there is a problem in the document.
 - etc.
 
-## Revoking a certificate
+## Revoking a document
 
 ```bash
 open-attestation document-store revoke --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --hash 0x1e0c5e93c04032ed6571b31c785b963f0a27776041f35bdcc98cd8dfe073adc0  --network ropsten --encrypted-wallet-path wallet.json
@@ -28,9 +28,9 @@ You will be prompted for the password that you used while creating the wallet. Y
 ✔  success   Document/Document Batch with hash 0x1e0c5e93c04032ed6571b31c785b963f0a27776041f35bdcc98cd8dfe073adc0 has been revoked on 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b
 ```
 
-## Verifying the certificate
+## Verifying the document
 
-Head to `dev.opencerts.io` or `dev.tradetrust.io` and drag and drop the revoked certificate. An error will be displayed by the portal.
+Head to `dev.opencerts.io` or `dev.tradetrust.io` and drag and drop the revoked document. An error will be displayed by the portal.
 
 ![Successful verification](/docs/verifiable-document/revoking-document/verifying.png)
 

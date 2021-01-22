@@ -9,7 +9,7 @@ We will just adapt the raw document.
 
 ### Creating raw document
 
-Let's create our certificate:
+Let's create our document:
 
 ```json
 {

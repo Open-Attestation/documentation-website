@@ -12,7 +12,7 @@ By allowing the DNS system to be used as an identity registry, we let domain nam
 
 ## Rationale
 
-The DNS system is a key part of Internet infrastructure, and is a decentralised system - this means that there is a low barrier to entry and does not have a single point of failure. It allows issuers to simply tie their issuance to their domain name, (e.g example.openattestation.com). When a user views a certificate issued under this model, they will see "Document issued by example.openattestation.com".
+The DNS system is a key part of Internet infrastructure, and is a decentralised system - this means that there is a low barrier to entry and does not have a single point of failure. It allows issuers to simply tie their issuance to their domain name, (e.g example.openattestation.com). When a user views a document issued under this model, they will see "Document issued by example.openattestation.com".
 
 ## How it works
 
@@ -29,13 +29,16 @@ A deeper technical discussion of this topic can be found at [OpenAttestation's D
 As an issuer, you will need to add a DNS TXT record to your domain name. The exact steps to achieve this can be confirmed with your domain name registrar, this is usually achieved through your domain administration web UI.
 
 The following is an example for an issuer:
+
 1. on `Ethereum Main Net`
 1. has a Document Store address of `0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d`
+
 ```text
 "openatts net=ethereum netId=1 addr=0x9178F546D3FF57D7A6352bD61B80cCCD46199C2d"
 ```
 
 The following is an example for an issuer:
+
 1. on `Ethereum Test Net (Ropsten)`
 1. has a Document Store address of `0x9db35C07350e9a16C828dAda37fd9c2923c75812`
 

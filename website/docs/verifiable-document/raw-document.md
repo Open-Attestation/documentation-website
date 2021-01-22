@@ -32,7 +32,7 @@ If you start editing the JSON data on the right you should see errors if the dat
 
 ### Creating raw document
 
-We will now create the data for your certificate. Paste the following JSON data into the right panel of the JSON schema validator tool:
+We will now create the data for your document. Paste the following JSON data into the right panel of the JSON schema validator tool:
 
 ```json
 {
@@ -57,7 +57,7 @@ We will now create the data for your certificate. Paste the following JSON data 
 }
 ```
 
-To makes things simple, we will use an existing deployed renderer (at https://tutorial-renderer.openattestation.com). However you will still need to replace the following values for your own certificate:
+To makes things simple, we will use an existing deployed renderer (at https://tutorial-renderer.openattestation.com). However you will still need to replace the following values for your own document:
 
 #### 1. issuers[0].documentStore
 
@@ -86,4 +86,4 @@ raw-documents
   |-- certificate-2.json
 ```
 
-We are now ready to wrap the certificates.
+We are now ready to wrap the documents.

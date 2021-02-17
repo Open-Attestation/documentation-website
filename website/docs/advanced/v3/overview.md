@@ -44,11 +44,9 @@ https://www.npmjs.com/package/@govtechsg/open-attestation-cli
 
 Status:
 
-`wrap`: Supported
-`sign`: Pending
-`verify`: Pending
-
-Supports `wrap`, Pending upgrade for `sign`
+- `wrap`: Supported
+- `sign`: Pending
+- `verify`: Pending
 
 ### TradeTrust Website
 

@@ -69,7 +69,17 @@
           "advanced/gsn/creating-a-custom-relay-provider"
         ]
       },
-      "advanced/configuring-dns"
+      "advanced/configuring-dns",
+      {
+        "label": "Version 3 (Beta)",
+        "type": "category",
+        "items": [
+          "advanced/v3/overview",
+          "advanced/v3/major-changes",
+          "advanced/v3/quick-start",
+          "advanced/v3/different-files"
+        ]
+      }
     ],
     "Appendix": [
       "appendix/glossary",

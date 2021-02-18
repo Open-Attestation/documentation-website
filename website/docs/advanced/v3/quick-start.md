@@ -67,7 +67,7 @@ We will now create the data for the driving license. Create a file `licence.json
 }
 ```
 
-You will need to replace the following values from values obtained from earlier:
+You will need to replace the following values:
 
 ### `openAttestationMetadata.proof.value`
 

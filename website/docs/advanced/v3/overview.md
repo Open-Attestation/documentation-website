@@ -59,3 +59,15 @@ Status: Pending
 https://creator.tradetrust.io/
 
 Status: Pending
+
+### OpenCerts Website
+
+https://opencerts.io
+
+Status: Pending
+
+### Verify Website
+
+https://verify.gov.sg
+
+Status: Pending

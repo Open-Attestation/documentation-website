@@ -39,8 +39,9 @@ For DID, it's the opposite, everything is private.
 
 Revocation is part of our Ethereum Smart Contracts.
 
-If you use DID, there is for the moment no way to revoke a document. We have ideas on [how to provide such a feature](https://github.com/Open-Attestation/adr/blob/master/issuing_using_did.md#for-documents-that-are-signed-directly), but the work is still in progress. In any case,
-DID will have to rely on any kind of [CRL](https://en.wikipedia.org/wiki/Certificate_revocation_list) or even on a document store (which bring back the need to pay with ethers).
+As of today, its possible to revoke a document if a document store has been declared in its revocation block. refer [here](/docs/verifiable-document/did/revoking-document) for the steps.
+
+Note that if you do use revocation for `DID`, you still need to have at least 1 transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore. 
 
 ## Throughput
 

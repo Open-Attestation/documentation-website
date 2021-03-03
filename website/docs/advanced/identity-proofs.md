@@ -4,7 +4,7 @@ title: Extending Identity Proof
 sidebar_label: Identity Proof
 ---
 
-OpenAttestation uses the Domain Name System (DNS) as the method of issuer identity verification. A one-liner introduction to the DNS system can be summarised as: "Phonebook for the Internet". Its primary purpose is to resolve human readable names such as "google.com", or "openattestation.com", etc. to a set of records. The most common records are 'A records', which resolve to IP addresses - this allows network routing to operate over the Internet.
+OpenAttestation uses the Domain Name System (DNS) as the method of issuer identity verification. A one-liner introduction to the DNS system can be summarised as: "Phonebook for the Internet". It's primary purpose is to resolve human readable names such as "google.com", or "openattestation.com", etc. to a set of records. The most common records are 'A records', which resolve to IP addresses - this allows network routing to operate over the Internet.
 
 For OpenAttestation, we are using the TXT type of record, which simply allows us to store textual data. The textual data we store indicates the Document Store that the domain administrator trusts.
 

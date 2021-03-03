@@ -3,7 +3,7 @@ title: Revoking Documents
 sidebar_label: Revoking Documents
 ---
 
-Its possible to revoke a signed document only if you fulfill certain **prerequisites**. Any future progress can be followed [here](https://github.com/Open-Attestation/adr/blob/master/issuing_using_did.md#for-documents-that-are-signed-directly).
+It's possible to revoke a signed document only if you fulfill certain **prerequisites**. Any future progress can be followed [here](https://github.com/Open-Attestation/adr/blob/master/issuing_using_did.md#for-documents-that-are-signed-directly).
 
 ## Prerequisites:
 - an `ethr` DID (if you've been following the above steps, you should have one already)

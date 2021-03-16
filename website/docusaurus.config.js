@@ -1,6 +1,6 @@
 const siteConfig = {
   title: "OpenAttestation",
-  tagline: "Document Notarisation Framework",
+  tagline: "Document Endorsement and Verification Framework",
   url: "https://openattestation.com",
   baseUrl: "/",
   projectName: "website",

@@ -104,7 +104,7 @@ function Home() {
         <section>
           <div className="productShowcaseSection paddingTop paddingBottom">
             <h2>What Is OpenAttestation?</h2>
-            <p>OpenAttestation is an open-sourced framework to notarise documents using the blockchain.</p>
+            <p>OpenAttestation is an open-sourced framework to endorse and verify documents using the blockchain.</p>
             <p>Documents issued this way are cryptographically trustworthy and can be verified independently.</p>
           </div>
         </section>

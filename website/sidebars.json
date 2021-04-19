@@ -44,7 +44,8 @@
     "How does it work ?": [
       "how-does-it-work/introduction",
       "how-does-it-work/document-integrity",
-      "how-does-it-work/issuance-status"
+      "how-does-it-work/issuance-status",
+      "how-does-it-work/limitations"
     ],
     "Components": [
       "component/overview",

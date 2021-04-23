@@ -20,50 +20,50 @@ If you have not already deployed a document store, you may do so by following th
 
 ## Creating Raw Document
 
-We will now create the data for the driving license. Create a file `licence.json` with the following data:
+We will now create the data for the driving license. Create a file `license.json` with the following data:
 
 ```json
 {
   "@context": [
     "https://www.w3.org/2018/credentials/v1",
     "https://schemata.openattestation.com/com/openattestation/1.0/DrivingLicenceCredential.json",
-    "https://schemata.openattestation.com/com/openattestation/1.0/OpenAttestation.v3.json"
+    "https://schemata.openattestation.com/com/openattestation/1.0/OpenAttestation.v3.json",
+    "https://schemata.openattestation.com/com/openattestation/1.0/CustomContext.json"
   ],
-  "issuer": {
-    "id": "https://example.com",
-    "name": "DEMO STORE"
-  },
+  "reference": "SERIAL_NUMBER_123",
+  "name": "Republic of Singapore Driving Licence",
   "issuanceDate": "2010-01-01T19:23:24Z",
+  "validFrom": "2010-01-01T19:23:24Z",
+  "issuer": { "id": "https://example.com", "name": "DEMO STORE" },
   "type": ["VerifiableCredential", "DrivingLicenceCredential"],
   "credentialSubject": {
-    "id": "did:example:SERIAL_NUMBER_123",
+    "id": "did:example:JOHN_DOE_DID",
+    "name": "John Doe",
     "class": [
-      {
-        "type": "3",
-        "effectiveDate": "2010-01-01T19:23:24Z"
-      },
-      {
-        "type": "3A",
-        "effectiveDate": "2010-01-01T19:23:24Z"
-      }
+      { "type": "3", "effectiveDate": "2010-01-01T19:23:24Z" },
+      { "type": "3A", "effectiveDate": "2010-01-01T19:23:24Z" }
     ]
   },
   "openAttestationMetadata": {
     "template": {
       "name": "CUSTOM_TEMPLATE",
       "type": "EMBEDDED_RENDERER",
-      "url": "https://localhost:3000/renderer"
+      "url": "https://tutorial-renderer.openattestation.com"
     },
     "proof": {
       "type": "OpenAttestationProofMethod",
-      "method": "DOCUMENT_STORE",
-      "value": "0x8bA63EAB43342AAc3AdBB4B827b68Cf4aAE5Caca"
+      "method": "DID",
+      "value": "did:ethr:0xE712878f6E8d5d4F9e87E10DA604F9cB564C9a89",
+      "revocation": {
+        "type": "NONE"
+      }
     },
     "identityProof": {
-      "type": "DNS-TXT",
+      "type": "DNS-DID",
       "identifier": "example.tradetrust.io"
     }
-  }
+  },
+  "attachments": [{ "fileName": "sample.pdf", "mimeType": "application/pdf", "data": "BASE64_ENCODED_FILE" }]
 }
 ```
 
@@ -82,19 +82,38 @@ Replace this with the domain where the TXT record has been inserted in the step 
 With `licence.json` saved, run the following command after the [CLI is installed](/docs/component/open-attestation-cli):
 
 ```sh
-open-attestation wrap licence.json --of wrapped.json --oav3
+open-attestation wrap license.json --of wrapped.json --oav3
 ```
 
 The will wrap the original document and append additional data required by OpenAttestation to the `proof` key at the root of the document.
 
-> Take note of the value `proof.merkleRoot`. This is the merkle root to be issued on the document store later.
-
 ## Issuing document
 
-With the merkle root in `proof.merkleRoot`, you may following the [Issuing Document](/docs/verifiable-document/issuing-document) guide to issued the document on Ethereum.
+Since we are using the `DID` method to issue the document, we can simply sign the document with the private key corresponding to issuing DID configured.
+
+In the example we will sign with the did `did:ethr:0xE712878f6E8d5d4F9e87E10DA604F9cB564C9a89` but you will have to use your DID to sign your document.
+
+Run the following command to sign the document:
+
+```sh
+open-attestation sign wrapped.json --output-dir signed --public-key did:ethr:0xE712878f6E8d5d4F9e87E10DA604F9cB564C9a89#controller --key 0x0000000000000000000000000000000000000000000000000000000000000000000
+```
+
+> Replace both public key and private key with your DID's
 
 ## Verify document
 
-TBD (after oa-cli is updated for `verify`)
+Now you will see a file `wrapped.json` created in the folder `signed`. You may verify the document with the following command:
 
-If you are reading this now, you may programmatically verify the document with [`oa-verify`](http://localhost:3000/docs/component/oa-verify)
+```sh
+open-attestation verify -d signed/wrapped.json
+```
+
+Upon successful verification you will see the output:
+
+```txt
+…  awaiting  Verifying signed/wrapped.json
+✔  success   The document is valid
+```
+
+> Web verification one tradetrust.io and opencerts.io are currently in the works. These documents may not be verified on the site yet.

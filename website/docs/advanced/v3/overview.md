@@ -26,12 +26,6 @@ Major changes from the version 2 can be found [here](/docs/advanced/v3/major-cha
 
 While the base data model is feature complete, we are in the work of upgrading the tools and documentations for support of v3. Below are the progress of update for different tools:
 
-### oa-did-sign
-
-https://www.npmjs.com/package/@govtechsg/oa-did-sign
-
-Status: Pending
-
 ### oa-verify
 
 https://www.npmjs.com/package/@govtechsg/oa-verify
@@ -45,8 +39,8 @@ https://www.npmjs.com/package/@govtechsg/open-attestation-cli
 Status:
 
 - `wrap`: Supported
-- `sign`: Pending
-- `verify`: Pending
+- `sign`: Supported
+- `verify`: Supported
 
 ### TradeTrust Website
 

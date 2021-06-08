@@ -70,7 +70,7 @@ Now that we have set up the development environment, we can start writing our do
 To update the raw document data and the corresponding data type, you will need to update the data definition file in `src/templates/samples/customTemplateSample.ts`:
 
 ```typescript jsx
-import { v2 } from "@govtechsg/decentralized-renderer-react-components";
+import { v2 } from "@govtechsg/open-attestation";
 
 export interface CocTemplateCertificate extends v2.OpenAttestationDocument {
   name: string;

@@ -51,7 +51,7 @@ DID is a perfect match when you need to sign document in real-time. Unlike issui
 
 ## Issuance traceability
 
-Thanks to Ethereum, every credential you issued will be recorded. This happens during issuance, where the Merkle root of the credentials' batch is used to record the transaction. However, this is not the case for credentials issued using DID. Or at least not using OpenAttestation. You can still save it yourself.
+Thanks to Ethereum, every credential you issue will be recorded. This happens during issuance, where the Merkle root of the credentials' batch is used to record the transaction. However, this is not the case for credentials issued using DID (Or at least not automatically by OpenAttestation. You can still save it yourself).
 
 The difference might be subtle, but it's very important. If you lose control of the private key you used for your document store, or your DID, the consequences will be different:
 

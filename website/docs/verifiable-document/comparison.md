@@ -31,7 +31,7 @@ With DID, you don't need money of any sort. It works out of the box.
 
 ## Privacy
 
-When using Ethereum Smart Contracts, all issuance and revocation events will be publicly viewable. As long as someone knows your document store contract address, they will be able to see how many times you issued, revoked, etc. 
+When using Ethereum Smart Contracts, all issuance and revocation events will be publicly viewable. As long as someone knows your document store contract address, they will be able to see how many times you issued, revoked, etc.
 
 For DID, it's the opposite, everything is private.
 
@@ -41,10 +41,21 @@ Revocation is part of our Ethereum Smart Contracts.
 
 As of today, its possible to revoke a document if a document store has been declared in its revocation block. refer [here](/docs/verifiable-document/did/revoking-document) for the steps.
 
-Note that if you do use revocation for `DID`, you still need to have at least 1 transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore. 
+Note that if you do use revocation for `DID`, you still need to have at least 1 transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
 
 ## Throughput
 
 Because of Ethereum, you will never have control on how long a transaction happens with Ethereum Smart Contracts. You can pay more gas to speed up the transaction but in the end you have no control. It's also worth to consider the workflow. If you issue a lot of documents and have to pay a transaction for each document issuance individually, it will quickly cost a lot. That's why we recommend batching issuance. Whether you do it hourly, weekly or monthly will depend on your need. Keep in mind that issuing document individually is a bad option and can become very costly (unless you issue one document every month for instance). Issuing hourly or daily are viable options in terms of price.
 
-DID is a perfect match when you need to sign document in real-time. Unlike issuing with the smart contract methods, there is no requirement to wait for a blockchain transaction to be finalised and the issued document is immediately valid.
+DID is a perfect match when you need to sign document in real-time. Unlike issuing with the smart contract methods, there is no requirement to wait for a blockchain transaction to be finalised, and the issued document is immediately valid.
+
+## Issuance traceability
+
+Thanks to Ethereum, every credential you issued will be recorded. This happens during issuance, where the Merkle root of the credentials' batch is used to record the transaction. However, this is not the case for credentials issued using DID. Or at least not using OpenAttestation. You can still save it yourself.
+
+The difference might be subtle, but it's very important. If you lose control of the private key you used for your document store, or your DID, the consequences will be different:
+
+- if you used document store, you will be able to invalidate only part of the credentials. Indeed, if you can figure which was the last transaction you ran before you lost control of your wallet, then it's possible to keep valid all the credentials before that transaction. Indeed, the document store contract [stores the block number](https://github.com/Open-Attestation/document-store/blob/master/contracts/DocumentStore.sol#L27) associated with the issuance. OpenAttestation can then only validate credentials for a specific document store that has been [issued before a specific block number](https://github.com/Open-Attestation/document-store/blob/master/contracts/DocumentStore.sol#L45). The information of the latest valid block number can be provided through the DNS-TXT record. As of today, the solution is not supported and properly defined in the verifiers. Feel free to reach out if you need our support.
+- if you used DID, then you will have to invalidate all the credentials. The best way to do it is to remove your DID from the DNS-TXT record.
+
+You might eventually think we could use a validity date in the DNS-TXT record to indicate when a DID has been compromised. However, this solution doesn't work. Nothing prevents an attacker from back-issuing a credential at a specific time. However, an attacker can't issue before a block number on Ethereum.

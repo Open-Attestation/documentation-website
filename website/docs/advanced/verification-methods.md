@@ -4,7 +4,7 @@ title: Extending Verification Methods
 sidebar_label: Verification Methods
 ---
 
-As explained by our [Verifier ADR](https://github.com/Open-Attestation/adr/blob/master/verifier.md), the library is composed of verification methods, that are run over a document and provide fragments containing details about each verification. In this guide, we will use the contents in a _Version 2_ document as an example and learn how to write custom verification methods and distribute your own custom verifier.
+As explained by our [Verifier ADR](https://github.com/Open-Attestation/adr/blob/master/verifier.md), the library is composed of verification methods that are run over a document and provide fragments containing details about each verification. In this guide, we will use the contents in a _Version 2_ document as an example and learn how to write custom verification methods and distribute your own custom verifier.
 
 ### Building a custom verification method
 
@@ -43,7 +43,7 @@ const customVerifier = {
 
 > we use `DOCUMENT_INTEGRITY` type because we check for the content of the document.
 
-### Document hold correct `name` property
+### Document holds correct `name` property
 
 Once we have decided `when` the verification method run, it's time to write the logic of the verifier in the `verify` method. We will use [getData](/docs/component/open-attestation#retrieving-document-data) utility to access the data of the document and return the appropriate fragment depending on the content:
 
@@ -82,9 +82,9 @@ const customVerifier = {
 
 ## Building a custom verify method
 
-The `verify` function is built to run a list of verification method. Each verifier will produce a fragment that will help to determine if the document is valid. Open Attestation comes with its own set of verification methods available in `openAttestationVerifiers`.
+The `verify` function is built to run a list of verification method. Each verifier will produce a fragment that will help to determine if the document is valid. OpenAttestation comes with its own set of verification methods available in `openAttestationVerifiers`.
 
-The `verificationBuilder` function help you to create custom verification method. You can reuse the default one exported by the library.
+The `verificationBuilder` function helps you to create custom verification method. You can reuse the default one exported by the library.
 
 Let's build a new verifier using our custom verification method:
 

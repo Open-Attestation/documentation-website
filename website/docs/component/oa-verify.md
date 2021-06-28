@@ -4,12 +4,14 @@ title: Verification SDK (javascript)
 sidebar_label: Verification SDK (javascript)
 ---
 
-The OpenAttestation Verification SDK (javascript) is a npm module that allows you to  verify [wrapped document](/docs/component/open-attestation) programmatically. This is useful if you are building your own API or web components. Some common use cases where you need this module:
+The OpenAttestation Verification SDK (javascript) is a npm module that allows you to verify [wrapped document](/docs/component/open-attestation) programmatically. This is useful if you are building your own API or web components. Some common use cases where you need this module:
+
 - [Verifying a document](#verifying-a-document)
 - [Building custom verifier](#custom-verification)
 - [Building custom validation](#custom-validation)
 
 This module does not provide the following functionality:
+
 - Programmatic wrapping of OA documents (refer to [OpenAttestation Wrapper SDK (javascript)](/docs/component/open-attestation))
 - Encryption or decryption of OA documents (refer to [Encryption SDK (javascript)](/docs/component/oa-encryption))
 - Programmatic issuance/revocation of document on the Ethereum blockchain
@@ -22,11 +24,13 @@ This module does not provide the following functionality:
 ## Verifying a document
 
 A verification happens on a wrapped document, and it consists of answering to some questions:
+
 - Has the document been tampered with ?
 - Is the issuance state of the document valid ?
 - Is the document issuer identity valid ? (see [identity proof](/docs/advanced/identity-proofs))
 
 Before starting to play with the library, create a file `document.json` having the following content:
+
 ```json
 {
   "version": "https://schema.openattestation.com/2.0/schema.json",
@@ -55,70 +59,89 @@ Before starting to play with the library, create a file `document.json` having t
 This is a wrapped document created using [OpenAttestation Wrapper SDK](/docs/component/open-attestation).
 
 Let's make sure the document is valid:
+
 ```javascript
-const { verify, isValid } = require("@govtechsg/oa-verify");
+// index.js
+const { isValid, openAttestationVerifiers, verificationBuilder } = require("@govtechsg/oa-verify");
 const document = require("./document.json");
 
-verify(document, { network: "ropsten" }).then(fragments => {
+const verify = verificationBuilder(openAttestationVerifiers, {
+  network: "ropsten",
+});
+
+verify(document).then((fragments) => {
   console.log(isValid(fragments)); // output true
 });
 ```
 
 ### Custom verification
-In some cases, you will need to perform more verification on a document than the one provided by default. Fortunately the library is configurable in a way you can create your own [verification methods](/docs/advanced/verification-methods) and distribute your verifier.  
+
+In some cases, you will need to perform more verification on a document than the one shown in the example above, the library allows you to configure so, by creating your own [verification methods](/docs/advanced/verification-methods) for use as verifier.
 
 ### Custom validation
+
 The `isValid` function will execute over fragments and determine if the fragments produced a valid result. By default the function will return true if a document fulfill the following conditions:
+
 - The document has NOT been tampered, AND
 - The document has been issued, AND
-- The document as NOT been revoked, AND
+- The document has NOT been revoked, AND
 - The issuer identity is valid.
 
 However in some conditions, the result of the function might not be useful: Why is the document not valid ? Is it because it has been tampered ? Or maybe the issuer identity is invalid ?
 
-The function allow to specify as a second parameters the list of types on which to perform the checks. Let's try to run the verifier on `mainnet` network :
+The function allows to specify as a second parameters the list of types on which to perform the checks. Let's try to run the verifier on `mainnet` network :
 
 ```javascript
-const { verify, isValid } = require("@govtechsg/oa-verify");
+// index.js
+const { isValid, openAttestationVerifiers, verificationBuilder } = require("@govtechsg/oa-verify");
 const document = require("./document.json");
 
-verify(document, { network: "mainnet" }).then(fragments => {
-  console.log(isValid(fragments)); // output false
+const verify = verificationBuilder(openAttestationVerifiers, {
+  network: "mainnet",
+});
+
+verify(document).then((fragments) => {
   console.log(isValid(fragments, ["DOCUMENT_INTEGRITY"])); // output true
   console.log(isValid(fragments, ["DOCUMENT_STATUS"])); // output false
   console.log(isValid(fragments, ["ISSUER_IDENTITY"])); // output false
+  console.log(isValid(fragments)); // output false
 });
 ```
 
 Let's try to understand the different results:
+
 - `isValid(fragments, ["DOCUMENT_INTEGRITY"])` returns true because the integrity of the document is not dependent on the network it has been published to.
 - `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because the document has not been published on Ethereum main network.
-- `isValid(fragments, ["DOCUMENT_STATUS"])` returns false because there is no [DNS-TXT record](/docs/verifiable-document/dns-proof) associated with the Ethereum main network's document store.
+- `isValid(fragments, ["ISSUER_IDENTITY"])` returns false because there is no [DNS-TXT record](/docs/verifiable-document/dns-proof) associated with the Ethereum main network's document store.
 - `isValid(fragments)` returns false because at least one of the above returns false.
 
 ### Listening to individual verification method
-The `verify` function has an option to listen to individual verification methods. It might be useful if you want for instance to provide individual loader on your UI.
+
+The `verify` function has an option to listen to individual verification methods. It might be useful if you want, for instance, to provide individual loader on your UI.
 
 ```javascript
-const { verify, isValid } = require("@govtechsg/oa-verify");
+// index.js
+const { isValid, openAttestationVerifiers, verificationBuilder } = require("@govtechsg/oa-verify");
 const document = require("./document.json");
 
-verify(document, {
+const verify = verificationBuilder(openAttestationVerifiers, {
   network: "ropsten",
-  promisesCallback: verificationMethods => {
-    for (const verificationMethod of verificationMethods) {
-      verificationMethod.then(fragment =>
-        console.log(
-          `${fragment.name} has been resolved with status ${fragment.status}`
-        )
-      );
-    }
+});
+
+const promisesCallback = (verificationMethods) => {
+  for (const verificationMethod of verificationMethods) {
+    verificationMethod.then((fragment) => {
+      console.log(`${fragment.name} has been resolved with status ${fragment.status}`);
+    });
   }
-}).then(fragments => {
+};
+
+verify(document, promisesCallback).then((fragments) => {
   console.log(isValid(fragments)); // output true
 });
 ```
 
 ## Additional information
-- Verification SDK implementation follow our [Verifier ADR](https://github.com/Open-Attestation/adr/blob/master/verifier.md).
+
+- For Verification SDK implementation follow our [Verifier ADR](https://github.com/Open-Attestation/adr/blob/master/verifier.md).
 - Found a bug ? Having a question ? Want to share an idea ? Reach us out on the [Github repository](https://github.com/Open-Attestation/oa-verify).`

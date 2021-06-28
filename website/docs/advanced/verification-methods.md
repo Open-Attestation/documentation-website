@@ -4,7 +4,7 @@ title: Extending Verification Methods
 sidebar_label: Verification Methods
 ---
 
-As explained by our [Verifier ADR](https://github.com/Open-Attestation/adr/blob/master/verifier.md), the library is composed of verification methods that are run over a document and provide fragments containing details about each verification. In this guide, we will use the contents in a _Version 2_ document as an example and learn how to write custom verification methods and distribute your own custom verifier.
+As explained by our [Verifier ADR](https://github.com/Open-Attestation/adr/blob/master/verifier.md), the library is composed of verification methods that are run over a document and provide fragments containing details about each verification. In this guide, we will learn how to write custom verification methods and how you can distribute your own verifier.
 
 ### Building a custom verification method
 
@@ -37,7 +37,6 @@ const customVerifier = {
     };
   },
   test: () => document.version === "https://schema.openattestation.com/2.0/schema.json",
-  // ... below is verify function
 };
 ```
 
@@ -54,7 +53,10 @@ const { getData } = require("@govtechsg/open-attestation");
 const document = require("./document.json");
 
 const customVerifier = {
-  // ... above are skip and test functions
+  skip: async () => {
+    /* content has been defined in the section above */
+  },
+  test: () => /* content has been defined in the section above */,
   verify: async (document) => {
     const documentData = getData(document);
     if (documentData.name !== "Certificate of Completion") {

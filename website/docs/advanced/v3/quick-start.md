@@ -34,7 +34,7 @@ We will now create the data for the driving license. Create a file `license.json
   "name": "Republic of Singapore Driving Licence",
   "issuanceDate": "2010-01-01T19:23:24Z",
   "validFrom": "2010-01-01T19:23:24Z",
-  "issuer": { "id": "https://example.com", "name": "DEMO STORE", type: "OpenAttestationIssuer" },
+  "issuer": { "id": "https://example.com", "name": "DEMO STORE", "type": "OpenAttestationIssuer" },
   "type": ["VerifiableCredential", "DrivingLicenceCredential", "OpenAttestationCredential"],
   "credentialSubject": {
     "id": "did:example:JOHN_DOE_DID",

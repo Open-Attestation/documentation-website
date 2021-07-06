@@ -58,7 +58,7 @@ Status: Pending
 
 https://opencerts.io
 
-Status: Pending
+Status: Supported
 
 ### Verify Website
 

@@ -38,6 +38,8 @@ We will now create the data for the driving license. Create a file `license.json
   "type": ["VerifiableCredential", "DrivingLicenceCredential", "OpenAttestationCredential"],
   "credentialSubject": {
     "id": "did:example:JOHN_DOE_DID",
+    "licenseNumber": "S1234567a",
+    "birthDate": "1977-02-22",
     "name": "John Doe",
     "class": [
       { "type": "3", "effectiveDate": "2010-01-01T19:23:24Z" },
@@ -46,7 +48,7 @@ We will now create the data for the driving license. Create a file `license.json
   },
   "openAttestationMetadata": {
     "template": {
-      "name": "CUSTOM_TEMPLATE",
+      "name": "DRIVING_LICENSE",
       "type": "EMBEDDED_RENDERER",
       "url": "https://tutorial-renderer.openattestation.com"
     },

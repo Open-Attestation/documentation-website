@@ -47,7 +47,7 @@ An OpenAttestation verifier:
   1. Gets back the document store contract address from the document itself.
   1. Ensures that the `targetHash` and the `proof` matches the `merkleRoot`.
   1. Checks the `merkleRoot` is in the document store provided, by calling the `isIssued` function from the deployed contract.
-- Checks the `merkleRoot` of the document has been issued:
+- Checks the `merkleRoot` of the document hasn't been revoked:
   1. Gets back the document store contract address from the document itself.
   1. Checks the `targetHash` is **not** in the document store provided, by calling the `isRevoked` function from the deployed contract.
   1. Checks the `merkleRoot` is **not** in the document store provided, by calling the `isRevoked` function from the deployed contract.

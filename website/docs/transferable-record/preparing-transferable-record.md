@@ -63,7 +63,7 @@ Notice the difference between a transferable record and a verifiable document is
 
 > For transferable record, you may not batch process it with other documents. Your directory `raw-documents` may only contain one file.
 > 
-> Otherwise, this will result in a scenario where multiple documents being tied to a single Title Escrow Contract, preventing changes to the Beneficiary and Holder addresses for the individual documents in that batch. 
+> Otherwise, the one-to-one mapping between a token ID and the asset ownership record will be violated as batching the records will result in a one-to-many mapping.
 
 ## Wrapping Transferable Document
 

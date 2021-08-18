@@ -84,7 +84,7 @@ function Home() {
   const context = useDocusaurusContext();
   const { siteConfig = {} } = context;
   return (
-    <Layout title={siteConfig.title} description="Description will go into a meta tag in <head />">
+    <Layout title={siteConfig.title} description="OpenAttestation is an open source framework for verifiable document and transferable records.">
       <header className={clsx("hero hero--primary", styles.heroBanner, styles.layout)}>
         <div className="container">
           <img src={useBaseUrl("img/logos/oa.svg")} alt="OpenAttestation logo" style={{ maxWidth: "240px" }} />

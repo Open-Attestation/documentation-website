@@ -52,15 +52,6 @@ const siteConfig = {
           ],
         },
         {
-          title: "Community",
-          items: [
-            {
-              label: "Project Chat",
-              href: "https://spectrum.chat/openattestation",
-            },
-          ],
-        },
-        {
           title: "More",
           items: [
             {

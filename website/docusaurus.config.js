@@ -78,8 +78,8 @@ const siteConfig = {
     prism: {
       theme: require("prism-react-renderer/themes/nightOwl"),
     },
-    image: "img/undraw_tweetstorm.svg",
-    metadatas: [{ name: "og:image", content: "img/undraw_online.svg" }],
+    image: "img/logos/oa.png",
+    metadatas: [{ name: "og:image", content: "img/logos/oa.png" }],
     sidebarCollapsible: true,
   },
 };

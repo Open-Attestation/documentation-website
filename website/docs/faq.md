@@ -19,3 +19,7 @@ The smart contract requires `45,052` gas to revoke. Check out the [Ethereum Gas 
 #### What is gas ?
 
 For more information on Gas and Gas Prices, check out [this article](https://ethereum.stackexchange.com/questions/3/what-is-meant-by-the-term-gas)
+
+#### What is the theoretical storage limit of a smart contract?
+
+It is `2^261` bytes. Check out this stackoverflow [post](https://ethereum.stackexchange.com/questions/1038/is-there-a-theoretical-limit-for-amount-of-data-that-a-contract-can-store/1040#1040) for more information.

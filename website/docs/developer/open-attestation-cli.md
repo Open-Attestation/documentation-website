@@ -6,7 +6,17 @@ sidebar_label: Open Attestation (CLI)
 
 This CLI tool in the [Open Attestation CLI](https://github.com/Open-Attestation/open-attestation-cli) repository turns .json documents into any open-attestation verifiable documents. It applies the OpenAttestation algorithm to produce a hash of the json document and then creates a file with the data and proof of integrity.
 
-## Setup
+## Installation
+
+### Binary
+
+To install the binary, simply download the binary from the [CLI release page](https://github.com/Open-Attestation/open-attestation-cli/releases) for your OS.
+
+> We are aware that the size of the binaries must be reduced and we have tracked the issue in [Github](https://github.com/Open-Attestation/open-attestation-cli/issues/68). We hope to find a solution in a near future and any help is welcomed.
+
+### NPM
+
+Alternatively for Linux or MacOS users, if you have `npm` installed on your machine, you may install the cli using the following command:
 
 ```bash
 npm install -g @govtechsg/open-attestation-cli
@@ -20,7 +30,47 @@ You can also opt to use npx:
 npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 ```
 
-## Wrapping Documents
+> In all the guides, we will refer to the CLI as `open-attestation` when running a command. That means we will assume the CLI is available in your execution path. If it's not the case, you will to change `open-attestation` by the full path to the executable.
+
+---
+
+## Usage
+
+#### Table of Contents
+
+- [Wrapping document](#wrapping-documents)
+- [Document privacy filter](#document-privacy-filter)
+- [Encrypting document](#encrypting-document)
+- [Decrypting document](#decrypting-document)
+- [Token registry](#token-registry)
+  - [Deploy](#deploy)
+  - [Issue](#issue)
+- [Document store](#document-store)
+  - [Deploy](#deploy-1)
+  - [Issue](#issue-1)
+  - [Revoke](#revoke)
+  - [Transfer ownership](#transfer-ownership)
+- [Verify](#verify)
+- [DID Direct Signing](#did-direct-signing)
+- [DNS TXT Record](#dns-txt-record)
+- [Wallet](#wallet)
+- [Providing the wallet](#wallet)
+- [Configuration file](#configuration-file)
+- [Cancel pending transaction](#cancel-pending-transaction)
+- [Title Escrow](#title-escrow)
+  - [Change Holder](#change-holder)
+  - [Nominate Change of Owner](#nominate-change-of-owner)
+  - [Endorse Transfer of Owner](#endorse-transfer-of-owner)
+  - [Endorse Change of Owner](#endorse-change-of-owner)
+  - [Surrender Document](#surrender-document)
+  - [Reject Surrendered Document](#reject-surrendered-document)
+  - [Accept Surrendered Document](#accept-surrendered-document)
+- [Help](#help)
+- [Development](#development)
+- [Test](#test)
+- [Performance Testing](#performance-testing)
+
+### Wrapping documents
 
 This command process all documents in the input directory. It will add the issuance proofs to the individual documents. Additionally, you'll get the Batch Document Root (merkleRoot) value. Thereafter, you can issue all the documents in a single batch with the merkleRoot later.
 
@@ -152,7 +202,9 @@ open-attestation decrypt ./src/__tests__/fixture/did-dns-encrypted.json decrypte
 ✔  success   Decrypted document saved to: decrypted.json
 ```
 
-## Deploying Token Registry
+## Token registry
+
+### Deploy
 
 Deploys a token registry contract on the blockchain
 
@@ -167,24 +219,6 @@ open-attestation deploy token-registry "My Sample Token" MST --network ropsten
 
 ✔  success   Token registry deployed at 0x4B127b8d5e53872d403ce43414afeb1db67B1842
 ```
-
-## Deploying Document Store
-
-Deploys a document store contract on the blockchain
-
-```bash
-open-attestation deploy document-store <store-name> [options]
-```
-
-Example - with private key set in `OA_PRIVATE_KEY` environment variable (recommended). [More options](#providing-the-wallet).
-
-```bash
-open-attestation deploy document-store "My Name" --network ropsten
-
-✔  success   Document store deployed at 0x4B127b8d5e53872d403ce43414afeb1db67B1842
-```
-
-## Token registry
 
 ### Issue
 
@@ -206,6 +240,22 @@ open-attestation token-registry mint --network ropsten --address 6133f580aE903b8
 `mint` can be used instead of issue and will be strictly equivalent.
 
 ## Document Store
+
+### Deploy
+
+Deploys a document store contract on the blockchain
+
+```bash
+open-attestation deploy document-store <store-name> [options]
+```
+
+Example - with private key set in `OA_PRIVATE_KEY` environment variable (recommended). [More options](#providing-the-wallet).
+
+```bash
+open-attestation deploy document-store "My Name" --network ropsten
+
+✔  success   Document store deployed at 0x4B127b8d5e53872d403ce43414afeb1db67B1842
+```
 
 ### Issue
 
@@ -274,7 +324,7 @@ Sign on an OA document directly with a private key.
 open-attestation sign ./examples/unsigned-documents -f ./examples/sample-key -p did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller --output-dir ./examples/signed-documents
 ```
 
-## DNS TXT record
+## DNS TXT Record
 
 Create a temporary DNS TXT record in OpenAttestation sandbox
 
@@ -407,7 +457,7 @@ open-attestation deploy document-store "My Name" --network ropsten --key 0000000
 | Sign document                     | ✔           | ❎     | ❎      |
 | Verify document                   | ❎          | ❎     | ❎      |
 
-## Config file
+## Configuration file
 
 This command will generate a config file with sandbox DNS, document store and token registry.
 

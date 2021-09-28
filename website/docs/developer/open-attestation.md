@@ -16,7 +16,9 @@ The [Open Attestation](https://github.com/Open-Attestation/open-attestation) rep
 npm i @govtechsg/open-attestation
 ```
 
-## API References
+---
+
+## Usage
 
 ### Wrapping documents
 

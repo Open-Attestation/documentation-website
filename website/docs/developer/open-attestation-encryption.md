@@ -20,7 +20,16 @@ This library is used for encrypting OpenCerts files in transit
 npm i @govtechsg/oa-encryption
 ```
 
-## Encrypting a document
+---
+
+## Usage
+
+#### Table of Contents
+
+- [Encrypting a document](#encrypting-a-document)
+- [Decrypting a document](#decrypting-a-document)
+
+### Encrypting a document
 
 ```javascript
 const { encryptString } = require("@govtechsg/oa-encryption");
@@ -68,7 +77,7 @@ Will display something like (when you will run it, the values will be different)
 
 The key from the encrypted document can be extracted out and the rest of the document can be stored anywhere. To decrypt the document, the key will be needed, hence the content of your document is safe.
 
-## Decrypting a document
+### Decrypting a document
 
 ```javascript
 const { decryptString } = require("@govtechsg/oa-encryption");

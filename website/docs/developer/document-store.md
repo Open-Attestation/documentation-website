@@ -6,17 +6,31 @@ sidebar_label: Document Store
 
 The [Document Store](https://github.com/Open-Attestation/document-store) repository contains both the smart contract code for document store (in `/contracts`) as well as the node package for using this library (in `/src`).
 
-## Installing Package
+## Installation
 
 ```sh
 npm i @govtechsg/document-store
 ```
 
-## Package Usage
+---
+
+## Usage
 
 To use the package, you will need to provide your own Web3 [provider](https://docs.ethers.io/ethers.js/html/api-providers.html) or [signer](https://docs.ethers.io/ethers.js/html/api-wallet.html) (if you are writing to the blockchain).
 
-Deploying new document store
+#### Table of Contents
+
+- [Deploy](#deploy)
+- [Connect](#connect-to-existing-document-store)
+- [Deploy (with minimal proxy)](#deploy-with-minimal-proxy)
+- [Interact](#interact)
+- [List of available functions](#list-of-available-functions)
+- [Provider & Signer](#provider--signer)
+- [Setup](#setup)
+- [Contract Benchmark](#contract-benchmark)
+- [Notes](#notes)
+
+### Deploy
 
 ```ts
 import { deployAndWait } from "@govtechsg/document-store";
@@ -24,7 +38,7 @@ import { deployAndWait } from "@govtechsg/document-store";
 const documentStore = await deployAndWait("My Document Store", signer).then(console.log);
 ```
 
-Connecting to existing document store on Ethereum
+### Connect (To existing document store)
 
 ```ts
 import { connect } from "@govtechsg/document-store";
@@ -32,7 +46,9 @@ import { connect } from "@govtechsg/document-store";
 const documentStore = await connect("0x4077534e82c97be03a07fb10f5c853d2bc7161fb", providerOrSigner);
 ```
 
-Deploying new document store with minimal proxy (TBD - Not available yet)
+### Deploy (With minimal proxy)
+
+_(TBD - Not available yet)_
 
 ```ts
 import { deployMinimal } from "@govtechsg/document-store";
@@ -40,7 +56,7 @@ import { deployMinimal } from "@govtechsg/document-store";
 deployMinimal("My Document Store", signer).then(console.log);
 ```
 
-Interacting with the document store (example)
+### Interact
 
 ```ts
 const issueMerkleRoot = async () => {
@@ -55,7 +71,7 @@ const issueMerkleRoot = async () => {
 };
 ```
 
-List of available functions on contract
+### List of available functions
 
 ```text
 documentIssued

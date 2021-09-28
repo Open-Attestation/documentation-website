@@ -6,19 +6,35 @@ sidebar_label: Token Registry
 
 The [Token Registry](https://github.com/Open-Attestation/token-registry) repository contains both the smart contract code for token registry (in `/contracts`) as well as the node package for using this library (in `/src`).
 
-## Installing Package
+## Installation
 
 ```sh
 npm i @govtechsg/token-registry
 ```
 
-## Package Usage
+---
+
+## Usage
 
 To use the package, you will need to provide your own Web3 [provider](https://docs.ethers.io/ethers.js/html/api-providers.html) or [signer](https://docs.ethers.io/ethers.js/html/api-wallet.html) (if you are writing to the blockchain).
 
+#### Table of Contents
+
+- [TradeTrustERC721](#tradetrusterc721)
+  - [Deploy](#deploy)
+  - [Connect](#connect)
+  - [List of available functions](#list-of-available-functions)
+- [Title Escrow](#title-escrow)
+  - [Minting Title Escrow](#minting-title-escrow)
+  - [Restoring Title Escrow](#restoring-title-escrow)
+  - [Connect to Title Escrow](connect-to-title-escrow)
+- [Provider & Signer](#provider--signer)
+- [Setup](#setup)
+- [Development](#development)
+
 ### TradeTrustERC721
 
-Deploying new TradeTrustERC721
+#### Deploy
 
 ```ts
 import { TradeTrustErc721Factory } from "@govtechsg/token-registry";
@@ -27,7 +43,7 @@ const factory = new TradeTrustErc721Factory(signer1);
 const tokenRegistry = await tokenRegistryFactory.deploy("MY_TOKEN_REGISTRY", "TKN");
 ```
 
-Connecting to existing TradeTrustERC721 on Ethereum
+#### Connect
 
 ```ts
 import { TradeTrustErc721Factory } from "@govtechsg/token-registry";
@@ -35,7 +51,7 @@ import { TradeTrustErc721Factory } from "@govtechsg/token-registry";
 const connectedRegistry = TradeTrustErc721Factory.connect(existingERC721Address, signer1);
 ```
 
-List of available functions on TradeTrustERC721
+#### List of available functions
 
 The contract supports [all ERC721 methods](http://erc721.org/)
 
@@ -61,7 +77,7 @@ const connectedRegistry = TradeTrustErc721Factory.connect(existingERC721Address,
 const tx = await connectedRegistry.restoreTitle(beneficiaryAddress, holderAddress, existingTokenId);
 ```
 
-#### Connecting to an existing TitleEscrow on Ethereum
+#### Connect to Title Escrow
 
 ```ts
 import { TitleEscrowFactory } from "@govtechsg/token-registry";
@@ -71,7 +87,7 @@ const connectedEscrow = TitleEscrowFactory.connect(existingTitleEscrowAddress, s
 
 For list of available functions on TitleEscrow simply check the type definitions as they are automatically generated using typechain.
 
-## Provider & Signer
+### Provider & Signer
 
 Different ways to get provider or signer:
 
@@ -91,13 +107,7 @@ const signerFromMnemonic = Wallet.fromMnemonic("MNEMONIC-HERE");
 signerFromMnemonic.connect(provider);
 ```
 
-# Development
-
-This repository's development framework uses (HardHat)[https://hardhat.org/getting-started/].
-
-Tests are run using `npm run test`, more development tasks can be found in the package.json scripts.
-
-## Setup
+### Setup
 
 ```sh
 npm install
@@ -105,3 +115,9 @@ npm lint
 npm test
 npx hardhat <command>
 ```
+
+### Development
+
+This repository's development framework uses (HardHat)[https://hardhat.org/getting-started/].
+
+Tests are run using `npm run test`, more development tasks can be found in the package.json scripts.

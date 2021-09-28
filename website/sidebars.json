@@ -56,6 +56,7 @@
       "component/oa-encryption"
     ],
     "Developer": [
+      "developer/overview",
       "developer/open-attestation",
       "developer/open-attestation-cli",
       "developer/open-attestation-encryption",

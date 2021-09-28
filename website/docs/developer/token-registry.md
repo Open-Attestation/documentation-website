@@ -27,7 +27,7 @@ To use the package, you will need to provide your own Web3 [provider](https://do
 - [Title Escrow](#title-escrow)
   - [Minting Title Escrow](#minting-title-escrow)
   - [Restoring Title Escrow](#restoring-title-escrow)
-  - [Connect to Title Escrow](connect-to-title-escrow)
+  - [Connect to Title Escrow](#connect-to-title-escrow)
 - [Provider & Signer](#provider--signer)
 - [Setup](#setup)
 - [Development](#development)

@@ -60,6 +60,8 @@
       "developer/open-attestation",
       "developer/open-attestation-cli",
       "developer/open-attestation-encryption",
+      "developer/open-attestation-verify",
+      "developer/decentralized-renderer",
       "developer/document-store",
       "developer/token-registry"
     ],

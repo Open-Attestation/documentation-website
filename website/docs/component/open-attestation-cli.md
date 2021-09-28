@@ -28,7 +28,7 @@ open-attestation
 
 ## Usage Instructions
 
-For usage instructions, refer to the [CLI README](../repositories/open-attestation-cli) or run the CLI with the help flag:
+For usage instructions, refer to the [CLI README](../developer/open-attestation-cli) or run the CLI with the help flag:
 
 ```sh
 open-attestation --help

@@ -14,27 +14,29 @@ npm i @govtechsg/token-registry
 
 ---
 
+## Table of Contents
+
+- [Usage](#usage)
+- [Provider & Signer](#provider--signer)
+- [Setup](#setup)
+- [Development](#development)
+
 ## Usage
 
 To use the package, you will need to provide your own Web3 [provider](https://docs.ethers.io/ethers.js/html/api-providers.html) or [signer](https://docs.ethers.io/ethers.js/html/api-wallet.html) (if you are writing to the blockchain).
 
-#### Table of Contents
-
 - [TradeTrustERC721](#tradetrusterc721)
-  - [Deploy](#deploy)
-  - [Connect](#connect)
+  - [Deploy new token registry](#deploy-new-token-registry)
+  - [Connect to existing token registry](#connect-to-existing-token-registry)
   - [List of available functions](#list-of-available-functions)
 - [Title Escrow](#title-escrow)
   - [Minting Title Escrow](#minting-title-escrow)
   - [Restoring Title Escrow](#restoring-title-escrow)
   - [Connect to Title Escrow](#connect-to-title-escrow)
-- [Provider & Signer](#provider--signer)
-- [Setup](#setup)
-- [Development](#development)
 
 ### TradeTrustERC721
 
-#### Deploy
+#### Deploy new token registry
 
 ```ts
 import { TradeTrustErc721Factory } from "@govtechsg/token-registry";
@@ -43,7 +45,7 @@ const factory = new TradeTrustErc721Factory(signer1);
 const tokenRegistry = await tokenRegistryFactory.deploy("MY_TOKEN_REGISTRY", "TKN");
 ```
 
-#### Connect
+#### Connect to existing token registry
 
 ```ts
 import { TradeTrustErc721Factory } from "@govtechsg/token-registry";

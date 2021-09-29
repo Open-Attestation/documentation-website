@@ -14,23 +14,25 @@ npm i @govtechsg/document-store
 
 ---
 
-## Usage
+## Table of Contents
 
-To use the package, you will need to provide your own Web3 [provider](https://docs.ethers.io/ethers.js/html/api-providers.html) or [signer](https://docs.ethers.io/ethers.js/html/api-wallet.html) (if you are writing to the blockchain).
-
-#### Table of Contents
-
-- [Deploy](#deploy)
-- [Connect](#connect-to-existing-document-store)
-- [Deploy (with minimal proxy)](#deploy-with-minimal-proxy)
-- [Interact](#interact)
-- [List of available functions](#list-of-available-functions)
+- [Usage](#usage)
 - [Provider & Signer](#provider--signer)
 - [Setup](#setup)
 - [Contract Benchmark](#contract-benchmark)
 - [Notes](#notes)
 
-### Deploy
+## Usage
+
+To use the package, you will need to provide your own Web3 [provider](https://docs.ethers.io/ethers.js/html/api-providers.html) or [signer](https://docs.ethers.io/ethers.js/html/api-wallet.html) (if you are writing to the blockchain).
+
+- [Deploy new document store](#deploy-new-document-store)
+- [Connect to existing document store](#connect-to-existing-document-store)
+- [Deploy new document store (with minimal proxy)](#deploy-new-document-store-with-minimal-proxy)
+- [Interact with document store](#interact-with-document-store)
+- [List of available functions](#list-of-available-functions)
+
+### Deploy new document store
 
 ```ts
 import { deployAndWait } from "@govtechsg/document-store";
@@ -38,7 +40,7 @@ import { deployAndWait } from "@govtechsg/document-store";
 const documentStore = await deployAndWait("My Document Store", signer).then(console.log);
 ```
 
-### Connect (To existing document store)
+### Connect to existing document store
 
 ```ts
 import { connect } from "@govtechsg/document-store";
@@ -46,7 +48,7 @@ import { connect } from "@govtechsg/document-store";
 const documentStore = await connect("0x4077534e82c97be03a07fb10f5c853d2bc7161fb", providerOrSigner);
 ```
 
-### Deploy (With minimal proxy)
+### Deploy new document store (With minimal proxy)
 
 _(TBD - Not available yet)_
 
@@ -56,7 +58,7 @@ import { deployMinimal } from "@govtechsg/document-store";
 deployMinimal("My Document Store", signer).then(console.log);
 ```
 
-### Interact
+### Interact with document store
 
 ```ts
 const issueMerkleRoot = async () => {
@@ -130,8 +132,6 @@ A benchmark is provided to show the different transaction cost of the different 
 ```sh
 npm run benchmark
 ```
-
-![Benchmark Results](../../static/docs/component/document-store/benchmark.png)
 
 ## Notes
 

@@ -18,9 +18,13 @@ npm i @govtechsg/open-attestation
 
 ---
 
-## Usage
+## Table of Contents
 
-#### Table of Contents
+- [Usage](#usage)
+- [Development](#development)
+- [Additional information](#additional-information)
+
+## Usage
 
 - [Wrapping documents](#wrapping-documents)
 - [Sign a document](#sign-a-document)
@@ -29,9 +33,6 @@ npm i @govtechsg/open-attestation
 - [Retrieving document data](#retrieving-document-data)
 - [Utils](#utils)
 - [Obfuscating data](#obfuscating-data)
-- [Test](#test)
-- [vc-test-suite](#vctestsuite)
-- [Additional information](#additional-information)
 
 ### Wrapping documents
 
@@ -172,13 +173,21 @@ const newData = obfuscateDocument(wrappedDocument, "key1");
 console.log(newData);
 ```
 
-## Test
+## Development
+
+To run on local
+
+```
+npm run dev -- <command> <options>
+```
+
+To run tests
 
 ```
 npm run test
 ```
 
-## vc-test-suite
+### vc-test-suite
 
 You can run the vc-test-suite against `open-attestation` by running `npm run test:vc`. This command will:
 
@@ -187,7 +196,7 @@ You can run the vc-test-suite against `open-attestation` by running `npm run tes
 - install the latest version of `@govtechsg/open-attestation-cli`
 - monkey patch `open-attestation` in `@govtechsg/open-attestation-cli`. That means that the current version of the project will be built and replace the one installed with `@govtechsg/open-attestation-cli`.
 
-### Local debug
+#### Local debug
 
 In the event you face a problem with one test and want to debug locally:
 

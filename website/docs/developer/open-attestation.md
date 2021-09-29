@@ -20,6 +20,19 @@ npm i @govtechsg/open-attestation
 
 ## Usage
 
+#### Table of Contents
+
+- [Wrapping documents](#wrapping-documents)
+- [Sign a document](#sign-a-document)
+- [Validate schema of document](#validate-schema-of-document)
+- [Verify signature of document](#verify-signature-of-document)
+- [Retrieving document data](#retrieving-document-data)
+- [Utils](#utils)
+- [Obfuscating data](#obfuscating-data)
+- [Test](#test)
+- [vc-test-suite](#vctestsuite)
+- [Additional information](#additional-information)
+
 ### Wrapping documents
 
 `wrapDocuments` takes in an array of document and returns the batched documents. Each document must be valid regarding the version of the schema used (see below) It computes the merkle root of the batch and appends the signature to each document. This merkle root can be published on the blockchain and queried against to prove the provenance of the document issued this way.
@@ -65,6 +78,15 @@ console.log(wrappedDocuments);
 wrappedDocuments = wrapDocuments([document, { ...document, id: "different id" }], { version: "open-attestation/3.0" }); // will ensure document is valid regarding open-attestation 3.0 schema
 console.log(wrappedDocuments);
 ```
+
+> Note:
+> Though `wrapDocument` and `wrapDocuments` are both identical but there is a slight difference.
+>
+> - wrapDocuments returns an array and not an object.
+> - Each element in the array is a wrapped document corresponding to the one provided as input.
+> - Each element has the same merkleRoot.
+> - Each element has a different targetHash.
+> - Similar to wrapDocument, every time you run wrapDocuments, it will create different hashes (in front of every fields in the data object), targetHash and merkleRoot.
 
 ### Sign a document
 
@@ -150,8 +172,6 @@ const newData = obfuscateDocument(wrappedDocument, "key1");
 console.log(newData);
 ```
 
-###
-
 ## Test
 
 ```
@@ -175,3 +195,14 @@ In the event you face a problem with one test and want to debug locally:
 1. Open `runVcTest.sh` and update `install_vc_test_suite=true` to `install_vc_test_suite=false`. This line will help to preserve the `vc-test-suite` folder untouched.
 
 You can now debug from the `vc-test-suite` folder the way you need it.
+
+## Additional information
+
+- Found a bug? Have a question? Want to share an idea? Reach us at our [Github repository](https://github.com/Open-Attestation/open-attestation).
+- We are currently building a new version of the schema, compatible with W3C VC. This is very experimental and whatever is available for v2 documents are also available for v3 documents:
+  - [OA schema v3](https://raw.githubusercontent.com/Open-Attestation/open-attestation/master/src/schema/3.0/schema.json)
+  - Typings: `import {v3} from "@govtechsg/open-attestation"`.
+  - Type guard: `utils.isWrappedV3Document`.
+  - Wrapping: `wrapDocument(document, {version: "open-attestation/3.0"})`
+- There are extra utilities available:
+  - `utils.getIssuerAddress`: to return the list of issuer address from wrapped document.

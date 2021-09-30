@@ -175,12 +175,6 @@ console.log(newData);
 
 ## Development
 
-To run on local
-
-```
-npm run dev -- <command> <options>
-```
-
 To run tests
 
 ```

@@ -55,16 +55,7 @@
       "component/decentralized-renderer-react-components",
       "component/oa-encryption"
     ],
-    "Developer": [
-      "developer/overview",
-      "developer/open-attestation",
-      "developer/open-attestation-cli",
-      "developer/open-attestation-encryption",
-      "developer/open-attestation-verify",
-      "developer/decentralized-renderer",
-      "developer/document-store",
-      "developer/token-registry"
-    ],
+    "Developer": ["developer/overview", "developer/open-attestation"],
     "Advanced": [
       "advanced/overview",
       "advanced/verification-methods",

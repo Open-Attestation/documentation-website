@@ -1,7 +1,7 @@
 ---
-id: document-store-webapp
+id: deploy-document-store-webapp
 title: Deploying Document Store with Web app
-sidebar_label: Deploying Document Store with Web app
+sidebar_label: Deploying Document Store
 ---
 
 This guide will help you to deploy a document store using one of the available web application. You will find more details about document store on the [main guide page](/docs/verifiable-document/document-store)

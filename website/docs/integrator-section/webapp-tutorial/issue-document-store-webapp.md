@@ -1,7 +1,7 @@
 ---
-id: issuing-webapp
+id: issue-document-store-webapp
 title: Issuing Document with Web app
-sidebar_label: Issuing Document with Web app
+sidebar_label: Issue Document Store
 ---
 
 This guide will help you to issue a hash using one of the available web application. You will find more details about issuing on the [main guide page](/docs/verifiable-document/issuing-document)

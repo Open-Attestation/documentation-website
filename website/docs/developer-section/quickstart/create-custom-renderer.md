@@ -1,5 +1,5 @@
 ---
-id: custom-renderer
+id: create-custom-renderer
 title: Creating Document Renderer
 sidebar_label: Creating Document Renderer
 ---
@@ -33,6 +33,7 @@ rm -rf .git
 ### Clean the template
 
 In order to fully understand how developing a renderer work, we will start by cleaning it a bit:
+
 - remove the folder `src/templates/customTemplate`
 - remove the folder `src/integration`
 
@@ -87,20 +88,19 @@ export const cocTemplateCertificate: CocTemplateCertificate = {
       documentStore: "0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b",
       identityProof: {
         location: "few-green-cat.sandbox.openattestation.com",
-        type: v2.IdentityProofType.DNSTxt
-      }
-    }
+        type: v2.IdentityProofType.DNSTxt,
+      },
+    },
   ],
   recipient: {
-    name: "John Doe"
+    name: "John Doe",
   },
   $template: {
     name: "COC",
     type: v2.TemplateType.EmbeddedRenderer,
-    url: "http://localhost:3000"
-  }
+    url: "http://localhost:3000",
+  },
 };
-
 ```
 
 ### Document objects explained
@@ -128,6 +128,7 @@ OA documents do not have a strict data structure and allows issuers of documents
 In the next section, you will learn more about the OA document schema and how you may define your own data structure. For this guide, we will stick to this simple document.
 
 #### `issuers`
+
 See [Creating Raw Document](/docs/verifiable-document/raw-document#creating-raw-document).
 
 ### Developing the COC Template View
@@ -161,9 +162,10 @@ const containerStyle = css`
   text-align: center;
 `;
 
-export const CocTemplate: FunctionComponent<
-  TemplateProps<CocTemplateCertificate> & { className?: string }
-> = ({ document, className = "" }) => {
+export const CocTemplate: FunctionComponent<TemplateProps<CocTemplateCertificate> & { className?: string }> = ({
+  document,
+  className = "",
+}) => {
   return (
     <div css={containerStyle} className={className} id="custom-template">
       <h1>{document.name}</h1>
@@ -218,8 +220,8 @@ export const templates = [
   {
     id: "certificate",
     label: "Certificate",
-    template: CocTemplate
-  }
+    template: CocTemplate,
+  },
 ];
 ```
 
@@ -242,7 +244,7 @@ import { TemplateRegistry } from "@govtechsg/decentralized-renderer-react-compon
 import { templates } from "./coc";
 
 export const registry: TemplateRegistry<any> = {
-  COC: templates
+  COC: templates,
 };
 ```
 

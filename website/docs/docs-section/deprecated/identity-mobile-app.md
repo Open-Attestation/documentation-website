@@ -1,5 +1,5 @@
 ---
-id: identity-wallet
+id: identity-mobile-app
 title: Identity Mobile App
 sidebar_label: Identity Mobile App
 ---
@@ -22,9 +22,11 @@ For the moment, the application is not available on Apple store or Android store
 In order to view a document, open Identity Wallet, proceed to the QR Code tab and scan. Some examples are available on [Open Attestation Gallery](http://gallery.openattestation.com/).
 
 In the gallery you will find 2 different kinds of documents, viewable and storable:
+
 - Viewable documents can only be viewed (and not stored) in the application. No other actions are permitted.
 - Storable documents can be viewed and stored in the application. Once a document is stored into your wallet you can also share it with others. When you view the document, a QR Code icon will be displayed. Click on it to share your document.
 
 ## Additional information
+
 - Identity Wallet implementation follow our [Universal Actions ADR](https://github.com/Open-Attestation/adr/blob/master/universal_actions.md).
 - Found a bug? Have a question? Want to share an idea? Reach us on the [Github repository](https://github.com/Open-Attestation/identity-wallet).

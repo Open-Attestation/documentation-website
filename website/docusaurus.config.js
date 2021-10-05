@@ -33,7 +33,9 @@ const siteConfig = {
         srcDark: "img/logos/oa.svg",
       },
       items: [
-        { to: "docs/getting-started", label: "Docs", position: "left" },
+        { to: "docs/docs-section/introduction", label: "Docs", position: "left" },
+        { to: "docs/integrator-section/verifiable-document/overview", label: "Integrator", position: "left" },
+        { to: "docs/developer-section/quickstart/code-tutorial", label: "Developer", position: "left" },
         { to: "blog", label: "Blog", position: "left" },
       ],
     },

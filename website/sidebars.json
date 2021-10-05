@@ -87,7 +87,8 @@
       "appendix/ropsten-setup",
       "appendix/identity-wallet",
       "appendix/document-store-webapp",
-      "appendix/issuing-webapp"
+      "appendix/issuing-webapp",
+      "appendix/gas-cost-estimation"
     ]
   }
 }

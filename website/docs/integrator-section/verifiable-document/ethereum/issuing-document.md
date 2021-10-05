@@ -15,7 +15,7 @@ open-attestation document-store issue --address 0xBBb55Bd1D709955241CAaCb327A765
 In the example above:
 
 - `address` is the document store address, for instance the one created with the [Deploying Document Store](/docs/integrator-section/verifiable-document/ethereum/document-store) guide.
-- `hash` is the merkle root hash, for instance generated while [Wrapping Documents](/docs/verifiable-document/wrapping-document)
+- `hash` is the merkle root hash, for instance generated while [Wrapping Documents](/docs/integrator-section/verifiable-document/ethereum/wrapping-document)
 
 You will be prompted for the password that you used while creating the wallet. You will see a message after completion of the command:
 
@@ -27,6 +27,6 @@ You will be prompted for the password that you used while creating the wallet. Y
 
 Head to `dev.opencerts.io` or `dev.tradetrust.io` and drag and drop one of the wrapped documents. The document will be verified, then displayed.
 
-![Successful verification](/docs/verifiable-document/issuing-document/verifying.png)
+![Successful verification](/docs/integrator-section/verifiable-document/ethereum/issuing-document/verifying.png)
 
 🎉 Congratulations, you have completed the getting started guide to create your own Verifiable Document!

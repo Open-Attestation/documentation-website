@@ -6,13 +6,13 @@ sidebar_label: Configuring DNS
 
 Every OA document's provenance can be verified and traced back to its creator or issuer. This is achieved by embedding an `identityProof` property in the document, which serves as a claim for identity. During the verification phase, the claim is checked against external records.
 
-![Example Issuer Identity](/docs/verifiable-document/dns-proof/example.png)
+![Example Issuer Identity](/docs/integrator-section/verifiable-document/ethereum/dns-proof/example.png)
 
 In this example above, the document's issuer is bound to `demo.openattestation.com`.
 
 In this guide, we will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in an OA-compliant decentralized renderer.
 
-We will be inserting a temporary DNS record on our DNS at `sandbox.openattestation.com` so you do not need your own domain to follow the guide. If you prefer to use your own domain name for the identity, you may skip the steps involving the CLI and instead read the [DNS Configuration Guide](../advanced/configuring-dns).
+We will be inserting a temporary DNS record on our DNS at `sandbox.openattestation.com` so you do not need your own domain to follow the guide. If you prefer to use your own domain name for the identity, you may skip the steps involving the CLI and instead read the [DNS Configuration Guide](/docs/developer-section/quickstart/configure-dns).
 
 ## Creating Temporary DNS Proof with CLI
 

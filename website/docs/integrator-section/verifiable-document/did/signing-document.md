@@ -13,7 +13,7 @@ open-attestation sign ./wrapped-documents --od ./signed-documents --public-key d
 
 In the example above:
 
-- `public-key` the public key used [to bind the wallet address with the DNS location](/docs/verifiable-document/did/dns)
+- `public-key` the public key used [to bind the wallet address with the DNS location](/docs/integrator-section/verifiable-document/did/dns)
 - `key` is the wallet private key, generated when [creating the wallet](/docs/integrator-section/verifiable-document/did/create)
 
 ```text
@@ -24,6 +24,6 @@ In the example above:
 
 Head to `dev.tradetrust.io` and drag and drop one of the wrapped documents. The document will be verified, then displayed.
 
-![Successful verification](/docs/verifiable-document/signing-document/verifying.png)
+![Successful verification](/docs/integrator-section/verifiable-document/ethereum/signing-document/verifying.png)
 
 🎉 Congratulations, you have completed the getting started guide to create your own Verifiable Document!

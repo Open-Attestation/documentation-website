@@ -3,9 +3,9 @@ title: Document integrity
 sidebar_label: Document integrity
 ---
 
-OpenAttestation ensures that the content of the document has not been modified since the document has been created, with exception of data removed using the built-in [obfuscation mechanism](/docs/component/open-attestation#obfuscating-data). Let's explore how it works.
+OpenAttestation ensures that the content of the document has not been modified since the document has been created, with exception of data removed using the built-in [obfuscation mechanism](/docs/developer-section/libraries/open-attestation#obfuscating-data). Let's explore how it works.
 
-In the tutorial, we have learnt how to [wrap a document](/docs/verifiable-document/wrapping-document) and [issue it](/docs/verifiable-document/issuing-document) into a document store. However, we didn't explain what these actions were doing and why they are necessary.
+In the tutorial, we have learnt how to [wrap a document](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) and [issue it](/docs/integrator-section/verifiable-document/ethereum/issuing-document) into a document store. However, we didn't explain what these actions were doing and why they are necessary.
 
 ## Wrapping a document
 
@@ -56,7 +56,7 @@ The first step of wrapping consists of transforming all the object properties pr
 
 #### targetHash
 
-See [issuance status](/docs/how-does-it-work/issuance-status#merkleroot).
+See [issuance status](/docs/docs-section/how-does-it-work/issuance-status#merkleroot).
 
 Once the `data` object has been computed we will be able to create an unique hash for the document that we will set into `targetHash`:
 

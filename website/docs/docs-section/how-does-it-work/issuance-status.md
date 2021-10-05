@@ -95,7 +95,7 @@ Three important information can be found:
 - The DID controller (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller`). It's used to identify which public key control the DID and must be added into the `issuer.identityProof.key` property of the document. It's also worth to note that the value is equal to the DID identifier, appended with `#controller`.
 - The ethereum address associated to the DID controller (here `0x6813eb9362372eef6200f3b1dbc3f819671cba69`). We will use it to verify the signature.
 
-> You can find an example of document using DID in our [guide](/docs/verifiable-document/did/raw-document).
+> You can find an example of document using DID in our [guide](/docs/integrator-section/verifiable-document/did/raw-document).
 
 A proof of signature looks like:
 
@@ -122,7 +122,7 @@ If you want to dig more on ECDSA, you can read this guide from [Yos Riady](https
 
 ### Revocation
 
-It's possible to revoke a DID document if a document store has been declared in its revocation block. You can revoke a document [using a document store](/docs/verifiable-document/did/revoking-document-document-store) or [with an OCSP](/docs/verifiable-document/did/revoking-document-ocsp).
+It's possible to revoke a DID document if a document store has been declared in its revocation block. refer [here](/docs/integrator-section/verifiable-document/did/revoking-document) for the steps.
 
 Note that if you do use revocation for `DID`, you still need to have at least 1 transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
 

@@ -4,7 +4,7 @@ title: Creating a wallet
 sidebar_label: Creating a wallet
 ---
 
-The first step that we will need to go through, is the [wallet](/docs/appendix/glossary#wallet) creation:
+The first step that we will need to go through, is the [wallet](/docs/docs-section/appendix/glossary#wallet) creation:
 
 ```bash
 open-attestation wallet create --output-file wallet.json --fund ropsten

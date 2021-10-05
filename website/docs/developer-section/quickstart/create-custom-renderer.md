@@ -129,7 +129,7 @@ In the next section, you will learn more about the OA document schema and how yo
 
 #### `issuers`
 
-See [Creating Raw Document](/docs/verifiable-document/raw-document#creating-raw-document).
+See [Creating Raw Document](/docs/integrator-section/verifiable-document/ethereum/raw-document#creating-raw-document).
 
 ### Developing the COC Template View
 

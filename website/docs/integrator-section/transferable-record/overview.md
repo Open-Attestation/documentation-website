@@ -13,7 +13,7 @@ This allow Transferable Records to be used for documents like:
 
 ## Goal
 
-This tutorial builds onto the knowledge from the [verifiable document](/docs//verifiable-document/overview) section. If you have not completed the tutorial for verifiable document, please head back to the previous section.
+This tutorial builds onto the knowledge from the [verifiable document](/docs/integrator-section/verifiable-document/overview) section. If you have not completed the tutorial for verifiable document, please head back to the previous section.
 
 By the end of this tutorial you would be able to create your "Electronic Bill of Lading" that is valid on any OA Viewer connected to the Ethereum ropsten network.
 

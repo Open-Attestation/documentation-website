@@ -18,6 +18,7 @@
       "label": "Appendix",
       "items": ["docs-section/appendix/glossary", "docs-section/appendix/contract-costs"]
     },
+    "docs-section/faq",
     {
       "type": "category",
       "label": "Roadmap",

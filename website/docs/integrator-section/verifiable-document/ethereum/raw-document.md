@@ -26,7 +26,7 @@ Paste the contents from https://schema.openattestation.com/2.0/schema.json into 
 
 This will setup the JSON schema validator to validate the JSON inputs on the right against the defined schema.
 
-![Validator Preview](/docs/verifiable-document/document-data/validator-preview.png)
+![Validator Preview](/docs/integrator-section/verifiable-document/ethereum/document-data/validator-preview.png)
 
 If you start editing the JSON data on the right you should see errors if the data does not conform to the OpenAttestation v2.0 schema. A summary of the number of errors is found on top of the right panel and the details of the errors are found below the two panels.
 
@@ -65,9 +65,9 @@ Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb3
 
 #### 1. issuers[0].identityProof.location
 
-Replace the value of `issuers[0].identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the dns name used to bind the document store's identity in the [previous steps](/docs/verifiable-document/dns-proof)
+Replace the value of `issuers[0].identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the dns name used to bind the document store's identity in the [previous steps](/docs/integrator-section/verifiable-document/ethereum/dns-proof)
 
-![Validator Completed](/docs/verifiable-document/document-data/validator-completed.png)
+![Validator Completed](/docs/integrator-section/verifiable-document/ethereum/document-data/validator-completed.png)
 
 Once all the values are configured and the raw document conforms to the schema, you will see the message `No errors found. JSON validates against the schema`
 

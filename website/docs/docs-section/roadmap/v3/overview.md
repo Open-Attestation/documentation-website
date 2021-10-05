@@ -20,7 +20,7 @@ If you are using OpenAttestation to issue or verify VC, you are encouraged to te
 
 ## Major Changes from V2
 
-Major changes from the version 2 can be found [here](/docs/advanced/v3/major-changes).
+Major changes from the version 2 can be found [here](/docs/docs-section/roadmap/v3/major-changes).
 
 ## Tool Compatibility
 

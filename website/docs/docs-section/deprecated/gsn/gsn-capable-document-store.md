@@ -48,9 +48,9 @@ open-attestation gsn-capable set-paymaster --network ropsten --gsn-capable-addre
 
 ### DNS Configuration
 
-Similar to [binding the document store to a domain name](../../verifiable-document/document-store), you will have to bind the identity of the GSN capable document store to a domain name.
+Similar to [binding the document store to a domain name](/docs/integrator-section/verifiable-document/ethereum/document-store), you will have to bind the identity of the GSN capable document store to a domain name.
 
-If you like more detailed setup instructions, you may refer to the [documentation for configuring DNS](../configuring-dns/).
+If you like more detailed setup instructions, you may refer to the [documentation for configuring DNS](docs/developer-section/quickstart/configure-dns).
 
 > Take note of the domain you are inserting the records on, you will need this later
 

@@ -4,7 +4,7 @@ title: Issuing Document with Web app
 sidebar_label: Issue Document Store
 ---
 
-This guide will help you to issue a hash using one of the available web application. You will find more details about issuing on the [main guide page](/docs/verifiable-document/issuing-document)
+This guide will help you to issue a hash using one of the available web application. You will find more details about issuing on the [main guide page](/docs/integrator-section/verifiable-document/ethereum/issuing-document)
 
 Currently, there exists 2 web application:
 
@@ -14,7 +14,7 @@ Currently, there exists 2 web application:
 ## Prerequisites
 
 - Google Chrome web browser
-- Metamask setup, refer to the [Test Account Setup](/docs/appendix/ropsten-setup) section for the setup guide
+- Metamask setup
 - A document store
 - A merkle root
 

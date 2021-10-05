@@ -4,7 +4,7 @@ title: Deploying Document Store Smart Contract
 sidebar_label: Deploying Document Store
 ---
 
-The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `ropsten` network, which is a test network that does not require actual [ethers](/docs/appendix/glossary#ether) for transactions.
+The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `ropsten` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions.
 
 In this guide we will make use of the wallet that we created in the [previous step](/docs/integrator-section/verifiable-document/ethereum/wallet)
 

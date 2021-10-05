@@ -11,7 +11,7 @@ It's possible to revoke a signed document only if you fulfill certain **prerequi
 - some kind of DID documents:
   1. base DID document (`ISSUER_IDENTITY`: `identityProof.identifier` against `ethr` DID)
   2. DID-DNS document (`ISSUER_IDENTITY`: `identityProof.identifier` against a [DNS-TXT](/docs/advanced/identity-proofs))
-- a deployed `documentStore`, click [here](/docs/verifiable-document/document-store) for how to do so.
+- a deployed `documentStore`, click [here](/docs/integrator-section/verifiable-document/ethereum/document-store) for how to do so.
 - before you wrap your document with the wrapper SDK, add a `revocation` block with these keys:
 
 ```json
@@ -54,7 +54,12 @@ open-attestation document-store revoke --address <DOCUMENT_STORE_LOCATION> --has
 
 ## Misc questions:
 
+<<<<<<< HEAD
 Q: hey you [mentioned](/docs/verifiable-document/comparison#price) that if I use DID documents, I would not need to pay for transactions, but following this flow, I would still have to pay for at least 1 transaction (deploying a `documentStore`), what gives?
+=======
+Q: hey you [mentioned](/docs/docs-section/how-does-it-work/comparison#price) that if I use DID documents, I would not need to pay for transactions, but following this flow, I would still have to pay for at least 1 transaction (deploying a `documentStore`), what gives?
+
+> > > > > > > 43ba439 (fix: fix broken links)
 
 A: yes, you are right, for now this implementation will still need at least 1 transaction to the ethereum blockchain. We are working on this so please be patient and watch this space.
 

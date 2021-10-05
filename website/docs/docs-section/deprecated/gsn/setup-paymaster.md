@@ -20,8 +20,8 @@ You can refer to the source code of our Paymaster [here](https://github.com/Open
 
 ### Pre-requisite
 
-- [OpenAttestation CLI](/docs/component/open-attestation-cli) installed
-- [Ethereum wallet with sufficient ethers](/docs/verifiable-document/wallet)
+- [OpenAttestation CLI](/docs/developer-section/libraries/open-attestation-cli) installed
+- [Ethereum wallet with sufficient ethers](/docs/integrator-section/verifiable-document/ethereum/wallet)
 
 > We will only show example for the wallet and one must change the command accordingly if using another method
 

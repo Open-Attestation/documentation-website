@@ -40,7 +40,7 @@ Let's create our document:
 
 #### 1. issuers[0].id
 
-Replace the value of `issuers[0].id` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D` to use the wallet address created from the [previous steps](/docs/verifiable-document/did/create). Keep `did:ethr:` in front of the wallet address.
+Replace the value of `issuers[0].id` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D` to use the wallet address created from the [previous steps](/docs/integrator-section/verifiable-document/did/create). Keep `did:ethr:` in front of the wallet address.
 
 #### 1. issuers[0].identityProof.location
 

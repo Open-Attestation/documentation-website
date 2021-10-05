@@ -55,6 +55,7 @@ The first step of wrapping consists of transforming all the object properties pr
 ### The `signature` object
 
 #### targetHash
+
 See [issuance status](/docs/how-does-it-work/issuance-status#merkleroot).
 
 Once the `data` object has been computed we will be able to create an unique hash for the document that we will set into `targetHash`:
@@ -71,7 +72,7 @@ Later on, during verification of the document, the same exact steps are performe
 
 #### Data Obfuscation
 
-Due to the way we compute `targetHash`, OpenAttestation allows for one to obfuscate data they don't want to make public. For this we can simply compute the hash of a specific field and add it into the documents. Let's try it with the [CLI](/docs/component/open-attestation-cli) and the document above:
+Due to the way we compute `targetHash`, OpenAttestation allows for one to obfuscate data they don't want to make public. For this we can simply compute the hash of a specific field and add it into the documents. Let's try it with the [CLI](/docs/developer-section/libraries/open-attestation-cli) and the document above:
 
 ```bash
 open-attestation filter ./path/to/file.json ./output.json name

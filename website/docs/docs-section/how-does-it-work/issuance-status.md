@@ -7,7 +7,7 @@ OpenAttestation checks that the document has been issued and that it's issuance 
 
 ## Ethereum Smart Contracts
 
-The [document store](/docs/verifiable-document/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It stores the hashes of wrapped documents, which are the records of the owner of the document store having issued the documents. Before we explain the verification process in detail, we need to introduce a new concept: the `merkleRoot`.
+The [document store](/docs/integrator-section/verifiable-document/ethereum/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It stores the hashes of wrapped documents, which are the records of the owner of the document store having issued the documents. Before we explain the verification process in detail, we need to introduce a new concept: the `merkleRoot`.
 
 Let's imagine that we need to wrap thousands of files and had to issue the `targetHash` for each of them. It would be extremely inefficient because Ethereum is slow, and we would have to pay for each transaction.
 
@@ -36,7 +36,7 @@ As discussed above, issuance of documents can happen individually or by batch. I
 
 To issue a document, an institution or individual :
 
-- [Deploys a new document store](/docs/verifiable-document/document-store) on Ethereum and get the address of the deployed contract. (this action needs to be performed only once)
+- [Deploys a new document store](/docs/integrator-section/verifiable-document/ethereum/document-store) on Ethereum and get the address of the deployed contract. (this action needs to be performed only once)
 - Adds the address of the deployed contract into the document (before wrapping).
 - Wraps a document (or a batch of documents) and get a `merkleRoot`. The wrapped documents can be shared to the recipients.
 - Issues the `merkleRoot` by calling the `issue` function from the document store contract.
@@ -60,7 +60,7 @@ At the moment, OpenAttestation only supports one DID method: `ethr`.
 
 ### Issuance
 
-DIDs [are significantly faster and incur not costs](/docs/verifiable-document/comparison). They could directly use the `targetHash` of the document (which is unique) and sign it using the private key associated. However for consistency with our initial design, we sign the `merkleRoot`.
+DIDs [are significantly faster and incur not costs](/docs/docs-section/how-does-it-work/comparison). They could directly use the `targetHash` of the document (which is unique) and sign it using the private key associated. However for consistency with our initial design, we sign the `merkleRoot`.
 
 The information about the signature are added to the document, into the `proof` property. That's it, the document has been issued.
 
@@ -130,7 +130,7 @@ Note that if you do use revocation for `DID`, you still need to have at least 1 
 
 To issue a document, an institution or individual :
 
-- [Creates a new ethr DID](/docs/verifiable-document/did/create) (this action needs to be performed only once) and get the private key and the public address.
+- [Creates a new ethr DID](/docs/integrator-section/verifiable-document/did/create) (this action needs to be performed only once) and get the private key and the public address.
 - Adds the DID address and controller into the document (before wrapping).
 - Wraps a document and get a `merkleRoot`.
 - Sign the `merkleRoot` using the private key. The signature must be appended into the wrapped document.

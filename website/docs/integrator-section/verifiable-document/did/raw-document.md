@@ -3,7 +3,7 @@ title: Creating Raw Document
 sidebar_label: Creating Raw Document
 ---
 
-The explanation about raw document purpose and format are available [in the Ethereum tutorial](/docs/verifiable-document/raw-document).
+The explanation about raw document purpose and format are available [in the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/raw-document).
 
 We will just adapt the raw document.
 
@@ -44,10 +44,10 @@ Replace the value of `issuers[0].id` from `did:ethr:0xaCc51f664D647C9928196c4e33
 
 #### 1. issuers[0].identityProof.location
 
-Replace the value of `issuers[0].identityProof.location` from `intermediate-sapphire-catfish.sandbox.openattestation.com` to the dns name used to bind the wallet address in the [previous steps](/docs/verifiable-document/did/dns)
+Replace the value of `issuers[0].identityProof.location` from `intermediate-sapphire-catfish.sandbox.openattestation.com` to the dns name used to bind the wallet address in the [previous steps](/docs/integrator-section/verifiable-document/did/dns)
 
 #### 1. issuers[0].identityProof.key
 
-Replace the value of `issuers[0].identityProof.key` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller` to the public key used to bind the wallet address in the [previous steps](/docs/verifiable-document/did/dns)
+Replace the value of `issuers[0].identityProof.key` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller` to the public key used to bind the wallet address in the [previous steps](/docs/integrator-section/verifiable-document/did/dns)
 
-> Follow the same file structure like [in the Ethereum tutorial](/docs/verifiable-document/raw-document#saving-the-raw-document).
+> Follow the same file structure like [in the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/raw-document#saving-the-raw-document).

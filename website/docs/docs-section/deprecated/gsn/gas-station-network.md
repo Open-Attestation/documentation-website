@@ -28,7 +28,7 @@ Given a service provided, we wanted a way for the provider to pay for the transa
 
 ## Next steps
 
-Now that we understand how GSN can be helpful as developers and how they work, we can move on to deploying the [Paymaster](/docs/advanced/gsn/setup-paymaster) and creating a [GsnCapableDocumentStore](/docs/advanced/gsn/gsn-capable-document-store).
+Now that we understand how GSN can be helpful as developers and how they work, we can move on to deploying the [Paymaster](/docs/docs-section/deprecated/gsn/setup-paymaster) and creating a [GsnCapableDocumentStore](/docs/docs-section/deprecated/gsn/gsn-capable-document-store).
 
 ## Additional Resource
 

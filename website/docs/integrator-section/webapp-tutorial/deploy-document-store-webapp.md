@@ -14,7 +14,7 @@ Currently, there exists 2 web application:
 ## Prerequisites
 
 - Google Chrome web browser
-- Metamask setup, refer to the [Test Account Setup](/docs/appendix/ropsten-setup) section for the setup guide
+- Metamask setup
 
 ![Admin Interface](/docs/appendix/document-store-webapp/interface.png)
 

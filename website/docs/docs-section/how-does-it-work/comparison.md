@@ -25,7 +25,7 @@ You will need ethers in order to use Ethereum Smart Contracts. The following act
 - Issuing a merkle root,
 - Revoking a merkle root.
 
-More information in the [FAQ](/docs/faq). Other actions (typically reading what is in the smart contract) are free.
+More information in the [FAQ](/docs/docs-section/faq). Other actions (typically reading what is in the smart contract) are free.
 
 With DID, you don't need money of any sort. It works out of the box.
 
@@ -39,7 +39,7 @@ For DID, it's the opposite, everything is private.
 
 Revocation is part of our Ethereum Smart Contracts.
 
-As of today, its possible to revoke a document if a document store has been declared in its revocation block. refer [here](/docs/verifiable-document/did/revoking-document) for the steps.
+As of today, its possible to revoke a document if a document store has been declared in its revocation block. refer [here](/docs/integrator-section/verifiable-document/did/revoking-document) for the steps.
 
 Note that if you do use revocation for `DID`, you still need to have at least 1 transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
 

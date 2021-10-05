@@ -8,7 +8,7 @@ In this section, we will prepare the DNS and the content of the transferable rec
 
 ## DNS Configuration
 
-Similar to [binding the document store to a domain name](../verifiable-document/document-store), you will have to bind the identity of the token registry to a domain name.
+Similar to [binding the document store to a domain name](/docs/integrator-section/verifiable-document/ethereum/document-store), you will have to bind the identity of the token registry to a domain name.
 
 To do that simply create a `TXT` record on your domain with the following entry:
 
@@ -18,13 +18,13 @@ openatts net=ethereum netId=3 addr=0x8431012Bc040942B59e3C5bf428221eab0b2f723
 
 You will need to replace the token registry address `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with the address you've got from the previous step.
 
-If you like to use our sandbox DNS for the purpose of the exercise, you may instead run the following command, following the instructions from [earlier](../verifiable-document/dns-proof/):
+If you like to use our sandbox DNS for the purpose of the exercise, you may instead run the following command, following the instructions from [earlier](/docs/integrator-section/verifiable-document/ethereum/dns-proof):
 
 ```sh
 open-attestation dns txt-record create --address 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --network-id 3
 ```
 
-If you like more detailed setup instructions, you may refer to the [documentation for configuring DNS](../advanced/configuring-dns/).
+If you like more detailed setup instructions, you may refer to the [documentation for configuring DNS](/docs/developer-section/quickstart/configure-dns).
 
 > Take note of the domain you are inserting the records on, you will need this later
 

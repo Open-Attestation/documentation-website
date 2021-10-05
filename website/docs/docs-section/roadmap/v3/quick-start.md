@@ -8,7 +8,7 @@ In this guide, we will attempt to issue an driving license in the OpenAttestatio
 
 _The document will not be rendered yet as we have yet to create demo renderer_
 
-> For a full range of documents (beside document store + DNS-TXT), you may look at the different types of document supported [here](/docs/advanced/v3/different-files)
+> For a full range of documents (beside document store + DNS-TXT), you may look at the different types of document supported [here](/docs/docs-section/roadmap/v3/different-files)
 
 ## Document Store Setup
 
@@ -16,7 +16,7 @@ If you have not already deployed a document store, you may do so by following th
 
 1. [Creating a wallet](/docs/integrator-section/verifiable-document/ethereum/wallet)
 1. [Deploying Document Store](/docs/integrator-section/verifiable-document/ethereum/document-store)
-1. [Configuring DNS](/docs/verifiable-document/dns-proof)
+1. [Configuring DNS](/docs/integrator-section/verifiable-document/ethereum/dns-proof)
 
 ## Creating Raw Document
 
@@ -77,7 +77,7 @@ Replace this with the address of the document store deployed in the step [Deploy
 
 ### `openAttestationMetadata.identityProof.identifier`
 
-Replace this with the domain where the TXT record has been inserted in the step [Configuring DNS](/docs/verifiable-document/dns-proof)
+Replace this with the domain where the TXT record has been inserted in the step [Configuring DNS](/docs/integrator-section/verifiable-document/ethereum/dns-proof)
 
 ## Wrapping the Document
 

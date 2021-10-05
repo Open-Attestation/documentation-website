@@ -1,5 +1,5 @@
 ---
-id: getting-started
+id: introduction
 title: Introduction to OpenAttestation
 sidebar_label: Introduction
 ---

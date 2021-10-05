@@ -61,7 +61,7 @@ To makes things simple, we will use an existing deployed renderer (at https://tu
 
 #### 1. issuers[0].documentStore
 
-Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b` to the smart contract address of your document store in the [previous steps](/docs/verifiable-document/document-store)
+Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b` to the smart contract address of your document store in the [previous steps](/docs/integrator-section/verifiable-document/ethereum/document-store)
 
 #### 1. issuers[0].identityProof.location
 

@@ -51,7 +51,7 @@ const siteConfig = {
           items: [
             {
               label: "Getting Started",
-              to: "docs/getting-started",
+              to: "docs-section/introduction",
             },
           ],
         },

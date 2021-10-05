@@ -16,7 +16,7 @@ We will be inserting a temporary DNS record on our DNS at `sandbox.openattestati
 
 ## Creating Temporary DNS Proof with CLI
 
-With your [document store](/docs/verifiable-document/document-store), run the following command:
+With your [document store](/docs/integrator-section/verifiable-document/ethereum/document-store), run the following command:
 
 ```bash
 open-attestation dns txt-record create --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --network-id 3

@@ -14,8 +14,8 @@ _The document will not be rendered yet as we have yet to create demo renderer_
 
 If you have not already deployed a document store, you may do so by following the guides listed below:
 
-1. [Creating a wallet](/docs/verifiable-document/wallet)
-1. [Deploying Document Store](/docs/verifiable-document/document-store)
+1. [Creating a wallet](/docs/integrator-section/verifiable-document/ethereum/wallet)
+1. [Deploying Document Store](/docs/integrator-section/verifiable-document/ethereum/document-store)
 1. [Configuring DNS](/docs/verifiable-document/dns-proof)
 
 ## Creating Raw Document
@@ -73,7 +73,7 @@ You will need to replace the following values:
 
 ### `openAttestationMetadata.proof.value`
 
-Replace this with the address of the document store deployed in the step [Deploying Document Store](/docs/verifiable-document/document-store)
+Replace this with the address of the document store deployed in the step [Deploying Document Store](/docs/integrator-section/verifiable-document/ethereum/document-store)
 
 ### `openAttestationMetadata.identityProof.identifier`
 
@@ -81,7 +81,7 @@ Replace this with the domain where the TXT record has been inserted in the step 
 
 ## Wrapping the Document
 
-With `licence.json` saved, run the following command after the [CLI is installed](/docs/component/open-attestation-cli):
+With `licence.json` saved, run the following command after the [CLI is installed](/docs/developer-section/libraries/open-attestation-cli):
 
 ```sh
 open-attestation wrap license.json --of wrapped.json --oav3

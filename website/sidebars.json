@@ -132,7 +132,16 @@
     {
       "type": "category",
       "label": "Libraries",
-      "items": ["developer-section/libraries/overview"]
+      "items": [
+        "developer-section/libraries/overview",
+        "developer-section/libraries/open-attestation",
+        "developer-section/libraries/open-attestation-cli",
+        "developer-section/libraries/open-attestation-encryption",
+        "developer-section/libraries/open-attestation-verify",
+        "developer-section/libraries/decentralised-renderer",
+        "developer-section/libraries/document-store",
+        "developer-section/libraries/token-registry"
+      ]
     },
     "developer-section/faq"
   ]

@@ -3,9 +3,9 @@ title: Creating a DID
 sidebar_label: Creating a DID
 ---
 
-While there exists many [DIDs](/docs/appendix/glossary#did), this tutorial will focus only on `ethr` DID. At the moment, OpenAttestation only supports `ethr` DID. 
+While there exists many [DIDs](/docs/appendix/glossary#did), this tutorial will focus only on `ethr` DID. At the moment, OpenAttestation only supports `ethr` DID.
 
-The creation of an `ethr` DID is identical to [the creation of a wallet](/docs/verifiable-document/wallet), as it relies entirely on the ethereum architecture. Once the wallet will be created, we will need to retrieve its private key:
+The creation of an `ethr` DID is identical to [the creation of a wallet](/docs/integrator-section/verifiable-document/ethereum/wallet), as it relies entirely on the ethereum architecture. Once the wallet will be created, we will need to retrieve its private key:
 
 1. Create the wallet:
 

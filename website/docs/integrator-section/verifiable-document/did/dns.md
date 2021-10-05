@@ -9,7 +9,7 @@ The principles are similar, but we will only use the wallet address as signing c
 
 ## Creating Temporary DNS Proof with CLI
 
-With your [wallet address](/docs/verifiable-document/did/create), run the following command:
+With your [wallet address](/docs/integrator-section/verifiable-document/did/create), run the following command:
 
 ```bash
 open-attestation dns txt-record create --public-key did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller

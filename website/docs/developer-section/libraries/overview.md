@@ -8,4 +8,4 @@ As a developer, you may find multiple repositories or libraries used throughout 
 
 Documentations to the repositories are listed below;
 
-- [Open Attestation](/docs/developer/open-attestation) is the core framework that allows you to create OA documents such as, transferable record or verifiable document.
+- [Open Attestation](/docs/developer-section/libraries/open-attestation) is the core framework that allows you to create OA documents such as, transferable record or verifiable document.

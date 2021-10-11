@@ -15,3 +15,7 @@ For more information on Gas and Gas Prices, check out [this article](https://eth
 #### What is the theoretical storage limit of a smart contract?
 
 It is `2^261` bytes. Check out this stackoverflow [post](https://ethereum.stackexchange.com/questions/1038/is-there-a-theoretical-limit-for-amount-of-data-that-a-contract-can-store/1040#1040) for more information.
+
+#### Can I create multiple TXT records under the same domain/subdomain?
+
+Yes. You can make use of multiple TXT records to point to multiple Ethereum addresses (e.g. document stores or DIDs). Keep in mind each TXT record should only contain one Ethereum address record.

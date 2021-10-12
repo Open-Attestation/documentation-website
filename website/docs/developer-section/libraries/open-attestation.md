@@ -18,21 +18,7 @@ npm i @govtechsg/open-attestation
 
 ---
 
-## Table of Contents
-
-- [Usage](#usage)
-- [Development](#development)
-- [Additional information](#additional-information)
-
 ## Usage
-
-- [Wrapping documents](#wrapping-documents)
-- [Sign a document](#sign-a-document)
-- [Validate schema of document](#validate-schema-of-document)
-- [Verify signature of document](#verify-signature-of-document)
-- [Retrieving document data](#retrieving-document-data)
-- [Utils](#utils)
-- [Obfuscating data](#obfuscating-data)
 
 ### Wrapping documents
 
@@ -83,11 +69,13 @@ console.log(wrappedDocuments);
 > Note:
 > Though `wrapDocument` and `wrapDocuments` are both identical but there is a slight difference.
 >
-> - wrapDocuments returns an array and not an object.
+> wrapDocuments:
+>
+> - returns an array and not an object.
 > - Each element in the array is a wrapped document corresponding to the one provided as input.
-> - Each element has the same merkleRoot.
-> - Each element has a different targetHash.
-> - Similar to wrapDocument, every time you run wrapDocuments, it will create different hashes (in front of every fields in the data object), targetHash and merkleRoot.
+> - Each element will share the same unique `merkleRoot` value in every batch wrap instance.
+> - Each element has an unique `targetHash` value.
+> - Similar to wrapDocument, every time you run wrapDocuments, it will create unique hashes (in front of every fields in the data object).
 
 ### Sign a document
 
@@ -208,4 +196,4 @@ You can now debug from the `vc-test-suite` folder the way you need it.
   - Type guard: `utils.isWrappedV3Document`.
   - Wrapping: `wrapDocument(document, {version: "open-attestation/3.0"})`
 - There are extra utilities available:
-  - `utils.getIssuerAddress`: to return the list of issuer address from wrapped document.
+  - Refer to the [utils](https://github.com/Open-Attestation/open-attestation/blob/master/src/shared/utils/utils.ts) component for the full list of utilities.

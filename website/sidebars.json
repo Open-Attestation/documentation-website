@@ -62,49 +62,55 @@
       "items": [
         {
           "type": "category",
-          "label": "Verifiable Document",
+          "label": "Tutorial",
           "items": [
-            "integrator-section/verifiable-document/overview",
-            "integrator-section/verifiable-document/prerequisites",
             {
-              "label": "Ethereum",
               "type": "category",
+              "label": "Verifiable Document",
               "items": [
-                "integrator-section/verifiable-document/ethereum/document-store-overview",
-                "integrator-section/verifiable-document/ethereum/wallet",
-                "integrator-section/verifiable-document/ethereum/document-store",
-                "integrator-section/verifiable-document/ethereum/dns-proof",
-                "integrator-section/verifiable-document/ethereum/raw-document",
-                "integrator-section/verifiable-document/ethereum/wrapping-document",
-                "integrator-section/verifiable-document/ethereum/issuing-document",
-                "integrator-section/verifiable-document/ethereum/revoking-document",
-                "integrator-section/verifiable-document/ethereum/going-further"
+                "integrator-section/verifiable-document/overview",
+                "integrator-section/verifiable-document/prerequisites",
+                {
+                  "label": "Ethereum",
+                  "type": "category",
+                  "items": [
+                    "integrator-section/verifiable-document/ethereum/document-store-overview",
+                    "integrator-section/verifiable-document/ethereum/wallet",
+                    "integrator-section/verifiable-document/ethereum/document-store",
+                    "integrator-section/verifiable-document/ethereum/dns-proof",
+                    "integrator-section/verifiable-document/ethereum/raw-document",
+                    "integrator-section/verifiable-document/ethereum/wrapping-document",
+                    "integrator-section/verifiable-document/ethereum/issuing-document",
+                    "integrator-section/verifiable-document/ethereum/revoking-document",
+                    "integrator-section/verifiable-document/ethereum/going-further"
+                  ]
+                },
+                {
+                  "label": "DID",
+                  "type": "category",
+                  "items": [
+                    "integrator-section/verifiable-document/did/create",
+                    "integrator-section/verifiable-document/did/dns",
+                    "integrator-section/verifiable-document/did/raw-document",
+                    "integrator-section/verifiable-document/did/wrapping-document",
+                    "integrator-section/verifiable-document/did/signing-document",
+                    "integrator-section/verifiable-document/did/revoking-document"
+                  ]
+                }
               ]
             },
             {
-              "label": "DID",
               "type": "category",
+              "label": "Transferable Record",
               "items": [
-                "integrator-section/verifiable-document/did/create",
-                "integrator-section/verifiable-document/did/dns",
-                "integrator-section/verifiable-document/did/raw-document",
-                "integrator-section/verifiable-document/did/wrapping-document",
-                "integrator-section/verifiable-document/did/signing-document",
-                "integrator-section/verifiable-document/did/revoking-document"
+                "integrator-section/transferable-record/overview",
+                "integrator-section/transferable-record/token-registry",
+                "integrator-section/transferable-record/preparing-transferable-record",
+                "integrator-section/transferable-record/title-escrow",
+                "integrator-section/transferable-record/issuing-transferable-record",
+                "integrator-section/transferable-record/going-further"
               ]
             }
-          ]
-        },
-        {
-          "type": "category",
-          "label": "Transferable Record",
-          "items": [
-            "integrator-section/transferable-record/overview",
-            "integrator-section/transferable-record/token-registry",
-            "integrator-section/transferable-record/preparing-transferable-record",
-            "integrator-section/transferable-record/title-escrow",
-            "integrator-section/transferable-record/issuing-transferable-record",
-            "integrator-section/transferable-record/going-further"
           ]
         },
         {
@@ -112,7 +118,8 @@
           "label": "Webapp Tutorial",
           "items": [
             "integrator-section/webapp-tutorial/deploy-document-store-webapp",
-            "integrator-section/webapp-tutorial/issue-document-store-webapp"
+            "integrator-section/webapp-tutorial/issue-document-store-webapp",
+            "integrator-section/webapp-tutorial/revoke-document-store-webapp"
           ]
         }
       ]

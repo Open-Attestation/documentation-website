@@ -1,6 +1,6 @@
 ---
 id: issue-document-store-webapp
-title: Issuing Document with Web app
+title: Issue Document with Web app
 sidebar_label: Issue Document Store
 ---
 

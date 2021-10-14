@@ -88,7 +88,6 @@ const siteConfig = {
     },
     image: "img/logos/oa.png",
     metadatas: [{ name: "og:image", content: "img/logos/oa.png" }],
-    sidebarCollapsible: true,
   },
 };
 

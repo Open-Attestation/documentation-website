@@ -4,7 +4,7 @@ title: Open Attestation (Verify)
 sidebar_label: Open Attestation (Verify)
 ---
 
-The [Open Attestation (Verification)](https://github.com/Open-Attestation/oa-encryption) repository is the codebase for the npm module that allows you to verify [wrapped document](/docs/developer-section/libraries/open-attestation) programmatically. This is useful if you are building your own API or web components. Some common use cases where you need this module:
+The [Open Attestation (Verification)](https://github.com/Open-Attestation/oa-verify) repository is the codebase for the npm module that allows you to verify [wrapped document](/docs/developer-section/libraries/open-attestation#wrapping-documents) programmatically. This is useful if you are building your own API or web components. Some common use cases where you need this module:
 
 - [Verifying a document](#verifying-a-document)
 - [Building custom verifier](#custom-verification)
@@ -12,7 +12,7 @@ The [Open Attestation (Verification)](https://github.com/Open-Attestation/oa-enc
 
 This module does not provide the following functionality:
 
-- Programmatic wrapping of OA documents (refer to [Open Attestation](/docs/developer-section/libraries/open-attestation))
+- Programmatic wrapping of OA documents (refer to [Open Attestation](/docs/developer-section/libraries/open-attestation#wrapping-documents))
 - Encryption or decryption of OA documents (refer to [Open Attestation (Encryption)](/docs/developer-section/libraries/open-attestation-encryption))
 - Programmatic issuance/revocation of document on the Ethereum blockchain
 

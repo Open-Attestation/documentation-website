@@ -8,11 +8,11 @@ The [Open Attestation (Encryption)](https://github.com/Open-Attestation/oa-encry
 
 This module does not provide the following functionality:
 
-- Programmatic wrapping of OA documents (refer to [Open Attestation](/docs/developer-section/libraries/open-attestation))
-- Programmatic verification of OA documents (refer to [Open Attestation (Verify)](/docs/developer-section/libraries/open-attestation))
+- Programmatic wrapping of OA documents (refer to [Open Attestation](/docs/developer-section/libraries/open-attestation#wrapping-documents))
+- Programmatic verification of OA documents (refer to [Open Attestation (Verify)](/docs/developer-section/libraries/open-attestation-verify))
 - Programmatic issuance/revocation of document on the Ethereum blockchain
 
-This library is used for encrypting OpenCerts files in transit
+This library is used for encrypting OpenAttestation files in transit
 
 ## Installation
 

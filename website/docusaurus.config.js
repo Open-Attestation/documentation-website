@@ -35,7 +35,11 @@ const siteConfig = {
       items: [
         { to: "docs/docs-section/introduction", label: "Docs", position: "left" },
         { to: "docs/integrator-section/verifiable-document/overview", label: "Integrator", position: "left" },
-        { to: "docs/developer-section/quickstart/code-tutorial", label: "Developer", position: "left" },
+        {
+          to: "docs/developer-section/quickstart/create-verifiable-document-issuer",
+          label: "Developer",
+          position: "left",
+        },
         { to: "blog", label: "Blog", position: "left" },
       ],
     },

@@ -16,7 +16,10 @@
     {
       "type": "category",
       "label": "Appendix",
-      "items": ["docs-section/appendix/glossary", "docs-section/appendix/contract-costs"]
+      "items": [
+        "docs-section/appendix/glossary",
+        "docs-section/appendix/contract-costs"
+      ]
     },
     "docs-section/faq",
     {
@@ -36,7 +39,6 @@
         "docs-section/roadmap/create-custom-context"
       ]
     },
-
     {
       "type": "category",
       "label": "Deprecated",
@@ -131,7 +133,7 @@
       "type": "category",
       "label": "Quickstart (Code)",
       "items": [
-        "developer-section/quickstart/code-tutorial",
+        "developer-section/quickstart/create-verifiable-document-issuer",
         "developer-section/quickstart/create-custom-renderer",
         "developer-section/quickstart/create-custom-schema",
         "developer-section/quickstart/configure-dns"

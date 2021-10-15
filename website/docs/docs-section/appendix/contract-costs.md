@@ -36,7 +36,7 @@ const contractGasData = {
     {
       name: "Issuance of Document",
       gas: 44956,
-      remarks: "Not applicable to DID."
+      remarks: "Issuance can be in batches. Not applicable to DID."
     },
     {
       name: "Revoke Document",

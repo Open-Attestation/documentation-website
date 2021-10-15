@@ -153,7 +153,7 @@ export const PriceTable = (props) => {
   const priceFactor = (gwei / 10.0) * 0.000000001 * price;
   const { type } = props;
   const costData = contractGasData[type];
-  const currentDtStr = new Date().toLocaleString("en-UK", { timeZoneName: "short", month: "long", day: "numeric", year: "numeric" });
+  const currentDtStr = new Date().toLocaleString("en-UK", { timeZoneName: "short" });
   const rows = costData.map((record, idx) => (
     <tr key={idx}>
       <td>{record.name}</td>

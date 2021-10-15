@@ -149,6 +149,7 @@ export const PriceTable = (props) => {
   const priceFactor = (gwei / 10.0) * 0.000000001 * price;
   const { type } = props;
   const costData = contractGasData[type];
+  const currentDtStr = new Date().toLocaleString("en-UK", { timeZoneName: "short", month: "long", day: "numeric", year: "numeric" });
   const rows = costData.map((record, idx) => (
     <tr key={idx}>
       <td>{record.name}</td>
@@ -162,7 +163,7 @@ export const PriceTable = (props) => {
     <div>
       <p>
         Estimations based on the current gas <em>average</em> at <StyledTag>{gwei / 10.0} gwei</StyledTag> and ETH price
-        at USD <StyledFiatTag>{price}</StyledFiatTag>.
+        at USD <StyledFiatTag>{price}</StyledFiatTag> as at {currentDtStr}.
       </p>
       <table>
         <thead>

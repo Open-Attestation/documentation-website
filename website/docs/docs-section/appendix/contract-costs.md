@@ -31,20 +31,24 @@ const contractGasData = {
     {
       name: "Document Store Deployment",
       gas: 1040472,
+      remarks: "One-time deployment. Applicable to DID if require revocation."
     },
     {
       name: "Issuance of Document",
       gas: 44956,
+      remarks: "Not applicable to DID."
     },
     {
       name: "Revoke Document",
       gas: 45052,
+      remarks: "Applicable to DID if require revocation."
     },
   ],
   transferable: [
     {
       name: "Token Registry Deployment",
       gas: 3714024,
+      remarks: "One-time deployment"
     },
     {
       name: "Issuance of Document",
@@ -157,6 +161,7 @@ export const PriceTable = (props) => {
         <GasTag>{record.gas}</GasTag>
       </td>
       <td>{priceFactor === 0 ? <em>Calculating...</em> : <FiatTag>{record.gas * priceFactor}</FiatTag>}</td>
+      <td>{record.remarks || "-"}</td>
     </tr>
   ));
   return (
@@ -171,6 +176,7 @@ export const PriceTable = (props) => {
             <th>Action</th>
             <th>Estimated Gas Required</th>
             <th>Estimated Fiat (USD)</th>
+            <th>Remarks</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>

@@ -399,30 +399,6 @@ rm ./examples/sample-key
 open-attestation deploy document-store "My Name" --network ropsten --key 0000000000000000000000000000000000000000000000000000000000000003
 ```
 
-#### List of features with the options available
-
-|                                   | Private Key | Wallet | Aws Kms |
-| --------------------------------- | ----------- | ------ | ------- |
-| Create config                     | ❎          | ✔️     | ❎      |
-| Deploy document store             | ✔           | ✔      | ✔       |
-| Deploy title escrow               | ✔           | ✔      | ✔       |
-| Deploy title escrow creator       | ✔           | ✔      | ✔       |
-| Deploy token registry             | ✔           | ✔      | ✔       |
-| Dns txt create                    | ❎          | ❎     | ❎      |
-| Dns txt get                       | ❎          | ❎     | ❎      |
-| Document store issue              | ✔           | ✔      | ✔       |
-| Document store revoke             | ✔           | ✔      | ✔       |
-| Document store transfer ownership | ✔           | ✔      | ✔       |
-| Token registry issue              | ✔           | ✔      | ✔       |
-| Token registry mint               | ✔           | ✔      | ✔       |
-| Transaction cancel                | ✔           | ✔      | ✔       |
-| Wallet create                     | ❎          | ❎     | ❎      |
-| Wallet decrypt                    | ❎          | ❎     | ❎      |
-| Wallet encrypt                    | ✔           | ❎     | ❎      |
-| Filter (obfuscate) document       | ❎          | ❎     | ❎      |
-| Sign document                     | ✔           | ❎     | ❎      |
-| Verify document                   | ❎          | ❎     | ❎      |
-
 ### Configuration file
 
 This command will generate a config file with sandbox DNS, document store and token registry.
@@ -587,6 +563,37 @@ open-attestation title-escrow accept-surrendered --token-registry 0x4933e30eF8A0
 
 ✔  success   Surrendered transferable record with hash 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990 has been accepted.
 ```
+
+#### List of features with the options available
+
+|                                            | Private Key | Wallet | Aws Kms |
+| ------------------------------------------ | ----------- | ------ | ------- |
+| Create config                              | ❎          | ✔️     | ❎      |
+| Deploy document store                      | ✔           | ✔      | ✔       |
+| Deploy title escrow                        | ✔           | ✔      | ✔       |
+| Deploy title escrow creator                | ✔           | ✔      | ✔       |
+| Deploy token registry                      | ✔           | ✔      | ✔       |
+| Dns txt create                             | ❎          | ❎     | ❎      |
+| Dns txt get                                | ❎          | ❎     | ❎      |
+| Document store issue                       | ✔           | ✔      | ✔       |
+| Document store revoke                      | ✔           | ✔      | ✔       |
+| Document store transfer ownership          | ✔           | ✔      | ✔       |
+| Token registry issue                       | ✔           | ✔      | ✔       |
+| Token registry mint                        | ✔           | ✔      | ✔       |
+| Transaction cancel                         | ✔           | ✔      | ✔       |
+| Wallet create                              | ❎          | ❎     | ❎      |
+| Wallet decrypt                             | ❎          | ❎     | ❎      |
+| Wallet encrypt                             | ✔           | ❎     | ❎      |
+| Filter (obfuscate) document                | ❎          | ❎     | ❎      |
+| Sign document                              | ✔           | ❎     | ❎      |
+| Verify document                            | ❎          | ❎     | ❎      |
+| Change holder (Title Escrow)               | ✔           | ✔      | ✔       |
+| Nominate change of owner (Title Escrow)    | ✔           | ✔      | ✔       |
+| Endorse transfer to owner (Title Escrow)   | ✔           | ✔      | ✔       |
+| Endorse change of owner (Title Escrow)     | ✔           | ✔      | ✔       |
+| Surrender document (Title Escrow)          | ✔           | ✔      | ✔       |
+| Reject surrendered document (Title Escrow) | ✔           | ✔      | ✔       |
+| Accept surrendered document (Title Escrow) | ✔           | ✔      | ✔       |
 
 ## Help
 

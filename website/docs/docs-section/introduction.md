@@ -12,7 +12,7 @@ A verifiable document (or verifiable credential) is a tamper-evident document th
 
 ## Transferable Records
 
-Transferable Records are documents which extends on Verifiable Documents to allow a document to have an owner. These records references properties laid out in the [UNCITRAL Model Law on Electronic Transferable Records](https://www.uncitral.org/pdf/english/texts/electcom/MLETR_ebook.pdf)
+Transferable Records are documents which extends on Verifiable Documents to allow a document to have an owner. These records references properties laid out in the [UNCITRAL Model Law on Electronic Transferable Records](https://uncitral.un.org/sites/uncitral.un.org/files/media-documents/uncitral/en/mletr_ebook_e.pdf)
 
 This allow Transferable Records to be used for documents like:
 

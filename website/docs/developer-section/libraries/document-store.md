@@ -34,16 +34,6 @@ import { connect } from "@govtechsg/document-store";
 const documentStore = await connect("0x4077534e82c97be03a07fb10f5c853d2bc7161fb", providerOrSigner);
 ```
 
-### Deploy new document store (With minimal proxy)
-
-_(TBD - Not available yet)_
-
-```ts
-import { deployMinimal } from "@govtechsg/document-store";
-
-deployMinimal("My Document Store", signer).then(console.log);
-```
-
 ### Interact with document store
 
 ```ts

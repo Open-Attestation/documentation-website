@@ -12,3 +12,6 @@ Documentations to the repositories are listed below;
 - [Open Attestation (CLI)](/docs/developer-section/libraries/open-attestation-cli) is the command line interface tool that allows you to create and verify open attestation documents as well as issuing these documents to the blockchain.
 - [Open Attestation (Encryption)](/docs/developer-section/libraries/open-attestation-encryption) assists you to share and store your OA documents in a secure way.
 - [Open Attestation (Verify)](/docs/developer-section/libraries/open-attestation-verify) helps you to verify that documents are valid OA documents.
+- [Decentralised Renderer](/docs/developer-section/libraries/decentralised-renderer) allows recipient of OA documents to view their document in a human readable format.
+- [Document Store](/docs/developer-section/libraries/document-store) contains smart contracts that allow verifiable documents to be published to, and retrieved from the blockchain.
+- [Token Registry](/docs/developer-section/libraries/token-registry) contains smart contracts that allow transferable records to be published to, and retrieved from the blockchain.

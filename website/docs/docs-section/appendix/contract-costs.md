@@ -31,20 +31,24 @@ const contractGasData = {
     {
       name: "Document Store Deployment",
       gas: 1040472,
+      remarks: "One-time deployment. Applicable to DID if require revocation."
     },
     {
       name: "Issuance of Document",
       gas: 44956,
+      remarks: "Issuance can be in batches. Not applicable to DID."
     },
     {
       name: "Revoke Document",
       gas: 45052,
+      remarks: "Applicable to DID if require revocation."
     },
   ],
   transferable: [
     {
       name: "Token Registry Deployment",
       gas: 3714024,
+      remarks: "One-time deployment"
     },
     {
       name: "Issuance of Document",
@@ -149,6 +153,7 @@ export const PriceTable = (props) => {
   const priceFactor = (gwei / 10.0) * 0.000000001 * price;
   const { type } = props;
   const costData = contractGasData[type];
+  const currentDtStr = new Date().toLocaleString("en-UK", { timeZoneName: "short" });
   const rows = costData.map((record, idx) => (
     <tr key={idx}>
       <td>{record.name}</td>
@@ -156,13 +161,14 @@ export const PriceTable = (props) => {
         <GasTag>{record.gas}</GasTag>
       </td>
       <td>{priceFactor === 0 ? <em>Calculating...</em> : <FiatTag>{record.gas * priceFactor}</FiatTag>}</td>
+      <td>{record.remarks || "-"}</td>
     </tr>
   ));
   return (
     <div>
       <p>
         Estimations based on the current gas <em>average</em> at <StyledTag>{gwei / 10.0} gwei</StyledTag> and ETH price
-        at USD <StyledFiatTag>{price}</StyledFiatTag>.
+        at USD <StyledFiatTag>{price}</StyledFiatTag> as at {currentDtStr}.
       </p>
       <table>
         <thead>
@@ -170,6 +176,7 @@ export const PriceTable = (props) => {
             <th>Action</th>
             <th>Estimated Gas Required</th>
             <th>Estimated Fiat (USD)</th>
+            <th>Remarks</th>
           </tr>
         </thead>
         <tbody>{rows}</tbody>

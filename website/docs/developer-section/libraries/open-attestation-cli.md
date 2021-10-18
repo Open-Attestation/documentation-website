@@ -36,6 +36,40 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 
 ## Usage
 
+#### List of features with the options available
+
+|                                            | Private Key | Wallet | Aws Kms |
+| ------------------------------------------ | ----------- | ------ | ------- |
+| Create config                              | ❎          | ✔️     | ❎      |
+| Deploy document store                      | ✔           | ✔      | ✔       |
+| Deploy title escrow                        | ✔           | ✔      | ✔       |
+| Deploy title escrow creator                | ✔           | ✔      | ✔       |
+| Deploy token registry                      | ✔           | ✔      | ✔       |
+| Dns txt create                             | ❎          | ❎     | ❎      |
+| Dns txt get                                | ❎          | ❎     | ❎      |
+| Document store issue                       | ✔           | ✔      | ✔       |
+| Document store revoke                      | ✔           | ✔      | ✔       |
+| Document store transfer ownership          | ✔           | ✔      | ✔       |
+| Token registry issue                       | ✔           | ✔      | ✔       |
+| Token registry mint                        | ✔           | ✔      | ✔       |
+| Transaction cancel                         | ✔           | ✔      | ✔       |
+| Wallet create                              | ❎          | ❎     | ❎      |
+| Wallet decrypt                             | ❎          | ❎     | ❎      |
+| Wallet encrypt                             | ✔           | ❎     | ❎      |
+| Filter (obfuscate) document                | ❎          | ❎     | ❎      |
+| Sign document                              | ✔           | ❎     | ❎      |
+| Encrypt document                           | ❎          | ❎     | ❎      |
+| Decrypt document                           | ❎          | ❎     | ❎      |
+| Wrap document                              | ❎          | ❎     | ❎      |
+| Verify document                            | ❎          | ❎     | ❎      |
+| Change holder (Title Escrow)               | ✔           | ✔      | ✔       |
+| Nominate change of owner (Title Escrow)    | ✔           | ✔      | ✔       |
+| Endorse transfer to owner (Title Escrow)   | ✔           | ✔      | ✔       |
+| Endorse change of owner (Title Escrow)     | ✔           | ✔      | ✔       |
+| Surrender document (Title Escrow)          | ✔           | ✔      | ✔       |
+| Reject surrendered document (Title Escrow) | ✔           | ✔      | ✔       |
+| Accept surrendered document (Title Escrow) | ✔           | ✔      | ✔       |
+
 ### Wrapping documents
 
 This command process all documents in the input directory. It will add the issuance proofs to the individual documents. Additionally, you'll get the Batch Document Root (merkleRoot) value. Thereafter, you can issue all the documents in a single batch with the merkleRoot later.
@@ -119,9 +153,13 @@ open-attestation wrap ./examples/raw-documents/ ./examples/wrapped-documents/ --
 open-attestation wrap ./examples/raw-documents/ ./examples/wrapped-documents/ --oav3
 ```
 
+:::note
+For transferable records, you should wrap them individually as each of them would be minted to a unique title escrow that represents the beneficiary and holder entities of the document. For more information about title escrow, refer [here](/docs/integrator-section/transferable-record/title-escrow).
+:::
+
 ### Document privacy filter
 
-This allows document holders to generate valid documents which hides certain evidences. Useful for hiding grades lol.
+This allows document holders to generate valid documents which obfuscates certain fields. For example, sensitive information that you wish not to disclose.
 
 ```bash
 open-attestation filter <inputDocumentPath> <outputDocumentPath> [filters...]
@@ -563,37 +601,6 @@ open-attestation title-escrow accept-surrendered --token-registry 0x4933e30eF8A0
 
 ✔  success   Surrendered transferable record with hash 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990 has been accepted.
 ```
-
-#### List of features with the options available
-
-|                                            | Private Key | Wallet | Aws Kms |
-| ------------------------------------------ | ----------- | ------ | ------- |
-| Create config                              | ❎          | ✔️     | ❎      |
-| Deploy document store                      | ✔           | ✔      | ✔       |
-| Deploy title escrow                        | ✔           | ✔      | ✔       |
-| Deploy title escrow creator                | ✔           | ✔      | ✔       |
-| Deploy token registry                      | ✔           | ✔      | ✔       |
-| Dns txt create                             | ❎          | ❎     | ❎      |
-| Dns txt get                                | ❎          | ❎     | ❎      |
-| Document store issue                       | ✔           | ✔      | ✔       |
-| Document store revoke                      | ✔           | ✔      | ✔       |
-| Document store transfer ownership          | ✔           | ✔      | ✔       |
-| Token registry issue                       | ✔           | ✔      | ✔       |
-| Token registry mint                        | ✔           | ✔      | ✔       |
-| Transaction cancel                         | ✔           | ✔      | ✔       |
-| Wallet create                              | ❎          | ❎     | ❎      |
-| Wallet decrypt                             | ❎          | ❎     | ❎      |
-| Wallet encrypt                             | ✔           | ❎     | ❎      |
-| Filter (obfuscate) document                | ❎          | ❎     | ❎      |
-| Sign document                              | ✔           | ❎     | ❎      |
-| Verify document                            | ❎          | ❎     | ❎      |
-| Change holder (Title Escrow)               | ✔           | ✔      | ✔       |
-| Nominate change of owner (Title Escrow)    | ✔           | ✔      | ✔       |
-| Endorse transfer to owner (Title Escrow)   | ✔           | ✔      | ✔       |
-| Endorse change of owner (Title Escrow)     | ✔           | ✔      | ✔       |
-| Surrender document (Title Escrow)          | ✔           | ✔      | ✔       |
-| Reject surrendered document (Title Escrow) | ✔           | ✔      | ✔       |
-| Accept surrendered document (Title Escrow) | ✔           | ✔      | ✔       |
 
 ## Help
 

@@ -8,8 +8,8 @@ This guide will help you to issue a hash using one of the available web applicat
 
 Currently, there exists 2 web application:
 
-- [TradeTrust Admin Portal](https://admin.tradetrust.io/)
 - [OpenCerts Admin Portal](https://admin.opencerts.io/)
+- [TradeTrust Admin Portal](https://admin.tradetrust.io/)
 
 ## Prerequisites
 
@@ -20,9 +20,9 @@ Currently, there exists 2 web application:
 
 ## Issuing the document
 
-![Issuing Interface](/docs/appendix/issuing-webapp/issuing.png)
+![Issuing Interface](/docs/integrator-section/webapp-tutorial/issuing-webapp/issuing.png)
 
-After connecting Metamask, you will be logged into the web application. First, you need to enter the `document store smart contract address` from the [previous guide](/docs/integrator-section/verifiable-document/ethereum/document-store/) into the "Store address" field. Then, select "Issue Document Batch" on the navigation on the left.
+After connecting Metamask, you will be logged into the web application. First, you need to enter the `document store smart contract address` from the [previous guide](/docs/integrator-section/webapp-tutorial/deploy-document-store-webapp/) into the "Store address" field. Then, select "Issue Document Batch" on the navigation on the left.
 
 Paste the value of `merkleRoot` from the document into the field and click on "Issue". You will need to confirm your transaction on Metamask.
 
@@ -42,6 +42,6 @@ Example:
 
 For this document, `76a934e2ce9db63cb5e54bed8ac965a8937ee9e823b894ccf6569141187a475c` is the value you need to issue.
 
-![Issuance Success](/docs/appendix/issuing-webapp/success.png)
+![Issuance Success](/docs/integrator-section/webapp-tutorial/issuing-webapp/success.png)
 
 Once the merkle root has been issued, you will see the success message "Batch has been issued".

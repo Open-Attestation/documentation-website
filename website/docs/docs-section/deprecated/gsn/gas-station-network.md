@@ -12,7 +12,7 @@ This guide targets developers who have Ethereum and wish to sponsor their users 
 
 ## How does it work?
 
-![GSN Flow](/docs/advanced/gas-station-network/gsn_flow_full_layered.jpg)
+![GSN Flow](/docs/docs-section/deprecated/gas-station-network/gsn_flow_full_layered.jpg)
 
 _Source: [Open GSN](https://docs.opengsn.org/learn/index.html)_
 

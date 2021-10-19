@@ -53,7 +53,7 @@ npm run storybook
 
 ### Development environment
 
-![Default Story Book View](/docs/advanced/custom-renderer/default-storybook.png)
+![Default Story Book View](/docs/developer-section/quickstart/custom-renderer/default-storybook.png)
 
 After running the Storybook, you should be able to see the templates samples provided at `http://localhost:6006/`.
 
@@ -205,7 +205,7 @@ import { cocTemplateCertificate } from "../samples/customTemplateSample";
 
 We can now [start storybook](#run-development-preview) and make sure our component looks like expected.
 
-![Completed Story Book View](/docs/advanced/custom-renderer/completed-storybook.png)
+![Completed Story Book View](/docs/developer-section/quickstart/custom-renderer/completed-storybook.png)
 
 ### Certificate of Completion template configuration
 
@@ -262,15 +262,15 @@ Create a new repository in GitHub and push the code to the new repository. For a
 
 Once you have your code on GitHub, you may build and deploy the site onto [Netlify](https://netlify.com).
 
-![Create a new site on netlify](/docs/advanced/custom-renderer/netlify-new.png)
+![Create a new site on netlify](/docs/developer-section/quickstart/custom-renderer/netlify-new.png)
 
 Select "New Site From Git" and then "GitHub".
 
-![Build settings](/docs/advanced/custom-renderer/netlify-build.png)
+![Build settings](/docs/developer-section/quickstart/custom-renderer/netlify-build.png)
 
 On the build page, enter `npm run build` as the "Build command" and `dist` as the "Publish Directory" and click on "Deploy Site".
 
-![Sample Deployed URL](/docs/advanced/custom-renderer/netlify-deployed.png)
+![Sample Deployed URL](/docs/developer-section/quickstart/custom-renderer/netlify-deployed.png)
 
 Once the site has been deployed, you will obtain the URL to the document renderer site. In the above example, the URL is `https://frosty-joliot-c02c3d.netlify.com/`.
 

@@ -10,7 +10,7 @@ OA provides its own mobile application to view, store and share Verifiable Docum
 
 For the moment, the application is not available on Apple store or Android store. You will need to run it through [Expo](https://expo.io/).
 
-1. Download Expo Client app [![Expo Client on apple store](/docs/appendix/identity-wallet/apple-store.svg)](https://apps.apple.com/app/expo-client/id982107779 "Open expo on apple store") [![Expo Client on apple store](/docs/appendix/identity-wallet/android-store.svg "Open expo on android store")](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en)
+1. Download Expo Client app [![Expo Client on apple store](/docs/docs-section/deprecated/identity-wallet/apple-store.svg)](https://apps.apple.com/app/expo-client/id982107779 "Open expo on apple store") [![Expo Client on apple store](/docs/docs-section/deprecated/identity-wallet/android-store.svg "Open expo on android store")](https://play.google.com/store/apps/details?id=host.exp.exponent&hl=en)
 1. Open Expo and download Identity Wallet app by scanning the following QR Code
 
 <img src="/docs/appendix/identity-wallet/identity-wallet-qr-code.png" alt="identity wallet qr code" title="scan the qr code with expo" width="200"/>

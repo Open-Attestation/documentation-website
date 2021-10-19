@@ -45,6 +45,6 @@ Congratulation, you have successfully created your first transferable record.
 
 To view your transferable record, simply head over the https://dev.tradetrust.io/ (or https://tradetrust.io/ if you've issued to the Ethereum mainnet). You will be able to drop your transferable record (found in `wrapped-documents` folder) into the dropzone and see something similar to the following:
 
-![Completed Transferable Record](/docs/transferable-record/issuing-transferable-record/completed.png)
+![Completed Transferable Record](/docs/integrator-section/transferable-record/issuing-transferable-record/completed.png)
 
 Notice you are able to click on `Connect Wallet` when logged in to either the beneficiary or holder to gain access to actions to change the ownership of the transferable record.

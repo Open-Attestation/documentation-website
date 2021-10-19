@@ -73,7 +73,7 @@ For more information on switching to production mode, refer to the [Additional N
 
 ### Testing the DNS Record
 
-![Google DNS to Test](/docs/advanced/configuring-dns/google-dns.png)
+![Google DNS to Test](/docs/developer-section/quickstart/configuring-dns/google-dns.png)
 
 > The DNS propagation should take a few minutes, though in some cases you may need to wait up to 24 hours. Continue with the other parts of the guide while waiting for DNS to propagate.
 

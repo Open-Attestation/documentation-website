@@ -25,7 +25,7 @@ With these knowledge you will be able to create transferable records according t
 
 ## Overview of Components
 
-![Overview of Components](/docs/transferable-record/overview/overview.png)
+![Overview of Components](/docs/integrator-section/transferable-record/overview/overview.png)
 
 ### Token Registry Smart Contract
 

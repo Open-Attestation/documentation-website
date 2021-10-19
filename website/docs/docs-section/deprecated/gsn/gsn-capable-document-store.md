@@ -19,7 +19,7 @@ This guide is for developers who have Ethereum and want to set up a document sto
 
 You will also need the corresponding address of the [Trust Forwarder](https://docs.opengsn.org/learn/index.html#forwarder) for your network provided by GSN. You can find the most updated list [here](https://docs.opengsn.org/gsn-provider/networks.html) or the highlighted below.
 
-![GSN Networks](/docs/advanced/gas-station-network/gsn_network_address.png)
+![GSN Networks](/docs/docs-section/deprecated/gas-station-network/gsn_network_address.png)
 
 To deploy a GsnCapableDocumentStore you can do so by using the following command. You may replace the `<document-store-name>` with a suitable name (the name does not matter).
 

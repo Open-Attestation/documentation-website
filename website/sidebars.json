@@ -16,10 +16,7 @@
     {
       "type": "category",
       "label": "Appendix",
-      "items": [
-        "docs-section/appendix/glossary",
-        "docs-section/appendix/contract-costs"
-      ]
+      "items": ["docs-section/appendix/glossary", "docs-section/appendix/contract-costs"]
     },
     "docs-section/faq",
     {
@@ -148,7 +145,16 @@
         "developer-section/libraries/open-attestation-cli",
         "developer-section/libraries/open-attestation-encryption",
         "developer-section/libraries/open-attestation-verify",
-        "developer-section/libraries/decentralised-renderer",
+        {
+          "type": "category",
+          "label": "Decentralized Renderer",
+          "items": [
+            "developer-section/libraries/decentralized-renderer/decentralized-renderer-react-components",
+            "developer-section/libraries/decentralized-renderer/decentralized-renderer-react-template",
+            "developer-section/libraries/decentralized-renderer/decentralized-renderer-svelte-template",
+            "developer-section/libraries/decentralized-renderer/decentralized-renderer-vue-template"
+          ]
+        },
         "developer-section/libraries/document-store",
         "developer-section/libraries/token-registry"
       ]

@@ -4,7 +4,9 @@ title: Creating Custom Context
 sidebar_label: Creating Custom Context
 ---
 
-For v3 documents in Open Attestation, a major change consists of a `@context` property introduced into the document. It allows for short-form aliases to be mapped to URIs required by verifiable credentials and verifiable presentations.
+For v3 documents in Open Attestation, a major change consists of a `@context` property introduced into the document. Refer [here](/docs/docs-section/roadmap/v3/major-changes#context) for more information.
+
+In this guide, we will look at how we can create a custom context.
 
 ## Document (Invoice)
 
@@ -34,7 +36,6 @@ We will use the example Invoice shown above as a reference throughout the rest o
       "tax": "xsd:string",
       "taxTotal": "xsd:string",
       "total": "xsd:string",
-
       "billFrom": {
         "@id": "https://schemata.openattestation.com/vocab/#billFrom",
         "@context": {
@@ -45,8 +46,7 @@ We will use the example Invoice shown above as a reference throughout the rest o
           "phoneNumber": "xsd:string"
         }
       }
-
-      // rest of the contexts of different fields
+      // other properties
     }
   ]
 }
@@ -103,10 +103,10 @@ The `xsd` in `xsd:string` is used to represent data types in these documents.
 
 The `.json` above shows the structure of the `Invoice`'s configuration file. Apart from the rest of the information such as `schema`, that contains custom fields to be filled in during the creation of the document, the `@context` could also be seen to be included.
 
-The items inside `@context` contain the source of what are the different fields required in the document. It would be used to cross check against the items inside `schema` to ensure that the document created using this configuration file does not contain anything more or less than what has already been defined.
+The items inside `@context` contain the types of what are the different fields required in the document. It would be used to cross check against the items that have been filled in inside `schema` to ensure that the document created using this configuration file does not contain anything more or less than what has already been defined in `@context`.
 
-The [URL link](https://schemata.openattestation.com/io/tradetrust/Invoice/1.0/invoice-context.json) that the context of `Invoice` resides in has been included in the `@context` field. Individual fields in `schema` would be validated against the `@context` created for `Invoice`.
+The [URL link](https://schemata.openattestation.com/io/tradetrust/Invoice/1.0/invoice-context.json) that the context of `Invoice` resides in has been included in the `@context` field.
 
 :::note
-When the items in `schema` do not match what has already been defined in `@context`, an error would occur when trying to create a document.
+When there are additional items in `schema` which is filled up but does not exist in what has already been defined in `@context`, an error would occur when trying to create a document.
 :::

@@ -65,6 +65,56 @@ This `.json` could then be published in a place that could be referenced using a
 The `xsd` in `xsd:string` is used to represent data types in these documents.
 :::
 
+## Raw Document (Invoice)
+
+```json
+{
+  "version": "https://schema.openattestation.com/3.0/schema.json",
+  "@context": [
+    "https://www.w3.org/2018/credentials/v1",
+    "https://schemata.openattestation.com/io/tradetrust/invoice/1.0/invoice-context.json",
+    "https://schemata.openattestation.com/com/openattestation/1.0/OpenAttestation.v3.json"
+  ],
+  "type": ["VerifiableCredential", "OpenAttestationCredential"],
+  "issuanceDate": "2010-01-01T19:23:24Z",
+  "issuer": { ... },
+  "openAttestationMetadata": { ... },
+  "credentialSubject": {
+    "id": "id:example",
+    "date": "2018-02-21",
+    "customerId": "564",
+    "terms": "Due Upon Receipt",
+    "billFrom": {
+      "name": "ABC Company",
+      "streetAddress": "Level 1, Industry Offices",
+      "city": "Singapore",
+      "postalCode": "123456",
+      "phoneNumber": "60305029"
+    },
+    "billTo": {
+      "company": {
+        "name": "DEF Company",
+        "streetAddress": "Level 2, Industry Offices",
+        "city": "Singapore",
+        "postalCode": "612345",
+        "phoneNumber": "61204028"
+      },
+      "name": "James Lee",
+      "email": "def@company.com"
+    }
+    // other properties
+  }
+}
+```
+
+The `.json` above shows the structure of the `Invoice`'s raw document. The context created earlier, can be seen to be included in the `@context` field as a URL link.
+
+During the [wrapping](/docs/developer-section/libraries/open-attestation-cli#wrapping-documents) process, the document itself as well as the fields inside `credentialSubject` would be validated and cross checked against the contexts defined in `@context`.
+
+:::note
+When there are additional items in `credentialSubject` but do not exist in what has already been defined in `@context`, an error would occur when trying to wrap the document.
+:::
+
 ## Configuration File (Invoice)
 
 ```json
@@ -103,9 +153,7 @@ The `xsd` in `xsd:string` is used to represent data types in these documents.
 
 The `.json` above shows the structure of the `Invoice`'s configuration file. Apart from the rest of the information such as `schema`, that contains custom fields to be filled in during the creation of the document, the `@context` could also be seen to be included.
 
-The items inside `@context` contain the types of what are the different fields required in the document. It would be used to cross check against the items that have been filled in inside `schema` to ensure that the document created using this configuration file does not contain anything more or less than what has already been defined in `@context`.
-
-The [URL link](https://schemata.openattestation.com/io/tradetrust/Invoice/1.0/invoice-context.json) that the context of `Invoice` resides in has been included in the `@context` field.
+Similarly, the items inside `@context` contain the types of what are the different fields required in the document. It would be used to cross check against the items that have been filled in inside `schema` to ensure that the document created using this configuration file does not contain anything more than what has already been defined in `@context`.
 
 :::note
 When there are additional items in `schema` that are filled but do not exist in what has already been defined in `@context`, an error would occur when trying to create a document.

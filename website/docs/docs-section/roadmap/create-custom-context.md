@@ -108,5 +108,5 @@ The items inside `@context` contain the types of what are the different fields r
 The [URL link](https://schemata.openattestation.com/io/tradetrust/Invoice/1.0/invoice-context.json) that the context of `Invoice` resides in has been included in the `@context` field.
 
 :::note
-When there are additional items in `schema` which is filled up but does not exist in what has already been defined in `@context`, an error would occur when trying to create a document.
+When there are additional items in `schema` that are filled but do not exist in what has already been defined in `@context`, an error would occur when trying to create a document.
 :::

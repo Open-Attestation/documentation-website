@@ -29,21 +29,45 @@ We will use the example Invoice shown above as a reference throughout the rest o
     "https://www.w3.org/ns/odrl.jsonld",
     {
       "id": "@id",
-      "date": "xsd:string",
-      "customerId": "xsd:string",
-      "terms": "xsd:string",
-      "subtotal": "xsd:string",
-      "tax": "xsd:string",
-      "taxTotal": "xsd:string",
-      "total": "xsd:string",
+      "date": {
+        "@type": "xsd:string"
+      },
+      "customerId": {
+        "@type": "xsd:string"
+      },
+      "terms": {
+        "@type": "xsd:string"
+      },
+      "subtotal": {
+        "@type": "xsd:string"
+      },
+      "tax": {
+        "@type": "xsd:string"
+      },
+      "taxTotal": {
+        "@type": "xsd:string"
+      },
+      "total": {
+        "@type": "xsd:string"
+      },
       "billFrom": {
         "@id": "https://schemata.openattestation.com/vocab/#billFrom",
         "@context": {
-          "name": "xsd:string",
-          "streetAddress": "xsd:string",
-          "city": "xsd:string",
-          "postalCode": "xsd:string",
-          "phoneNumber": "xsd:string"
+          "name": {
+            "@type": "xsd:string"
+          },
+          "streetAddress": {
+            "@type": "xsd:string"
+          },
+          "city": {
+            "@type": "xsd:string"
+          },
+          "postalCode": {
+            "@type": "xsd:string"
+          },
+          "phoneNumber": {
+            "@type": "xsd:string"
+          }
         }
       }
       // other properties
@@ -59,7 +83,7 @@ The object above in `.json` format, shows how a `@context` object looks like. Fo
 - `customerId` : ID of the customer in `string` format
 - ...
 
-This `.json` could then be published in a place that could be referenced using a URL link. In this guide, the it has been published to `https://schemata.openattestation.com/io/tradetrust/Invoice/1.0/invoice-context.json`.
+This `.json` could then be published in a place that could be referenced using a URL link. In this guide, the URL link for the context created above would be represented with `https://schemata.openattestation.com/io/tradetrust/invoice/1.0/invoice-context.json`.
 
 :::note
 The `xsd` in `xsd:string` is used to represent data types in these documents.
@@ -112,7 +136,7 @@ The `.json` above shows the structure of the `Invoice`'s raw document. The conte
 During the [wrapping](/docs/developer-section/libraries/open-attestation-cli#wrapping-documents) process, the document itself as well as the fields inside `credentialSubject` would be validated and cross checked against the contexts defined in `@context`.
 
 :::note
-When there are additional items in `credentialSubject` but do not exist in what has already been defined in `@context`, an error would occur when trying to wrap the document.
+It is not necessary that everything in `@context` has to appear in `credentialSubject`. But when there are additional items in `credentialSubject` that do not exist in what has already been defined in `@context`, an error would occur when trying to wrap the document.
 :::
 
 ## Configuration File (Invoice)
@@ -132,7 +156,7 @@ When there are additional items in `credentialSubject` but do not exist in what 
         "version": "https://schema.openattestation.com/3.0/schema.json",
         "@context": [
           "https://www.w3.org/2018/credentials/v1",
-          "https://schemata.openattestation.com/io/tradetrust/Invoice/1.0/invoice-context.json",
+          "https://schemata.openattestation.com/io/tradetrust/invoice/1.0/invoice-context.json",
           "https://schemata.openattestation.com/com/openattestation/1.0/OpenAttestation.v3.json"
         ],
         "type": ["VerifiableCredential", "OpenAttestationCredential"],
@@ -156,5 +180,5 @@ The `.json` above shows the structure of the `Invoice`'s configuration file. Apa
 Similarly, the items inside `@context` contain the types of what are the different fields required in the document. It would be used to cross check against the items that have been filled in inside `schema` to ensure that the document created using this configuration file does not contain anything more than what has already been defined in `@context`.
 
 :::note
-When there are additional items in `schema` that are filled but do not exist in what has already been defined in `@context`, an error would occur when trying to create a document.
+It is not necessary that everything in `@context` has to appear in `schema`. But when there are additional items in `schema` that do not exist in what has already been defined in `@context`, an error would occur when trying to create a document.
 :::

@@ -18,7 +18,7 @@ The document shown above would be used as an example for subsequent sections whe
 
 ```json
 {
-  "$id": "https://schemata.openattestation.com/io/tradetrust/invoice/1.0/schema.json",
+  "$id": "https://example.com/invoice/1.0/schema.json",
   "$schema": "http://json-schema.org/draft-07/schema#",
   "type": "object",
   "title": "Description of data expected for invoices",
@@ -68,13 +68,14 @@ The document shown above would be used as an example for subsequent sections whe
         }
       }
     }
+    // other properties
   }
 }
 ```
 
 A custom schema that could be created for the [Invoice](#document-invoice) document can be seen above.
 
-- `$id`: ID of the schema. (required)
+- `$id`: URI location of where the schema resides. (required)
 - `$schema`: JSON Schema vocabulary. (optional)
 - `type`: Data type of schema. (optional)
 - `title`: Description of what the schema represents. (optional)

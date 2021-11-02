@@ -175,7 +175,7 @@ It is not necessary that everything in `@context` has to appear in `credentialSu
 }
 ```
 
-The `.json` above shows the structure of the `Invoice`'s configuration file. Apart from the rest of the information such as `schema`, that contains custom fields to be filled in during the creation of the document, the `@context` could also be seen to be included.
+The `.json` above shows the structure of the `Invoice`'s configuration file. Apart from the rest of the information such as `schema`, that contains custom fields to be filled in during the creation of the document, the `@context` created for the `Invoice` earlier, could also be seen to be included.
 
 Similarly, the items inside `@context` contain the types of what are the different fields required in the document. It would be used to cross check against the items that have been filled in inside `schema` to ensure that the document created using this configuration file does not contain anything more than what has already been defined in `@context`.
 

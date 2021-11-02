@@ -12,7 +12,7 @@ In this guide, we will look at how to create a custom schema.
 
 ![Invoice](/docs/docs-section/roadmap/invoice-sample.png)
 
-The document shown above would be used as an example for subsequent sections when an creating OA document.
+The document shown above would be used as an example for subsequent sections when creating an OA document.
 
 ## JSON Schema
 

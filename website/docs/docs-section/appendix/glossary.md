@@ -12,15 +12,15 @@ Ether is the cryptocurrency used in the Ethereum blockchain network. Ethers are 
 
 ### Sign
 
-Placeholder
+The process of generating a digital signature with the use of various signing algorithms.
 
 ### Signature
 
-Placeholder
+Digital signature generated from signing and is primarily used to verify the authenticity of transactions or documents issued to the blockchain.
 
 ### Smart contract
 
-Placeholder
+[Ethereum Smart Contract](https://ethereum.org/en/developers/docs/smart-contracts/#:~:text=A%20%22smart%20contract%22%20is%20simply,address%20on%20the%20Ethereum%20blockchain.&text=Smart%20contracts%20can%20define%20rules,enforce%20them%20via%20the%20code.)
 
 ### Wallet
 

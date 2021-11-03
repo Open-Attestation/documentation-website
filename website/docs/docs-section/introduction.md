@@ -8,7 +8,7 @@ OpenAttestation is an open source framework for verifiable document and transfer
 
 ## Verifiable Document
 
-A verifiable document (or verifiable credential) is a tamper-evident document that cryptographically proves who issued it. They are the electronic equivalent of the physical documents that we all possess today, such as: plastic cards, passports, driving licences, qualifications and awards, etc
+Verifiable Document (or verifiable credential) is a tamper-evident document that cryptographically proves who issued it. They are the electronic equivalent of the physical documents that we all possess today, such as: plastic cards, passports, driving licences, qualifications and awards, etc
 
 ## Transferable Records
 

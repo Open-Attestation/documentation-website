@@ -3,26 +3,11 @@ title: Overview
 sidebar_label: Overview
 ---
 
-## Overview of Components
+Verifiable documents form the core of the OpenAttestation (OA) framework. In this quick start guide, you will be deploying your first verifiable document.
 
-![Overview of Components](/docs/integrator-section/verifiable-document/ethereum/overview/overview.png)
+## Goal
 
-### Document Store Smart Contract
+By the end of this guide, you would be able to create your 📜 Certificate of Completion that is valid on any compatible OA Viewer. The following guides are available:
 
-The document store is a smart contract deployed onto the Ethereum blockchain. When an OA document is issued, a proof of the issuance is stored onto the Ethereum blockchain through the smart contract. The smart contract is used to provide a globally consistent record for anyone to query a given OA document's issuance status.
-
-### DNS Records
-
-A domain is required to issue an OA document. A DNS record must be inserted to the DNS to assert the identity of the OA document creator.
-
-### Verifiable Document File
-
-A Verifiable Document File is also known as the OA document. Machine-readable data of the OA document is stored in a `.json` file. In addition to the data, these `.json` files also contain information such as:
-
-- claim of issuer's identity
-- document rendering information
-- document store smart contract
-
-### Decentralized Renderer
-
-The decentralized renderer gives the OA document a human-readable look. It is essentially a website which will take an OA document data as input and display the document in a web view. This allows anyone to style their document without submitting code change to another party.
+- Use OpenAttestation with [Ethereum Smart Contract](/docs/integrator-section/verifiable-document/ethereum/document-store-overview)
+- Use OpenAttestation with [DID](/docs/integrator-section/verifiable-document/did/create)

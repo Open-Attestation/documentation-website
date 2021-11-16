@@ -1,6 +1,9 @@
 {
   "docs": {
-    "Overview": ["getting-started", "faq"],
+    "Overview": [
+      "getting-started",
+      "faq"
+    ],
     "Verifiable Document": [
       "verifiable-document/overview",
       "verifiable-document/prerequisites",
@@ -28,7 +31,8 @@
           "verifiable-document/did/raw-document",
           "verifiable-document/did/wrapping-document",
           "verifiable-document/did/signing-document",
-          "verifiable-document/did/revoking-document"
+          "verifiable-document/did/revoking-document-ocsp",
+          "verifiable-document/did/revoking-document-document-store"
         ]
       },
       "verifiable-document/comparison"

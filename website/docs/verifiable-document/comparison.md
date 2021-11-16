@@ -39,7 +39,7 @@ For DID, it's the opposite, everything is private.
 
 Revocation is part of our Ethereum Smart Contracts.
 
-As of today, its possible to revoke a document if a document store has been declared in its revocation block. refer [here](/docs/verifiable-document/did/revoking-document) for the steps.
+As of today, its possible to revoke a document if a document store has been declared in its revocation block. You can revoke a document [using a document store](/docs/verifiable-document/did/revoking-document-document-store) or [with an OCSP](/docs/verifiable-document/did/revoking-document-ocsp).
 
 Note that if you do use revocation for `DID`, you still need to have at least 1 transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
 

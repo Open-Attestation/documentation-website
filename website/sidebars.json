@@ -93,6 +93,7 @@
                     "integrator-section/verifiable-document/did/raw-document",
                     "integrator-section/verifiable-document/did/wrapping-document",
                     "integrator-section/verifiable-document/did/signing-document",
+                    "integrator-section/verifiable-document/did/revoking-document-ocsp",
                     "integrator-section/verifiable-document/did/revoking-document"
                   ]
                 }

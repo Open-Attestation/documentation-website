@@ -122,8 +122,6 @@ If you want to dig more on ECDSA, you can read this guide from [Yos Riady](https
 
 ### Revocation
 
-It's possible to revoke a DID document if a document store has been declared in its revocation block. Refer [here](/docs/integrator-section/verifiable-document/did/revoking-document) for the steps.
-
 It's possible to revoke a DID document if a document store has been declared in its revocation block. You can revoke a document [using a document store](/docs/integrator-section/verifiable-document/did/revoking-document) or [with an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document-ocsp).
 
 Note that if you do use revocation for `DID`, you still need to have at least 1 transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.

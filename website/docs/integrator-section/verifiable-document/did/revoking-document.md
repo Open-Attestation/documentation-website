@@ -54,14 +54,9 @@ open-attestation document-store revoke --address <DOCUMENT_STORE_LOCATION> --has
 
 ## Misc questions:
 
-<<<<<<< HEAD
-Q: hey you [mentioned](/docs/verifiable-document/comparison#price) that if I use DID documents, I would not need to pay for transactions, but following this flow, I would still have to pay for at least 1 transaction (deploying a `documentStore`), what gives?
-=======
 Q: hey you [mentioned](/docs/docs-section/how-does-it-work/comparison#price) that if I use DID documents, I would not need to pay for transactions, but following this flow, I would still have to pay for at least 1 transaction (deploying a `documentStore`), what gives?
 
-> > > > > > > 43ba439 (fix: fix broken links)
-
-A: yes, you are right, for now this implementation will still need at least 1 transaction to the ethereum blockchain. We are working on this so please be patient and watch this space.
+A: yes, you are right, for now this implementation will still need at least 1 transaction to the ethereum blockchain. We are working on this so please be patient and watch this space.`
 
 Q: this might be a weird question but I did not issue any documents from the deployed `documentStore`, how am I able to revoke this document from said `documentStore` when in the first place, I did not even issue anything?
 

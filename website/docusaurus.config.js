@@ -32,7 +32,10 @@ const siteConfig = {
         src: "img/logos/oa.svg",
         srcDark: "img/logos/oa.svg",
       },
-      items: [{ to: "docs/getting-started", label: "Docs", position: "left" }],
+      items: [
+        { to: "docs/getting-started", label: "Docs", position: "left" },
+        { to: "blog", label: "Blog", position: "left" },
+      ],
     },
     footer: {
       logo: {

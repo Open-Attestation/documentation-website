@@ -81,7 +81,7 @@ Replace this with the domain where the TXT record has been inserted in the step 
 
 ## Wrapping the Document
 
-With `licence.json` saved, run the following command after the [CLI is installed](/docs/developer-section/libraries/open-attestation-cli):
+With `licence.json` saved, run the following command after the [CLI is installed](/docs/developer-section/libraries/remote-files/open-attestation-cli):
 
 ```sh
 open-attestation wrap license.json --of wrapped.json --oav3

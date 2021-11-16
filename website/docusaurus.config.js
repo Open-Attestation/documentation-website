@@ -23,6 +23,124 @@ const siteConfig = {
       },
     ],
   ],
+  plugins: [
+    [
+      "@crossid/docusaurus-remote-content",
+      {
+        type: "docs",
+        contents: [
+          {
+            file: "/developer-section/libraries/remote-files/open-attestation.md",
+            url: "https://raw.githubusercontent.com/Open-Attestation/open-attestation/master/README.md",
+            meta: {
+              id: "open-attestation",
+              title: "Open Attestation",
+              hide_title: true,
+              sidebar_label: "Open Attestation",
+            },
+          },
+          {
+            file: "/developer-section/libraries/remote-files/open-attestation-cli.md",
+            url: "https://raw.githubusercontent.com/Open-Attestation/open-attestation-cli/master/README.md",
+            meta: {
+              id: "open-attestation-cli",
+              title: "Open Attestation (CLI)",
+              hide_title: true,
+              sidebar_label: "Open Attestation (CLI)",
+            },
+          },
+          {
+            file: "/developer-section/libraries/remote-files/open-attestation-encryption.md",
+            url: "https://raw.githubusercontent.com/Open-Attestation/oa-encryption/master/README.md",
+            meta: {
+              id: "open-attestation-encryption",
+              title: "Open Attestation (Encryption)",
+              hide_title: true,
+              sidebar_label: "Open Attestation (Encryption)",
+            },
+          },
+          {
+            file: "/developer-section/libraries/remote-files/open-attestation-verify.md",
+            url: "https://raw.githubusercontent.com/Open-Attestation/oa-verify/master/README.md",
+            meta: {
+              id: "open-attestation-verify",
+              title: "Open Attestation (Verify)",
+              hide_title: true,
+              sidebar_label: "Open Attestation (Verify)",
+            },
+          },
+          {
+            file:
+              "/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-components.md",
+            url:
+              "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-components/master/README.md",
+            meta: {
+              id: "decentralized-renderer-react-components",
+              title: "React Components",
+              hide_title: true,
+              sidebar_label: "React Components",
+            },
+          },
+          {
+            file:
+              "/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-template.md",
+            url:
+              "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-template/master/README.md",
+            meta: {
+              id: "decentralized-renderer-react-template",
+              title: "React Template",
+              hide_title: true,
+              sidebar_label: "React Template",
+            },
+          },
+          {
+            file:
+              "/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-svelte-template.md",
+            url:
+              "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-svelte-template/master/README.md",
+            meta: {
+              id: "decentralized-renderer-svelte-template",
+              title: "Svelte Template",
+              hide_title: true,
+              sidebar_label: "Svelte Template",
+            },
+          },
+          {
+            file:
+              "/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-vue-template.md",
+            url:
+              "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-vue-template/master/README.md",
+            meta: {
+              id: "decentralized-renderer-vue-template",
+              title: "Vue Template",
+              hide_title: true,
+              sidebar_label: "Vue Template",
+            },
+          },
+          {
+            file: "/developer-section/libraries/remote-files/document-store.md",
+            url: "https://raw.githubusercontent.com/Open-Attestation/document-store/master/README.md",
+            meta: {
+              id: "document-store",
+              title: "Document Store",
+              hide_title: true,
+              sidebar_label: "Document Store",
+            },
+          },
+          {
+            file: "/developer-section/libraries/remote-files/token-registry.md",
+            url: "https://raw.githubusercontent.com/Open-Attestation/token-registry/master/README.md",
+            meta: {
+              id: "token-registry",
+              title: "Token Registry",
+              hide_title: true,
+              sidebar_label: "Token Registry",
+            },
+          },
+        ],
+      },
+    ],
+  ],
 
   themeConfig: {
     navbar: {

@@ -2,13 +2,16 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "docusaurus build",
+    "build": "npm run fetch-remote-docs && docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "fetch-remote-docs": "docusaurus fetch-remote-docs",
+    "clean-remote-docs": "docusaurus clean-remote-docs"
   },
   "dependencies": {
+    "@crossid/docusaurus-remote-content": "^0.1.5",
     "@docusaurus/core": "^2.0.0-alpha.66",
     "@docusaurus/preset-classic": "^2.0.0-alpha.66",
     "clsx": "^1.1.1",

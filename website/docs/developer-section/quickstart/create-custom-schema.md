@@ -4,7 +4,7 @@ title: Creating Custom Schema
 sidebar_label: Creating Custom Schema
 ---
 
-Every OA document follows a particular structure according to what the content of the file supposed to contain that makes it valid. To ensure that the document adheres to a specific structure, a customized schema could be created that caters to the document which could be used as a validation upon the [wrapping](/docs/developer-section/libraries/open-attestation-cli#wrapping-documents) process.
+Every OA document follows a particular structure according to what the content of the file supposed to contain that makes it valid. To ensure that the document adheres to a specific structure, a customized schema could be created that caters to the document which could be used as a validation upon the [wrapping](/docs/developer-section/libraries/remote-files/open-attestation-cli#wrapping-documents) process.
 
 In this guide, we will look at how to create a custom schema.
 
@@ -84,4 +84,4 @@ A custom schema that could be created for the [Invoice](#document-invoice) docum
 
 ## Usage
 
-Upon creating a custom schema for the document, it could then be used during the wrapping process for validation. Refer [here](/docs/developer-section/libraries/open-attestation-cli#wrapping-documents) for more information.
+Upon creating a custom schema for the document, it could then be used during the wrapping process for validation. Refer [here](/docs/developer-section/libraries/remote-files/open-attestation-cli#wrapping-documents) for more information.

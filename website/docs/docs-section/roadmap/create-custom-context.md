@@ -133,7 +133,7 @@ The `xsd` in `xsd:string` is used to represent data types in these documents.
 
 The `.json` above shows the structure of the `Invoice`'s raw document. The context created earlier, can be seen to be included in the `@context` field as a URL link.
 
-During the [wrapping](/docs/developer-section/libraries/open-attestation-cli#wrapping-documents) process, the document itself as well as the fields inside `credentialSubject` would be validated and cross checked against the contexts defined in `@context`.
+During the [wrapping](/docs/developer-section/libraries/remote-files/open-attestation-cli#wrapping-documents) process, the document itself as well as the fields inside `credentialSubject` would be validated and cross checked against the contexts defined in `@context`.
 
 :::note
 It is not necessary that everything in `@context` has to appear in `credentialSubject`. But when there are additional items in `credentialSubject` that do not exist in what has already been defined in `@context`, an error would occur when trying to wrap the document.

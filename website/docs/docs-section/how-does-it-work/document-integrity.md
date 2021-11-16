@@ -3,7 +3,7 @@ title: Document Integrity
 sidebar_label: Document Integrity
 ---
 
-OpenAttestation ensures that the content of the document has not been modified since the document has been created, with exception of data removed using the built-in [obfuscation mechanism](/docs/developer-section/libraries/open-attestation#obfuscating-data). Let's explore how it works.
+OpenAttestation ensures that the content of the document has not been modified since the document has been created, with exception of data removed using the built-in [obfuscation mechanism](/docs/developer-section/libraries/remote-files/open-attestation#obfuscating-data). Let's explore how it works.
 
 In the tutorial, we have learnt how to [wrap a document](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) and [issue it](/docs/integrator-section/verifiable-document/ethereum/issuing-document) into a document store. However, we didn't explain what these actions were doing and why they are necessary.
 
@@ -72,7 +72,7 @@ Later on, during verification of the document, the same exact steps are performe
 
 #### Data Obfuscation
 
-Due to the way we compute `targetHash`, OpenAttestation allows for one to obfuscate data they don't want to make public. For this we can simply compute the hash of a specific field and add it into the documents. Let's try it with the [CLI](/docs/developer-section/libraries/open-attestation-cli) and the document above:
+Due to the way we compute `targetHash`, OpenAttestation allows for one to obfuscate data they don't want to make public. For this we can simply compute the hash of a specific field and add it into the documents. Let's try it with the [CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) and the document above:
 
 ```bash
 open-attestation filter ./path/to/file.json ./output.json name

@@ -15,6 +15,6 @@ We added support for penpal v5 in [decentralized-renderer-react-components](http
 
 For many months, our library was stuck using Penpal v4 due to a [lack of compatibility between Penapl v4 and Penpal v5](https://github.com/Aaronius/penpal/issues/52). To make it short, it's not possible to have a verifier using Penpal v4 with a renderer using Penpal v5, and vice-versa.
 
-This version doesn't bring new interfaces or new options. As a user, the new version will be transparent, but it's important to note what's going on under the hood.
+This version doesn't bring new interfaces or new options. As an integrator, the new version is unnoticeable, but it's important to note what's going on under the hood.
 - `FrameConnector` (the main component used by verifiers to connect to a renderer) tries to establish a connection using both Penpal v4 and Penpal v5 in parallel. It means the verifiers will support both Penpal v4 and v5. Unless you know exactly which renderer your verifier will call, verifiers must keep backward compatibility with renderer using Penpal v4.
 - `FramedDocumentRenderer` (the main component to establish a connection with a verifier) will always use Penpal v5. It's safer this way to directly decide to move on with a specific version of Penpal because it's easier to know which version you will need to establish the connection (as a user, you have more control). In any case, if you need your renderer to keep using Penpal v4, feel free to downgrade or to fork our library.

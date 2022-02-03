@@ -1,0 +1,183 @@
+---
+id: gas-cost-estimation
+title: Gas Cost Estimation
+sidebar_label: Gas Cost Estimation
+---
+
+Here is an estimated breakdown of the gas and costs involved when interacting with the contracts.
+You should be aware that the estimated gas required can differ slightly depending on the states of the contract when called. The gas prices and fiat costs are constantly changing and you should check the numbers from a source you trust to get an accurate figure.
+
+:::note
+Note that the following estimation is _not_ a comprehensive list of all the costs involved and should be used as a reference only.
+
+The gas _average_ and ETH prices used in the estimations are retrieved from [ETHGasStation](https://ethgasstation.info/) and [CryptoCompare](https://www.cryptocompare.com/) respectively.
+:::
+
+### Verifiable Documents
+<PriceTable type="verifiable" />
+
+### Transferable Documents
+<PriceTable type="transferable" />
+
+:::note
+The estimated gas may change along with the updates we have to the contracts. The current estimation is based on Document Store v2.2.3 and Token Registry v3.0.0.
+:::
+
+
+import { useState, useEffect } from 'react';
+const contractGasData = {
+  verifiable: [
+    {
+      name: "Document Store Deployment",
+      gas: 1040472
+    },
+    {
+      name: "Issuance of Document",
+      gas: 44956
+    },
+    {
+      name: "Revoke Document",
+      gas: 45052
+    }
+  ],
+  transferable: [
+    {
+      name: "Token Registry Deployment",
+      gas: 3714024
+    },
+    {
+      name: "Issuance of Document",
+      gas: 239523
+    },
+    {
+      name: "Transfer Ownership",
+      gas: 324688
+    },
+    {
+      name: "Transfer Holdership",
+      gas: 43634
+    },
+    {
+      name: "Nominate Ownership",
+      gas: 83225
+    },
+    {
+      name: "Endorse Ownership",
+      gas: 241463
+    },
+    {
+      name: "Surrender Document",
+      gas: 93435
+    },
+    {
+      name: "Restore Document",
+      gas: 220780
+    },
+    {
+      name: "Burn Document",
+      gas: 56532
+    }
+  ]
+};
+
+export const fetchGasCostData = async () => {
+  try {
+    const [ethReq, gweiReq] = await Promise.all([
+      fetch("https://min-api.cryptocompare.com/data/price?fsym=ETH&tsyms=USD"),
+      fetch("https://www.ethgasstation.info/json/ethgasAPI.json")
+    ]);
+    const [ethRes, gweiRes] = await Promise.all([ethReq.json(), gweiReq.json()]);
+    return {
+      price: ethRes.USD,
+      gwei: gweiRes.average
+    };
+  } catch (e) {
+    console.log(`Error: ${e.message}`)
+  }
+};
+
+export const StyledTag = ({ children }) => (
+  <span
+    style={{
+      borderRadius: "3px",
+      backgroundColor: "#eee",
+      borderColor: "#ccc",
+      borderWidth: "1px",
+      borderStyle: "solid",
+      padding: "0.2rem"
+    }}
+  >
+    {children}
+  </span>
+);
+
+export const StyledFiatTag = ({ children }) => (
+  <StyledTag>
+    <FiatTag>{children}</FiatTag>
+  </StyledTag>
+);
+
+export const FiatTag = ({ children }) => {
+  const nf = new Intl.NumberFormat("en-US", {
+    style: "currency",
+    currency: "USD"
+  });
+  const res = nf.format(Number(children));
+  return <span>{res}</span>;
+};
+
+export const GasTag = ({ children }) => {
+  const nf = new Intl.NumberFormat();
+  return <span>{nf.format(children)}</span>;
+}
+
+export const PriceTable = (props) => {
+  const [price, setPrice] = useState(0);
+  const [gwei, setGwei] = useState(0);
+  let isMounted = true;
+  const fetchData = async () => {
+    const data = await fetchGasCostData();
+    if (!isMounted || !data) return;
+    setPrice(data.price);
+    setGwei(data.gwei);
+  };
+  useEffect(() => {
+    fetchData();
+    return () => isMounted = false;
+  }, []);
+  const priceFactor = (gwei / 10.0) * 0.000000001 * price;
+  const { type } = props;
+  const costData = contractGasData[type];
+  const rows = costData.map((record, idx) => (
+    <tr key={idx}>
+      <td>{ record.name }</td>
+      <td><GasTag>{ record.gas }</GasTag></td>
+      <td>
+        {
+          priceFactor === 0
+            ? <em>Calculating...</em>
+            : <FiatTag>{ record.gas * priceFactor }</FiatTag>
+        }
+      </td>
+    </tr>
+  ));
+  return (
+    <div>
+      <p>
+        Estimations based on the current gas <em>average</em> at{" "}
+        <StyledTag>{ gwei / 10.0 } gwei</StyledTag> and ETH price at USD{" "}
+        <StyledFiatTag>{price}</StyledFiatTag>.
+      </p>
+      <table>
+        <thead>
+          <tr>
+            <th>Action</th>
+            <th>Estimated Gas Required</th>
+            <th>Estimated Fiat (USD)</th>
+          </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
+  );
+};

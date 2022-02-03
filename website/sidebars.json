@@ -123,8 +123,7 @@
           ]
         }
       ]
-    },
-    "integrator-section/faq"
+    }
   ],
   "developer": [
     {
@@ -159,7 +158,6 @@
         "developer-section/libraries/remote-files/document-store",
         "developer-section/libraries/remote-files/token-registry"
       ]
-    },
-    "developer-section/faq"
+    }
   ]
 }

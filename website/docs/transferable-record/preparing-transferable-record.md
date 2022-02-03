@@ -62,6 +62,8 @@ Remember to replace the `tokenRegistry` value with your token registry smart con
 Notice the difference between a transferable record and a verifiable document is the use of `tokenRegistry` instead of `documentStore` in declaring the smart contract address.
 
 > For transferable record, you may not batch process it with other documents. Your directory `raw-documents` may only contain one file.
+> 
+> Otherwise, the one-to-one mapping between a token ID and the asset ownership record will be violated as batching the records will result in a one-to-many mapping.
 
 ## Wrapping Transferable Document
 

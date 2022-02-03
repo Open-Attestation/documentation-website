@@ -47,7 +47,7 @@ An OpenAttestation verifier:
   1. Gets back the document store contract address from the document itself.
   1. Ensures that the `targetHash` and the `proof` matches the `merkleRoot`.
   1. Checks the `merkleRoot` is in the document store provided, by calling the `isIssued` function from the deployed contract.
-- Checks the `merkleRoot` of the document has been issued:
+- Checks the `merkleRoot` of the document hasn't been revoked:
   1. Gets back the document store contract address from the document itself.
   1. Checks the `targetHash` is **not** in the document store provided, by calling the `isRevoked` function from the deployed contract.
   1. Checks the `merkleRoot` is **not** in the document store provided, by calling the `isRevoked` function from the deployed contract.
@@ -60,7 +60,7 @@ At the moment, OpenAttestation only supports one DID method: `ethr`.
 
 ### Issuance
 
-DIDs [are significantly faster and incur not costs](/docs/verifiable-document/comparison). They could directly use the `targetHash` of the document (which is unique) and sign it using the private key associated. However for consistency with our initial design, we sign the `merkleRoot`.
+DIDs [are significantly faster and incur no costs](/docs/verifiable-document/comparison). They could directly use the `targetHash` of the document (which is unique) and sign it using the private key associated. However for consistency with our initial design, we sign the `merkleRoot`.
 
 The information about the signature are added to the document, into the `proof` property. That's it, the document has been issued.
 

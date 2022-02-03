@@ -25,9 +25,11 @@ open-attestation token-registry issue -a 0x8431012Bc040942B59e3C5bf428221eab0b2f
 
 Note to replace the following values:
 
-- `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with your token registry contract address
-- `0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea` with your merkle root (with a `0x` prefix)
-- `0xec733A8322f8216eaf8e5566e750bfee3974B7f3` with your title escrow contract address
+|Argument |Description                            |Example Value                                                       |
+|---------|---------------------------------------|--------------------------------------------------------------------|
+|-a       |Address of your token registry contract|`0x8431012Bc040942B59e3C5bf428221eab0b2f723`                        |
+|--tokenId|Merkle root hash (with a `0x` prefix)  |`0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea`|
+|--to     |Address of your title escrow contract  |`0xec733A8322f8216eaf8e5566e750bfee3974B7f3`                        |
 
 Once the document has been issued, you will be able to see an output similar to the following:
 

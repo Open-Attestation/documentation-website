@@ -15,3 +15,9 @@ blockquote {
   border-left-color: #fcd34d;
   background-color: #fffbeb;
 }
+
+@media (prefers-color-scheme: dark) {
+  blockquote {
+    background-color: #334756;
+  }
+}

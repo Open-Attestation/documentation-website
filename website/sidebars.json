@@ -16,7 +16,7 @@
     {
       "type": "category",
       "label": "Appendix",
-      "items": ["docs-section/appendix/glossary", "docs-section/appendix/contract-costs"]
+      "items": ["docs-section/appendix/glossary", "docs-section/appendix/contract-costs", "docs-section/appendix/savings-comparisons"]
     },
     "docs-section/faq",
     {

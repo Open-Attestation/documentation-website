@@ -1,0 +1,161 @@
+---
+id: savings-comparisons
+title: Costs & Savings (Beta)
+sidebar_label: Costs & Savings (Beta)
+---
+
+import { FiatLabel } from "../../../src/components/FiatLabel";
+import { BoxTag } from "../../../src/components/BoxTag";
+import { useFetchGasCost } from "../../../src/hooks";
+
+If you are a new user of TradeTrust or are looking at deploying a new Token Registry (Transferable Documents), we suggest that you try out our new V4 beta version.
+Not only will you be able to try out the new features built in the new version, you will also enjoy massive cost savings when deploying your contracts!
+Here's an estimated breakdown of the differences in gas fees between the two versions and how much savings you can make when using the new V4 beta.
+
+<PriceTable type="transferable" />
+
+:::note
+The estimated gas may change along with the updates we have to the contracts. The current estimation is based on Document Store v2.2.3 and Token Registry v3.0.0.
+:::
+
+import { useState, useEffect } from "react";
+const contractGasData = {
+  transferable: [
+    {
+      name: "Token Deployment",
+      gas: {
+        v3: 3714024,
+        v4: 293687,
+      },
+      remarks: "One-time only"
+    },
+    {
+      name: "Issuance of Document",
+      gas: {
+        v3: 239523,
+        v4: 245051,
+      },
+    },
+    {
+      name: "Endorse Ownership",
+      gas: {
+        v3: 324688,
+        v4: 62470,
+      },
+      remarks: "Endorse both owners"
+    },
+    {
+      name: "Endorse Beneficiary",
+      gas: {
+        v3: 324688,
+        v4: 50330,
+      }
+    },
+    {
+      name: "Endorse Holdership",
+      gas: {
+        v3: 43634,
+        v4: 51323,
+      },
+    },
+    {
+      name: "Nominate Ownership",
+      gas: {
+        v3: 83225,
+        v4: 77859,
+      },
+      remarks: "Nominates both owners"
+    },
+    {
+      name: "Nominate Beneficiary",
+      gas: {
+        v3: 241463,
+        v4: 64717,
+      },
+    },
+    {
+      name: "Nominate Holder",
+      gas: {
+        v3: 241463,
+        v4: 49564,
+      },
+    },
+    {
+      name: "Surrender Document",
+      gas: {
+        v3: 93435,
+        v4: 84803,
+      },
+    },
+    {
+      name: "Restore Document",
+      gas: {
+        v3: 230980,
+        v4: 86924,
+      },
+    },
+    {
+      name: "Burn Document",
+      gas: {
+        v3: 66732,
+        v4: 90040,
+      },
+    },
+  ],
+};
+
+export const PriceTable = (props) => {
+  const { price, gwei } = useFetchGasCost(30000);
+  const priceFactor = (gwei / 10.0) * 0.000000001 * price;
+  const { type } = props;
+  const costData = contractGasData[type];
+  const currentDtStr = new Date().toLocaleString("en-SG", { hour12: true, timeZoneName: "short" });
+  const nf = new Intl.NumberFormat();
+  const rows = costData.map((record, idx) => {
+    const v3Gas = record.gas.v3;
+    const v4Gas = record.gas.v4;
+    const v3Cost = v3Gas * priceFactor;
+    const v4Cost = v4Gas * priceFactor;
+    const savings = (v4Cost - v3Cost);
+    return (
+      <tr key={idx}>
+        <td>{record.name}</td>
+        <td> {nf.format(v3Gas)}</td>
+        <td>{priceFactor === 0 ? <em>Calculating...</em> :
+          <FiatLabel>{v3Cost}</FiatLabel>}</td>
+        <td> {nf.format(v4Gas)}</td>
+        <td>{priceFactor === 0 ? <em>Calculating...</em> :
+          <FiatLabel>{v4Cost}</FiatLabel>}</td>
+        <td align="center"><FiatLabel>{savings}</FiatLabel>{savings <= 0 ? "🔻" : "🔺"}</td>
+        <td>{record.remarks || "-"}</td>
+      </tr>
+    );
+  });
+  return (
+    <div>
+      <p>
+        Estimations based on the current
+        gas <em>average</em> at <BoxTag>{gwei / 10.0} gwei</BoxTag> and ETH price
+        at USD <BoxTag><FiatLabel>{price}</FiatLabel></BoxTag> as at {currentDtStr}.
+      </p>
+      <table>
+        <thead>
+        <tr>
+          <th rowSpan="2">Action</th>
+          <th colSpan="2">V3.x</th>
+          <th colSpan="2">V4 Beta</th>
+          <th rowSpan="2">Savings (USD)</th>
+          <th rowSpan="2">Remarks</th>
+        </tr>
+        <tr>
+          <th>Est. Gas</th>
+          <th>Fiat (USD)</th>
+          <th>Est. Gas</th>
+          <th>Fiat (USD)</th>
+        </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
+  );
+};

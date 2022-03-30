@@ -10,7 +10,7 @@ You should be aware that the estimated gas required can differ slightly dependin
 :::note
 Note that the following estimation is _not_ a comprehensive list of all the costs involved and should be used as a reference only.
 
-The gas _average_ and ETH prices used in the estimations are retrieved from [ETHGasStation](https://ethgasstation.info/) and [CryptoCompare](https://www.cryptocompare.com/) respectively.
+The live (updated every 30s) gas _average_ and ETH prices used in the estimations are retrieved from [ETHGasStation](https://ethgasstation.info/) and [CryptoCompare](https://www.cryptocompare.com/) respectively.
 :::
 
 ### Verifiable Documents
@@ -136,9 +136,21 @@ export const GasTag = ({ children }) => {
   return <span>{nf.format(children)}</span>;
 };
 
+export const useRefresh = () => {
+  const [tick, setTick] = useState(0);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setTick((tick) => tick + 1);
+    }, 30000);
+    return () => clearInterval(interval);
+  }, []);
+  return tick;
+};
+
 export const PriceTable = (props) => {
   const [price, setPrice] = useState(0);
   const [gwei, setGwei] = useState(0);
+  const tick = useRefresh();
   let isMounted = true;
   const fetchData = async () => {
     const data = await fetchGasCostData();
@@ -149,7 +161,7 @@ export const PriceTable = (props) => {
   useEffect(() => {
     fetchData();
     return () => (isMounted = false);
-  }, []);
+  }, [tick]);
   const priceFactor = (gwei / 10.0) * 0.000000001 * price;
   const { type } = props;
   const costData = contractGasData[type];

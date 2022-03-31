@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from "react";
 
-export const useRefresh = (interval = 30000) => {
+export const useRefresh = (period) => {
   const [tick, setTick] = useState(0);
-  if (interval < 1) return undefined;
+  if (period < 1) return undefined;
   useEffect(() => {
     const interval = setInterval(() => {
       setTick((tick) => tick + 1);
-    }, 30000);
+    }, period);
     return () => clearInterval(interval);
   }, []);
   return tick;

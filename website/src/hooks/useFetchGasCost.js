@@ -35,7 +35,6 @@ const fetchGasCostData = async (chain) => {
     };
   } catch (e) {
     console.error(`Error: ${e.message}`);
-    alert(`Error: ${e.message}`);
   }
 };
 

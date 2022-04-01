@@ -2,16 +2,17 @@ import React, { useEffect, useState } from "react";
 import { useRefresh } from './useRefresh';
 
 const gasApi = {
-  ethereum: "https://www.ethgasstation.info/json/ethgasAPI.json",
+  ethereum: "https://blocknative-api.herokuapp.com/data",
   polygon: "https://gasstation-mainnet.matic.network/v2",
 };
 
 const parseGasRes = (chain, res) => {
   switch (chain) {
     case "ethereum":
-      return Number(res.average) / 10;
+      const estPrice = res.estimatedPrices[1];
+      return estPrice.price + estPrice.maxPriorityFeePerGas;
     case "polygon":
-      return res.standard.maxFee;
+      return res.fast.maxFee;
     default:
       return 0;
   }

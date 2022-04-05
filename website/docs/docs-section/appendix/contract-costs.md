@@ -103,6 +103,7 @@ export const fetchGasCostData = async () => {
 
 export const StyledTag = ({ children }) => (
   <span
+    class="styled-tag"
     style={{
       borderRadius: "3px",
       backgroundColor: "#eee",

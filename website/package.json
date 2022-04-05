@@ -12,8 +12,8 @@
   },
   "dependencies": {
     "@crossid/docusaurus-remote-content": "^0.1.5",
-    "@docusaurus/core": "^2.0.0-alpha.66",
-    "@docusaurus/preset-classic": "^2.0.0-alpha.66",
+    "@docusaurus/core": "^2.0.0-beta.18",
+    "@docusaurus/preset-classic": "^2.0.0-beta.18",
     "clsx": "^1.1.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
@@ -34,12 +34,12 @@
     "printWidth": 120
   },
   "devDependencies": {
-    "@docusaurus/module-type-aliases": "^2.0.0-alpha.69",
-    "@tsconfig/docusaurus": "^1.0.2",
-    "@types/react": "^17.0.4",
-    "@types/react-helmet": "^6.1.1",
-    "@types/react-router-dom": "^5.1.7",
-    "prettier": "^2.2.1",
-    "typescript": "^4.2.4"
+    "@docusaurus/module-type-aliases": "^2.0.0-beta.18",
+    "@tsconfig/docusaurus": "^1.0.5",
+    "@types/react": "^17.0.43",
+    "@types/react-helmet": "^6.1.5",
+    "@types/react-router-dom": "^5.3.3",
+    "prettier": "^2.6.1",
+    "typescript": "^4.6.3"
   }
 }

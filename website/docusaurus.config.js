@@ -196,8 +196,8 @@ const siteConfig = {
         },
       ],
     },
-
     algolia: {
+      appId: "6DNGPTCB04",
       apiKey: "1c7e0f08161cfc504494cff933eb8a37",
       indexName: "openattestation",
       algoliaOptions: {}, // Optional, if provided by Algolia
@@ -206,7 +206,7 @@ const siteConfig = {
       theme: require("prism-react-renderer/themes/nightOwl"),
     },
     image: "img/logos/oa.png",
-    metadatas: [{ name: "og:image", content: "img/logos/oa.png" }],
+    metadata: [{ name: "og:image", content: "img/logos/oa.png" }],
   },
 };
 

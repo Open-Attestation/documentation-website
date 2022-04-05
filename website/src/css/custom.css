@@ -21,3 +21,7 @@ blockquote {
     background-color: #334756;
   }
 }
+
+[data-theme="dark"] .styled-tag {
+  color: #334756;
+}

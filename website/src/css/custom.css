@@ -21,3 +21,9 @@ blockquote {
     background-color: #334756;
   }
 }
+
+[data-theme="dark"] .box-tag {
+  color: #d7d7d7;
+  background-color: rgb(50 50 50) !important;
+  border-color: rgb(70 70 70) !important;
+}

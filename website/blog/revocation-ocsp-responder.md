@@ -21,7 +21,7 @@ The ADR containing our exploration of possible solutions to the problem of costl
 
 We also released a [reference implementation](https://github.com/Open-Attestation/ocsp-responder) of the OCSP responder using AWS Serverless. You may refer [here](https://github.com/Open-Attestation/ocsp-responder/blob/main/README.md) for a guide on its implementation.
 
-We also added a section in our documentation website under _Verfiable Document_ > _DID_ >[ _Revoking Documents (OCSP)_](https://www.openattestation.com/docs/verifiable-document/did/revoking-document-ocsp) with steps on how to create a OCSP-revokable document.
+We also added a section in our documentation website under _Verfiable Document_ > _DID_ >[ _Revoking Documents (OCSP)_](https://www.openattestation.com/docs/integrator-section/verifiable-document/did/revoking-document-ocsp/) with steps on how to create a OCSP-revokable document.
 
 This solution requires minimally:
 

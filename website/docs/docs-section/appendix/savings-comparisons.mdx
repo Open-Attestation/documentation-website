@@ -47,7 +47,7 @@ const contractGasData = {
       name: "Token Deployment (Quick Start)",
       gas: {
         v3: 3714024,
-        v4: 298757,
+        v4: 301065,
       },
       remarks: <>With <a href="https://github.com/Open-Attestation/token-registry/tree/beta#quick-start" target="_blank">Quick Start</a> deployment in v4</>
     },
@@ -55,79 +55,64 @@ const contractGasData = {
       name: "Issuance of Document",
       gas: {
         v3: 239523,
-        v4: 245089,
+        v4: 250509,
       },
-    },
-    {
-      name: "Endorse Ownership",
-      gas: {
-        v3: 324688,
-        v4: 62470,
-      },
-      remarks: "Endorse both owners"
     },
     {
       name: "Endorse Beneficiary",
       gas: {
         v3: 324688,
-        v4: 50330,
+        v4: 52057,
       }
     },
     {
-      name: "Endorse Holdership",
+      name: "Transfer Holdership",
       gas: {
         v3: 43634,
-        v4: 51323,
+        v4: 47282,
       },
+    },
+    {
+      name: "Transfer Ownership",
+      gas: {
+        v3: 324688,
+        v4: 61333,
+      },
+      remarks: "Both beneficiary & holder"
     },
     {
       name: "Nominate Ownership",
       gas: {
         v3: 83225,
-        v4: 77858,
-      },
-      remarks: "Nominates both owners"
-    },
-    {
-      name: "Nominate Beneficiary",
-      gas: {
-        v3: 241463,
-        v4: 64717,
-      },
-    },
-    {
-      name: "Nominate Holder",
-      gas: {
-        v3: 241463,
-        v4: 49564,
-      },
+        v4: 47320,
+      }
     },
     {
       name: "Surrender Document",
       gas: {
         v3: 93435,
-        v4: 84803,
+        v4: 84586,
       },
     },
     {
       name: "Restore Document",
       gas: {
         v3: 230980,
-        v4: 86586,
+        v4: 92043,
       },
     },
     {
       name: "Burn Document",
       gas: {
         v3: 66732,
-        v4: 89698,
+        v4: 94795,
       },
     },
     {
       name: "Token Deployment (Standalone)",
       gas: {
         v3: 3714024,
-        v4: 2248797,
+        v4: 2251821,
       },
       remarks: <>For <a href="https://github.com/Open-Attestation/token-registry/tree/beta#stand-alone-contract" target="_blank">standalone</a> deployment in v4 (optional)</>
     },
@@ -135,7 +120,7 @@ const contractGasData = {
       name: "Title Escrow Factory (Optional)",
       gas: {
         v3: 0,
-        v4: 1607041,
+        v4: 1459818,
       },
       remarks: "New in V4"
     },

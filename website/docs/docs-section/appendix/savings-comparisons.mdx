@@ -1,0 +1,185 @@
+---
+id: savings-comparisons
+title: Token Registry V4 (Beta)
+---
+
+import { FiatLabel } from "../../../src/components/FiatLabel";
+import { BoxTag } from "../../../src/components/BoxTag";
+import { useFetchGasCost } from "../../../src/hooks";
+
+Are you a new user of TradeTrust or looking at deploying a new Token Registry (Transferable Documents)? If you are, we'd totally suggest that you try out our new V4 beta version!
+
+Not only will you be able to try out the new features in the beta version, you will also enjoy massive cost savings when deploying your contracts!
+This page gives an estimated breakdown of the differences in gas fees between the two versions and how much savings you can make when using the new V4 beta.
+
+The V4 beta contracts can help to save up to about 92% in total gas fees compared to its previous versions.
+If the costs on Ethereum is still a concern despite the savings, you can consider deploying onto the Polygon network, which the beta repository comes preconfigured with.
+The estimations on this page are based on the current prices on the Ethereum and Polygon mainnet.
+
+Now, if you are convinced to try our beta, check out our beta repository [here](https://github.com/Open-Attestation/token-registry/tree/beta)! 🎉
+
+:::warning
+The beta versions are in active development. Please expect bugs and breaking changes along the way. Be warned but be brave!💪
+
+Please report any issues or suggestions [here](https://github.com/Open-Attestation/token-registry/issues).
+:::
+
+:::note
+Note that the following estimation is _not_ a comprehensive list of all the costs involved and should be used as a reference only.
+
+The live gas fees and prices on this page are updated every 15s. Data are retrieved from [BlockNative Gas Estimator](https://www.blocknative.com/gas-estimator), [Polygon Gas Station](https://polygon.technology) and [CryptoCompare](https://www.cryptocompare.com/).
+:::
+
+## Estimated Fees on Ethereum
+
+<PriceTable type="transferable" chain="ethereum" />
+
+## Estimated Fees on Polygon
+
+<PriceTable type="transferable" chain="polygon" priceFormatOptions={{maximumSignificantDigits: 3, minimumFractionDigits: 2}} />
+
+
+import { useState, useEffect } from "react";
+const contractGasData = {
+  transferable: [
+    {
+      name: "Token Deployment (Quick Start)",
+      gas: {
+        v3: 3714024,
+        v4: 301065,
+      },
+      remarks: <>With <a href="https://github.com/Open-Attestation/token-registry/tree/beta#quick-start" target="_blank">Quick Start</a> deployment in v4</>
+    },
+    {
+      name: "Issuance of Document",
+      gas: {
+        v3: 239523,
+        v4: 250509,
+      },
+    },
+    {
+      name: "Endorse Beneficiary",
+      gas: {
+        v3: 324688,
+        v4: 52057,
+      }
+    },
+    {
+      name: "Transfer Holdership",
+      gas: {
+        v3: 43634,
+        v4: 47282,
+      },
+    },
+    {
+      name: "Transfer Ownership",
+      gas: {
+        v3: 324688,
+        v4: 61333,
+      },
+      remarks: "Both beneficiary & holder"
+    },
+    {
+      name: "Nominate Ownership",
+      gas: {
+        v3: 83225,
+        v4: 47320,
+      }
+    },
+    {
+      name: "Surrender Document",
+      gas: {
+        v3: 93435,
+        v4: 84586,
+      },
+    },
+    {
+      name: "Restore Document",
+      gas: {
+        v3: 230980,
+        v4: 92043,
+      },
+    },
+    {
+      name: "Burn Document",
+      gas: {
+        v3: 66732,
+        v4: 94795,
+      },
+    },
+    {
+      name: "Token Deployment (Standalone)",
+      gas: {
+        v3: 3714024,
+        v4: 2251821,
+      },
+      remarks: <>For <a href="https://github.com/Open-Attestation/token-registry/tree/beta#stand-alone-contract" target="_blank">standalone</a> deployment in v4 (optional)</>
+    },
+    {
+      name: "Title Escrow Factory (Optional)",
+      gas: {
+        v3: 0,
+        v4: 1459818,
+      },
+      remarks: "New in V4"
+    },
+  ],
+};
+
+export const PriceTable = ({ type, chain, priceFormatOptions }) => {
+  const { price, gwei } = useFetchGasCost(chain, 15000);
+  const priceFactor = gwei * 0.000000001 * price;
+  const costData = contractGasData[type];
+  const currentDtStr = new Date().toLocaleString("en-SG", { hour12: true, timeZoneName: "short" });
+  const nf = new Intl.NumberFormat();
+  const rows = costData.map((record, idx) => {
+    const v3Gas = record.gas.v3;
+    const v4Gas = record.gas.v4;
+    const v3Cost = v3Gas * priceFactor;
+    const v4Cost = v4Gas * priceFactor;
+    const savings = v4Cost - v3Cost;
+    return (
+      <tr key={idx}>
+        <td>{record.name}</td>
+        <td> {v3Gas ? nf.format(v3Gas) : "N.A."}</td>
+        <td>{priceFactor === 0 ? <em>Calculating...</em> :
+          <FiatLabel {...priceFormatOptions}>{v3Cost || "0"}</FiatLabel>}</td>
+        <td> {v4Gas ? nf.format(v4Gas) : "N.A."}</td>
+        <td>{priceFactor === 0 ? <em>Calculating...</em> :
+          <FiatLabel {...priceFormatOptions}>{v4Cost}</FiatLabel>}</td>
+        <td align="center">
+            {!v3Gas ? "–" : <FiatLabel {...priceFormatOptions}>{savings}</FiatLabel>}
+            {!v3Gas ? null : savings <= 0 ? "🔻" : "🔺"}
+        </td>
+        <td>{record.remarks || "–"}</td>
+      </tr>
+    );
+  });
+  return (
+    <div>
+      <p>
+        Estimations based on the current
+        gas <em>average</em> at <BoxTag>{Math.ceil(gwei)} gwei</BoxTag> and ETH price
+        at USD <BoxTag><FiatLabel>{price}</FiatLabel></BoxTag> as at {currentDtStr}.
+      </p>
+      <table>
+        <thead>
+        <tr>
+          <th rowSpan="2">Action</th>
+          <th colSpan="2">V3.x</th>
+          <th colSpan="2">V4 Beta</th>
+          <th rowSpan="2">Fiat Difference (USD)</th>
+          <th rowSpan="2">Remarks</th>
+        </tr>
+        <tr>
+          <th>Est. Gas</th>
+          <th>Fiat (USD)</th>
+          <th>Est. Gas</th>
+          <th>Fiat (USD)</th>
+        </tr>
+        </thead>
+        <tbody>{rows}</tbody>
+      </table>
+    </div>
+  );
+};

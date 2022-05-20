@@ -5,6 +5,7 @@ title: Token Registry V4 (Beta)
 
 import { FiatLabel } from "../../../src/components/FiatLabel";
 import { BoxTag } from "../../../src/components/BoxTag";
+import { Triangle } from "../../../src/components/Icon";
 import { useFetchGasCost } from "../../../src/hooks";
 
 Are you a new user of TradeTrust or looking at deploying a new Token Registry (Transferable Documents)? If you are, we'd totally suggest that you try out our new V4 beta version!
@@ -36,8 +37,11 @@ The live gas fees and prices on this page are updated every 15s. Data are retrie
 
 ## Estimated Fees on Polygon
 
-<PriceTable type="transferable" chain="polygon" priceFormatOptions={{maximumSignificantDigits: 3, minimumFractionDigits: 2}} />
-
+<PriceTable
+  type="transferable"
+  chain="polygon"
+  priceFormatOptions={{ maximumSignificantDigits: 3, minimumFractionDigits: 2 }}
+/>
 
 import { useState, useEffect } from "react";
 const contractGasData = {
@@ -48,7 +52,15 @@ const contractGasData = {
         v3: 3714024,
         v4: 301065,
       },
-      remarks: <>With <a href="https://github.com/Open-Attestation/token-registry/tree/beta#quick-start" target="_blank">Quick Start</a> deployment in v4</>
+      remarks: (
+        <>
+          With{" "}
+          <a href="https://github.com/Open-Attestation/token-registry/tree/beta#quick-start" target="_blank">
+            Quick Start
+          </a>{" "}
+          deployment in v4
+        </>
+      ),
     },
     {
       name: "Issuance of Document",
@@ -62,7 +74,7 @@ const contractGasData = {
       gas: {
         v3: 324688,
         v4: 52057,
-      }
+      },
     },
     {
       name: "Transfer Holdership",
@@ -77,14 +89,14 @@ const contractGasData = {
         v3: 324688,
         v4: 61333,
       },
-      remarks: "Both beneficiary & holder"
+      remarks: "Both beneficiary & holder",
     },
     {
       name: "Nominate Ownership",
       gas: {
         v3: 83225,
         v4: 47320,
-      }
+      },
     },
     {
       name: "Surrender Document",
@@ -113,7 +125,15 @@ const contractGasData = {
         v3: 3714024,
         v4: 2251821,
       },
-      remarks: <>For <a href="https://github.com/Open-Attestation/token-registry/tree/beta#stand-alone-contract" target="_blank">standalone</a> deployment in v4 (optional)</>
+      remarks: (
+        <>
+          For{" "}
+          <a href="https://github.com/Open-Attestation/token-registry/tree/beta#stand-alone-contract" target="_blank">
+            standalone
+          </a>{" "}
+          deployment in v4 (optional)
+        </>
+      ),
     },
     {
       name: "Title Escrow Factory (Optional)",
@@ -121,7 +141,7 @@ const contractGasData = {
         v3: 0,
         v4: 1459818,
       },
-      remarks: "New in V4"
+      remarks: "New in V4",
     },
   ],
 };
@@ -142,14 +162,18 @@ export const PriceTable = ({ type, chain, priceFormatOptions }) => {
       <tr key={idx}>
         <td>{record.name}</td>
         <td> {v3Gas ? nf.format(v3Gas) : "N.A."}</td>
-        <td>{priceFactor === 0 ? <em>Calculating...</em> :
-          <FiatLabel {...priceFormatOptions}>{v3Cost || "0"}</FiatLabel>}</td>
+        <td>
+          {priceFactor === 0 ? <em>Calculating...</em> : <FiatLabel {...priceFormatOptions}>{v3Cost || "0"}</FiatLabel>}
+        </td>
         <td> {v4Gas ? nf.format(v4Gas) : "N.A."}</td>
-        <td>{priceFactor === 0 ? <em>Calculating...</em> :
-          <FiatLabel {...priceFormatOptions}>{v4Cost}</FiatLabel>}</td>
+        <td>{priceFactor === 0 ? <em>Calculating...</em> : <FiatLabel {...priceFormatOptions}>{v4Cost}</FiatLabel>}</td>
         <td align="center">
-            {!v3Gas ? "–" : <FiatLabel {...priceFormatOptions}>{savings}</FiatLabel>}
-            {!v3Gas ? null : savings <= 0 ? "🔻" : "🔺"}
+          {!v3Gas ? "–" : <FiatLabel {...priceFormatOptions}>{savings}</FiatLabel>}
+          {!v3Gas ? null : savings <= 0 ? (
+            <Triangle color="#22c55e" style={{ marginLeft: "8px" }} />
+          ) : (
+            <Triangle color="#f43f5e" style={{ marginLeft: "8px", transform: "rotate(180deg)" }} />
+          )}
         </td>
         <td>{record.remarks || "–"}</td>
       </tr>
@@ -158,25 +182,28 @@ export const PriceTable = ({ type, chain, priceFormatOptions }) => {
   return (
     <div>
       <p>
-        Estimations based on the current
-        gas <em>average</em> at <BoxTag>{Math.ceil(gwei)} gwei</BoxTag> and ETH price
-        at USD <BoxTag><FiatLabel>{price}</FiatLabel></BoxTag> as at {currentDtStr}.
+        Estimations based on the current gas <em>average</em> at <BoxTag>{Math.ceil(gwei)} gwei</BoxTag> and ETH price
+        at USD{" "}
+        <BoxTag>
+          <FiatLabel>{price}</FiatLabel>
+        </BoxTag>{" "}
+        as at {currentDtStr}.
       </p>
       <table>
         <thead>
-        <tr>
-          <th rowSpan="2">Action</th>
-          <th colSpan="2">V3.x</th>
-          <th colSpan="2">V4 Beta</th>
-          <th rowSpan="2">Fiat Difference (USD)</th>
-          <th rowSpan="2">Remarks</th>
-        </tr>
-        <tr>
-          <th>Est. Gas</th>
-          <th>Fiat (USD)</th>
-          <th>Est. Gas</th>
-          <th>Fiat (USD)</th>
-        </tr>
+          <tr>
+            <th rowSpan="2">Action</th>
+            <th colSpan="2">V3.x</th>
+            <th colSpan="2">V4 Beta</th>
+            <th rowSpan="2">Fiat Difference (USD)</th>
+            <th rowSpan="2">Remarks</th>
+          </tr>
+          <tr>
+            <th>Est. Gas</th>
+            <th>Fiat (USD)</th>
+            <th>Est. Gas</th>
+            <th>Fiat (USD)</th>
+          </tr>
         </thead>
         <tbody>{rows}</tbody>
       </table>

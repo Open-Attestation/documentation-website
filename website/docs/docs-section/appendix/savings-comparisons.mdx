@@ -5,7 +5,7 @@ title: Token Registry V4 (Beta)
 
 import { FiatLabel } from "../../../src/components/FiatLabel";
 import { BoxTag } from "../../../src/components/BoxTag";
-import { TriangleDown, TriangleUp } from "../../../src/components/Icon";
+import { Triangle } from "../../../src/components/Icon";
 import { useFetchGasCost } from "../../../src/hooks";
 
 Are you a new user of TradeTrust or looking at deploying a new Token Registry (Transferable Documents)? If you are, we'd totally suggest that you try out our new V4 beta version!
@@ -170,9 +170,9 @@ export const PriceTable = ({ type, chain, priceFormatOptions }) => {
         <td align="center">
           {!v3Gas ? "–" : <FiatLabel {...priceFormatOptions}>{savings}</FiatLabel>}
           {!v3Gas ? null : savings <= 0 ? (
-            <TriangleDown color="#22c55e" style={{ marginLeft: "8px" }} />
+            <Triangle color="#22c55e" style={{ marginLeft: "8px" }} />
           ) : (
-            <TriangleUp color="#f43f5e" style={{ marginLeft: "8px" }} />
+            <Triangle color="#f43f5e" style={{ marginLeft: "8px", transform: "rotate(180deg)" }} />
           )}
         </td>
         <td>{record.remarks || "–"}</td>

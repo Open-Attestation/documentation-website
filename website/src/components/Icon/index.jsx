@@ -1,16 +1,6 @@
 import React from "react";
 
-export const TriangleDown = (props) => {
-  const { width = "16px", color = "#000 "} = props;
-
-  return (
-    <svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 240 211" width={width} {...props}>
-      <path d="m2.048 16.505 108.401 187.339c4.832 8.35 14.276 8.35 19.109 0l108.387-187.34c2.41-4.164 2.713-8.252.84-11.483C236.923 1.776 233.223 0 228.391 0H11.604C6.77 0 3.084 1.78 1.209 5.02c-1.86 3.232-1.57 7.32.841 11.485h-.002z" fill={color} />
-    </svg>
-  );
-}
-
-export const TriangleUp = (props) => {
+export const Triangle = (props) => {
   const { width = "16px", color = "#000 "} = props;
 
   return (

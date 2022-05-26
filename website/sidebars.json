@@ -144,7 +144,15 @@
         "developer-section/libraries/remote-files/open-attestation",
         "developer-section/libraries/remote-files/open-attestation-cli",
         "developer-section/libraries/remote-files/open-attestation-encryption",
-        "developer-section/libraries/remote-files/open-attestation-verify",
+        
+        {
+          "type": "category",
+          "label": "Verification",
+          "items": [
+            "developer-section/libraries/remote-files/open-attestation-verify",
+            "developer-section/libraries/verification/verification-flow"
+          ]
+        },
         {
           "type": "category",
           "label": "Decentralized Renderer",

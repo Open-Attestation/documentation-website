@@ -210,7 +210,7 @@ const siteConfig = {
       theme: require("prism-react-renderer/themes/nightOwl"),
     },
     image: "img/logos/oa.png",
-    metadatas: [{ name: "og:image", content: "img/logos/oa.png" }],
+    metadata: [{ name: "og:image", content: "img/logos/oa.png" }],
   },
 };
 

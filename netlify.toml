@@ -1,2 +1,5 @@
 [build]
   ignore = "git diff --quiet HEAD^ HEAD .."
+
+[context.production]
+  environment = { NODE_VERSION = "16.15.1" }

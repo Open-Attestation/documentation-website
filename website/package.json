@@ -2,13 +2,11 @@
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
-    "build": "npm run fetch-remote-docs && docusaurus build",
+    "build": "docusaurus build",
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear",
-    "fetch-remote-docs": "docusaurus fetch-remote-docs",
-    "clean-remote-docs": "docusaurus clean-remote-docs"
+    "clear": "docusaurus clear"
   },
   "dependencies": {
     "@docusaurus/core": "^2.0.0-beta.21",

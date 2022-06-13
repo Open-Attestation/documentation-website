@@ -1,8 +1,8 @@
 ---
 id: decentralized-renderer-react-template
-title: React Template
+title: React template
 hide_title: true
-sidebar_label: React Template
+sidebar_label: React template
 ---
 
 [![CircleCI](https://circleci.com/gh/Open-Attestation/decentralized-renderer-react-template.svg?style=svg)](https://circleci.com/gh/Open-Attestation/decentralized-renderer-react-template)

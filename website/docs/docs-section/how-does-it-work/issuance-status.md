@@ -17,7 +17,7 @@ That's where the `merkleRoot` will come in handy.
 
 Once the `targetHash` of a document is computed, OpenAttestation will determine the `merkleRoot`. The `merkleRoot` value is the merkle root hash computed from the [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree) using the `targetHash` of all the document wrapped together. Each `targetHash` is a leaf in the tree. After computing the merkle tree, the `merkleRoot` associated to a document will be added to it as well as the proofs (intermediate hashes) needed to ensure that the `targetHash` has been used to compute the `merkleRoot`. The proofs are added into the `proof` property.
 
-On a side note, when we wrap only one document at a time, the `targetHash` and the `merkelRoot` are identical and the `proof` is empty. This is completely normal. When we wrap at least 2 documents at the same time, we will notice a difference between `targetHash` and the `merkelRoot`, and proofs appended.
+On a side note, when we wrap only one document at a time, the `targetHash` and the `merkleRoot` are identical and the `proof` is empty. This is completely normal. When we wrap at least 2 documents at the same time, we will notice a difference between `targetHash` and the `merkleRoot`, and proofs appended.
 
 > The `merkleRoot` will always be the same for all the documents wrapped together (in a batch). It will be different for documents wrapped separately.
 

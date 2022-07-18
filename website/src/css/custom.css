@@ -27,3 +27,38 @@ blockquote {
   background-color: rgb(50 50 50) !important;
   border-color: rgb(70 70 70) !important;
 }
+
+.deploymentTypeContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.deploymentTypeDNS {
+  background-color: #2D5FAA;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+}
+
+.deploymentTypeDID {
+  background-color: #3AAF86;
+  width: fit-content;
+  padding: 2px 8px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  margin-left: 12px;
+}
+
+.deploymentTypeRemark {
+  color: #89969F;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  text-align: center;
+}

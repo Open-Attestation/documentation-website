@@ -6,8 +6,9 @@ export const DeploymentTypeLabel = ({deploymentType, remarks}) => {
   <div>
     <div className="deploymentTypeContainer">
       {deploymentType.map((type) => {
-          if (type === "DNS") return <div className="deploymentTypeDNS">DNS</div>
-          if (type === "DID") return <div className="deploymentTypeDID">DID</div>
+          return (
+            type === "DID" ? <div className="deploymentTypeDID">DID</div> : <div className="deploymentTypeDNS">DNS</div>
+          )
     })}
     </div>
     <div className="deploymentTypeRemark">{remarks}</div>

@@ -10,6 +10,13 @@ npm install
 
 ## Local Development
 
+To run in local, you should have a valid algolia search api key.
+Create a .env file and add it in to get it started. You can follow the example in .env.example file.
+
+_Note:_ Please ask around the team for OA documentation algolia search api key.
+
+Once you have the api key, you will be able to run the following command:
+
 ```console
 npm run start
 ```

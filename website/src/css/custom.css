@@ -16,10 +16,8 @@ blockquote {
   background-color: #fffbeb;
 }
 
-@media (prefers-color-scheme: dark) {
-  blockquote {
-    background-color: #334756;
-  }
+[data-theme="dark"] blockquote {
+  background-color: #334756;
 }
 
 [data-theme="dark"] .box-tag {

@@ -1,3 +1,5 @@
+require("dotenv").config();
+
 const siteConfig = {
   title: "OpenAttestation",
   tagline: "Document Endorsement and Verification Framework",
@@ -198,9 +200,11 @@ const siteConfig = {
     },
 
     algolia: {
-      apiKey: "1c7e0f08161cfc504494cff933eb8a37",
+      appId: "M0GN6T3PD5",
+      apiKey: process.env.ALGOLIA_SEARCH_API_KEY || "dummykey",
       indexName: "openattestation",
       algoliaOptions: {}, // Optional, if provided by Algolia
+      debug: false, // Set debug to true if you want to inspect the modal
     },
     prism: {
       theme: require("prism-react-renderer/themes/nightOwl"),

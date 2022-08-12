@@ -9,6 +9,7 @@ authors:
     image_url: https://github.com/waynewee.png
 tags: [revocation, did]
 hide_table_of_contents: false
+date: 2021-11-25T10:00
 ---
 
 We recently released support for revocation of DID signed documents through an Online Certificate Status Protocol (OCSP) responder which would allow for the revocation of documents without the need to deploy a document store. Prior to this release, revocation of documents was only possible through the deployment of a document store which is costly.

@@ -149,6 +149,7 @@ const contractGasData = {
 export const PriceTable = ({ type, chain, priceFormatOptions }) => {
   const { price, gwei } = useFetchGasCost(chain, 15000);
   const priceFactor = gwei * 0.000000001 * price;
+  const priceUnit = chain === "polygon" ? "MATIC" : "ETH";
   const costData = contractGasData[type];
   const currentDtStr = new Date().toLocaleString("en-SG", { hour12: true, timeZoneName: "short" });
   const nf = new Intl.NumberFormat();
@@ -182,8 +183,8 @@ export const PriceTable = ({ type, chain, priceFormatOptions }) => {
   return (
     <div>
       <p>
-        Estimations based on the current gas <em>average</em> at <BoxTag>{Math.ceil(gwei)} gwei</BoxTag> and MATIC price
-        at USD{" "}
+        Estimations based on the current gas <em>average</em> at <BoxTag>{Math.ceil(gwei)} gwei</BoxTag> and {priceUnit}{" "}
+        price at USD{" "}
         <BoxTag>
           <FiatLabel>{price}</FiatLabel>
         </BoxTag>{" "}

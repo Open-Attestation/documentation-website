@@ -60,4 +60,4 @@ A: yes, you are right, for now this implementation will still need at least 1 tr
 
 Q: this might be a weird question but I did not issue any documents from the deployed `documentStore`, how am I able to revoke this document from said `documentStore` when in the first place, I did not even issue anything?
 
-A: long story short, the revocation mapping in the `documentStore` is a separate mapping from the issued mapping. If you would like to deep dive into the implementation, please do look at the deployed Smart Contract Solidity code for the `documentStore` in [etherscan](https://ropsten.etherscan.io/address/0x8bA63EAB43342AAc3AdBB4B827b68Cf4aAE5Caca#code).
+A: long story short, the revocation mapping in the `documentStore` is a separate mapping from the issued mapping. If you would like to deep dive into the implementation, please do look at the deployed Smart Contract Solidity code for the `documentStore` in [document store repo](https://github.com/Open-Attestation/document-store/tree/master/contracts).

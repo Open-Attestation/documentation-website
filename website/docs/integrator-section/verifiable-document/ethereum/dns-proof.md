@@ -27,8 +27,8 @@ The `network-id` corresponds to the [network ID for the different Ethereum netwo
 | Network ID | Name                     | Network   |
 | ---------- | ------------------------ | --------- |
 | `1`        | Ethereum Mainnet         | `mainnet` |
-| `3`        | Ethereum Testnet Ropsten | `ropsten` |
-| `4`        | Ethereum Testnet Rinkeby | `rinkeby` |
+| `5`        | Ethereum Testnet Goerli  | `goerli`  |
+| `11155111` | Ethereum Testnet Sepolia | `sepolia` |
 
 Once the DNS TXT record has been successfully deployed, you will see the success message with the bound location.
 

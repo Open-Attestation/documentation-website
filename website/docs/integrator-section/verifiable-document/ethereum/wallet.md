@@ -16,7 +16,6 @@ During the creation, you will be prompted for a password. Make sure to remember 
 ℹ  info      Creating a new wallet
 ? Wallet password [hidden]
 …  awaiting  Encrypting Wallet [====================] [100/100%]
-ℹ  info      [goerli] Added fund to 0x10cFd56E11e7d66C8d0716Cd2D6B847Cb17ABeeD
 ℹ  info      Wallet with public address 0x10cFd56E11e7d66C8d0716Cd2D6B847Cb17ABeeD successfully created. Find more details:
 ✔  success   Wallet successfully saved into /home/nebulis/IdeaProjects/open-attestation-cli/wallet.json
 ```

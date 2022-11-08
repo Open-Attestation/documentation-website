@@ -30,10 +30,10 @@ You can refer to the source code of our Paymaster [here](https://github.com/Open
 Simply run the following command. You may replace the `<paymaster-name>` with a suitable name (the name does not matter).
 
 ```bash
-open-attestation deploy paymaster  "My Paymaster" --network goerli --encrypted-wallet-path wallet.json
+open-attestation deploy paymaster  "My Paymaster" --network ropsten --encrypted-wallet-path wallet.json
 ```
 
-This will deploy the paymaster on the `goerli` network. You should see a similar output when the deployment is successful:
+This will deploy the paymaster on the `ropsten` network. You should see a similar output when the deployment is successful:
 
 ```bash
 ℹ  info      Deploying paymaster My Paymaster
@@ -50,7 +50,7 @@ This will deploy the paymaster on the `goerli` network. You should see a similar
 After deploying your paymaster, you will need to fund it so that the paymaster will be able to pay for relayed transactions made. We can use this command to transfer 1 ETH to the paymaster for now. Replace `<paymaster-address>` with your own paymaster's address and `<value>` with the amount you want to send.
 
 ```bash
-npx @ethersproject/cli --account wallet.json --network goerli send 0xC234Fb1F1ef0ABCD1faC90ad12F4DfC97D583F95 1
+npx @ethersproject/cli --account wallet.json --network ropsten send 0xC234Fb1F1ef0ABCD1faC90ad12F4DfC97D583F95 1
 ```
 
 > There will be no prompting to key in you password, just key it in after command finishes loading
@@ -64,7 +64,7 @@ The paymaster is ready. You have to wait for clients to deploy their gsn capable
 In order to authorize your paymaster to pay for your contract we will need to configure the paymaster deployed earlier. We can use the `add-target` method to do so. You need to replace `<paymaster-address>` with your own paymaster and `<target-address>` with the address off the contract you intend to allow payment for.
 
 ```bash
-open-attestation paymaster add-target --network goerli --target-address 0x9Eb76E132fCA96779A5225419352Fb1B3B5Fd706 --paymaster-address 0xcB94584760bCA09e9fa7117C4eE966814f17a306 --encrypted-wallet-path wallet.json
+open-attestation paymaster add-target --network ropsten --target-address 0x9Eb76E132fCA96779A5225419352Fb1B3B5Fd706 --paymaster-address 0xcB94584760bCA09e9fa7117C4eE966814f17a306 --encrypted-wallet-path wallet.json
 ```
 
 You should see a similar output if the call is successful:
@@ -76,7 +76,7 @@ You should see a similar output if the call is successful:
 You can check if a contract is supported by the paymaster by using the following command:
 
 ```bash
-open-attestation paymaster supports-contract --network goerli --target-address 0x9Eb76E132fCA96779A5225419352Fb1B3B5Fd706 --paymaster-address 0xcB94584760bCA09e9fa7117C4eE966814f17a306
+open-attestation paymaster supports-contract --network ropsten --target-address 0x9Eb76E132fCA96779A5225419352Fb1B3B5Fd706 --paymaster-address 0xcB94584760bCA09e9fa7117C4eE966814f17a306
 ```
 
 ## Additional Resource

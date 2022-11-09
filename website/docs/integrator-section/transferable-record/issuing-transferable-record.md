@@ -20,7 +20,7 @@ You will require the following:
 To issue the transferable record, simply run the following command:
 
 ```sh
-open-attestation token-registry issue -a 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --tokenId 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea --to 0xec733A8322f8216eaf8e5566e750bfee3974B7f3 -n ropsten -f key.txt
+open-attestation token-registry issue -a 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --tokenId 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea --to 0xec733A8322f8216eaf8e5566e750bfee3974B7f3 -n goerli -f key.txt
 ```
 
 Note to replace the following values:
@@ -36,7 +36,7 @@ Once the document has been issued, you will be able to see an output similar to 
 …  awaiting  Sending transaction to pool
 …  awaiting  Waiting for transaction 0xc31bc1d99a725226552aff943ba4aa73ea79f93bd3ef0e7f5e63a5040af52457 to be mined
 ✔  success   Token with hash 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea has been issued on 0x8431012Bc040942B59e3C5bf428221eab0b2f723 with the initial recipient being 0xec733A8322f8216eaf8e5566e750bfee3974B7f3
-ℹ  info      Find more details at https://ropsten.etherscan.io/tx/0xc31bc1d99a725226552aff943ba4aa73ea79f93bd3ef0e7f5e63a5040af52457
+ℹ  info      Find more details at https://goerli.etherscan.io/tx/0xc31bc1d99a725226552aff943ba4aa73ea79f93bd3ef0e7f5e63a5040af52457
 ```
 
 Congratulation, you have successfully created your first transferable record.

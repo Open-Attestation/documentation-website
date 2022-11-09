@@ -15,7 +15,7 @@ This allow Transferable Records to be used for documents like:
 
 This tutorial builds onto the knowledge from the [verifiable document](/docs/integrator-section/verifiable-document/overview) section. If you have not completed the tutorial for verifiable document, please head back to the previous section.
 
-By the end of this tutorial you would be able to create your "Electronic Bill of Lading" that is valid on any OA Viewer connected to the Ethereum ropsten network.
+By the end of this tutorial you would be able to create your "Electronic Bill of Lading" that is valid on any OA Viewer connected to the Ethereum goerli network.
 
 With these knowledge you will be able to create transferable records according to your own business needs by:
 

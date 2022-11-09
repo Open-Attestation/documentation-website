@@ -22,7 +22,7 @@ In the example, we will use `0x6FFeD6E6591b808130a9b248fEA32101b5220eca` for bot
 To deploy a title escrow contract, run the following commands:
 
 ```sh
-open-attestation deploy title-escrow -f key.txt -n ropsten -b 0x6FFeD6E6591b808130a9b248fEA32101b5220eca -h 0x6FFeD6E6591b808130a9b248fEA32101b5220eca -r 0x8431012Bc040942B59e3C5bf428221eab0b2f723
+open-attestation deploy title-escrow -f key.txt -n goerli -b 0x6FFeD6E6591b808130a9b248fEA32101b5220eca -h 0x6FFeD6E6591b808130a9b248fEA32101b5220eca -r 0x8431012Bc040942B59e3C5bf428221eab0b2f723
 ```
 
 Note that you have to replace the beneficiary & holder address as well as the token registry address with your own.
@@ -34,7 +34,7 @@ Once the title escrow contract has been deployed, you will see an output similar
 …  awaiting  Sending transaction to pool
 …  awaiting  Waiting for transaction 0x328e2cbca342fa5883c899e7939560fdc20cc45dc4fd801577c56551e8579ef9 to be mined
 ✔  success   Title escrow deployed at 0xec733A8322f8216eaf8e5566e750bfee3974B7f3
-ℹ  info      Find more details at https://ropsten.etherscan.io/address/0xec733A8322f8216eaf8e5566e750bfee3974B7f3
+ℹ  info      Find more details at https://goerli.etherscan.io/address/0xec733A8322f8216eaf8e5566e750bfee3974B7f3
 ```
 
 > Store the contract address of the title escrow for use later.

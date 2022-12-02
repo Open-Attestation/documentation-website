@@ -11,6 +11,11 @@
   text-align: center;
 }
 
+.footer__logo {
+  width: 160px;
+  height: 180px;
+}
+
 blockquote {
   border-left-color: #fcd34d;
   background-color: #fffbeb;

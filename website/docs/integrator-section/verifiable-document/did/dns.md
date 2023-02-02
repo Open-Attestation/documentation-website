@@ -15,15 +15,15 @@ With your [wallet address](/docs/integrator-section/verifiable-document/did/crea
 open-attestation dns txt-record create --public-key did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller
 ```
 
-Take note that you need to prepend your wallet address by `did:ethr:` and append `#controller` to it. Indeed, open again your own DID on uniresolver (see previous step). Check the value of `didDocument.publicKey`. It should look like:
+Take note that you need to prepend your wallet address by `did:ethr:` and append `#controller` to it. Indeed, open again your own DID on uniresolver (see previous step). Check the value of `verificationMethod`. It should look like:
 
 ```json
 [
   {
     "id": "did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller",
-    "type": "Secp256k1VerificationKey2018",
+    "type": "EcdsaSecp256k1RecoveryMethod2020",
     "controller": "did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D",
-    "ethereumAddress": "0xacc51f664d647c9928196c4e33d46fd98fdaa91d"
+    "blockchainAccountId": "eip155:1:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D"
   }
 ]
 ```

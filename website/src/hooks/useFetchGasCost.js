@@ -18,7 +18,10 @@ const gasApiOptions = () => {
 
 const parseGasRes = (res) => {
   const estPrice = res.blockPrices[0].estimatedPrices[0];
-  return estPrice.price + estPrice.maxPriorityFeePerGas;
+  if (estPrice.price || estPrice.maxPriorityFeePerGas) {
+    return estPrice.price + estPrice.maxPriorityFeePerGas;
+  }
+  return 0;
 };
 
 const priceApi = {

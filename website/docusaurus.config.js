@@ -313,6 +313,9 @@ ${content}`,
       algoliaOptions: {}, // Optional, if provided by Algolia
       debug: false, // Set debug to true if you want to inspect the modal
     },
+    customFields: {
+      blockNativeApiKey: process.env.BLOCK_NATIVE_API_KEY || "DummyKey",
+    },
     prism: {
       theme: require("prism-react-renderer/themes/nightOwl"),
     },

@@ -1,21 +1,27 @@
 import React, { useEffect, useState } from "react";
-import { useRefresh } from './useRefresh';
+import { useRefresh } from "./useRefresh";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 const gasApi = {
-  ethereum: "https://blocknative-api.herokuapp.com/data",
-  polygon: "https://gasstation-mainnet.matic.network/v2",
+  ethereum: "https://api.blocknative.com/gasprices/blockprices",
+  polygon: "https://api.blocknative.com/gasprices/blockprices?chainid=137",
 };
 
-const parseGasRes = (chain, res) => {
-  switch (chain) {
-    case "ethereum":
-      const estPrice = res.estimatedPrices[1];
-      return estPrice.price + estPrice.maxPriorityFeePerGas;
-    case "polygon":
-      return res.fast.maxFee;
-    default:
-      return 0;
+const gasApiOptions = () => {
+  const { siteConfig } = useDocusaurusContext();
+  return {
+    headers: {
+      Authorization: siteConfig.blockNativeApiKey,
+    },
+  };
+};
+
+const parseGasRes = (res) => {
+  const estPrice = res.blockPrices[0].estimatedPrices[0];
+  if (estPrice.price || estPrice.maxPriorityFeePerGas) {
+    return estPrice.price + estPrice.maxPriorityFeePerGas;
   }
+  return 0;
 };
 
 const priceApi = {
@@ -25,14 +31,11 @@ const priceApi = {
 
 const fetchGasCostData = async (chain) => {
   try {
-    const [ethReq, gweiReq] = await Promise.all([
-      fetch(priceApi[chain]),
-      fetch(gasApi[chain]),
-    ]);
+    const [ethReq, gweiReq] = await Promise.all([fetch(priceApi[chain]), fetch(gasApi[chain], gasApiOptions)]);
     const [ethRes, gweiRes] = await Promise.all([ethReq.json(), gweiReq.json()]);
     return {
       price: ethRes.USD,
-      gwei: parseGasRes(chain, gweiRes),
+      gwei: parseGasRes(gweiRes),
     };
   } catch (e) {
     console.error(`Error: ${e.message}`);

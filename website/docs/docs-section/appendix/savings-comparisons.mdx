@@ -1,6 +1,6 @@
 ---
 id: savings-comparisons
-title: Token Registry V4 (Beta)
+title: Token Registry V4
 ---
 
 import { FiatLabel } from "../../../src/components/FiatLabel";
@@ -8,22 +8,16 @@ import { BoxTag } from "../../../src/components/BoxTag";
 import { Triangle } from "../../../src/components/Icon";
 import { useFetchGasCost } from "../../../src/hooks";
 
-Are you a new user of TradeTrust or looking at deploying a new Token Registry (Transferable Documents)? If you are, we'd totally suggest that you try out our new V4 beta version!
+Are you a new user of TradeTrust or looking at deploying a new Token Registry (Transferable Documents)? If you are, we'd totally suggest that you try out our new V4!
 
-Not only will you be able to try out the new features in the beta version, you will also enjoy massive cost savings when deploying your contracts!
-This page gives an estimated breakdown of the differences in gas fees between the two versions and how much savings you can make when using the new V4 beta.
+Not only will you be able to try out the new features in this version, you will also enjoy massive cost savings when deploying your contracts!
+This page gives an estimated breakdown of the differences in gas fees between the two versions and how much savings you can make when using the new V4.
 
-The V4 beta contracts can help to save up to about 92% in total gas fees compared to its previous versions.
-If the costs on Ethereum is still a concern despite the savings, you can consider deploying onto the Polygon network, which the beta repository comes preconfigured with.
+The V4 contracts can help to save up to about 92% in total gas fees compared to its previous versions.
+If the costs on Ethereum is still a concern despite the savings, you can consider deploying onto the Polygon network, which this V4 repository comes preconfigured with.
 The estimations on this page are based on the current prices on the Ethereum and Polygon mainnet.
 
-Now, if you are convinced to try our beta, check out our beta repository [here](https://github.com/Open-Attestation/token-registry/tree/beta)! 🎉
-
-:::warning
-The beta versions are in active development. Please expect bugs and breaking changes along the way. Be warned but be brave!💪
-
-Please report any issues or suggestions [here](https://github.com/Open-Attestation/token-registry/issues).
-:::
+Now, if you are convinced to try our new V4, check out our repository [here](https://github.com/Open-Attestation/token-registry/tree/master)! 🎉
 
 :::note
 Note that the following estimation is _not_ a comprehensive list of all the costs involved and should be used as a reference only.
@@ -55,7 +49,7 @@ const contractGasData = {
       remarks: (
         <>
           With{" "}
-          <a href="https://github.com/Open-Attestation/token-registry/tree/beta#quick-start" target="_blank">
+          <a href="https://github.com/Open-Attestation/token-registry/tree/master#quick-start" target="_blank">
             Quick Start
           </a>{" "}
           deployment in v4
@@ -128,7 +122,7 @@ const contractGasData = {
       remarks: (
         <>
           For{" "}
-          <a href="https://github.com/Open-Attestation/token-registry/tree/beta#stand-alone-contract" target="_blank">
+          <a href="https://github.com/Open-Attestation/token-registry/tree/master#stand-alone-contract" target="_blank">
             standalone
           </a>{" "}
           deployment in v4 (optional)
@@ -195,7 +189,7 @@ export const PriceTable = ({ type, chain, priceFormatOptions }) => {
           <tr>
             <th rowSpan="2">Action</th>
             <th colSpan="2">V3.x</th>
-            <th colSpan="2">V4 Beta</th>
+            <th colSpan="2">V4</th>
             <th rowSpan="2">Fiat Difference (USD)</th>
             <th rowSpan="2">Remarks</th>
           </tr>

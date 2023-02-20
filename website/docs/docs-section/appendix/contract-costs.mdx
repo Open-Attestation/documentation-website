@@ -7,6 +7,7 @@ sidebar_label: Contract Costs
 import { FiatLabel } from "../../../src/components/FiatLabel";
 import { DeploymentTypeLabel } from "../../../src/components/DeploymentTypeLabel";
 import { useFetchGasCost } from "../../../src/hooks";
+import { BoxTag } from "../../../src/components/BoxTag";
 
 Here is an estimated breakdown of the gas and costs involved when interacting with the contracts.
 You should be aware that the estimated gas required can differ slightly depending on the states of the contract when called. The gas prices and fiat costs are constantly changing and you should check the numbers from a source you trust to get an accurate figure.
@@ -19,11 +20,11 @@ The live (updated every 30s) gas _average_ and ETH prices used in the estimation
 
 ### Verifiable Documents
 
-<PriceTable type="verifiable" />
+<PriceTable type="verifiable" priceFormatOptions={{ maximumSignificantDigits: 3, minimumFractionDigits: 2 }} />
 
 ### Transferable Documents
 
-<PriceTable type="transferable" />
+<PriceTable type="transferable" priceFormatOptions={{ maximumSignificantDigits: 3, minimumFractionDigits: 2 }} />
 
 :::note
 The estimated gas may change along with the updates we have to the contracts. The current estimation is based on Document Store v2.2.3 and Token Registry v3.0.0.
@@ -101,8 +102,10 @@ const contractGasData = {
 
 export const PriceTable = (props) => {
   const { price, gwei } = useFetchGasCost("ethereum", 30000);
+  const { price: maticPrice, gwei: maticGwei } = useFetchGasCost("polygon", 30000);
   const priceFactor = gwei * 0.000000001 * price;
-  const { type } = props;
+  const maticPriceFactor = maticGwei * 0.000000001 * maticPrice;
+  const { type, priceFormatOptions } = props;
   const costData = contractGasData[type];
   const currentDtStr = new Date().toLocaleString("en-SG", { hour12: true, timeZoneName: "short" });
   const nf = new Intl.NumberFormat();
@@ -112,6 +115,13 @@ export const PriceTable = (props) => {
       <td>{nf.format(record.gas)}</td>
       <td>{priceFactor === 0 ? <em>Calculating...</em> : <FiatLabel>{record.gas * priceFactor}</FiatLabel>}</td>
       <td>
+        {maticPriceFactor === 0 ? (
+          <em>Calculating...</em>
+        ) : (
+          <FiatLabel {...priceFormatOptions}>{record.gas * maticPriceFactor}</FiatLabel>
+        )}
+      </td>
+      <td>
         <DeploymentTypeLabel deploymentType={record.deploymentType} remarks={record.remarks} />
       </td>
     </tr>
@@ -120,15 +130,23 @@ export const PriceTable = (props) => {
   return (
     <div>
       <p>
-        Estimations based on the current gas average at {gwei} gwei and ETH price at USD <FiatLabel>{price}</FiatLabel>{" "}
-        as at {currentDtStr}.
+        Estimations based on the current gas average at <BoxTag>{Math.ceil(gwei)} gwei (ETH)</BoxTag>, ETH price at USD{" "}
+        <BoxTag>
+          <FiatLabel>{price}</FiatLabel>
+        </BoxTag>{" "}
+        for <strong>Ethereum</strong> and <BoxTag>{Math.ceil(maticGwei)} gwei (MATIC)</BoxTag>, MATIC price at USD{" "}
+        <BoxTag>
+          <FiatLabel>{maticPrice}</FiatLabel>
+        </BoxTag>{" "}
+        for <strong>Polygon</strong> as at {currentDtStr}.
       </p>
       <table>
         <thead>
           <tr>
             <th style={tableHeaderStyle}>Action</th>
             <th style={tableHeaderStyle}>Estimated Gas</th>
-            <th style={tableHeaderStyle}>Estimated Fiat (USD)</th>
+            <th style={tableHeaderStyle}>Est. Fiat (USD) on Ethereum</th>
+            <th style={tableHeaderStyle}>Est. Fiat (USD) on Polygon</th>
             <th style={tableHeaderStyle}>Deployment Type</th>
           </tr>
         </thead>

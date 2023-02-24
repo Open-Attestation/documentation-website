@@ -143,7 +143,7 @@ It is not necessary that everything in `@context` has to appear in `credentialSu
 
 ```json
 {
-  "network": "ropsten",
+  "network": "goerli",
   "wallet": {
     "type": "ENCRYPTED_JSON",
     "encryptedJson": "{\"address\":\"1245e5b64d785b25057f7438f715f4aa5d965733\",\"id\":\"bf069d1b-4e88-487c-b695-f2e03ed7c1ff\",\"version\":3, ...}"

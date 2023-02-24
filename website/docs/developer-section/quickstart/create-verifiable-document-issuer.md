@@ -26,8 +26,8 @@ You should also have had MetaMask installed in your browser and created a wallet
    After successfully downloading MetaMask, open the extension and the application will guide you through wallet creation.
 
 3. Get some test ethers from any of these faucets:
-   - https://faucet.dimensions.network/
-   - https://faucet.metamask.io/
+   - https://goerlifaucet.com/
+   - https://goerli-faucet.pk910.de/
 
 ### Verifiable Document Components
 

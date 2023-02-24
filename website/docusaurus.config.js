@@ -27,119 +27,226 @@ const siteConfig = {
   ],
   plugins: [
     [
-      "@crossid/docusaurus-remote-content",
+      "docusaurus-plugin-remote-content",
       {
-        type: "docs",
-        contents: [
-          {
-            file: "/developer-section/libraries/remote-files/open-attestation.md",
-            url: "https://raw.githubusercontent.com/Open-Attestation/open-attestation/master/README.md",
-            meta: {
-              id: "open-attestation",
-              title: "Open Attestation",
-              hide_title: true,
-              sidebar_label: "Open Attestation",
-            },
-          },
-          {
-            file: "/developer-section/libraries/remote-files/open-attestation-cli.md",
-            url: "https://raw.githubusercontent.com/Open-Attestation/open-attestation-cli/master/README.md",
-            meta: {
-              id: "open-attestation-cli",
-              title: "Open Attestation (CLI)",
-              hide_title: true,
-              sidebar_label: "Open Attestation (CLI)",
-            },
-          },
-          {
-            file: "/developer-section/libraries/remote-files/open-attestation-encryption.md",
-            url: "https://raw.githubusercontent.com/Open-Attestation/oa-encryption/master/README.md",
-            meta: {
-              id: "open-attestation-encryption",
-              title: "Open Attestation (Encryption)",
-              hide_title: true,
-              sidebar_label: "Open Attestation (Encryption)",
-            },
-          },
-          {
-            file: "/developer-section/libraries/remote-files/open-attestation-verify.md",
-            url: "https://raw.githubusercontent.com/Open-Attestation/oa-verify/master/README.md",
-            meta: {
-              id: "open-attestation-verify",
-              title: "Open Attestation (Verify)",
-              hide_title: true,
-              sidebar_label: "Open Attestation (Verify)",
-            },
-          },
-          {
-            file:
-              "/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-components.md",
-            url:
-              "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-components/master/README.md",
-            meta: {
-              id: "decentralized-renderer-react-components",
-              title: "React Components",
-              hide_title: true,
-              sidebar_label: "React Components",
-            },
-          },
-          {
-            file:
-              "/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-template.md",
-            url:
-              "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-template/master/README.md",
-            meta: {
-              id: "decentralized-renderer-react-template",
-              title: "React Template",
-              hide_title: true,
-              sidebar_label: "React Template",
-            },
-          },
-          {
-            file:
-              "/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-svelte-template.md",
-            url:
-              "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-svelte-template/master/README.md",
-            meta: {
-              id: "decentralized-renderer-svelte-template",
-              title: "Svelte Template",
-              hide_title: true,
-              sidebar_label: "Svelte Template",
-            },
-          },
-          {
-            file:
-              "/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-vue-template.md",
-            url:
-              "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-vue-template/master/README.md",
-            meta: {
-              id: "decentralized-renderer-vue-template",
-              title: "Vue Template",
-              hide_title: true,
-              sidebar_label: "Vue Template",
-            },
-          },
-          {
-            file: "/developer-section/libraries/remote-files/document-store.md",
-            url: "https://raw.githubusercontent.com/Open-Attestation/document-store/master/README.md",
-            meta: {
-              id: "document-store",
-              title: "Document Store",
-              hide_title: true,
-              sidebar_label: "Document Store",
-            },
-          },
-          {
-            file: "/developer-section/libraries/remote-files/token-registry.md",
-            url: "https://raw.githubusercontent.com/Open-Attestation/token-registry/master/README.md",
-            meta: {
-              id: "token-registry",
-              title: "Token Registry",
-              hide_title: true,
-              sidebar_label: "Token Registry",
-            },
-          },
-        ],
+        name: "Open Attestation",
+        sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/open-attestation/master/",
+        outDir: "docs/developer-section/libraries/remote-files/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "open-attestation.md",
+            content: `---
+id: open-attestation
+title: Open Attestation
+hide_title: true
+sidebar_label: Open Attestation
+---
+
+${content}`,
+          };
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "Open Attestation (CLI)",
+        sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/open-attestation-cli/master/",
+        outDir: "docs/developer-section/libraries/remote-files/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "open-attestation-cli.md",
+            content: `---
+id: open-attestation-cli
+title: Open Attestation (CLI)
+hide_title: true
+sidebar_label: Open Attestation (CLI)
+---
+
+${content}`,
+          };
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "Open Attestation (Encryption)",
+        sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/oa-encryption/master/",
+        outDir: "docs/developer-section/libraries/remote-files/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "open-attestation-encryption.md",
+            content: `---
+id: open-attestation-encryption
+title: Open Attestation (Encryption)
+hide_title: true
+sidebar_label: Open Attestation (Encryption)
+---
+
+${content}`,
+          };
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "Open Attestation (Verify)",
+        sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/oa-verify/master/",
+        outDir: "docs/developer-section/libraries/remote-files/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "open-attestation-verify.md",
+            content: `---
+id: open-attestation-verify
+title: Open Attestation (Verify)
+hide_title: true
+sidebar_label: Open Attestation (Verify)
+---
+
+${content}`,
+          };
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "React Components",
+        sourceBaseUrl:
+          "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-components/master/",
+        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "decentralized-renderer-react-components.md",
+            content: `---
+id: decentralized-renderer-react-components
+title: React Components
+hide_title: true
+sidebar_label: React Components
+---
+
+${content}`,
+          };
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "React Template",
+        sourceBaseUrl:
+          "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-template/master/",
+        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "decentralized-renderer-react-template.md",
+            content: `---
+id: decentralized-renderer-react-template
+title: React template
+hide_title: true
+sidebar_label: React template
+---
+
+${content}`,
+          };
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "React Svelte Template",
+        sourceBaseUrl:
+          "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-svelte-template/master/",
+        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "decentralized-renderer-svelte-template.md",
+            content: `---
+id: decentralized-renderer-svelte-template
+title: Svelte Template
+hide_title: true
+sidebar_label: Svelte Template
+---
+
+${content}`,
+          };
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "Vue Template",
+        sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-vue-template/master/",
+        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "decentralized-renderer-vue-template.md",
+            content: `---
+id: decentralized-renderer-vue-template
+title: Vue Template
+hide_title: true
+sidebar_label: Vue Template
+---
+
+${content}`,
+          };
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "Document Store",
+        sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/document-store/master/",
+        outDir: "docs/developer-section/libraries/remote-files/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "document-store.md",
+            content: `---
+id: document-store
+title: Document Store
+hide_title: true
+sidebar_label: Document Store
+---
+
+${content}`,
+          };
+        },
+      },
+    ],
+    [
+      "docusaurus-plugin-remote-content",
+      {
+        name: "Token Registry",
+        sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/token-registry/master/",
+        outDir: "docs/developer-section/libraries/remote-files/",
+        documents: ["README.md"],
+        modifyContent(fileName, content) {
+          return {
+            filename: "token-registry.md",
+            content: `---
+id: token-registry
+title: Token Registry
+hide_title: true
+sidebar_label: Token Registry
+---
+
+${content}`,
+          };
+        },
       },
     ],
   ],
@@ -201,16 +308,19 @@ const siteConfig = {
 
     algolia: {
       appId: "M0GN6T3PD5",
-      apiKey: process.env.ALGOLIA_SEARCH_API_KEY || "dummykey",
+      apiKey: process.env.ALGOLIA_SEARCH_API_KEY || "DummyKey",
       indexName: "openattestation",
       algoliaOptions: {}, // Optional, if provided by Algolia
       debug: false, // Set debug to true if you want to inspect the modal
+    },
+    customFields: {
+      blockNativeApiKey: process.env.BLOCK_NATIVE_API_KEY || "DummyKey",
     },
     prism: {
       theme: require("prism-react-renderer/themes/nightOwl"),
     },
     image: "img/logos/oa.png",
-    metadatas: [{ name: "og:image", content: "img/logos/oa.png" }],
+    metadata: [{ name: "og:image", content: "img/logos/oa.png" }],
   },
 };
 

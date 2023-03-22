@@ -1,5 +1,6 @@
 import React from "react";
-import { useFetchGasPrice, FiatLabel } from "@govtechsg/open-attestation-utils";
+import { FiatLabel } from "@govtechsg/open-attestation-utils";
+import { useFetchGasPrice } from "../hooks";
 import { BoxTag } from "../BoxTag";
 import { Triangle } from "../Icon";
 

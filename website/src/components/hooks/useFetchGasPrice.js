@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { useRefresh } from "./useRefresh";
+import { useRefresh } from "@govtechsg/open-attestation-utils";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 const gasApi = {
@@ -42,7 +42,7 @@ const fetchGasCostData = async (chain) => {
   }
 };
 
-export const useFetchGasCost = (chain, interval = 0) => {
+export const useFetchGasPrice = (chain, interval = 0) => {
   const [price, setPrice] = useState(0);
   const [gwei, setGwei] = useState(0);
   const tick = useRefresh(interval);

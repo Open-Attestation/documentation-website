@@ -20,7 +20,7 @@ The steps are as follows:
 
 ## Prerequisites:
 
-Ensure that you have followed the documentation on how to issue an [Ethereum OA document](/docs/integrator-section/verifiable-document/ethereum/document-store-overview) or [DID OA document](/docs/integrator-section/verifiable-document/did/create) and have a valid OA document which you want to use. If you do not have an OA document, you may want to use our [sample HealthCert document](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json) to follow through the guide.
+Ensure that you have followed the documentation on how to issue an [Ethereum OA document](/docs/integrator-section/verifiable-document/ethereum/document-store-overview) or [DID OA document](/docs/integrator-section/verifiable-document/did/create), and have a valid OA document which you want to use. If you do not have an OA document, you may want to use our [sample HealthCert document](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json) to follow through the guide.
 
 ## Create your Verify URL
 
@@ -32,7 +32,7 @@ If you have your own OA document, you can use it as well.
 
 ### Encoding URL
 
-1. Copy the [sample document contents](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json) or if you are using your own OA document, open the file in a text editor and copy the file data.
+1. Copy the [sample document contents](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json). If you are using your own OA document, open the file in a text editor and copy the file data.
 
    ![Copy document content](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/copy-healthcert-data.png)
 
@@ -40,7 +40,9 @@ If you have your own OA document, you can use it as well.
 
    - We will be minifying/compressing the JSON data in the OA document to prevent additional characters from being encoded later in step (3)
    - You can use online tools like [Code Beautify](https://codebeautify.org/jsonminifier) to help you
+
      ![Paste document for encoding](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/minify-document-data.png)
+
    - Copy and paste the data, into a text editor (we will need it later)
 
 3. Encode your data using a URL Encoder
@@ -63,7 +65,7 @@ https://www.verify.gov.sg/verify?m=uri-fragment#<paste_your_encoded_data_here>
 
 ### Sample HTML File
 
-To standardize the HTML files being issued, HealthCerts Providers are encouraged to use the [sample HTML file](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html).
+To standardise the HTML files being issued, HealthCerts Providers are encouraged to use the [sample HTML file](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html).
 
 For simplicity, we will be using the contents from the [sample HTML file](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html). Then we will embed the Verify URL into the "Proceed" button so that users will be redirected to the Verify page upon clicking.
 

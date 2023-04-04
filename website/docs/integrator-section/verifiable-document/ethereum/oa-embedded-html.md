@@ -12,9 +12,9 @@ In this guide, we will create a HTML file with a "Proceed" button to redirect th
 
 The steps are as follows:
 
-1. Create our Verify URL by encoding and embedding the OA document data at the back of the Verify URL
-2. Create our HTML file to be issued (we will be using a [sample template](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html))
-3. Modify the button in the HTML file to contain our Verify URL. This button will redirect the user to the [Verify page](https://www.verify.gov.sg/) where the OA document will be verified and rendered accordingly.
+1. Create the Verify URL by encoding and embedding the OA document data at the back of the Verify URL
+2. Create the HTML file to be issued (we will be using a [sample template](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html))
+3. Modify the button in the HTML file to contain the Verify URL. This button will redirect the user to the [Verify page](https://www.verify.gov.sg/) where the OA document will be verified and rendered accordingly.
 
    ![Resultant HTML](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/html-proceed-verify.png)
 
@@ -38,7 +38,7 @@ If you have your own OA document, you can use it as well.
 
 2. Minify/ Compress the OA document data
 
-   - We will be minifying/compressing the JSON data in our OA document to prevent additional characters from being encoded later in step (3)
+   - We will be minifying/compressing the JSON data in the OA document to prevent additional characters from being encoded later in step (3)
    - You can use online tools like [Code Beautify](https://codebeautify.org/jsonminifier) to help you
      ![Paste document for encoding](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/minify-document-data.png)
    - Copy and paste the data, into a text editor (we will need it later)
@@ -50,7 +50,7 @@ If you have your own OA document, you can use it as well.
      ![Paste document for encoding](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/encode-document-data.png)
    - Copy and paste the encoded data into a text editor (we will need it later)
 
-### Create the Verify URL With OA Document Data
+### Create the Verify URL with OA Document Data
 
 - Open a text editor of your choice
 - Add the encoded data, which you have copied from earlier, after the hash `#` symbol in `https://www.verify.gov.sg/verify?m=uri-fragment#`.
@@ -65,7 +65,7 @@ https://www.verify.gov.sg/verify?m=uri-fragment#<paste_your_encoded_data_here>
 
 To standardize the HTML files being issued, HealthCerts Providers are encouraged to use the [sample HTML file](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html).
 
-For simplicity, we will be using the contents from the [sample HTML file](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html). Then we will embed our Verify URL into the "Proceed" button so that users will be redirected to the Verify page upon clicking.
+For simplicity, we will be using the contents from the [sample HTML file](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html). Then we will embed the Verify URL into the "Proceed" button so that users will be redirected to the Verify page upon clicking.
 
 ### Embed URL into Action Button
 
@@ -91,4 +91,4 @@ For simplicity, we will be using the contents from the [sample HTML file](https:
 4. Click on the "Proceed" button
 5. You should be redirected to the Verify page where your OA document is being verified and rendered on the screen.
 
-🎉 Congratulations, you have successfully created a HTML file with an OA document embedded Verify URL that redirects to our Verify page for verification!
+🎉 Congratulations, you have successfully created a HTML file with an OA document embedded Verify URL that redirects to the [Verify page](https://www.verify.gov.sg/) for verification!

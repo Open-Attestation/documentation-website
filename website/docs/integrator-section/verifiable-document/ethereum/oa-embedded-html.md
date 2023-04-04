@@ -91,4 +91,4 @@ For simplicity, we will be using the contents from the [sample HTML file](https:
 4. Click on the "Proceed" button
 5. You should be redirected to the Verify page where your OA document is being verified and rendered on the screen.
 
-🎉 Congratulations, you have successfully created a HTML file with an OA document embedded Verify URL that redirects to the [Verify page](https://www.verify.gov.sg/) for verification!
+🎉 Congratulations, you have successfully created a HTML file with an OA document embedded Verify URL that redirects to the Verify page for verification!

@@ -1,8 +1,10 @@
 ---
 id: oa-embedded-html
-title: Embed OA Doc in HTML File
-sidebar_label: Embed OA Doc in HTML File
+title: Embed OA Document in a HTML File
+sidebar_label: Embed OA Document in a HTML File
 ---
+
+**Note**: This guide is currently for OA documents that are verifiable on [verify.gov.sg](https://www.verify.gov.sg). Do ensure your OA document can be verified on [verify.gov.sg](https://www.verify.gov.sg) before continuing with this guide.
 
 Depending on your use case, after creating an issued/signed OA document, you may want to embed it into a HTML file for issuance.
 

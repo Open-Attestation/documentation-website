@@ -6,6 +6,8 @@ sidebar_label: Embed OA Document in a HTML File
 
 **Note**: This guide is currently for OA documents that are verifiable on [verify.gov.sg](https://www.verify.gov.sg). Do ensure your OA document can be verified on [verify.gov.sg](https://www.verify.gov.sg) before continuing with this guide.
 
+This step is optional for both Ethereum and DID documents, you may proceed to the next step if you do not need to embed the OA document in a HTML file.
+
 Depending on your use case, after creating an issued/signed OA document, you may want to embed it into a HTML file for issuance.
 
 ## How It Works

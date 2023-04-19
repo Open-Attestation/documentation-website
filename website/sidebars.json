@@ -132,7 +132,8 @@
         "developer-section/quickstart/create-verifiable-document-issuer",
         "developer-section/quickstart/create-custom-renderer",
         "developer-section/quickstart/create-custom-schema",
-        "developer-section/quickstart/configure-dns"
+        "developer-section/quickstart/configure-dns",
+        "developer-section/quickstart/oa-embedded-html"
       ]
     },
     {

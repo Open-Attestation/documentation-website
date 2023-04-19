@@ -38,14 +38,14 @@ If you have your own OA document, you can use it as well.
 
 1. Copy the [sample document contents](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json). If you are using your own OA document, open the file in a text editor and copy the file data.
 
-   ![Copy document content](/docs/developer-section/quickstart/oa-embedded-html/copy-healthcert-data.png)
+   ![Copy document data](/docs/developer-section/quickstart/oa-embedded-html/copy-healthcert-data.png)
 
 2. Minify/Compress the OA document
 
    - We will be minifying/compressing the JSON data in the OA document to prevent additional characters from being encoded later in step (3)
    - You can use online tools like [Code Beautify](https://codebeautify.org/jsonminifier) to help you
 
-     ![Paste document for encoding](/docs/developer-section/quickstart/oa-embedded-html/minify-document-data.png)
+     ![Minify document data](/docs/developer-section/quickstart/oa-embedded-html/minify-document-data.png)
 
    - Copy and paste the data, into a text editor (we will need it later)
 
@@ -53,7 +53,7 @@ If you have your own OA document, you can use it as well.
 
    - We will be encoding the data from step (2) so that it can be appended to the back of the Verify URL later on
    - You can use online tools like [urlencoder.org](https://www.urlencoder.org/) to help you
-     ![Paste document for encoding](/docs/developer-section/quickstart/oa-embedded-html/encode-document-data.png)
+     ![Encode document data](/docs/developer-section/quickstart/oa-embedded-html/encode-document-data.png)
    - Copy and paste the encoded data into a text editor (we will need it later)
 
 ### Create the Verify URL with OA Document Data

@@ -20,7 +20,7 @@ The steps are as follows:
 2. Create the HTML file to be issued (we will be using a [sample template](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html))
 3. Modify the button in the HTML file to contain the Verify URL. This button will redirect the user to the [Verify page](https://www.verify.gov.sg/) where the OA document will be verified and rendered accordingly.
 
-   ![Resultant HTML](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/html-proceed-verify.png)
+   ![Resultant HTML](/docs/docs-section/oa-embedded-html/html-proceed-verify.png)
 
 ## Prerequisites:
 
@@ -38,14 +38,14 @@ If you have your own OA document, you can use it as well.
 
 1. Copy the [sample document contents](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json). If you are using your own OA document, open the file in a text editor and copy the file data.
 
-   ![Copy document content](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/copy-healthcert-data.png)
+   ![Copy document content](/docs/docs-section/oa-embedded-html/copy-healthcert-data.png)
 
 2. Minify/Compress the OA document
 
    - We will be minifying/compressing the JSON data in the OA document to prevent additional characters from being encoded later in step (3)
    - You can use online tools like [Code Beautify](https://codebeautify.org/jsonminifier) to help you
 
-     ![Paste document for encoding](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/minify-document-data.png)
+     ![Paste document for encoding](/docs/docs-section/oa-embedded-html/minify-document-data.png)
 
    - Copy and paste the data, into a text editor (we will need it later)
 
@@ -53,7 +53,7 @@ If you have your own OA document, you can use it as well.
 
    - We will be encoding the data from step (2) so that it can be appended to the back of the Verify URL later on
    - You can use online tools like [urlencoder.org](https://www.urlencoder.org/) to help you
-     ![Paste document for encoding](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/encode-document-data.png)
+     ![Paste document for encoding](/docs/docs-section/oa-embedded-html/encode-document-data.png)
    - Copy and paste the encoded data into a text editor (we will need it later)
 
 ### Create the Verify URL with OA Document Data

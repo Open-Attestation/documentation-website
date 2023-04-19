@@ -1,7 +1,7 @@
 ---
 id: oa-embedded-html
-title: Embed OA Document in a HTML File
-sidebar_label: Embed OA Document in a HTML File
+title: Embedding Verifiable Document into an HTML file
+sidebar_label: Embedding Verifiable Document into an HTML file
 ---
 
 > **Note**: This guide is currently for OA documents that are verifiable on [verify.gov.sg](https://www.verify.gov.sg). Do ensure your OA document can be verified on [verify.gov.sg](https://www.verify.gov.sg) before continuing with this guide.
@@ -11,6 +11,7 @@ This step is optional for both Ethereum and DID documents, you may proceed to th
 Since an OpenAttestation document (`.OA`) is not a native file extension automatically recognised by devices, the OA-embedded HTML solution was introduced. This approach helps to encapsulate an OA document so that end-users can be directed directly to the verifier (with their document) just by clicking on a button presented by a locally-rendered HTML page.
 
 This is an optional procedure after creating an issued/signed OA document that is dependent on your use case (e.g. you want to make it more convenient for end-users who may not understand what to do with an OA document).
+
 ## How it works
 
 In this guide, we will create a HTML file with a "Proceed" button to redirect the user to [verify.gov.sg](https://www.verify.gov.sg/). The OA document will be embedded in the Verify URL for verification and rendering.
@@ -81,7 +82,7 @@ For simplicity, we will be using the contents from the [sample HTML file](https:
 
    ```html
    <p>
-    <!-- Replace the URL in the "href" value with your Verify URL -->
+     <!-- Replace the URL in the "href" value with your Verify URL -->
      <a
        id="oa-doc-link"
        class="btn-proceed"

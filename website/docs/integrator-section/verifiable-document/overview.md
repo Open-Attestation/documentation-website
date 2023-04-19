@@ -11,4 +11,4 @@ By the end of this guide, you would be able to create your 📜 Certificate of C
 
 - Use OpenAttestation with [Ethereum Smart Contract](/docs/integrator-section/verifiable-document/ethereum/document-store-overview)
 - Use OpenAttestation with [DID](/docs/integrator-section/verifiable-document/did/create)
-- [Embed OA document in a HTML file](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html)
+- [Embedding Verifiable Document into an HTML file](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html)

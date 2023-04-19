@@ -4,13 +4,14 @@ title: Embed OA Document in a HTML File
 sidebar_label: Embed OA Document in a HTML File
 ---
 
-**Note**: This guide is currently for OA documents that are verifiable on [verify.gov.sg](https://www.verify.gov.sg). Do ensure your OA document can be verified on [verify.gov.sg](https://www.verify.gov.sg) before continuing with this guide.
+> **Note**: This guide is currently for OA documents that are verifiable on [verify.gov.sg](https://www.verify.gov.sg). Do ensure your OA document can be verified on [verify.gov.sg](https://www.verify.gov.sg) before continuing with this guide.
 
 This step is optional for both Ethereum and DID documents, you may proceed to the next step if you do not need to embed the OA document in a HTML file.
 
-Depending on your use case, after creating an issued/signed OA document, you may want to embed it into a HTML file for issuance.
+Since an OpenAttestation document (`.OA`) is not a native file extension automatically recognised by devices, the OA-embedded HTML solution was introduced. This approach helps to encapsulate an OA document so that end-users can be directed directly to the verifier (with their document) just by clicking on a button presented by a locally-rendered HTML page.
 
-## How It Works
+This is an optional procedure after creating an issued/signed OA document that is dependent on your use case (e.g. you want to make it more convenient for end-users who may not understand what to do with an OA document).
+## How it works
 
 In this guide, we will create a HTML file with a "Proceed" button to redirect the user to [verify.gov.sg](https://www.verify.gov.sg/). The OA document will be embedded in the Verify URL for verification and rendering.
 
@@ -34,13 +35,13 @@ To get started, we will need to have an issued/signed OA document.
 
 If you have your own OA document, you can use it as well.
 
-### Encoding URL
+### Encoding the payload
 
 1. Copy the [sample document contents](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json). If you are using your own OA document, open the file in a text editor and copy the file data.
 
    ![Copy document content](/docs/integrator-section/verifiable-document/ethereum/oa-embedded-html/copy-healthcert-data.png)
 
-2. Minify/ Compress the OA document data
+2. Minify/Compress the OA document
 
    - We will be minifying/compressing the JSON data in the OA document to prevent additional characters from being encoded later in step (3)
    - You can use online tools like [Code Beautify](https://codebeautify.org/jsonminifier) to help you
@@ -61,31 +62,31 @@ If you have your own OA document, you can use it as well.
 - Open a text editor of your choice
 - Add the encoded data, which you have copied from earlier, after the hash `#` symbol in `https://www.verify.gov.sg/verify?m=uri-fragment#`.
 
-```bash
+```url
 https://www.verify.gov.sg/verify?m=uri-fragment#<paste_your_encoded_data_here>
 ```
 
-## Creating The HTML File
+## Creating the HTML file
 
-### Sample HTML File
+### Sample HTML file
 
 To standardise the HTML files being issued, HealthCerts Providers are encouraged to use the [sample HTML file](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html).
 
 For simplicity, we will be using the contents from the [sample HTML file](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html). Then we will embed the Verify URL into the "Proceed" button so that users will be redirected to the Verify page upon clicking.
 
-### Embed URL into Action Button
+### Replace the button link with your Verify URL
 
 1. Copy the [sample HTML file template](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html) and paste it into a text editor of your choice
 2. Replace the [the URL on this line](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html#L105) with your Verify URL from earlier
 
-   ```javascript
+   ```html
    <p>
+    <!-- Replace the URL in the "href" value with your Verify URL -->
      <a
        id="oa-doc-link"
        class="btn-proceed"
        alt="Proceed to view and verify document"
        title="Proceed to view and verify document"
-       // Replace the URL below with your Verify URL
        href="https://www.verify.gov.sg/verify?m=uri-fragment#<paste_your_encoded_data_here>"
      >
        Proceed

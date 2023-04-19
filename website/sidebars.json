@@ -80,7 +80,6 @@
                     "integrator-section/verifiable-document/ethereum/raw-document",
                     "integrator-section/verifiable-document/ethereum/wrapping-document",
                     "integrator-section/verifiable-document/ethereum/issuing-document",
-                    "integrator-section/verifiable-document/ethereum/oa-embedded-html",
                     "integrator-section/verifiable-document/ethereum/revoking-document",
                     "integrator-section/verifiable-document/ethereum/going-further"
                   ]
@@ -94,7 +93,6 @@
                     "integrator-section/verifiable-document/did/raw-document",
                     "integrator-section/verifiable-document/did/wrapping-document",
                     "integrator-section/verifiable-document/did/signing-document",
-                    "integrator-section/verifiable-document/did/oa-embedded-html",
                     "integrator-section/verifiable-document/did/revoking-document-ocsp",
                     "integrator-section/verifiable-document/did/revoking-document"
                   ]
@@ -134,7 +132,8 @@
         "developer-section/quickstart/create-verifiable-document-issuer",
         "developer-section/quickstart/create-custom-renderer",
         "developer-section/quickstart/create-custom-schema",
-        "developer-section/quickstart/configure-dns"
+        "developer-section/quickstart/configure-dns",
+        "developer-section/quickstart/oa-embedded-html"
       ]
     },
     {

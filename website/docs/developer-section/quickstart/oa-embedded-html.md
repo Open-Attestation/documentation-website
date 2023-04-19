@@ -22,7 +22,7 @@ The steps are as follows:
 
    ![Resultant HTML](/docs/developer-section/quickstart/oa-embedded-html/html-proceed-verify.png)
 
-## Prerequisites:
+## Prerequisites
 
 Ensure that you have followed the documentation on how to issue an [Ethereum OA document](/docs/integrator-section/verifiable-document/ethereum/document-store-overview) or [DID OA document](/docs/integrator-section/verifiable-document/did/create), and have a valid OA document which you want to use. If you do not have an OA document, you may want to use our [sample HealthCert document](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json) to follow through the guide.
 

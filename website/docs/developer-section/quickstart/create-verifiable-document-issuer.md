@@ -41,7 +41,7 @@ We will be building a single-page application which allows a user to:
 
 ## Setup
 
-First, we'll use [Create React App](https://github.com/facebook/create-react-app) to create a new single-page application.
+First, we'll use [Create Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite) to create a new single-page application using `react-ts` template.
 
 ```
 npm create vite@latest verifiable-document-issuer --template react-ts
@@ -139,13 +139,15 @@ export const deployDocumentStore = async (signer: JsonRpcSigner) => {
 
 This function deploys a Document Store from a `DocumentStoreFactory` and returns the address of the deployed Document Store. Typically, once the Document Store is deployed, we can save this address in a persistent storage and reuse it whenever we run the application. In order to keep things light-weight however, we will simply want to store this address in state.
 
-For convenience sake, we will create a file `AppContext.tsx` to house all the "global" states, while `AccountContext.tsx` for all metamask related states. You should look into other state management tools once your application scales up.
+We will create a file `DocumentStoreContext.tsx` to house all the Document Store related states, while `AccountContext.tsx` for all Metamask related states.
+
+You can checkout the [demo repo](https://github.com/Open-Attestation/demo-verifiable-document-issuer) for a compositing of multiple contexts technique, else you should look into other state management tools, once your application scales up.
 
 ```tsx
 import { createContext } from "react";
 import { documentStoreAddress } from "../types";
 
-export const AppContext = createContext<{
+export const DocumentStoreContext = createContext<{
   documentStoreAddress: documentStoreAddress;
   setDocumentStoreAddress: (documentStoreAddress: documentStoreAddress) => void;
 }>({
@@ -168,7 +170,7 @@ export const AccountContext = createContext<{
 });
 ```
 
-We can import `AppContext` and `AccountContext.tsx` into `App.tsx` so that the next few components we create have easy access to the `signer`, `documentStoreAddress` and any other values they might need.
+We can import `DocumentStoreContext` and `AccountContext.tsx` into `App.tsx` so that the next few components we create have easy access to the `signer`, `documentStoreAddress` and any other values they might need.
 
 In `App.tsx`
 
@@ -177,7 +179,7 @@ import { JsonRpcSigner } from "@ethersproject/providers";
 import { useEffect, useState } from "react";
 import { getAccount } from "../services/account";
 import { deployDocumentStore } from "../services/document-store";
-import { AppContext } from "./contexts/AppContext";
+import { DocumentStoreContext } from "./contexts/DocumentStoreContext";
 import { AccountContext } from "./contexts/AccountContext";
 
 const App = () => {
@@ -203,7 +205,7 @@ const App = () => {
   }, []);
 
   return (
-    <AppContext.Provider
+    <DocumentStoreContext.Provider
       value={{
         documentStoreAddress,
         setDocumentStoreAddress,
@@ -219,14 +221,14 @@ const App = () => {
           <button onClick={onDeploy}>Deploy</button>
         </main>
       </AccountContext.Provider>
-    </AppContext.Provider>
+    </DocumentStoreContext.Provider>
   );
 };
 
 export default App;
 ```
 
-Congrats on this simple demo!
+Congrats on this simple demo of using Metamask to deploy a Document Store!
 
 ---
 

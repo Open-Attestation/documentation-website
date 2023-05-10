@@ -34,10 +34,11 @@ You can read more about the components [here](/docs/integrator-section/verifiabl
 
 We will be building a single-page application which allows a user to:
 
-1. Deploy their own Document Store.
-2. Bind their own domain name to their verifiable document.
-3. Create and wrap a raw document.
-4. Issue, download and then verify the wrapped document.
+1. Connect to Metamask wallet.
+2. Deploy their own Document Store.
+3. Bind their own domain name to their verifiable document.
+4. Create and wrap a raw document.
+5. Issue, download and then verify the wrapped document.
 
 ## Setup
 
@@ -141,8 +142,6 @@ This function deploys a Document Store from a `DocumentStoreFactory` and returns
 
 We will create a file `DocumentStoreContext.tsx` to house all the Document Store related states, while `AccountContext.tsx` for all Metamask related states.
 
-You can checkout the [demo repo](https://github.com/Open-Attestation/demo-verifiable-document-issuer) for a compositing of multiple contexts technique, else you should look into other state management tools, once your application scales up.
-
 ```tsx
 import { createContext } from "react";
 import { documentStoreAddress } from "../types";
@@ -170,9 +169,9 @@ export const AccountContext = createContext<{
 });
 ```
 
-We can import `DocumentStoreContext` and `AccountContext.tsx` into `App.tsx` so that the next few components we create have easy access to the `signer`, `documentStoreAddress` and any other values they might need.
+We can now import `DocumentStoreContext` and `AccountContext.tsx` into `App.tsx` so that the next few components we create have easy access to the `signer`, `documentStoreAddress` and any other values they might need.
 
-In `App.tsx`
+In `App.tsx`:
 
 ```tsx
 import { JsonRpcSigner } from "@ethersproject/providers";
@@ -227,6 +226,8 @@ const App = () => {
 
 export default App;
 ```
+
+> You can checkout the [demo repo](https://github.com/Open-Attestation/demo-verifiable-document-issuer) for a compositing of multiple contexts technique. Otherwise you should look into other state management tools, once your application scales up.
 
 Congrats on this simple demo of using Metamask to deploy a Document Store!
 
@@ -325,7 +326,7 @@ export const Steps = () => {
 In this component, we are breaking down the steps and presenting it as a wizard. Namely:
 
 1. Connect Metamask Extension.
-   - We connect to metamask to get signer and networkId on click of the `Connect` button.
+   - We connect to Metamask to get signer and networkId on click of the `Connect` button.
 2. Deploy Document Store.
    - We deploy the Document Store on click of the `Deploy` button.
 3. Domain Name Configuration.

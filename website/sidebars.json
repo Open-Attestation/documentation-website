@@ -16,7 +16,11 @@
     {
       "type": "category",
       "label": "Appendix",
-      "items": ["docs-section/appendix/glossary", "docs-section/appendix/contract-costs", "docs-section/appendix/savings-comparisons"]
+      "items": [
+        "docs-section/appendix/glossary",
+        "docs-section/appendix/contract-costs",
+        "docs-section/appendix/savings-comparisons"
+      ]
     },
     "docs-section/faq",
     {
@@ -49,8 +53,7 @@
             "docs-section/deprecated/gsn/gsn-capable-document-store",
             "docs-section/deprecated/gsn/creating-a-custom-relay-provider"
           ]
-        },
-        "docs-section/deprecated/identity-mobile-app"
+        }
       ]
     }
   ],
@@ -144,7 +147,7 @@
         "developer-section/libraries/remote-files/open-attestation",
         "developer-section/libraries/remote-files/open-attestation-cli",
         "developer-section/libraries/remote-files/open-attestation-encryption",
-        
+
         {
           "type": "category",
           "label": "Verification",

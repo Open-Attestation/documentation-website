@@ -18,11 +18,6 @@ const products = [
     infoLink: "https://gallery.openattestation.com",
   },
   {
-    title: "Identity Wallet",
-    imageUrl: "img/products/identity-wallet.png",
-    infoLink: "/docs/appendix/identity-wallet",
-  },
-  {
     title: "TradeTrust",
     imageUrl: "img/products/tradetrust.png",
     infoLink: "https://tradetrust.io",

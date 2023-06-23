@@ -22,6 +22,11 @@ const products = [
     imageUrl: "img/products/tradetrust.png",
     infoLink: "https://tradetrust.io",
   },
+  {
+    title: "OpenAttestation Wallet (Reference implementation)",
+    imageUrl: "img/products/oa-wallet-ios-reference-implementation.png",
+    infoLink: "https://github.com/search?q=org%3AOpen-Attestation+oa-wallet&type=repositories",
+  },
 ];
 
 const features = [

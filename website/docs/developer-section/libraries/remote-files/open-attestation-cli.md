@@ -35,7 +35,7 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 
 > In all the guides, we will refer to the CLI as `open-attestation` when running a command. That means we will assume the CLI is available in your execution path. If it's not the case, you will to change `open-attestation` by the full path to the executable.
 
-> A configuration folder will be created in the `~/.config/open-attestation/`
+> A configuration folder will be created in the `~/.config/configstore/`
 
 ---
 
@@ -45,6 +45,7 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 | ------- | -------- | ---------- |
 | mainnet | 1        | Production |
 | goerli  | 5        | Test       |
+| sepolia | 11155111 | Test       |
 | polygon | 137      | Production |
 | mumbai  | 80001    | Test       |
 

@@ -18,10 +18,15 @@ From the folder containing the `raw-documents` folder, run:
 
 ```sh
 open-attestation wrap raw-documents --output-dir wrapped-documents
+```
+
+After running the CLI you will see the success message with the `Batch Document Root`. 
+
+```sh
 ✔  success   Batch Document Root: 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff
 ```
 
-After running the CLI you will see the success message with the `Batch Document Root`. In the above sample, the document root (also known as merkle root) is `0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff`, you will definitely have a different value.
+In the above sample, the document root (also known as merkle root) is `0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff`, you will definitely have a different value.
 
 > Save this value for future reference.
 

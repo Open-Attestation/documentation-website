@@ -99,7 +99,8 @@
                     "integrator-section/verifiable-document/did/revoking-document-ocsp",
                     "integrator-section/verifiable-document/did/revoking-document"
                   ]
-                }
+                },
+                "integrator-section/verifiable-document/differences"
               ]
             },
             {

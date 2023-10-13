@@ -35,29 +35,29 @@ The table compares the differences between the two methods in **bold**:
 
 ### Create a wallet or DID
 * In the Ethereum method, the user needs to [create a wallet](https://www.openattestation.com/docs/integrator-section/verifiable-document/ethereum/wallet).
-* In the DID method, the user needs to [create a DID](https://www.openattestation.com/docs/integrator-section/verifiable-document/did/create), which means creating a wallet and retrieving the private key.
+* In the DID method, the user needs to [create a DID](/docs/integrator-section/verifiable-document/did/create), which means creating a wallet and retrieving the private key.
 
 ### Deploy Document Store
 
 * The Ethereum method requires the deployment of Document Store at the beginning of the procedure, immediately after creating a wallet. 
-* The DID method requires the deployment of Document Store as an optional step and [one of the prerequisites to revoke a document](https://www.openattestation.com/docs/integrator-section/verifiable-document/did/revoking-document#prerequisites).
+* The DID method requires the deployment of Document Store as an optional step and [one of the prerequisites to revoke a document](/docs/integrator-section/verifiable-document/did/revoking-document#prerequisites).
 
 
 ### Configure DNS
 
-* The Ethereum method [binds the document issuer's identity](https://www.openattestation.com/docs/integrator-section/verifiable-document/ethereum/dns-proof) to a domain.
-* The DID method [only uses the wallet address](https://www.openattestation.com/docs/integrator-section/verifiable-document/did/dns) as signing credentials and binds it to a domain.
+* The Ethereum method [binds the document issuer's identity](/docs/integrator-section/verifiable-document/ethereum/dns-proof) to a domain.
+* The DID method [only uses the wallet address](/docs/integrator-section/verifiable-document/did/dns) as signing credentials and binds it to a domain.
 
 ### Create raw documents
 
-* The Ethereum method [binds the document store's identity](https://www.openattestation.com/docs/integrator-section/verifiable-document/ethereum/raw-document#1-issuers0identityprooflocation) to DNS name. 
-* The DID method [binds the wallet address](https://www.openattestation.com/docs/integrator-section/verifiable-document/did/raw-document#1-issuers0identityprooflocation) to the DNS name.
+* The Ethereum method [binds the document store's identity](/docs/integrator-section/verifiable-document/ethereum/raw-document#1-issuers0identityprooflocation) to DNS name. 
+* The DID method [binds the wallet address](/docs/integrator-section/verifiable-document/did/raw-document#1-issuers0identityprooflocation) to the DNS name.
 
 ### Issue or sign documents
 
-* The two methods use different commands to [issue](https://www.openattestation.com/docs/integrator-section/verifiable-document/ethereum/issuing-document#issuing-the-documents) or [sign](https://www.openattestation.com/docs/integrator-section/verifiable-document/did/signing-document#signing-the-documents) document.
+* The two methods use different commands to [issue](/docs/integrator-section/verifiable-document/ethereum/issuing-document#issuing-the-documents) or [sign](/docs/integrator-section/verifiable-document/did/signing-document#signing-the-documents) document.
 
 ### Revoke documents
 
-* The Ethereum method lets the user revoke documents using [Document Store](https://www.openattestation.com/docs/integrator-section/verifiable-document/ethereum/revoking-document#revoking-a-document).
-* The DID method lets the user revoke documents using either [Online Certificate Status Protocol (OCSP) responder](https://www.openattestation.com/docs/integrator-section/verifiable-document/did/revoking-document-ocsp) or [Document Store](https://www.openattestation.com/docs/integrator-section/verifiable-document/did/revoking-document).
+* The Ethereum method lets the user revoke documents using [Document Store](/docs/integrator-section/verifiable-document/ethereum/revoking-document#revoking-a-document).
+* The DID method lets the user revoke documents using either [Online Certificate Status Protocol (OCSP) responder](/docs/integrator-section/verifiable-document/did/revoking-document-ocsp) or [Document Store](/docs/integrator-section/verifiable-document/did/revoking-document).

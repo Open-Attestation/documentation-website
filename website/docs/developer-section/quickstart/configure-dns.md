@@ -45,7 +45,6 @@ The `netId` corresponds to the [network ID for the different Ethereum networks](
 | Network ID | Name                     | Network   |
 | ---------- | ------------------------ | --------- |
 | `1`        | Ethereum Mainnet         | `mainnet` |
-| `5`        | Ethereum Testnet Goerli  | `goerli`  |
 | `11155111` | Ethereum Testnet Sepolia | `sepolia` |
 
 For more information on switching to production mode, refer to the [Additional Note for Identity Proof in Production](#additional-note-for-identity-proof-in-production) section below.
@@ -60,7 +59,7 @@ After adding the `TXT` record, we recommend you to check that the record has bee
 
 ### Additional Note for Identity Proof in Production
 
-The `TXT` record above is for use for documents issued on the Ethereum `goerli` network. To bind the identity in production where your documents are issued in the Ethereum `mainnet` network, you will have to change `netId` to `1`.
+The `TXT` record above is for use for documents issued on the Ethereum `sepolia` network. To bind the identity in production where your documents are issued in the Ethereum `mainnet` network, you will have to change `netId` to `1`.
 
 An example of a valid `TXT` record for Ethereum `mainnet` network is as shown:
 

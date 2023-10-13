@@ -18,11 +18,11 @@ Currently, there exists 2 web application:
 
 ![Admin Interface](/docs/integrator-section/webapp-tutorial/document-store-webapp/interface.png)
 
-## Change Metamask Network to Goerli
+## Change Metamask Network to Sepolia
 
-![Connecting Metamask to Goerli](/docs/integrator-section/webapp-tutorial/document-store-webapp/goerli.png)
+![Connecting Metamask to Sepolia](/docs/integrator-section/webapp-tutorial/document-store-webapp/sepolia.png)
 
-Connect Metamask to the Ethereum `goerli` network by selecting _Goerli Test Network_ in the Google Chrome plugin's header. You may be asked to log in at this step if you have not done so.
+Connect Metamask to the Ethereum `sepolia` network by selecting _Sepolia Test Network_ in the Google Chrome plugin's header. You may be asked to log in at this step if you have not done so.
 
 ## Connect Metamask to Web App
 

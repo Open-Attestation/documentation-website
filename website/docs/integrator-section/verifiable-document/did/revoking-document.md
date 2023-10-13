@@ -10,8 +10,8 @@ It is possible to revoke a signed document only if you fulfill certain **prerequ
 - An `ethr` DID (if you have been following the above steps, you should have one already)
 - Some kind of DID documents:
   1. Base DID document (`ISSUER_IDENTITY`: `identityProof.identifier` against `ethr` DID)
-  2. DID-DNS document (`ISSUER_IDENTITY`: `identityProof.identifier` against a [DNS-TXT](/website/docs/docs-section/how-does-it-work/issuance-identity))
-- A deployed `documentStore`, click [here](/website/docs/integrator-section/verifiable-document/ethereum/document-store) for how to do so.
+  2. DID-DNS document (`ISSUER_IDENTITY`: `identityProof.identifier` against a [DNS-TXT](/docs/docs-section/how-does-it-work/issuance-identity))
+- A deployed `documentStore`, click [here](/docs/integrator-section/verifiable-document/ethereum/document-store) for how to do so.
 - Before you wrap your document with the wrapper SDK, add a `revocation` block with these keys:
 
 ```json
@@ -56,7 +56,7 @@ open-attestation document-store revoke --address <DOCUMENT_STORE_LOCATION> --has
 
 ## Frequently asked questions (FAQ)
 
-Q: [This article](/website/docs/docs-section/how-does-it-work/comparison#price) mentioned that if I use DID documents, I will not need to pay for transactions. But following this procedure, why do I still have to pay for at least 1 transaction (deploying a `documentStore`)?
+Q: [This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if I use DID documents, I will not need to pay for transactions. But following this procedure, why do I still have to pay for at least 1 transaction (deploying a `documentStore`)?
 
 A: Yes, that's correct. In the current version, this implementation will still need at least 1 transaction to the Ethereum blockchain.
 

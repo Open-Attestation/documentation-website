@@ -8,9 +8,9 @@ sidebar_label: Deploying Document Store Or OCSP
 
 > **Important:** If you have run the Ethereum method and created a document store, do not use it in the DID method.
 
-<!-- The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `goerli` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions. -->
+The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `goerli` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions.
 
-<embed src="/docs/reusable_snippets/_document-store-overview-snippet.md" />
+<!-- <embed src="/docs/reusable_snippets/_document-store-overview-snippet.md" /> -->
 
 
 ### Run the deploy document-store command

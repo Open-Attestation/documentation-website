@@ -1,0 +1,1 @@
+The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `goerli` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions.

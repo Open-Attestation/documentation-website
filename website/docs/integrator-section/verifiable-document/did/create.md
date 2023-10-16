@@ -52,5 +52,4 @@ Please note that you will definitely get different values.
 > In order to make the tutorial easier to follow, we decided to reveal all the information about the wallet we used, including the private key. We used a throw-away wallet for that purpose. That means that we will never use this wallet again. It's very important that you **NEVER SHARE THE PRIVATE KEY** of your wallet.
 
 You can check your DID at
-https://dev.uniresolver.io/1.0/identifiers/did:ethr:CHANGE_BY_YOUR_WALLET_ADDRESS (for instance with [check this url](https://dev.uniresolver.io/1.0/identifiers/did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D) with the example above)
-)
+https://dev.uniresolver.io/1.0/identifiers/did:ethr:CHANGE_BY_YOUR_WALLET_ADDRESS (for instance with [check this url](https://dev.uniresolver.io/1.0/identifiers/did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D) with the example above).

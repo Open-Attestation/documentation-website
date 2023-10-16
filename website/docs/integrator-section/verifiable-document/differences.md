@@ -1,17 +1,11 @@
 ---
-id: differences
-title: Differences between the Ethereum and DID methods
-sidebar_label: Differences
+title: Differences between Ethereum and DID
+sidebar_label: Differences between Ethereum and DID
 ---
-
-# Differences between the Ethereum and DID methods
-
-
-## Overview
 
 The flowchart provides an overview of the differences between the Ethereum and DID methods:
 
-![alt_text](/website/static/img/ETH-DID-differences.svg "Differences between the two methods")
+![alt_text](/img/ETH-DID-differences.svg)
 
 
 Note: The arrow ("⏶" or “⏷”) means there are differences between the similar steps. See the table to learn more.
@@ -34,7 +28,7 @@ The table compares the differences between the two methods in **bold**:
 ## Details explained
 
 ### Create a wallet or DID
-* In the Ethereum method, the user needs to [create a wallet](https://www.openattestation.com/docs/integrator-section/verifiable-document/ethereum/wallet).
+* In the Ethereum method, the user needs to [create a wallet](/docs/integrator-section/verifiable-document/ethereum/wallet).
 * In the DID method, the user needs to [create a DID](/docs/integrator-section/verifiable-document/did/create), which means creating a wallet and retrieving the private key.
 
 ### Deploy Document Store

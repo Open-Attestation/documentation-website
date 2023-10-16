@@ -92,11 +92,11 @@
                   "type": "category",
                   "items": [
                     "integrator-section/verifiable-document/did/create",
+                    "integrator-section/verifiable-document/did/document-store-or-ocsp",
                     "integrator-section/verifiable-document/did/dns",
                     "integrator-section/verifiable-document/did/raw-document",
                     "integrator-section/verifiable-document/did/wrapping-document",
                     "integrator-section/verifiable-document/did/signing-document",
-                    "integrator-section/verifiable-document/did/revoking-document-ocsp",
                     "integrator-section/verifiable-document/did/revoking-document"
                   ]
                 },

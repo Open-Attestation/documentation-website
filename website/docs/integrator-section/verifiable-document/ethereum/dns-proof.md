@@ -19,16 +19,18 @@ We will be inserting a temporary DNS record on our DNS at `sandbox.openattestati
 With your [document store](/docs/integrator-section/verifiable-document/ethereum/document-store), run the following command:
 
 ```bash
-open-attestation dns txt-record create --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --network-id 3
+open-attestation dns txt-record create --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --network-id 5
 ```
 
 The `network-id` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). We generally use only the following networks:
 
-| Network ID | Name                     | Network   |
-| ---------- | ------------------------ | --------- |
-| `1`        | Ethereum Mainnet         | `mainnet` |
-| `5`        | Ethereum Testnet Goerli  | `goerli`  |
-| `11155111` | Ethereum Testnet Sepolia | `sepolia` |
+| Network ID | Name                     | Network   | Currency |
+| ---------- | ------------------------ | --------- | -------- |
+| `1`        | Ethereum Mainnet         | `mainnet` | ETH      |
+| `5`        | Ethereum Testnet Goerli  | `goerli`  | ETH      |
+| `11155111` | Ethereum Testnet Sepolia | `sepolia` | ETH      |
+| `137`      | Polygon Mainnet          | `polygon` | MATIC    |
+| `80001`    | Polygon Testnet Mumbai   | `mumbai`  | MATIC    |
 
 Once the DNS TXT record has been successfully deployed, you will see the success message with the bound location.
 

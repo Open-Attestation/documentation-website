@@ -1,18 +1,21 @@
 ---
-title: Revoking Documents (Document Store)
-sidebar_label: Revoking Documents (Document Store)
+title: Revoking Documents
+sidebar_label: Revoking Documents Using Document Store Or OCSP
 ---
+Depending on whether you have deoployed the Document Store or OCSP, use one of them to revoke documents.
 
-It's possible to revoke a signed document only if you fulfill certain **prerequisites**. Any future progress can be followed [here](https://github.com/Open-Attestation/adr/blob/master/issuing_using_did.md#for-documents-that-are-signed-directly).
+## Revoking using Document Store
 
-## Prerequisites:
+It is possible to revoke a signed document only if you fulfill certain **prerequisites**. Any future progress can be followed [here](https://github.com/Open-Attestation/adr/blob/master/issuing_using_did.md#for-documents-that-are-signed-directly).
 
-- an `ethr` DID (if you've been following the above steps, you should have one already)
-- some kind of DID documents:
-  1. base DID document (`ISSUER_IDENTITY`: `identityProof.identifier` against `ethr` DID)
+### Prerequisites
+
+- An `ethr` DID (if you have been following the above steps, you should have one already)
+- Some kind of DID documents:
+  1. Base DID document (`ISSUER_IDENTITY`: `identityProof.identifier` against `ethr` DID)
   2. DID-DNS document (`ISSUER_IDENTITY`: `identityProof.identifier` against a [DNS-TXT](/docs/docs-section/how-does-it-work/issuance-identity))
-- a deployed `documentStore`, click [here](/docs/integrator-section/verifiable-document/ethereum/document-store) for how to do so.
-- before you wrap your document with the wrapper SDK, add a `revocation` block with these keys:
+- A deployed `documentStore`, click [here](/docs/integrator-section/verifiable-document/ethereum/document-store) for how to do so.
+- Before you wrap your document with the wrapper SDK, add a `revocation` block with these keys:
 
 ```json
 {
@@ -40,24 +43,70 @@ It's possible to revoke a signed document only if you fulfill certain **prerequi
 
 <!-- TBD v3 document sample when that releases -->
 
-- note that the `<DEPLOYED_DOCUMENT_STORE_LOCATION>` is your `documentStore` location, it must be **deployed** on the ethereum block chain (for now. Further implementations will relax this requirement so that DID documents will truly be gasless).
-- wrap your document, sign it and appending the signature to the document (follow the tutorial)
+- Note that the `<DEPLOYED_DOCUMENT_STORE_LOCATION>` is your `documentStore` location, it must be **deployed** on the Ethereum block chain (for now. Further implementations will relax this requirement, so that DID documents will truly be gasless).
+- Wrap your document, sign it, and append the signature to the document (follow the tutorial)
 
-## Revoking a document:
+### Revoking a document
 
-- once you have achieved the prerequisites, you would have a document that could be revoked on a deployed `documentStore`.
-- how one does this is by simply invoking the command to revoke a document from the ethereum flow (use the cli):
+- Once you have fulfilled the prerequisites, you will have a document that can be revoked on a deployed `documentStore`.
+- Simply invoke the command to revoke a document from the Ethereum flow (use the CLI):
+
+    **Note:** Before running the command, replace the variables with the actual names to fit your case. 
+
+    
 
 ```bash
 open-attestation document-store revoke --address <DOCUMENT_STORE_LOCATION> --hash <HASH_OF_DOC(S)>  --network <NETWORK> --encrypted-wallet-path <PATH_OF_WALLET>
 ```
 
-## Misc questions:
+### Frequently asked questions (FAQ)
 
-Q: hey you [mentioned](/docs/docs-section/how-does-it-work/comparison#price) that if I use DID documents, I would not need to pay for transactions, but following this flow, I would still have to pay for at least 1 transaction (deploying a `documentStore`), what gives?
+Q: [This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if I use DID documents, I will not need to pay for transactions. But following this procedure, why do I still have to pay for at least 1 transaction (deploying a `documentStore`)?
 
-A: yes, you are right, for now this implementation will still need at least 1 transaction to the ethereum blockchain. We are working on this so please be patient and watch this space.`
+A: Yes, that's correct. In the current version, this implementation will still need at least 1 transaction to the Ethereum blockchain.
 
-Q: this might be a weird question but I did not issue any documents from the deployed `documentStore`, how am I able to revoke this document from said `documentStore` when in the first place, I did not even issue anything?
+Q: Although I did not issue any documents from the deployed `documentStore`, how can revoke this document from the same `documentStore`?
 
-A: long story short, the revocation mapping in the `documentStore` is a separate mapping from the issued mapping.
+A: That's because the revocation mapping in the `documentStore` is separate from the issued mapping.
+
+
+## Revoking using OCSP
+You can also revoke a document using your own Online Certificate Status Protocol (OCSP) responder. In short, an OCSP responder would be a service that would respond with the revocation status of a certificate and the reason it was revoked.
+
+### Revocation type and location
+
+You would require a DID document with
+
+- `revocation.type` : `OCSP_RESPONDER`
+- `revocation.location`: `https://ocsp-sandbox.openattestation.com`
+
+Replace the `revocation.type` and `revocation.location` values to fit your case.
+
+```json
+{
+  "$template": {
+    "name": "main",
+    "type": "EMBEDDED_RENDERER",
+    "url": "https://tutorial-renderer.openattestation.com"
+  },
+  "recipient": {
+    "name": "John Doe"
+  },
+  "issuers": [
+    {
+      ....
+      "name": "Demo Issuer",
+      "revocation": {
+        "type": "OCSP_RESPONDER",
+        "location": "<OCSP_RESPONDER_URL>"
+      },
+      ...
+    }
+  ]
+}
+```
+
+### Revoking a document
+
+Refer to [this readme](https://github.com/Open-Attestation/ocsp-responder/blob/main/README.md) to learn how to add a document to the OA OCSP Responder.
+

@@ -7,8 +7,7 @@ While there exists many [DIDs](/docs/docs-section/appendix/glossary#did), this t
 
 The creation of an `ethr` DID is identical to [the creation of a wallet](/docs/integrator-section/verifiable-document/ethereum/wallet), as it relies entirely on the ethereum architecture. Once the wallet will be created, we will need to retrieve its private key. 
 
-## Creating the wallet
-Run the command:
+## Running the wallet create command
    ```bash
    open-attestation wallet create --of wallet.json
    ```

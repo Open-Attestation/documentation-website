@@ -5,7 +5,7 @@ sidebar_label: Differences between Ethereum and DID
 
 The flowchart provides an overview of the differences between the Ethereum and DID methods:
 
-![alt_text](/img/ETH-DID-differences.svg)
+![Ethereum and DID differences](/docs/integrator-section/verifiable-document/differences/ETH-DID-differences.svg)
 
 
 >**Note:** The arrow ("⏶" or “⏷”) means there are differences between the similar steps. See the table to learn more.

@@ -8,7 +8,7 @@ The flowchart provides an overview of the differences between the Ethereum and D
 ![alt_text](/img/ETH-DID-differences.svg)
 
 
-Note: The arrow ("⏶" or “⏷”) means there are differences between the similar steps. See the table to learn more.
+>**Note:** The arrow ("⏶" or “⏷”) means there are differences between the similar steps. See the table to learn more.
 
 ## Side-by-side comparison
 
@@ -54,4 +54,4 @@ The table compares the differences between the two methods in **bold**:
 ### Revoke documents
 
 * The Ethereum method lets the user revoke documents using [Document Store](/docs/integrator-section/verifiable-document/ethereum/revoking-document#revoking-a-document).
-* The DID method lets the user revoke documents using either [Online Certificate Status Protocol (OCSP) responder](/docs/integrator-section/verifiable-document/did/revoking-document-ocsp) or [Document Store](/docs/integrator-section/verifiable-document/did/revoking-document).
+* The DID method lets the user revoke documents using either [Document Store](/docs/integrator-section/verifiable-document/did/revoking-document#revoking-using-document-store) or [Online Certificate Status Protocol (OCSP) responder](/docs/integrator-section/verifiable-document/did/revoking-document#revoking-using-ocsp).

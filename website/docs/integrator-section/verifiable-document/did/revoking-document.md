@@ -1,6 +1,6 @@
 ---
 title: Revoking Documents
-sidebar_label: Revoking Documents Using Document Store Or OCSP
+sidebar_label: Revoking Documents Using Document Store or OCSP
 ---
 Depending on whether you have deoployed the Document Store or OCSP, use one of them to revoke documents.
 

@@ -1,7 +1,7 @@
 ---
 id: wallet
-title: Creating a wallet
-sidebar_label: Creating a wallet
+title: Creating a Wallet
+sidebar_label: Creating a Wallet
 ---
 
 The first step that we will need to go through, is the [wallet](/docs/docs-section/appendix/glossary#wallet) creation:

@@ -8,29 +8,36 @@ Every OA document has a checksum that provides it a tamper-proof property. At th
 
 Multiple documents can be wrapped at the same time in a single batch operation, creating a single checksum for the entire batch of raw documents. This is especially useful when using document store on the Ethereum blockchain to lower the transaction cost and time.
 
-In this guide, we will learn how to generate the checksum by running the `wrapping` process.
+In this task, we will learn how to generate the checksum by running the `wrapping` process.
 
 We will use the CLI tool to read all the files in the `raw-documents` folder, wrap them and then output the files in another directory `wrapped-documents`.
 
 A `merkleRoot`, a 64 character long string prepended with `0x` will be generated. The `merkleRoot` is the only information that will be stored onto the Blockchain to verify the issuance status of an OA document.
 
-From the folder containing the `raw-documents` folder, run:
+## Running the wrap command
+
+From the folder containing the `raw-documents` folder, run the command:
 
 ```sh
 open-attestation wrap raw-documents --output-dir wrapped-documents
 ```
 
-After running the CLI you will see the success message with the `Batch Document Root`. 
+## Getting the response
+
+In the response, you will see the success message with the `Batch Document Root`. 
 
 ```sh
 ✔  success   Batch Document Root: 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff
 ```
 
-In the above sample, the document root (also known as merkle root) is `0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff`, you will definitely have a different value.
+## Saving the merkle root
+In the above sample, the batch document root (also known as "merkle root") is `0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff`, you will definitely have a different value.
 
-> Save this value for future reference.
+Save this value for future reference.
 
-At the same time, you will notice that another directory, `wrapped-document`, has been created:
+## Viewing the wrapped documents
+
+At the same time, you will notice that another directory `wrapped-documents` has been created:
 
 ```text
 wallet.json
@@ -42,4 +49,4 @@ wrapped-documents
   |-- certificate-2.json
 ```
 
-In the `wrapped-document` directory, you will find the wrapped document which can be sent to the recipient later once the `merkleRoot` has been issued to the document store.
+In the `wrapped-documents` directory, you will find the wrapped document which can be sent to the recipient later, once the `merkleRoot` has been issued to the document store.

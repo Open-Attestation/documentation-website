@@ -8,7 +8,7 @@ After wrapping the documents and obtaining a merkle root, the documents are read
 ## Signing the documents
 
 ```bash
-open-attestation sign ./wrapped-documents --od ./signed-documents --public-key did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller --key 0x7b227ac59116f3eeb2b265422cf3cbfbd244c525961fb297eb52153ec62aa845
+open-attestation sign ./wrapped-documents-DID --od ./signed-documents-DID --public-key did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller --key 0x7b227ac59116f3eeb2b265422cf3cbfbd244c525961fb297eb52153ec62aa845
 ```
 
 In the example above:
@@ -17,7 +17,7 @@ In the example above:
 - `key` is the wallet private key, generated when [creating the wallet](/docs/integrator-section/verifiable-document/did/create)
 
 ```text
-✔  success   Signed documents saved to ./signed-documents
+✔  success   Signed documents saved to ./signed-documents-DID
 ```
 
 ## Verifying the documents

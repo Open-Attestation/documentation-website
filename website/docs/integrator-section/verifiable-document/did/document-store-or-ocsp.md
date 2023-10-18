@@ -43,4 +43,6 @@ In the example above, the document store address is `0x3AaeBb82BbF0513B422532953
 Save the document store address somewhere. You will need this address later to complete the tutorial.
 
 ## Deploying OCSP
-To deploy your own Online Certificate Status Protocol (OCSP) responder, see [this repository on GitHub](https://github.com/Open-Attestation/ocsp-responder).
+A reference implementation for deploying the OCSP responder is available at [this repository on GitHub](https://github.com/Open-Attestation/ocsp-responder).
+
+>**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OA framework.

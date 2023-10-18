@@ -14,6 +14,6 @@ At the end of this guide, you will be able to create your 📜 Certificate of Co
 - Use OpenAttestation with [Ethereum Smart Contract](/docs/integrator-section/verifiable-document/ethereum/document-store-overview)
 - Use OpenAttestation with [DID](/docs/integrator-section/verifiable-document/did/create)
 
-## Additional Feature
+## Additional feature
 
 If you need to embed the verifiable document into an HTML file, see [this article](/docs/developer-section/quickstart/oa-embedded-html).

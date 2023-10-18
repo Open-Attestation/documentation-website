@@ -24,13 +24,14 @@ open-attestation dns txt-record create --address 0xBBb55Bd1D709955241CAaCb327A76
 
 The `network-id` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). We generally use only the following networks:
 
-| Network ID | Name                     | Network   | Currency |
-| ---------- | ------------------------ | --------- | -------- |
-| `1`        | Ethereum Mainnet         | `mainnet` | ETH      |
-| `5`        | Ethereum Testnet Goerli  | `goerli`  | ETH      |
-| `11155111` | Ethereum Testnet Sepolia | `sepolia` | ETH      |
-| `137`      | Polygon Mainnet          | `polygon` | MATIC    |
-| `80001`    | Polygon Testnet Mumbai   | `mumbai`  | MATIC    |
+| Network ID | Name                     | Network      | Type       |
+| ---------- | ------------------------ | ------------ | ---------- |
+| `1`        | Ethereum Mainnet         | `mainnet`    | Production |
+| `11155111` | Ethereum Testnet Sepolia | `sepolia`    | Test       |
+| `137`      | Polygon Mainnet          | `polygon`    | Production |
+| `80001`    | Polygon Testnet Mumbai   | `mumbai`     | Test       |
+| `50`       | XDC Network              | `xdc`        | Production |
+| `51`       | XDC Apothem Network      | `xdcapothem` | Test       |
 
 ## Getting the response
 Once the DNS TXT record has been successfully deployed, you will see the success message with the bound location.

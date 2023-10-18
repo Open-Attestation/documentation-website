@@ -14,17 +14,21 @@ Currently, there exists 2 web application:
 ## Prerequisites
 
 - Google Chrome web browser
-- Metamask setup
+- Metamask setup (You need to install Metamask extension in Google Chrome)
 
 ![Admin Interface](/docs/integrator-section/webapp-tutorial/document-store-webapp/interface.png)
 
-## Change Metamask Network to Goerli
+## Change metamask network
 
-![Connecting Metamask to Goerli](/docs/integrator-section/webapp-tutorial/document-store-webapp/goerli.png)
+<!-- #Flag# This section may need updating to reflect the new UI of https://admin.opencerts.io/ -->
 
-Connect Metamask to the Ethereum `goerli` network by selecting _Goerli Test Network_ in the Google Chrome plugin's header. You may be asked to log in at this step if you have not done so.
+Perform these steps to connect metamask to the network you want to use:
+1. Open the [OpenCerts Admin Portal](https://admin.opencerts.io/) in Google Chrome.
+2. Choose to show test networks.
+3. Select the network you want from the list. Click **Add network**.
+4. If prompted, log in with your user credentials.
 
-## Connect Metamask to Web App
+## Connect metamask to web app
 
 ![Admin Interface](/docs/integrator-section/webapp-tutorial/document-store-webapp/interface.png)
 

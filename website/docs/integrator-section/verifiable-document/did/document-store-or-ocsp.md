@@ -8,7 +8,7 @@ sidebar_label: Deploying Document Store or OCSP
 
 > **Important:** If you have run the Ethereum method and created a document store, do not use it in the DID method.
 
-The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `goerli` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions.
+The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `sepolia` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions.
 
 <!-- <embed src="/docs/reusable_snippets/_document-store-overview-snippet.md" /> -->
 
@@ -17,7 +17,7 @@ The document store is a smart contract on the Ethereum network that records the 
 We will make use of the wallet that we created in the [previous step](/docs/integrator-section/verifiable-document/did/create).
 
 ```bash
-open-attestation deploy document-store "DID document store" --network goerli --encrypted-wallet-path wallet.json
+open-attestation deploy document-store "DID document store" --network sepolia --encrypted-wallet-path wallet.json
 ```
 
 You will be prompted for the password that you used while creating the wallet. 
@@ -32,7 +32,7 @@ Once your document store smart contract has been successfully deployed, you will
 ℹ  info      Wallet successfully decrypted
 ...
 ✔  success   Document store DID document store deployed at 0x3AaeBb82BbF0513B422532953724C33504E5b157
-ℹ  info      Find more details at https://goerli.etherscan.io/address/0x3AaeBb82BbF0513B422532953724C33504E5b157
+ℹ  info      Find more details at https://sepolia.etherscan.io/address/0x3AaeBb82BbF0513B422532953724C33504E5b157
 ```
 
 ### Saving the document store address

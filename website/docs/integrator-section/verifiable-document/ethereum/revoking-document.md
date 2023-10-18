@@ -14,7 +14,7 @@ After issuing a document, you might want to revoke it for any reason:
 ## Revoking a document
 
 ```bash
-open-attestation document-store revoke --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --hash 0x1e0c5e93c04032ed6571b31c785b963f0a27776041f35bdcc98cd8dfe073adc0  --network goerli --encrypted-wallet-path wallet.json
+open-attestation document-store revoke --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --hash 0x1e0c5e93c04032ed6571b31c785b963f0a27776041f35bdcc98cd8dfe073adc0  --network sepolia --encrypted-wallet-path wallet.json
 ```
 
 In the example above:

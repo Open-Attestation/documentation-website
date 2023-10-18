@@ -9,7 +9,7 @@ After wrapping the documents and obtaining a merkle root, the documents are read
 ## Issuing the documents
 
 ```bash
-open-attestation document-store issue --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --hash 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff  --network goerli --encrypted-wallet-path wallet.json
+open-attestation document-store issue --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --hash 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff  --network sepolia --encrypted-wallet-path wallet.json
 ```
 
 In the example above:

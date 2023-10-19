@@ -61,4 +61,4 @@ It will display the list of the DNS TXT records associated to that location:
 
 ```
 
->**Note:** It will take some time (usually takes 10s to 15s) for the record to be correctly propagated to DNS.
+>**Note:** It will take some time (usually 10s to 15s) for the record to be correctly propagated to DNS.

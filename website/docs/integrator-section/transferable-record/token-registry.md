@@ -8,7 +8,7 @@ The token registry is a smart contract on the Ethereum network that records the 
 
 In this guide, we will deploy a token registry smart contract on the Ethereum `sepolia` network which is a test network that does not require actual ethers for transactions.
 
-## Pre-requisite
+## Prerequisites
 
 - [OpenAttestation CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) installed
 - Private key to an Ethereum wallet with sufficient ethers

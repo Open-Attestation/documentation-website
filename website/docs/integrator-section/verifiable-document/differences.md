@@ -3,6 +3,8 @@ title: Differences between Ethereum and DID
 sidebar_label: Differences between Ethereum and DID
 ---
 
+The Ethereum method is writing to the blockchain & requires some ethers in the wallet, while the DID method performs digital signing and won’t require any ethers.
+
 The flowchart provides an overview of the differences between the Ethereum and DID methods:
 
 ![Ethereum and DID differences](/docs/integrator-section/verifiable-document/differences/ETH-DID-differences.svg)
@@ -14,10 +16,10 @@ The flowchart provides an overview of the differences between the Ethereum and D
 
 The table compares the differences between the two methods in **bold**:
 
-| **Ethereum method**                                                     | **DID method**                                                           |
+| _Ethereum method_                                        | _DID method_                                                   |
 |-------------------------------------------------------------------------|--------------------------------------------------------------------------|
 | **Create a wallet**                                                     | **Create a DID**                                                         |
-| Deploy Document Store                                                   | Deploy Document Store **(optional)**                                     |
+| **Deploy Document Store**                                   | **Deploy Document Store or OCSP (optional)**                                     |
 | Configure DNS **(bind document issuer's identity)**                     | Configure DNS **(bind wallet address)**                                  |
 | Create raw documents **(bind document store's identity)**               | Create raw documents **(bind wallet address)**                           |
 | Wrap documents                                                          | Wrap documents                                                           |

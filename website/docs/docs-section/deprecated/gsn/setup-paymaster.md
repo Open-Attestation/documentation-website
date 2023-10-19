@@ -18,7 +18,7 @@ You can refer to the source code of our Paymaster [here](https://github.com/Open
 
 ## Deploying Paymaster
 
-### Pre-requisite
+### Prerequisites
 
 - [OpenAttestation CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) installed
 - [Ethereum wallet with sufficient ethers](/docs/integrator-section/verifiable-document/ethereum/wallet)

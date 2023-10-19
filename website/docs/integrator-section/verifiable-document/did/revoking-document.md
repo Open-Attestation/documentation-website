@@ -71,7 +71,7 @@ A: That's because the revocation mapping in the `documentStore` is separate from
 
 
 ## Revoking using OCSP
-You can also revoke a document using your own Online Certificate Status Protocol (OCSP) responder. In short, an OCSP responder would be a service that would respond with the revocation status of a certificate and the reason it was revoked.
+You can also revoke a document using your own Online Certificate Status Protocol (OCSP) responder. In short, an OCSP responder is a service that will respond with the revocation status of a certificate and the reason it is revoked.
 
 ### Revocation type and location
 
@@ -108,5 +108,6 @@ Replace the `revocation.type` and `revocation.location` values to fit your case.
 
 ### Revoking a document
 
-Refer to [this readme](https://github.com/Open-Attestation/ocsp-responder/blob/main/README.md) to learn how to add a document to the OA OCSP Responder.
+To learn about a reference implementation to revoke a document using the OCSP responder, see [this readme](https://github.com/Open-Attestation/ocsp-responder/blob/main/README.md).
 
+>**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OA framework.

@@ -76,7 +76,7 @@ For simplicity, we will be using the contents from the [sample HTML file](https:
 ### Replace the button link with your Verify URL
 
 1. Copy the [sample HTML file template](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html) and paste it into a text editor of your choice
-2. Replace the [the URL on this line](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html#L105) with your Verify URL from earlier
+2. Replace [the URL on this line](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html#L105) with your Verify URL from earlier
 
    ```html
    <p>

@@ -8,7 +8,7 @@ OA documents are both readable by machines as well as by humans. Every OA docume
 
 In this guide, we will build and deploy the renderer to display data from a 📜 Certificate of Completion.
 
-This renderer is a static website that will be embedded in compliant OA viewer. It will take in the OA document in the raw form and generates the corresponding HTML code for rendering.
+This renderer is a static website that will be embedded in compliant OA viewer. It will take in the OA document in the raw form and generate the corresponding HTML code for rendering.
 
 ## Prerequisites
 
@@ -32,7 +32,7 @@ rm -rf .git
 
 ### Clean the template
 
-In order to fully understand how developing a renderer work, we will start by cleaning it a bit:
+In order to fully understand how developing a renderer works, we will start by cleaning it a bit:
 
 - remove the folder `src/templates/customTemplate`
 - remove the folder `src/integration`
@@ -123,7 +123,7 @@ The `name` key is a compulsory key to describe the type of OA document. In this 
 
 #### `recipient`
 
-OA documents do not have a strict data structure and allows issuers of documents to define their own data schema. The `recipient` object is a user-defined object that describes who the certificate is conferred to. In this case, you may replace `John Doe` with your name.
+OA documents do not have a strict data structure and allow issuers of documents to define their own data schema. The `recipient` object is a user-defined object that describes who the certificate is conferred to. In this case, you may replace `John Doe` with your name.
 
 In the next section, you will learn more about the OA document schema and how you may define your own data structure. For this guide, we will stick to this simple document.
 
@@ -145,7 +145,7 @@ awarded to
 John Doe
 ```
 
-The first step consist of creating a file `src/templates/coc/template.tsx` with the following content:
+The first step consists of creating a file `src/templates/coc/template.tsx` with the following content:
 
 ```jsx harmony
 import React, { FunctionComponent } from "react";
@@ -225,11 +225,11 @@ export const templates = [
 ];
 ```
 
-- `templates` must be an array where each element correspond to a view (or a tab). Here we need only one view.
+- `templates` must be an array where each element corresponds to a view (or a tab). Here we need only one view.
 - Each view must define the following property:
-  - `id` which must be a uniq identifier for this template configuration.
+  - `id` which must be a unique identifier for this template configuration.
   - `label` which will be displayed by tab in the application loading the renderer.
-  - `template` which is is the component that will be displayed.
+  - `template` which is the component that will be displayed.
 
 ### Renderer template configuration
 

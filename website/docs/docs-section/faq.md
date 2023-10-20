@@ -104,11 +104,11 @@ Below are the pros and cons of each approach.
     </tbody>
 </table>
 
-#### How can I have an estimation of the costs involved in using the smart contracts ?
+#### How can I have an estimation of the costs involved in using the smart contracts?
 
 You can refer to the page [Contract Costs](/docs/docs-section/appendix/contract-costs) for a breakdown of the estimations.
 
-#### What is gas ?
+#### What is gas?
 
 For more information on Gas and Gas Prices, check out [this article](https://ethereum.stackexchange.com/questions/3/what-is-meant-by-the-term-gas)
 

@@ -9,10 +9,10 @@ This task is same with the one [in the Ethereum tutorial](/docs/integrator-secti
 
 ## Running the wrap command
 
-From the folder containing the `raw-documents-DID` folder, run the command:
+From the folder containing the `raw-documents-did` folder, run the command:
 
 ```sh
-open-attestation wrap raw-documents-DID --output-dir wrapped-documents-DID
+open-attestation wrap raw-documents-did --output-dir wrapped-documents-did
 ```
 
 ## Getting the response
@@ -30,16 +30,16 @@ Save this value for future reference.
 
 ## Viewing the wrapped documents
 
-At the same time, you will notice that another directory `wrapped-documents-DID` has been created:
+At the same time, you will notice that another directory `wrapped-documents-did` has been created:
 
 ```text
 wallet.json
-raw-documents-DID
+raw-documents-did
   |-- certificate-1.json
   |-- certificate-2.json
-wrapped-documents-DID
+wrapped-documents-did
   |-- certificate-1.json
   |-- certificate-2.json
 ```
 
-In the `wrapped-documents-DID` directory, you will find the wrapped document which can be sent to the recipient later, once the `merkleRoot` has been issued to the document store.
+In the `wrapped-documents-did` directory, you will find the wrapped document which can be sent to the recipient later, once the `merkleRoot` has been issued to the document store.

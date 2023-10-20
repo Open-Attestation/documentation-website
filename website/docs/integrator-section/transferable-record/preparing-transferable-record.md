@@ -13,7 +13,7 @@ Similar to [binding the document store to a domain name](/docs/integrator-sectio
 To do that simply create a `TXT` record on your domain with the following entry:
 
 ```txt
-openatts net=ethereum netId=3 addr=0x8431012Bc040942B59e3C5bf428221eab0b2f723
+openatts net=ethereum netId=11155111 addr=0x8431012Bc040942B59e3C5bf428221eab0b2f723
 ```
 
 You will need to replace the token registry address `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with the address you've got from the previous step.

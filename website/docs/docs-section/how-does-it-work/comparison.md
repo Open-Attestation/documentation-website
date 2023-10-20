@@ -9,7 +9,7 @@ In this section, we will discuss the differences between Ethereum Smart Contract
 
 By using Ethereum Smart Contracts, you will of course be bound to the Ethereum infrastructure. Every transaction will be stored in the Blockchain. Forever. For basic issuance, you won't need to maintain any infrastructure on your own. On top of that you will be able to monitor every transaction that happened, and detect abnormal activities. For instance if someone manages to steal your wallet private key, you will find evidence directly on the Blockchain.
 
-Regarding DID, you won't need to maintain any infrastructure as well... or maybe you will need. It will depend on your needs. Indeed, No records of your transactions will be made by default. DID will work straight, out of the box. However, if you want to keep track on every transaction, you will have to do it yourself. One could ask: "Why would I need to track every transaction ?". Unlike for Ethereum Smart Contracts, if a user manage to steal your signing private key, you will never be aware of it.
+Regarding DID, you won't need to maintain any infrastructure as well... or maybe you will need. It will depend on your needs. Indeed, No records of your transactions will be made by default. DID will work straight, out of the box. However, if you want to keep track of every transaction, you will have to do it yourself. One could ask: "Why would I need to track every transaction ?". Unlike for Ethereum Smart Contracts, if a user manages to steal your signing private key, you will never be aware of it.
 
 ## Environment
 
@@ -39,7 +39,7 @@ For DID, it's the opposite, everything is private.
 
 Revocation is part of our Ethereum Smart Contracts.
 
-As of today, its possible to revoke a document if a document store has been declared in its revocation block. You can revoke a document [using a document store](/docs/integrator-section/verifiable-document/did/revoking-document) or [with an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document-ocsp).
+As of today, it's possible to revoke a document if a document store has been declared in its revocation block. You can revoke a document [using a document store](/docs/integrator-section/verifiable-document/did/revoking-document) or [with an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document-ocsp).
 
 Note that if you do use revocation for `DID`, you still need to have at least 1 transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
 

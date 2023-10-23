@@ -59,16 +59,9 @@ It is possible to revoke a signed document only if you fulfill certain **prerequ
 open-attestation document-store revoke --address <DOCUMENT_STORE_LOCATION> --hash <HASH_OF_DOC(S)>  --network <NETWORK> --encrypted-wallet-path <PATH_OF_WALLET>
 ```
 
-### Frequently asked questions (FAQ)
-
-Q: [This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if I use DID documents, I will not need to pay for transactions. But following this procedure, why do I still have to pay for at least 1 transaction (deploying a `documentStore`)?
-
-A: Yes, that's correct. In the current version, this implementation will still need at least 1 transaction to the Ethereum blockchain.
-
-Q: Although I did not issue any documents from the deployed `documentStore`, how can revoke this document from the same `documentStore`?
-
-A: That's because the revocation mapping in the `documentStore` is separate from the issued mapping.
-
+>**Note:** 
+> * In the current version of OA framework, you still have to pay for at least 1 transaction to deploy a `documentStore` using the DID method. 
+> * Because the revocation mapping in the `documentStore` is separate from the issued mapping, you can revoke the document using the `documentStore`, even if you haven't issued any document from it.
 
 ## Revoking using OCSP
 You can also revoke a document using your own Online Certificate Status Protocol (OCSP) responder. In short, an OCSP responder is a service that will respond with the revocation status of a certificate and the reason it is revoked.

@@ -37,18 +37,14 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 
 > A configuration folder will be created in the `~/.config/open-attestation/`
 
+
 ---
 
 ## Supported networks
 
-| Network            | Chain ID | Type       |
-| ------------------ | -------- | ---------- |
-| mainnet            | 1        | Production |
-| sepolia            | 11155111 | Test       |
-| polygon            | 137      | Production |
-| mumbai             | 80001    | Test       |
-| xdc                | 50       | Production |
-| xdcapothem         | 51       | Test       |
+<!-- Reusing the NetworkTable here -->
+
+<NetworkTable />
 
 ---
 

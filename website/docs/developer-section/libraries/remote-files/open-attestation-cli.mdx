@@ -5,6 +5,8 @@ hide_title: true
 sidebar_label: Open Attestation (CLI)
 ---
 
+import SupportedNetworks from "../../../../src/reusables/_supported-networks.mdx";
+
 # Open Attestation (CLI)
 
 This CLI tool in the [Open Attestation CLI](https://github.com/Open-Attestation/open-attestation-cli) repository turns .json documents into any open-attestation verifiable documents. It applies the OpenAttestation algorithm to produce a hash of the json document and then creates a file with the data and proof of integrity.
@@ -37,14 +39,13 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 
 > A configuration folder will be created in the `~/.config/open-attestation/`
 
-
 ---
 
 ## Supported networks
 
 <!-- Reusing the NetworkTable here -->
 
-<NetworkTable />
+<SupportedNetworks foo="Value of foo" bar="Value of bar" />
 
 ---
 

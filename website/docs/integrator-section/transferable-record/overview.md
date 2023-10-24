@@ -36,7 +36,7 @@ The token registry stores the ownership state of the transferable records using 
 In the overview above, we can see 3 different states of documents:
 
 1. An unissued document (`0xaaaa...aaaa`) will have an owner `0x0000...0000`
-1. An issued document (`0xbbbb...bbbb`) will have an owner which is either a EOA or a smart contract (ie `0x8888...8888`)
+1. An issued document (`0xbbbb...bbbb`) will have an owner which is either an EOA or a smart contract (ie `0x8888...8888`)
 1. A surrendered document (`0xcccc...cccc`) will have an owner which is the token registry's address (ie `0x5555...5555`)
 
 ### Title Escrow Smart Contract

@@ -3,6 +3,7 @@ id: preparing-transferable-record
 title: Preparing Transferable Record
 sidebar_label: Preparing Transferable Record
 ---
+import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
 
 In this section, we will prepare the DNS and the content of the transferable record to be issued.
 
@@ -21,7 +22,7 @@ You will need to replace the token registry address `0x8431012Bc040942B59e3C5bf4
 If you like to use our sandbox DNS for the purpose of the exercise, you may instead run the following command, following the instructions from [earlier](/docs/integrator-section/verifiable-document/ethereum/dns-proof):
 
 ```sh
-open-attestation dns txt-record create --address 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --network-id 3
+open-attestation dns txt-record create --address 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --network-id 11155111
 ```
 
 If you like more detailed setup instructions, you may refer to the [documentation for configuring DNS](/docs/developer-section/quickstart/configure-dns).
@@ -61,11 +62,16 @@ Remember to replace the `tokenRegistry` value with your token registry smart con
 
 Notice the difference between a transferable record and a verifiable document is the use of `tokenRegistry` instead of `documentStore` in declaring the smart contract address.
 
-> For transferable record, you may not batch process it with other documents. Your directory `raw-documents` may only contain one file.
+>**Note:** For transferable record, you may not batch process it with other documents. Your directory `raw-documents` may only contain one file.
 
 ## Wrapping Transferable Document
+Choose one of the following methods to wrap the Transferable Document.
 
-With the raw transferable document, you are not ready to issue the document. Simple run the following command to wrap the `sample.json` and output it in another directory `wrapped-documents`:
+### Wrapping the document from a folder
+
+With the raw transferable document, you are not ready to issue the document. 
+
+Run the following command to wrap the `sample.json` and output it in another directory `wrapped-documents`:
 
 ```sh
 open-attestation wrap raw-documents --output-dir wrapped-documents
@@ -77,4 +83,13 @@ You will see a familiar output with the merkle root of the transferable record a
 ✔  success   Batch Document Root: 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea
 ```
 
-> Keep this value, the merkle root, for later steps.
+>**Note:** Keep this value, the merkle root, for later steps.
+
+### Wrapping the document as a single file
+This is an alternative way to wrap the Transferable Document.
+
+<WrapSingleDocument />
+
+<!-- Reuse the steps to wrap a single document -->
+
+>**Note:** Keep the merkle root in the output for later steps.

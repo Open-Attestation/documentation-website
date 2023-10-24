@@ -2,6 +2,7 @@
 title: Wrapping Documents
 sidebar_label: Wrapping Documents
 ---
+import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
 
 This task is same with the one [in the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/wrapping-document).
 
@@ -43,3 +44,10 @@ wrapped-documents-did
 ```
 
 In the `wrapped-documents-did` directory, you will find the wrapped document which can be sent to the recipient later, once the `merkleRoot` has been issued to the document store.
+
+## Wrapping a single document
+Instead of wrapping all documents in a folder in a batch, you can also wrap a single document.
+
+<WrapSingleDocument />
+
+<!-- Reuse the steps to wrap a single document -->

@@ -20,7 +20,7 @@ We will be inserting a temporary DNS record on our DNS at `sandbox.openattestati
 With your [document store](/docs/integrator-section/verifiable-document/ethereum/document-store), run the following command:
 
 ```bash
-open-attestation dns txt-record create --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --network-id 5
+open-attestation dns txt-record create --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --network-id 11155111
 ```
 
 The `network-id` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). We generally use only the following networks:
@@ -48,11 +48,11 @@ open-attestation dns txt-record get --location few-green-cat.sandbox.openattesta
 It will display to you the list of the DNS TXT records associated to that location:
 
 ```text
-┌─────────┬────────────┬────────────┬───────┬──────────────────────────────────────────────┬────────┐
-│ (index) │    type    │    net     │ netId │                     addr                     │ dnssec │
-├─────────┼────────────┼────────────┼───────┼──────────────────────────────────────────────┼────────┤
-│    0    │ 'openatts' │ 'ethereum' │'11155111'│ '0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b' │ false  │
-└─────────┴────────────┴────────────┴───────┴──────────────────────────────────────────────┴────────┘
+┌─────────┬────────────┬────────────┬────────────┬──────────────────────────────────────────────┬────────┐
+│ (index) │    type    │    net     │    netId   │                     addr                     │ dnssec │
+├─────────┼────────────┼────────────┼────────────┼──────────────────────────────────────────────┼────────┤
+│    0    │ 'openatts' │ 'ethereum' │ '11155111' │ '0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b' │ false  │
+└─────────┴────────────┴────────────┴────────────┴──────────────────────────────────────────────┴────────┘
 ```
 
 >**Note:** It will take some time (usually 10s to 15s) for the record to be correctly propagated to the DNS.

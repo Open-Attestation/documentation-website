@@ -3,6 +3,7 @@ id: wrapping-document
 title: Wrapping Documents
 sidebar_label: Wrapping Documents
 ---
+import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
 
 Every OA document has a checksum that provides it a tamper-proof property. At the same time, because the checksum can be used to uniquely identify a document, the checksum (or its derived value) is stored onto the document store as evidence of issuance. To compute the checksum, a `raw document` goes through a process known as `wrapping` to become a `wrapped document`. Only then, the document is ready to be issued onto the blockchain.
 
@@ -50,3 +51,10 @@ wrapped-documents
 ```
 
 In the `wrapped-documents` directory, you will find the wrapped document which can be sent to the recipient later, once the `merkleRoot` has been issued to the document store.
+
+## Wrapping a single document
+Instead of wrapping all documents in a folder in a batch, you can also wrap a single document.
+
+<WrapSingleDocument />
+
+<!-- Reuse the steps to wrap a single document -->

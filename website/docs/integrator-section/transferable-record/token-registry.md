@@ -6,7 +6,7 @@ sidebar_label: Deploying Transferable Record Registry
 
 The token registry is a smart contract on the Ethereum network that records the ownership information of a transferable record. It is compliant to the [ERC721 standards](https://eips.ethereum.org/EIPS/eip-721).
 
-In this guide, we will deploy a token registry smart contract on the Ethereum `goerli` network which is a test network that does not require actual ethers for transactions.
+In this guide, we will deploy a token registry smart contract on the Ethereum `sepolia` network which is a test network that does not require actual ethers for transactions.
 
 ## Pre-requisite
 
@@ -32,19 +32,19 @@ d8f30c982fc23245a2cc4ec8271edcb4637f539d490ce750cdb5085241ffb41c
 Simply run the following command. You may replace the `<registry-name>` and `<registry-symbol>` with a suitable name and symbol (usually 3 characters).
 
 ```sh
-open-attestation deploy token-registry "My Token Registry" MTR -n goerli -f key.txt
+open-attestation deploy token-registry "My Token Registry" MTR -n sepolia -f key.txt
 ```
 
-This will deploy the token registry on the `goerli` network. You should see a similar output when the deployment is successful:
+This will deploy the token registry on the `sepolia` network. You should see a similar output when the deployment is successful:
 
 ```txt
 ℹ  info      Deploying token registry My Token Registry
 …  awaiting  Sending transaction to pool
 …  awaiting  Waiting for transaction 0x7e3eea01c42bb10b3160f19c9f55fe3de24ed05abb9d6f4363c80c0d0f1be355 to be mined
 ✔  success   Token registry deployed at 0x8431012Bc040942B59e3C5bf428221eab0b2f723
-ℹ  info      Find more details at https://goerli.etherscan.io/address/0x8431012Bc040942B59e3C5bf428221eab0b2f723
+ℹ  info      Find more details at https://sepolia.etherscan.io/address/0x8431012Bc040942B59e3C5bf428221eab0b2f723
 ```
 
-In this case, our contract has been successfully deployed on goerli at the address `0x8431012Bc040942B59e3C5bf428221eab0b2f723`.
+In this case, our contract has been successfully deployed on sepolia at the address `0x8431012Bc040942B59e3C5bf428221eab0b2f723`.
 
 > Save YOUR token registry address for future reference

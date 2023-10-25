@@ -53,7 +53,7 @@ wrapped-documents
 In the `wrapped-documents` directory, you will find the wrapped document which can be sent to the recipient later, once the `merkleRoot` has been issued to the document store.
 
 ## Wrapping a single document
-Instead of wrapping all documents in a folder in a batch, you can also wrap a single document.
+This is an alternative way. Instead of wrapping all documents in a folder in a batch, you can also wrap a single document at a time.
 
 <WrapSingleDocument />
 

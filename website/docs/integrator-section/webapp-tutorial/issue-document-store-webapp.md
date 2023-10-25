@@ -1,7 +1,7 @@
 ---
 id: issue-document-store-webapp
-title: Issue Document with Web app
-sidebar_label: Issue Document Store
+title: Issuing Document with Web app
+sidebar_label: Issuing Document Store
 ---
 
 This guide will help you to issue a hash using one of the available web application. You will find more details about issuing on the [main guide page](/docs/integrator-section/verifiable-document/ethereum/issuing-document)

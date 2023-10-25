@@ -30,7 +30,7 @@ In the response, find the private key which looks like:
 
 Create a file `key.txt` with the private key of your Ethereum wallet and save it in your working directory. If you are using Metamask, you may retrieve this key from the extension in [this guide](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
 
-Sample `key.txt` file content (replace with your private key):
+Sample `key.txt` file content (replace it with your private key):
 
 ```sh
 d8f30c982fc23245a2cc4ec8271edcb4637f539d490ce750cdb5085241ffb41c
@@ -45,13 +45,15 @@ Simply run the following command. You need to replace the `<registry-name>` and 
 ```sh
 open-attestation deploy token-registry <registry-name> <registry-symbol> -n sepolia -f key.txt
 ```
-The following shows an example, in which `<registry-name>`="My Token Registry" and `<registry-symbol>`=MTR.
+The following shows an example, in which `<registry-name>`=`"My Token Registry"` and `<registry-symbol>`=`MTR`.
 
 ```sh
 open-attestation deploy token-registry "My Token Registry" MTR -n sepolia -f key.txt
 ```
 
-This will deploy the token registry on the `sepolia` network. You should see a similar output when the deployment is successful:
+This will deploy the token registry on the `sepolia` network. 
+
+When the deployment is successful, the response looks like the following:
 
 ```txt
 ℹ  info      Deploying token registry My Token Registry

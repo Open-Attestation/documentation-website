@@ -1,7 +1,7 @@
 ---
 id: revoke-document-store-webapp
-title: Revoke Document with Web app
-sidebar_label: Revoke Document Store
+title: Revoking Document with Web app
+sidebar_label: Revoking Document Store
 ---
 
 This guide will help you to revoke a hash using one of the available web application. You will find more details about revoking on the [main guide page](/docs/integrator-section/verifiable-document/ethereum//revoking-document)

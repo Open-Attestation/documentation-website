@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "@docusaurus/core": "^2.3.1",
-    "@docusaurus/preset-classic": "^2.3.1",
+    "@docusaurus/preset-classic": "^2.4.1",
     "@govtechsg/open-attestation-utils": "^1.0.9",
     "clsx": "^1.1.1",
     "docusaurus-plugin-remote-content": "^3.1.0",

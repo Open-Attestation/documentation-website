@@ -7,15 +7,15 @@ import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
 
 In this section, we will prepare the DNS and the content of the transferable record to be issued.
 
-## DNS Configuration
+## DNS configuration
 
 Similar to [binding the document store to a domain name](/docs/integrator-section/verifiable-document/ethereum/document-store), you will have to bind the identity of the token registry to a domain name.
 
-To do that, create a `TXT` record on your domain with the following entry:
+To do that, create a `TXT` record on your domain with the following entry value:
 
-```txt
-openatts net=ethereum netId=11155111 addr=0x8431012Bc040942B59e3C5bf428221eab0b2f723
-```
+| Type | Domain      | Entry Value                                                     |
+| ---- | ----------- | --------------------------------------------------------------- |
+|`TXT` | example.com | "openatts net=`ethereum` netId=`11155111` addr=`0x8431012Bc040942B59e3C5bf428221eab0b2f723`" |
 
 You will need to replace the token registry address `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with the address you get from the previous step.
 
@@ -29,11 +29,11 @@ If you want to view more detailed setup instructions, see the [documentation for
 
 >**Important:** Take note of the domain where you are inserting the records, because you will need the domain name later.
 
-## Creating Raw Transferable Document
+## Creating a raw transferable document
 
 Similar to creating a verifiable document, you will need to create a raw JSON file with the content of the transferable record first.
 
-Create a file `sample.json` in a folder `raw-documents`:
+Create a file `sample.json` in a folder `raw-tr`:
 
 ```json
 {
@@ -58,23 +58,23 @@ Create a file `sample.json` in a folder `raw-documents`:
 }
 ```
 
-Remember to replace the `tokenRegistry` value with your token registry smart contract address from [previous section](/docs/integrator-section/transferable-record/token-registry) and `location` with the domain you are issuing this document from.
+Replace the `tokenRegistry` value with your token registry smart contract address from [previous section](/docs/integrator-section/transferable-record/token-registry) and `location` with the domain where you are issuing this document.
 
-Notice the difference between a transferable record and a verifiable document is the use of `tokenRegistry` instead of `documentStore` in declaring the smart contract address.
+The difference between a transferable record and a verifiable document is the use of `tokenRegistry` instead of `documentStore` in declaring the smart contract address.
 
->**Note:** For transferable record, you may not batch process it with other documents. Your directory `raw-documents` should contain only one file.
+>**Note:** For a transferable record, you may not batch process it with other documents. Your directory `raw-tr` should contain only one file.
 
-## Wrapping Transferable Document
+## Wrapping the transferable document
 Choose one of the following methods to wrap the Transferable Document.
 
 ### Wrapping the document from a folder
 
 With the raw transferable document, you are not ready to issue the document. 
 
-Run the following command to wrap the `sample.json` and generate output for it in another directory `wrapped-documents`:
+Run the following command to wrap the `sample.json` and generate output for it in another directory `wrapped-tr`:
 
 ```sh
-open-attestation wrap raw-documents --output-dir wrapped-documents
+open-attestation wrap raw-tr --output-dir wrapped-tr
 ```
 
 After running the above command, you will see an output with the merkle root of the transferable record:

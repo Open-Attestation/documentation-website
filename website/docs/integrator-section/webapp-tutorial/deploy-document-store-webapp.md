@@ -6,7 +6,7 @@ sidebar_label: Deploying Document Store
 
 This guide will help you to deploy a document store using one of the available web application. You will find more details about document store on the [main guide page](/docs/integrator-section/verifiable-document/ethereum/document-store)
 
-Currently, there exists 2 web application:
+Currently, there are 2 web applications:
 
 - [OpenCerts Admin Portal](https://admin.opencerts.io/)
 - [TradeTrust Admin Portal](https://admin.tradetrust.io/)
@@ -14,15 +14,15 @@ Currently, there exists 2 web application:
 ## Prerequisites
 
 - Google Chrome web browser
-- Metamask extension setup (You need to install Metamask extension in Google Chrome)
+- MetaMask extension set up in Google Chrome
 
 ![Admin Interface](/docs/integrator-section/webapp-tutorial/document-store-webapp/interface.png)
 
-## Change metamask network
+## Change MetaMask network
 
 <!-- #Flag# This section may need updating to reflect the new version of https://admin.opencerts.io/ -->
 
-Perform these steps to connect metamask to the network you want to use:
+Perform these steps to connect MetaMask to the network you want to use:
 1. Open the [OpenCerts Admin Portal](https://admin.opencerts.io/) in Google Chrome.
 2. On the Chrome address bar, click **Extensions**. Select **MetaMask**.
 
@@ -33,15 +33,15 @@ Perform these steps to connect metamask to the network you want to use:
 
 ![MetaMask](/docs/integrator-section/webapp-tutorial/document-store-webapp/sepolia.png)
 
-## Connect metamask to web app
+## Connect MetaMask to web app
 
 ![Admin Interface](/docs/integrator-section/webapp-tutorial/document-store-webapp/interface.png)
 
-To interact with the OpenCerts Admin Portal web app, you will need to connect your Metamask wallet. Select _Metamask_ on the web app to connect it to your Metamask wallet.
+To interact with the OpenCerts Admin Portal web app, you will need to connect your MetaMask wallet. Select _MetaMask_ on the web app to connect it.
 
-![Metamask Connection Request](/docs/integrator-section/webapp-tutorial/document-store-webapp/select-wallet.png){: .custom-portrait-image-class }
+![MetaMask Connection Request](/docs/integrator-section/webapp-tutorial/document-store-webapp/select-wallet.png)
 
-Click on _Connect_ to allow the web app to interact with Metamask wallet.
+Click on _Connect_ to allow the web app to interact with MetaMask wallet.
 
 ## Deploying Document Store Smart Contract
 

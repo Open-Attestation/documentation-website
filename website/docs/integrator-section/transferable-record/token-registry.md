@@ -28,7 +28,7 @@ In the response, find the private key which looks like:
 
 ### Creating the key file
 
-Create a file `key.txt` with the private key of your Ethereum wallet and save it in your working directory. If you are using Metamask, you may retrieve this key from the extension in [this guide](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
+Create a file `key.txt` with the private key of your Ethereum wallet and save it in your working directory. If you are using MetaMask, you may retrieve this key from the extension in [this guide](https://metamask.zendesk.com/hc/en-us/articles/360015289632-How-to-Export-an-Account-Private-Key).
 
 Sample `key.txt` file content (replace it with your private key):
 

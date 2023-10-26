@@ -11,10 +11,11 @@ In this final step, we will create the transferable record and initialize the fi
 You will require the following:
 
 - token registry address
-- private key to token registry (key.txt)
+- private key to token registry (`key.txt`)
 - merkle root of the wrapped transferable record
+- beneficiary and holder wallet addresses
 
-## Issuing Transferable Records
+## Issuing the transferable record
 
 In the example, we will use 0x6FFeD6E6591b808130a9b248fEA32101b5220eca as beneficiary and holder. You will need to replace this value with a wallet address you control, to be able to perform different actions on the transferable records later.
 

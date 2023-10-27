@@ -24,9 +24,8 @@ A wallet will be created in the current folder, in the `wallet.json` file.
 
 > In the example above, the public address for the wallet is `0x10cFd56E11e7d66C8d0716Cd2D6B847Cb17ABeeD`. You will definitely get a different value.
 
-Make sure ethers have been added into your wallet. You will need some for the next steps. Head to etherscan (https://goerli.etherscan.io/address/PUT_YOUR_ADDRESS_HERE}) and verify the balance. You should have 1 ether. For instance, for the wallet created above, the URL is https://goerli.etherscan.io/address/0x10cFd56E11e7d66C8d0716Cd2D6B847Cb17ABeeD.
+Make sure ethers have been added into your wallet. You will need some for the next steps. Head to etherscan (https://sepolia.etherscan.io/address/PUT_YOUR_ADDRESS_HERE}) and verify the balance. You should have 1 ether. For instance, for the wallet created above, the URL is https://sepolia.etherscan.io/address/0x10cFd56E11e7d66C8d0716Cd2D6B847Cb17ABeeD.
 
-You can use any of these ether faucet for goerli network to fund your wallet. For instance :
+You can use any of these ether faucet for sepolia network to fund your wallet. For instance :
 
-- <https://goerlifaucet.com/>
-- <https://goerli-faucet.pk910.de/>
+- <https://sepoliafaucet.com/>

@@ -14,7 +14,7 @@ Currently, there are 2 web applications:
 ## Prerequisites
 
 - Google Chrome web browser
-- MetaMask extension set up in Google Chrome
+- MetaMask extension in Google Chrome
 - A document store
 - A merkle root
 

@@ -14,7 +14,7 @@ Currently, there are 2 web applications:
 ## Prerequisites
 
 - Google Chrome web browser
-- MetaMask extension set up in Google Chrome
+- MetaMask extension in Google Chrome
 
 ![Admin Interface](/docs/integrator-section/webapp-tutorial/document-store-webapp/interface.png)
 
@@ -35,23 +35,35 @@ Perform these steps to connect MetaMask to the network you want to use:
 
 ## Connect MetaMask to web app
 
+To interact with the OpenCerts Admin Portal web app, you will need to connect your MetaMask wallet. 
+
+1. Open the [OpenCerts Admin Portal](https://admin.opencerts.io/) in Google Chrome.
+
 ![Admin Interface](/docs/integrator-section/webapp-tutorial/document-store-webapp/interface.png)
 
-To interact with the OpenCerts Admin Portal web app, you will need to connect your MetaMask wallet. Select _MetaMask_ on the web app to connect it.
+2. On the Welcome page, Select **MetaMask** to connect it.
+    
+    If prompted, log in with your user credentials.
 
 ![MetaMask Connection Request](/docs/integrator-section/webapp-tutorial/document-store-webapp/select-wallet.png)
 
-Click on _Connect_ to allow the web app to interact with MetaMask wallet.
+3. Select a wallet and click **Connect** to allow the web app to interact with MetaMask wallet.
 
 ## Deploying Document Store Smart Contract
 
+1. Enter your organization name as the **Issuer Name**. 
+
+
+
 ![Filling in Organization name](/docs/integrator-section/webapp-tutorial/document-store-webapp/deploy.png)
 
-Enter your organization name as the _Issuer Name_ and click _Deploy_ to deploy the document store as an Ethereum smart contract.
+2. Click **Deploy** to deploy the document store as an Ethereum smart contract.
+
+3. After that, you will be asked to confirm the transaction in a pop-up dialog. Click **Confirm** to continue.
 
 ![Confirming Transaction](/docs/integrator-section/webapp-tutorial/document-store-webapp/confirmation.png)
 
-After clicking on _Deploy_, you will be asked to confirm the transaction in a separate popup. Click _Confirm_ to continue.
+
 
 ![Successful deployment](/docs/integrator-section/webapp-tutorial/document-store-webapp/success.png)
 

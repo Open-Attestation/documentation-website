@@ -31,7 +31,7 @@ Replace the following values:
 - `0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea` with your merkle root (with a `0x` prefix)
 - `0x6FFeD6E6591b808130a9b248fEA32101b5220eca` with your beneficiary and holder addresses
 
-<!-- #Flag# Consider adding a Note to say that beneficiary and holder can be different -->
+>**Note:** In this tutorial, we use the same beneficiary and holder address for demonstration purpose. You can specify different wallet addresses for the beneficiary and holder if they are two different entities.
 
 Once the document has been issued, you will be able to see an output similar to the following:
 

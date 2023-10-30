@@ -35,7 +35,7 @@ In the image above, we can see 3 different states of documents:
 
 ### Token Registry Smart Contract
 
-The token registry smart contract is deployed by individual transferable records issuers such as the land title registry (for Title Deed) or shipping lines (for Bill of Lading). This smart contract replaces the document store smart contract in [the previous section](/docs/integrator-section/verifiable-document/overview). Similar to document store contract, the token registry smart contract also has its identity bound to the issuer using DNS.
+The token registry smart contract is deployed by individual transferable records issuers such as the land title registry (for Title Deed) or shipping lines (for Bill of Lading). This smart contract replaces the document store smart contract in [this section](/docs/integrator-section/verifiable-document/ethereum/document-store). Similar to document store contract, the token registry smart contract also has its identity bound to the issuer using DNS.
 
 The token registry stores the ownership state of the transferable records using a mapping from `document ID` to `owner`. The document ID is the target hash (and merkle root) of the individual OA document created. The owner will be either an EOA or a smart contract address.
 

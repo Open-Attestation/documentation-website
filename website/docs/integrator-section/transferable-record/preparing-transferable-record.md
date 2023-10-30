@@ -33,7 +33,7 @@ If you want to view more detailed setup instructions, see the [documentation for
 
 Similar to creating a verifiable document, you will need to create a raw JSON file with the content of the transferable record first.
 
-Create a file `sample.json` in a folder `raw-tr`:
+Create a file `sample.json` in a folder `raw-documents-transferable`:
 
 ```json
 {
@@ -62,7 +62,7 @@ Replace the `tokenRegistry` value with your token registry smart contract addres
 
 The difference between a transferable record and a verifiable document is the use of `tokenRegistry` instead of `documentStore` in declaring the smart contract address.
 
->**Note:** For a transferable record, you may not batch process it with other documents. Your directory `raw-tr` should contain only one file.
+>**Note:** For a transferable record, you may not batch process it with other documents. Your directory `raw-documents-transferable` should contain only one file.
 
 ## Wrapping the transferable document
 Choose one of the following methods to wrap the Transferable Document.
@@ -71,10 +71,10 @@ Choose one of the following methods to wrap the Transferable Document.
 
 With the raw transferable document, you are not ready to issue the document. 
 
-Run the following command to wrap the `sample.json` and generate output for it in another directory `wrapped-tr`:
+Run the following command to wrap the `sample.json` and generate output for it in another directory `wrapped-documents-transferable`:
 
 ```sh
-open-attestation wrap raw-tr --output-dir wrapped-tr
+open-attestation wrap raw-documents-transferable --output-dir wrapped-documents-transferable
 ```
 
 After running the above command, you will see an output with the merkle root of the transferable record:

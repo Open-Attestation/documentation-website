@@ -14,7 +14,7 @@ It is possible to revoke a signed document only if you fulfill certain **prerequ
 - Some kind of DID documents:
   1. Base DID document (`ISSUER_IDENTITY`: `identityProof.identifier` against `ethr` DID)
   2. DID-DNS document (`ISSUER_IDENTITY`: `identityProof.identifier` against a [DNS-TXT](/docs/docs-section/how-does-it-work/issuance-identity))
-- A deployed `documentStore`, click [here](/docs/integrator-section/verifiable-document/ethereum/document-store) for how to do so.
+- A deployed `documentStore`, click [here](/docs/integrator-section/verifiable-document/ethereum/document-store) for the steps.
 - Before you wrap your document with the wrapper SDK, add a `revocation` block with these keys:
 
 ```json
@@ -43,25 +43,20 @@ It is possible to revoke a signed document only if you fulfill certain **prerequ
 
 <!-- TBD v3 document sample when that releases -->
 
-- Note that the `<DEPLOYED_DOCUMENT_STORE_LOCATION>` is your `documentStore` location, it must be **deployed** on the Ethereum block chain (for now. Further implementations will relax this requirement, so that DID documents will truly be gasless).
-- Wrap your document, sign it, and append the signature to the document (follow the tutorial)
+- The `<DEPLOYED_DOCUMENT_STORE_LOCATION>` is your `documentStore` location. It must be **deployed** on the Ethereum block chain (for now. Further implementations will relax this requirement, so that DID documents will truly be gasless).
+- Wrap your document, sign it, and append the signature to the document (following the tutorial).
 
 ### Revoking a document
 
-- Once you have fulfilled the prerequisites, you will have a document that can be revoked on a deployed `documentStore`.
-- Simply invoke the command to revoke a document from the Ethereum flow (use the CLI):
+Once you have fulfilled the prerequisites, you will have a document that can be revoked on a deployed `documentStore`.
 
-    **Note:** Before running the command, replace the variables with the actual names to fit your case. 
-
-    
+To revoke a document from the Ethereum flow using the CLI, replace the variables below and run the command:   
 
 ```bash
 open-attestation document-store revoke --address <DOCUMENT_STORE_LOCATION> --hash <HASH_OF_DOC(S)>  --network <NETWORK> --encrypted-wallet-path <PATH_OF_WALLET>
 ```
 
->**Note:** 
-> * In the current version of OA framework, you still have to pay for at least 1 transaction to deploy a `documentStore` using the DID method. 
-> * Because the revocation mapping in the `documentStore` is separate from the issued mapping, you can revoke the document using the `documentStore`, even if you haven't issued any document from it.
+In the example above, because the revocation mapping in the `documentStore` is separate from the issued mapping, you can revoke the document using the `documentStore`, even if you haven't issued any document from it.
 
 ## Revoking using OCSP
 You can also revoke a document using your own Online Certificate Status Protocol (OCSP) responder. In short, an OCSP responder is a service that will respond with the revocation status of a certificate and the reason it is revoked.

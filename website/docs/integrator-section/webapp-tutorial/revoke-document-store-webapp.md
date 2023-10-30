@@ -1,15 +1,17 @@
 ---
 id: revoke-document-store-webapp
-title: Revoking Document with Web app
+title: Revoking Document with Webapp
 sidebar_label: Revoking Document Store
 ---
 
-This guide will help you to revoke a hash using one of the available web application. You will find more details about revoking on the [main guide page](/docs/integrator-section/verifiable-document/ethereum//revoking-document)
+This guide will help you revoke a hash using one of the available web applications. You will find more details about revoking on [this page](/docs/integrator-section/verifiable-document/ethereum//revoking-document).
 
 Currently, there are 2 web applications:
 
 - [OpenCerts Admin Portal](https://admin.opencerts.io/)
 - [TradeTrust Admin Portal](https://admin.tradetrust.io/)
+
+In this tutorial, we will use the first webapp.
 
 ## Prerequisites
 
@@ -18,14 +20,24 @@ Currently, there are 2 web applications:
 - A document store
 - A merkle root
 
-## Issuing the document
+## Revoking the document
+
+1. After connecting with MetaMask, open the [OpenCerts Admin Portal](https://admin.opencerts.io/) in Google Chrome. On the Welcome page, click **MetaMask**.
+
+2. Enter the `document store smart contract address` from the [deployment guide](/docs/integrator-section/webapp-tutorial/deploy-document-store-webapp/) into the **Store address** field. 
 
 ![Revoking Interface](/docs/integrator-section/webapp-tutorial/revoking-webapp/revoking.png)
 
-After connecting MetaMask, you will be logged into the web application. First, you need to enter the `document store smart contract address` from the [previous guide](/docs/integrator-section/webapp-tutorial/issue-document-store-webapp/) into the "Store address" field. Then, select "Revoke Document Batch" on the navigation on the left.
+3. Select **Revoke document** on the left navigation.
 
-Paste the value of `merkleRoot` from the document into the field and click on "Revoke". You will need to confirm your transaction on MetaMask.
+4. Paste the value of `merkleRoot` from the document into the field. Click **Revoke**. 
+
+    A pop-up message may display, asking **"Are you sure you want to revoke this hash?"**. Click **OK**. 
+
+    ![Admin Portal message](/docs/integrator-section/webapp-tutorial/revoking-webapp/admin-portal-message.png)
+
+    You will also need to confirm your transaction in the MetaMask extension.
+
+5. Once the merkle root has been issued, a success message **"Revoked certificate batch"** will display.
 
 ![Revoke Success](/docs/integrator-section/webapp-tutorial/revoking-webapp/success.png)
-
-Once the merkle root has been issued, you will see the success message "Revoked document batch".

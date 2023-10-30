@@ -1,15 +1,17 @@
 ---
 id: issue-document-store-webapp
-title: Issuing Document with Web app
+title: Issuing Document with Webapp
 sidebar_label: Issuing Document Store
 ---
 
-This guide will help you to issue a hash using one of the available web application. You will find more details about issuing on the [main guide page](/docs/integrator-section/verifiable-document/ethereum/issuing-document)
+This guide will help you issue a hash using one of the available web applications. You will find more details about issuing on [this page](/docs/integrator-section/verifiable-document/ethereum/issuing-document).
 
 Currently, there are 2 web applications:
 
 - [OpenCerts Admin Portal](https://admin.opencerts.io/)
 - [TradeTrust Admin Portal](https://admin.tradetrust.io/)
+
+In this tutorial, we will use the first webapp.
 
 ## Prerequisites
 
@@ -20,13 +22,19 @@ Currently, there are 2 web applications:
 
 ## Issuing the document
 
+1. After connecting with MetaMask, open the [OpenCerts Admin Portal](https://admin.opencerts.io/) in Google Chrome. On the Welcome page, click **MetaMask**.
+
+2. Enter the `document store smart contract address` from the [deployment guide](/docs/integrator-section/webapp-tutorial/deploy-document-store-webapp/) into the **Store address** field. 
+
 ![Issuing Interface](/docs/integrator-section/webapp-tutorial/issuing-webapp/issuing.png)
 
-After connecting MetaMask, you will be logged into the web application. First, you need to enter the `document store smart contract address` from the [previous guide](/docs/integrator-section/webapp-tutorial/deploy-document-store-webapp/) into the "Store address" field. Then, select "Issue Document Batch" on the navigation on the left.
+3. Select **Issue certificate batch** on the left navigation.
 
-Paste the value of `merkleRoot` from the document into the field and click on "Issue". You will need to confirm your transaction on MetaMask.
+4. Paste the `merkleRoot` value from the document into the **Issue certificates with the Merkle Root Hash** field. Click **Issue**. 
 
-Example:
+  You will also need to confirm your transaction in the MetaMask extension.
+
+  The following shows an example. For this document, `76a934e2ce9db63cb5e54bed8ac965a8937ee9e823b894ccf6569141187a475c` is the value you need to issue.
 
 ```json
   "signature": {
@@ -40,8 +48,8 @@ Example:
   }
 ```
 
-For this document, `76a934e2ce9db63cb5e54bed8ac965a8937ee9e823b894ccf6569141187a475c` is the value you need to issue.
+5. Once the merkle root has been issued, a success message **"Batch has been issued"** will display.
 
 ![Issuance Success](/docs/integrator-section/webapp-tutorial/issuing-webapp/success.png)
 
-Once the merkle root has been issued, you will see the success message "Batch has been issued".
+

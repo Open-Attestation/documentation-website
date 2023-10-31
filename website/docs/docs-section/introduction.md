@@ -12,7 +12,7 @@ Verifiable Document (or verifiable credential) is a tamper-evident document that
 
 ## Transferable Records
 
-Transferable Records are Verifiable Documents which have been extended to define a method for resolution of the owner at any point in time. These records reference properties laid out in the [UNCITRAL Model Law on Electronic Transferable Records](https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_transferable_records). Currently, our only implementation of this is based on [ERC721 NFTs](https://eips.ethereum.org/EIPS/eip-721).
+Transferable Records are Verifiable Documents which have been extended to define a method for resolution of the owner at any point in time. These records reference properties listed in [the UNCITRAL Model Law on Electronic Transferable Records](https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_transferable_records). Currently, our only implementation of this is based on [ERC721 NFTs](https://eips.ethereum.org/EIPS/eip-721).
 
 This allows Transferable Records to be used for documents such as:
 

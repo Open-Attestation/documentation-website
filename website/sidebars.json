@@ -118,7 +118,7 @@
         },
         {
           "type": "category",
-          "label": "Webapp Tutorial",
+          "label": "Web App Tutorial",
           "items": [
             "integrator-section/webapp-tutorial/deploy-document-store-webapp",
             "integrator-section/webapp-tutorial/issue-document-store-webapp",

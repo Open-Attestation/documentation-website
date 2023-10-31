@@ -14,7 +14,7 @@ It is possible to revoke a signed document only if you fulfill certain **prerequ
 - Some kind of DID documents:
   1. Base DID document (`ISSUER_IDENTITY`: `identityProof.identifier` against `ethr` DID)
   2. DID-DNS document (`ISSUER_IDENTITY`: `identityProof.identifier` against a [DNS-TXT](/docs/docs-section/how-does-it-work/issuance-identity))
-- A deployed `documentStore`, click [here](/docs/integrator-section/verifiable-document/ethereum/document-store) for the steps.
+- A deployed `documentStore`, click [here](docs/integrator-section/verifiable-document/did/document-store-or-ocsp.md) for the steps.
 - Before you wrap your document with the wrapper SDK, add a `revocation` block with these keys:
 
 ```json
@@ -43,7 +43,7 @@ It is possible to revoke a signed document only if you fulfill certain **prerequ
 
 <!-- TBD v3 document sample when that releases -->
 
-- The `<DEPLOYED_DOCUMENT_STORE_LOCATION>` is your `documentStore` location. It must be **deployed** on the Ethereum block chain (for now. Further implementations will relax this requirement, so that DID documents will truly be gasless).
+- The `<DEPLOYED_DOCUMENT_STORE_LOCATION>` is your `documentStore` location. It must be **deployed** on the Ethereum blockchain.
 - Wrap your document, sign it, and append the signature to the document (following the tutorial).
 
 ### Revoking a document

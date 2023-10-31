@@ -19,11 +19,13 @@ Similar to [binding the document store to a domain name](/docs/integrator-sectio
 
   You will need to replace the token registry address `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with the address you get from the [previous step](/docs/integrator-section/transferable-record/token-registry).
 
-2. If you want to use our sandbox DNS for the purpose of exercise, refer to [these instructions](/docs/integrator-section/verifiable-document/ethereum/dns-proof) and run the following command instead:
+2. If you want to use our sandbox DNS for the purpose of exercise, run the following command instead:
 
   ```sh
   open-attestation dns txt-record create --address 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --network-id 11155111
   ```
+
+<!--Flag: To force open the below link in a new tab page.-->
 
 3. If you want to view more detailed setup instructions, see the [documentation for configuring DNS](/docs/developer-section/quickstart/configure-dns).
 
@@ -93,3 +95,6 @@ This is an alternative way to wrap the Transferable Record.
 <!-- Reuse the steps to wrap a single document -->
 
 >**Note:** Save the merkle root somewhere for later steps.
+
+## Additional reading
+You will find more details about configuring DNS on [this page](/docs/integrator-section/verifiable-document/ethereum/dns-proof).

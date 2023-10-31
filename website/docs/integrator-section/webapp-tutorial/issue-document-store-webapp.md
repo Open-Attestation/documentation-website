@@ -1,17 +1,17 @@
 ---
 id: issue-document-store-webapp
-title: Issuing Document with Webapp
-sidebar_label: Issuing Document Store
+title: Issuing Document with Web App
+sidebar_label: Issuing Document
 ---
 
-This guide will help you issue a hash using one of the available web applications. You will find more details about issuing on [this page](/docs/integrator-section/verifiable-document/ethereum/issuing-document).
+This guide will help you issue a hash using one of the available web applications. 
 
 Currently, there are 2 web applications:
 
 - [OpenCerts Admin Portal](https://admin.opencerts.io/)
 - [TradeTrust Admin Portal](https://admin.tradetrust.io/)
 
-In this tutorial, we will use the first webapp.
+In this tutorial, we will use the first web app.
 
 ## Prerequisites
 
@@ -53,3 +53,5 @@ In this tutorial, we will use the first webapp.
 ![Issuance Success](/docs/integrator-section/webapp-tutorial/issuing-webapp/success.png)
 
 
+## Additional reading
+You will find more details about issuing on [this page](/docs/integrator-section/verifiable-document/ethereum/issuing-document).

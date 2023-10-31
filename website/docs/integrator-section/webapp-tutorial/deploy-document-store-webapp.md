@@ -1,17 +1,17 @@
 ---
 id: deploy-document-store-webapp
-title: Deploying Document Store with Webapp
+title: Deploying Document Store with Web App
 sidebar_label: Deploying Document Store
 ---
 
-This guide will help you deploy a document store using one of the available web applications. You will find more details about document store on [this page](/docs/integrator-section/verifiable-document/ethereum/document-store).
+This guide will help you deploy a document store using one of the available web applications. 
 
 Currently, there are 2 web applications:
 
 - [OpenCerts Admin Portal](https://admin.opencerts.io/)
 - [TradeTrust Admin Portal](https://admin.tradetrust.io/)
 
-In this tutorial, we will use the first webapp.
+In this tutorial, we will use the first web app.
 
 ## Prerequisites
 
@@ -36,9 +36,9 @@ Perform these steps to connect MetaMask to the network you want to use:
 
 ![MetaMask](/docs/integrator-section/webapp-tutorial/document-store-webapp/sepolia.png)
 
-## Connect MetaMask to webapp
+## Connect MetaMask to web app
 
-To interact with the OpenCerts Admin Portal webapp, you will need to connect your MetaMask wallet. 
+To interact with the OpenCerts Admin Portal web app, you will need to connect your MetaMask wallet. 
 
 1. Open the [OpenCerts Admin Portal](https://admin.opencerts.io/) in Google Chrome. On the Welcome page, click **MetaMask**.
 
@@ -70,6 +70,9 @@ To interact with the OpenCerts Admin Portal webapp, you will need to connect you
 
     In the example below, the document store address is `0x56Fffcd6A79b65d911ee42Bc077DE8cFe9fAdeD4`. Do **not** use the Transaction ID.
 
->**Important:** Save the document store address somewhere, as the webapp does not keep track of your document store addresses.
+>**Important:** Save the document store address somewhere, as the web app does not keep track of your document store addresses.
 
 ![Successful deployment](/docs/integrator-section/webapp-tutorial/document-store-webapp/success.png)
+
+## Additional reading
+You will find more details about document store on [this page](/docs/integrator-section/verifiable-document/ethereum/document-store).

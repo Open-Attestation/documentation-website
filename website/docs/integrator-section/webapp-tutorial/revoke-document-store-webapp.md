@@ -1,17 +1,17 @@
 ---
 id: revoke-document-store-webapp
-title: Revoking Document with Webapp
-sidebar_label: Revoking Document Store
+title: Revoking Document with Web App
+sidebar_label: Revoking Document
 ---
 
-This guide will help you revoke a hash using one of the available web applications. You will find more details about revoking on [this page](/docs/integrator-section/verifiable-document/ethereum/revoking-document).
+This guide will help you revoke a hash using one of the available web applications. 
 
 Currently, there are 2 web applications:
 
 - [OpenCerts Admin Portal](https://admin.opencerts.io/)
 - [TradeTrust Admin Portal](https://admin.tradetrust.io/)
 
-In this tutorial, we will use the first webapp.
+In this tutorial, we will use the first web app.
 
 ## Prerequisites
 
@@ -41,3 +41,6 @@ In this tutorial, we will use the first webapp.
 5. Once the `merkleRoot` has been issued, a success message **"Revoked certificate batch"** will display.
 
 ![Revoke Success](/docs/integrator-section/webapp-tutorial/revoking-webapp/success.png)
+
+## Additional reading
+You will find more details about revoking on [this page](/docs/integrator-section/verifiable-document/ethereum/revoking-document).

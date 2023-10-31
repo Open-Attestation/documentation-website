@@ -4,7 +4,7 @@ title: Transferable Record Overview
 sidebar_label: Overview
 ---
 
-A Transferable Record is an extended form of a verifiable document, which allows the document to have an owner. Transferable Records reference the properties listed in [UNCITRAL Model Law on Electronic Transferable Records](https://www.uncitral.org/pdf/english/texts/electcom/MLETR_ebook.pdf).
+A Transferable Record is an extended form of a verifiable document, which allows the document to have an owner. Transferable Records reference the properties listed in [the UNCITRAL Model Law on Electronic Transferable Records](https://www.uncitral.org/pdf/english/texts/electcom/MLETR_ebook.pdf).
 
 This makes Transferable Records usable for documents like:
 

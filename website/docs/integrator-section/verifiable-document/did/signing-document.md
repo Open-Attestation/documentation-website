@@ -13,8 +13,8 @@ open-attestation sign ./wrapped-documents-did --od ./signed-documents-did --publ
 
 In the example above:
 
-- `public-key` is the public key used [to bind the wallet address with the DNS location](/docs/integrator-section/verifiable-document/did/dns)
-- `key` is the wallet private key, generated when [creating the wallet](/docs/integrator-section/verifiable-document/did/create)
+- `public-key` is the public key used to [bind the wallet address with the DNS location](/docs/integrator-section/verifiable-document/did/dns).
+- `key` is the wallet private key, generated when [creating the wallet](/docs/integrator-section/verifiable-document/did/create).
 
 ```text
 ✔  success   Signed documents saved to ./signed-documents-did
@@ -22,7 +22,7 @@ In the example above:
 
 ## Verifying the documents
 
-Head to `dev.tradetrust.io` and drag and drop one of the issued /signed documents. The document will be verified, then displayed.
+Head to `dev.tradetrust.io` and drag and drop one of the issued or signed documents. The document will be verified then display.
 
 ![Successful verification](/docs/integrator-section/verifiable-document/ethereum/signing-document/verifying.png)
 

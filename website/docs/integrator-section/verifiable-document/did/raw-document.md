@@ -57,19 +57,25 @@ Once all the values are configured and the raw document conforms to the schema, 
 
 ## Saving the raw document
 
-Near the `wallet.json` file, create a folder named `raw-documents-did`. Inside that folder create a filename `certificate-1.json` and paste the validated JSON from above.
+To save the raw document: 
 
-Create another file named `certificate-2.json` and paste the same validated JSON into the file, changing the `recipient.name` to a different name.
+1. At the same level with the `wallet.json` file, create a folder named `raw-documents-did`. 
 
-At this point in time, your directory should look like the following:
+2. Inside that folder create a file named `certificate-1.json` and paste the validated JSON from above.
 
-```text
-wallet.json
-raw-documents-did
-  |-- certificate-1.json
-  |-- certificate-2.json
-```
+3. Create another file named `certificate-2.json`. 
 
-We are now ready to wrap the documents.
+4. Paste the same validated JSON into the `certificate-2.json` file. Change the `recipient.name` to a different name.
+
+  At this point in time, your directory should look like the following:
+
+  ```text
+  wallet.json
+  raw-documents-did
+    |-- certificate-1.json
+    |-- certificate-2.json
+  ```
+
+  We are now ready to wrap the documents.
 
 

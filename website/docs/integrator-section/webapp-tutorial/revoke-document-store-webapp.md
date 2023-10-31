@@ -4,7 +4,7 @@ title: Revoking Document with Webapp
 sidebar_label: Revoking Document Store
 ---
 
-This guide will help you revoke a hash using one of the available web applications. You will find more details about revoking on [this page](/docs/integrator-section/verifiable-document/ethereum//revoking-document).
+This guide will help you revoke a hash using one of the available web applications. You will find more details about revoking on [this page](/docs/integrator-section/verifiable-document/ethereum/revoking-document).
 
 Currently, there are 2 web applications:
 
@@ -28,7 +28,7 @@ In this tutorial, we will use the first webapp.
 
 ![Revoking Interface](/docs/integrator-section/webapp-tutorial/revoking-webapp/revoking.png)
 
-3. Select **Revoke document** on the left navigation.
+3. Select **Revoke certificate** on the left navigation.
 
 4. Paste the value of `merkleRoot` from the document into the field. Click **Revoke**. 
 
@@ -38,6 +38,6 @@ In this tutorial, we will use the first webapp.
 
     You will also need to confirm your transaction in the MetaMask extension.
 
-5. Once the merkle root has been issued, a success message **"Revoked certificate batch"** will display.
+5. Once the `merkleRoot` has been issued, a success message **"Revoked certificate batch"** will display.
 
 ![Revoke Success](/docs/integrator-section/webapp-tutorial/revoking-webapp/success.png)

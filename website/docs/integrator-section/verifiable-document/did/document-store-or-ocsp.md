@@ -14,7 +14,7 @@ The document store is a smart contract on the Ethereum network that records the 
 
 
 ### Running the deploy document-store command
-We will make use of the wallet that we created in the [previous step](/docs/integrator-section/verifiable-document/did/create).
+We will use the wallet created in the [previous step](/docs/integrator-section/verifiable-document/did/create).
 
 ```bash
 open-attestation deploy document-store "DID document store" --network sepolia --encrypted-wallet-path wallet.json
@@ -38,9 +38,9 @@ Once your document store smart contract has been successfully deployed, you will
 ### Saving the document store address
 In the example above, the document store address is `0x3AaeBb82BbF0513B422532953724C33504E5b157`. 
 
-> **Important:** Please do **not** use the Transaction ID in the response.
+Please do **not** use the Transaction ID in the response.
 
-Save the document store address somewhere. You will need this address later to complete the tutorial.
+> **Important:** Save the document store address somewhere. You will need this address later to complete the tutorial.
 
 ## Deploying OCSP
 A reference implementation for deploying the OCSP responder is available at [this repository on GitHub](https://github.com/Open-Attestation/ocsp-responder).

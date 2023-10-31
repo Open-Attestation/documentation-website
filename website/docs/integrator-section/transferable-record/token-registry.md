@@ -40,7 +40,7 @@ d8f30c982fc23245a2cc4ec8271edcb4637f539d490ce750cdb5085241ffb41c
 
 ### Deploying the token registry
 
-Simply run the following command. You need to replace the `<registry-name>` and `<registry-symbol>` with a suitable name and symbol (usually 3 characters).
+Replace the `<registry-name>` and `<registry-symbol>` below with a suitable name and symbol (usually 3 characters) and run the command:
 
 ```sh
 open-attestation deploy token-registry <registry-name> <registry-symbol> -n sepolia -f key.txt

@@ -5,7 +5,9 @@ sidebar_label: Creating a DID
 
 While there exists many [DIDs](/docs/docs-section/appendix/glossary#did), this tutorial will focus only on `ethr` DID. At the moment, OpenAttestation only supports `ethr` DID.
 
-The creation of an `ethr` DID is identical to [the creation of a wallet](/docs/integrator-section/verifiable-document/ethereum/wallet), as it relies entirely on the ethereum architecture. Once the wallet will be created, we will need to retrieve its private key. 
+The creation of an `ethr` DID is identical to [the creation of a wallet](/docs/integrator-section/verifiable-document/ethereum/wallet), as it relies entirely on the ethereum architecture. If you already have a wallet, you can use the same one for this tutorial while ensuring the balance is sufficient.
+
+Next, we will need to retrieve the wallet private key.
 
 ## Running the wallet create command
    ```bash
@@ -51,6 +53,8 @@ Please note that you will definitely get different values.
 >**Important:** In order to make the tutorial easier to follow, we decided to reveal all the information about the wallet we used, including the private key. We used a throw-away wallet for that purpose. That means that we will never use this wallet again. You must **NEVER SHARE THE PRIVATE KEY** of your wallet.
 
 ## Checking your DID at uniresolver
-Check your DID at https://dev.uniresolver.io/1.0/identifiers/did:ethr:YOUR_WALLET_ADDRESS. Be sure to change `YOUR_WALLET_ADDRESS` to fit your case.
+Replace `YOUR_WALLET_ADDRESS` below and check your DID via this link: 
+
+https://dev.uniresolver.io/1.0/identifiers/did:ethr:YOUR_WALLET_ADDRESS
 
 For instance, [check this url](https://dev.uniresolver.io/1.0/identifiers/did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D) with the example above.

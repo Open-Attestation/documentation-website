@@ -68,7 +68,7 @@ You would require a DID document with
 - `revocation.type` : `OCSP_RESPONDER`
 - `revocation.location`: `https://ocsp-sandbox.openattestation.com`
 
-Replace the `revocation.type` and `revocation.location` values to fit your case.
+Replace the `revocation.type` and `revocation.location` values below.
 
 ```json
 {

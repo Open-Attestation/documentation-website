@@ -9,29 +9,29 @@ In this section, we will prepare the DNS and the content of the transferable rec
 
 ## DNS configuration
 
-Similar to [binding the document store to a domain name](/docs/integrator-section/verifiable-document/ethereum/document-store), you will have to bind the identity of the token registry to a domain name.
+Similar to [binding the document store to a domain name](/docs/integrator-section/verifiable-document/ethereum/document-store), you will have to bind the identity of the token registry to a domain name. To do that, perform one of the following methods:
 
-To do that, create a `TXT` record on your domain with the following entry value:
+1. create a `TXT` record on your domain with the following entry value:
 
-| Type | Domain      | Entry Value                                                     |
-| ---- | ----------- | --------------------------------------------------------------- |
-|`TXT` | example.com | "openatts net=`ethereum` netId=`11155111` addr=`0x8431012Bc040942B59e3C5bf428221eab0b2f723`" |
+  | Type | Domain      | Entry Value                                                     |
+  | ---- | ----------- | --------------------------------------------------------------- |
+  |`TXT` | example.com | "openatts net=`ethereum` netId=`11155111` addr=`0x8431012Bc040942B59e3C5bf428221eab0b2f723`" |
 
-You will need to replace the token registry address `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with the address you get from the previous step.
+  You will need to replace the token registry address `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with the address you get from the [previous step](/docs/integrator-section/transferable-record/token-registry).
 
-If you want to use our sandbox DNS for the purpose of the exercise, run the following command instead following the instructions from [earlier](/docs/integrator-section/verifiable-document/ethereum/dns-proof):
+2. If you want to use our sandbox DNS for the purpose of exercise, refer to [these instructions](/docs/integrator-section/verifiable-document/ethereum/dns-proof) and run the following command instead:
 
-```sh
-open-attestation dns txt-record create --address 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --network-id 11155111
-```
+  ```sh
+  open-attestation dns txt-record create --address 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --network-id 11155111
+  ```
 
-If you want to view more detailed setup instructions, see the [documentation for configuring DNS](/docs/developer-section/quickstart/configure-dns).
+3. If you want to view more detailed setup instructions, see the [documentation for configuring DNS](/docs/developer-section/quickstart/configure-dns).
 
 >**Important:** Take note of the domain where you are inserting the records, because you will need the domain name later.
 
 ## Creating a raw transferable document
 
-Similar to creating a verifiable document, you will need to create a raw JSON file with the content of the transferable record first.
+Similar to creating a verifiable document, first of all, you will need to create a raw JSON file with the content of the transferable record.
 
 Create a file `sample.json` in a folder `raw-documents-transferable`:
 

@@ -19,17 +19,17 @@ You will require the following:
 
 In the example, we will use 0x6FFeD6E6591b808130a9b248fEA32101b5220eca as beneficiary and holder. You will need to replace this value with a wallet address you control, to be able to perform different actions on the transferable records later.
 
-To issue the transferable record, simply run the command:
-
-```sh
-open-attestation token-registry issue -a 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --tokenId 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea --beneficiary 0x6FFeD6E6591b808130a9b248fEA32101b5220eca --holder 0x6FFeD6E6591b808130a9b248fEA32101b5220eca -n sepolia -f key.txt
-```
-
-Replace the following values:
+To issue the transferable record, replace the following values:
 
 - `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with your token registry contract address
 - `0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea` with your merkle root (with a `0x` prefix)
 - `0x6FFeD6E6591b808130a9b248fEA32101b5220eca` with your beneficiary and holder addresses
+
+Then run the command:
+
+```sh
+open-attestation token-registry issue -a 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --tokenId 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea --beneficiary 0x6FFeD6E6591b808130a9b248fEA32101b5220eca --holder 0x6FFeD6E6591b808130a9b248fEA32101b5220eca -n sepolia -f key.txt
+```
 
 >**Note:** In this tutorial, we use the same beneficiary and holder address for demonstration purpose. You can specify different wallet addresses for the beneficiary and holder if they are two different entities.
 
@@ -51,8 +51,12 @@ To view your transferable record, visit https://dev.tradetrust.io/
 
 If you have issued the Ethereum mainnet, visit https://tradetrust.io/ instead. 
 
-You will be able to drop your transferable record (found in `wrapped-documents` folder) into the dropzone and see something similar to the following:
+You will be able to drag your transferable record from the `wrapped-documents-transferable` folder and drop it to see a page like the following:
 
 ![Completed Transferable Record](/docs/integrator-section/transferable-record/issuing-transferable-record/completed.png)
 
-When you have logged in as either beneficiary or holder, click **Connect Wallet** to perform the actions such as transferring the ownership of the transferable record.
+When you have logged in as either beneficiary or holder, click **Manage Assets** to perform the action such as:
+
+* **Transfer holdership**
+* **Endorse change of beneficiary**
+* **Surrender document**

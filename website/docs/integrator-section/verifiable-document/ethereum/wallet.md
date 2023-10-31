@@ -37,7 +37,7 @@ A wallet will be created in the current folder, in the `wallet.json` file.
 ## Verifying the wallet balance
 Make sure ethers have been added into your wallet. You will need some for the next steps. 
 
-Head to etherscan (https://sepolia.etherscan.io/address/PUT_YOUR_ADDRESS_HERE}) and verify the balance. You should have 1 ether. 
+Head to etherscan (https://sepolia.etherscan.io/address/{PUT_YOUR_ADDRESS_HERE}) and verify the balance. You should have 1 ether. 
 
 For instance, for the wallet created above, the URL is https://sepolia.etherscan.io/address/0x10cFd56E11e7d66C8d0716Cd2D6B847Cb17ABeeD.
 

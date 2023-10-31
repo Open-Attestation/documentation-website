@@ -48,7 +48,7 @@ In this tutorial, we will use the first webapp.
   }
 ```
 
-5. Once the merkle root has been issued, a success message **"Batch has been issued"** will display.
+5. Once the `merkleRoot` has been issued, a success message **"Batch has been issued"** will display.
 
 ![Issuance Success](/docs/integrator-section/webapp-tutorial/issuing-webapp/success.png)
 

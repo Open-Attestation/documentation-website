@@ -17,9 +17,11 @@ open-attestation dns txt-record create --public-key did:ethr:0xaCc51f664D647C992
 
 You need to prepend your wallet address with `did:ethr:` and append `#controller` to it. 
 
-Open your own DID again on uniresolver at https://dev.uniresolver.io/1.0/identifiers/did:ethr:YOUR_WALLET_ADDRESS. Be sure to change `YOUR_WALLET_ADDRESS` to fit your case.
+Change `YOUR_WALLET_ADDRESS` below and view your own DID via this link:
 
-Check the values in the output. The `public-key` parameter in the creation command above **MUST** match the `id` property:
+https://dev.uniresolver.io/1.0/identifiers/did:ethr:YOUR_WALLET_ADDRESS
+
+Check the values in the output. The `public-key` parameter in the creation command above **MUST** match the `id` property value:
 
 ```json
 [
@@ -41,7 +43,7 @@ Once the DNS TXT record has been successfully deployed, you will see the success
 ✔  success   Record created at intermediate-sapphire-catfish.sandbox.openattestation.com and will stay valid until Fri Nov 27 2020 14:12:03 GMT+0800 (Singapore Standard Time)
 ```
 
-In the example above, the document store `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller`, has been bound to the `intermediate-sapphire-catfish.sandbox.openattestation.com` location. 
+In the example above, the document store `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller` has been bound to the `intermediate-sapphire-catfish.sandbox.openattestation.com` location. 
 
 ## Verification
 Run the following command to make sure the entry has been propagated to the DNS:

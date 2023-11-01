@@ -4,45 +4,56 @@ title: Creating Verifiable Document Issuer
 sidebar_label: Creating Verifiable Document Issuer
 ---
 
-A verifiable document is a digital document that can be issued and verified using blockchain technology.
+A verifiable document is a digital document, which you can issue and verify using blockchain technology.
 
-Examples of verifiable documents include, but are not limited to, receipts, bills of sale, titles, certificates of title, purchase agreements, shipping manifests, work orders, etc.
+Examples of verifiable documents include the following, but are not limited to these documents:
+* Receipts
+* Bills of sale
+* Titles
+* Certificates of title
+* Purchase agreements
+* Shipping manifests
+* Work orders
 
-In this guide, we will build a verifiable document issuer which would allow for the creation and issuing of a verifiable document.
+In this guide, we will build a verifiable document issuer, which will help the user create and issue a verifiable document.
 
 ## Prerequisites
 
 ### React
 
-You should have a basic understanding of [React.js](https://react.dev/) in order to complete this tutorial.
+You need a basic understanding of [React.js](https://react.dev/) to complete this tutorial.
 
 ### MetaMask
 
-You should also have had MetaMask installed in your browser and created a wallet. If not, follow the steps below:
+You should also have installed MetaMask in your browser and created a wallet. If not, follow the steps below:
 
 1. [Download MetaMask](https://metamask.io/download/).
-   - After successfully downloading MetaMask, open the extension and the application will guide you with wallet creation.
-2. Transfer some test ethers from any of your prefered testing networks to your created wallet address.
+   
+2. Open the extension in your browser. 
+
+    The application will guide you through the wallet creation process.
+
+3. Transfer some test ethers from any of your preferred testing networks to your wallet address.
 
 ### Verifiable Document Components
 
-Before starting on this code tutorial, it would be beneficial to develop an understanding of the components involved in the creation, issuance and verification of a verifiable document.
+Before starting on this code tutorial, it will be helpful to understand the components involved in the creation, issuance and verification of a verifiable document.
 
 You can read more about the components [here](/docs/integrator-section/verifiable-document/ethereum/document-store-overview).
 
 ## Overview
 
-We will be building a single-page application which allows a user to:
+We will build a single-page application, which helps the user perform the following:
 
-1. Connect to MetaMask wallet.
+1. Connect to their MetaMask wallet.
 2. Deploy their own Document Store.
 3. Bind their own domain name to their verifiable document.
 4. Create and wrap a raw document.
-5. Issue, download and then verify the wrapped document.
+5. Issue, download, and then verify the wrapped document.
 
 ## Setup
 
-First, we'll use [Create Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite) to create a new single-page application using `react-ts` template.
+First, we'll use [Create Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite) to create a new single-page application using the `react-ts` template.
 
 ```
 npm create vite@latest verifiable-document-issuer --template react-ts
@@ -71,9 +82,9 @@ npm start
 
 Now that we have a basic React application set up and the necessary dependencies installed, let's get started!
 
-### Initialising MetaMask
+### Initializing MetaMask
 
-When you [installed MetaMask](/docs/developer-section/quickstart/create-verifiable-document-issuer#metamask) on your browser, it injected a [global API](https://docs.metamask.io/guide/ethereum-provider.html) into the web application at `window.etherem`. We use this API to get a [Signer](https://docs.ethers.io/v5/api/signer/) so that we can interact with smart contracts on the Ethereum blockchain.
+When you [installed MetaMask](/docs/developer-section/quickstart/create-verifiable-document-issuer#metamask) on your browser, it injected a [global API](https://docs.metamask.io/guide/ethereum-provider.html) into the web application at `window.ethereum`. We use this API to get a [Signer](https://docs.ethers.io/v5/api/signer/) so that we can interact with smart contracts on the Ethereum blockchain.
 
 We'll create separate files for our API calls. For example, in `services/account.tsx`:
 
@@ -138,7 +149,7 @@ export const deployDocumentStore = async (signer: JsonRpcSigner) => {
 };
 ```
 
-This function deploys a Document Store from a `DocumentStoreFactory` and returns the address of the deployed Document Store. Typically, once the Document Store is deployed, we can save this address in a persistent storage and reuse it whenever we run the application. In order to keep things light-weight however, we will simply want to store this address in state.
+This function deploys a Document Store from a `DocumentStoreFactory` and returns the address of the deployed Document Store. Typically, once the Document Store is deployed, we can save this address in a persistent storage and reuse it whenever we run the application. To keep things lightweight however, we will simply want to store this address in state.
 
 We will create a file `DocumentStoreContext.tsx` to house all the Document Store related states, while `AccountContext.tsx` for all MetaMask related states.
 

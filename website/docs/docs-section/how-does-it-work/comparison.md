@@ -19,7 +19,7 @@ This is where DID come handy. Even if technically a DID could be bound to a spec
 
 ## Price
 
-You will need ethers in order to use Ethereum Smart Contracts. The following actions require ethers:
+You will need ethers to use Ethereum Smart Contracts. The following actions require ethers:
 
 - Creating a document store,
 - Issuing a merkle root,
@@ -47,7 +47,7 @@ Note that if you do use revocation for `DID`, you still need to have at least 1 
 
 Because of Ethereum, you will never have control on how long a transaction happens with Ethereum Smart Contracts. You can pay more gas to speed up the transaction but in the end you have no control. It's also worth to consider the workflow. If you issue a lot of documents and have to pay a transaction for each document issuance individually, it will quickly cost a lot. That's why we recommend batching issuance. Whether you do it hourly, weekly or monthly will depend on your need. Keep in mind that issuing document individually is a bad option and can become very costly (unless you issue one document every month for instance). Issuing hourly or daily are viable options in terms of price.
 
-DID is a perfect match when you need to sign document in real-time. Unlike issuing with the smart contract methods, there is no requirement to wait for a blockchain transaction to be finalised, and the issued document is immediately valid.
+DID is a perfect match when you need to sign document in real-time. Unlike issuing with the smart contract methods, there is no requirement to wait for a blockchain transaction to be finalized, and the issued document is immediately valid.
 
 ## Issuance traceability
 

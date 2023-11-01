@@ -46,7 +46,7 @@ A few interesting transformations happened that we will dive into below:
 The first step of wrapping consists of transforming all the object properties provided as input using the following algorithm:
 
 1. For each property
-1. Generate a salt [using uuid v4](https://www.npmjs.com/package/uuid) in order to prevent [rainbow table attack](https://en.wikipedia.org/wiki/Rainbow_table).
+1. Generate a salt [using uuid v4](https://www.npmjs.com/package/uuid) to prevent [rainbow table attack](https://en.wikipedia.org/wiki/Rainbow_table).
 1. Determine the type of original property.
 1. Transform the original value to `<salt>:<original-type>:<original-value>`.
 

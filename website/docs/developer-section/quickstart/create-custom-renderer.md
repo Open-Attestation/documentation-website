@@ -32,7 +32,7 @@ rm -rf .git
 
 ### Clean the template
 
-In order to fully understand how developing a renderer work, we will start by cleaning it a bit:
+To fully understand how to develop a renderer work, we will start by cleaning it a bit:
 
 - remove the folder `src/templates/customTemplate`
 - remove the folder `src/integration`

@@ -50,7 +50,7 @@ There are two pieces of important information to keep for the next steps:
 
 Please note that you will definitely get different values.
 
->**Important:** In order to make the tutorial easier to follow, we decided to reveal all the information about the wallet we used, including the private key. We used a throw-away wallet for that purpose. That means that we will never use this wallet again. You must **NEVER SHARE THE PRIVATE KEY** of your wallet.
+>**Important:** To make the tutorial easier to follow, we decided to reveal all the information about the wallet we used, including the private key. We used a throw-away wallet for that purpose. That means that we will never use this wallet again. You must **NEVER SHARE THE PRIVATE KEY** of your wallet.
 
 ## Checking your DID at uniresolver
 Replace `YOUR_WALLET_ADDRESS` below and check your DID via this link: 

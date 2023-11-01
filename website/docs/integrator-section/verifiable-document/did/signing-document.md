@@ -22,7 +22,7 @@ In the example above:
 
 ## Verifying the documents
 
-Head to `dev.tradetrust.io` and drag and drop one of the issued or signed documents. The document will be verified then display.
+Head to `dev.tradetrust.io` and drag and drop one of the issued or signed documents. After being verified, the document will display.
 
 ![Successful verification](/docs/integrator-section/verifiable-document/ethereum/signing-document/verifying.png)
 

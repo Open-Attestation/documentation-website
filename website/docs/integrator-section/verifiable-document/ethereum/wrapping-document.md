@@ -4,6 +4,7 @@ title: Wrapping Documents
 sidebar_label: Wrapping Documents
 ---
 import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
+import WrapDocumentsInBatch from "/src/reusables/_wrap-documents-in-batch.mdx";
 
 Every OA document has a checksum that provides it a tamper-proof property. At the same time, because the checksum can be used to uniquely identify a document, the checksum (or its derived value) is stored onto the document store as evidence of issuance. To compute the checksum, a `raw document` goes through a process known as `wrapping` to become a `wrapped document`. Only then, the document is ready to be issued onto the blockchain.
 
@@ -15,26 +16,19 @@ We will use the CLI tool to read all the files in the `raw-documents` folder, wr
 
 A `merkleRoot`, a 64 character long string prepended with `0x` will be generated. The `merkleRoot` is the only information that will be stored onto the Blockchain to verify the issuance status of an OA document.
 
-## Running the wrap command
+## Replace folder names
+Before running the command below, replace the folder names. For example:
 
-From the folder containing the `raw-documents` folder, run the command:
+* Replace `<RAW_DOCUMENTS_FOLDER>` with `raw-documents`
+* Replace `<WRAPPED_DOCUMENTS_FOLDER>` with `wrapped-documents`
 
-```sh
-open-attestation wrap raw-documents --output-dir wrapped-documents
-```
+<WrapDocumentsInBatch />
 
-## Getting the response
-
-In the response, you will see the success message with the `Batch Document Root`. 
-
-```sh
-✔  success   Batch Document Root: 0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff
-```
-
-## Saving the merkle root
-In the above sample, the batch document root (also known as "merkle root") is `0x80cc53b77c0539fc383f8d434ac5ffad281f3d64ae5a0e59e9f36f19548e1fff`, you will definitely have a different value.
-
-Save this value for future reference.
+<!--
+This file is mostly duplicated with the same content at the following locations:
+1. docs/integrator-section/verifiable-document/did/wrapping-document.md
+2. docs/integrator-section/verifiable-document/ethereum/wrapping-document.md
+ -->
 
 ## Viewing the wrapped documents
 

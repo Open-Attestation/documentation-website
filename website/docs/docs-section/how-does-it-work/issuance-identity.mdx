@@ -2,6 +2,7 @@
 title: Issuance Identity
 sidebar_label: Issuance Identity
 ---
+import SupportedNetworks from "/src/reusables/_supported-networks.mdx";
 
 OpenAttestation uses the Domain Name System (DNS) as the method of issuer identity verification. A one-liner introduction to the DNS system can be summarised as: "Phonebook for the Internet". It's primary purpose is to resolve human readable names such as "google.com", or "openattestation.com", etc. to a set of records. The most common records are 'A records', which resolve to IP addresses - this allows network routing to operate over the Internet.
 
@@ -49,7 +50,7 @@ Within your domain registrar or DNS provider's web UI, insert a `TXT` record int
 
 | Type | Name        | Value                                                           |
 | ---- | ----------- | --------------------------------------------------------------- |
-| TXT  | example.com | "openatts net=ethereum netId=3 addr=`<DOCUMENT_STORE_ADDRESS>`" |
+| TXT  | example.com | "openatts net=ethereum netId=`<NETWORK_ID>` addr=`<DOCUMENT_STORE_ADDRESS>`" |
 
 The `<DOCUMENT_STORE_ADDRESS>` in the `Value` field above is the document store smart contract address obtained. Please note that the document store address needs to be prepended with `addr`.
 
@@ -59,14 +60,13 @@ An example of a valid DNS `TXT` record is as shown:
 
 | Type | Name                     | Value                                                                           |
 | ---- | ------------------------ | ------------------------------------------------------------------------------- |
-| TXT  | demo.openattestation.com | "openatts net=ethereum netId=3 addr=0xED2E50434Ac3623bAD763a35213DAD79b43208E4" |
+| TXT  | demo.openattestation.com | "openatts net=ethereum netId=11155111 addr=0xED2E50434Ac3623bAD763a35213DAD79b43208E4" |
 
 The `netId` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). We generally use only the following networks:
 
-| Network ID | Name                     | Network   |
-| ---------- | ------------------------ | --------- |
-| `1`        | Ethereum Mainnet         | `mainnet` |
-| `11155111` | Ethereum Testnet Sepolia | `sepolia` |
+<!-- Reusing the Network Table here -->
+
+<SupportedNetworks />
 
 For more information on switching to production mode, refer to the [Additional Note for Identity Proof in Production](#additional-note-for-identity-proof-in-production) section below.
 

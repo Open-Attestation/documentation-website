@@ -5,7 +5,7 @@ sidebar_label: Creating Raw Document
 
 For the explanation about raw document purpose and format, see [the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/raw-document).
 
-We will adapt the raw document.
+We will create the raw document for DID.
 
 ## Creating raw document
 
@@ -38,18 +38,44 @@ Let's create our document:
 }
 ```
 
-### Replace the issuers ID
+### Replacing the issuers ID
 
-Change the value of `issuers[0].id` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D` to the wallet address created from the [previous steps](/docs/integrator-section/verifiable-document/did/create). 
+Change the value of `issuers[0].id` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D` to the wallet address created from the [previous step](/docs/integrator-section/verifiable-document/did/create). 
 
 > **Note:** Keep `did:ethr:` in front of the wallet address.
 
-### Replace the identity proof location
+### Replacing the identity proof location
 
 Change the value of `issuers[0].identityProof.location` from `intermediate-sapphire-catfish.sandbox.openattestation.com` to the dns name used to bind the wallet address in the [previous step](/docs/integrator-section/verifiable-document/did/dns).
 
-### Replace the identity proof key
+### Replacing the identity proof key
 
-Change the value of `issuers[0].identityProof.key` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller` to the public key used to bind the wallet address in the [previous step](/docs/integrator-section/verifiable-document/did/dns)
+Change the value of `issuers[0].identityProof.key` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller` to the public key used to bind the wallet address in the [previous step](/docs/integrator-section/verifiable-document/did/dns).
 
-> Follow the same file structure like the one [in the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/raw-document#saving-the-raw-document).
+## Verification
+Once all the values are configured and the raw document conforms to the schema, you will see the message `No errors found. JSON validates against the schema`.
+
+## Saving the raw document
+
+To save the raw document: 
+
+1. At the same level with the `wallet.json` file, create a folder named `raw-documents-did`. 
+
+2. Inside that folder create a file named `certificate-1.json` and paste the validated JSON from above.
+
+3. Create another file named `certificate-2.json`. 
+
+4. Paste the same validated JSON into the `certificate-2.json` file. Change the `recipient.name` to a different name.
+
+  At this point in time, your directory should look like the following:
+
+  ```text
+  wallet.json
+  raw-documents-did
+    |-- certificate-1.json
+    |-- certificate-2.json
+  ```
+
+  We are now ready to wrap the documents.
+
+

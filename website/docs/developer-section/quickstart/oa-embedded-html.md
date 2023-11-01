@@ -8,7 +8,7 @@ sidebar_label: Embedding Verifiable Document into an HTML file
 
 Since an OpenAttestation document (`.OA`) is not a native file extension automatically recognised by devices, the OA-embedded HTML solution was introduced. This approach helps to encapsulate an OA document so that end-users can be directed directly to the verifier (with their document) just by clicking on a button presented by a locally-rendered HTML page.
 
-This is an optional procedure after creating an issued/signed OA document that is dependent on your use case (e.g. you want to make it more convenient for end-users who may not understand what to do with an OA document).
+This is an optional procedure after creating an issued or signed OA document that is dependent on your use case (e.g. you want to make it more convenient for end-users who may not understand what to do with an OA document).
 
 ## How it works
 
@@ -28,7 +28,7 @@ Ensure that you have followed the documentation on how to issue an [Ethereum OA 
 
 ## Create your Verify URL
 
-To get started, we will need to have an issued/signed OA document.
+To get started, we will need to have an issued or signed OA document.
 
 - In this guide, we will be using our [sample HealthCert document](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json).
 

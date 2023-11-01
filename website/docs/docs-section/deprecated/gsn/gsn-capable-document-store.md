@@ -8,7 +8,7 @@ The GsnCapableDocumentStore is a variant of Document Store which allows for rela
 
 This guide is for developers who have Ethereum and want to set up a document store that accept gsn relayed transactions for their users.
 
-## Pre-requisite
+## Prerequisites
 
 - [OpenAttestation CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) installed
 - [Ethereum wallet with sufficient ethers](/docs/integrator-section/verifiable-document/ethereum/wallet)

@@ -34,7 +34,7 @@ You can read more about the components [here](/docs/integrator-section/verifiabl
 
 We will be building a single-page application which allows a user to:
 
-1. Connect to Metamask wallet.
+1. Connect to MetaMask wallet.
 2. Deploy their own Document Store.
 3. Bind their own domain name to their verifiable document.
 4. Create and wrap a raw document.
@@ -140,7 +140,7 @@ export const deployDocumentStore = async (signer: JsonRpcSigner) => {
 
 This function deploys a Document Store from a `DocumentStoreFactory` and returns the address of the deployed Document Store. Typically, once the Document Store is deployed, we can save this address in a persistent storage and reuse it whenever we run the application. In order to keep things light-weight however, we will simply want to store this address in state.
 
-We will create a file `DocumentStoreContext.tsx` to house all the Document Store related states, while `AccountContext.tsx` for all Metamask related states.
+We will create a file `DocumentStoreContext.tsx` to house all the Document Store related states, while `AccountContext.tsx` for all MetaMask related states.
 
 ```tsx
 import { createContext } from "react";
@@ -229,13 +229,13 @@ export default App;
 
 > You can checkout the [demo repo](https://github.com/Open-Attestation/demo-verifiable-document-issuer) for a compositing of multiple contexts technique. Otherwise you should look into other state management tools, once your application scales up.
 
-Congrats on this simple demo of using Metamask to deploy a Document Store!
+Congrats on this simple demo of using MetaMask to deploy a Document Store!
 
 ---
 
 ### Full verifiable document issuer flow
 
-Now we can move on to creating a basic full flow from connecting your metamask wallet to creating your own custom document.
+Now we can move on to creating a basic full flow from connecting your MetaMask wallet to creating your own custom document.
 
 We'll be doing up a simple wizard UI to display on screen. As transaction times on the Ethereum network are **typically much longer than people are used to, visual feedback is very important**.
 
@@ -273,7 +273,7 @@ export const Steps = () => {
   }[] = [
     {
       key: "connect",
-      title: "Connect Metamask Extension",
+      title: "Connect MetaMask Extension",
       body: <Button buttonText="Connect" onHandler={onConnect} />,
     },
     {
@@ -325,8 +325,8 @@ export const Steps = () => {
 
 In this component, we are breaking down the steps and presenting it as a wizard. Namely:
 
-1. Connect Metamask Extension.
-   - We connect to Metamask to get signer and networkId on click of the `Connect` button.
+1. Connect the MetaMask Extension.
+   - We connect to MetaMask to get signer and networkId on click of the `Connect` button.
 2. Deploy Document Store.
    - We deploy the Document Store on click of the `Deploy` button.
 3. Domain Name Configuration.

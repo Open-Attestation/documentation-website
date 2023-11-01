@@ -3,7 +3,7 @@ title: Issuance Status
 sidebar_label: Issuance Status
 ---
 
-OpenAttestation checks that the document has been issued and that it's issuance status is in good standing (for instance, that it hasn't been revoked). As of today, OpenAttestation supports two ways to issue documents: DIDs and Ethereum Smart Contracts.
+OpenAttestation checks that the document has been issued and that its issuance status is in good standing (for instance, that it hasn't been revoked). As of today, OpenAttestation supports two ways to issue documents: DIDs and Ethereum Smart Contracts.
 
 ## Ethereum Smart Contracts
 
@@ -89,10 +89,10 @@ An [`ethr` DID document](https://dev.uniresolver.io/1.0/identifiers/did:ethr:0x6
 }
 ```
 
-Three important information can be found:
+Three important informations can be found:
 
 - the DID identifier (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69`). It's used to identify the DID and must be added into the `issuer.id` property of the document.
-- The DID controller (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller`). It's used to identify which public key control the DID and must be added into the `issuer.identityProof.key` property of the document. It's also worth to note that the value is equal to the DID identifier, appended with `#controller`.
+- The DID controller (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller`). It's used to identify which public key controls the DID and must be added into the `issuer.identityProof.key` property of the document. It's also worth noting that the value is equal to the DID identifier, appended with `#controller`.
 - The ethereum address associated to the DID controller (here `0x6813eb9362372eef6200f3b1dbc3f819671cba69`). We will use it to verify the signature.
 
 > You can find an example of document using DID in our [guide](/docs/integrator-section/verifiable-document/did/raw-document).
@@ -116,7 +116,7 @@ A proof of signature looks like:
 - `signature` is the signed `merkleRoot`
 - `verificationMethod` is the DID controller.
 
-That's all the information that we need to verify that the document has been signed with the correct private key. Indeed,`ethr` DID uses [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) with [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) as parameter of the elliptic curve which provides an interesting property: when we verify a signature, using the initial value (`merkleRoot`), and the signed value (`signature`) it will recover the ethereum address associated with the private key used. We can then compare the ethereum address from the DID document, with the ethereum address returned by the verification. If it matches, the signature is valid.
+That's all the information that we need to verify that the document has been signed with the correct private key. Indeed, `ethr` DID uses [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) with [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) as parameter of the elliptic curve which provides an interesting property: when we verify a signature, using the initial value (`merkleRoot`), and the signed value (`signature`) it will recover the ethereum address associated with the private key used. We can then compare the ethereum address from the DID document, with the ethereum address returned by the verification. If it matches, the signature is valid.
 
 If you want to dig more on ECDSA, you can read this guide from [Yos Riady](https://yos.io/2018/11/16/ethereum-signatures/).
 

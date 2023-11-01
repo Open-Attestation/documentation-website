@@ -22,7 +22,7 @@ You should also have had MetaMask installed in your browser and created a wallet
 
 1. [Download MetaMask](https://metamask.io/download/).
    - After successfully downloading MetaMask, open the extension and the application will guide you with wallet creation.
-2. Transfer some test ethers from any of your prefered testing networks to your created wallet address.
+2. Transfer some test ethers from any of your preferred testing networks to your created wallet address.
 
 ### Verifiable Document Components
 
@@ -73,7 +73,7 @@ Now that we have a basic React application set up and the necessary dependencies
 
 ### Initialising MetaMask
 
-When you [installed MetaMask](/docs/developer-section/quickstart/create-verifiable-document-issuer#metamask) on your browser, it injected a [global API](https://docs.metamask.io/guide/ethereum-provider.html) into the web application at `window.etherem`. We use this API to get a [Signer](https://docs.ethers.io/v5/api/signer/) so that we can interact with smart contracts on the Ethereum blockchain.
+When you [installed MetaMask](/docs/developer-section/quickstart/create-verifiable-document-issuer#metamask) on your browser, it injected a [global API](https://docs.metamask.io/guide/ethereum-provider.html) into the web application at `window.ethereum`. We use this API to get a [Signer](https://docs.ethers.io/v5/api/signer/) so that we can interact with smart contracts on the Ethereum blockchain.
 
 We'll create separate files for our API calls. For example, in `services/account.tsx`:
 

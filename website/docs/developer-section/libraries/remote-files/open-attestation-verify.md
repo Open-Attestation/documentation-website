@@ -291,7 +291,7 @@ const customVerifier: Verifier<any> = {
 
 The `verify` function is built to run a list of verification method. Each verifier will produce a fragment that will help to determine if the document is valid. OpenAttestation comes with its own set of verification methods available in `openAttestationVerifiers`.
 
-The `verificationBuilder` function helps you to create custom verification method. You can reuse the default one exported by the library.
+The `verificationBuilder` function helps you create custom verification method. You can reuse the default one exported by the library.
 
 Extending from what have been mentioned in [Custom Verification](#custom-verification), let's now build a new verifier using our custom verification method:
 

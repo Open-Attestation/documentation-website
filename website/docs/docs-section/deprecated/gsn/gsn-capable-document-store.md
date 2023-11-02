@@ -4,7 +4,7 @@ title: Deploying a GsnCapableDocumentStore
 sidebar_label: Deploy GsnCapableDocumentStore
 ---
 
-The GsnCapableDocumentStore is a variant of Document Store which allows for relayed transactions. The rest of the functionality mimics that of Document Store.
+The GsnCapableDocumentStore is a variant of document store, which helps you perform relayed transactions. The rest of its functionality works in a similar way with the document store.
 
 This guide is for developers who have Ethereum and want to set up a document store that accept gsn relayed transactions for their users.
 

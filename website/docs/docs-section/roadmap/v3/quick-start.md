@@ -10,11 +10,11 @@ _The document will not be rendered yet as we have yet to create demo renderer_
 
 > For a full range of documents (beside document store + DNS-TXT), you may look at the different types of document supported [here](/docs/docs-section/roadmap/v3/different-files)
 
-## Document Store Setup
+## Document store setup
 
 If you have not already deployed a document store, you may do so by following the guides listed below:
 
-1. [Creating a wallet](/docs/integrator-section/verifiable-document/ethereum/wallet)
+1. [Creating a Wallet](/docs/integrator-section/verifiable-document/ethereum/wallet)
 1. [Deploying Document Store](/docs/integrator-section/verifiable-document/ethereum/document-store)
 1. [Configuring DNS](/docs/integrator-section/verifiable-document/ethereum/dns-proof)
 
@@ -31,11 +31,11 @@ We will now create the data for the driving license. Create a file `license.json
     "https://schemata.openattestation.com/com/openattestation/1.0/CustomContext.json"
   ],
   "reference": "SERIAL_NUMBER_123",
-  "name": "Republic of Singapore Driving Licence",
+  "name": "Republic of Singapore Driving License",
   "issuanceDate": "2010-01-01T19:23:24Z",
   "validFrom": "2010-01-01T19:23:24Z",
   "issuer": { "id": "https://example.com", "name": "DEMO STORE", "type": "OpenAttestationIssuer" },
-  "type": ["VerifiableCredential", "DrivingLicenceCredential", "OpenAttestationCredential"],
+  "type": ["VerifiableCredential", "DrivingLicenseCredential", "OpenAttestationCredential"],
   "credentialSubject": {
     "id": "did:example:JOHN_DOE_DID",
     "licenseNumber": "S1234567a",
@@ -81,7 +81,7 @@ Replace this with the domain where the TXT record has been inserted in the step 
 
 ## Wrapping the Document
 
-With `licence.json` saved, run the following command after the [CLI is installed](/docs/developer-section/libraries/remote-files/open-attestation-cli):
+With `license.json` saved, run the following command after the [CLI is installed](/docs/developer-section/libraries/remote-files/open-attestation-cli):
 
 ```sh
 open-attestation wrap license.json --of wrapped.json --oav3

@@ -8,17 +8,17 @@ Every OA document has a checksum that provides it a tamper-proof property. At th
 
 In this guide, we will learn how to create one raw document that conforms to the OpenAttestation v2 Schema.
 
-## Understanding the OA Document Schema
+## OA document schema
 
 The OpenAttestation v2.0 defines the shape of data for the `raw document` - the data before the wrapping process. It is defined in [JSON Schema](https://json-schema.org/) format.
 
 The official OpenAttestation v2.0 schema can be found at https://schema.openattestation.com/2.0/schema.json
 
-## Using Online Schema Validator
+## Using online schema validator
 
 For this guide, we will be using an online JSON Schema validator to help us write the raw document.
 
-### Setting up the JSON Schema Validator with OA Schema
+### Setting up the JSON schema validator with OA schema
 
 Visit https://www.jsonschemavalidator.net/
 

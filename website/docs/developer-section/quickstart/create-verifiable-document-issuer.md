@@ -15,7 +15,7 @@ Examples of verifiable documents include the following, but are not limited to t
 * Shipping manifests
 * Work orders
 
-In this guide, we will build a verifiable document issuer, which will help the user create and issue a verifiable document.
+In this guide, you will build a verifiable document issuer, which will help the user create and issue a verifiable document.
 
 ## Prerequisites
 
@@ -25,7 +25,9 @@ You need a basic understanding of [React.js](https://react.dev/) to complete thi
 
 ### MetaMask
 
-You should also have installed MetaMask in your browser and created a wallet. If not, follow the steps below:
+You should also have installed MetaMask in your browser and created a wallet. 
+
+If not, follow the steps below:
 
 1. [Download MetaMask](https://metamask.io/download/).
    
@@ -35,7 +37,7 @@ You should also have installed MetaMask in your browser and created a wallet. If
 
 3. Transfer some test ethers from any of your preferred testing networks to your wallet address.
 
-### Verifiable Document Components
+### Verifiable document components
 
 Before starting on this code tutorial, it will be helpful to understand the components involved in the creation, issuance and verification of a verifiable document.
 
@@ -43,36 +45,36 @@ You can read more about the components [here](/docs/integrator-section/verifiabl
 
 ## Overview
 
-We will build a single-page application, which helps the user perform the following:
+You will build a single-page application, which helps the user perform the following:
 
 1. Connect to their MetaMask wallet.
-2. Deploy their own Document Store.
+2. Deploy their own document store.
 3. Bind their own domain name to their verifiable document.
 4. Create and wrap a raw document.
 5. Issue, download, and then verify the wrapped document.
 
 ## Setup
 
-First, we'll use [Create Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite) to create a new single-page application using the `react-ts` template.
+1. Use [Create Vite](https://github.com/vitejs/vite/tree/main/packages/create-vite) to create a new single-page application from the `react-ts` template.
 
 ```
 npm create vite@latest verifiable-document-issuer --template react-ts
 cd verifiable-document-issuer
 ```
 
-We'll also need the following packages to interact with the blockchain.
+2. Install the following packages to let the application interact with the blockchain.
 
 ```
 npm i @govtechsg/document-store @govtechsg/open-attestation ethers
 ```
 
-And these extra packages for the application's miscellaneous functions.
+3. Install these extra packages for the application's miscellaneous functions.
 
 ```
 npm i file-saver @types/file-saver
 ```
 
-That's all for the setup!
+4. Once completing the setup, start the application.
 
 ```
 npm start
@@ -80,13 +82,13 @@ npm start
 
 ## Getting started
 
-Now that we have a basic React application set up and the necessary dependencies installed, let's get started!
+Once you have set up a basic React application and installed the necessary dependencies, get started on the task below.
 
 ### Initializing MetaMask
 
-When you [installed MetaMask](/docs/developer-section/quickstart/create-verifiable-document-issuer#metamask) on your browser, it injected a [global API](https://docs.metamask.io/guide/ethereum-provider.html) into the web application at `window.ethereum`. We use this API to get a [Signer](https://docs.ethers.io/v5/api/signer/) so that we can interact with smart contracts on the Ethereum blockchain.
+When you [installed MetaMask](/docs/developer-section/quickstart/create-verifiable-document-issuer#metamask) in your browser, it injected a [global API](https://docs.metamask.io/guide/ethereum-provider.html) into the web application at `window.ethereum`. Use this API to get a [Signer](https://docs.ethers.io/v5/api/signer/), so that your application can interact with smart contracts on the Ethereum blockchain.
 
-We'll create separate files for our API calls. For example, in `services/account.tsx`:
+You will create separate files for the API calls. For example, in `services/account.tsx`:
 
 ```tsx
 import { ethers } from "ethers";
@@ -104,7 +106,7 @@ export const getAccount = async () => {
 };
 ```
 
-This function connects you to the Ethereum network and returns a _Signer_, an abstraction of an Ethereum account that can be used to sign transactions that you will make later on.
+This function connects your application to the Ethereum network and returns a _Signer_, an abstraction of an Ethereum account that can be used to sign transactions that you will make later on.
 
 Now, in `App.tsx`, replace the file's contents
 
@@ -135,7 +137,7 @@ When you reload the app, the MetaMask extension should prompt you for your passw
 
 ### Deploying Document Store
 
-With the `signer` object set in state, we can now deploy a document store. Similar to the previous section, we create a function in `services/document-store.tsx` which would handle the logic of deploying a document store.
+With the `signer` object set in state, deploy a document store. Similar to the previous section, you can create a function in `services/document-store.tsx` which will handle the logic of deploying a document store.
 
 ```tsx
 import { JsonRpcSigner } from "@ethersproject/providers";
@@ -149,9 +151,9 @@ export const deployDocumentStore = async (signer: JsonRpcSigner) => {
 };
 ```
 
-This function deploys a Document Store from a `DocumentStoreFactory` and returns the address of the deployed Document Store. Typically, once the Document Store is deployed, we can save this address in a persistent storage and reuse it whenever we run the application. To keep things lightweight however, we will simply want to store this address in state.
+This function deploys a document store from a `DocumentStoreFactory` and returns the address of the deployed document store. Typically, once the document store is deployed, save this address in a persistent storage and reuse it whenever you run the application. To keep things lightweight however, you need to store this address in state.
 
-We will create a file `DocumentStoreContext.tsx` to house all the Document Store related states, while `AccountContext.tsx` for all MetaMask related states.
+You will create a file `DocumentStoreContext.tsx` to house all the document store related states, while `AccountContext.tsx` for all MetaMask related states.
 
 ```tsx
 import { createContext } from "react";
@@ -180,7 +182,7 @@ export const AccountContext = createContext<{
 });
 ```
 
-We can now import `DocumentStoreContext` and `AccountContext.tsx` into `App.tsx` so that the next few components we create have easy access to the `signer`, `documentStoreAddress` and any other values they might need.
+You can now import `DocumentStoreContext` and `AccountContext.tsx` into `App.tsx`, so that the next few components you create will have easy access to the `signer`, `documentStoreAddress` and any other values they need.
 
 In `App.tsx`:
 
@@ -240,17 +242,18 @@ export default App;
 
 > You can checkout the [demo repo](https://github.com/Open-Attestation/demo-verifiable-document-issuer) for a compositing of multiple contexts technique. Otherwise you should look into other state management tools, once your application scales up.
 
-Congrats on this simple demo of using MetaMask to deploy a Document Store!
+You have deployed the document store successfully .
 
----
 
 ### Full verifiable document issuer flow
 
-Now we can move on to creating a basic full flow from connecting your MetaMask wallet to creating your own custom document.
+You can move on to creating a basic full flow from connecting your MetaMask wallet to creating your own custom document.
 
-We'll be doing up a simple wizard UI to display on screen. As transaction times on the Ethereum network are **typically much longer than people are used to, visual feedback is very important**.
+You will work out a simple wizard UI to display on screen. As transaction times on the Ethereum network are typically much longer than users' expectation, the visual feedback is very important.
 
-First, let's create a `components` folder to store all our component files. Next, create a file called `Steps.tsx`.
+1. Create a `components` folder to store all the component files. 
+
+2. Create a file named `Steps.tsx` with its content similar to the following:
 
 ```tsx
 // all the relevant imports here
@@ -334,32 +337,51 @@ export const Steps = () => {
 
 ```
 
-In this component, we are breaking down the steps and presenting it as a wizard. Namely:
+3. In this component, break down the following steps and present the scenario in a wizard:
 
-1. Connect the MetaMask Extension.
-   - We connect to MetaMask to get signer and networkId on click of the `Connect` button.
-2. Deploy Document Store.
-   - We deploy the Document Store on click of the `Deploy` button.
-3. Domain Name Configuration.
-   - A verifiable document requires a DNS as proof of identity, which is checked during the verification phase.
-   - However, as configuring one's own DNS might be challenging, we can give the user instructions to get a temporary DNS from the Open Attestation CLI.
-   - `documentStoreAddress` is set within the application state on click of the `Confirm` button.
-4. Edit Document Form.
-   - We would need to provide an interface for our users to change the values of the documents that they want to issue.
-   - For the sake of brevity, this tutorial only includes a few fields in the form. Feel free to extend on this tutorial and complete the form to match the schema of the _SIMPLE_COO_ template, which is an example of Certificate of Origin (COO).
-   - `wrapDocument` and `issueDocument` is called on click of the `Submit` button. Thereafter, `wrappedDocument` is set within the application state at this point.
-     - The `$template` field specifies the template to be used to render the verifiable document. You can learn how to create your own document renderer [here](docs/developer-section/quickstart/create-custom-renderer).
-     - The `issuers` field specifies the identity proof and document store address of the issuers.
-     - Wrapping a document enables the non-tampering feature of the verifiable document.
-     - Once the document has been issued, it can be verified.
-5. Download & Verify.
-   - After successful issuing of the document, we allow the user to download the `wrappedDocument` to be submitted for verification.
-     1. `Download` allows the user to download the `wrappedDocument` and save it on their machine.
-     2. `Verify` links to the verification site where the user can upload and verify the issued `wrappedDocument`.
-     3. `Create Another` restarts the issuing process and allows the user to create and issue another `wrappedDocument`.
+  a. Connect the MetaMask extension.
+  
+    * Connect to MetaMask to get `signer` and `networkId` by clicking **Connect**.
+    
+  b. Deploy the document store.
+    * Deploy the document store by clicking **Deploy**.
 
-Congrats! You've created your very own Verifiable Document Issuer!
+  c. Configure the domain name.
+    
+    * A verifiable document requires a DNS as the proof of identity, which is checked during the verification phase.
+    
+    * However, as configuring the DNS might be challenging, you can give the user instructions to get a temporary DNS from the Open Attestation CLI.
+    
+    * Set `documentStoreAddress` within the application state by clicking **Confirm**.
 
-## Github Code
+  d. Edit the document form.
+
+    * You need to provide an interface for the users to change the values of the documents that they want to issue.
+
+    * To keep it simple, this tutorial only includes a few fields in the form. You can extend it based on this tutorial and complete the form to match the schema of the _SIMPLE_COO_ template, which is an example of the Certificate of Origin (COO).
+        
+    * Call `wrapDocument` and `issueDocument` by clicking **Submit**. Thereafter, it will set `wrappedDocument` within the application state.
+        
+    * The `$template` field specifies the template to be used to render the verifiable document. You can learn how to create your own document renderer [here](docs/developer-section/quickstart/create-custom-renderer).
+        
+    * The `issuers` field specifies the identity proof and document store address of the issuers.
+  
+    * Wrapping a document prevents the verifiable document from being tampered.
+        
+    * Once the document has been issued, the user can verify the document.
+
+  e. Download and verify.
+        
+    * After successfully issuing the document, you can let the user download the `wrappedDocument` to be submitted for verification.
+        
+    * `Download` allows the user to download the `wrappedDocument` and save it on their devices.
+        
+    * `Verify` links to the verification site where the user can upload and verify the issued `wrappedDocument`.
+        
+    * `Create Another` restarts the issuing process and lets the user create and issue another `wrappedDocument`.
+
+You have created your own verifiable document issuer successfully.
+
+## Github code
 
 You can clone the complete repository for the demo [here](https://github.com/Open-Attestation/demo-verifiable-document-issuer).

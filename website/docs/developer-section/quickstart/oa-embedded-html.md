@@ -6,9 +6,9 @@ sidebar_label: Embedding Verifiable Document into an HTML file
 
 > **Note**: This guide is currently for OA documents that are verifiable on [verify.gov.sg](https://www.verify.gov.sg). Do ensure your OA document can be verified on [verify.gov.sg](https://www.verify.gov.sg) before continuing with this guide.
 
-Since an OpenAttestation document (`.OA`) is not a native file extension automatically recognised by devices, the OA-embedded HTML solution was introduced. This approach helps to encapsulate an OA document so that end-users can be directed directly to the verifier (with their document) just by clicking on a button presented by a locally-rendered HTML page.
+Since an OpenAttestation document (`.OA`) is not a native file extension automatically recognized by devices, the OA-embedded HTML solution was introduced. This approach helps you encapsulate an OA document, so that the end users only need to click a button on a locally-rendered HTML page, and they will be directed to the verifier with their document.
 
-This is an optional procedure after creating an issued or signed OA document that is dependent on your use case (e.g. you want to make it more convenient for end-users who may not understand what to do with an OA document).
+This is an optional procedure after creating an issued or signed OA document that is dependent on your use case (e.g. you want to make it more convenient for end users who may not understand what to do with an OA document).
 
 ## How it works
 

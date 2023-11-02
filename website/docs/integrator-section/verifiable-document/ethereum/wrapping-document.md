@@ -16,7 +16,7 @@ We will use the CLI tool to read all the files in the `raw-documents` folder, wr
 
 A `merkleRoot`, a 64 character long string prepended with `0x` will be generated. The `merkleRoot` is the only information that will be stored onto the Blockchain to verify the issuance status of an OA document.
 
-## Replace folder names
+## Replacing folder names
 Before running the command below, replace the folder names. For example:
 
 * Replace `<RAW_DOCUMENTS_FOLDER>` with `raw-documents`

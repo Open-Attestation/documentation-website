@@ -6,11 +6,11 @@ sidebar_label: Creating a Wallet
 
 The first step that we will perform is to create the [wallet](/docs/docs-section/appendix/glossary#wallet). 
 
-After that, you will get the public address of the wallet and be able to verifty the wallet balance. 
+After that, you will get the public address of the wallet and be able to verify the wallet balance. 
 
 If necessary, use ether faucet to top up your wallet.
 
-## Running the wallet creat command
+## Running the wallet create command
 
 ```bash
 open-attestation wallet create --output-file wallet.json

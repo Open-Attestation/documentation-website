@@ -85,9 +85,7 @@ The object above in `.json` format, shows how a `@context` object looks like. Fo
 
 This `.json` could then be published in a place that could be referenced using a URL link. In this guide, the URL link for the context created above would be represented with `https://schemata.openattestation.com/io/tradetrust/invoice/1.0/invoice-context.json`.
 
-:::note
-The `xsd` in `xsd:string` is used to represent data types in these documents.
-:::
+>**Note:** The `xsd` in `xsd:string` is used to represent data types in these documents.
 
 ## Raw Document (Invoice)
 
@@ -135,9 +133,7 @@ The `.json` above shows the structure of the `Invoice`'s raw document. The conte
 
 During the [wrapping](/docs/developer-section/libraries/remote-files/open-attestation-cli#wrapping-documents) process, the document itself as well as the fields inside `credentialSubject` would be validated and cross checked against the contexts defined in `@context`.
 
-:::note
-It is not necessary that everything in `@context` has to appear in `credentialSubject`. But when there are additional items in `credentialSubject` that do not exist in what has already been defined in `@context`, an error would occur when trying to wrap the document.
-:::
+>**Note:** It is not necessary that everything in `@context` has to appear in `credentialSubject`. But when there are additional items in `credentialSubject` that do not exist in what has already been defined in `@context`, an error would occur when trying to wrap the document.
 
 ## Configuration File (Invoice)
 
@@ -179,6 +175,5 @@ The `.json` above shows the structure of the `Invoice`'s configuration file. Apa
 
 Similarly, the items inside `@context` contain the types of what are the different fields required in the document. It would be used to cross check against the items that have been filled in inside `schema` to ensure that the document created using this configuration file does not contain anything more than what has already been defined in `@context`.
 
-:::note
-It is not necessary that everything in `@context` has to appear in `schema`. But when there are additional items in `schema` that do not exist in what has already been defined in `@context`, an error would occur when trying to create a document.
-:::
+
+>**Note:** It is not necessary that everything in `@context` has to appear in `schema`. But when there are additional items in `schema` that do not exist in what has already been defined in `@context`, an error would occur when trying to create a document.

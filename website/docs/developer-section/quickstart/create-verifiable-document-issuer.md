@@ -153,7 +153,7 @@ export const deployDocumentStore = async (signer: JsonRpcSigner) => {
 
 This function deploys a document store from a `DocumentStoreFactory` and returns the address of the deployed document store. Typically, once the document store is deployed, save this address in a persistent storage and reuse it whenever you run the application. To keep things lightweight however, you need to store this address in state.
 
-You will create a file `DocumentStoreContext.tsx` to house all the document store related states, while `AccountContext.tsx` for all MetaMask related states.
+You will create a file `DocumentStoreContext.tsx` to house all the document store related states, and another file `AccountContext.tsx` for all the MetaMask related states.
 
 ```tsx
 import { createContext } from "react";
@@ -182,7 +182,7 @@ export const AccountContext = createContext<{
 });
 ```
 
-You can now import `DocumentStoreContext` and `AccountContext.tsx` into `App.tsx`, so that the next few components you create will have easy access to the `signer`, `documentStoreAddress` and any other values they need.
+You can now import `DocumentStoreContext` and `AccountContext.tsx` into `App.tsx`, so that the next few components you create will have easy access to the `signer`, `documentStoreAddress`, and any other values they need.
 
 In `App.tsx`:
 
@@ -240,16 +240,16 @@ const App = () => {
 export default App;
 ```
 
-> You can checkout the [demo repo](https://github.com/Open-Attestation/demo-verifiable-document-issuer) for a compositing of multiple contexts technique. Otherwise you should look into other state management tools, once your application scales up.
+>**Note:** See the [demo repo](https://github.com/Open-Attestation/demo-verifiable-document-issuer) of the multiple contexts technique. Otherwise, reference other state management tools as your application scales.
 
-You have deployed the document store successfully .
+You have deployed the document store successfully.
 
 
 ### Full verifiable document issuer flow
 
-You can move on to creating a basic full flow from connecting your MetaMask wallet to creating your own custom document.
+Next, create a basic flow from connecting your MetaMask wallet to creating a custom document.
 
-You will work out a simple wizard UI to display on screen. As transaction times on the Ethereum network are typically much longer than users' expectation, the visual feedback is very important.
+You will work out a simple wizard UI to display on screen. As the transaction time on the Ethereum network is often much longer than users' expectation, the visual feedback is very important.
 
 1. Create a `components` folder to store all the component files. 
 

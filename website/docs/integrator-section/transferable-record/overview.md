@@ -27,7 +27,7 @@ With the knowledge, you will be able to create transferable records according to
 
 ![Overview of components](/docs/integrator-section/transferable-record/overview/overview.png)
 
-In the image above, we can see 3 different states of documents:
+The image above shows three different states of documents:
 
 1. An unissued document (`0xaaaa...aaaa`) will have an owner `0x0000...0000`
 1. An issued document (`0xbbbb...bbbb`) will have an owner which is either an Externally Owned Account (EOA) or a smart contract (ie `0x8888...8888`)
@@ -41,6 +41,6 @@ The token registry stores the ownership state of the transferable records using 
 
 ### Title escrow smart contract
 
-There are instances where a single document will have multiple owners, with clearly defined roles to protect one from another. In the case of trade finance, we observe that there are usually a `beneficiary` and a `holder` to a given document. The `beneficiary` corresponds to the legal owner of the Bill of Lading, while the `holder` refers to the entity holding the physical Bill of Lading.
+There are instances where a single document will have multiple owners, with clearly defined roles to protect one from another. In trade finance, there are usually a `beneficiary` and a `holder` to a given document. The `beneficiary` corresponds to the legal owner of the Bill of Lading, while the `holder` refers to the entity holding the physical Bill of Lading.
 
-In this case, we have created the Title Escrow Smart Contract to reflect the rules of engagement between these two parties on-chain.
+In this case, the Title Escrow Smart Contract reflects the rules of engagement between these two parties on-chain.

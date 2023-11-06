@@ -5,7 +5,7 @@ sidebar_label: Preparing Transferable Record
 ---
 import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
 
-In this section, we will prepare the DNS and the content of the transferable record to be issued.
+In this section, you will prepare the DNS and the content of the transferable record to be issued.
 
 ## DNS configuration
 

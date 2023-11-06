@@ -484,8 +484,8 @@ const provider = utils.generateProvider(providerOptions);
 
 Various utilities and types are available to assert the correctness of fragments. Each verification method exports types for the fragment, and the data associated with the fragment.
 
-- fragment types are available in 4 flavors: `VALID`, `INVALID`, `SKIPPED`, and `ERROR`.
-- `VALID` and `INVALID` fragment data are available in 2 flavors most of the time, one for each version of `OpenAttestation`.
+- fragment types are available in four flavors: `VALID`, `INVALID`, `SKIPPED`, and `ERROR`.
+- `VALID` and `INVALID` fragment data are available in two flavors most of the time, one for each version of `OpenAttestation`.
 
 This library provides types and utilities to:
 

@@ -176,7 +176,7 @@ contract TitleEscrowFactory is ITitleEscrowFactory {
   constructor() {
     // Step 2. Look for this line in the constructor
     implementation = address(new TitleEscrow());
-    // Step 3. Replace the line in Step #2 with the following line:
+    // Step 3. Replace the line in Step 2 with the following line:
     implementation = address(new TitleEscrowSignable());
   }
 

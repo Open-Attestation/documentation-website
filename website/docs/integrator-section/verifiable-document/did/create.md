@@ -7,7 +7,7 @@ While there exists many [DIDs](/docs/docs-section/appendix/glossary#did), this t
 
 The creation of an `ethr` DID is identical to [the creation of a wallet](/docs/integrator-section/verifiable-document/ethereum/wallet), as it relies entirely on the ethereum architecture. If you already have a wallet, you can use the same one for this tutorial while ensuring the balance is sufficient.
 
-Next, we will need to retrieve the wallet private key.
+Next, you will need to retrieve the wallet private key.
 
 ## Running the wallet create command
    ```bash
@@ -50,7 +50,7 @@ There are two pieces of important information to keep for the next steps:
 
 Please note that you will definitely get different values.
 
->**Important:** To make the tutorial easier to follow, we decided to reveal all the information about the wallet we used, including the private key. We used a throw-away wallet for that purpose. That means that we will never use this wallet again. You must **NEVER SHARE THE PRIVATE KEY** of your wallet.
+>**Important:** To make the tutorial easier to follow, it shows all the information about the wallet in use, including the private key. It is a throw-away wallet for that purpose. That means that this wallet can be never used again. You must **NEVER SHARE THE PRIVATE KEY** of your wallet.
 
 ## Checking your DID at uniresolver
 Replace `YOUR_WALLET_ADDRESS` below and check your DID via this link: 

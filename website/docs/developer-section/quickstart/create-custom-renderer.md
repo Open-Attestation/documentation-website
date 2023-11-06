@@ -113,7 +113,7 @@ export const cocTemplateCertificate: CocTemplateCertificate = {
 
 ### Document objects explained
 
-In the above OA document, you will see 4 root objects:
+In the above OA document, you will see four root objects:
 
 #### 1. `$template`
 

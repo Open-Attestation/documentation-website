@@ -11,9 +11,9 @@ Every OA document's provenance can be verified and traced back to its creator or
 
 In this example above, the document's issuer is bound to `demo.openattestation.com`.
 
-In this guide, we will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in an OA-compliant decentralized renderer.
+In this guide, you will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in an OA-compliant decentralized renderer.
 
-We will be inserting a temporary DNS record on our DNS at `sandbox.openattestation.com` so you do not need your own domain to follow the guide. If you prefer to use your own domain name for the identity, you may skip the steps involving the CLI and instead read the [DNS Configuration Guide](/docs/developer-section/quickstart/configure-dns).
+You will be inserting a temporary DNS record on our DNS at `sandbox.openattestation.com` so you do not need your own domain to follow the guide. If you prefer to use your own domain name for the identity, you may skip the steps involving the CLI and instead read the [DNS Configuration Guide](/docs/developer-section/quickstart/configure-dns).
 
 ## Creating temporary DNS proof
 
@@ -23,7 +23,7 @@ With your [document store](/docs/integrator-section/verifiable-document/ethereum
 open-attestation dns txt-record create --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --network-id 11155111
 ```
 
-The `network-id` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). We generally use only the following networks:
+The `network-id` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). Generally, you will use only the following networks:
 
 <!-- Reusing the Network Table here -->
 

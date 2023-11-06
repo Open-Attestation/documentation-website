@@ -6,7 +6,7 @@ sidebar_label: Deploying Transferable Record Registry
 
 The token registry is a smart contract on the Ethereum network that records the ownership information of a transferable record. It is compliant to the [ERC721 standards](https://eips.ethereum.org/EIPS/eip-721).
 
-In this guide, we will deploy a token registry smart contract on the Ethereum `sepolia` network which is a test network that does not require actual ethers for transactions.
+In this guide, you will deploy a token registry smart contract on the Ethereum `sepolia` network which is a test network that does not require actual ethers for transactions.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ d8f30c982fc23245a2cc4ec8271edcb4637f539d490ce750cdb5085241ffb41c
 
 ### Deploying the token registry
 
-Replace the `<registry-name>` and `<registry-symbol>` below with a suitable name and symbol (usually 3 characters) and run the command:
+Replace the `<registry-name>` and `<registry-symbol>` below with a suitable name and symbol (usually three characters) and run the command:
 
 ```sh
 open-attestation deploy token-registry <registry-name> <registry-symbol> -n sepolia -f key.txt

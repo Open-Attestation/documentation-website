@@ -4,7 +4,7 @@ title: Creating a Wallet
 sidebar_label: Creating a Wallet
 ---
 
-The first step that we will perform is to create the [wallet](/docs/docs-section/appendix/glossary#wallet). 
+First, create the [wallet](/docs/docs-section/appendix/glossary#wallet). 
 
 After that, you will get the public address of the wallet and be able to verify the wallet balance. 
 

@@ -10,9 +10,9 @@ Every OA document has a checksum that provides it a tamper-proof property. At th
 
 Multiple documents can be wrapped at the same time in a single batch operation, creating a single checksum for the entire batch of raw documents. This is especially useful when using document store on the Ethereum blockchain to lower the transaction cost and time.
 
-In this task, we will learn how to generate the checksum by running the `wrapping` process.
+In this task, you will learn how to generate the checksum by running the `wrapping` process.
 
-We will use the CLI tool to read all the files in the `raw-documents` folder, wrap them and then output the files in another directory `wrapped-documents`.
+You will use the CLI tool to read all the files in the `raw-documents` folder, wrap them, and then output the files in another directory `wrapped-documents`.
 
 A `merkleRoot`, a 64 character long string prepended with `0x` will be generated. The `merkleRoot` is the only information that will be stored onto the Blockchain to verify the issuance status of an OA document.
 

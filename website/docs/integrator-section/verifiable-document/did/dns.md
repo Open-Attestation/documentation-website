@@ -3,9 +3,9 @@ title: Configuring DNS
 sidebar_label: Configuring DNS
 ---
 
-The explanation about why we need to configure DNS is available [in the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/dns-proof).
+The explanation about why you need to configure DNS is available [in the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/dns-proof).
 
-In the DID method, we will only use the wallet address as signing credentials and bind it to a domain.
+In the DID method, you will only use the wallet address as signing credentials and bind it to a domain.
 
 ## Creating temporary DNS proof
 

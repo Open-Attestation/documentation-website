@@ -17,7 +17,7 @@ That's where the `merkleRoot` will come in handy.
 
 Once the `targetHash` of a document is computed, OpenAttestation will determine the `merkleRoot`. The `merkleRoot` value is the merkle root hash computed from the [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree) using the `targetHash` of all the document wrapped together. Each `targetHash` is a leaf in the tree. After computing the merkle tree, the `merkleRoot` associated to a document will be added to it as well as the proofs (intermediate hashes) needed to ensure that the `targetHash` has been used to compute the `merkleRoot`. The proofs are added into the `proof` property.
 
-On a side note, when we wrap only one document at a time, the `targetHash` and the `merkleRoot` are identical and the `proof` is empty. This is completely normal. When we wrap at least 2 documents at the same time, we will notice a difference between `targetHash` and the `merkleRoot`, and proofs appended.
+On a side note, when we wrap only one document at a time, the `targetHash` and the `merkleRoot` are identical and the `proof` is empty. This is completely normal. When we wrap at least two documents at the same time, we will notice a difference between `targetHash` and the `merkleRoot`, and proofs appended.
 
 > The `merkleRoot` will always be the same for all the documents wrapped together (in a batch). It will be different for documents wrapped separately.
 
@@ -124,7 +124,7 @@ If you want to dig more on ECDSA, you can read this guide from [Yos Riady](https
 
 It's possible to revoke a DID document if a document store has been declared in its revocation block. You can revoke a document [using a document store](/docs/integrator-section/verifiable-document/did/revoking-document) or [with an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document-ocsp).
 
-Note that if you do use revocation for `DID`, you still need to have at least 1 transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
+Note that if you do use revocation for `DID`, you still need to have at least one transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
 
 ### Issuance process and verification
 

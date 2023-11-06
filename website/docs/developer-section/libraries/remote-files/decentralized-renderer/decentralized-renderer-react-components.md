@@ -60,9 +60,9 @@ The following list of actions are made for host to communicate to the iframe (an
 
 - render a document:
   - type: `RENDER_DOCUMENT`
-  - payload: object with 2 properties
-    - document: (mandatory) document data as returned by `getData` method from [@govtechsg/open-attestation](https://github.com/Open-Attestation/open-attestation)
-    - rawDocument: (optional) Open Attestation document
+  - payload: object with two properties:
+    1. document: (mandatory) document data as returned by `getData` method from [@govtechsg/open-attestation](https://github.com/Open-Attestation/open-attestation)
+    2. rawDocument: (optional) Open Attestation document
 
 ```javascript
 const action = {
@@ -74,7 +74,7 @@ const action = {
 };
 ```
 
-- select a template amongst the one provided by the decentralized renderer (A renderer may provide 1 to many different template to display a document):
+- select a template amongst the one provided by the decentralized renderer (A renderer may provide one to many different template to display a document):
   - type: "SELECT_TEMPLATE"
   - payload: (mandatory) template id to display
 
@@ -155,7 +155,7 @@ const action = {
 
 ## How to use
 
-The library provide 2 mains components
+The library provide two mains components, including the `FrameConnector` and the `FramedDocumentRenderer`.
 
 ### FrameConnector
 
@@ -175,7 +175,7 @@ This component will establish a connection with a host embedding the application
   - id: a unique (withing the current array) identifier of the template
   - label: a string to represent what's the template is,
   - template: a `Template`, that is to say a react component that will render a document
-- `attachmentToComponent`: a function that map attachments to component depending on the attachment type. Currently the library exposes 2 functions:
+- `attachmentToComponent`: a function that map attachments to component depending on the attachment type. Currently the library exposes two functions:
   - `noAttachmentRenderer`: which uses `UnsupportedRenderer` (basically it's doing nothing)
   - `fullAttachmentRenderer`: which uses all the supported attachment type by the library (see the function).
     This property default to `noAttachmentRenderer`, to avoid bundles growing huge unnecessarily.

@@ -4,17 +4,20 @@ title: Creating Custom Schema
 sidebar_label: Creating Custom Schema
 ---
 
-Every OA document follows a particular structure according to what the content of the file supposed to contain that makes it valid. To ensure that the document adheres to a specific structure, a customized schema could be created that caters to the document which could be used as a validation upon the [wrapping](/docs/developer-section/libraries/remote-files/open-attestation-cli#wrapping-documents) process.
+According to its file content, every OA document follows a particular structure that makes it valid. To ensure the document adheres to the structure, you can create a custom schema to use the document as a validation upon the wrapping process.
 
-In this guide, we will look at how to create a custom schema.
+This guide will show you how to create a custom schema.
 
-## Document (Invoice)
+## Document (invoice)
+
+The document below is an example in subsequent sections for creating an OA document.
 
 ![Invoice](/docs/docs-section/roadmap/invoice-sample.png)
 
-The document shown above would be used as an example for subsequent sections when creating an OA document.
 
-## JSON Schema
+## JSON schema
+
+A custom schema for the [Invoice](#document-invoice) document is in the code example below. 
 
 ```json
 {
@@ -73,15 +76,22 @@ The document shown above would be used as an example for subsequent sections whe
 }
 ```
 
-A custom schema that could be created for the [Invoice](#document-invoice) document can be seen above.
+It contains the following variables:
 
-- `$id`: URI location of where the schema resides. (required)
-- `$schema`: JSON Schema vocabulary. (optional)
-- `type`: Data type of schema. (optional)
-- `title`: Description of what the schema represents. (optional)
-- `required`: Required properties for the document. If properties stated here do not exist in `properties`, an error would occur during validation. (optional)
-- `properties`: Properties of the document and their respective data types should be defined here. If the document contains fields that do not conform to what has been defined here, an error would occur during validation. (optional)
+| Variable   | Necessity | Definition                                               |
+|------------|-----------|----------------------------------------------------------|
+| `$id`      | Required  | URI location of where the schema resides.               |
+| `$schema`  | Optional  | JSON schema vocabulary.                                 |
+| `type`     | Optional  | Data type of the schema.                                |
+| `title`    | Optional  | Description of what the schema represents.             |
+| `required` | Optional  | Whether some properties are required for the document. If the properties stated here do not exist in the `properties` variable, an error will occur during validation. |
+| `properties` | Optional  | Properties of the document and their respective data types. If the document contains any fields that do not conform to what is defined here, an error will occur during validation. |
+
 
 ## Usage
 
-Upon creating a custom schema for the document, it could then be used during the wrapping process for validation. Refer [here](/docs/developer-section/libraries/remote-files/open-attestation-cli#wrapping-documents) for more information.
+Once you have created a custom schema for the document, you can use it during the wrapping process for validation.
+
+
+## Additional reading
+To learn more about the wrapping process, see [this guide](/docs/developer-section/libraries/remote-files/open-attestation-cli#wrapping-documents).

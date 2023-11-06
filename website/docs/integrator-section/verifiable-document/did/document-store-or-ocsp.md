@@ -45,4 +45,4 @@ Please do **not** use the Transaction ID in the response.
 ## Deploying OCSP
 A reference implementation for deploying the OCSP responder is available at [this repository on GitHub](https://github.com/Open-Attestation/ocsp-responder).
 
->**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OA framework.
+>**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OpenAttestation framework.

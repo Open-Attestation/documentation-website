@@ -21,8 +21,8 @@ Today, the distribution of OpenAttestation documents falls into two broad catego
 
 2. By document transmission 
     - Sending the original OpenAttestation document (OA document) 
-    - Sending a HTML page (embedded with OA document)
-    - Sending document as PDF with QR code for verification
+    - Sending an HTML page (embedded with OA document)
+    - Sending the document as a PDF with a QR code for verification
 
 Below are the pros and cons of each approach. 
 

@@ -4,7 +4,7 @@ title: Creating Custom Context
 sidebar_label: Creating Custom Context
 ---
 
-For v3 documents in Open Attestation, a major change consists of a `@context` property introduced into the document. Refer [here](/docs/docs-section/roadmap/v3/major-changes#context) for more information.
+For v3 documents in OpenAttestation, a major change consists of a `@context` property introduced into the document. Refer [here](/docs/docs-section/roadmap/v3/major-changes#context) for more information.
 
 In this guide, we will look at how we can create a custom context.
 

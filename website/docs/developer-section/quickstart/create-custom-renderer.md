@@ -20,7 +20,7 @@ This renderer is a static website that will be embedded in compliant OA viewer. 
 
 ## Cloning the decentralized renderer React template
 
-Download a template for building your own document renderer from [the Open Attestation template repository](https://github.com/Open-Attestation/decentralized-renderer-react-template).
+Download a template for building your own document renderer from [the OpenAttestation template repository](https://github.com/Open-Attestation/decentralized-renderer-react-template).
 
 ### Cloning the code repository locally
 

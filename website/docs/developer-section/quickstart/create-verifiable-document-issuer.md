@@ -350,7 +350,7 @@ export const Steps = () => {
     
     * A verifiable document requires a DNS as the proof of identity, which is checked during the verification phase.
     
-    * However, as configuring the DNS might be challenging, you can give the user instructions to get a temporary DNS from the Open Attestation CLI.
+    * However, as configuring the DNS might be challenging, you can give the user instructions to get a temporary DNS from the OpenAttestation CLI.
     
     * Set `documentStoreAddress` within the application state by clicking **Confirm**.
 

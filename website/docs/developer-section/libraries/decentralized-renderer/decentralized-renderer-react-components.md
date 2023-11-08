@@ -3,6 +3,9 @@ id: decentralized-renderer-react-components
 title: React Components
 sidebar_label: React Components
 ---
+<!--Flag: This article has the same filename with: 
+docs/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-components.md 
+Content in this file is the original and has not been edited. -->
 
 React components abstracting the communication with `Open Attestation` decentralized renderer. More information on this:
 

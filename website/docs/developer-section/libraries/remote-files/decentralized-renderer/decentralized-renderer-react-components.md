@@ -4,6 +4,9 @@ title: React Components
 hide_title: true
 sidebar_label: React Components
 ---
+<!--Flag: This article has the same filename with: 
+docs/developer-section/libraries/decentralized-renderer/decentralized-renderer-react-components.md 
+Content in this file has been pushed to github, but can be recovered. -->
 
 # React Components
 

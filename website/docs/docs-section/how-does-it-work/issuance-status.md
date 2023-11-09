@@ -3,70 +3,77 @@ title: Issuance Status
 sidebar_label: Issuance Status
 ---
 
-OpenAttestation checks that the document has been issued and that it's issuance status is in good standing (for instance, that it hasn't been revoked). As of today, OpenAttestation supports two ways to issue documents: DIDs and Ethereum Smart Contracts.
+OpenAttestation checks that the document has been issued and it is in a valid status of issuance (for instance, it hasn't been revoked). As of today, OpenAttestation supports two ways to issue documents: DIDs and Ethereum smart contracts.
 
 ## Ethereum Smart Contracts
 
-The [document store](/docs/integrator-section/verifiable-document/ethereum/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It stores the hashes of wrapped documents, which are the records of the owner of the document store having issued the documents. Before we explain the verification process in detail, we need to introduce a new concept: the `merkleRoot`.
+The [document store](/docs/integrator-section/verifiable-document/ethereum/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It stores the hashes of the wrapped documents, which are the records of the document store owner who issued the documents. Before moving on to the verification process, you need to understand the `merkleRoot`.
 
-Let's imagine that we need to wrap thousands of files and had to issue the `targetHash` for each of them. It would be extremely inefficient because Ethereum is slow, and we would have to pay for each transaction.
-
-That's where the `merkleRoot` will come in handy.
+Assuming that you have to wrap thousands of files and issue the `targetHash` for each, it can be extremely inefficient because Ethereum is slow, and you will have to pay for each transaction. That's why you need the `merkleRoot`.
 
 ### merkleRoot
 
-Once the `targetHash` of a document is computed, OpenAttestation will determine the `merkleRoot`. The `merkleRoot` value is the merkle root hash computed from the [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree) using the `targetHash` of all the document wrapped together. Each `targetHash` is a leaf in the tree. After computing the merkle tree, the `merkleRoot` associated to a document will be added to it as well as the proofs (intermediate hashes) needed to ensure that the `targetHash` has been used to compute the `merkleRoot`. The proofs are added into the `proof` property.
+Once computing the `targetHash` of a document, OpenAttestation will determine the `merkleRoot`. The `merkleRoot` value is the merkle root hash computed from the [merkle tree](https://en.wikipedia.org/wiki/Merkle_tree) using the `targetHash` of all the document wrapped together. Each `targetHash` is a leaf in the tree. After computing the merkle tree, the `merkleRoot` associated to a document will be added to it with the proofs (intermediate hashes) needed to ensure that the `targetHash` has been used to compute the `merkleRoot`. The proofs are added into the `proof` property.
 
-On a side note, when we wrap only one document at a time, the `targetHash` and the `merkleRoot` are identical and the `proof` is empty. This is completely normal. When we wrap at least two documents at the same time, we will notice a difference between `targetHash` and the `merkleRoot`, and proofs appended.
+In addition, when you wrap only one document at a time, the `targetHash` and the `merkleRoot` are identical and the `proof` property is empty. This is a normal behavior. 
 
-> The `merkleRoot` will always be the same for all the documents wrapped together (in a batch). It will be different for documents wrapped separately.
+When you wrap at least two documents at the same time, there will be a difference between `targetHash` and `merkleRoot`, and the proofs appended.
+
+>**Note:** The `merkleRoot` will always be the same for all the documents wrapped together (in a batch). It will be different for the documents wrapped separately.
 
 ### Issuance
 
-Now that our batch of documents has a common identifier and that we can prove (thanks to the merkle tree algorithm) that the `targetHash` of a document was used to create a specific `merkleRoot`, we can use the `merkleRoot` in our document store and issue it.
+At this step, the batch of documents has a common identifier and you can prove the `targetHash` of a document was used to create a specific `merkleRoot`, based on the merkle tree algorithm. You can use the `merkleRoot` in your document store and issue it.
 
 ### Revocation
 
-As discussed above, issuance of documents can happen individually or by batch. Issuing a batch documents is by far the more efficient way. When it comes to revocation both values can also be used:
+The issuance of documents can happen individually or in batch. Issuing a batch of documents is more efficient. When it comes to revocation, both values can be used:
 
-- `targetHash` will allow for the revocation of a specific document.
-- `merkleRoot` will allow for the revocation of the whole batch of documents.
+- `targetHash` will enable the revocation of a specific document.
+- `merkleRoot` will enable the revocation of a whole batch of documents.
 
 ### Issuance process and verification
 
-To issue a document, an institution or individual :
+To issue a document, an institution or an individual need to perform the following:
 
-- [Deploys a new document store](/docs/integrator-section/verifiable-document/ethereum/document-store) on Ethereum and get the address of the deployed contract. (this action needs to be performed only once)
-- Adds the address of the deployed contract into the document (before wrapping).
-- Wraps a document (or a batch of documents) and get a `merkleRoot`. The wrapped documents can be shared to the recipients.
-- Issues the `merkleRoot` by calling the `issue` function from the document store contract.
+1. [Deploy a new document store](/docs/integrator-section/verifiable-document/ethereum/document-store) on Ethereum and get the address of the deployed contract. 
+    
+    Perform this action only once.
 
-An OpenAttestation verifier:
+1. Add the address of the deployed contract into the document before wrapping.
 
-- Checks the `merkleRoot` of the document has been issued:
-  1. Gets back the document store contract address from the document itself.
-  1. Ensures that the `targetHash` and the `proof` matches the `merkleRoot`.
-  1. Checks the `merkleRoot` is in the document store provided, by calling the `isIssued` function from the deployed contract.
-- Checks the `merkleRoot` of the document has been issued:
-  1. Gets back the document store contract address from the document itself.
-  1. Checks the `targetHash` is **not** in the document store provided, by calling the `isRevoked` function from the deployed contract.
-  1. Checks the `merkleRoot` is **not** in the document store provided, by calling the `isRevoked` function from the deployed contract.
+1. Wrap a document (or a batch of documents) and get a `merkleRoot`. 
+
+    You can share the wrapped documents with the recipients.
+
+1. Issue the `merkleRoot` by calling the `issue` function from the document store contract.
+
+An OpenAttestation verifier will perform the following:
+
+- Check the `merkleRoot` of the document has been issued:
+  1. Get back the document store contract address from the document itself.
+  1. Ensure that the `targetHash` and the `proof` match the `merkleRoot`.
+  1. Check the `merkleRoot` is in the document store, by calling the `isIssued` function from the deployed contract.
+- Check the `merkleRoot` of the document has been issued:
+  1. Get back the document store contract address from the document itself.
+  1. Check the `targetHash` is **not** in the document store, by calling the `isRevoked` function from the deployed contract.
+  1. Check the `merkleRoot` is **not** in the document store, by calling the `isRevoked` function from the deployed contract.
 
 ## DIDs
 
-Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity. DID document associated with DIDs contains a verification method, often a public key. The owner of a DID can use the private key associated and anyone can verify that the owner control the public key.
+Decentralized identifiers (DIDs) are a new type of identifier that enables verifiable, decentralized digital identity. The DID document associated with DIDs contains a verification method, often a public key. The owner of a DID can use the associated private key and anyone can verify that the owner controls the public key.
 
-At the moment, OpenAttestation only supports one DID method: `ethr`.
+Currently, OpenAttestation only supports one DID method, `ethr`.
 
 ### Issuance
 
-DIDs [are significantly faster and incur not costs](/docs/docs-section/how-does-it-work/comparison). They could directly use the `targetHash` of the document (which is unique) and sign it using the private key associated. However for consistency with our initial design, we sign the `merkleRoot`.
+DIDs [are significantly faster and incur not costs](/docs/docs-section/how-does-it-work/comparison). They can directly use the `targetHash` of the document (which is unique) and sign it using the associated private key. However, for consistency with the initial design of OpenAttestation, you need to sign the `merkleRoot`.
 
-The information about the signature are added to the document, into the `proof` property. That's it, the document has been issued.
+The information about the signature is added to the document, into the `proof` property. That means the document has been issued.
 
-Let's dig a bit more to understand how it works.
+The following descriptions helps you gain a deeper understanding of how it works.
 
-An [`ethr` DID document](https://dev.uniresolver.io/1.0/identifiers/did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69) looks like ::
+An `ethr` DID document looks like the following:
 
 ```json
 {
@@ -89,13 +96,13 @@ An [`ethr` DID document](https://dev.uniresolver.io/1.0/identifiers/did:ethr:0x6
 }
 ```
 
-Three important information can be found:
+The example above contains three pieces of important information:
 
-- the DID identifier (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69`). It's used to identify the DID and must be added into the `issuer.id` property of the document.
-- The DID controller (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller`). It's used to identify which public key control the DID and must be added into the `issuer.identityProof.key` property of the document. It's also worth to note that the value is equal to the DID identifier, appended with `#controller`.
-- The ethereum address associated to the DID controller (here `0x6813eb9362372eef6200f3b1dbc3f819671cba69`). We will use it to verify the signature.
+- the DID identifier (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69`). It's used to identify the DID, and you must add it into the `issuer.id` property of the document.
+- The DID controller (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller`). It's used to identify which public key control the DID, and you must add it into the `issuer.identityProof.key` property of the document. The value is equal to the DID identifier, appended with `#controller`.
+- The ethereum address associated to the DID controller (here `0x6813eb9362372eef6200f3b1dbc3f819671cba69`). you will use it to verify the signature.
 
-> You can find an example of document using DID in our [guide](/docs/integrator-section/verifiable-document/did/raw-document).
+>**Note:** See an example document using DID in [this guide](/docs/integrator-section/verifiable-document/did/raw-document).
 
 A proof of signature looks like:
 
@@ -113,31 +120,37 @@ A proof of signature looks like:
 }
 ```
 
-- `signature` is the signed `merkleRoot`
+- `signature` is the signed `merkleRoot`.
 - `verificationMethod` is the DID controller.
 
-That's all the information that we need to verify that the document has been signed with the correct private key. Indeed,`ethr` DID uses [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) with [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) as parameter of the elliptic curve which provides an interesting property: when we verify a signature, using the initial value (`merkleRoot`), and the signed value (`signature`) it will recover the ethereum address associated with the private key used. We can then compare the ethereum address from the DID document, with the ethereum address returned by the verification. If it matches, the signature is valid.
+That's all the information OpenAttestation uses to verify that the document has been signed with the correct private key. The `ethr` DID uses [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) with [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) as parameter of the elliptic curve, which provides this property: when you verify a signature, use the initial value (`merkleRoot`) and the signed value (`signature`), so that they will recover the ethereum address associated with the private key. Compare the ethereum address from the DID document with the ethereum address returned by the verification. If they match, the signature is valid.
 
-If you want to dig more on ECDSA, you can read this guide from [Yos Riady](https://yos.io/2018/11/16/ethereum-signatures/).
+If you want to learn more about ECDSA, read [this guide from Yos Riady](https://yos.io/2018/11/16/ethereum-signatures/).
 
 ### Revocation
 
-It's possible to revoke a DID document if a document store has been declared in its revocation block. You can revoke a document [using a document store](/docs/integrator-section/verifiable-document/did/revoking-document) or [with an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document-ocsp).
+It's possible to revoke a DID document if a document store has been declared in its revocation block. You can revoke a document [using a document store or an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document).
 
-Note that if you do use revocation for `DID`, you still need to have at least one transaction with the ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
+>**Note:** If you use revocation for `DID`, you still need to have at least one transaction with the ethereum blockchain to deploy a `documentStore`.
 
 ### Issuance process and verification
 
-To issue a document, an institution or individual :
+To issue a document, perform the following:
 
-- [Creates a new ethr DID](/docs/integrator-section/verifiable-document/did/create) (this action needs to be performed only once) and get the private key and the public address.
-- Adds the DID address and controller into the document (before wrapping).
-- Wraps a document and get a `merkleRoot`.
+- [Create a new ethr DID](/docs/integrator-section/verifiable-document/did/create) to get the private key and the public address.
+
+    Perform this action only once.
+
+- Add the DID address and controller into the document before wrapping.
+
+- Wrap a document and get a `merkleRoot`.
+
 - Sign the `merkleRoot` using the private key. The signature must be appended into the wrapped document.
-- The wrapped document can be shared to the recipients.
 
-An OpenAttestation verifier:
+- Share the wrapped document with the recipients.
 
-- Retrieves the ethereum address associated with the DID identifier and DID controller from the document.
-- Retrieves the ethereum used to sign the merkle root.
-- Makes sure both addresses match.
+An OpenAttestation verifier will perform the following:
+
+- Retrieve the ethereum address associated with the DID identifier and DID controller from the document.
+- Retrieve the ethereum used to sign the `merkleRoot`.
+- Make sure both addresses match.

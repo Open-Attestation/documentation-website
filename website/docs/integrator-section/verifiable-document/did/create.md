@@ -57,4 +57,3 @@ Replace `YOUR_WALLET_ADDRESS` below and check your DID via this link:
 
 https://dev.uniresolver.io/1.0/identifiers/did:ethr:YOUR_WALLET_ADDRESS
 
-For instance, [check this url](https://dev.uniresolver.io/1.0/identifiers/did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D) with the example above.

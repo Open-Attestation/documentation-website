@@ -88,7 +88,7 @@ An example of a valid `TXT` record for Ethereum `mainnet` network is as shown:
 | ---- | ------------------------ | ------------------------------------------------------------------------------- |
 | TXT  | demo.openattestation.com | "openatts net=ethereum netId=1 addr=0x9db35C07350e9a16C828dAda37fd9c2923c75812" |
 
-## Inserting the DNS Record for DID
+## Inserting the DNS record for DID
 
 This is very similar to Ethereum Smart Contracts. Only the shape of the data change.
 Within your domain registrar or DNS provider's web UI, insert a `TXT` record into the DNS in the following format:
@@ -97,7 +97,9 @@ Within your domain registrar or DNS provider's web UI, insert a `TXT` record int
 | ---- | ----------- | --------------------------------------- |
 | TXT  | example.com | "openatts a=dns-did; p=`<DID>`; v=1.0;" |
 
-The `<DID>` in the `Value` field above is DID public key id, as resolved by your DID. For instance, check [this DID](https://dev.uniresolver.io/1.0/identifiers/did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D). The expected value is `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller`, similar to `didDocument.publicKey[0].id`.
+The `<DID>` variable in the `Value` field above is DID public key id, as resolved by your DID. 
+
+The expected value looks like `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller`, similar to `didDocument.publicKey[0].id`.
 
 ## Additional Note for Adding DNS `TXT` Records
 

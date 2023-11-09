@@ -5,7 +5,9 @@ sidebar_label: Document Integrity
 
 OpenAttestation ensures that the content of the document has not been modified since the document was created, with the exception of data removed using the built-in [obfuscation mechanism](/docs/developer-section/libraries/remote-files/open-attestation#obfuscating-data). Let's explore how it works.
 
-The tutorial shows you how to [wrap a document](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) and [issue it](/docs/integrator-section/verifiable-document/ethereum/issuing-document) into a document store. However, it didn't explain the purpose of these actions and why they are necessary.
+The Ethereum tutorial shows you how to [wrap a document](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) and [issue it](/docs/integrator-section/verifiable-document/ethereum/issuing-document) into a document store. 
+
+The following sections explain the purpose of wrapping and issuing a document and why these actions are necessary.
 
 ## Wrapping a document
 

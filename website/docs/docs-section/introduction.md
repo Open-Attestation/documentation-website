@@ -4,7 +4,7 @@ title: Introduction to OpenAttestation
 sidebar_label: Introduction
 ---
 
-OpenAttestation is an open source framework for verifiable document and transferable records.
+OpenAttestation is an open source framework for verifiable documents and transferable records.
 
 ## Verifiable document
 

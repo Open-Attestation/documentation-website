@@ -4,83 +4,89 @@ sidebar_label: Issuance Identity
 ---
 import SupportedNetworks from "/src/reusables/_supported-networks.mdx";
 
-OpenAttestation uses the Domain Name System (DNS) as the method of issuer identity verification. A one-liner introduction to the DNS system can be summarized as: "Phonebook for the Internet". It's primary purpose is to resolve human readable names such as "google.com", or "openattestation.com", etc. to a set of records. The most common records are 'A records', which resolve to IP addresses - this allows network routing to operate over the Internet.
+OpenAttestation uses the Domain Name System (DNS) as the method to verify the issuer's identity. A one-line summary of the DNS system can be "a Phone book for the Internet". Its primary purpose is to resolve human readable names such as "google.com" or "openattestation.com" etc. to a set of records. The most common records are IP addresses - this allows network routing to operate over the Internet.
 
-For OpenAttestation, we are using the TXT type of record, which simply allows us to store textual data. The textual data we store indicates the document store that the domain administrator trusts.
+OpenAttestation uses records in the TXT format, which allows the storage of textual data. The textual data indicates the document store that the domain administrator trusts.
 
-By allowing the DNS system to be used as an identity registry, we let domain name owners claim ownership of an OpenAttestation Document Store smart contract on the Ethereum Blockchain.
+To use the DNS system as an identity registry, the domain name owner must claim the ownership of an OpenAttestation Document Store smart contract on the Ethereum Blockchain.
 
 ## Rationale
 
-The DNS system is a key part of Internet infrastructure, and is a decentralized system - this means that there is a low barrier to entry and does not have a single point of failure. It allows issuers to simply tie their issuance to their domain name, (e.g example.openattestation.com). When a user views a document issued under this model, they will see "Document issued by example.openattestation.com".
+The DNS system is a key part of Internet infrastructure and also a decentralized system - this means there is a low barrier to entry and does not have a single point of failure. It helps issuers tie their issuance to their domain name (e.g. example.openattestation.com). When a user views a document issued under this model, they see "Document issued by example.openattestation.com".
 
 ## How it works
 
-Under [IETF RFC 1464](https://tools.ietf.org/html/rfc1464), it is possible to store arbitrary string attributes as part of a domain's record set. This method is currently widely used for email server authentication (SPF, DMARC, DKIM). Our DNS identity proof technique was largely inspired by [Keybase DNS proofs](https://github.com/keybase/keybase-issues/issues/367).
+Under [IETF RFC 1464](https://tools.ietf.org/html/rfc1464), it is possible to store arbitrary string attributes as part of a domain's record set. Currently, this method is widely used for email server authentication (SPF, DMARC, DKIM). The DNS identity proof technique of OpenAttestation was largely inspired by [Keybase DNS proofs](https://github.com/keybase/keybase-issues/issues/367).
 
-Only domain name owners (and the registrar that they trust) have the authority to make changes to the records associated with that domain name. Thus when a DNS record endorses a certain fact, it transitively asserts that this fact is believed to be true by the domain name owner.
+Only domain name owners (and the registrar that they trust) have the authority to make changes to the records associated with that domain name. Thus, when a DNS record endorses a fact, it transitively asserts that the domain name owner believes this fact is true.
 
-In an OpenAttestation DNS-TXT identity proof, we record a document store address and the network (e.g Ethereum, Main Net) it is on. In the OpenAttestation document itself, we declare the domain name to search for the record as well as the document store Ethereum address. This forms a bi-directional trust assertion, and if the Document's cryptographic proof is issued on that document store - we can say that the domain name owner has endorsed the issuance of this document.
+In an OpenAttestation DNS-TXT identity proof, the OA framework records a document store address and the network (e.g. Ethereum mainnet) it is using. The OpenAttestation document declares the domain name for record searching and the document store Ethereum address. This forms a bi-directional trust assertion; if the Document's cryptographic proof is issued on that document store, it means the domain name owner has endorsed the issuance of this document.
 
-A deeper technical discussion of this topic can be found at [OpenAttestation's Decentralized Identity Proof using DNS-TXT Architecture Decision Record](https://github.com/Open-Attestation/adr/blob/master/decentralized_identity_proof_DNS-TXT.md).
+See a deeper technical discussion of this topic at [OpenAttestation's Decentralized Identity Proof using DNS-TXT Architecture Decision Record](https://github.com/Open-Attestation/adr/blob/master/decentralized_identity_proof_DNS-TXT.md).
 
-## How to create DNS TXT Record
+## How to create DNS TXT record
 
-Every OA document's provenance can be verified and traced back to its creator or issuer. This is achieved by embedding an `identityProof` property in the document, which serves as a claim for identity. During the verification phase, the claim is checked against external records.
+OpenAttestation is able to verify every OA document's provenance and trace it back to its creator or issuer. The OA framework achieves this by embedding an `identityProof` property in the document, which serves as a claim for identity. During the verification phase, the OA framework checks the the claim against external records.
 
-In this section, we will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in an OA-compliant decentralized renderer.
+In this section, we will bind the document issuer's identity to a valid domain name. This domain will display as the issuer every time that an OA-compliant decentralized renderer is rendering the document.
 
 ## Prerequisites
 
-- Domain name
-- Edit access to your domain's DNS records
+- A domain name
+- The edit access to your domain's DNS records
 - A document store
 
 To bind the domain name to the issuer's identity, you must be able to change the DNS record of the domain name.
 
-## Inserting the DNS Record for Ethereum Smart contracts
+## Inserting the DNS record for Ethereum smart contracts
 
-You will need to add a DNS `TXT` record to your domain name. The exact steps to achieve this can be confirmed with your domain registrar, this is usually achieved through your domain registrar or DNS provider's web UI.
+You will need to add a DNS `TXT` record to your domain name. Confirm with your domain registrar the exact steps to achieve this, which is usually implementable through your domain registrar or DNS provider's web UI.
 
-While we have provided [links to guides](#additional-note-for-adding-dns-txt-records) on adding DNS `TXT` records for some common domain registrars and DNS providers, the steps below is a generic procedure for any DNS provider.
+While [these links to guides](#additional-note-for-adding-dns-txt-records) describe how to add DNS `TXT` records for some common domain registrars and DNS providers, the steps below describe a generic procedure for any DNS provider:
 
-Select a domain name that you will like to associate with your documents. The domain can either be the root domain (e.g. `openattestation.com`) or a subdomain (e.g. `issuer.openattestation.com`). One benefit of using the root domain is that it will be easier for the viewers to recognize your documents visually. However, the issuer can choose to use the subdomain, if there is a need to distinguish between multiple categories of documents to issue (e.g. certA.openattestation.com and certB.openattestation.com).
+1. Select a domain name that you want to associate with your documents. 
 
-Within your domain registrar or DNS provider's web UI, insert a `TXT` record into the DNS in the following format:
+    The domain can either be the root domain (e.g. `openattestation.com`) or a subdomain (e.g. `issuer.openattestation.com`). 
+    
+    One benefit of using the root domain is that it will be easier for the viewers to recognize your documents visually. However, the issuer can choose to use the subdomain if there is a need to distinguish between multiple categories of documents (e.g. certA.openattestation.com and certB.openattestation.com).
 
-| Type | Name        | Value                                                           |
-| ---- | ----------- | --------------------------------------------------------------- |
-| TXT  | example.com | "openatts net=ethereum netId=`<NETWORK_ID>` addr=`<DOCUMENT_STORE_ADDRESS>`" |
+2. Within your domain registrar or DNS provider's web UI, insert a `TXT` record into the DNS in the following format:
 
-The `<DOCUMENT_STORE_ADDRESS>` in the `Value` field above is the document store smart contract address obtained. Please note that the document store address needs to be prepended with `addr`.
+    | Type | Name        | Value                                                           |
+    | ---- | ----------- | --------------------------------------------------------------- |
+    | TXT  | example.com | "openatts net=ethereum netId=`<NETWORK_ID>` addr=`<DOCUMENT_STORE_ADDRESS>`" |
 
-> The quotes around the value are necessary. They are used to delimit each different records that you might have to be bound to the same domain.
+    The `<DOCUMENT_STORE_ADDRESS>` in the `Value` field above is the document store smart contract address obtained. 
+    
+    You need to prepend the document store address with `addr`.
 
-An example of a valid DNS `TXT` record is as shown:
+    >**Note:** The quotes around the value are necessary. They are used to delimit each different record that you bind to the same domain.
 
-| Type | Name                     | Value                                                                           |
-| ---- | ------------------------ | ------------------------------------------------------------------------------- |
-| TXT  | demo.openattestation.com | "openatts net=ethereum netId=11155111 addr=0xED2E50434Ac3623bAD763a35213DAD79b43208E4" |
+    An example of a valid DNS `TXT` record is as shown:
 
-The `netId` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). We generally use only the following networks:
+    | Type | Name                     | Value                                                                           |
+    | ---- | ------------------------ | ------------------------------------------------------------------------------- |
+    | TXT  | demo.openattestation.com | "openatts net=ethereum netId=11155111 addr=0xED2E50434Ac3623bAD763a35213DAD79b43208E4" |
 
-<!-- Reusing the Network Table here -->
+    The `netId` corresponds to the [network ID for the different Ethereum networks](https://chainid.network/). Generally, you will use only the following networks:
 
-<SupportedNetworks />
+    <!-- Reusing the Network Table here -->
 
-For more information on switching to production mode, refer to the [Additional Note for Identity Proof in Production](#additional-note-for-identity-proof-in-production) section below.
+    <SupportedNetworks />
 
-### Testing the DNS Record
+3. For more information on switching to production mode, refer to [this section](#additional-note-for-identity-proof-in-production).
+
+### Testing the DNS record
+
+After adding the `TXT` record, it is recommended to check the record has been inserted correctly by viewing [Google DNS](https://dns.google.com/). Be sure to select `TXT` in the **RR Type** dropdown list.
+
+>**Note:** The DNS propagation should take a few minutes, though in some cases you may need to wait up to 24 hours. Continue with the remaining parts of the guide while waiting.
 
 ![Google DNS to Test](/docs/developer-section/quickstart/configuring-dns/google-dns.png)
 
-> The DNS propagation should take a few minutes, though in some cases you may need to wait up to 24 hours. Continue with the other parts of the guide while waiting for DNS to propagate.
+### Additional note for identity proof in production
 
-After adding the `TXT` record, we recommend you to check that the record has been inserted correctly by viewing with [Google DNS](https://dns.google.com/). Make sure to select `TXT` in the _RR Type_ dropdown.
-
-### Additional Note for Identity Proof in Production
-
-The `TXT` record above is for use for documents issued on the Ethereum `sepolia` network. To bind the identity in production where your documents are issued in the Ethereum `mainnet` network, you will have to change `netId` to `1`.
+The `TXT` record above is for use in the documents issued on the Ethereum `sepolia` network. To bind the identity in production where your documents are issued in the Ethereum `mainnet` network, you will have to change `netId` to `1`.
 
 An example of a valid `TXT` record for Ethereum `mainnet` network is as shown:
 
@@ -101,9 +107,9 @@ The `<DID>` variable in the `Value` field above is DID public key id, as resolve
 
 The expected value looks like `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller`, similar to `didDocument.publicKey[0].id`.
 
-## Additional Note for Adding DNS `TXT` Records
+## Additional note for adding DNS `TXT` records
 
-Below is a list of guides provided by some of the common domain registrars and DNS providers. This list is by no means comprehensive.
+The following is a list of guides provided by several common domain registrars and DNS providers. This list is not comprehensive:
 
 - [Amazon Route 53](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/dns-txt-records.html)
 - [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/360019093151-Managing-DNS-records-in-Cloudflare)

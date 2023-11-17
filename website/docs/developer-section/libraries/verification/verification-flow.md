@@ -35,4 +35,4 @@ import VerifiableDocsDIDLight from './diagram/verifiable-docs-did.light.svg';
 
 
 ## Verification method
-[List of Verifications Methods](../remote-files/open-attestation-verify#verification-method)
+See the list of verification methods [here](../remote-files/open-attestation-verify#verification-method).

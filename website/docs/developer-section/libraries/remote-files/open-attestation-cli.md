@@ -5,8 +5,6 @@ hide_title: true
 sidebar_label: Open Attestation (CLI)
 ---
 
-import SupportedNetworks from "/src/reusables/_supported-networks.mdx";
-
 # Open Attestation (CLI)
 
 This CLI tool in the [Open Attestation CLI](https://github.com/Open-Attestation/open-attestation-cli) repository turns .json documents into any open-attestation verifiable documents. It applies the OpenAttestation algorithm to produce a hash of the json document and then creates a file with the data and proof of integrity.
@@ -39,13 +37,20 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 
 > A configuration folder will be created in the `~/.config/open-attestation/`
 
+---
 
 ## Supported networks
 
-<!-- Reusing the Network Table here -->
+| Network            | Chain ID | Type       |
+| ------------------ | -------- | ---------- |
+| mainnet            | 1        | Production |
+| sepolia            | 11155111 | Test       |
+| polygon            | 137      | Production |
+| mumbai             | 80001    | Test       |
+| xdc                | 50       | Production |
+| xdcapothem         | 51       | Test       |
 
-<SupportedNetworks />
-
+---
 
 ## Usage
 
@@ -82,7 +87,7 @@ open-attestation deploy document-store "My Name" --network sepolia --dry-run
 
 /!\ Welcome to the fee table. Please read the information below to understand the transaction fee
 
-The table below display information about the cost of the transaction on the mainnet network, depending on the gas price selected. Multiple modes are displayed to help you choose a gas price depending on your needs:
+The table below display information about the cost of the transaction on the mainnet network, depending on the gas price selected. Multiple modes are displayed to help you better help you to choose a gas price depending on your needs:
 
 Information about the network:
 Costs based on block number: 4275264
@@ -534,13 +539,13 @@ open-attestation wallet encrypt --of ./tmp
 …  awaiting  Encrypting Wallet [====================] [100/100%]
 ℹ  info      Wallet with public address 0xB26B4941941C51a4885E5B7D3A1B861E54405f90 successfully created. Find more details:
 ✔  success   Wallet successfully saved into /path/to/tmp
+
 ```
 
 Decrypt a wallet to get information about it. Some information might be sensitive
 
 ```bash
 open-attestation wallet decrypt wallet.json
-
 ⚠  warning   You are about to reveal the private key of your wallet. Please type the following word into the terminal to prove that you understand the risks: active-aqua-swordtail
 ? ack: active-aqua-swordtail
 ℹ  info      User consented to risks
@@ -625,7 +630,7 @@ open-attestation config create --output-dir ./example-configs --encrypted-wallet
 ℹ  info      Creating a new config file
 ? Wallet password [hidden]
 ? Using a config template URL? Yes
-? Please enter the config template URL https://raw.githubusercontent.com/TradeTrust/tradetrust-config/master/build/config-reference-v3.json
+? Please enter the config template URL https://raw.githubusercontent.com/TradeTrust/tradetrust-config/master/build/reference/config-v2.json
 ? Select Network sepolia
 ```
 

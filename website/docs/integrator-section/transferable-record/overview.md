@@ -41,6 +41,6 @@ The token registry stores the ownership state of the transferable records using 
 
 ### Title escrow smart contract
 
-There are instances where a single document will have multiple owners, with clearly defined roles to protect one from another. In trade finance, there are usually a `beneficiary` and a `holder` to a given document. The `beneficiary` corresponds to the legal owner of the Bill of Lading, while the `holder` refers to the entity holding the physical Bill of Lading.
+There are instances where a single document will have multiple owners, with clearly defined roles to protect one from another. In trade finance, there is usually a `beneficiary` and a `holder` to a given document. The `beneficiary` corresponds to the legal owner of the Bill of Lading, while the `holder` refers to the entity holding the physical Bill of Lading.
 
 In this case, the Title Escrow Smart Contract reflects the rules of engagement between these two parties on-chain.

@@ -6,7 +6,8 @@ sidebar_label: Creating Verifiable Document Issuer
 
 A verifiable document is a digital document, which you can issue and verify using blockchain technology.
 
-Examples of verifiable documents include the following, but are not limited to these documents:
+Examples of verifiable documents include, but are not limited to the following:
+
 * Receipts
 * Bills of sale
 * Titles
@@ -337,7 +338,7 @@ export const Steps = () => {
 
 ```
 
-3. In this component, break down the following steps and present the scenario in a wizard:
+3. In the next step, create a UI to break down the following steps and present the scenario in a wizard:
 
   a. Connect the MetaMask extension.
   

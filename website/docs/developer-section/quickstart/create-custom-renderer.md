@@ -12,11 +12,11 @@ This renderer is a static website that will be embedded in compliant OA viewer. 
 
 ## Prerequisites
 
-- [Git](https://git-scm.com/downloads)
-- [Node.js](https://nodejs.org/en/download/)
-- [GitHub account](https://github.com/)
-- [Netlify account](https://www.netlify.com/)
-- [Basic React.js and TypeScript knowledge](https://reactjs.org/)
+- Download [Git](https://git-scm.com/downloads) and install it on your computer.
+- Download [Node.js](https://nodejs.org/en/download/) and install it on your computer.
+- Have your [GitHub account](https://github.com/) registered to access the repositories.
+- Have your [Netlify account](https://www.netlify.com/) registered to deploy your document renderer site.
+- Get [basic React.js and TypeScript knowledge](https://reactjs.org/) to develop your document renderer.
 
 ## Cloning the decentralized renderer React template
 

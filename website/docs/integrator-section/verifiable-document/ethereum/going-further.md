@@ -10,7 +10,7 @@ Now that you have completed the Getting Started guide to create your own `Verifi
 - [Configuring DNS](/docs/developer-section/quickstart/configure-dns)
 - [Creating a Custom Renderer](/docs/developer-section/quickstart/create-custom-renderer)
 
-On top of OpenAttestation CLI, the OA team provides a web application to deploy document store and issue hash to your document store. You will find more information in the following tutorials:
+On top of the OpenAttestation CLI, there is also a web application to deploy document store and issue hash to your document store. You will find more information in the following tutorials:
 
 - [Deploying Document with Web App](/docs/integrator-section/webapp-tutorial/deploy-document-store-webapp)
 - [Issuing Document with Web App](/docs/integrator-section/webapp-tutorial/issue-document-store-webapp)

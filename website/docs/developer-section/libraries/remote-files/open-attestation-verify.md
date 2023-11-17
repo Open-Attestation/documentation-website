@@ -291,7 +291,7 @@ const customVerifier: Verifier<any> = {
 
 The `verify` function is built to run a list of verification method. Each verifier will produce a fragment that will help to determine if the document is valid. OpenAttestation comes with its own set of verification methods available in `openAttestationVerifiers`.
 
-The `verificationBuilder` function helps you create custom verification method. You can reuse the default one exported by the library.
+The `verificationBuilder` function helps you to create custom verification method. You can reuse the default one exported by the library.
 
 Extending from what have been mentioned in [Custom Verification](#custom-verification), let's now build a new verifier using our custom verification method:
 
@@ -484,8 +484,8 @@ const provider = utils.generateProvider(providerOptions);
 
 Various utilities and types are available to assert the correctness of fragments. Each verification method exports types for the fragment, and the data associated with the fragment.
 
-- fragment types are available in four flavors: `VALID`, `INVALID`, `SKIPPED`, and `ERROR`.
-- `VALID` and `INVALID` fragment data are available in two flavors most of the time, one for each version of `OpenAttestation`.
+- fragment types are available in 4 flavors: `VALID`, `INVALID`, `SKIPPED`, and `ERROR`.
+- `VALID` and `INVALID` fragment data are available in 2 flavors most of the time, one for each version of `OpenAttestation`.
 
 This library provides types and utilities to:
 

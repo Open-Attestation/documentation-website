@@ -54,7 +54,7 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 
 ## Usage
 
-### Network fees
+### Network Fees
 
 For information on how network fees work, please refer to the ethereum documentation: [https://ethereum.org/en/developers/docs/gas/](https://ethereum.org/en/developers/docs/gas/)
 
@@ -76,7 +76,7 @@ Example:
 | 1.2      | 10                          | 1.2 \* 10 = 12      |
 | 2        | 10                          | 2 \* 10 = 20        |
 
-#### Fee information
+#### Fee Information
 
 To display an estimated price of a transaction use the option of `dry-run` on your command.
 
@@ -281,7 +281,7 @@ open-attestation filter examples/wrapped-documents/example.0.json tmp/example.0.
 
 ### Encrypting document
 
-This allows you to encrypt the document, so that you can share and store it safely.
+This allows you to encrypt document in order to share and store them safely.
 
 ```bash
 open-attestation encrypt <inputDocumentPath> <outputEncryptedPath>
@@ -312,9 +312,9 @@ open-attestation decrypt ./src/__tests__/fixture/did-dns-encrypted.json decrypte
 ✔  success   Decrypted document saved to: decrypted.json
 ```
 
-### Token registry
+### Token Registry
 
-#### Deploying new token registry
+#### Deploy new Token Registry
 
 Deploys a token registry contract on the blockchain. Factory Contract that have been deployed using token-registry can be used with the factory address flag. To deploy a standalone token registry, please refer to [Token-Registry](https://github.com/Open-Attestation/token-registry) deployment.
 
@@ -330,7 +330,7 @@ open-attestation deploy token-registry "My Sample Token" MST --network sepolia
 ✔  success   Token registry deployed at 0x4B127b8d5e53872d403ce43414afeb1db67B1842
 ```
 
-#### Issuing the document to token registry
+#### Issue document to token registry
 
 `Issue` a hash to a token registry deployed on the blockchain. The `tokenId` option would be used to indicate the document hash, and the `to` option to indicate the title escrow address the document is mapped to.
 
@@ -349,13 +349,13 @@ open-attestation token-registry mint --network sepolia --address 0x6133f580aE903
 
 `mint` can be used instead of issue and will be strictly equivalent.
 
-#### Token registry roles
+#### Token Registry Roles
 
 Interfaces for the Assignment and Revocation of roles are available on the Token Registry repository.
 
-### Document store
+### Document Store
 
-#### Deploying a new document store
+#### Deploy new document store
 
 Deploys a document store contract on the blockchain
 
@@ -377,7 +377,7 @@ By default, the owner of the document store will be the deployer. You can specif
 open-attestation deploy document-store "My Name" --owner 0x1234 --network sepolia
 ```
 
-#### Issuing the document to document store
+#### Issue document to document store
 
 Issue a hash to a document store deployed on the blockchain
 
@@ -393,7 +393,7 @@ open-attestation document-store issue --network sepolia --address 0x19f89607b522
 ✔  success   Document/Document Batch with hash 0x0c1a666aa55d17d26412bb57fbed96f40ec5a08e2f995a108faf45429ae3511f has been issued on 0x19f89607b52268D0A19543e48F790c65750869c6
 ```
 
-#### Revoking the document in document store
+#### Revoke document in document store
 
 Revoke a hash to a document store deployed on the blockchain
 
@@ -409,9 +409,9 @@ open-attestation document-store revoke --network sepolia --address 0x19f89607b52
 ✔  success   Document/Document Batch with hash 0x0c1a666aa55d17d26412bb57fbed96f40ec5a08e2f995a108faf45429ae3511f has been revoked on 0x19f89607b52268D0A19543e48F790c65750869c6
 ```
 
-#### Granting a role on a document store
+#### Grant role on document store
 
-Grant a role on the document store deployed on the blockchain to a wallet.
+Grant role on document store deployed on the blockchain to a wallet
 
 ```bash
 open-attestation document-store grant-role --address <DOCUMENT_STORE_ADDRESS> --account <ACCOUNT_ADDRESS> --role <ROLE> [options]
@@ -427,7 +427,7 @@ open-attestation document-store grant-role --address 0x80732bF5CA47A85e599f3ac95
 ✔  success   Document store 0x80732bF5CA47A85e599f3ac9572F602c249C8A28's role of: admin has been granted to wallet 0xf81ea9d2c0133de728d28b8d7f186bed61079997
 ```
 
-#### Revoking a role on a document store
+#### Revoke role on document store
 
 Revoke role on document store deployed on the blockchain to a wallet
 
@@ -445,7 +445,7 @@ open-attestation document-store revoke-role --address 0x80732bF5CA47A85e599f3ac9
 ✔  success   Document store 0x80732bF5CA47A85e599f3ac9572F602c249C8A28's role of: admin has been revoked from wallet 0xf81ea9d2c0133de728d28b8d7f186bed61079997
 ```
 
-#### Transferring ownership of a document store
+#### Transfer ownership of document store
 
 Transfer ownership of a document store deployed on the blockchain to another wallet
 
@@ -461,7 +461,7 @@ open-attestation document-store transfer-ownership --address 0x80732bF5CA47A85e5
 ✔  success   Ownership of document store 0x80732bF5CA47A85e599f3ac9572F602c249C8A28 has been transferred to new wallet 0xf81ea9d2c0133de728d28b8d7f186bed61079997
 ```
 
-### Verification
+### Verify
 
 Verify if a document is valid.
 
@@ -472,7 +472,7 @@ open-attestation verify --document ./examples/wrapped-documents/example.0.json -
 ✔  success   The document is valid
 ```
 
-### DID direct signing
+### DID Direct Signing
 
 Sign on an OA document directly with a private key.
 
@@ -480,7 +480,7 @@ Sign on an OA document directly with a private key.
 open-attestation sign ./examples/unsigned-documents -f ./examples/sample-key -p did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller --output-dir ./examples/signed-documents
 ```
 
-### DNS TXT record
+### DNS TXT Record
 
 Create a temporary DNS TXT record in OpenAttestation sandbox
 
@@ -589,7 +589,7 @@ rm ./examples/sample-key
 open-attestation deploy document-store "My Name" --network sepolia --key 0000000000000000000000000000000000000000000000000000000000000003
 ```
 
-### Creating configuration file
+### Config (Create configuration file)
 
 This command will generate a config file with sandbox DNS, document store and token registry.
 
@@ -603,9 +603,9 @@ Command options to take note:
 <!-- - `--config-template-url` option to provide a path to reference a config template file hosted on a public url.
 - `--config-template-path` option to provide a path to reference a config template file locally. -->
 
-There are two ways of using this command to generate a config file, both in which, will return a new config file with sandbox DNS, updated document store and updated token registry.
+There are 2 ways of using this command to generate a config file, both in which, will return a new config file with sandbox DNS, updated document store and updated token registry.
 
-#### Method 1: Using the config-template-url option (recommended)
+#### Method 1: Using config-template-url option (recommended)
 
 These are the reference config templates:
 
@@ -634,7 +634,7 @@ open-attestation config create --output-dir ./example-configs --encrypted-wallet
 ? Select Network sepolia
 ```
 
-#### Method 2: Using the config-template-path option
+#### Method 2: Using config-template-path option
 
 Step 1: Generate a wallet.json file & add funds into wallet.json
 
@@ -653,7 +653,7 @@ open-attestation config create --output-dir ./example-configs --encrypted-wallet
 ? Select Network sepolia
 ```
 
-### Canceling pending transaction
+### Cancel pending transaction
 
 This command will cancel pending transaction.
 
@@ -680,9 +680,9 @@ open-attestation transaction cancel --nonce 1 --gas-price 300 --network sepolia 
 open-attestation transaction cancel --transaction-hash 0x000 --network sepolia --encrypted-wallet-path /path/to/wallet
 ```
 
-### Title escrow
+### Title Escrow
 
-#### Change holder
+#### Change Holder
 
 This command will allow the owner of a transferable record to change its holder.
 
@@ -698,7 +698,7 @@ open-attestation title-escrow change-holder --token-registry 0x4933e30eF8A083f49
 ✔  success   Transferable record with hash 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990's holder has been successfully changed to holder with address: 0xB26B4941941C51a4885E5B7D3A1B861E54405f90
 ```
 
-#### Nominating the change of owner
+#### Nominate Change of Owner
 
 This command will allow the owner of the transferable record to nominate a new owner of the transferable record.
 **This command will fail if you are not the owner of the transferable record.**
@@ -715,7 +715,7 @@ open-attestation title-escrow nominate-change-owner --token-registry 0x4933e30eF
 ✔  success   Transferable record with hash 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990's holder has been successfully nominated to new owner with address: 0xB26B4941941C51a4885E5B7D3A1B861E54405f90
 ```
 
-#### Endorsing the transfer of owner
+#### Endorse Transfer of Owner
 
 This command will allow the holder of the transferable record to endorse the transfer to an approved owner and approved holder of the transferable record.
 **This command will fail if there is no approved owner or holder record on the transferable record.**
@@ -732,7 +732,7 @@ open-attestation title-escrow endorse-transfer-owner --token-registry 0x4933e30e
 ✔  success   Transferable record with hash 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990's holder has been successfully endorsed to approved beneficiary at 0x2f60375e8144e16Adf1979936301D8341D58C36C
 ```
 
-#### Endorsing the change of owner
+#### Endorse Change of Owner
 
 This command will allow the owner of the transferable record to endorse the change of owner to a new owner and new holder of the transferable record.
 **This command will fail if the provided holder and owner's addresses are the same as the current owner and current holder's addresses.**
@@ -749,7 +749,7 @@ open-attestation title-escrow endorse-change-owner --token-registry 0x4933e30eF8
 ✔  success   Transferable record with hash 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990's holder has been successfully endorsed to new owner with address 0x2f60375e8144e16Adf1979936301D8341D58C36C and new holder with address: 0xB26B4941941C51a4885E5B7D3A1B861E54405f90
 ```
 
-#### Surrendering the document
+#### Surrender Document
 
 This command will allow the entity (who is both an owner and holder) to surrender it's transferable record to the token registry.
 
@@ -765,7 +765,7 @@ open-attestation title-escrow reject-surrendered --token-registry 0x4933e30eF8A0
 ✔  success   Transferable record with hash 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990 has been surrendered.
 ```
 
-#### Rejecting the surrendered document
+#### Reject Surrendered Document
 
 This command will allow the token registry to reject a surrendered transferable record.
 
@@ -781,7 +781,7 @@ open-attestation title-escrow reject-surrendered --token-registry 0x4933e30eF8A0
 ✔  success   Surrendered transferable record with hash 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990 has been rejected.
 ```
 
-#### Accepting the surrendered document
+#### Accept Surrendered Document
 
 This command will allow the token registry to accept a surrendered transferable record.
 
@@ -830,11 +830,11 @@ npm run test
 
 To run performance testing for OA functionality
 
-### Wrapping documents
+### Wrap
 
 Monitor the response time for batched documents wrapping.
 
-The Default command will testing: two documents without base64 image in one iteration.
+The Default command will testing: 2 documents without base64 image in 1 iteration.
 
 ```
 npm run benchmark

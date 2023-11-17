@@ -13,9 +13,15 @@ In this guide, you will bind the document issuer's identity to a valid domain na
 
 To complete this tutorial, meet the following prerequisites:
 
-- The domain name
-- The edit access to your domain's DNS records
-- A document store
+- Know what your domain name is.
+
+    To learn more about the domain name, see [this article](/docs/integrator-section/verifiable-document/ethereum/dns-proof).
+
+- Have the edit access to your domain's DNS records.
+
+- Have your document store deployed.
+
+    To learn more about the document store, see [this definition](/docs/docs-section/appendix/glossary#document-store).
 
 To bind the domain name to the issuer's identity, you must be able to change the DNS record of the domain name.
 
@@ -23,11 +29,11 @@ To bind the domain name to the issuer's identity, you must be able to change the
 
 You will need to add a DNS `TXT` record to your domain name. Confirm the exact steps to achieve this with your domain registrar. Usually, you can perform it through your domain registrar or DNS provider's web UI.
 
-While [the links to guides](#additional-note-for-adding-dns-txt-records) provide the steps on adding DNS `TXT` records for common domain registrars and DNS providers, the steps below show a generic procedure for any DNS provider:
+While [this guide](#additional-note-for-adding-dns-txt-records) provides the steps on adding DNS `TXT` records for common domain registrars and DNS providers, the steps below show a generic procedure for any DNS provider:
 
 1. Select a domain name that you want to associate with your documents. 
 
-    The domain can either be the root domain (e.g. `openattestation.com`) or a subdomain (e.g. `issuer.openattestation.com`). However, it is recommended to use the root domain, as it will be easier for the viewers of your documents to recognize the domain name visually.
+    The domain can be either the root domain (e.g. [openattestation.com](http://openattestation.com/)) or a subdomain (e.g. [issuer.openattestation.com](http://issuer.openattestation.com/)). One benefit of using the root domain is that it will be easier for the viewers to recognize your documents visually. However, you can choose to use the subdomain if there is a need to distinguish between multiple categories of documents to be issued (e.g. [certA.openattestation.com](http://certa.openattestation.com/) and [certB.openattestation.com](http://certb.openattestation.com/)).
 
 2. Within your domain registrar or DNS provider's web UI, insert a `TXT` record into the DNS in the following format:
 
@@ -55,7 +61,7 @@ While [the links to guides](#additional-note-for-adding-dns-txt-records) provide
 
     <SupportedNetworks />
     
-    For more information on switching to the production mode, refer to [this section](#additional-note-for-the-identity-proof-in-production).
+    For more information on switching to production mode, refer to [this section](#additional-note-for-the-identity-proof-in-production).
 
 ### Testing the DNS record
 
@@ -89,9 +95,11 @@ For instance, check [this DID](https://dev.uniresolver.io/1.0/identifiers/did:et
 
 ## Additional note for adding DNS TXT records
 
-Below is a list of guides for several domain registrars and DNS providers:
+You can choose any domain registrar and DNS provider based on your requirements. 
 
-- [Amazon Route 53](https://docs.aws.amazon.com/ses/latest/DeveloperGuide/dns-txt-records.html)
+For easy reference, find the below list of guides for several domain registrars and DNS providers:
+
+- [Amazon Route 53](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/ResourceRecordTypes.html#TXTFormat)
 - [Cloudflare](https://support.cloudflare.com/hc/en-us/articles/360019093151-Managing-DNS-records-in-Cloudflare)
 - [Name.com](https://www.name.com/support/articles/115004972547-Adding-a-TXT-Record)
 - [Namecheap](https://www.namecheap.com/support/knowledgebase/article.aspx/317/2237/how-do-i-add-txtspfdkimdmarc-records-for-my-domain)

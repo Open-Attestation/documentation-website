@@ -37,7 +37,7 @@ To develop a renderer that works properly, start with cleaning the template:
 - Remove the folder `src/templates/customTemplate`
 - Remove the folder `src/integration`
 
-Once you have finished the tutorial, clone the repository again and examine the deleted files.
+Once you have finished the tutorial, you can clone the repository again and examine the deleted files.
 
 ### Installing the code dependencies
 
@@ -119,7 +119,7 @@ In the above OA document, you will see four root objects:
 
 The `$template` key describes the template name used to render this display. It should have the following keys:
 
-- `$template.name` is the name of the template used to render a given OA document. This makes a single document renderer render multiple types of OA documents, each with a different template name.
+- `$template.name` is the name of the template used to render a given OA document. This enables a single document renderer to render multiple types of OA documents, each with a different template name.
 
 - `$template.type` will always take the value of `EMBEDDED_RENDERER` for documents rendered in this way.
 
@@ -141,7 +141,7 @@ For more details, see [Creating raw document](/docs/integrator-section/verifiabl
 
 ### Developing the COC template view
 
-After defining the structure of data, style the 📜 Certificate of Completion.
+After you defined the structure of data, the next step is to style the 📜 Certificate of Completion.
 
 To change how the data is being rendered, create a React component that takes in the raw document in the `document` props and render the corresponding HTML code.
 
@@ -223,9 +223,8 @@ import { cocTemplateCertificate } from "../samples/customTemplateSample";
 
 An OA document can have multiple views, with each rendered in a separate tab. For example, an OA document that is a degree certificate may have the actual certificate as one view, and the transcript as another view in a single template. 
 
-<!--Commented the following sentence, because it shows an error message, "Unable to load certificate with the provided parameters"-->
 
-<!-- A demo of the multiple-view feature can be found [here](https://opencerts.io/?q={%22type%22:%22DOCUMENT%22,%22payload%22:{%22uri%22:%22https://opencerts.io/static/demo/homestead.opencert%22,%22permittedActions%22:[%22STORE%22],%22redirect%22:%22https://opencerts.io%22}}).-->
+A demo of the multiple-view feature is available [here](https://opencerts.io/?q=%7B%22type%22%3A%22DOCUMENT%22%2C%22payload%22%3A%7B%22uri%22%3A%22https%3A%2F%2Fwww.opencerts.io%2Fstatic%2Fdemo%2Fhomestead.opencert%22%2C%22permittedActions%22%3A%5B%22STORE%22%5D%2C%22redirect%22%3A%22https%3A%2F%2Fopencerts.io%22%7D%7D).
 
 Your 📜 Certificate of Completion will only use a single view. 
 

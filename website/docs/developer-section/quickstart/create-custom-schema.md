@@ -10,7 +10,7 @@ This guide will show you how to create a custom schema.
 
 ## Document (invoice)
 
-The document below is an example in subsequent sections for creating an OA document.
+The document below is used as an example in subsequent sections for creating an OA document.
 
 ![Invoice](/docs/docs-section/roadmap/invoice-sample.png)
 

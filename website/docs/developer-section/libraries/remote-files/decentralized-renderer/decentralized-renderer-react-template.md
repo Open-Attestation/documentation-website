@@ -63,13 +63,13 @@ This template provides a simple application that is able to render documents bui
 1. Open `application/index.tsx` file and edit the `documents` property of the `App` component to suit your needs (provide any document that is available locally, whether it's a javascript, JSON or typescript document).
 1. Start your renderer: `npm run dev`
 1. Start the local application: `npm run example:application`
-1. Head to `http://localhost:3010/`. You should see the configured documents during step 1.
+1. Head to `http://localhost:3010/`, you should see the configured documents during step 1.
 
 ## Testing the templates in vanilla HTML
 
 1. Start your renderer: `npm run dev`
 1. Start the local HTML: `npm run example:html`
-1. Head to `http://localhost:8080/`. You should see a button to render document and hit it.
+1. Head to `http://localhost:8080/`, you should see a button to render document and hit it.
 
 ## End-to-end and visualisation test
 

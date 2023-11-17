@@ -176,7 +176,7 @@ contract TitleEscrowFactory is ITitleEscrowFactory {
   constructor() {
     // Step 2. Look for this line in the constructor
     implementation = address(new TitleEscrow());
-    // Step 3. Replace the line in Step 2 with the following line:
+    // Step 3. Replace the line in Step #2 with the following line:
     implementation = address(new TitleEscrowSignable());
   }
 
@@ -196,7 +196,6 @@ import { Wallet, providers, getDefaultProvider } from "ethers";
 
 // Providers
 const mainnetProvider = getDefaultProvider();
-const sepoliaProvider = getDefaultProvider("sepolia");
 const metamaskProvider = new providers.Web3Provider(web3.currentProvider); // Will change network automatically
 
 // Signer
@@ -275,7 +274,7 @@ For users who want to quickly deploy their contracts without too much hassle, yo
 npx hardhat deploy:token --network mumbai --name "The Great Shipping Co." --symbol GSC
 ```
 
-👆 This is the easiest and most cost-effective method to deploy. Currently, this is supported on Ethereum, Sepolia, Polygon and Polygon Mumbai. The deployed contract will inherit all the standard functionality from our on-chain contracts. This will help you save deployment costs and make the process more convenient for users and integrators.
+👆 This is the easiest and most cost-effective method to deploy. Currently, this is supported on Ethereum, Sepolia, Polygon and Polygon Mumbai. The deployed contract will inherit all the standard functionality from our on-chain contracts. This helps to save deployment costs and make the process more convenient for users and integrators.
 
 > 💡 Remember to supply the`--network` argument with the name of the network you wish to deploy on.
 > See [Network Configuration](#network-configuration) section for more info on the list of network names.

@@ -4,7 +4,7 @@ title: Issuing Transferable Record
 sidebar_label: Issuing Transferable Record
 ---
 
-In this final step, we will create the transferable record and initialize the first beneficiary and holder for the title escrow.
+In this final step, you will create the transferable record and initialize the first beneficiary and holder for the title escrow.
 
 ## Prerequisite
 
@@ -17,7 +17,7 @@ You will require the following:
 
 ## Issuing the transferable record
 
-In the example, we will use 0x6FFeD6E6591b808130a9b248fEA32101b5220eca as beneficiary and holder. You will need to replace this value with a wallet address you control, to be able to perform different actions on the transferable records later.
+In the example, you will use 0x6FFeD6E6591b808130a9b248fEA32101b5220eca as beneficiary and holder. You will need to replace this value with a wallet address you control, to be able to perform different actions on the transferable records later.
 
 To issue the transferable record, replace the following values:
 
@@ -31,7 +31,7 @@ Then run the command:
 open-attestation token-registry issue -a 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --tokenId 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea --beneficiary 0x6FFeD6E6591b808130a9b248fEA32101b5220eca --holder 0x6FFeD6E6591b808130a9b248fEA32101b5220eca -n sepolia -f key.txt
 ```
 
->**Note:** In this tutorial, we use the same wallet address for both the beneficiary and the holder for demonstration purposes. You can specify different wallet addresses for the beneficiary and holder if they are two different entities.
+>**Note:** This tutorial uses the same wallet address for both the beneficiary and the holder for demonstration purposes. You can specify different wallet addresses for the beneficiary and holder if they are two different entities.
 
 Once the document has been issued, you will be able to see an output similar to the following:
 

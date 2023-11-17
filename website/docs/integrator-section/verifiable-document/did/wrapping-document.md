@@ -9,7 +9,7 @@ This task is same with the one [in the Ethereum tutorial](/docs/integrator-secti
 
 >**Note:** If you are using both the Ethereum and DID methods, use different folders to contain the wrapped documents. This will prevent the files from being overwritten.
 
-## Replace folder names
+## Replacing folder names
 
 Before running the command below, replace the folder names. For example:
 

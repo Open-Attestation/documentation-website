@@ -5,7 +5,7 @@ sidebar_label: Creating Raw Document
 
 For the explanation about raw document purpose and format, see [the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/raw-document).
 
-We will create the raw document for DID.
+You will create the raw document for DID.
 
 ## Creating raw document
 
@@ -76,6 +76,6 @@ To save the raw document:
     |-- certificate-2.json
   ```
 
-  We are now ready to wrap the documents.
+  You are now ready to wrap the documents.
 
 

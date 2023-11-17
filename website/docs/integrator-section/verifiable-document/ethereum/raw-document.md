@@ -6,19 +6,19 @@ sidebar_label: Creating Raw Document
 
 Every OA document has a checksum that provides it a tamper-proof property. At the same time, because the checksum can be used to uniquely identify a document, the checksum (or its derived value) is stored onto the document store as evidence of issuance. To compute the checksum, a `raw document` goes through a process known as `wrapping` to become a `wrapped document`. Only then, the document is ready to be issued onto the blockchain.
 
-In this guide, we will learn how to create one raw document that conforms to the OpenAttestation v2 Schema.
+In this guide, you will learn how to create one raw document that conforms to the OpenAttestation v2 Schema.
 
-## Understanding the OA Document Schema
+## OA document schema
 
 The OpenAttestation v2.0 defines the shape of data for the `raw document` - the data before the wrapping process. It is defined in [JSON Schema](https://json-schema.org/) format.
 
 The official OpenAttestation v2.0 schema can be found at https://schema.openattestation.com/2.0/schema.json
 
-## Using Online Schema Validator
+## Using online schema validator
 
-For this guide, we will be using an online JSON Schema validator to help us write the raw document.
+For this guide, you will use an online JSON Schema validator to write the raw document.
 
-### Setting up the JSON Schema Validator with OA Schema
+### Setting up the JSON schema validator with OA schema
 
 Visit https://www.jsonschemavalidator.net/
 
@@ -32,7 +32,7 @@ If you start editing the JSON data on the right you should see errors if the dat
 
 ### Creating raw document
 
-We will now create the data for your document. Paste the following JSON data into the right panel of the JSON schema validator tool:
+To create data for your document, paste the following JSON data into the right panel of the JSON schema validator tool:
 
 ```json
 {
@@ -57,9 +57,9 @@ We will now create the data for your document. Paste the following JSON data int
 }
 ```
 
-To makes things simple, we will use an existing deployed renderer (at https://tutorial-renderer.openattestation.com). However you will still need to replace the following values for your own document:
+To makes things simple, you will use an existing renderer at [here](https://tutorial-renderer.openattestation.com). However you will still need to replace the following values in your own document, including the issuer's document store and the identity proof location.
 
-#### Replacing the issuers document store
+#### Replacing the issuer's document store
 
 Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b` to the smart contract address of your document store in the [previous step](/docs/integrator-section/verifiable-document/ethereum/document-store).
 
@@ -93,4 +93,4 @@ To save the raw document:
     |-- certificate-2.json
   ```
 
-  We are now ready to wrap the documents.
+  You are now ready to wrap the documents.

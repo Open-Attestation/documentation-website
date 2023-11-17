@@ -2,7 +2,7 @@
 title: Revoking Documents
 sidebar_label: Revoking Documents Using Document Store or OCSP
 ---
-Depending on whether you have deoployed the Document Store or OCSP, use one of them to revoke documents.
+Depending on whether you have deployed the Document Store or OCSP, use one of them to revoke documents.
 
 ## Revoking using Document Store
 
@@ -98,4 +98,4 @@ Replace the `revocation.type` and `revocation.location` values below.
 
 To learn about a reference implementation to revoke a document using the OCSP responder, see [this readme](https://github.com/Open-Attestation/ocsp-responder/blob/main/README.md).
 
->**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OA framework.
+>**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OpenAttestation framework.

@@ -14,15 +14,15 @@ OpenAttestation documents are cryptographically secure and hence tamper-resistan
 
 #### How are OpenAttestation documents distributed?
 
-Today, the distribution of OpenAttestation documents falls into 2 broad categories: 
+Today, the distribution of OpenAttestation documents falls into two broad categories: 
 
 1. By link 
     - Sharing a URL/scanning a QR code
 
 2. By document transmission 
     - Sending the original OpenAttestation document (OA document) 
-    - Sending a HTML page (embedded with OA document)
-    - Sending document as PDF with QR code for verification
+    - Sending an HTML page (embedded with OA document)
+    - Sending the document as a PDF with a QR code for verification
 
 Below are the pros and cons of each approach. 
 
@@ -120,9 +120,9 @@ It is `2^261` bytes. Check out this stackoverflow [post](https://ethereum.stacke
 
 Yes. You can make use of multiple TXT records to point to multiple Ethereum addresses (e.g. document stores or DIDs). Keep in mind each TXT record should only contain one Ethereum address record.
 
-#### [This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if I use DID documents, I will not need to pay for transactions. But following this procedure, why do I still have to pay for at least 1 transaction (deploying a `documentStore`)?
+#### [This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if I use DID documents, I will not need to pay for transactions. But following this procedure, why do I still have to pay for at least one transaction (deploying a `documentStore`)?
 
-Yes, that's correct. In the current version, this implementation will still need at least 1 transaction to the Ethereum blockchain.
+Yes, that's correct. In the current version, this implementation will still need at least one transaction to the Ethereum blockchain.
 
 #### Although I did not issue any documents from the deployed `documentStore`, how can I revoke this document from that `documentStore`?
 

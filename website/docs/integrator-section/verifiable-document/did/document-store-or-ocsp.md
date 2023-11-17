@@ -8,13 +8,13 @@ sidebar_label: Deploying Document Store or OCSP
 
 > **Important:** If you have run the Ethereum method and created a document store, do not use it in the DID method.
 
-The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, we will deploy a document store smart contract on the Ethereum `sepolia` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions.
+The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, you will deploy a document store smart contract on the Ethereum `sepolia` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions.
 
 <!-- <embed src="/docs/reusable_snippets/_document-store-overview-snippet.md" /> -->
 
 
 ### Running the deploy document-store command
-We will use the wallet created in the [previous step](/docs/integrator-section/verifiable-document/did/create).
+You will use the wallet created in the [previous step](/docs/integrator-section/verifiable-document/did/create).
 
 ```bash
 open-attestation deploy document-store "DID document store" --network sepolia --encrypted-wallet-path wallet.json
@@ -45,4 +45,4 @@ Please do **not** use the Transaction ID in the response.
 ## Deploying OCSP
 A reference implementation for deploying the OCSP responder is available at [this repository on GitHub](https://github.com/Open-Attestation/ocsp-responder).
 
->**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OA framework.
+>**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OpenAttestation framework.

@@ -6,12 +6,12 @@ sidebar_label: Issuing Document
 
 This guide will help you issue a hash using one of the available web applications. 
 
-Currently, there are 2 web applications:
+Currently, there are two web applications:
 
 - [OpenCerts Admin Portal](https://admin.opencerts.io/)
 - [TradeTrust Admin Portal](https://admin.tradetrust.io/)
 
-In this tutorial, we will use the first web app.
+In this tutorial, you will use the first web app.
 
 ## Prerequisites
 

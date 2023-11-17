@@ -61,7 +61,7 @@ You can read more about `ethers-cli` [here](https://docs.ethers.io/v5/cli/ethers
 
 The paymaster is ready. You have to wait for clients to deploy their gsn capable document store before proceeding further.
 
-In order to authorize your paymaster to pay for your contract we will need to configure the paymaster deployed earlier. We can use the `add-target` method to do so. You need to replace `<paymaster-address>` with your own paymaster and `<target-address>` with the address off the contract you intend to allow payment for.
+To authorize your paymaster to pay for your contract we will need to configure the paymaster deployed earlier. We can use the `add-target` method to do so. You need to replace `<paymaster-address>` with your own paymaster and `<target-address>` with the address off the contract you intend to allow payment for.
 
 ```bash
 open-attestation paymaster add-target --network ropsten --target-address 0x9Eb76E132fCA96779A5225419352Fb1B3B5Fd706 --paymaster-address 0xcB94584760bCA09e9fa7117C4eE966814f17a306 --encrypted-wallet-path wallet.json

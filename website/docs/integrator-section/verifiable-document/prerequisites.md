@@ -16,4 +16,4 @@ Follow the steps on the [installation page](/docs/developer-section/libraries/re
 open-attestation --version
 ```
 
->**Note:**If you need to change the binary name or the path to the binary, be sure to change the example above and the commands we will run throughout the guide.
+>**Note:**If you need to change the binary name or the path to the binary, be sure to change the example above and the commands that you will run throughout the guide.

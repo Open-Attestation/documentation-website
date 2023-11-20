@@ -70,13 +70,14 @@ A digital signature is generated from signing and is primarily used to verify th
 
 See [this definition](https://ethereum.org/en/developers/docs/smart-contracts/#:~:text=A%20%22smart%20contract%22%20is%20simply,address%20on%20the%20Ethereum%20blockchain.&text=Smart%20contracts%20can%20define%20rules,enforce%20them%20via%20the%20code).
 
+
 ### Transferable record
 
-A transferable record is an extended verifiable document that defines a method for identifying the owner of the record at any given time. It references properties listed in [the UNCITRAL Model Law on Electronic Transferable Records](https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_transferable_records). 
+A transferable record, also known as a "transferable document" or "token registry", is an extended verifiable document that defines a method for identifying the owner of the record at any given time. It references properties listed in [the UNCITRAL Model Law on Electronic Transferable Records](https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_transferable_records). 
 
 ### Verifiable document
 
-A verifiable document refers to an OA document. The data in the OA document is stored in a `.json` file. It is a tamper-evident document that cryptographically proves the issuer.
+A verifiable document refers to an OA document. It is also known as a "verifiable credential". The data in the OA document is stored in a `.json` file. It is a tamper-evident document that cryptographically proves the issuer.
 
 ### Wallet
 

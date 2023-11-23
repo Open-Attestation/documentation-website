@@ -60,7 +60,7 @@ Revocation is an action that makes an OA document no longer valid. There can be 
 
 ### Salt
 
-A salt is the additional random data that is added to the information before it is hashed to protect it from being exposed. In OpenAttestation, salt is used to allow tamper verification.
+A salt is additional random data that is added to information before it is hashed to protect it from being exposed. In OpenAttestation, salt is also used for tamper verification.
 
 ### Signature
 

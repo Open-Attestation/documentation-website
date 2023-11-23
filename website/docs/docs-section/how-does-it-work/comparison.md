@@ -27,7 +27,7 @@ You will need ethers to use Ethereum smart contracts. The following actions requ
 
 For more information, see the [FAQ](/docs/docs-section/faq). Other actions are free, for example, reading what is in the smart contract.
 
-With DID, you don't need to spend money with the precondition of not revoking any documents. Issuance works free of charge. If you need to revoke documents using the DID method without making any Ethereum transactions, consider deploying OCSP.
+With DID, you don't need to spend money with the precondition of not revoking any documents. Issuance works free of charge. If you need to revoke documents using the DID method without making any Ethereum transactions, consider deploying an OCSP responder.
 
 ## Privacy
 

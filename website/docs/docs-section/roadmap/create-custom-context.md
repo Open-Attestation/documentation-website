@@ -6,7 +6,7 @@ sidebar_label: Creating Custom Context
 
 For v3 documents in OpenAttestation, a major change consists of a `@context` property introduced into the document. Refer [here](/docs/docs-section/roadmap/v3/major-changes#context) for more information.
 
-In this guide, we will look at how we can create a custom context.
+This guide shows you how to create a custom context.
 
 ## Document (Invoice)
 
@@ -16,7 +16,7 @@ A document like the one shown above (an Invoice), would typically contain multip
 
 The use of `@context` would provide an additional layer of validation to ensure that the document only contains what has already been defined as required.
 
-We will use the example Invoice shown above as a reference throughout the rest of this guide.
+The rest of this guide will use the example invoice above as a reference.
 
 ## Context Object
 

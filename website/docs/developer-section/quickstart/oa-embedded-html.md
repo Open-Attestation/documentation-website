@@ -12,7 +12,7 @@ This is an optional procedure after creating an issued or a signed OA document d
 
 ## How it works
 
-In this guide, we will create an HTML file with a **Proceed** button to redirect the user to [verify.gov.sg](https://www.verify.gov.sg/). You will embed the OA document in the Verify URL for verification and rendering.
+In this guide, you will create an HTML file with a **Proceed** button to redirect the user to [verify.gov.sg](https://www.verify.gov.sg/). You will embed the OA document in the Verify URL for verification and rendering.
 
 To continue, follow the steps below:
 

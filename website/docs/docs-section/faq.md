@@ -120,9 +120,11 @@ It is `2^261` bytes. Check out [this Stack Exchange post](https://ethereum.stack
 
 Yes. You can make use of multiple TXT records to point to multiple Ethereum addresses (e.g. document stores or DIDs). Keep in mind each TXT record should only contain one Ethereum address record.
 
-#### Why do I have to pay for at least one transaction to deploy a document store?
+#### Why do I have to pay for at least one transaction while choosing the DID method?
 
-[This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if you use DID documents, you don't need to pay for transactions. However, if you use revocation for `DID` in the current version, you still need to have at least one transaction with the Ethereum blockchain to deploy a `documentStore`.
+[This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if you use DID documents, you don't need to pay for transactions. This happens when you use DID for issuance and OCSP for revocation. 
+
+However, if you use DID for issuance and a `documentStore` for revocation, you still need to have at least one transaction with the Ethereum blockchain to deploy a `documentStore`.
 
 #### Although I did not issue any documents from the deployed document store, why can I revoke this document?
 

@@ -18,7 +18,7 @@ Previously stored in the `data` key, the claims about the subject of the credent
 
 ## Metadata
 
-Previously mixed into the `data` object, additional metadata that are crucial in verifying the document integrity or provenance and displaying the document have been moved into the `openAttestationMetadata` field.
+Previously mixed into the `data` object, additional metadata that is crucial in verifying the document integrity or provenance and displaying the document has been moved into the `openAttestationMetadata` field.
 
 ## Issuer
 

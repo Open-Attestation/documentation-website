@@ -34,7 +34,7 @@ The issuance of documents can happen individually or in batch. Issuing a batch o
 
 ### Issuance process and verification
 
-To issue a document, an institution or an individual need to perform the following:
+To issue a document, an institution or individual need to perform the following:
 
 1. [Deploy a new document store](/docs/integrator-section/verifiable-document/ethereum/document-store) on Ethereum and get the address of the deployed contract. 
     

@@ -120,7 +120,7 @@ The `name` field is not available anymore in the `data` object, and the hash ass
 
 >**Note:** The document remains valid.
 
-The hash added into `privacy.obfuscatedData` is the one OpenAttestation used when computing the [`targetHash`](#targethash). To verify that a document is not tampered with, OpenAttestation computes the `targetHash` of the provided document and compare it to `signature.targetHash`. There is one subtle difference during verification. All the hashes available in `privacy.obfuscatedData` are added to the list of computed hashes. Therefore, the following shows the steps for verification:
+The hash added into `privacy.obfuscatedData` is the one used by the framework when computing the [`targetHash`](#targethash). To verify that a document is not tampered with, OpenAttestation computes the `targetHash` of the provided document and compare it to `signature.targetHash`. There is one subtle difference during verification. All the hashes available in `privacy.obfuscatedData` are added to the list of computed hashes. Therefore, the following shows the steps for verification:
 
 1. List each property's path from the `data` object and associate its value.
 1. For each property's path, compute a hash using the property's path and value.
@@ -137,7 +137,7 @@ With the help of data obfuscation, the user will have the option to share only a
 
 ### Data obfuscation limitations
 
-#### Empty object
+#### Empty objects
 
 Considering the following object in `data`:
 

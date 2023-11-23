@@ -4,7 +4,7 @@ title: Glossary
 sidebar_label: Glossary
 ---
 
-This page provides the definition of the commonly-used terms in the OpenAttestation (OA)documentation.
+This page provides the definition of the commonly-used terms in the OpenAttestation (OA) documentation.
 
 ### Decentralized application (DApp)
 
@@ -42,6 +42,10 @@ Ether is the cryptocurrency used in the Ethereum blockchain network. Ethers are 
 
 Know your customer or know your client (KYC) is a guideline in financial services, which requires that the professionals make an effort to verify the identity, suitability, and risks involved in maintaining a business relationship.
 
+### OA document
+
+An OA document means an OpenAttestation document, which is issued using the OpenAttestation framework. The data in the OA document is stored in a `.json` file. It is a tamper-evident document that cryptographically proves the issuer.
+
 ### Online Certificate Status Protocol (OCSP)
 
 Online Certificate Status Protocol (OCSP) is an Internet protocol used for obtaining the revocation status of an OA document. To learn more, see [this readme](https://github.com/Open-Attestation/ocsp-responder/blob/main/README.md).
@@ -53,6 +57,10 @@ A raw document contains the data compliant with the OA document schema before th
 ### Revocation
 
 Revocation is an action that makes an OA document no longer valid. There can be various reasons that make the issuer decide to revoke a document after issuance. To learn more, see [this article](/docs/integrator-section/verifiable-document/ethereum/revoking-document).
+
+### Salt
+
+An additional random input added into a hashing algorithm to prevent the original data from being easily reverse engineered.
 
 ### Signature
 
@@ -73,7 +81,7 @@ A verifiable credential is a tamper-evident credential that has authorship that 
 
 ### Verifiable document
 
-A verifiable document refers to an OA document. The data in the OA document is stored in a `.json` file. It is a tamper-evident document that cryptographically proves the issuer.
+A verifiable document is a file, record, or piece of information that the user can check or confirm through a reliable process. A verifiable document is genuine and tamper-proof.
 
 ### Wallet
 

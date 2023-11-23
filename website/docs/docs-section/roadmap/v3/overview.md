@@ -6,62 +6,62 @@ sidebar_label: Overview
 
 ## Goal
 
-OpenAttestation's latest version seeks to align the data model to [W3C Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/) for interoperability with other W3C VC wallets.
+The latest version of OpenAttestation aims to align with the data model to [W3C Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/) for interoperability with other W3C VC wallets.
 
-## Data Model Release Status
+## Data model release status
 
-Version 3 Data Model is currently in `Beta` release.
+The Version 3 Data Model is currently in `Beta` release.
 
-This means that the OpenAttestation data model is feature complete but is likely to contain some known or unknown bugs. Refrain from using version 3 in production environment until the the release status is marked `General Availability`.
+This means the OpenAttestation data model has implemented all primary features, but might contain certain bugs. Refrain from using version 3 in production environment until the release status becomes `General Availability`.
 
-## Beta Program
+## Beta program
 
-If you are using OpenAttestation to issue or verify VC, you are encouraged to test out Version 3 as early beta tester. Feel free to get started with the tools and help report issues to our github repository at https://github.com/Open-Attestation/open-attestation.
+If you are using OpenAttestation to issue or verify a document, it is recommended to test out Version 3 at an early stage. Feel free to get started with the tools and report any issues to [this GitHub repository](https://github.com/Open-Attestation/open-attestation).
 
-## Major Changes from V2
+## Major changes from V2
 
-Major changes from the version 2 can be found [here](/docs/docs-section/roadmap/v3/major-changes).
+See major changes from Version 2 [here](/docs/docs-section/roadmap/v3/major-changes).
 
-## Tool Compatibility
+## Tool compatibility
 
-While the base data model is feature complete, we are in the work of upgrading the tools and documentations for support of v3. Below are the progress of update for different tools:
+While the base data model has implemented all primary features, the tools and documentation are pending upgrade to support V3. The following shows the progress of update for different tools:
 
-### oa-verify
+- oa-verify
 
-https://www.npmjs.com/package/@govtechsg/oa-verify
+    - URL: https://www.npmjs.com/package/@govtechsg/oa-verify 
+    
+    - Status: Supported
 
-Status: Supported
+- oa-cli
 
-### oa-cli
+    - URL: https://www.npmjs.com/package/@govtechsg/open-attestation-cli
+    
+    - Status:
 
-https://www.npmjs.com/package/@govtechsg/open-attestation-cli
+        - `wrap`: Supported
+        - `sign`: Supported
+        - `verify`: Supported
 
-Status:
+- TradeTrust website
+    
+    - URL: https://tradetrust.io/
+    
+    - Status: Pending
 
-- `wrap`: Supported
-- `sign`: Supported
-- `verify`: Supported
+- TradeTrust creator
+  
+  - URL: https://creator.tradetrust.io/
 
-### TradeTrust Website
+  - Status: Pending
 
-https://tradetrust.io/
+- OpenCerts website
 
-Status: Pending
+  - URL: https://opencerts.io
 
-### TradeTrust Creator
+  - Status: Supported
 
-https://creator.tradetrust.io/
+- Verify website
 
-Status: Pending
+  - URL: https://verify.gov.sg
 
-### OpenCerts Website
-
-https://opencerts.io
-
-Status: Supported
-
-### Verify Website
-
-https://verify.gov.sg
-
-Status: Pending
+  - Status: Pending

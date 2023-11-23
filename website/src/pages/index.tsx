@@ -43,7 +43,7 @@ const features = [
   {
     imageUrl: `img/undraw_experience_design.svg`,
     description: "Render your document with custom templates",
-    title: "Decentralised Rendering",
+    title: "Decentralized Rendering",
   },
   {
     title: "Verified Issuer's Identity",

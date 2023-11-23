@@ -4,7 +4,7 @@ title: Different Types of Document
 sidebar_label: Different Types of Document
 ---
 
-OpenAttestation V3 is available for different types of document (including transferable record & verifiable document) and different type of identity methods (including `DNS-TXT`, `DNS-DID` & `DID`).
+OpenAttestation V3 is available for different types of document (transferable record & verifiable document) and different type of identity methods (`DNS-TXT`, `DNS-DID` & `DID`).
 
 For a range of the different types of supported documents that have gone through testing:
 

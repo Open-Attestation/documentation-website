@@ -6,11 +6,11 @@ sidebar_label: FAQ
 
 #### What are OpenAttestation documents?
 
-OpenAttestation documents (OA documents) are also known as verifiable documents or verifiable credentials, as the technical community commonly refers it to. 
+OpenAttestation documents (OA documents) are also known as verifiable documents, as the technical community commonly refers it to. 
 
-As our transactions become increasingly digital, there is a need to ensure that the legitimacy  is verifiable for the credentials such as certificates, licenses or permits. 
+As our transactions become increasingly digital, there is a need to ensure that the legitimacy is verifiable for the credentials such as certificates, licenses or permits. 
 
-OpenAttestation documents are cryptographically secure and hence tamper-resistant. OpenAttestation also helps any user check who issued the document, or whether the document has been revoked so that it is no longer valid. These verifications are always performed at the point of viewing (or before the document displays).
+OpenAttestation documents are cryptographically secure and hence tamper-resistant. OpenAttestation also helps any user check who issued the document, and whether the document has been revoked so that it is no longer valid. These verifications are always performed at the point of viewing (before the document displays).
 
 #### How are OpenAttestation documents distributed?
 
@@ -62,7 +62,7 @@ Below are the pros and cons of each approach.
             </td>
             <td>
                 <ul>
-                    <li>The user can’t open OA documents if they don't install the compatible application.</li>
+                    <li>The user can’t open OA documents directly.</li>
                     <li>It requires the user to upload the OA document to a verifier for viewing.</li>
                     <li>The user needs instructions on what to do with an OA document, which makes it difficult for adoption.</li>
                 </ul>
@@ -114,7 +114,7 @@ For more information on gas and gas prices, check out [this article](https://eth
 
 #### What is the theoretical storage limit of a smart contract?
 
-It is `2^261` bytes. Check out [this Stack Overflow post](https://ethereum.stackexchange.com/questions/1038/is-there-a-theoretical-limit-for-amount-of-data-that-a-contract-can-store/1040#1040) for more information.
+It is `2^261` bytes. Check out [this Stack Exchange post](https://ethereum.stackexchange.com/questions/1038/is-there-a-theoretical-limit-for-amount-of-data-that-a-contract-can-store/1040#1040) for more information.
 
 #### Can I create multiple TXT records under the same domain/subdomain?
 
@@ -122,7 +122,7 @@ Yes. You can make use of multiple TXT records to point to multiple Ethereum addr
 
 #### Why do I have to pay for at least one transaction to deploy a document store?
 
-[This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if you use DID documents, you don't need to pay for transactions. However, in the current version, the implementation will still need at least one transaction to the Ethereum blockchain.
+[This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if you use DID documents, you don't need to pay for transactions. However, if you use revocation for `DID` in the current version, you still need to have at least one transaction with the Ethereum blockchain to deploy a `documentStore`.
 
 #### Although I did not issue any documents from the deployed document store, why can I revoke this document?
 

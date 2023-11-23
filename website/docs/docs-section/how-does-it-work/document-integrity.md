@@ -81,7 +81,7 @@ In a later procedure of verifying the document, you will perform exactly the sam
 
 #### Data obfuscation
 
-Due to the way you compute `targetHash`, OpenAttestation lets you obfuscate data not intended for public use. To achieve this, compute the hash of a specific field and add it into the documents. You can try it with the [CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) and the document above:
+Due to the way you compute `targetHash`, OpenAttestation lets you obfuscate data not intended for public access. To achieve this, the hash of a specific field is computed and added into the document. You can try it with the [CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) and the document above:
 
 ```bash
 open-attestation filter ./path/to/file.json ./output.json name
@@ -120,7 +120,7 @@ The `name` field is not available anymore in the `data` object, and the hash ass
 
 >**Note:** The document remains valid.
 
-The hash added into `privacy.obfuscatedData` is the one you use when computing the [`targetHash`](#targethash). To verify that a document is not tampered with, OpenAttestation computes the `targetHash` of the provided document and compare it to `signature.targetHash`. There is one subtle difference during verification. All the hashes available in `privacy.obfuscatedData` are added to the list of computed hashes. Therefore, the following shows the steps for verification:
+The hash added into `privacy.obfuscatedData` is the one OpenAttestation used when computing the [`targetHash`](#targethash). To verify that a document is not tampered with, OpenAttestation computes the `targetHash` of the provided document and compare it to `signature.targetHash`. There is one subtle difference during verification. All the hashes available in `privacy.obfuscatedData` are added to the list of computed hashes. Therefore, the following shows the steps for verification:
 
 1. List each property's path from the `data` object and associate its value.
 1. For each property's path, compute a hash using the property's path and value.
@@ -137,9 +137,9 @@ With the help of data obfuscation, the user will have the option to share only a
 
 ### Data obfuscation limitations
 
-#### Empty objects
+#### Empty object
 
-Considering the following objects in `data`:
+Considering the following object in `data`:
 
 ```json
 {

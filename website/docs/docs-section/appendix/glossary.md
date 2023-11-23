@@ -18,13 +18,9 @@ A decentralized renderer is essentially a website that takes the OA document dat
 
 See [this definition](https://www.w3.org/TR/did-core/).
 
-### DNS
-
-Domain name system. 
-
 ### DNS record
 
-A DNS record is a piece of information on a DNS server, which includes the type of this record (e.g. `TXT`), the domain name, and the value of this record, etc.
+DNS stands for domain name system. A DNS record is a piece of information on a DNS server, which includes the type of this record (e.g. `TXT`), the domain name, and the value of this record, etc.
 
 ### Document store
 
@@ -58,13 +54,9 @@ A raw document contains the data compliant with the OA document schema before th
 
 Revocation is an action that makes an OA document no longer valid. There can be various reasons that make the issuer decide to revoke a document after issuance. To learn more, see [this article](/docs/integrator-section/verifiable-document/ethereum/revoking-document).
 
-### Sign
-
-The process of generating a digital signature with the use of various signing algorithms.
-
 ### Signature
 
-A digital signature is generated from signing and is primarily used to verify the authenticity of transactions or documents issued to the blockchain.
+When you sign a document with the use of various signing algorithms, a digital signature is generated and is primarily used to verify the authenticity of transactions or documents issued to the blockchain.
 
 ### Smart contract
 
@@ -75,9 +67,13 @@ See [this definition](https://ethereum.org/en/developers/docs/smart-contracts/#:
 
 A transferable record, also known as a "transferable document" or "token registry", is an extended verifiable document that defines a method for identifying the owner of the record at any given time. It references properties listed in [the UNCITRAL Model Law on Electronic Transferable Records](https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_transferable_records). 
 
+### Verifiable credential
+
+A verifiable credential is a tamper-evident credential that has authorship that can be cryptographically verified. See [here](https://www.w3.org/TR/vc-data-model/) to learn more.
+
 ### Verifiable document
 
-A verifiable document refers to an OA document. It is also known as a "verifiable credential". The data in the OA document is stored in a `.json` file. It is a tamper-evident document that cryptographically proves the issuer.
+A verifiable document refers to an OA document. The data in the OA document is stored in a `.json` file. It is a tamper-evident document that cryptographically proves the issuer.
 
 ### Wallet
 

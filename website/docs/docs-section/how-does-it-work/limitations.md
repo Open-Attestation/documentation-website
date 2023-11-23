@@ -9,7 +9,7 @@ This article talks about the limitations of OpenAttestation credentials.
 
 In some cases, it will be beneficial to add the data of credentials into machine-readable content, such as QR Code.
 
-OpenAttestation credentials are naturally verbose. During wrapping, OpenAttestation adds some information in front of each value. Therefore, the number of data that an OpenAttestation credential can hold to fit inside a QR Code is limited.
+OpenAttestation credentials are naturally verbose. During wrapping, OpenAttestation adds a salt in front of each value. Therefore, the number of data fields that an OpenAttestation credential can hold to fit inside a QR Code is limited.
 
 See [the benchmark](https://github.com/Open-Attestation/open-attestation/tree/master/benchmarks/qr-code) to learn about some indications of the maximum data you can add to your credentials before it exceeds a QR Code capacity limit.
 

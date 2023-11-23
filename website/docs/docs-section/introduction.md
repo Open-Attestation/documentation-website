@@ -25,12 +25,12 @@ There are three types of roles who build documents, solutions, or services with 
 
 ### Integrator
 
-The integrator creates OpenAttestation documents or transferable records.
+An integrator intends to issue/verify OpenAttestation documents or transferable records.
 
 ### Developer
 
-The developer builds their platform or services on top of OpenAttestation.
+A developer intends to build their platform or services on top of OpenAttestation.
 
 ### Contributor
 
-The contributor makes contribution to OpenAttestation.
+A contributor intends to make contribution to OpenAttestation.

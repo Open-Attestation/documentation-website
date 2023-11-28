@@ -4,12 +4,32 @@ title: Revoking Documents
 sidebar_label: Revoking Documents
 ---
 
-After issuing a document, you might want to revoke it for any reason:
+Licenses, certifications, and permits are some examples of documents that can be issued as verifiable documents.
 
-- the information provided by the recipient was wrong.
-- the information in the document are outdated.
-- there is a problem in the document.
-- etc.
+When issuing verifiable documents, keep in mind that they will remain verifiable indefinitely.
+
+However, there may be times when the issued document needs to be revoked because: 
+
+* It contains errors.
+* It was issued wrongly.
+* After issuance, an incident occurs and requires the document to become ineffective and unverifiable.
+
+Revocation serves as a strict, proactive approach to prevent security breach or any change that may compromise the document integrity. 
+
+Document revocation is not intended to work as expiration, since documents with an expiry date already have a limited validity duration that the issuer determines at the time of file creation. 
+
+For documents with limited validity, consider including expiry dates within the document content for external verification.
+
+The following screenshot shows a certificate example: 
+
+![Certificate Example](/docs/integrator-section/verifiable-document/ethereum/revoking-document/sample-cert-expiry.png)
+
+It includes: 
+
+* The issue date “31 December 2022” in both the document content and the `courseEndDate` field
+* The expiry date “30 December 2025” in the document content
+
+However, similar to a physical certificate, it should still be viewable after expiration and instead rely on the external verifying authority to accept or reject it.
 
 ## Revoking a document
 

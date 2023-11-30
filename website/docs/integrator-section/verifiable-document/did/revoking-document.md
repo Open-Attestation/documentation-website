@@ -2,7 +2,9 @@
 title: Revoking Documents
 sidebar_label: Revoking Documents Using Document Store or OCSP
 ---
-Depending on whether you have deployed the Document Store or OCSP, use one of them to revoke documents.
+Depending on whether you have deployed the Document Store or OCSP, use one of them to revoke documents. 
+
+To get a better understanding of revocation, see [this article](/docs/integrator-section/verifiable-document/ethereum/revoking-document).
 
 ## Revoking using Document Store
 

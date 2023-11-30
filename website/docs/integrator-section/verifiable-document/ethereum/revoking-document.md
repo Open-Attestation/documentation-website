@@ -20,7 +20,7 @@ Document revocation is not intended to work as expiration, since documents with 
 
 For documents with limited validity, consider including expiry dates within the document content for external verification.
 
-The following screenshot shows a certificate example: 
+The following screenshot shows [a certificate example](https://dev.verify.gov.sg/verify?q=%7B%22type%22%3A%22DOCUMENT%22%2C%22payload%22%3A%7B%22uri%22%3A%22https%3A%2F%2Fdocument-storage.oa.gov.sg%2Fnational-youth-council_cci-level-1-trainer.oa%22%2C%22permittedActions%22%3A%5B%22VIEW%22%2C%22STORE%22%5D%2C%22redirect%22%3A%22https%3A%2F%2Fdev.opencerts.io%22%7D%7D): 
 
 ![Certificate Example](/docs/integrator-section/verifiable-document/ethereum/revoking-document/sample-cert-expiry.png)
 

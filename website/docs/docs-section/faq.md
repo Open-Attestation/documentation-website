@@ -12,6 +12,56 @@ As our transactions become increasingly digital, there is a need to ensure that 
 
 OpenAttestation documents are cryptographically secure and hence tamper-resistant. OpenAttestation also helps any user check who issued the document, and whether the document has been revoked so that it is no longer valid. These verifications are always performed at the point of viewing (before the document displays).
 
+#### What can I do using the OpenAttestation framework?
+
+You can perform the following actions using the OA framework:
+
+>**Note:** In the diagrams below, "source" means the user's local machine where the request comes from.
+
+* Create a wallet or DID
+
+![Create a wallet](/docs/docs-section/faq/create-wallet.png)
+
+* Deploy document store
+
+![Deploy document store](/docs/docs-section/faq/deploy-document-store.png)
+
+* Configure DNS
+
+![Configure DNS](/docs/docs-section/faq/config-dns.png)
+
+* Create raw documents
+
+![Create raw documents](/docs/docs-section/faq/create-raw-or-wrap.png)
+
+* Wrap documents (see the diagram above)
+
+* Issue documents using Ethereum or sign documents using DID
+
+![Issue or revoke documents](/docs/docs-section/faq/issue-or-revoke.png)
+
+* Revoke documents (see the diagram above)
+
+* Verify the OA documents with a compatible verifier
+
+![Verify documents](/docs/docs-section/faq/verify.png)
+
+* Distribute the OA documents using any of the [Universal Actions](https://github.com/Open-Attestation/adr/blob/master/universal_actions.md#universal-actions-for-open-attestation-documents)
+
+* Developers can use the libraries and code samples to develop software applications.
+
+
+#### Can I use a Graphical User Interface (GUI) for OpenAttestation documents?
+
+You can use the [Toolkit](https://toolkit.openattestation.com/) to perform the following tasks with ease:
+
+* Wrap or unwrap an OA document
+* Verify documents
+* Get OpenAttestation DNS TXT records
+* Diagnose an OA document
+* Encrypt or decrypt an OA document
+* Create a [Universal Action](https://github.com/Open-Attestation/adr/blob/master/universal_actions.md#universal-actions-for-open-attestation-documents) to share an OA document
+
 #### How are OpenAttestation documents distributed?
 
 The distribution of OpenAttestation documents falls into two broad categories: 
@@ -108,7 +158,7 @@ Below are the pros and cons of each approach.
 
 See the page [Contract Costs](/docs/docs-section/appendix/contract-costs) for a breakdown of the cost estimation.
 
-#### What is gas ?
+#### What is gas?
 
 For more information on gas and gas prices, check out [this article](https://ethereum.stackexchange.com/questions/3/what-is-meant-by-the-term-gas).
 

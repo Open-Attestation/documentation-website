@@ -4,7 +4,7 @@ title: FAQ
 sidebar_label: FAQ
 ---
 
-#### What are OpenAttestation documents?
+### What are OpenAttestation documents?
 
 OpenAttestation documents (OA documents) are a type of verifiable documents or verifiable credentials.
 
@@ -12,7 +12,7 @@ As our transactions become increasingly digital, there is a need to ensure that 
 
 OpenAttestation documents are cryptographically secure and hence tamper-resistant. OpenAttestation also helps any user check who issued the document, and whether the document has been revoked so that it is no longer valid. These verifications are always performed at the point of viewing (before the document displays).
 
-#### What can I do using the OpenAttestation framework?
+### What can I do using the OpenAttestation framework?
 
 You can perform the following actions using the OA framework:
 
@@ -51,7 +51,7 @@ You can perform the following actions using the OA framework:
 * Developers can use the libraries and code samples to develop software applications.
 
 
-#### Can I use a Graphical User Interface (GUI) for OpenAttestation documents?
+### Can I use a Graphical User Interface (GUI) for OpenAttestation documents?
 
 You can use the [Toolkit](https://toolkit.openattestation.com/) to perform the following tasks with ease:
 
@@ -62,7 +62,7 @@ You can use the [Toolkit](https://toolkit.openattestation.com/) to perform the f
 * Encrypt or decrypt an OA document
 * Create a [Universal Action](https://github.com/Open-Attestation/adr/blob/master/universal_actions.md#universal-actions-for-open-attestation-documents) to share an OA document
 
-#### How are OpenAttestation documents distributed?
+### How are OpenAttestation documents distributed?
 
 The distribution of OpenAttestation documents falls into two broad categories: 
 
@@ -154,28 +154,28 @@ Below are the pros and cons of each approach.
     </tbody>
 </table>
 
-#### How can I have an estimation of the costs involved in using the smart contracts?
+### How can I have an estimation of the costs involved in using the smart contracts?
 
 See the page [Contract Costs](/docs/docs-section/appendix/contract-costs) for a breakdown of the cost estimation.
 
-#### What is gas?
+### What is gas?
 
 For more information on gas and gas prices, check out [this article](https://ethereum.stackexchange.com/questions/3/what-is-meant-by-the-term-gas).
 
-#### What is the theoretical storage limit of a smart contract?
+### What is the theoretical storage limit of a smart contract?
 
 It is `2^261` bytes. Check out [this Stack Exchange post](https://ethereum.stackexchange.com/questions/1038/is-there-a-theoretical-limit-for-amount-of-data-that-a-contract-can-store/1040#1040) for more information.
 
-#### Can I create multiple TXT records under the same domain/subdomain?
+### Can I create multiple TXT records under the same domain/subdomain?
 
 Yes. You can make use of multiple TXT records to point to multiple Ethereum addresses (e.g. document stores or DIDs). Keep in mind each TXT record should only contain one Ethereum address record.
 
-#### Why do I have to pay for at least one transaction while choosing the DID method?
+### Why do I have to pay for at least one transaction while choosing the DID method?
 
 [This article](/docs/docs-section/how-does-it-work/comparison#price) mentioned that if you use DID documents, you don't need to pay for transactions. This happens when you use DID for issuance and OCSP for revocation. 
 
 However, if you use DID for issuance and a `documentStore` for revocation, you still need to have at least one transaction with the Ethereum blockchain to deploy a `documentStore`.
 
-#### Although I did not issue any documents from the deployed document store, why can I revoke this document?
+### Although I did not issue any documents from the deployed document store, why can I revoke this document?
 
 That's because the revocation mapping in the `documentStore` is separate from the issued mapping.

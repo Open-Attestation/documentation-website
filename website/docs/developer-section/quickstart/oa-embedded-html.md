@@ -1,7 +1,7 @@
 ---
 id: oa-embedded-html
-title: Embedding Verifiable Document into an HTML file
-sidebar_label: Embedding Verifiable Document into an HTML file
+title: Embedding a Verifiable Document into an HTML file
+sidebar_label: Embedding a Verifiable Document into an HTML file
 ---
 
 > **Note**: This guide is currently for OA documents that are verifiable on [verify.gov.sg](https://www.verify.gov.sg). Before continuing with this guide, be sure to verify your OA document on [verify.gov.sg](https://www.verify.gov.sg)

@@ -28,4 +28,4 @@ Make sure ethers have been added into your wallet. You will need some for the ne
 
 You can use any of these ether faucet for sepolia network to fund your wallet. For instance :
 
-- <https://sepoliafaucet.com/>
+- [https://sepoliafaucet.com/](https://sepoliafaucet.com/)

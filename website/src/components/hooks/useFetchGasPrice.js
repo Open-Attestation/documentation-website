@@ -56,7 +56,9 @@ export const useFetchGasPrice = (chain, interval = 0) => {
 
   useEffect(() => {
     fetchData();
-    return () => (isMounted = false);
+    return () => {
+      isMounted = false
+    };
   }, [tick]);
 
   return { price, gwei };

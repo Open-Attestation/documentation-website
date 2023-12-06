@@ -41,15 +41,75 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 
 ## Supported networks
 
-| Network | Chain ID | Type       |
-| ------- | -------- | ---------- |
-| mainnet | 1        | Production |
-| polygon | 137      | Production |
-| mumbai  | 80001    | Test       |
+| Network            | Chain ID | Type       |
+| ------------------ | -------- | ---------- |
+| mainnet            | 1        | Production |
+| sepolia            | 11155111 | Test       |
+| polygon            | 137      | Production |
+| mumbai             | 80001    | Test       |
+| xdc                | 50       | Production |
+| xdcapothem         | 51       | Test       |
 
 ---
 
 ## Usage
+
+### Network Fees
+
+For information on how network fees work, please refer to the ethereum documentation: [https://ethereum.org/en/developers/docs/gas/](https://ethereum.org/en/developers/docs/gas/)
+
+#### Adjusting preset gas price
+
+To adjust transaction gas price, use the variable of `priority` to scale against the market price.
+
+Calculation:
+priority \* previous block priority fee
+
+Example:
+
+| Priority | Previous block priority fee | Priority Fee to use |
+| -------- | --------------------------- | ------------------- |
+| 1        | 1                           | 1 \* 1 = 1          |
+| 1.2      | 1                           | 1.2 \* 1 = 1.2      |
+| 2        | 1                           | 2 \* 1 = 2          |
+| 1        | 10                          | 1 \* 10 = 10        |
+| 1.2      | 10                          | 1.2 \* 10 = 12      |
+| 2        | 10                          | 2 \* 10 = 20        |
+
+#### Fee Information
+
+To display an estimated price of a transaction use the option of `dry-run` on your command.
+
+Example:
+
+```bash
+open-attestation deploy document-store "My Name" --network sepolia --dry-run
+
+/!\ Welcome to the fee table. Please read the information below to understand the transaction fee
+
+The table below display information about the cost of the transaction on the mainnet network, depending on the gas price selected. Multiple modes are displayed to help you better help you to choose a gas price depending on your needs:
+
+Information about the network:
+Costs based on block number: 4275264
+┌─────────┬──────────────┬──────────────────┬─────────────────────────────────┬────────────────────────┐
+│ (index) │ block number │ gas price (gwei) │ max priority fee per gas (gwei) │ max fee per gas (gwei) │
+├─────────┼──────────────┼──────────────────┼─────────────────────────────────┼────────────────────────┤
+│ current │   4275264    │  '0.629067134'   │              '2.5'              │     '3.758131382'      │
+└─────────┴──────────────┴──────────────────┴─────────────────────────────────┴────────────────────────┘
+Information about the transaction:
+Estimated gas required: 869810 gas, which will cost approximately US$0.86837 based on prevailing gas price.
+┌──────────┬───────────────────────┬────────────────────┬───────────────────────┐
+│ (index)  │       gas cost        │ priority fee price │     max fee price     │
+├──────────┼───────────────────────┼────────────────────┼───────────────────────┤
+│   GWEI   │   '547168.88382454'   │    '2174525.0'     │  '3268860.25737742'   │
+│   ETH    │ '0.00054716888382454' │   '0.002174525'    │ '0.00326886025737742' │
+│  ETHUSD  │        0.86837        │      3.45105       │        5.18781        │
+│  ETHSGD  │        1.18247        │      4.69931       │        7.06426        │
+│ MATICUSD │        0.00027        │      0.00109       │        0.00165        │
+│ MATICSGD │        0.00037        │      0.00149       │        0.00225        │
+└──────────┴───────────────────────┴────────────────────┴───────────────────────┘
+Please read the information above to understand the table
+```
 
 #### List of features with the required options
 
@@ -62,6 +122,8 @@ npx -p @govtechsg/open-attestation-cli open-attestation <arguments>
 | [Dns txt get](#dns-txt-record)                                             | ❎          | ❎     | ❎      |
 | [Document store issue](#issue-document-to-document-store)                  | ✔           | ✔      | ✔       |
 | [Document store revoke](#revoke-document-in-document-store)                | ✔           | ✔      | ✔       |
+| [Document store grant ownership](#grant-role-on-document-store)            | ✔           | ✔      | ✔       |
+| [Document store revoke ownership](#revoke-role-on-document-store)          | ✔           | ✔      | ✔       |
 | [Document store transfer ownership](#transfer-ownership-of-document-store) | ✔           | ✔      | ✔       |
 | [Token registry issue](#issue-document-to-token-registry)                  | ✔           | ✔      | ✔       |
 | [Token registry mint](#issue-document-to-token-registry)                   | ✔           | ✔      | ✔       |
@@ -291,7 +353,6 @@ open-attestation token-registry mint --network sepolia --address 0x6133f580aE903
 
 Interfaces for the Assignment and Revocation of roles are available on the Token Registry repository.
 
-
 ### Document Store
 
 #### Deploy new document store
@@ -346,6 +407,42 @@ Example - with private key set in `OA_PRIVATE_KEY` environment variable (recomme
 open-attestation document-store revoke --network sepolia --address 0x19f89607b52268D0A19543e48F790c65750869c6 --hash 0x43033b53a462036304f526aeaf3aaeea8d905997d6fde3bb1a02188eadbaaec1
 
 ✔  success   Document/Document Batch with hash 0x0c1a666aa55d17d26412bb57fbed96f40ec5a08e2f995a108faf45429ae3511f has been revoked on 0x19f89607b52268D0A19543e48F790c65750869c6
+```
+
+#### Grant role on document store
+
+Grant role on document store deployed on the blockchain to a wallet
+
+```bash
+open-attestation document-store grant-role --address <DOCUMENT_STORE_ADDRESS> --account <ACCOUNT_ADDRESS> --role <ROLE> [options]
+```
+
+Roles options: "admin", "issuer", "revoker"
+
+Example - with private key set in `OA_PRIVATE_KEY` environment variable (recommended). [More options](#providing-the-wallet).
+
+```bash
+open-attestation document-store grant-role --address 0x80732bF5CA47A85e599f3ac9572F602c249C8A28 --new-owner 0xf81ea9d2c0133de728d28b8d7f186bed61079997 --role admin --network sepolia
+
+✔  success   Document store 0x80732bF5CA47A85e599f3ac9572F602c249C8A28's role of: admin has been granted to wallet 0xf81ea9d2c0133de728d28b8d7f186bed61079997
+```
+
+#### Revoke role on document store
+
+Revoke role on document store deployed on the blockchain to a wallet
+
+Roles options: "admin", "issuer", "revoker"
+
+```bash
+open-attestation document-store revoke-role --address <DOCUMENT_STORE_ADDRESS> --account <ACCOUNT_ADDRESS> --role <ROLE> [options]
+```
+
+Example - with private key set in `OA_PRIVATE_KEY` environment variable (recommended). [More options](#providing-the-wallet).
+
+```bash
+open-attestation document-store revoke-role --address 0x80732bF5CA47A85e599f3ac9572F602c249C8A28 --new-owner 0xf81ea9d2c0133de728d28b8d7f186bed61079997 --role admin --network sepolia
+
+✔  success   Document store 0x80732bF5CA47A85e599f3ac9572F602c249C8A28's role of: admin has been revoked from wallet 0xf81ea9d2c0133de728d28b8d7f186bed61079997
 ```
 
 #### Transfer ownership of document store
@@ -533,7 +630,7 @@ open-attestation config create --output-dir ./example-configs --encrypted-wallet
 ℹ  info      Creating a new config file
 ? Wallet password [hidden]
 ? Using a config template URL? Yes
-? Please enter the config template URL https://raw.githubusercontent.com/TradeTrust/tradetrust-config/master/build/config-reference-v3.json
+? Please enter the config template URL https://raw.githubusercontent.com/TradeTrust/tradetrust-config/master/build/reference/config-v2.json
 ? Select Network sepolia
 ```
 
@@ -698,6 +795,7 @@ Example - with private key set in `OA_PRIVATE_KEY` environment variable (recomme
 open-attestation title-escrow accept-surrendered --token-registry 0x4933e30eF8A083f49d14759b2eafC94E56F0b3A7 --tokenId 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990 --network sepolia
 
 ✔  success   Surrendered transferable record with hash 0x951b39bcaddc0e8882883db48ca258ca35ccb01fee328355f0dfda1ff9be9990 has been accepted.
+
 ```
 
 ## Help

@@ -31,7 +31,7 @@ It includes:
 * The document expiry date (e.g. “30 December 2025”) can be stored in another field defined by the issuing party and also in the content visually shown in the document renderer.
 
 
-However, similar to a physical certificate, whether or not the document remains viewable after expiration may be up to the issuing party’s decision based on the use case. The document renderer should handle any logic specific to expiration.
+However, whether or not the document remains viewable after expiration may be up to the issuing party’s decision based on the use case. The document renderer should handle any logic specific to expiration.
 
 
 ## Revoking a document

@@ -14,7 +14,7 @@ sidebar_label: Token Registry
     <a href="https://tradetrust.io">TradeTrust</a> Electronic Bill of Lading (eBL)
 </p>
 
-<p align="center">
+<p align="center"> 
   <a href="https://circleci.com/gh/Open-Attestation/token-registry/tree/master" alt="Circle CI"><img src="https://img.shields.io/circleci/build/github/Open-Attestation/token-registry/master" /></a>
   <a href="https://codecov.io/gh/Open-Attestation/token-registry" alt="Code Coverage"><img src="https://codecov.io/gh/Open-Attestation/token-registry/branch/master/graph/badge.svg?token=Y4R9SWXATG" /></a>
   <a href="https://www.npmjs.com/package/@govtechsg/token-registry" alt="NPM"><img src="https://img.shields.io/npm/dw/@govtechsg/token-registry" /></a>
@@ -196,7 +196,6 @@ import { Wallet, providers, getDefaultProvider } from "ethers";
 
 // Providers
 const mainnetProvider = getDefaultProvider();
-const sepoliaProvider = getDefaultProvider("sepolia");
 const metamaskProvider = new providers.Web3Provider(web3.currentProvider); // Will change network automatically
 
 // Signer
@@ -275,7 +274,7 @@ For users who want to quickly deploy their contracts without too much hassle, yo
 npx hardhat deploy:token --network mumbai --name "The Great Shipping Co." --symbol GSC
 ```
 
-👆 This is the easiest and most cost-effective method to deploy. Currently, this is supported on Ethereum, Sepolia, Sepolia, Polygon and Polygon Mumbai. The deployed contract will inherit all the standard functionality from our on-chain contracts. This helps to save deployment costs and make the process more convenient for users and integrators.
+👆 This is the easiest and most cost-effective method to deploy. Currently, this is supported on Ethereum, Sepolia, Polygon and Polygon Mumbai. The deployed contract will inherit all the standard functionality from our on-chain contracts. This helps to save deployment costs and make the process more convenient for users and integrators.
 
 > 💡 Remember to supply the`--network` argument with the name of the network you wish to deploy on.
 > See [Network Configuration](#network-configuration) section for more info on the list of network names.
@@ -370,6 +369,8 @@ Here's a list of network names currently pre-configured:
 - `sepolia`
 - `polygon` (Polygon Mainnet)
 - `mumbai` (Polygon Mumbai)
+- `xdc` (XDC Network Mainnet)
+- `xdcapothem` (XDC Apothem TestNet)
 
 > 💡 You can configure existing and add other networks you wish to deploy to in the `hardhat.config.ts` file.
 

@@ -26,10 +26,13 @@ The following screenshot shows [a certificate example](https://dev.verify.gov.sg
 
 It includes: 
 
-* The issue date “31 December 2022” in both the document content and the `courseEndDate` field
-* The expiry date “30 December 2025” in the document content
+* The document issue date (e.g.“31 December 2022”) can be stored in a field defined by the issuing party and also in the content visually shown in the document renderer.
 
-However, similar to a physical certificate, it should still be viewable after expiration and instead rely on the external verifying authority to accept or reject it.
+* The document expiry date (e.g. “30 December 2025”) can be stored in another field defined by the issuing party and also in the content visually shown in the document renderer.
+
+
+However, similar to a physical certificate, whether or not the document remains viewable after expiration may be up to the issuing party’s decision based on the use case. The document renderer should handle any logic specific to expiration.
+
 
 ## Revoking a document
 

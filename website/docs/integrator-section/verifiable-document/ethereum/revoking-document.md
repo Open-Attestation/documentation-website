@@ -26,7 +26,7 @@ The following screenshot shows [a certificate example](https://dev.verify.gov.sg
 
 It includes: 
 
-* The document issue date (e.g.“31 December 2022”) can be stored in a field defined by the issuing party and also in the content visually shown in the document renderer.
+* The document issue date (e.g. “31 December 2022”) can be stored in a field defined by the issuing party and also in the content visually shown in the document renderer.
 
 * The document expiry date (e.g. “30 December 2025”) can be stored in another field defined by the issuing party and also in the content visually shown in the document renderer.
 

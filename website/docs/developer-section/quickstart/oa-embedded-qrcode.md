@@ -126,37 +126,6 @@ The table below describes the JSON key/value pairs for the query parameter `q` f
 <p>Example: S3 Bucket</p>
    </td>
   </tr>
-  <tr>
-   <td><code>payload.permittedActions</code>
-   </td>
-   <td>Optional
-   </td>
-   <td>The actions that the user will be able to perform on the document.
-   </td>
-   <td>Enum
-   </td>
-   <td>The following value options are accepted:
-<ul>
-
-<li><code>VIEW</code></li>
-
-<li><code>STORE</code></li>
-
-</ul>
-   </td>
-  </tr>
-  <tr>
-   <td><code>payload.redirect</code>
-   </td>
-   <td>Optional
-   </td>
-   <td>A URI where the OA-compliant verifier resides.
-   </td>
-   <td>URI
-   </td>
-   <td>A valid URI pointing to any compatible verifier is accepted.
-   </td>
-  </tr>
 </table>
 
 
@@ -197,6 +166,40 @@ The table below describes the JSON key/value pairs for the optional URI fragment
    <td>Any key compliant with <a href="https://github.com/Open-Attestation/oa-encryption">OpenAttestation encryption</a> is accepted. 
    </td>
   </tr>
+
+  <tr>
+    <td><code>payload.permittedActions</code>
+    </td>
+    <td>Optional
+    </td>
+    <td>The actions that the user will be able to perform on the document.
+    </td>
+    <td>Enum
+    </td>
+    <td>The following value options are accepted:
+  <ul>
+
+  <li><code>VIEW</code></li>
+
+  <li><code>STORE</code></li>
+
+  </ul>
+    </td>
+    </tr>
+    
+    <tr>
+    <td><code>payload.redirect</code>
+    </td>
+    <td>Optional
+    </td>
+    <td>A URI where the OA-compliant verifier resides.
+    </td>
+    <td>URI
+    </td>
+    <td>A valid URI pointing to any compatible verifier is accepted.
+    </td>
+    </tr>
+
 </table>
 
 

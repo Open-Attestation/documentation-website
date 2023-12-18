@@ -4,9 +4,9 @@ title: Embedding a Verifiable Document into a QR Code (URL)
 sidebar_label: Embedding a Verifiable Document into a QR Code (URL)
 ---
 
-Using a QR code is one of the recommended [Universal Actions](https://github.com/Open-Attestation/adr/blob/master/universal_actions.md#universal-actions-for-open-attestation-documents) that OpenAttestation documents can be distributed or communicated. The purpose of Universal Actions is to implement a standard for all parties to share OpenAttestation documents.
+Using a QR code is one of the recommended [Universal Actions](https://github.com/Open-Attestation/adr/blob/master/universal_actions.md#universal-actions-for-open-attestation-documents) through which OpenAttestation documents can be distributed or communicated. The purpose of Universal Actions is to implement a standard for all parties to share OpenAttestation documents.
 
-The QR code used in the OpenAttestation framework is essentially a URL where you can embed an OA document to make it easily shareable. In this way, the other party only needs to scan the QR code to view the verifiable document. 
+The QR code used in the OpenAttestation framework is essentially a URL where you can embed an OA document to make it easily shareable. In this way, the verifying party only needs to scan the QR code to view the verifiable document. 
 
 
 ## Example QR code and link
@@ -51,7 +51,7 @@ In the URL, the query parameter (q) consists of an encoded query string of a JSO
 
 
 
-For the ease of reading, here’s how an **unencoded** URL would look like:
+For the ease of reading, here’s how an **unencoded** URL looks like:
 
 
 
@@ -129,7 +129,7 @@ The table below describes the JSON key/value pairs for the query parameter `q` f
   <tr>
    <td><code>payload.permittedActions</code>
    </td>
-   <td>Required
+   <td>Optional
    </td>
    <td>The actions that the user will be able to perform on the document.
    </td>
@@ -148,7 +148,7 @@ The table below describes the JSON key/value pairs for the query parameter `q` f
   <tr>
    <td><code>payload.redirect</code>
    </td>
-   <td>Required
+   <td>Optional
    </td>
    <td>A URI where the OA-compliant verifier resides.
    </td>

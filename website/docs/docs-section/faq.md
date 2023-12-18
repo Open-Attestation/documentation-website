@@ -26,10 +26,6 @@ You can perform the following actions using the OA framework:
 
 ![Deploy document store](/docs/docs-section/faq/deploy-document-store.png)
 
-* Configure DNS
-
-![Configure DNS](/docs/docs-section/faq/config-dns.png)
-
 * Create raw documents
 
 ![Create raw documents](/docs/docs-section/faq/create-raw-or-wrap.png)

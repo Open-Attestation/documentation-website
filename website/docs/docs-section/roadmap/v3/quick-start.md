@@ -119,5 +119,4 @@ Upon successful verification, you will see the output:
 ✔  success   The document is valid
 ```
 
-<!--Flag: Can we delete this Note? Maybe the documents can be verified now?-->
->**Note:** Web verification one tradetrust.io and opencerts.io are currently in development. These documents may not be verified on the site yet.
+>**Note:** Alternatively, you can verify the document on [OpenCerts](https://www.opencerts.io/) or [TradeTrust](https://www.tradetrust.io/).

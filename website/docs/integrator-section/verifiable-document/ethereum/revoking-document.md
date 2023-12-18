@@ -16,9 +16,13 @@ However, there may be times when the issued document needs to be revoked because
 
 ## Differences between revocation and expiration
 
+:::info
+
 Revocation serves as a strict, proactive approach to prevent security breach or any change that may compromise the document integrity. 
 
 Document revocation is not intended to work as expiration, since documents with an expiry date already have a limited validity duration that the issuer determines at the time of file creation. 
+
+:::
 
 For documents with limited validity, consider including expiry dates within the document content for external verification.
 

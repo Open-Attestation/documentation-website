@@ -46,7 +46,7 @@ Know your customer or know your client (KYC) is a guideline in financial service
 
 An OA document means an OpenAttestation document, which is issued using the OpenAttestation framework. The data in the OA document is stored in a `.json` file. It is a tamper-evident document that cryptographically proves the issuer.
 
-There are two categories of OA document. One type refers to the [verifiable document](#verifiable-document), while the other type refers to the [transferable record](#transferable-record).
+There are two types of OA documents, one type being [verifiable documents](#verifiable-document), while the other being [transferable records](#transferable-record).
 
 ### Online Certificate Status Protocol (OCSP)
 

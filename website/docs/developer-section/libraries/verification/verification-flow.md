@@ -4,12 +4,6 @@ title: Verification Flow
 sidebar_label: Verification Flow
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-import VerifiableDocsETHLight from './diagram/verifiable-docs-eth.light.svg';
-import VerifiableDocsDIDLight from './diagram/verifiable-docs-did.light.svg';
-
 In brief, the verification flow runs three checks on the document: 
 
 1. The document integrity check

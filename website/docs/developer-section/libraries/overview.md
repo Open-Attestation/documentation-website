@@ -4,14 +4,14 @@ title: Overview
 sidebar_label: Overview
 ---
 
-As a developer, you may find multiple repositories or libraries used throughout this documentation website and want to find out the different packages you can use to implement your own components. This section provides an overview of all the repositories and their respective documentation to help you get started.
+As a developer, you may find multiple repositories or libraries used throughout this documentation website and want to find out the different packages you can use to implement your own components. This section provides an overview of what you can build with all the repositories and their respective documentation for you to get started.
 
-Documentation to the repositories are in the following:
+You can achieve the following:
 
-- [OpenAttestation](/docs/developer-section/libraries/remote-files/open-attestation) is the core framework that helps you create OpenAttestation (OA) documents such as transferable records or verifiable documents.
-- [OpenAttestation (CLI)](/docs/developer-section/libraries/remote-files/open-attestation-cli) is the command line interface tool that helps you create and verify OA documents as well as issue these documents to the blockchain.
-- [OpenAttestation (Encryption)](/docs/developer-section/libraries/remote-files/open-attestation-encryption) assists you to share and store your OA documents in a secure way.
-- [OpenAttestation (Verify)](/docs/developer-section/libraries/remote-files/open-attestation-verify) helps you verify OA documents.
-- [Decentralized Renderer](/docs/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-components) lets the recipients view their OA documents in a human-readable format.
-- [Document Store](/docs/developer-section/libraries/remote-files/document-store) contains smart contracts that help you publish verifiable documents on the blockchain and retrieve them from there.
-- [Token Registry](/docs/developer-section/libraries/remote-files/token-registry) contains smart contracts that help you publish transferable records on the blockchain and retrieve them from there.
+-  Create OpenAttestation (OA) documents such as transferable records or verifiable documents with the [OpenAttestation](/docs/developer-section/libraries/remote-files/open-attestation) core framework.
+-  Create and verify OA documents as well as issue these documents to the blockchain in the command line interface using the [OpenAttestation (CLI)](/docs/developer-section/libraries/remote-files/open-attestation-cli).
+- Share and store your OA documents in a secure way with [OpenAttestation (Encryption)](/docs/developer-section/libraries/remote-files/open-attestation-encryption).
+- Verify OA documents with [OpenAttestation (Verify)](/docs/developer-section/libraries/remote-files/open-attestation-verify).
+-  Publish verifiable documents on the blockchain and retrieve them using [Document Store](/docs/developer-section/libraries/remote-files/document-store) which contains smart contracts. 
+- Publish transferable records on the blockchain and retrieve them using [Token Registry](/docs/developer-section/libraries/remote-files/token-registry) which contains smart contracts.
+- Recipients can view their OA documents in a human-readable format with [Decentralized Renderer](/docs/developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-components).

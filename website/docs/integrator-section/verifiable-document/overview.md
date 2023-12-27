@@ -5,7 +5,7 @@ sidebar_label: Overview
 
 Creating verifiable documents is the fundamental feature of the OpenAttestation (OA) framework. 
 
-In this quick start guide, you will be learn to deploy a verifiable document.
+In this quick start guide, you will learn how to deploy a verifiable document.
 
 ## Goal
 
@@ -16,4 +16,7 @@ At the end of this guide, you will be able to create your 📜 Certificate of Co
 
 ## Additional feature
 
-If you need to embed the verifiable document into an HTML file, see [this article](/docs/developer-section/quickstart/oa-embedded-html).
+If you need to distribute the document to another user, see these articles:
+
+* [Embedding a verifiable document into an HTML file](/docs/developer-section/quickstart/oa-embedded-html)
+* [Embedding a verifiable document into a QR code (URL)](/docs/developer-section/quickstart/oa-embedded-qrcode)

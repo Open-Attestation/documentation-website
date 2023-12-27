@@ -26,8 +26,6 @@ Instead of allowing multiple issuers as in OA V2, V3 has a restriction that ther
 
 ## Data access
 
-<!--Flag: Explain the meaning of "salt" or add it into glossary-->
-
 In the previous version, every value in the document is made into a string with a random salt pre-pended as a method to protect against the rainbow table attack on the obfuscated value. This results in the need for the `getData` method which strips the salt and change the type of the value back to the original type.
 
 In the upgrade, the random salt has been moved to `proof.salts` to be pre-pended to the individual values only at the checksum verification stage. This makes the data of the VC directly accessible without the `getData` method.

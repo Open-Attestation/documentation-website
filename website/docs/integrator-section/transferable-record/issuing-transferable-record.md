@@ -57,6 +57,6 @@ You will be able to drag your transferable record from the `wrapped-documents-tr
 
 When you have logged in as either beneficiary or holder, click **Manage Assets** to perform the action such as:
 
-* **Transfer holdership**
-* **Endorse change of beneficiary**
-* **Surrender document**
+* **Transfer holdership**: This will change the owner of the document.
+* **Endorse change of beneficiary**: This will change the beneficiary of the document.
+* **Surrender document**: This will freeze the records in the document so that they can no longer be used for transfers, but are still valid for verification.

@@ -5,12 +5,12 @@
       "type": "category",
       "label": "How Does It Work?",
       "items": [
-        "docs-section/how-does-it-work/introduction",
+        "docs-section/how-does-it-work/introduction-how-does-it-work",
         "docs-section/how-does-it-work/document-integrity",
         "docs-section/how-does-it-work/issuance-status",
         "docs-section/how-does-it-work/issuance-identity",
         "docs-section/how-does-it-work/limitations",
-        "docs-section/how-does-it-work/comparison"
+        "docs-section/how-does-it-work/comparison-eth-did"
       ]
     },
     {
@@ -31,9 +31,9 @@
           "type": "category",
           "label": "W3C VC",
           "items": [
-            "docs-section/roadmap/v3/overview",
+            "docs-section/roadmap/v3/overview-v3-beta",
             "docs-section/roadmap/v3/major-changes",
-            "docs-section/roadmap/v3/quick-start",
+            "docs-section/roadmap/v3/quick-start-v3-beta",
             "docs-section/roadmap/v3/different-files"
           ]
         },

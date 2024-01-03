@@ -14,7 +14,7 @@ A verifiable document is a tamper-evident document that cryptographically proves
 
 Transferable records are extended verifiable documents that define a method for identifying the owner of the record at any given time. These records reference properties listed in [the UNCITRAL Model Law on Electronic Transferable Records](https://uncitral.un.org/en/texts/ecommerce/modellaw/electronic_transferable_records). Currently, the OA framework's implementation of this is based on [ERC721 NFTs](https://eips.ethereum.org/EIPS/eip-721).
 
-This enables the transferable records to be used for documents such as:
+Therefore, you can use transferable records for documents such as:
 
 - Title Deeds
 - Bills of Lading

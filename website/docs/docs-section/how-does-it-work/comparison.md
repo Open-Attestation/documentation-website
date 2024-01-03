@@ -1,9 +1,10 @@
 ---
+id: comparison-eth-did
 title: Comparison
 sidebar_label: Comparison
 ---
 
-This article compares the differences between Ethereum smart contract verifiable credentials and DID verifiable credentials. It will help you choose the correct workflow depending on your needs.
+This article compares the differences between Ethereum smart contract verifiable credentials and DID verifiable credentials. You can choose the correct workflow depending on your needs.
 
 ## Infrastructure
 

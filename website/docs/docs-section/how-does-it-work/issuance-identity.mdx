@@ -1,18 +1,19 @@
 ---
+id: issuance-identity
 title: Issuance Identity
 sidebar_label: Issuance Identity
 ---
 import SupportedNetworks from "/src/reusables/_supported-networks.mdx";
 
-OpenAttestation uses the Domain Name System (DNS) as the method to verify the issuer's identity. A one-line summary of the DNS system can be "a Phone book for the Internet". Its primary purpose is to resolve human readable names such as "google.com" or "openattestation.com" etc. to a set of records. The most common records are IP addresses - this allows network routing to operate over the Internet.
+OpenAttestation uses the Domain Name System (DNS) as the method to verify the issuer's identity. A one-line summary of the DNS system can be "a Phone book for the Internet". Its primary purpose is to resolve human readable names such as "google.com" or "openattestation.com" etc. to a set of records. IP addresses, the most common DNS records, make it possible for network routing to operate over the Internet.
 
-OpenAttestation uses records in the TXT format, which allows the storage of textual data. The textual data indicates the document store that the domain administrator trusts.
+OpenAttestation uses records in the TXT format, so that it can store textual data. The textual data indicates the document store that the domain administrator trusts.
 
 To use the DNS system as an identity registry, the domain name owner must claim the ownership of an OpenAttestation Document Store smart contract on the Ethereum Blockchain.
 
 ## Rationale
 
-The DNS system is a key part of Internet infrastructure and also a decentralized system - this means there is a low barrier to entry and does not have a single point of failure. It helps issuers tie their issuance to their domain name (e.g. example.openattestation.com). When a user views a document issued under this model, they see "Document issued by example.openattestation.com".
+The DNS system is a key part of Internet infrastructure and also a decentralized system - this means there is a low barrier to entry and does not have a single point of failure. Thus, the issuers can tie their issuance to their domain name (e.g. example.openattestation.com). When a user views a document issued under this model, they see "Document issued by example.openattestation.com".
 
 ## How it works
 

@@ -24,7 +24,7 @@ DNS stands for domain name system. A DNS record is a piece of information on a D
 
 ### Document store
 
-A document store is a smart contract on the Ethereum network that records the issuance and revocation status of the OA documents. The document store helps the owner perform the following actions:
+A document store is a smart contract on the Ethereum network that records the issuance and revocation status of the OA documents. Using the document store, the owner can perform the following actions:
 
 - Issue new OA documents
 - Revoke an existing OA document

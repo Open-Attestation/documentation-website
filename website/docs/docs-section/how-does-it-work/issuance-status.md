@@ -1,4 +1,5 @@
 ---
+id: issuance-status
 title: Issuance Status
 sidebar_label: Issuance Status
 ---
@@ -69,9 +70,7 @@ Currently, OpenAttestation only supports one DID method, `ethr`.
 
 DIDs [are significantly faster and incur not costs](/docs/docs-section/how-does-it-work/comparison). They can directly use the `targetHash` of the document (which is unique) and sign it using the associated private key. However, for consistency with the initial design of OpenAttestation, you need to sign the `merkleRoot`.
 
-The information about the signature is added to the document, into the `proof` property. That means the document has been issued.
-
-The following descriptions helps you gain a deeper understanding of how it works.
+The information about the signature is added to the document, into the `proof` property. That means the document has been issued. Read on to get a deeper understanding.
 
 An `ethr` DID document looks like the following:
 

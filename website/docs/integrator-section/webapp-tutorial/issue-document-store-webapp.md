@@ -4,7 +4,7 @@ title: Issuing Document with Web App
 sidebar_label: Issuing Document
 ---
 
-This guide will help you issue a hash using one of the available web applications. 
+This guide shows how to issue a hash using one of the available web applications. 
 
 Currently, there are two web applications:
 

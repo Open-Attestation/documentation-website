@@ -6,7 +6,7 @@ sidebar_label: Going Further
 
 Now that you have completed the Getting Started guide to create your own `Verifiable Document`, see a list of topics in which you may be interested to discover more:
 
-- [How does it work?](/docs/docs-section/how-does-it-work/introduction)
+- [How does it work?](/docs/docs-section/how-does-it-work/introduction-how-does-it-work)
 - [Configuring DNS](/docs/developer-section/quickstart/configure-dns)
 - [Creating a Custom Renderer](/docs/developer-section/quickstart/create-custom-renderer)
 

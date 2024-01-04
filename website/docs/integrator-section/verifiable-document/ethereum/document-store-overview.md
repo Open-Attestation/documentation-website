@@ -26,4 +26,4 @@ A Verifiable Document File is also known as the OA document. Machine-readable da
 
 ### Decentralized renderer
 
-The decentralized renderer gives the OA document a human-readable look. It is essentially a website which will take an OA document data as input and display the document in a web view. This allows anyone to style their document without submitting code change to another party.
+The decentralized renderer gives the OA document a human-readable look. It is essentially a website which will take an OA document data as input and display the document in a web view. Using this feature, any user can style their document without submitting code change to another party.

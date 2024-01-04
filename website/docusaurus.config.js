@@ -266,8 +266,7 @@ ${content}`,
           to: "docs/developer-section/quickstart/create-verifiable-document-issuer",
           label: "Developer",
           position: "left",
-        },
-        { to: "blog", label: "Blog", position: "left" },
+        }
       ],
     },
     footer: {

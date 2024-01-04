@@ -10,7 +10,7 @@
         "docs-section/how-does-it-work/issuance-status",
         "docs-section/how-does-it-work/issuance-identity",
         "docs-section/how-does-it-work/limitations",
-        "docs-section/how-does-it-work/comparison-eth-did"
+        "docs-section/how-does-it-work/comparison"
       ]
     },
     {
@@ -83,8 +83,7 @@
                     "integrator-section/verifiable-document/ethereum/raw-document",
                     "integrator-section/verifiable-document/ethereum/wrapping-document",
                     "integrator-section/verifiable-document/ethereum/issuing-document",
-                    "integrator-section/verifiable-document/ethereum/revoking-document",
-                    "integrator-section/verifiable-document/ethereum/going-further"
+                    "integrator-section/verifiable-document/ethereum/revoking-document"
                   ]
                 },
                 {
@@ -94,24 +93,25 @@
                     "integrator-section/verifiable-document/did/create",
                     "integrator-section/verifiable-document/did/document-store-or-ocsp",
                     "integrator-section/verifiable-document/did/dns",
-                    "integrator-section/verifiable-document/did/raw-document",
-                    "integrator-section/verifiable-document/did/wrapping-document",
+                    "integrator-section/verifiable-document/did/raw-document-did",
+                    "integrator-section/verifiable-document/did/wrapping-document-did",
                     "integrator-section/verifiable-document/did/signing-document",
-                    "integrator-section/verifiable-document/did/revoking-document"
+                    "integrator-section/verifiable-document/did/revoking-document-did"
                   ]
                 },
-                "integrator-section/verifiable-document/differences"
+                "integrator-section/verifiable-document/differences",
+                "integrator-section/verifiable-document/going-further"
               ]
             },
             {
               "type": "category",
               "label": "Transferable Record",
               "items": [
-                "integrator-section/transferable-record/overview",
+                "integrator-section/transferable-record/overview-tr",
                 "integrator-section/transferable-record/token-registry",
                 "integrator-section/transferable-record/preparing-transferable-record",
                 "integrator-section/transferable-record/issuing-transferable-record",
-                "integrator-section/transferable-record/going-further"
+                "integrator-section/transferable-record/going-further-tr"
               ]
             }
           ]

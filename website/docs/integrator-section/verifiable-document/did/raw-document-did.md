@@ -1,4 +1,5 @@
 ---
+id: raw-document-did
 title: Creating Raw Document
 sidebar_label: Creating Raw Document
 ---

@@ -1,5 +1,6 @@
 ---
-title: Revoking Documents
+id: revoking-document-did
+title: Revoking Documents Using Document Store or OCSP
 sidebar_label: Revoking Documents Using Document Store or OCSP
 ---
 Depending on whether you have deployed the Document Store or OCSP, use one of them to revoke documents. 

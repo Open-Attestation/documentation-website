@@ -1,4 +1,5 @@
 ---
+id: dns
 title: Configuring DNS
 sidebar_label: Configuring DNS
 ---

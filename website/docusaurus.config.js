@@ -260,6 +260,31 @@ ${content}`,
         srcDark: "img/logos/oa.svg",
       },
       items: [
+
+        {
+          type: 'dropdown',
+          label: 'Issue/Revoke',
+          position: 'left',
+          items: [
+            {
+              label: 'Prerequisites',
+              to: '/docs/test1-section/prerequisites',
+              activeBasePath: '/docs/test1-section',
+            },
+            {
+              label: 'Issue verifiable documents with DID',
+              to: '/docs/test2-section/intro',
+              activeBasePath: '/docs/test2-section',
+            },
+            {
+              label: 'Issue verifiable documents with Ethereum',
+              to: '/docs/test3-section/tutorial',
+              activeBasePath: '/docs/test3-section',
+            },
+            // ... more items
+          ],
+        },
+
         { to: "docs/docs-section/introduction", label: "Docs", position: "left" },
         { to: "docs/integrator-section/verifiable-document/overview", label: "Integrator", position: "left" },
         {

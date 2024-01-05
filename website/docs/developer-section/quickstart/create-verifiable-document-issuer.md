@@ -16,7 +16,7 @@ Examples of verifiable documents include, but are not limited to the following:
 * Shipping manifests
 * Work orders
 
-In this guide, you will build a verifiable document issuer, which will help the user create and issue a verifiable document.
+In this guide, you will build a verifiable document issuer, so that the user can create and issue a verifiable document.
 
 ## Prerequisites
 
@@ -40,13 +40,13 @@ If not, follow the steps below:
 
 ### Verifiable document components
 
-Before starting on this code tutorial, it will be helpful to understand the components involved in the creation, issuance and verification of a verifiable document.
+Before starting on this code tutorial, it will be helpful to understand the components involved in the creation, issuance, and verification of a verifiable document.
 
 You can read more about the components [here](/docs/integrator-section/verifiable-document/ethereum/document-store-overview).
 
 ## Overview
 
-You will build a single-page application, which helps the user perform the following:
+You will build a single-page application, so that the user can perform the following:
 
 1. Connect to their MetaMask wallet.
 2. Deploy their own document store.
@@ -63,7 +63,7 @@ npm create vite@latest verifiable-document-issuer --template react-ts
 cd verifiable-document-issuer
 ```
 
-2. Install the following packages to let the application interact with the blockchain.
+2. Install the following packages, so that the application can interact with the blockchain.
 
 ```
 npm i @govtechsg/document-store @govtechsg/open-attestation ethers
@@ -134,7 +134,7 @@ const App = () => {
 export default App;
 ```
 
-When you reload the app, the MetaMask extension should prompt you for your password and ask for permission to allow the site access to your accounts.
+When you reload the app, the MetaMask extension should prompt you for your password and ask for permission, so that the site can access your accounts.
 
 ### Deploying Document Store
 
@@ -375,11 +375,11 @@ export const Steps = () => {
         
     * After successfully issuing the document, you can let the user download the `wrappedDocument` to be submitted for verification.
         
-    * `Download` allows the user to download the `wrappedDocument` and save it on their devices.
+    * `Download` starts the download of the `wrappedDocument` and saves it on the user's devices.
         
     * `Verify` links to the verification site where the user can upload and verify the issued `wrappedDocument`.
         
-    * `Create Another` restarts the issuing process and lets the user create and issue another `wrappedDocument`.
+    * `Create Another` restarts the issuing process, so that the user can create and issue another `wrappedDocument`.
 
 You have created your own verifiable document issuer successfully.
 

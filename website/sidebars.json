@@ -181,7 +181,7 @@
       "type": "category",
       "label": "Libraries",
       "items": [
-        "developer-section/libraries/overview",
+        "developer-section/libraries/overview-lib",
         "developer-section/libraries/remote-files/open-attestation",
         "developer-section/libraries/remote-files/open-attestation-cli",
         "developer-section/libraries/remote-files/open-attestation-encryption",
@@ -199,9 +199,7 @@
           "label": "Decentralized Renderer",
           "items": [
             "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-components",
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-template",
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-svelte-template",
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-vue-template"
+            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-template"
           ]
         },
         "developer-section/libraries/remote-files/document-store",

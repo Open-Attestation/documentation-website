@@ -4,7 +4,7 @@ title: Creating Document Renderer
 sidebar_label: Creating Document Renderer
 ---
 
-OA documents are both machine- and human-readable. Each OA document file is stored in a `.json` format, which helps any application process the content more easily. To present the data file in a human-readable format, a renderer needs to be written.
+OA documents are both machine- and human-readable. Each OA document file is stored in a `.json` format, which makes it possible for any application to process the content more easily. To present the data file in a human-readable format, a renderer needs to be written.
 
 In this guide, you will build and deploy the renderer to display data from a 📜 Certificate of Completion.
 
@@ -119,7 +119,7 @@ In the above OA document, you will see four root objects:
 
 The `$template` key describes the template name used to render this display. It should have the following keys:
 
-- `$template.name` is the name of the template used to render a given OA document. This enables a single document renderer to render multiple types of OA documents, each with a different template name.
+- `$template.name` is the name of the template used to render a given OA document. Using this, a single document renderer will be able to render multiple types of OA documents, each with a different template name.
 
 - `$template.type` will always take the value of `EMBEDDED_RENDERER` for documents rendered in this way.
 
@@ -131,7 +131,7 @@ The `name` key is a compulsory key to describe the OA document type. In this cas
 
 #### 3. `recipient`
 
-OA documents do not have a strict data structure and lets issuers of documents define their own data schema. The `recipient` object is a user-defined object that describes who the certificate is conferred to. In this case, replace `John Doe` with the actual recipient name.
+OA documents do not have a strict data structure. Therefore, the issuers of documents need to define their own data schema. The `recipient` object is a user-defined object that describes who the certificate is conferred to. In this case, replace `John Doe` with the actual recipient name.
 
 >**Note:** This guide focuses on the simple document. In the [next tutorial](/docs/developer-section/quickstart/create-custom-schema.md), you will learn more about the OA document schema and how to define a custom data structure. 
 

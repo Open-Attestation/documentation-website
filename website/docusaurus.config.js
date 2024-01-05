@@ -163,51 +163,6 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "React Svelte Template",
-        sourceBaseUrl:
-          "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-svelte-template/master/",
-        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
-        documents: ["README.md"],
-        modifyContent(fileName, content) {
-          return {
-            filename: "decentralized-renderer-svelte-template.md",
-            content: `---
-id: decentralized-renderer-svelte-template
-title: Svelte Template
-hide_title: true
-sidebar_label: Svelte Template
----
-
-${content}`,
-          };
-        },
-      },
-    ],
-    [
-      "docusaurus-plugin-remote-content",
-      {
-        name: "Vue Template",
-        sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-vue-template/master/",
-        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
-        documents: ["README.md"],
-        modifyContent(fileName, content) {
-          return {
-            filename: "decentralized-renderer-vue-template.md",
-            content: `---
-id: decentralized-renderer-vue-template
-title: Vue Template
-hide_title: true
-sidebar_label: Vue Template
----
-
-${content}`,
-          };
-        },
-      },
-    ],
-    [
-      "docusaurus-plugin-remote-content",
-      {
         name: "Document Store",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/document-store/master/",
         outDir: "docs/developer-section/libraries/remote-files/",

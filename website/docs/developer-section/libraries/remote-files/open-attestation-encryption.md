@@ -1,8 +1,8 @@
 ---
 id: open-attestation-encryption
-title: Open Attestation (Encryption)
+title: OpenAttestation (Encryption)
 hide_title: true
-sidebar_label: Open Attestation (Encryption)
+sidebar_label: OpenAttestation (Encryption)
 ---
 
 # Open Attestation (Encryption)

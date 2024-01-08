@@ -12,5 +12,5 @@ Now that you have completed the Getting Started guide to create your own `Verifi
 
 On top of the OpenAttestation CLI, there is also a web application to deploy document store and issue hash to your document store. You will find more information in the following tutorials:
 
-- [Deploying Document with Web App](/docs/integrator-section/webapp-tutorial/deploy-document-store-webapp)
-- [Issuing Document with Web App](/docs/integrator-section/webapp-tutorial/issue-document-store-webapp)
+- [Deploying document store with web app](/docs/integrator-section/webapp-tutorial/deploy-document-store-webapp)
+- [Issuing document with web app](/docs/integrator-section/webapp-tutorial/issue-document-store-webapp)

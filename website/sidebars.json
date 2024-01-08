@@ -75,22 +75,6 @@
         },
         "docs-section/roadmap/create-custom-context"
       ]
-    },
-    {
-      "type": "category",
-      "label": "Deprecated",
-      "items": [
-        {
-          "type": "category",
-          "label": "Gas Station Network (GSN)",
-          "items": [
-            "docs-section/deprecated/gsn/gas-station-network",
-            "docs-section/deprecated/gsn/setup-paymaster",
-            "docs-section/deprecated/gsn/gsn-capable-document-store",
-            "docs-section/deprecated/gsn/creating-a-custom-relay-provider"
-          ]
-        }
-      ]
     }
   ],
   "integrator": [

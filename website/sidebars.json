@@ -8,14 +8,14 @@
       "type": "category",
       "label": "Issue verifiable documents with DID",
       "items": [
-        "test2-section/intro",
+        "test2-section/overview-did",
         "test2-section/create",
         "test2-section/document-store-or-ocsp",
         "test2-section/dns",
         "test2-section/raw-document-did",
         "test2-section/wrap-document-did",
         "test2-section/sign-document",
-        "test2-section/additional",
+        "test2-section/additional-did",
 
        [
           {
@@ -32,8 +32,47 @@
   ],
 
   "test3": [
-    "test3-section/tutorial"
+    {
+      "type": "category",
+      "label": "Issue verifiable documents with Ethereum",
+      "items": [
+        "test3-section/overview-eth",
+        "test3-section/wallet",
+        "test3-section/document-store",
+        "test3-section/dns-proof",
+        "test3-section/raw-document-eth",
+        "test3-section/wrap-document-eth",
+        "test3-section/issue-document",
+        "test3-section/additional-eth",
+
+        [
+          {
+            "type": "category",
+            "label": "Revoke documents issued using Ethereum",
+            "items": [
+              "test3-section/revoke-document-eth/revoke-eth"
+                ]
+              }
+            ]
+
+         ]
+      }
   ],
+
+  "test4": [
+    {
+      "type": "category",
+      "label": "Issue transferable records with Ethereum",
+      "items": [
+        "test4-section/overview-tr",
+        "test4-section/token-registry",
+        "test4-section/prepare-transferable-record",
+        "test4-section/issue-transferable-record",
+        "test4-section/additional-tr"
+      ]
+    }
+  ],
+
 
   "docs": [
     "docs-section/introduction",

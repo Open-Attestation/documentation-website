@@ -228,13 +228,18 @@ ${content}`,
             },
             {
               label: 'Issue verifiable documents with DID',
-              to: '/docs/test2-section/intro',
+              to: '/docs/test2-section/overview-did',
               activeBasePath: '/docs/test2-section',
             },
             {
               label: 'Issue verifiable documents with Ethereum',
-              to: '/docs/test3-section/tutorial',
+              to: '/docs/test3-section/overview-eth',
               activeBasePath: '/docs/test3-section',
+            },
+            {
+              label: 'Issue transferable records with Ethereum',
+              to: '/docs/test4-section/overview-tr',
+              activeBasePath: '/docs/test4-section',
             },
             // ... more items
           ],

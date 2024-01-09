@@ -241,6 +241,11 @@ ${content}`,
               to: '/docs/test4-section/overview-tr',
               activeBasePath: '/docs/test4-section',
             },
+            {
+              label: 'Revoke documents',
+              to: '/docs/test5-section/revoke',
+              activeBasePath: '/docs/test5-section',
+            },
             // ... more items
           ],
         },

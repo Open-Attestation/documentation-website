@@ -73,6 +73,9 @@
     }
   ],
 
+  "test5": [
+    "test5-section/revoke"
+  ],
 
   "docs": [
     "docs-section/introduction",

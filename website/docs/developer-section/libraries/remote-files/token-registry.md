@@ -1,8 +1,8 @@
 ---
 id: token-registry
-title: Token Registry
+title: Token registry
 hide_title: true
-sidebar_label: Token Registry
+sidebar_label: Token registry
 ---
 
 <h1 align="center">

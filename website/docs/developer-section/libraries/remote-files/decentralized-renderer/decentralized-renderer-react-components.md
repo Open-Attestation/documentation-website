@@ -1,8 +1,8 @@
 ---
 id: decentralized-renderer-react-components
-title: React Components
+title: React components for decentralized renderer
 hide_title: true
-sidebar_label: React Components
+sidebar_label: React components for decentralized renderer
 ---
 
 # React Components

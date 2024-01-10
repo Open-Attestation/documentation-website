@@ -1,8 +1,8 @@
 ---
 id: document-store
-title: Document Store
+title: Document store
 hide_title: true
-sidebar_label: Document Store
+sidebar_label: Document store
 ---
 
 # Document Store

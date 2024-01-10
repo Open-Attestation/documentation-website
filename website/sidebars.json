@@ -1,4 +1,8 @@
 {
+  "overview-section": [
+    "overview-section/overview"
+  ],
+
   "test1": [
     "test1-section/prerequisites"
   ],
@@ -74,7 +78,29 @@
   ],
 
   "test5": [
-    "test5-section/revoke"
+    {
+    "type": "category",
+    "label": "Revoke documents",
+    "items": [
+      "test5-section/revoke",
+    "test5-section/diff-btw-revocation-methods"
+    ]
+   }
+  ],
+
+  "verify-section": [
+    "verify-section/verify",
+    "verify-section/main-properties",
+    "verify-section/document-integrity",
+    "verify-section/issuance-status",
+    "verify-section/issuance-identity"
+  ],
+
+  "distribute-section": [
+    "distribute-section/distribute",
+    "distribute-section/oa-embed",
+    "distribute-section/oa-embed-html",
+    "distribute-section/oa-embed-qrcode"
   ],
 
   "docs": [
@@ -222,7 +248,7 @@
         },
         {
           "type": "category",
-          "label": "Decentralized Renderer",
+          "label": "Decentralized renderer",
           "items": [
             "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-components",
             "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-template"

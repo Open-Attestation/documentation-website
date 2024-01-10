@@ -117,7 +117,7 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "React Components",
+        name: "React components for decentralized renderer",
         sourceBaseUrl:
           "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-components/master/",
         outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
@@ -127,9 +127,9 @@ ${content}`,
             filename: "decentralized-renderer-react-components.md",
             content: `---
 id: decentralized-renderer-react-components
-title: React Components
+title: React components for decentralized renderer
 hide_title: true
-sidebar_label: React Components
+sidebar_label: React components for decentralized renderer
 ---
 
 ${content}`,
@@ -140,7 +140,7 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "React Template",
+        name: "React template for decentralized renderer",
         sourceBaseUrl:
           "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-template/master/",
         outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
@@ -150,9 +150,9 @@ ${content}`,
             filename: "decentralized-renderer-react-template.md",
             content: `---
 id: decentralized-renderer-react-template
-title: React Template
+title: React template for decentralized renderer
 hide_title: true
-sidebar_label: React Template
+sidebar_label: React template for decentralized renderer
 ---
 
 ${content}`,
@@ -163,7 +163,7 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "Document Store",
+        name: "Document store",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/document-store/master/",
         outDir: "docs/developer-section/libraries/remote-files/",
         documents: ["README.md"],
@@ -172,9 +172,9 @@ ${content}`,
             filename: "document-store.md",
             content: `---
 id: document-store
-title: Document Store
+title: Document store
 hide_title: true
-sidebar_label: Document Store
+sidebar_label: Document store
 ---
 
 ${content}`,
@@ -185,7 +185,7 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "Token Registry",
+        name: "Token registry",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/token-registry/master/",
         outDir: "docs/developer-section/libraries/remote-files/",
         documents: ["README.md"],
@@ -194,9 +194,9 @@ ${content}`,
             filename: "token-registry.md",
             content: `---
 id: token-registry
-title: Token Registry
+title: Token registry
 hide_title: true
-sidebar_label: Token Registry
+sidebar_label: Token registry
 ---
 
 ${content}`,
@@ -216,6 +216,8 @@ ${content}`,
       },
       items: [
 
+        { to: "docs/overview-section/overview", label: "Overview", position: "left" },
+
         {
           type: 'dropdown',
           label: 'Issue/Revoke',
@@ -226,11 +228,13 @@ ${content}`,
               to: '/docs/test1-section/prerequisites',
               activeBasePath: '/docs/test1-section',
             },
+
             {
               label: 'Issue verifiable documents with DID',
               to: '/docs/test2-section/overview-did',
               activeBasePath: '/docs/test2-section',
             },
+
             {
               label: 'Issue verifiable documents with Ethereum',
               to: '/docs/test3-section/overview-eth',
@@ -241,22 +245,34 @@ ${content}`,
               to: '/docs/test4-section/overview-tr',
               activeBasePath: '/docs/test4-section',
             },
+
             {
               label: 'Revoke documents',
               to: '/docs/test5-section/revoke',
               activeBasePath: '/docs/test5-section',
             },
-            // ... more items
+
           ],
         },
+        
+        { to: "docs/verify-section/verify", label: "Verify", position: "left" },
 
-        { to: "docs/docs-section/introduction", label: "Docs", position: "left" },
-        { to: "docs/integrator-section/verifiable-document/overview", label: "Integrator", position: "left" },
-        {
-          to: "docs/developer-section/quickstart/create-verifiable-document-issuer",
-          label: "Developer",
-          position: "left",
-        }
+        { to: "docs/distribute-section/distribute", label: "Distribute", position: "left" },
+
+        // Select "Edit" > "Toggle Line Comment" to show or hide these sections below.
+        // ** Start of comment **
+
+        // { to: "docs/docs-section/introduction", label: "Docs", position: "left" },
+
+        // { to: "docs/integrator-section/verifiable-document/overview", label: "Integrator", position: "left" },
+
+        // {
+        //   to: "docs/developer-section/quickstart/create-verifiable-document-issuer",
+        //   label: "Developer",
+        //   position: "left",
+        // }
+        
+        // ** End of comment **
       ],
     },
     footer: {

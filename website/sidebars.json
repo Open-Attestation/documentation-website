@@ -83,7 +83,7 @@
     "label": "Revoke documents",
     "items": [
       "test5-section/revoke",
-    "test5-section/diff-btw-revocation-methods"
+      "test5-section/diff-btw-revocation-methods"
     ]
    }
   ],
@@ -101,6 +101,89 @@
     "distribute-section/oa-embed",
     "distribute-section/oa-embed-html",
     "distribute-section/oa-embed-qrcode"
+  ],
+
+  "lib-section": [
+    {
+      "type": "category",
+      "label": "Libraries",
+      "items": [
+        "lib-section/overview-lib",
+        "lib-section/remote-files/open-attestation",
+        "lib-section/remote-files/open-attestation-cli",
+        "lib-section/remote-files/open-attestation-encryption",
+        "lib-section/remote-files/open-attestation-verify",
+        "lib-section/remote-files/document-store",
+        "lib-section/remote-files/token-registry",
+        "lib-section/remote-files/decentralized-renderer-react-components",
+        "lib-section/remote-files/decentralized-renderer-react-template"
+      ]
+    }
+  ],
+
+  "guides-section": [
+    {
+      "type": "category",
+      "label": "Guides",
+      "items": [
+        "guides-section/create-issuer",
+        "guides-section/renderer-template",
+        "guides-section/custom-schema",
+        "guides-section/domain-registrar",
+        "guides-section/encrypt-document",
+        "guides-section/web-app-deploy",
+        "guides-section/web-app-issue",
+        "guides-section/web-app-revoke",
+        "guides-section/additional-guides"
+      ]
+    }
+  ],
+
+  "faq-section": [
+    {
+      "type": "category",
+      "label": "Frequently asked questions",
+      "items": [
+        "faq-section/faq01",
+        "faq-section/faq02",
+        "faq-section/faq03",
+        "faq-section/faq04",
+        "faq-section/faq05",
+        "faq-section/faq06",
+        "faq-section/faq07",
+        "faq-section/faq08",
+        "faq-section/faq09",
+        "faq-section/faq10"
+      ]
+    }
+  ],
+
+  "glossary-section": [
+    "glossary-section/glossary"
+  ],
+
+  "changelog-section": [
+    {
+      "type": "category",
+      "label": "Changelog",
+      "items": [
+        "changelog-section/overview-changelog",
+        "changelog-section/v3-v4",
+        "changelog-section/v2-v3"
+      ]
+    }
+  ],
+
+  "costs-section": [
+    {
+      "type": "category",
+      "label": "Blockchain costs",
+      "items": [
+        "costs-section/overview-costs",
+        "costs-section/costs-verifiable-documents",
+        "costs-section/costs-transferable-records"
+      ]
+    }
   ],
 
   "docs": [
@@ -145,6 +228,7 @@
       ]
     }
   ],
+
   "integrator": [
     {
       "type": "category",
@@ -216,6 +300,7 @@
       ]
     }
   ],
+
   "developer": [
     {
       "type": "category",

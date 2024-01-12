@@ -129,7 +129,7 @@
         "guides-section/create-issuer",
         "guides-section/renderer-template",
         "guides-section/custom-schema",
-        "guides-section/domain-registrar",
+        "guides-section/configure-dns",
         "guides-section/encrypt-document",
         "guides-section/web-app-deploy",
         "guides-section/web-app-issue",
@@ -181,9 +181,14 @@
       "items": [
         "costs-section/overview-costs",
         "costs-section/costs-verifiable-documents",
-        "costs-section/costs-transferable-records"
+        "costs-section/costs-transferable-records",
+        "costs-section/saving-comparison"
       ]
     }
+  ],
+
+  "limit-section": [
+    "limit-section/limitations"
   ],
 
   "docs": [

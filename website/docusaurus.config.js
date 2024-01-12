@@ -302,21 +302,28 @@ ${content}`,
               to: '/docs/costs-section/overview-costs',
               activeBasePath: '/docs/costs-section',
             },
+
+            {
+              label: 'Limitations',
+              to: '/docs/limit-section/limitations',
+              activeBasePath: '/docs/limit-section',
+            },
+          
           ],
         },
 
         // Select "Edit" > "Toggle Line Comment" to show or hide these sections below.
         // ** Start of comment **
 
-        // { to: "docs/docs-section/introduction", label: "Docs", position: "left" },
+        { to: "docs/docs-section/introduction", label: "Docs", position: "left" },
 
-        // { to: "docs/integrator-section/verifiable-document/overview", label: "Integrator", position: "left" },
+        { to: "docs/integrator-section/verifiable-document/overview", label: "Integrator", position: "left" },
 
-        // {
-        //   to: "docs/developer-section/quickstart/create-verifiable-document-issuer",
-        //   label: "Developer",
-        //   position: "left",
-        // }
+        {
+          to: "docs/developer-section/quickstart/create-verifiable-document-issuer",
+          label: "Developer",
+          position: "left",
+        }
         
         // ** End of comment **
       ],

@@ -1,4 +1,5 @@
 ---
+id: introduction-how-does-it-work
 title: Introduction
 sidebar_label: Introduction
 ---

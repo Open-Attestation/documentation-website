@@ -8,7 +8,7 @@ This article describes some major changes from the OpenAttestation V2 Data Model
 
 ## The context property
 
-The `@context` property is introduced as per [W3C VC Care Data Model](https://www.w3.org/TR/vc-data-model/#contexts) to help the issuer map short-form aliases to the URIs required by specific verifiable credentials and verifiable presentations.
+The `@context` property is introduced as per [W3C VC Care Data Model](https://www.w3.org/TR/vc-data-model/#contexts). Using this property, the issuer can map short-form aliases to the URIs required by specific verifiable credentials and verifiable presentations.
 
 OpenAttestation has released its extension to W3C credentials context via `https://schemata.openattestation.com/com/openattestation/1.0/OpenAttestation.v3.json`
 

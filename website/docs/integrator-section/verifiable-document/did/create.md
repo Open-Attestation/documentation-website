@@ -1,4 +1,5 @@
 ---
+id: create
 title: Creating a DID
 sidebar_label: Creating a DID
 ---

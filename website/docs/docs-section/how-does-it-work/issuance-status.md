@@ -1,4 +1,5 @@
 ---
+id: issuance-status
 title: Issuance Status
 sidebar_label: Issuance Status
 ---
@@ -71,8 +72,6 @@ DIDs [are significantly faster and incur not costs](/docs/docs-section/how-does-
 
 The information about the signature is added to the document, into the `proof` property. That means the document has been issued.
 
-The following descriptions helps you gain a deeper understanding of how it works.
-
 An `ethr` DID document looks like the following:
 
 ```json
@@ -102,7 +101,7 @@ The example above contains three pieces of important information:
 - The DID controller (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller`). It's used to identify which public key control the DID, and you must add it into the `issuer.identityProof.key` property of the document. The value is equal to the DID identifier, appended with `#controller`.
 - The ethereum address associated to the DID controller (here `0x6813eb9362372eef6200f3b1dbc3f819671cba69`). you will use it to verify the signature.
 
->**Note:** See an example document using DID in [this guide](/docs/integrator-section/verifiable-document/did/raw-document).
+>**Note:** See an example document using DID in [this guide](/docs/integrator-section/verifiable-document/did/raw-document-did).
 
 A proof of signature looks like:
 
@@ -129,7 +128,7 @@ If you want to learn more about ECDSA, read [this guide from Yos Riady](https://
 
 ### Revocation
 
-It's possible to revoke a DID document if a document store has been declared in its revocation block. You can revoke a document [using a document store or an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document).
+It's possible to revoke a DID document if a document store has been declared in its revocation block. You can revoke a document [using a document store or an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document-did).
 
 >**Note:** If you use revocation for `DID`, you still need to have at least one transaction with the ethereum blockchain to deploy a `documentStore`.
 

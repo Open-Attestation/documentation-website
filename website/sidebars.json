@@ -1,11 +1,47 @@
 {
+  "test1": [
+    "test1-section/prerequisites"
+  ],
+
+  "test2": [
+    {
+      "type": "category",
+      "label": "Issue verifiable documents with DID",
+      "items": [
+        "test2-section/intro",
+        "test2-section/create",
+        "test2-section/document-store-or-ocsp",
+        "test2-section/dns",
+        "test2-section/raw-document-did",
+        "test2-section/wrap-document-did",
+        "test2-section/sign-document",
+        "test2-section/additional",
+
+       [
+          {
+            "type": "category",
+            "label": "Revoke documents issued using DID",
+            "items": [
+              "test2-section/revoke-document-did/revoke-using-ocsp",
+              "test2-section/revoke-document-did/revoke-using-document-store"
+                ]
+              }
+            ]
+         ]
+      }
+  ],
+
+  "test3": [
+    "test3-section/tutorial"
+  ],
+
   "docs": [
     "docs-section/introduction",
     {
       "type": "category",
       "label": "How Does It Work?",
       "items": [
-        "docs-section/how-does-it-work/introduction",
+        "docs-section/how-does-it-work/introduction-how-does-it-work",
         "docs-section/how-does-it-work/document-integrity",
         "docs-section/how-does-it-work/issuance-status",
         "docs-section/how-does-it-work/issuance-identity",
@@ -31,29 +67,13 @@
           "type": "category",
           "label": "W3C VC",
           "items": [
-            "docs-section/roadmap/v3/overview",
+            "docs-section/roadmap/v3/overview-v3-beta",
             "docs-section/roadmap/v3/major-changes",
-            "docs-section/roadmap/v3/quick-start",
+            "docs-section/roadmap/v3/quick-start-v3-beta",
             "docs-section/roadmap/v3/different-files"
           ]
         },
         "docs-section/roadmap/create-custom-context"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Deprecated",
-      "items": [
-        {
-          "type": "category",
-          "label": "Gas Station Network (GSN)",
-          "items": [
-            "docs-section/deprecated/gsn/gas-station-network",
-            "docs-section/deprecated/gsn/setup-paymaster",
-            "docs-section/deprecated/gsn/gsn-capable-document-store",
-            "docs-section/deprecated/gsn/creating-a-custom-relay-provider"
-          ]
-        }
       ]
     }
   ],
@@ -83,8 +103,7 @@
                     "integrator-section/verifiable-document/ethereum/raw-document",
                     "integrator-section/verifiable-document/ethereum/wrapping-document",
                     "integrator-section/verifiable-document/ethereum/issuing-document",
-                    "integrator-section/verifiable-document/ethereum/revoking-document",
-                    "integrator-section/verifiable-document/ethereum/going-further"
+                    "integrator-section/verifiable-document/ethereum/revoking-document"
                   ]
                 },
                 {
@@ -94,24 +113,25 @@
                     "integrator-section/verifiable-document/did/create",
                     "integrator-section/verifiable-document/did/document-store-or-ocsp",
                     "integrator-section/verifiable-document/did/dns",
-                    "integrator-section/verifiable-document/did/raw-document",
-                    "integrator-section/verifiable-document/did/wrapping-document",
+                    "integrator-section/verifiable-document/did/raw-document-did",
+                    "integrator-section/verifiable-document/did/wrapping-document-did",
                     "integrator-section/verifiable-document/did/signing-document",
-                    "integrator-section/verifiable-document/did/revoking-document"
+                    "integrator-section/verifiable-document/did/revoking-document-did"
                   ]
                 },
-                "integrator-section/verifiable-document/differences"
+                "integrator-section/verifiable-document/differences",
+                "integrator-section/verifiable-document/going-further"
               ]
             },
             {
               "type": "category",
               "label": "Transferable Record",
               "items": [
-                "integrator-section/transferable-record/overview",
+                "integrator-section/transferable-record/overview-tr",
                 "integrator-section/transferable-record/token-registry",
                 "integrator-section/transferable-record/preparing-transferable-record",
                 "integrator-section/transferable-record/issuing-transferable-record",
-                "integrator-section/transferable-record/going-further"
+                "integrator-section/transferable-record/going-further-tr"
               ]
             }
           ]
@@ -145,7 +165,7 @@
       "type": "category",
       "label": "Libraries",
       "items": [
-        "developer-section/libraries/overview",
+        "developer-section/libraries/overview-lib",
         "developer-section/libraries/remote-files/open-attestation",
         "developer-section/libraries/remote-files/open-attestation-cli",
         "developer-section/libraries/remote-files/open-attestation-encryption",
@@ -163,9 +183,7 @@
           "label": "Decentralized Renderer",
           "items": [
             "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-components",
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-template",
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-svelte-template",
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-vue-template"
+            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-template"
           ]
         },
         "developer-section/libraries/remote-files/document-store",

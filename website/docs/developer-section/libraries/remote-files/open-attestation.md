@@ -1,8 +1,8 @@
 ---
 id: open-attestation
-title: Open Attestation
+title: OpenAttestation
 hide_title: true
-sidebar_label: Open Attestation
+sidebar_label: OpenAttestation
 ---
 
 [![CircleCI](https://circleci.com/gh/Open-Attestation/open-attestation.svg?style=svg)](https://circleci.com/gh/Open-Attestation/open-attestation)

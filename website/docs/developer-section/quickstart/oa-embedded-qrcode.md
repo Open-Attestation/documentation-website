@@ -217,7 +217,7 @@ To share an OA document via a QR code:
 
 4. Use your preferred QR code generator to turn the URL into a QR code.
 
-5. Share the QR code with other users to let them view the document in a compatible verifier.
+5. Share the QR code with other users, so that they can view the document in a compatible verifier.
 
 
 ## Additional information about the distribution methods

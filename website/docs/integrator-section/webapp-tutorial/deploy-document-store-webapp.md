@@ -4,7 +4,7 @@ title: Deploying Document Store with Web App
 sidebar_label: Deploying Document Store
 ---
 
-This guide will help you deploy a document store using one of the available web applications. 
+This guide shows how to deploy a document store using one of the available web applications.
 
 Currently, there are two web applications:
 
@@ -52,7 +52,7 @@ To interact with the OpenCerts Admin Portal web app, you will need to connect yo
 
 ![MetaMask Connection Request](/docs/integrator-section/webapp-tutorial/document-store-webapp/select-wallet.png)
 
-4. Click **Connect** to allow the web app to interact with the MetaMask wallet.
+4. Click **Connect** to make the web app interact with the MetaMask wallet.
 
 ## Deploying Document Store Smart Contract
 

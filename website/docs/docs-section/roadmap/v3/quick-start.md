@@ -1,5 +1,5 @@
 ---
-id: quick-start
+id: quick-start-v3-beta
 title: Quick Start (V3 Beta)
 sidebar_label: Quick Start
 ---

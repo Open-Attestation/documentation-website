@@ -1,4 +1,5 @@
 ---
+id: document-store-or-ocsp
 title: Deploying Document Store or OCSP
 sidebar_label: Deploying Document Store or OCSP
 ---

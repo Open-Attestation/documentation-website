@@ -1,9 +1,10 @@
 ---
+id: comparison
 title: Comparison
 sidebar_label: Comparison
 ---
 
-This article compares the differences between Ethereum smart contract verifiable credentials and DID verifiable credentials. It will help you choose the correct workflow depending on your needs.
+This article compares the differences between Ethereum smart contract verifiable credentials and DID verifiable credentials. You can choose the correct workflow depending on your needs.
 
 ## Infrastructure
 
@@ -39,7 +40,7 @@ For DID, it's the opposite and all transaction information is untraced by defaul
 
 Revocation is part of Ethereum smart contracts.
 
-As of today, it is possible to revoke a document if a document store has been declared in its revocation block. You can revoke a document [using a document store or an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document).
+As of today, it is possible to revoke a document if a document store has been declared in its revocation block. You can revoke a document [using a document store or an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document-did).
 
 >**Note:** If you use revocation for `DID`, you still need to have at least one transaction with the Ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
 

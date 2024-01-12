@@ -4,7 +4,7 @@ title: Revoking Document with Web App
 sidebar_label: Revoking Document
 ---
 
-This guide will help you revoke a hash using one of the available web applications. 
+This guide shows how to revoke a hash using one of the available web applications. 
 
 Currently, there are two web applications:
 

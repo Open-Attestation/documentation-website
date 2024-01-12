@@ -26,7 +26,7 @@ Before running the command below, replace the folder names. For example:
 
 <!--
 This file is mostly duplicated with the same content at the following locations:
-1. docs/integrator-section/verifiable-document/did/wrapping-document.md
+1. docs/integrator-section/verifiable-document/did/wrapping-document-did.md
 2. docs/integrator-section/verifiable-document/ethereum/wrapping-document.md
  -->
 

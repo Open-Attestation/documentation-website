@@ -1,8 +1,8 @@
 ---
 id: open-attestation-cli
-title: Open Attestation (CLI)
+title: OpenAttestation (CLI)
 hide_title: true
-sidebar_label: Open Attestation (CLI)
+sidebar_label: OpenAttestation (CLI)
 ---
 
 # Open Attestation (CLI)

@@ -1,6 +1,6 @@
 ---
-id: overview
-title: OpenAttestation V3 (Beta)
+id: overview-v3-beta
+title: OpenAttestation (V3 Beta)
 sidebar_label: Overview
 ---
 

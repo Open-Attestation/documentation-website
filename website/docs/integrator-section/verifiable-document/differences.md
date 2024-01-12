@@ -1,4 +1,5 @@
 ---
+id: differences
 title: Differences between Ethereum and DID
 sidebar_label: Differences between Ethereum and DID
 ---
@@ -36,7 +37,7 @@ The table compares the differences between the two methods in **bold**:
 ### Deploy Document Store
 
 * The Ethereum method requires the deployment of Document Store at the beginning of the procedure, immediately after creating a wallet. 
-* The DID method requires the deployment of Document Store as an optional step and [one of the prerequisites to revoke a document](/docs/integrator-section/verifiable-document/did/revoking-document#prerequisites).
+* The DID method requires the deployment of Document Store as an optional step and [one of the prerequisites to revoke a document](/docs/integrator-section/verifiable-document/did/revoking-document-did#prerequisites).
 
 
 ### Configure DNS
@@ -47,7 +48,7 @@ The table compares the differences between the two methods in **bold**:
 ### Create raw documents
 
 * The Ethereum method [binds the document store's identity](/docs/integrator-section/verifiable-document/ethereum/raw-document#1-issuers0identityprooflocation) to DNS name. 
-* The DID method [binds the wallet address](/docs/integrator-section/verifiable-document/did/raw-document#1-issuers0identityprooflocation) to the DNS name.
+* The DID method [binds the wallet address](/docs/integrator-section/verifiable-document/did/raw-document-did#1-issuers0identityprooflocation) to the DNS name.
 
 ### Issue or sign documents
 
@@ -55,8 +56,8 @@ The table compares the differences between the two methods in **bold**:
 
 ### Revoke documents
 
-* The Ethereum method lets the user revoke documents using [Document Store](/docs/integrator-section/verifiable-document/ethereum/revoking-document#revoking-a-document).
-* The DID method lets the user revoke documents using either [Document Store](/docs/integrator-section/verifiable-document/did/revoking-document#revoking-using-document-store) or [Online Certificate Status Protocol (OCSP) responder](/docs/integrator-section/verifiable-document/did/revoking-document#revoking-using-ocsp).
+* In the Ethereum method, the user can revoke documents using [Document Store](/docs/integrator-section/verifiable-document/ethereum/revoking-document#revoking-a-document).
+* In the DID method, the user can revoke documents using either [Document Store](/docs/integrator-section/verifiable-document/did/revoking-document-did#revoking-using-document-store) or [Online Certificate Status Protocol (OCSP) responder](/docs/integrator-section/verifiable-document/did/revoking-document-did#revoking-using-ocsp).
 
 ## Relevant article
 To better understand how to choose the correct workflow that works for you, see [this article](/docs/docs-section/how-does-it-work/comparison).

@@ -1,8 +1,8 @@
 ---
 id: open-attestation-verify
-title: Open Attestation (Verify)
+title: OpenAttestation (Verify)
 hide_title: true
-sidebar_label: Open Attestation (Verify)
+sidebar_label: OpenAttestation (Verify)
 ---
 
 [![CircleCI](https://circleci.com/gh/Open-Attestation/oa-verify.svg?style=svg)](https://circleci.com/gh/Open-Attestation/oa-verify)

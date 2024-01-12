@@ -1,9 +1,10 @@
 ---
+id: document-integrity
 title: Document Integrity
 sidebar_label: Document Integrity
 ---
 
-OpenAttestation ensures that the content of the document has not been modified since the document was created, with the exception of data removed using the built-in [obfuscation mechanism](/docs/developer-section/libraries/remote-files/open-attestation#obfuscating-data). Let's explore how it works.
+OpenAttestation ensures that the content of the document has not been modified since the document was created, with the exception of data removed using the built-in [obfuscation mechanism](/docs/developer-section/libraries/remote-files/open-attestation#obfuscating-data).
 
 The Ethereum tutorial shows you how to [wrap a document](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) and [issue it](/docs/integrator-section/verifiable-document/ethereum/issuing-document) into a document store. 
 
@@ -81,7 +82,7 @@ In a later procedure of verifying the document, you will perform exactly the sam
 
 #### Data obfuscation
 
-Due to the way you compute `targetHash`, OpenAttestation lets you obfuscate data not intended for public access. To achieve this, the hash of a specific field is computed and added into the document. You can try it with the [CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) and the document above:
+Due to the way you compute `targetHash`, you can use OpenAttestation to obfuscate data not intended for public access. To achieve this, the hash of a specific field is computed and added into the document. You can try it with the [CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) and the document above:
 
 ```bash
 open-attestation filter ./path/to/file.json ./output.json name
@@ -131,7 +132,7 @@ The only difference with the [`targetHash`](#targethash) computation is in Step 
 
 ![Compute target hash with data obfuscation](/docs/docs-section/how-does-it-work/target-hash-with-data-obfuscation.png)
 
-With the help of data obfuscation, the user will have the option to share only a subset of the data.
+Using data obfuscation, the user will have the option to share only a subset of the data.
 
 ## Additional information
 

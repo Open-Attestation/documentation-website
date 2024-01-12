@@ -29,7 +29,7 @@ const siteConfig = {
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "Open Attestation",
+        name: "OpenAttestation",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/open-attestation/master/",
         outDir: "docs/developer-section/libraries/remote-files/",
         documents: ["README.md"],
@@ -38,9 +38,9 @@ const siteConfig = {
             filename: "open-attestation.md",
             content: `---
 id: open-attestation
-title: Open Attestation
+title: OpenAttestation
 hide_title: true
-sidebar_label: Open Attestation
+sidebar_label: OpenAttestation
 ---
 
 ${content}`,
@@ -51,7 +51,7 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "Open Attestation (CLI)",
+        name: "OpenAttestation (CLI)",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/open-attestation-cli/master/",
         outDir: "docs/developer-section/libraries/remote-files/",
         documents: ["README.md"],
@@ -60,9 +60,9 @@ ${content}`,
             filename: "open-attestation-cli.md",
             content: `---
 id: open-attestation-cli
-title: Open Attestation (CLI)
+title: OpenAttestation (CLI)
 hide_title: true
-sidebar_label: Open Attestation (CLI)
+sidebar_label: OpenAttestation (CLI)
 ---
 
 ${content}`,
@@ -73,7 +73,7 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "Open Attestation (Encryption)",
+        name: "OpenAttestation (Encryption)",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/oa-encryption/master/",
         outDir: "docs/developer-section/libraries/remote-files/",
         documents: ["README.md"],
@@ -82,9 +82,9 @@ ${content}`,
             filename: "open-attestation-encryption.md",
             content: `---
 id: open-attestation-encryption
-title: Open Attestation (Encryption)
+title: OpenAttestation (Encryption)
 hide_title: true
-sidebar_label: Open Attestation (Encryption)
+sidebar_label: OpenAttestation (Encryption)
 ---
 
 ${content}`,
@@ -95,7 +95,7 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "Open Attestation (Verify)",
+        name: "OpenAttestation (Verify)",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/oa-verify/master/",
         outDir: "docs/developer-section/libraries/remote-files/",
         documents: ["README.md"],
@@ -104,9 +104,9 @@ ${content}`,
             filename: "open-attestation-verify.md",
             content: `---
 id: open-attestation-verify
-title: Open Attestation (Verify)
+title: OpenAttestation (Verify)
 hide_title: true
-sidebar_label: Open Attestation (Verify)
+sidebar_label: OpenAttestation (Verify)
 ---
 
 ${content}`,
@@ -150,54 +150,9 @@ ${content}`,
             filename: "decentralized-renderer-react-template.md",
             content: `---
 id: decentralized-renderer-react-template
-title: React template
+title: React Template
 hide_title: true
-sidebar_label: React template
----
-
-${content}`,
-          };
-        },
-      },
-    ],
-    [
-      "docusaurus-plugin-remote-content",
-      {
-        name: "React Svelte Template",
-        sourceBaseUrl:
-          "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-svelte-template/master/",
-        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
-        documents: ["README.md"],
-        modifyContent(fileName, content) {
-          return {
-            filename: "decentralized-renderer-svelte-template.md",
-            content: `---
-id: decentralized-renderer-svelte-template
-title: Svelte Template
-hide_title: true
-sidebar_label: Svelte Template
----
-
-${content}`,
-          };
-        },
-      },
-    ],
-    [
-      "docusaurus-plugin-remote-content",
-      {
-        name: "Vue Template",
-        sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-vue-template/master/",
-        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
-        documents: ["README.md"],
-        modifyContent(fileName, content) {
-          return {
-            filename: "decentralized-renderer-vue-template.md",
-            content: `---
-id: decentralized-renderer-vue-template
-title: Vue Template
-hide_title: true
-sidebar_label: Vue Template
+sidebar_label: React Template
 ---
 
 ${content}`,
@@ -260,14 +215,38 @@ ${content}`,
         srcDark: "img/logos/oa.svg",
       },
       items: [
+
+        {
+          type: 'dropdown',
+          label: 'Issue/Revoke',
+          position: 'left',
+          items: [
+            {
+              label: 'Prerequisites',
+              to: '/docs/test1-section/prerequisites',
+              activeBasePath: '/docs/test1-section',
+            },
+            {
+              label: 'Issue verifiable documents with DID',
+              to: '/docs/test2-section/intro',
+              activeBasePath: '/docs/test2-section',
+            },
+            {
+              label: 'Issue verifiable documents with Ethereum',
+              to: '/docs/test3-section/tutorial',
+              activeBasePath: '/docs/test3-section',
+            },
+            // ... more items
+          ],
+        },
+
         { to: "docs/docs-section/introduction", label: "Docs", position: "left" },
         { to: "docs/integrator-section/verifiable-document/overview", label: "Integrator", position: "left" },
         {
           to: "docs/developer-section/quickstart/create-verifiable-document-issuer",
           label: "Developer",
           position: "left",
-        },
-        { to: "blog", label: "Blog", position: "left" },
+        }
       ],
     },
     footer: {

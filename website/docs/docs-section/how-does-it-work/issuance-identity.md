@@ -7,7 +7,7 @@ import SupportedNetworks from "/src/reusables/_supported-networks.mdx";
 
 OpenAttestation uses the Domain Name System (DNS) as the method to verify the issuer's identity. A one-line summary of the DNS system can be "a Phone book for the Internet". Its primary purpose is to resolve human readable names such as "google.com" or "openattestation.com" etc. to a set of records. IP addresses, the most common DNS records, make it possible for network routing to operate over the Internet.
 
-OpenAttestation uses records in the TXT format, so that it can store textual data. The textual data indicates the document store that the domain administrator trusts.
+OpenAttestation uses records in the TXT format which store textual data. The textual data indicate the document stores that the domain administrators trust.
 
 To use the DNS system as an identity registry, the domain name owner must claim the ownership of an OpenAttestation Document Store smart contract on the Ethereum Blockchain.
 

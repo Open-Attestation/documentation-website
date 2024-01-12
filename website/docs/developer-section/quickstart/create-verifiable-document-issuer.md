@@ -46,13 +46,13 @@ You can read more about the components [here](/docs/integrator-section/verifiabl
 
 ## Overview
 
-You will build a single-page application, so that the user can perform the following:
+You will build a single-page application with these features:
 
-1. Connect to their MetaMask wallet.
-2. Deploy their own document store.
-3. Bind their own domain name to their verifiable document.
-4. Create and wrap a raw document.
-5. Issue, download, and then verify the wrapped document.
+1. The users can connect to their MetaMask wallet.
+2. They can deploy their own document store.
+3. They can bind their own domain name to their verifiable document.
+4. They can create and wrap a raw document.
+5. They can issue, download, and then verify the wrapped document.
 
 ## Setup
 
@@ -63,7 +63,7 @@ npm create vite@latest verifiable-document-issuer --template react-ts
 cd verifiable-document-issuer
 ```
 
-2. Install the following packages, so that the application can interact with the blockchain.
+2. Install the following packages for the application to interact with the blockchain.
 
 ```
 npm i @govtechsg/document-store @govtechsg/open-attestation ethers
@@ -134,7 +134,7 @@ const App = () => {
 export default App;
 ```
 
-When you reload the app, the MetaMask extension should prompt you for your password and ask for permission, so that the site can access your accounts.
+When you reload the app, the MetaMask extension should prompt you for your password and ask for permission to allow the site access to your accounts.
 
 ### Deploying Document Store
 
@@ -379,7 +379,7 @@ export const Steps = () => {
         
     * `Verify` links to the verification site where the user can upload and verify the issued `wrappedDocument`.
         
-    * `Create Another` restarts the issuing process, so that the user can create and issue another `wrappedDocument`.
+    * `Create Another` restarts the issuing process to create and issue another `wrappedDocument`.
 
 You have created your own verifiable document issuer successfully.
 

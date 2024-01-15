@@ -1,10 +1,10 @@
 ---
-id: contract-costs
-title: Contract Costs
-sidebar_label: Contract Costs
+id: costs-verifiable-documents
+title: Costs related to verifiable documents
+sidebar_label: Costs related to verifiable documents
 ---
 
-import { PriceTable } from "../../../src/components/ContractCostTable";
+import { PriceTable } from "/src/components/ContractCostTable";
 
 This article breaks down the estimated gas and costs involved in interacting with the contracts.
 The estimated gas usage can be slightly different depending on the states of the contract when it is called. The gas prices and fiat costs are constantly changing and you should check the numbers from a reliable source to get an accurate figure.
@@ -15,9 +15,3 @@ The estimated gas usage can be slightly different depending on the states of the
 ### Verifiable documents
 
 <PriceTable type="verifiable" priceFormatOptions={{ maximumSignificantDigits: 3, minimumFractionDigits: 2 }} />
-
-### Transferable documents
-
-<PriceTable type="transferable" priceFormatOptions={{ maximumSignificantDigits: 3, minimumFractionDigits: 2 }} />
-
->**Note:** The estimated gas may change along with any updates in the contracts. The current estimation is based on Document Store v2.2.3 and Token Registry v3.0.0.

@@ -222,4 +222,4 @@ To share an OA document via a QR code:
 
 ## Additional information about the distribution methods
 
-To learn more about the pros and cons of QR code and other distribution methods, see [this article](/docs/docs-section/faq#how-are-openattestation-documents-distributed).
+To learn more about the pros and cons of QR code and other distribution methods, see [this article](/docs/faq-section/faq04).

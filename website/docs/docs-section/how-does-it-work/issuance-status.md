@@ -68,7 +68,7 @@ Currently, OpenAttestation only supports one DID method, `ethr`.
 
 ### Issuance
 
-DIDs [are significantly faster and incur not costs](/docs/docs-section/how-does-it-work/comparison). They can directly use the `targetHash` of the document (which is unique) and sign it using the associated private key. However, for consistency with the initial design of OpenAttestation, you need to sign the `merkleRoot`.
+DIDs [are significantly faster and incur not costs](/docs/overview-section/overview). They can directly use the `targetHash` of the document (which is unique) and sign it using the associated private key. However, for consistency with the initial design of OpenAttestation, you need to sign the `merkleRoot`.
 
 The information about the signature is added to the document, into the `proof` property. That means the document has been issued.
 

@@ -1,33 +1,33 @@
 {
-  "overview-section": [
+  "overview": [
     "overview-section/overview"
   ],
 
-  "test1": [
-    "test1-section/prerequisites"
+  "prereq": [
+    "prereq-section/prerequisites"
   ],
 
-  "test2": [
+  "did": [
     {
       "type": "category",
       "label": "Issue verifiable documents with DID",
       "items": [
-        "test2-section/overview-did",
-        "test2-section/create",
-        "test2-section/document-store-or-ocsp",
-        "test2-section/dns",
-        "test2-section/raw-document-did",
-        "test2-section/wrap-document-did",
-        "test2-section/sign-document",
-        "test2-section/additional-did",
+        "did-section/overview-did",
+        "did-section/create",
+        "did-section/document-store-or-ocsp",
+        "did-section/dns",
+        "did-section/raw-document-did",
+        "did-section/wrap-document-did",
+        "did-section/sign-document",
+        "did-section/additional-did",
 
        [
           {
             "type": "category",
             "label": "Revoke documents issued using DID",
             "items": [
-              "test2-section/revoke-document-did/revoke-using-ocsp",
-              "test2-section/revoke-document-did/revoke-using-document-store"
+              "did-section/revoke-document-did/revoke-using-ocsp",
+              "did-section/revoke-document-did/revoke-using-document-store"
                 ]
               }
             ]
@@ -35,26 +35,26 @@
       }
   ],
 
-  "test3": [
+  "ethereum": [
     {
       "type": "category",
       "label": "Issue verifiable documents with Ethereum",
       "items": [
-        "test3-section/overview-eth",
-        "test3-section/wallet",
-        "test3-section/document-store",
-        "test3-section/dns-proof",
-        "test3-section/raw-document-eth",
-        "test3-section/wrap-document-eth",
-        "test3-section/issue-document",
-        "test3-section/additional-eth",
+        "ethereum-section/overview-eth",
+        "ethereum-section/wallet",
+        "ethereum-section/document-store",
+        "ethereum-section/dns-proof",
+        "ethereum-section/raw-document-eth",
+        "ethereum-section/wrap-document-eth",
+        "ethereum-section/issue-document",
+        "ethereum-section/additional-eth",
 
         [
           {
             "type": "category",
             "label": "Revoke documents issued using Ethereum",
             "items": [
-              "test3-section/revoke-document-eth/revoke-eth"
+              "ethereum-section/revoke-document-eth/revoke-eth"
                 ]
               }
             ]
@@ -63,32 +63,32 @@
       }
   ],
 
-  "test4": [
+  "transferable": [
     {
       "type": "category",
       "label": "Issue transferable records with Ethereum",
       "items": [
-        "test4-section/overview-tr",
-        "test4-section/token-registry",
-        "test4-section/prepare-transferable-record",
-        "test4-section/issue-transferable-record",
-        "test4-section/additional-tr"
+        "transferable-section/overview-tr",
+        "transferable-section/token-registry",
+        "transferable-section/prepare-transferable-record",
+        "transferable-section/issue-transferable-record",
+        "transferable-section/additional-tr"
       ]
     }
   ],
 
-  "test5": [
+  "revoke": [
     {
     "type": "category",
     "label": "Revoke documents",
     "items": [
-      "test5-section/revoke",
-      "test5-section/diff-btw-revocation-methods"
+      "revoke-section/revoke",
+      "revoke-section/diff-btw-revocation-methods"
     ]
    }
   ],
 
-  "verify-section": [
+  "verify": [
     "verify-section/verify",
     "verify-section/main-properties",
     "verify-section/document-integrity",
@@ -96,14 +96,14 @@
     "verify-section/issuance-identity"
   ],
 
-  "distribute-section": [
+  "distribute": [
     "distribute-section/distribute",
     "distribute-section/oa-embed",
     "distribute-section/oa-embed-html",
     "distribute-section/oa-embed-qrcode"
   ],
 
-  "lib-section": [
+  "lib": [
     {
       "type": "category",
       "label": "Libraries",
@@ -121,7 +121,7 @@
     }
   ],
 
-  "guides-section": [
+  "guides": [
     {
       "type": "category",
       "label": "Guides",
@@ -139,7 +139,7 @@
     }
   ],
 
-  "faq-section": [
+  "faq": [
     {
       "type": "category",
       "label": "Frequently asked questions",
@@ -158,11 +158,11 @@
     }
   ],
 
-  "glossary-section": [
+  "glossary": [
     "glossary-section/glossary"
   ],
 
-  "changelog-section": [
+  "changelog": [
     {
       "type": "category",
       "label": "Changelog",
@@ -174,7 +174,7 @@
     }
   ],
 
-  "costs-section": [
+  "costs": [
     {
       "type": "category",
       "label": "Blockchain costs",
@@ -187,7 +187,7 @@
     }
   ],
 
-  "limit-section": [
+  "limit": [
     "limit-section/limitations"
   ],
 

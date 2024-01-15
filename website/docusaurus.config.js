@@ -229,31 +229,31 @@ ${content}`,
 
             {
               label: 'Prerequisites',
-              to: '/docs/test1-section/prerequisites',
-              activeBasePath: '/docs/test1-section',
+              to: '/docs/prereq-section/prerequisites',
+              activeBasePath: '/docs/prereq-section',
             },
 
             {
               label: 'Issue verifiable documents with DID',
-              to: '/docs/test2-section/overview-did',
-              activeBasePath: '/docs/test2-section',
+              to: '/docs/did-section/overview-did',
+              activeBasePath: '/docs/did-section',
             },
 
             {
               label: 'Issue verifiable documents with Ethereum',
-              to: '/docs/test3-section/overview-eth',
-              activeBasePath: '/docs/test3-section',
+              to: '/docs/ethereum-section/overview-eth',
+              activeBasePath: '/docs/ethereum-section',
             },
             {
               label: 'Issue transferable records with Ethereum',
-              to: '/docs/test4-section/overview-tr',
-              activeBasePath: '/docs/test4-section',
+              to: '/docs/transferable-section/overview-tr',
+              activeBasePath: '/docs/transferable-section',
             },
 
             {
               label: 'Revoke documents',
-              to: '/docs/test5-section/revoke',
-              activeBasePath: '/docs/test5-section',
+              to: '/docs/revoke-section/revoke',
+              activeBasePath: '/docs/revoke-section',
             },
 
           ],

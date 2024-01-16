@@ -4,4 +4,4 @@ title: Additional information
 sidebar_label: Additional information
 ---
 
-testing
+For further reading about transferable records, visit [the TradeTrust documentation](https://docs.tradetrust.io/docs/introduction/what-is-tradetrust).

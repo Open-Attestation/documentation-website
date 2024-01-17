@@ -4,6 +4,12 @@ title: Overview
 sidebar_label: Overview
 ---
 
+<!--Merge
+id: introduction
+title: Introduction to OpenAttestation
+sidebar_label: introduction
+-->
+
 OpenAttestation is an open source framework for verifiable documents and transferable records.
 
 ## Verifiable document
@@ -127,7 +133,7 @@ The difference is subtle, but very important. If you lose control of the private
 If you are considering whether you can use a validity date in the DNS-TXT record to indicate when a DID has been compromised, this solution doesn't work. Nothing prevents an attacker from backdating the issuance of a credential to any arbitrary time. However, an attacker can't modify the history of issuance on Ethereum or specify a block number in the past to be recorded.
 
 
-<!-- Merge
+<!--Merge
 id: differences
 title: Differences between Ethereum and DID
 sidebar_label: Differences between Ethereum and DID

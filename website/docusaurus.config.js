@@ -288,7 +288,7 @@ ${content}`,
             {
               label: 'Glossary',
               to: '/docs/glossary-section/glossary',
-              activeBasePath: '/docs/glossary-section/glossary',
+              activeBasePath: '/docs/glossary-section',
             },
 
             {

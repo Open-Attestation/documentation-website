@@ -1,6 +1,8 @@
 {
   "overview": [
-    "overview-section/overview"
+    "overview-section/overview",
+    "overview-section/comparison",
+    "overview-section/differences"
   ],
 
   "prereq": [
@@ -8,10 +10,7 @@
   ],
 
   "did": [
-    {
-      "type": "category",
-      "label": "Issue verifiable documents with DID",
-      "items": [
+
         "did-section/overview-did",
         "did-section/create",
         "did-section/document-store-or-ocsp",
@@ -20,8 +19,7 @@
         "did-section/wrap-document-did",
         "did-section/sign-document",
         "did-section/additional-did",
-
-       [
+       
           {
             "type": "category",
             "label": "Revoke documents issued using DID",
@@ -30,16 +28,11 @@
               "did-section/revoke-document-did/revoke-using-document-store"
                 ]
               }
-            ]
-         ]
-      }
+
   ],
 
   "ethereum": [
-    {
-      "type": "category",
-      "label": "Issue verifiable documents with Ethereum",
-      "items": [
+
         "ethereum-section/overview-eth",
         "ethereum-section/wallet",
         "ethereum-section/document-store",
@@ -49,7 +42,6 @@
         "ethereum-section/issue-document",
         "ethereum-section/additional-eth",
 
-        [
           {
             "type": "category",
             "label": "Revoke documents issued using Ethereum",
@@ -57,35 +49,20 @@
               "ethereum-section/revoke-document-eth/revoke-eth"
                 ]
               }
-            ]
 
-         ]
-      }
   ],
 
   "transferable": [
-    {
-      "type": "category",
-      "label": "Issue transferable records with Ethereum",
-      "items": [
         "transferable-section/overview-tr",
         "transferable-section/token-registry",
         "transferable-section/prepare-transferable-record",
         "transferable-section/issue-transferable-record",
         "transferable-section/additional-tr"
-      ]
-    }
   ],
 
   "revoke": [
-    {
-    "type": "category",
-    "label": "Revoke documents",
-    "items": [
       "revoke-section/revoke",
       "revoke-section/diff-btw-revocation-methods"
-    ]
-   }
   ],
 
   "verify": [
@@ -104,10 +81,6 @@
   ],
 
   "lib": [
-    {
-      "type": "category",
-      "label": "Libraries",
-      "items": [
         "lib-section/overview-lib",
         "lib-section/remote-files/open-attestation",
         "lib-section/remote-files/open-attestation-cli",
@@ -117,15 +90,9 @@
         "lib-section/remote-files/token-registry",
         "lib-section/remote-files/decentralized-renderer-react-components",
         "lib-section/remote-files/decentralized-renderer-react-template"
-      ]
-    }
   ],
 
   "guides": [
-    {
-      "type": "category",
-      "label": "Guides",
-      "items": [
         "guides-section/create-issuer",
         "guides-section/renderer-template",
         "guides-section/custom-schema",
@@ -135,15 +102,9 @@
         "guides-section/web-app-issue",
         "guides-section/web-app-revoke",
         "guides-section/additional-guides"
-      ]
-    }
   ],
 
   "faq": [
-    {
-      "type": "category",
-      "label": "Frequently asked questions",
-      "items": [
         "faq-section/faq01",
         "faq-section/faq02",
         "faq-section/faq03",
@@ -155,8 +116,6 @@
         "faq-section/faq09",
         "faq-section/faq10",
         "faq-section/faq11"
-      ]
-    }
   ],
 
   "glossary": [
@@ -164,28 +123,16 @@
   ],
 
   "changelog": [
-    {
-      "type": "category",
-      "label": "Changelog",
-      "items": [
         "changelog-section/overview-changelog",
         "changelog-section/v3-v4",
         "changelog-section/v2-v3"
-      ]
-    }
   ],
 
   "costs": [
-    {
-      "type": "category",
-      "label": "Blockchain costs",
-      "items": [
         "costs-section/overview-costs",
         "costs-section/costs-verifiable-documents",
         "costs-section/costs-transferable-records",
         "costs-section/saving-comparison"
-      ]
-    }
   ],
 
   "limit": [

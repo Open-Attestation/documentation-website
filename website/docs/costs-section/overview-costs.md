@@ -1,5 +1,5 @@
 ---
 id: overview-costs
-title: Overview
+title: About the blockchain costs
 sidebar_label: Overview
 ---

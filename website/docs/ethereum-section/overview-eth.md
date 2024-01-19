@@ -1,7 +1,7 @@
 ---
 id: overview-eth
-title: Component overview
-sidebar_label: Component overview
+title: About issuing verifiable documents using Ethereum
+sidebar_label: Overview
 ---
 
 ## Overview of components

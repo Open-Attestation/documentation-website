@@ -1,7 +1,7 @@
 ---
 id: overview-tr
-title: Component overview
-sidebar_label: Component overview
+title: About issuing transferable records using Ethereum
+sidebar_label: Overview
 ---
 
 A Transferable Record is an extended form of a verifiable document, which makes it possible for the document to have an owner. Transferable Records reference the properties listed in [the UNCITRAL Model Law on Electronic Transferable Records](https://www.uncitral.org/pdf/english/texts/electcom/MLETR_ebook.pdf).

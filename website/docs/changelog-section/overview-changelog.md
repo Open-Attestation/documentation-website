@@ -1,6 +1,6 @@
 ---
 id: overview-changelog
-title: Overview
+title: About the changelog
 sidebar_label: Overview
 ---
 

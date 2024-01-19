@@ -1,6 +1,6 @@
 ---
 id: overview-did
-title: Overview
+title: About issuing verifiable documents using DID
 sidebar_label: Overview
 ---
 

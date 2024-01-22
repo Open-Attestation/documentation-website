@@ -26,7 +26,7 @@ If you are using OpenAttestation to issue or verify a document, it is recommende
 
 ## Major changes from V2
 
-See major changes from Version 2 [here](/docs/docs-section/roadmap/v3/major-changes).
+See major changes from Version 2 [here](/docs/changelog-section/v2-v3).
 
 ## Tool compatibility
 

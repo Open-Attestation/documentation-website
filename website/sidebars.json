@@ -23,6 +23,7 @@
           {
             "type": "category",
             "label": "Revoke documents issued using DID",
+            "collapsed": false,
             "items": [
               "did-section/revoke-document-did/revoke-using-ocsp",
               "did-section/revoke-document-did/revoke-using-document-store"
@@ -45,6 +46,7 @@
           {
             "type": "category",
             "label": "Revoke documents issued using Ethereum",
+            "collapsed": false,
             "items": [
               "ethereum-section/revoke-document-eth/revoke-eth"
                 ]
@@ -67,10 +69,18 @@
 
   "verify": [
     "verify-section/verify",
-    "verify-section/main-properties",
-    "verify-section/document-integrity",
-    "verify-section/issuance-status",
-    "verify-section/issuance-identity"
+    
+    {
+      "type": "category",
+      "label": "Three main verification properties",
+      "collapsed": false,
+      "items": [
+        "verify-section/main-properties",
+        "verify-section/document-integrity",
+        "verify-section/issuance-status",
+        "verify-section/issuance-identity"
+          ]
+      }
   ],
 
   "distribute": [
@@ -93,6 +103,7 @@
   ],
 
   "guides": [
+        "guides-section/overview-guides",
         "guides-section/create-issuer",
         "guides-section/renderer-template",
         "guides-section/custom-schema",
@@ -105,6 +116,7 @@
   ],
 
   "faq": [
+      "faq-section/overview-faq",
       {
       "type": "category",
       "label": "Framework",

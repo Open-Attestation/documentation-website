@@ -1,7 +1,7 @@
 ---
 id: main-properties
-title: Three main verification properties
-sidebar_label: Three main verification properties
+title: About the verification properties
+sidebar_label: Overview
 ---
 
 To gain a comprehensive understanding of how OpenAttestation works, look into the various properties the framework provides for your documents:

@@ -276,13 +276,13 @@ ${content}`,
 
             {
               label: 'Guides',
-              to: '/docs/guides-section/create-issuer',
+              to: '/docs/guides-section/overview-guides',
               activeBasePath: '/docs/guides-section',
             },
 
             {
               label: 'Frequently asked questions',
-              to: '/docs/faq-section/faq01',
+              to: '/docs/faq-section/overview-faq',
               activeBasePath: '/docs/faq-section',
             },
             {

@@ -31,7 +31,7 @@ const siteConfig = {
       {
         name: "OpenAttestation",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/open-attestation/master/",
-        outDir: "docs/developer-section/libraries/remote-files/",
+        outDir: "docs/lib-section/remote-files/",
         documents: ["README.md"],
         modifyContent(fileName, content) {
           return {
@@ -53,7 +53,7 @@ ${content}`,
       {
         name: "OpenAttestation (CLI)",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/open-attestation-cli/master/",
-        outDir: "docs/developer-section/libraries/remote-files/",
+        outDir: "docs/lib-section/remote-files/",
         documents: ["README.md"],
         modifyContent(fileName, content) {
           return {
@@ -75,7 +75,7 @@ ${content}`,
       {
         name: "OpenAttestation (Encryption)",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/oa-encryption/master/",
-        outDir: "docs/developer-section/libraries/remote-files/",
+        outDir: "docs/lib-section/remote-files/",
         documents: ["README.md"],
         modifyContent(fileName, content) {
           return {
@@ -97,7 +97,7 @@ ${content}`,
       {
         name: "OpenAttestation (Verify)",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/oa-verify/master/",
-        outDir: "docs/developer-section/libraries/remote-files/",
+        outDir: "docs/lib-section/remote-files/",
         documents: ["README.md"],
         modifyContent(fileName, content) {
           return {
@@ -117,19 +117,19 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "React Components",
+        name: "React components for decentralized renderer",
         sourceBaseUrl:
           "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-components/master/",
-        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
+        outDir: "docs/lib-section/remote-files/",
         documents: ["README.md"],
         modifyContent(fileName, content) {
           return {
             filename: "decentralized-renderer-react-components.md",
             content: `---
 id: decentralized-renderer-react-components
-title: React Components
+title: React components for decentralized renderer
 hide_title: true
-sidebar_label: React Components
+sidebar_label: React components for decentralized renderer
 ---
 
 ${content}`,
@@ -140,19 +140,19 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "React Template",
+        name: "React template for decentralized renderer",
         sourceBaseUrl:
           "https://raw.githubusercontent.com/Open-Attestation/decentralized-renderer-react-template/master/",
-        outDir: "docs/developer-section/libraries/remote-files/decentralized-renderer/",
+        outDir: "docs/lib-section/remote-files/",
         documents: ["README.md"],
         modifyContent(fileName, content) {
           return {
             filename: "decentralized-renderer-react-template.md",
             content: `---
 id: decentralized-renderer-react-template
-title: React Template
+title: React template for decentralized renderer
 hide_title: true
-sidebar_label: React Template
+sidebar_label: React template for decentralized renderer
 ---
 
 ${content}`,
@@ -163,18 +163,18 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "Document Store",
+        name: "Document store",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/document-store/master/",
-        outDir: "docs/developer-section/libraries/remote-files/",
+        outDir: "docs/lib-section/remote-files/",
         documents: ["README.md"],
         modifyContent(fileName, content) {
           return {
             filename: "document-store.md",
             content: `---
 id: document-store
-title: Document Store
+title: Document store
 hide_title: true
-sidebar_label: Document Store
+sidebar_label: Document store
 ---
 
 ${content}`,
@@ -185,18 +185,18 @@ ${content}`,
     [
       "docusaurus-plugin-remote-content",
       {
-        name: "Token Registry",
+        name: "Token registry",
         sourceBaseUrl: "https://raw.githubusercontent.com/Open-Attestation/token-registry/master/",
-        outDir: "docs/developer-section/libraries/remote-files/",
+        outDir: "docs/lib-section/remote-files/",
         documents: ["README.md"],
         modifyContent(fileName, content) {
           return {
             filename: "token-registry.md",
             content: `---
 id: token-registry
-title: Token Registry
+title: Token registry
 hide_title: true
-sidebar_label: Token Registry
+sidebar_label: Token registry
 ---
 
 ${content}`,
@@ -215,38 +215,103 @@ ${content}`,
         srcDark: "img/logos/oa.svg",
       },
       items: [
-
+        
         {
           type: 'dropdown',
           label: 'Issue/Revoke',
           position: 'left',
           items: [
             {
-              label: 'Prerequisites',
-              to: '/docs/test1-section/prerequisites',
-              activeBasePath: '/docs/test1-section',
+              label: 'Overview',
+              to: '/docs/overview-section/overview',
+              activeBasePath: '/docs/overview-section',
             },
+
+            {
+              label: 'Prerequisites',
+              to: '/docs/prereq-section/prerequisites',
+              activeBasePath: '/docs/prereq-section',
+            },
+
             {
               label: 'Issue verifiable documents with DID',
-              to: '/docs/test2-section/intro',
-              activeBasePath: '/docs/test2-section',
+              to: '/docs/did-section/overview-did',
+              activeBasePath: '/docs/did-section',
             },
+
             {
               label: 'Issue verifiable documents with Ethereum',
-              to: '/docs/test3-section/tutorial',
-              activeBasePath: '/docs/test3-section',
+              to: '/docs/ethereum-section/overview-eth',
+              activeBasePath: '/docs/ethereum-section',
             },
-            // ... more items
+            {
+              label: 'Issue transferable records with Ethereum',
+              to: '/docs/transferable-section/overview-tr',
+              activeBasePath: '/docs/transferable-section',
+            },
+
+            {
+              label: 'Revoke documents',
+              to: '/docs/revoke-section/revoke',
+              activeBasePath: '/docs/revoke-section',
+            },
+
           ],
         },
+        
+        { to: "docs/verify-section/verify", label: "Verify", position: "left" },
 
-        { to: "docs/docs-section/introduction", label: "Docs", position: "left" },
-        { to: "docs/integrator-section/verifiable-document/overview", label: "Integrator", position: "left" },
+        { to: "docs/distribute-section/distribute", label: "Distribute", position: "left" },
+
         {
-          to: "docs/developer-section/quickstart/create-verifiable-document-issuer",
-          label: "Developer",
-          position: "left",
-        }
+          type: 'dropdown',
+          label: 'Resources',
+          position: 'left',
+          items: [
+            {
+              label: 'Libraries',
+              to: '/docs/lib-section/overview-lib',
+              activeBasePath: '/docs/lib-section',
+            },
+
+            {
+              label: 'Guides',
+              to: '/docs/guides-section/overview-guides',
+              activeBasePath: '/docs/guides-section',
+            },
+
+            {
+              label: 'Frequently asked questions',
+              to: '/docs/faq-section/overview-faq',
+              activeBasePath: '/docs/faq-section',
+            },
+            {
+              label: 'Glossary',
+              to: '/docs/glossary-section/glossary',
+              activeBasePath: '/docs/glossary-section',
+            },
+
+            {
+              label: 'Changelog',
+              to: '/docs/changelog-section/overview-changelog',
+              activeBasePath: '/docs/changelog-section',
+            },
+
+            {
+              label: 'Blockchain costs',
+              to: '/docs/costs-section/overview-costs',
+              activeBasePath: '/docs/costs-section',
+            },
+
+            {
+              label: 'Limitations',
+              to: '/docs/limit-section/limitations',
+              activeBasePath: '/docs/limit-section',
+            },
+          
+          ],
+        },
+        
       ],
     },
     footer: {
@@ -262,7 +327,7 @@ ${content}`,
           items: [
             {
               label: "Getting Started",
-              to: "docs/docs-section/introduction",
+              to: "docs/overview-section/overview",
             },
           ],
         },

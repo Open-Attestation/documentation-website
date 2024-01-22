@@ -105,17 +105,48 @@
   ],
 
   "faq": [
+      {
+      "type": "category",
+      "label": "Framework",
+      "items": [
         "faq-section/faq01",
         "faq-section/faq02",
-        "faq-section/faq03",
         "faq-section/faq04",
-        "faq-section/faq05",
-        "faq-section/faq06",
-        "faq-section/faq07",
-        "faq-section/faq08",
-        "faq-section/faq09",
-        "faq-section/faq10",
         "faq-section/faq11"
+          ]
+        },
+      {
+        "type": "category",
+        "label": "User interface",
+        "items": [
+          "faq-section/faq03"
+           ]
+        },
+      {
+        "type": "category",
+        "label": "Smart contract & costs",
+        "items": [
+          "faq-section/faq06",
+          "faq-section/faq07",
+          "faq-section/faq05",
+          "faq-section/faq09"
+            ]
+        },
+      {
+        "type": "category",
+        "label": "DNS",
+        "items": [
+          "faq-section/faq08"
+            ]
+        },       
+       {
+        "type": "category",
+        "label": "Revocation",
+        "items": [
+          "faq-section/faq10"
+            ]
+        }     
+
   ],
 
   "glossary": [

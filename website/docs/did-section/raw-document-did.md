@@ -4,7 +4,7 @@ title: Create raw documents
 sidebar_label: Create raw documents
 ---
 
-For the explanation about raw document purpose and format, see [the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/raw-document).
+For the explanation about raw document purpose and format, see [the Ethereum tutorial](/docs/ethereum-section/raw-document-eth).
 
 You will create the raw document for DID.
 
@@ -41,17 +41,17 @@ Let's create our document:
 
 ### Replacing the issuers ID
 
-Change the value of `issuers[0].id` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D` to the wallet address created from the [previous step](/docs/integrator-section/verifiable-document/did/create). 
+Change the value of `issuers[0].id` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D` to the wallet address created from the [previous step](/docs/did-section/create). 
 
 > **Note:** Keep `did:ethr:` in front of the wallet address.
 
 ### Replacing the identity proof location
 
-Change the value of `issuers[0].identityProof.location` from `intermediate-sapphire-catfish.sandbox.openattestation.com` to the dns name used to bind the wallet address in the [previous step](/docs/integrator-section/verifiable-document/did/dns).
+Change the value of `issuers[0].identityProof.location` from `intermediate-sapphire-catfish.sandbox.openattestation.com` to the dns name used to bind the wallet address in the [previous step](/docs/did-section/dns).
 
 ### Replacing the identity proof key
 
-Change the value of `issuers[0].identityProof.key` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller` to the public key used to bind the wallet address in the [previous step](/docs/integrator-section/verifiable-document/did/dns).
+Change the value of `issuers[0].identityProof.key` from `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller` to the public key used to bind the wallet address in the [previous step](/docs/did-section/dns).
 
 ## Verification
 Once all the values are configured and the raw document conforms to the schema, you will see the message `No errors found. JSON validates against the schema`.

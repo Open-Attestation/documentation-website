@@ -6,7 +6,7 @@ sidebar_label: Wrap documents
 import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
 import WrapDocumentsInBatch from "/src/reusables/_wrap-documents-in-batch.mdx";
 
-This task is same with the one [in the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/wrapping-document).
+This task is same with the one [in the Ethereum tutorial](/docs/ethereum-section/wrap-document-eth).
 
 >**Note:** If you are using both the Ethereum and DID methods, use different folders to contain the wrapped documents. This will prevent the files from being overwritten.
 

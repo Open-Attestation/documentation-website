@@ -32,7 +32,7 @@ To continue, follow the steps below:
 
 ## Prerequisites
 
-Ensure that you have followed the steps on how to issue an [Ethereum OA document](/docs/integrator-section/verifiable-document/ethereum/document-store-overview) or [DID OA document](/docs/integrator-section/verifiable-document/did/create), and have a valid OA document you want to use. 
+Ensure that you have followed the steps on how to issue an [Ethereum OA document](/docs/ethereum-section/overview-eth) or [DID OA document](/docs/did-section/create), and have a valid OA document you want to use. 
 
 In case you do not have an OA document, you can use [this sample HealthCert document](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json) to follow the guide.
 

@@ -9,11 +9,11 @@ sidebar_label: Deploy document store or OCSP
 
 > **Important:** If you have run the Ethereum method and created a document store, do not use it in the DID method.
 
-The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, you will deploy a document store smart contract on the Ethereum `sepolia` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions.
+The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, you will deploy a document store smart contract on the Ethereum `sepolia` network, which is a test network that does not require actual [ethers](/docs/glossary-section/glossary#ether) for transactions.
 
 
 ### Running the deploy document-store command
-You will use the wallet created in the [previous step](/docs/integrator-section/verifiable-document/did/create).
+You will use the wallet created in the [previous step](/docs/did-section/create).
 
 ```bash
 open-attestation deploy document-store "DID document store" --network sepolia --encrypted-wallet-path wallet.json

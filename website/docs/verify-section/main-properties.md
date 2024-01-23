@@ -4,7 +4,7 @@ title: About the verification properties
 sidebar_label: Overview
 ---
 
-To gain a comprehensive understanding of how OpenAttestation works, look into the various properties the framework provides for your documents:
+To gain a comprehensive understanding of how the verification process works, look into the various properties the OA framework provides for your documents:
 
 - [Document integrity](/docs/docs-section/how-does-it-work/document-integrity): OpenAttestation ensures that the content of the document has not been modified since the document was created, with the exception of data removed using the built-in obfuscation mechanism.
 - [Issuance status](/docs/docs-section/how-does-it-work/issuance-status): OpenAttestation checks that the document has been issued and its issuance status is in good standing (for instance, it hasn't been revoked). As of today, OpenAttestation supports two ways to issue documents: DID signing and Ethereum smart contracts.

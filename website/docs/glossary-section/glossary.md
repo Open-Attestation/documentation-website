@@ -87,7 +87,7 @@ A verifiable document is a file, record, or piece of information that the user c
 
 ### Wallet
 
-See [this definition](https://ethereum.org/en/wallets/#:~:text=Ethereum%20wallets%20are%20applications%20that,funds%20and%20manage%20your%20ETH%20).
+See [this definition](https://ethereum.org/wallets).
 
 ### Wrapped document
 

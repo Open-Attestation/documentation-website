@@ -13,11 +13,11 @@ In this example above, the document's issuer is bound to `demo.openattestation.c
 
 In this guide, you will bind the document issuer's identity to a valid domain name. This domain will be displayed as issuer every time the document is rendered in an OA-compliant decentralized renderer.
 
-You will be inserting a temporary DNS record on our DNS at `sandbox.openattestation.com` so you do not need your own domain to follow the guide. If you prefer to use your own domain name for the identity, you may skip the steps involving the CLI and instead read the [DNS Configuration Guide](/docs/developer-section/quickstart/configure-dns).
+You will be inserting a temporary DNS record on our DNS at `sandbox.openattestation.com` so you do not need your own domain to follow the guide. If you prefer to use your own domain name for the identity, you may skip the steps involving the CLI and instead read the [DNS Configuration Guide](/docs/guides-section/configure-dns).
 
 ## Creating temporary DNS proof
 
-With your [document store](/docs/integrator-section/verifiable-document/ethereum/document-store), run the following command:
+With your [document store](/docs/ethereum-section/document-store), run the following command:
 
 ```bash
 open-attestation dns txt-record create --address 0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b --network-id 11155111

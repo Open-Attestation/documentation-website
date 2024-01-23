@@ -8,7 +8,7 @@ Depending on whether you have deployed the Document Store or OCSP, use one of th
 
 <!--Flag: Revisit this portion once we have the article on OCSP vs Document Store for revocation.-->
 
-To get a better understanding of revocation, see [this article](/docs/integrator-section/verifiable-document/ethereum/revoking-document).
+To get a better understanding of revocation, see [this article](/docs/ethereum-section/revoke-document-eth/revoke-eth).
 
 ## Revoking using Document Store
 
@@ -19,8 +19,8 @@ It is possible to revoke a signed document only if you fulfill certain **prerequ
 - An `ethr` DID (if you have been following the above steps, you should have one already)
 - Some kind of DID documents:
   1. Base DID document (`ISSUER_IDENTITY`: `identityProof.identifier` against `ethr` DID)
-  2. DID-DNS document (`ISSUER_IDENTITY`: `identityProof.identifier` against a [DNS-TXT](/docs/docs-section/how-does-it-work/issuance-identity))
-- A deployed `documentStore`, click [here](docs/integrator-section/verifiable-document/did/document-store-or-ocsp.md) for the steps.
+  2. DID-DNS document (`ISSUER_IDENTITY`: `identityProof.identifier` against a [DNS-TXT](/docs/verify-section/issuance-identity))
+- A deployed `documentStore`, click [here](/docs/did-section/document-store-or-ocsp) for the steps.
 - Before you wrap your document with the wrapper SDK, add a `revocation` block with these keys:
 
 ```json

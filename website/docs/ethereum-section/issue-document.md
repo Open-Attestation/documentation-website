@@ -14,8 +14,8 @@ open-attestation document-store issue --address 0xBBb55Bd1D709955241CAaCb327A765
 
 In the example above:
 
-- `address` is the document store address, for instance the one created with the [Deploying Document Store](/docs/integrator-section/verifiable-document/ethereum/document-store) guide.
-- `hash` is the merkle root hash, for instance generated while [Wrapping Documents](/docs/integrator-section/verifiable-document/ethereum/wrapping-document)
+- `address` is the document store address, for instance the one created with the [Deploying Document Store](/docs/ethereum-section/document-store) guide.
+- `hash` is the merkle root hash, for instance generated while [wrapping documents](/docs/ethereum-section/wrap-document-eth).
 
 You will be prompted for the password that you used while creating the wallet. You will see a message after completion of the command:
 

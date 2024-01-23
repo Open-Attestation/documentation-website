@@ -14,8 +14,8 @@ open-attestation sign ./wrapped-documents-did --od ./signed-documents-did --publ
 
 In the example above:
 
-- `public-key` is the public key used to [bind the wallet address with the DNS location](/docs/integrator-section/verifiable-document/did/dns).
-- `key` is the wallet private key, generated when [creating the wallet](/docs/integrator-section/verifiable-document/did/create).
+- `public-key` is the public key used to [bind the wallet address with the DNS location](/docs/did-section/dns).
+- `key` is the wallet private key, generated when [creating the wallet](/docs/did-section/create).
 
 ```text
 ✔  success   Signed documents saved to ./signed-documents-did

@@ -94,4 +94,4 @@ Once you have created a custom schema for the document, you can use it during th
 
 
 ## Additional reading
-To learn more about the wrapping process, see [this guide](/docs/developer-section/libraries/remote-files/open-attestation-cli#wrapping-documents).
+To learn more about the wrapping process, see [this guide](/docs/lib-section/remote-files/open-attestation-cli#wrapping-documents).

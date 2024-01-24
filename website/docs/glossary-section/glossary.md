@@ -58,7 +58,7 @@ A raw document contains the data compliant with the OA document schema before th
 
 ### Revocation
 
-Revocation is an action that makes an OA document no longer valid. There can be various reasons that make the issuer decide to revoke a document after issuance. To learn more, see [this article](/docs/integrator-section/verifiable-document/ethereum/revoking-document).
+Revocation is an action that makes an OA document no longer valid. There can be various reasons that make the issuer decide to revoke a document after issuance. To learn more, see [this article](/docs/ethereum-section/revoke-document-eth/revoke-eth).
 
 ### Salt
 
@@ -93,4 +93,4 @@ See [this definition](https://ethereum.org/wallets).
 
 A wrapped document is a document that contains data compliant with OA schema and has gone through the wrapping process, with a checksum that provides a tamper-proof property. 
 
-The wrapped document needs to be issued on [Ethereum](/docs/integrator-section/verifiable-document/ethereum/document-store-overview) or [DID](/docs/integrator-section/verifiable-document/did/create) to become a verifiable document.
+The wrapped document needs to be issued on [Ethereum](/docs/ethereum-section/overview-eth) or [DID](/docs/did-section/create) to become a verifiable document.

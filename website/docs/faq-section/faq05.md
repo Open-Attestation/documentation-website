@@ -4,4 +4,7 @@ title: How can I have an estimation of the costs involved in using the smart con
 sidebar_label: How can I have an estimation of the costs involved in using the smart contracts?
 ---
 
-See the page [Contract Costs](/docs/docs-section/appendix/contract-costs) for a breakdown of the cost estimation.
+See these pages for a breakdown of the cost estimation: 
+
+* [Costs related to verifiable documents](/docs/costs-section/costs-verifiable-documents)
+* [Costs related to transferable records](/docs/costs-section/costs-transferable-records)

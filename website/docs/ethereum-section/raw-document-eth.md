@@ -61,11 +61,11 @@ To makes things simple, you will use an existing renderer at [here](https://tuto
 
 #### Replacing the issuer's document store
 
-Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b` to the smart contract address of your document store in the [previous step](/docs/integrator-section/verifiable-document/ethereum/document-store).
+Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b` to the smart contract address of your document store in the [previous step](/docs/ethereum-section/document-store).
 
 #### Replacing the identity proof location
 
-Replace the value of `issuers[0].identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the dns name used to bind the document store's identity in the [previous step](/docs/integrator-section/verifiable-document/ethereum/dns-proof).
+Replace the value of `issuers[0].identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the dns name used to bind the document store's identity in the [previous step](/docs/ethereum-section/dns-proof).
 
 ![Validator Completed](/docs/integrator-section/verifiable-document/ethereum/document-data/validator-completed.png)
 

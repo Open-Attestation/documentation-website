@@ -4,9 +4,9 @@ title: Document integrity
 sidebar_label: Document integrity
 ---
 
-OpenAttestation ensures that the content of the document has not been modified since the document was created, with the exception of data removed using the built-in [obfuscation mechanism](/docs/developer-section/libraries/remote-files/open-attestation#obfuscating-data).
+OpenAttestation ensures that the content of the document has not been modified since the document was created, with the exception of data removed using the built-in [obfuscation mechanism](/docs/lib-section/remote-files/open-attestation#obfuscating-data).
 
-The Ethereum tutorial shows you how to [wrap a document](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) and [issue it](/docs/integrator-section/verifiable-document/ethereum/issuing-document) into a document store. 
+The Ethereum tutorial shows you how to [wrap a document](/docs/ethereum-section/wrap-document-eth) and [issue it](/docs/ethereum-section/issue-document) into a document store. 
 
 The following sections explain the purpose of wrapping and issuing a document and why these actions are necessary.
 
@@ -82,7 +82,7 @@ In a later procedure of verifying the document, you will perform exactly the sam
 
 #### Data obfuscation
 
-Due to the way you compute `targetHash`, you can use OpenAttestation to obfuscate data not intended for public access. To achieve this, the hash of a specific field is computed and added into the document. You can try it with the [CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) and the document above:
+Due to the way you compute `targetHash`, you can use OpenAttestation to obfuscate data not intended for public access. To achieve this, the hash of a specific field is computed and added into the document. You can try it with the [CLI](/docs/lib-section/remote-files/open-attestation-cli) and the document above:
 
 ```bash
 open-attestation filter ./path/to/file.json ./output.json name
@@ -175,4 +175,4 @@ To avoid this problem, obfuscate the full object (`foo` in this case) when you n
 
 ### targetHash and merkleRoot
 
-To learn more about the differences between `targetHash` and `merkleRoot`, see [here](/docs/docs-section/how-does-it-work/issuance-status#merkleroot).
+To learn more about the differences between `targetHash` and `merkleRoot`, see [here](/docs/verify-section/issuance-status#merkleroot).

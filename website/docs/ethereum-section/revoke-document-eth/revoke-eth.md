@@ -48,8 +48,8 @@ open-attestation document-store revoke --address 0xBBb55Bd1D709955241CAaCb327A76
 
 In the example above:
 
-- `address` is the document store address, for instance the one created with the [Deploying Document Store](/docs/integrator-section/verifiable-document/ethereum/document-store) guide.
-- `hash` is the value of `targetHash` field of one of the [previously wrapped documents](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) (open one of the file, head to the bottom and check for the `targetHash` in the `signature` object.
+- `address` is the document store address, for instance the one created with the [Deploying Document Store](/docs/ethereum-section/document-store) guide.
+- `hash` is the value of `targetHash` field of one of the [previously wrapped documents](/docs/ethereum-section/wrap-document-eth) (open one of the file, head to the bottom and check for the `targetHash` in the `signature` object.
 
 You will be prompted for the password that you used while creating the wallet. You will see a message after completion of the command:
 
@@ -67,7 +67,7 @@ The other document will still be valid.
 
 ## Revoking multiple documents
 
-If you open the [previously wrapped documents](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) side by side, you will notice:
+If you open the [previously wrapped documents](/docs/ethereum-section/wrap-document-eth) side by side, you will notice:
 
 - they have a different `targetHash`: it uniquely identifies any document
 - they have the same `merkleRoot`: it uniquely identifies any group of wrapped documents.

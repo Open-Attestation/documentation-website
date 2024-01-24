@@ -75,4 +75,4 @@ To interact with the OpenCerts Admin Portal web app, you will need to connect yo
 ![Successful deployment](/docs/integrator-section/webapp-tutorial/document-store-webapp/success.png)
 
 ## Additional reading
-You will find more details about document store on [this page](/docs/integrator-section/verifiable-document/ethereum/document-store).
+You will find more details about document store on [this page](/docs/ethereum-section/document-store).

@@ -42,7 +42,7 @@ If not, follow the steps below:
 
 Before starting on this code tutorial, it will be helpful to understand the components involved in the creation, issuance, and verification of a verifiable document.
 
-You can read more about the components [here](/docs/integrator-section/verifiable-document/ethereum/document-store-overview).
+You can read more about the components [here](/docs/ethereum-section/overview-eth).
 
 ## Overview
 
@@ -87,7 +87,7 @@ Once you have set up a basic React application and installed the necessary depen
 
 ### Initializing MetaMask
 
-When you [installed MetaMask](/docs/developer-section/quickstart/create-verifiable-document-issuer#metamask) in your browser, it injected a [global API](https://docs.metamask.io/guide/ethereum-provider.html) into the web application at `window.ethereum`. Use this API to get a [Signer](https://docs.ethers.io/v5/api/signer/), so that your application can interact with smart contracts on the Ethereum blockchain.
+When you [installed MetaMask](/docs/guides-section/create-issuer#metamask) in your browser, it injected a [global API](https://docs.metamask.io/guide/ethereum-provider.html) into the web application at `window.ethereum`. Use this API to get a [Signer](https://docs.ethers.io/v5/api/signer/), so that your application can interact with smart contracts on the Ethereum blockchain.
 
 You will create separate files for the API calls. For example, in `services/account.tsx`:
 
@@ -363,7 +363,7 @@ export const Steps = () => {
         
     * Call `wrapDocument` and `issueDocument` by clicking **Submit**. Thereafter, it will set `wrappedDocument` within the application state.
         
-    * The `$template` field specifies the template to be used to render the verifiable document. You can learn how to create your own document renderer [here](docs/developer-section/quickstart/create-custom-renderer).
+    * The `$template` field specifies the template to be used to render the verifiable document. You can learn how to create your own document renderer [here](/docs/guides-section/renderer-template).
         
     * The `issuers` field specifies the identity proof and document store address of the issuers.
   

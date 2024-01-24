@@ -13,15 +13,15 @@ In this guide, you will bind the document issuer's identity to a valid domain na
 
 To complete this tutorial, meet the following prerequisites:
 
-- Know what your domain name is. To learn more about the domain name, see [this article](/docs/integrator-section/verifiable-document/ethereum/dns-proof).
+- Know what your domain name is. To learn more about the domain name, see [this article](/docs/ethereum-section/dns-proof).
 
 - Have the edit access to your domain's DNS records.
 
 - Have your document store deployed. 
 
-    - If you are using the Ethereum method, see [this guide](/docs/integrator-section/verifiable-document/ethereum/document-store).
+    - If you are using the Ethereum method, see [this guide](/docs/ethereum-section/document-store).
 
-    - If you are using the DID method, see [this guide](/docs/integrator-section/verifiable-document/did/document-store-or-ocsp).
+    - If you are using the DID method, see [this guide](/docs/did-section/document-store-or-ocsp).
 
 To bind the domain name to the issuer's identity, you must be able to change the DNS record of the domain name.
 

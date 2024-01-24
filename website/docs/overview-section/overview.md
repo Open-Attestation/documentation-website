@@ -56,13 +56,13 @@ In this quick start guide, you will learn how to deploy a verifiable document.
 
 At the end of this guide, you will be able to create your 📜 Certificate of Completion that is valid on any compatible OA Viewer. The following guides are available:
 
-- Use OpenAttestation with [DID](/docs/integrator-section/verifiable-document/did/create)
-- Use OpenAttestation with [Ethereum Smart Contract](/docs/integrator-section/verifiable-document/ethereum/document-store-overview)
+- Use OpenAttestation with [DID](/docs/did-section/create)
+- Use OpenAttestation with [Ethereum Smart Contract](/docs/ethereum-section/overview-eth)
 
 
 ## Additional feature
 
 If you need to distribute the document to another user, see these articles:
 
-* [Embedding a verifiable document into an HTML file](/docs/developer-section/quickstart/oa-embedded-html)
-* [Embedding a verifiable document into a QR code (URL)](/docs/developer-section/quickstart/oa-embedded-qrcode)
+* [Distribute a verifiable document via an HTML file](/docs/distribute-section/oa-embed-html)
+* [Distribute a verifiable document via a QR code (URL)](/docs/distribute-section/oa-embed-qrcode)

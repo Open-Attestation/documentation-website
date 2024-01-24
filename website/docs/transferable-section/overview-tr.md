@@ -13,7 +13,7 @@ This makes Transferable Records usable for documents like:
 
 ## Goal
 
-This tutorial builds on the knowledge from [verifiable document](/docs/integrator-section/verifiable-document/overview). If you have not completed the tutorial, please head back to [the previous section](/docs/integrator-section/verifiable-document/overview).
+This tutorial builds on the knowledge from [verifiable document](/docs/overview-section/overview#verifiable-document). If you have not completed the tutorial, please head back to [the DID method](/docs/did-section/overview-did) or [the Ethereum method](/docs/ethereum-section/overview-eth).
 
 By the end of this tutorial, you will be able to create your "Electronic Bill of Lading" that is valid on any OA Viewer connected to the Ethereum sepolia network.
 
@@ -35,7 +35,7 @@ The image above shows three different states of documents:
 
 ### Token registry smart contract
 
-The token registry smart contract is deployed by individual transferable records issuers such as the land title registry (for Title Deed) or shipping lines (for Bill of Lading). This smart contract replaces the document store smart contract in [this section](/docs/integrator-section/verifiable-document/ethereum/document-store). Similar to document store contract, the token registry smart contract also has its identity bound to the issuer using DNS.
+The token registry smart contract is deployed by individual transferable records issuers such as the land title registry (for Title Deed) or shipping lines (for Bill of Lading). This smart contract replaces the document store smart contract in [this section](/docs/ethereum-section/document-store). Similar to document store contract, the token registry smart contract also has its identity bound to the issuer using DNS.
 
 The token registry stores the ownership state of the transferable records using a mapping from `document ID` to `owner`. The document ID is the target hash (and merkle root) of the individual OA document created. The owner will be either an EOA or a smart contract address.
 

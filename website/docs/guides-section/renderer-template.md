@@ -133,11 +133,11 @@ The `name` key is a compulsory key to describe the OA document type. In this cas
 
 OA documents do not have a strict data structure. Therefore, the issuers of documents need to define their own data schema. The `recipient` object is a user-defined object that describes who the certificate is conferred to. In this case, replace `John Doe` with the actual recipient name.
 
->**Note:** This guide focuses on the simple document. In the [next tutorial](/docs/developer-section/quickstart/create-custom-schema.md), you will learn more about the OA document schema and how to define a custom data structure. 
+>**Note:** This guide focuses on the simple document. In the [next tutorial](/docs/guides-section/custom-schema), you will learn more about the OA document schema and how to define a custom data structure. 
 
 #### 4. `issuers`
 
-For more details, see [Creating raw document](/docs/integrator-section/verifiable-document/ethereum/raw-document#creating-raw-document).
+For more details, see [Creating raw document](/docs/ethereum-section/raw-document-eth#creating-raw-document).
 
 ### Developing the COC template view
 

@@ -24,7 +24,7 @@ In this tutorial, you will use the first web app.
 
 1. After connecting with MetaMask, open the [OpenCerts Admin Portal](https://admin.opencerts.io/) in Google Chrome. On the Welcome page, click **MetaMask**.
 
-2. Enter the `document store smart contract address` from the [deployment guide](/docs/integrator-section/webapp-tutorial/deploy-document-store-webapp/) into the **Store address** field. 
+2. Enter the `document store smart contract address` from the [deployment guide](/docs/guides-section/web-app-deploy) into the **Store address** field. 
 
 ![Revoking Interface](/docs/integrator-section/webapp-tutorial/revoking-webapp/revoking.png)
 
@@ -43,4 +43,4 @@ In this tutorial, you will use the first web app.
 ![Revoke Success](/docs/integrator-section/webapp-tutorial/revoking-webapp/success.png)
 
 ## Additional reading
-You will find more details about revoking on [this page](/docs/integrator-section/verifiable-document/ethereum/revoking-document).
+You will find more details about revoking on [this page](/docs/ethereum-section/revoke-document-eth/revoke-eth).

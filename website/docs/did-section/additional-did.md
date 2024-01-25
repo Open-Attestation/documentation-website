@@ -4,4 +4,6 @@ title: Additional information
 sidebar_label: Additional information
 ---
 
-testing
+import AdditionalInformation from "/src/reusables/_additional-information.mdx";
+
+<AdditionalInformation />

@@ -164,6 +164,7 @@ This component will create a frame and establish a connection with the provided 
 - `source`: url to the decentralized renderer that will handle the document to display
 - `dispatch`: function listening for actions triggered by the decentralized renderer
 - `onConnected`: function called when the connection to the decentralized renderer has been established. The function will be provided as first parameter another which can be used to send actions to the iframe
+- `onConnectionFailure`: optional property that accepts a function. In the event of a connection failure / timeout, the default renderer will display an error message. If this optional property is defined along with the document, the raw document will be displayed.
 
 Please check the code in `example/application` to see how to use this component. You can also start the example application using the command `npm run example:application`
 

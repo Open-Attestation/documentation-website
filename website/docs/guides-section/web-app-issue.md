@@ -26,7 +26,7 @@ In this tutorial, you will use the first web app.
 
 2. Enter the `document store smart contract address` from the [deployment guide](/docs/guides-section/web-app-deploy) into the **Store address** field. 
 
-![Issuing Interface](/docs/integrator-section/webapp-tutorial/issuing-webapp/issuing.png)
+![Issuing Interface](/docs/guides-section/web-app-issue/issuing.png)
 
 3. Select **Issue certificate batch** on the left navigation.
 
@@ -50,7 +50,7 @@ In this tutorial, you will use the first web app.
 
 5. Once the `merkleRoot` has been issued, a success message **"Batch has been issued"** will display.
 
-![Issuance Success](/docs/integrator-section/webapp-tutorial/issuing-webapp/success.png)
+![Issuance Success](/docs/guides-section/web-app-issue/success.png)
 
 
 ## Additional reading

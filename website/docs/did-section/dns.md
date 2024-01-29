@@ -3,8 +3,9 @@ id: dns
 title: Configure DNS
 sidebar_label: Configure DNS
 ---
+import DNSProof from "/src/reusables/_dns-proof.mdx";
 
-The explanation about why you need to configure DNS is available [in the Ethereum tutorial](/docs/ethereum-section/dns-proof).
+<DNSProof />
 
 In the DID method, you will only use the wallet address as signing credentials and bind it to a domain.
 

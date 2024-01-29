@@ -4,9 +4,14 @@ title: Create raw documents
 sidebar_label: Create raw documents
 ---
 
-For the explanation about raw document purpose and format, see [the Ethereum tutorial](/docs/ethereum-section/raw-document-eth).
+import RawDocument from "/src/reusables/_raw-document.mdx";
+import SchemaValidator from "/src/reusables/_schema-validator.mdx";
 
-You will create the raw document for DID.
+<RawDocument />
+
+In this guide, you will create a raw document for DID. It will conform to the OpenAttestation v2.0 schema.
+
+<SchemaValidator />
 
 ## Creating raw document
 

@@ -3,20 +3,18 @@ id: wrap-document-eth
 title: Wrap documents
 sidebar_label: Wrap documents
 ---
+import WrapDocumentIntro from "/src/reusables/_wrap-document-intro.mdx";
 import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
 import WrapDocumentsInBatch from "/src/reusables/_wrap-documents-in-batch.mdx";
 
-Every OA document has a checksum that provides it a tamper-proof property. At the same time, because the checksum can be used to uniquely identify a document, the checksum (or its derived value) is stored onto the document store as evidence of issuance. To compute the checksum, a `raw document` goes through a process known as `wrapping` to become a `wrapped document`. Only then, the document is ready to be issued onto the blockchain.
+<WrapDocumentIntro />
 
-Multiple documents can be wrapped at the same time in a single batch operation, creating a single checksum for the entire batch of raw documents. This is especially useful when using document store on the Ethereum blockchain to lower the transaction cost and time.
-
-In this task, you will learn how to generate the checksum by running the `wrapping` process.
-
-You will use the CLI tool to read all the files in the `raw-documents` folder, wrap them, and then output the files in another directory `wrapped-documents`.
-
-A `merkleRoot`, a 64 character long string prepended with `0x` will be generated. The `merkleRoot` is the only information that will be stored onto the Blockchain to verify the issuance status of an OA document.
+>**Note:** Creating a single checksum is especially useful when using document store on the Ethereum blockchain to lower the transaction cost and time.
 
 ## Replacing folder names
+
+>**Important:** If you are using both the Ethereum and DID methods, use different folders to contain the wrapped documents. This will prevent the files from being overwritten.
+
 Before running the command below, replace the folder names. For example:
 
 * Replace `<RAW_DOCUMENTS_FOLDER>` with `raw-documents`

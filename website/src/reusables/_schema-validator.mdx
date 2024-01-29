@@ -1,0 +1,21 @@
+## OA document schema
+
+The OpenAttestation v2.0 defines the shape of data for the `raw document` - the data before the wrapping process. It is defined in [JSON Schema](https://json-schema.org/) format.
+
+The official OpenAttestation v2.0 schema can be found at https://schema.openattestation.com/2.0/schema.json
+
+## Using online schema validator
+
+For this guide, you will use an online JSON Schema validator to write the raw document.
+
+### Setting up the JSON schema validator with OA schema
+
+Visit https://www.jsonschemavalidator.net/
+
+Paste the contents from https://schema.openattestation.com/2.0/schema.json into the left panel under "Select Schema".
+
+This will setup the JSON schema validator to validate the JSON inputs on the right against the defined schema.
+
+![Validator Preview](/docs/integrator-section/verifiable-document/ethereum/document-data/validator-preview.png)
+
+If you start editing the JSON data on the right you should see errors if the data does not conform to the OpenAttestation v2.0 schema. A summary of the number of errors is found on top of the right panel and the details of the errors are found below the two panels.

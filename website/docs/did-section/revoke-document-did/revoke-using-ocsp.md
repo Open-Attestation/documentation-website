@@ -3,12 +3,11 @@ id: revoke-using-ocsp
 title: Revoke documents using OCSP
 sidebar_label: Revoke documents using OCSP
 ---
+import RevokeIntro from "/src/reusables/_revoke-intro.mdx";
 
-Depending on whether you have deployed the Document Store or OCSP, use one of them to revoke documents. 
+>**Note:** Depending on whether you have deployed the Document Store or OCSP, use one of them to revoke documents. 
 
-<!--Flag: Revisit this portion once we have the article on OCSP vs Document Store for revocation.-->
-
-To get a better understanding of revocation, see [this article](/docs/ethereum-section/revoke-document-eth/revoke-eth).
+<RevokeIntro />
 
 ## Revoking using OCSP
 You can revoke a document using your own Online Certificate Status Protocol (OCSP) responder. In short, an OCSP responder is a service that will respond with the revocation status of a certificate and the reason it is revoked.

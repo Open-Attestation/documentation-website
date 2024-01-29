@@ -3,12 +3,11 @@ id: revoke-using-document-store
 title: Revoke documents using document store
 sidebar_label: Revoke documents using document store
 ---
+import RevokeIntro from "/src/reusables/_revoke-intro.mdx";
 
-Depending on whether you have deployed the Document Store or OCSP, use one of them to revoke documents. 
+>**Note:** Depending on whether you have deployed the Document Store or OCSP, use one of them to revoke documents. 
 
-<!--Flag: Revisit this portion once we have the article on OCSP vs Document Store for revocation.-->
-
-To get a better understanding of revocation, see [this article](/docs/ethereum-section/revoke-document-eth/revoke-eth).
+<RevokeIntro />
 
 ## Revoking using Document Store
 

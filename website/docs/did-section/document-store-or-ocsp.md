@@ -3,6 +3,8 @@ id: document-store-or-ocsp
 title: Deploy document store or OCSP
 sidebar_label: Deploy document store or OCSP
 ---
+For first-time users, it's recommended to skip this article.
+
 > **Note:** It is **optional** to deploy either document store or OCSP. Perform this task only if you need to revoke documents.
 
 ## Deploying Document Store

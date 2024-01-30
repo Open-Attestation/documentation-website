@@ -28,7 +28,7 @@ You will be prompted for the password that you used while creating the wallet. Y
 
 Head to `dev.opencerts.io` or `dev.tradetrust.io` and drag and drop the revoked document. An error will display in the portal.
 
-![Successful verification](/docs/integrator-section/verifiable-document/ethereum/revoking-document/verifying.png)
+![Successful verification](/docs/ethereum-section/revoke-eth/verifying.png)
 
 The other document will still be valid.
 

@@ -25,6 +25,6 @@ In the example above:
 
 Head to `dev.tradetrust.io` and drag and drop one of the issued or signed documents. After being verified, the document will display.
 
-![Successful verification](/docs/integrator-section/verifiable-document/ethereum/signing-document/verifying.png)
+![Successful verification](/docs/did-section/sign-document/verifying.png)
 
 🎉 Congratulations, you have completed the getting started guide to create your own Verifiable Document!

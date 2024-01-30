@@ -27,6 +27,6 @@ You will be prompted for the password that you used while creating the wallet. Y
 
 Head to `dev.opencerts.io` or `dev.tradetrust.io` and drag and drop one of the wrapped documents. After being verified, the document will display.
 
-![Successful verification](/docs/integrator-section/verifiable-document/ethereum/issuing-document/verifying.png)
+![Successful verification](/docs/ethereum-section/issue-document/verifying.png)
 
 🎉 Congratulations, you have completed the getting started guide to create your own Verifiable Document!

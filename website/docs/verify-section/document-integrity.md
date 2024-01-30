@@ -76,7 +76,7 @@ Once computing the `data` object, you can create a unique hash for the document 
 
 >**Note:** The `targetHash` of a document is a unique identifier.
 
-![Compute target hash](/docs/docs-section/how-does-it-work/target-hash.png)
+![Compute target hash](/docs/verify-section/document-integrity/target-hash.png)
 
 In a later procedure of verifying the document, you will perform exactly the same steps again to assert that the document content has not been tampered with. This works because the final `targetHash` will be completely different, if any part of the wrapped document is different from the original.
 
@@ -130,7 +130,7 @@ The hash added into `privacy.obfuscatedData` is the one used by the framework wh
 
 The only difference with the [`targetHash`](#targethash) computation is in Step 3.
 
-![Compute target hash with data obfuscation](/docs/docs-section/how-does-it-work/target-hash-with-data-obfuscation.png)
+![Compute target hash with data obfuscation](/docs/verify-section/document-integrity/target-hash-with-data-obfuscation.png)
 
 Using data obfuscation, the user will have the option to share only a subset of the data.
 

@@ -81,7 +81,7 @@ After adding the `TXT` record, it is recommended to check the record has been in
 
 >**Note:** The DNS propagation should take a few minutes, though in some cases you may need to wait up to 24 hours. Continue with the remaining parts of the guide while waiting.
 
-![Google DNS to Test](/docs/developer-section/quickstart/configuring-dns/google-dns.png)
+![Google DNS to Test](/docs/guides-section/configure-dns/google-dns.png)
 
 ### Additional note for identity proof in production
 

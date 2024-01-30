@@ -65,7 +65,7 @@ While [this guide](#additional-note-for-adding-dns-txt-records) provides the ste
 
 ### Testing the DNS record
 
-![Google DNS to Test](/docs/developer-section/quickstart/configuring-dns/google-dns.png)
+![Google DNS to Test](/docs/guides-section/configure-dns/google-dns.png)
 
 >**Note:** The DNS propagation often takes a few minutes, though in some cases you may need to wait up to 24 hours. Continue with the other parts of the guide while waiting.
 

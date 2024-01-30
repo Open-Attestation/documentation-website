@@ -50,7 +50,7 @@ Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb3
 
 Replace the value of `issuers[0].identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the dns name used to bind the document store's identity in the [previous step](/docs/ethereum-section/dns-proof).
 
-![Validator Completed](/docs/integrator-section/verifiable-document/ethereum/document-data/validator-completed.png)
+![Validator Completed](/docs/ethereum-section/document-data/validator-completed.png)
 
 
 ## Verification

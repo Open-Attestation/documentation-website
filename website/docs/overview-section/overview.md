@@ -56,7 +56,7 @@ In this quick start guide, you will learn how to deploy a verifiable document.
 
 At the end of this guide, you will be able to create your 📜 Certificate of Completion that is valid on any compatible OA Viewer. The following guides are available:
 
-- Use OpenAttestation with [DID](/docs/did-section/create)
+- Use OpenAttestation with [DID](/docs/did-section/overview-did)
 - Use OpenAttestation with [Ethereum Smart Contract](/docs/ethereum-section/overview-eth)
 
 

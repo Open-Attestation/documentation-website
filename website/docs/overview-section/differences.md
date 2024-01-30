@@ -8,7 +8,7 @@ The Ethereum method is writing to the blockchain & requires some ethers in the w
 
 The flowchart provides an overview of the differences between the Ethereum and DID methods:
 
-![Ethereum and DID differences](/docs/overview-section/ETH-DID-differences.svg)
+![Ethereum and DID differences](/docs/overview-section/differences/ETH-DID-differences.svg)
 
 
 >**Note:** The arrow ("⏶" or “⏷”) means there are differences between the similar steps. See the table to learn more.

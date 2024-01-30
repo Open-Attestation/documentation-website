@@ -53,7 +53,7 @@ If you have issued the Ethereum mainnet, visit https://tradetrust.io/ instead.
 
 You will be able to drag your transferable record from the `wrapped-documents-transferable` folder and drop it to see a page like the following:
 
-![Completed Transferable Record](/docs/transferable-record/complete-issuance.png)
+![Completed Transferable Record](/docs/transferable-section/complete-issuance.png)
 
 When you have logged in as either beneficiary or holder, click **Manage Assets** to perform the action such as:
 

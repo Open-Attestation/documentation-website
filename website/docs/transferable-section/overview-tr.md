@@ -25,7 +25,7 @@ With the knowledge, you will be able to create transferable records according to
 
 ## Overview of components
 
-![Overview of components](/docs/transferable-record/overview-tr.png)
+![Overview of components](/docs/transferable-section/overview-tr.png)
 
 The image above shows three different states of documents:
 

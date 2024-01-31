@@ -1,5 +1,5 @@
 ---
 id: overview-guides
-title: About the resources for developers
+title: About the guides for developers
 sidebar_label: Overview
 ---

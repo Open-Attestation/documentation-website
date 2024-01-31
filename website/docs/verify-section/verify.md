@@ -1,7 +1,7 @@
 ---
 id: verify
-title: Verify documents after issuing or signing
-sidebar_label: Verify documents after issuing or signing
+title: About verifying documents
+sidebar_label: Overview
 ---
 
 After issuing documents using Ethereum or signing documents using DID, you need to perform a verification on the documents to ensure that they are valid for distribution.

@@ -4,7 +4,7 @@ title: About the guides for developers
 sidebar_label: Overview
 ---
 
-If you are a developer, you can build your own software solutions on top of OpenAttestation by performing the following tasks: 
+If you are a developer, you can refer to these guides and use OpenAttestation by performing the following tasks:
 
 * Create: 
 

@@ -13,4 +13,4 @@ import OverviewDIDETH from "/src/reusables/_overview-did-eth.mdx";
 
 The document store is a smart contract deployed onto the Ethereum blockchain. When an OA document is issued, a proof of the issuance is stored onto the Ethereum blockchain through the smart contract. The smart contract is used to provide a globally consistent record for anyone to query a given OA document's issuance status.
 
-<OverviewDIDETH />
+<OverviewDIDETH isEth={true}/>

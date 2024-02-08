@@ -6,7 +6,7 @@ sidebar_label: Embed OA documents into convenient file formats
 
 When the users are handling the raw OA documents, they may come across the following difficulties: 
 
-* The .oa files cannot be viewed directly.
+* The `.oa` files cannot be viewed directly.
 * There is currently no built-in support for the `.oa` format on operating systems.
 * The users need to bring the `.oa` files with them all the time.
 

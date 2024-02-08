@@ -43,7 +43,7 @@ Revocation is part of Ethereum smart contracts.
 As of today, it is possible to revoke a document if a document store has been declared in its revocation block. You can revoke a document: 
 
 * [Using document store](/docs/did-section/revoke-document-did/revoke-using-document-store)
-* [Or using OCSP](/docs/did-section/revoke-document-did/revoke-using-ocsp)
+* [Or using OCSP responder](/docs/did-section/revoke-document-did/revoke-using-ocsp)
 
 >**Note:** You don't need to pay for transactions when you use DID for issuance and OCSP for revocation. However, if you use DID for issuance and a `documentStore` for revocation, you still need to pay for at least one transaction with the Ethereum blockchain to deploy a `documentStore`.
 

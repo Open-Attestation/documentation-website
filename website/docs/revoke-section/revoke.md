@@ -12,7 +12,7 @@ Depending on how the verifiable documents were issued, choose one of the revocat
 
 - Revoke verifiable documents issued with DID
     - [Using document store](/docs/did-section/revoke-document-did/revoke-using-document-store)
-    - [Using OCSP](/docs/did-section/revoke-document-did/revoke-using-ocsp)
+    - [Using OCSP responder](/docs/did-section/revoke-document-did/revoke-using-ocsp)
 - Revoke verifiable documents issued with Ethereum
     - [Using document store](/docs/ethereum-section/revoke-document-eth/revoke-eth)
 

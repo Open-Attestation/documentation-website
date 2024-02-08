@@ -1,7 +1,7 @@
 ---
 id: revoke-using-ocsp
-title: Revoke documents using OCSP
-sidebar_label: Revoke documents using OCSP
+title: Revoke documents using OCSP responder
+sidebar_label: Revoke documents using OCSP responder
 ---
 import RevokeIntro from "/src/reusables/_revoke-intro.mdx";
 
@@ -9,7 +9,7 @@ import RevokeIntro from "/src/reusables/_revoke-intro.mdx";
 
 <RevokeIntro />
 
-## Revoking using OCSP
+## Revoking using OCSP responder
 You can revoke a document using your own Online Certificate Status Protocol (OCSP) responder. In short, an OCSP responder is a service that will respond with the revocation status of a certificate and the reason it is revoked.
 
 ### Revocation type and location

@@ -5,7 +5,10 @@ sidebar_label: Deploy document store or OCSP
 ---
 For first-time users, it's recommended to skip this article.
 
-> **Note:** It is **optional** to deploy either document store or OCSP. Perform this task only if you need to revoke documents.
+:::info 
+* It is **optional** to deploy either document store or OCSP responder. Perform this task **only** if you need to revoke documents. 
+* If you need to choose from document store and OCSP responder, see the differences between revocation methods in [this article](/docs/revoke-section/diff-btw-revocation-methods).
+:::
 
 ## Deploying Document Store
 
@@ -43,7 +46,7 @@ Please do **not** use the Transaction ID in the response.
 
 > **Important:** Save the document store address somewhere. You will need this address later to complete the tutorial.
 
-## Deploying OCSP
+## Deploying OCSP responder
 A reference implementation for deploying the OCSP responder is available at [this repository on GitHub](https://github.com/Open-Attestation/ocsp-responder).
 
 >**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OpenAttestation framework.

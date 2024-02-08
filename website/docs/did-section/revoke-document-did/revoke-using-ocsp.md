@@ -5,7 +5,7 @@ sidebar_label: Revoke documents using OCSP responder
 ---
 import RevokeIntro from "/src/reusables/_revoke-intro.mdx";
 
->**Note:** Depending on whether you have deployed the Document Store or OCSP, use one of them to revoke documents. 
+>**Note:** Depending on whether you have deployed the Document Store or OCSP, use the corresponding method to revoke documents. 
 
 <RevokeIntro />
 

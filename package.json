@@ -6,7 +6,8 @@
     "swizzle": "docusaurus swizzle",
     "deploy": "docusaurus deploy",
     "serve": "docusaurus serve",
-    "clear": "docusaurus clear"
+    "clear": "docusaurus clear",
+    "test": "echo 'Unit test (Currently no unit test)'"
   },
   "dependencies": {
     "@docusaurus/core": "3.0.1",

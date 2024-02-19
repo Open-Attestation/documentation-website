@@ -19,4 +19,4 @@ open-attestation --version
 >**Note:** If you need to change the binary name or the path to the binary, be sure to change the example above and the commands that you will run throughout the guide.
 
 ## Revocation method
-You need to define the revocation method at the point of issuance. For more information, see the [Differences between revocation methods](/docs/revoke-section/diff-btw-revocation-methods) article.
+If you require issued documents to be revocable, you need to define the revocation method at the point of issuance. For more information, see the [Differences between revocation methods](/docs/revoke-section/diff-btw-revocation-methods) article.

@@ -8,7 +8,7 @@ OpenAttestation checks that the document has been issued and it is in a valid st
 
 ## Ethereum Smart Contracts
 
-The [document store](/docs/integrator-section/verifiable-document/ethereum/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It stores the hashes of the wrapped documents, which are the records of the document store owner who issued the documents. Before moving on to the verification process, you need to understand the `merkleRoot`.
+The [document store](/docs/ethereum-section/document-store) is a smart contract on the Ethereum network that records the issuance and revocation status of OpenAttestation documents. It stores the hashes of the wrapped documents, which are the records of the document store owner who issued the documents. Before moving on to the verification process, you need to understand the `merkleRoot`.
 
 Assuming that you have to wrap thousands of files and issue the `targetHash` for each, it can be extremely inefficient because Ethereum is slow, and you will have to pay for each transaction. That's why you need the `merkleRoot`.
 
@@ -37,7 +37,7 @@ The issuance of documents can happen individually or in batch. Issuing a batch o
 
 To issue a document, an institution or individual need to perform the following:
 
-1. [Deploy a new document store](/docs/integrator-section/verifiable-document/ethereum/document-store) on Ethereum and get the address of the deployed contract. 
+1. [Deploy a new document store](/docs/ethereum-section/document-store) on Ethereum and get the address of the deployed contract. 
     
     Perform this action only once.
 
@@ -101,7 +101,7 @@ The example above contains three pieces of important information:
 - The DID controller (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller`). It's used to identify which public key control the DID, and you must add it into the `issuer.identityProof.key` property of the document. The value is equal to the DID identifier, appended with `#controller`.
 - The ethereum address associated to the DID controller (here `0x6813eb9362372eef6200f3b1dbc3f819671cba69`). you will use it to verify the signature.
 
->**Note:** See an example document using DID in [this guide](/docs/integrator-section/verifiable-document/did/raw-document-did).
+>**Note:** See an example document using DID in [this guide](/docs/did-section/raw-document-did).
 
 A proof of signature looks like:
 
@@ -128,7 +128,10 @@ If you want to learn more about ECDSA, read [this guide from Yos Riady](https://
 
 ### Revocation
 
-It's possible to revoke a DID document if a document store has been declared in its revocation block. You can revoke a document [using a document store or an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document-did).
+It's possible to revoke a DID document if a document store has been declared in its revocation block. You can revoke a document:
+
+* [Using document store](/docs/did-section/revoke-document-did/revoke-using-document-store)
+* [Or using OCSP responder](/docs/did-section/revoke-document-did/revoke-using-ocsp)
 
 >**Note:** If you use revocation for `DID`, you still need to have at least one transaction with the ethereum blockchain to deploy a `documentStore`.
 
@@ -136,7 +139,7 @@ It's possible to revoke a DID document if a document store has been declared in 
 
 To issue a document, perform the following:
 
-- [Create a new ethr DID](/docs/integrator-section/verifiable-document/did/create) to get the private key and the public address.
+- [Create a new ethr DID](/docs/did-section/create) to get the private key and the public address.
 
     Perform this action only once.
 

@@ -111,8 +111,7 @@
         "guides-section/encrypt-document",
         "guides-section/web-app-deploy",
         "guides-section/web-app-issue",
-        "guides-section/web-app-revoke",
-        "guides-section/additional-guides"
+        "guides-section/web-app-revoke"
   ],
 
   "faq": [

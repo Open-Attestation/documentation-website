@@ -3,42 +3,9 @@ id: revoke-eth
 title: Revoke documents using document store
 sidebar_label: Revoke documents using document store
 ---
+import RevokeIntro from "/src/reusables/_revoke-intro.mdx";
 
-Licenses, certifications, and permits are some examples of documents that can be issued as verifiable documents.
-
-When issuing verifiable documents, keep in mind that they will remain verifiable indefinitely.
-
-However, there may be times when the issued document needs to be revoked because: 
-
-* It contains errors.
-* It was issued wrongly.
-* After issuance, an incident occurs and requires the document to become ineffective and unverifiable.
-
-## Differences between revocation and expiration
-
-:::info
-
-Revocation serves as a strict, proactive approach to prevent security breach or any change that may compromise the document integrity. 
-
-Document revocation is not intended to work as expiration, since documents with an expiry date already have a limited validity duration that the issuer determines at the time of file creation. 
-
-:::
-
-For documents with limited validity, consider including expiry dates within the document content for external verification.
-
-The following screenshot shows [a certificate example](https://dev.verify.gov.sg/verify?q=%7B%22type%22%3A%22DOCUMENT%22%2C%22payload%22%3A%7B%22uri%22%3A%22https%3A%2F%2Fdocument-storage.oa.gov.sg%2Fnational-youth-council_cci-level-1-trainer.oa%22%2C%22permittedActions%22%3A%5B%22VIEW%22%2C%22STORE%22%5D%2C%22redirect%22%3A%22https%3A%2F%2Fdev.opencerts.io%22%7D%7D): 
-
-![Certificate Example](/docs/integrator-section/verifiable-document/ethereum/revoking-document/sample-cert-expiry.png)
-
-It includes: 
-
-* The document issue date (e.g. “31 December 2022”) can be stored in a field defined by the issuing party and also in the content visually shown in the document renderer.
-
-* The document expiry date (e.g. “30 December 2025”) can be stored in another field defined by the issuing party and also in the content visually shown in the document renderer.
-
-
-However, whether or not the document remains viewable after expiration may be up to the issuing party’s decision based on the use case. The document renderer should handle any logic specific to expiration.
-
+<RevokeIntro />
 
 ## Revoking a document
 
@@ -48,8 +15,8 @@ open-attestation document-store revoke --address 0xBBb55Bd1D709955241CAaCb327A76
 
 In the example above:
 
-- `address` is the document store address, for instance the one created with the [Deploying Document Store](/docs/integrator-section/verifiable-document/ethereum/document-store) guide.
-- `hash` is the value of `targetHash` field of one of the [previously wrapped documents](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) (open one of the file, head to the bottom and check for the `targetHash` in the `signature` object.
+- `address` is the document store address, for instance the one created with the [Deploying Document Store](/docs/ethereum-section/document-store) guide.
+- `hash` is the value of `targetHash` field of one of the [previously wrapped documents](/docs/ethereum-section/wrap-document-eth) (open one of the file, head to the bottom and check for the `targetHash` in the `signature` object.
 
 You will be prompted for the password that you used while creating the wallet. You will see a message after completion of the command:
 
@@ -61,13 +28,13 @@ You will be prompted for the password that you used while creating the wallet. Y
 
 Head to `dev.opencerts.io` or `dev.tradetrust.io` and drag and drop the revoked document. An error will display in the portal.
 
-![Successful verification](/docs/integrator-section/verifiable-document/ethereum/revoking-document/verifying.png)
+![Successful verification](/docs/ethereum-section/revoke-eth/verifying.png)
 
 The other document will still be valid.
 
 ## Revoking multiple documents
 
-If you open the [previously wrapped documents](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) side by side, you will notice:
+If you open the [previously wrapped documents](/docs/ethereum-section/wrap-document-eth) side by side, you will notice:
 
 - they have a different `targetHash`: it uniquely identifies any document
 - they have the same `merkleRoot`: it uniquely identifies any group of wrapped documents.

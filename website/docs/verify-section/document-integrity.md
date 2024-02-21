@@ -4,9 +4,9 @@ title: Document integrity
 sidebar_label: Document integrity
 ---
 
-OpenAttestation ensures that the content of the document has not been modified since the document was created, with the exception of data removed using the built-in [obfuscation mechanism](/docs/developer-section/libraries/remote-files/open-attestation#obfuscating-data).
+OpenAttestation ensures that the content of the document has not been modified since the document was created, with the exception of data removed using the built-in [obfuscation mechanism](/docs/lib-section/remote-files/open-attestation#obfuscating-data).
 
-The Ethereum tutorial shows you how to [wrap a document](/docs/integrator-section/verifiable-document/ethereum/wrapping-document) and [issue it](/docs/integrator-section/verifiable-document/ethereum/issuing-document) into a document store. 
+The Ethereum tutorial shows you how to [wrap a document](/docs/ethereum-section/wrap-document-eth) and [issue it](/docs/ethereum-section/issue-document) into a document store. 
 
 The following sections explain the purpose of wrapping and issuing a document and why these actions are necessary.
 
@@ -76,13 +76,13 @@ Once computing the `data` object, you can create a unique hash for the document 
 
 >**Note:** The `targetHash` of a document is a unique identifier.
 
-![Compute target hash](/docs/docs-section/how-does-it-work/target-hash.png)
+![Compute target hash](/docs/verify-section/document-integrity/target-hash.png)
 
 In a later procedure of verifying the document, you will perform exactly the same steps again to assert that the document content has not been tampered with. This works because the final `targetHash` will be completely different, if any part of the wrapped document is different from the original.
 
 #### Data obfuscation
 
-Due to the way you compute `targetHash`, you can use OpenAttestation to obfuscate data not intended for public access. To achieve this, the hash of a specific field is computed and added into the document. You can try it with the [CLI](/docs/developer-section/libraries/remote-files/open-attestation-cli) and the document above:
+Due to the way you compute `targetHash`, you can use OpenAttestation to obfuscate data not intended for public access. To achieve this, the hash of a specific field is computed and added into the document. You can try it with the [CLI](/docs/lib-section/remote-files/open-attestation-cli) and the document above:
 
 ```bash
 open-attestation filter ./path/to/file.json ./output.json name
@@ -130,7 +130,7 @@ The hash added into `privacy.obfuscatedData` is the one used by the framework wh
 
 The only difference with the [`targetHash`](#targethash) computation is in Step 3.
 
-![Compute target hash with data obfuscation](/docs/docs-section/how-does-it-work/target-hash-with-data-obfuscation.png)
+![Compute target hash with data obfuscation](/docs/verify-section/document-integrity/target-hash-with-data-obfuscation.png)
 
 Using data obfuscation, the user will have the option to share only a subset of the data.
 
@@ -175,4 +175,4 @@ To avoid this problem, obfuscate the full object (`foo` in this case) when you n
 
 ### targetHash and merkleRoot
 
-To learn more about the differences between `targetHash` and `merkleRoot`, see [here](/docs/docs-section/how-does-it-work/issuance-status#merkleroot).
+To learn more about the differences between `targetHash` and `merkleRoot`, see [here](/docs/verify-section/issuance-status#merkleroot).

@@ -4,7 +4,7 @@ title: Create a wallet
 sidebar_label: Create a wallet
 ---
 
-First, create the [wallet](/docs/docs-section/appendix/glossary#wallet). 
+First, create the [wallet](https://ethereum.org/wallets). 
 
 After that, you will get the public address of the wallet and be able to verify the wallet balance. 
 

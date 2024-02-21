@@ -3,14 +3,15 @@ id: dns
 title: Configure DNS
 sidebar_label: Configure DNS
 ---
+import DNSProof from "/src/reusables/_dns-proof.mdx";
 
-The explanation about why you need to configure DNS is available [in the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/dns-proof).
+<DNSProof />
 
 In the DID method, you will only use the wallet address as signing credentials and bind it to a domain.
 
 ## Creating temporary DNS proof
 
-With your [wallet address](/docs/integrator-section/verifiable-document/did/create), run the following command:
+With your [wallet address](/docs/did-section/create), run the following command:
 
 ```bash
 open-attestation dns txt-record create --public-key did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller

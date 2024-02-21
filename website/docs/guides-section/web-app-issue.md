@@ -24,9 +24,9 @@ In this tutorial, you will use the first web app.
 
 1. After connecting with MetaMask, open the [OpenCerts Admin Portal](https://admin.opencerts.io/) in Google Chrome. On the Welcome page, click **MetaMask**.
 
-2. Enter the `document store smart contract address` from the [deployment guide](/docs/integrator-section/webapp-tutorial/deploy-document-store-webapp/) into the **Store address** field. 
+2. Enter the `document store smart contract address` from the [deployment guide](/docs/guides-section/web-app-deploy) into the **Store address** field. 
 
-![Issuing Interface](/docs/integrator-section/webapp-tutorial/issuing-webapp/issuing.png)
+![Issuing Interface](/docs/guides-section/web-app-issue/issuing.png)
 
 3. Select **Issue certificate batch** on the left navigation.
 
@@ -50,8 +50,8 @@ In this tutorial, you will use the first web app.
 
 5. Once the `merkleRoot` has been issued, a success message **"Batch has been issued"** will display.
 
-![Issuance Success](/docs/integrator-section/webapp-tutorial/issuing-webapp/success.png)
+![Issuance Success](/docs/guides-section/web-app-issue/success.png)
 
 
 ## Additional reading
-You will find more details about issuing on [this page](/docs/integrator-section/verifiable-document/ethereum/issuing-document).
+You will find more details about issuing on [this page](/docs/ethereum-section/issue-document).

@@ -3,17 +3,22 @@ id: document-store-or-ocsp
 title: Deploy document store or OCSP
 sidebar_label: Deploy document store or OCSP
 ---
-> **Note:** It is **optional** to deploy either document store or OCSP. Perform this task only if you need to revoke documents.
+For first-time users, it's recommended to skip this article.
+
+:::info 
+* It is **optional** to deploy either document store or OCSP responder. Perform this task **only** if you need to revoke documents. 
+* If you need to choose from document store and OCSP responder, see the differences between revocation methods in [this article](/docs/revoke-section/diff-btw-revocation-methods).
+:::
 
 ## Deploying Document Store
 
 > **Important:** If you have run the Ethereum method and created a document store, do not use it in the DID method.
 
-The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, you will deploy a document store smart contract on the Ethereum `sepolia` network, which is a test network that does not require actual [ethers](/docs/docs-section/appendix/glossary#ether) for transactions.
+The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, you will deploy a document store smart contract on the Ethereum `sepolia` network, which is a test network that does not require actual [ethers](/docs/glossary-section/glossary#ether) for transactions.
 
 
 ### Running the deploy document-store command
-You will use the wallet created in the [previous step](/docs/integrator-section/verifiable-document/did/create).
+You will use the wallet created in the [previous step](/docs/did-section/create).
 
 ```bash
 open-attestation deploy document-store "DID document store" --network sepolia --encrypted-wallet-path wallet.json
@@ -41,7 +46,7 @@ Please do **not** use the Transaction ID in the response.
 
 > **Important:** Save the document store address somewhere. You will need this address later to complete the tutorial.
 
-## Deploying OCSP
+## Deploying OCSP responder
 A reference implementation for deploying the OCSP responder is available at [this repository on GitHub](https://github.com/Open-Attestation/ocsp-responder).
 
 >**Note:** Other implementations will also be recognized by verifiers, as long as they adhere to the request/response format required by the OpenAttestation framework.

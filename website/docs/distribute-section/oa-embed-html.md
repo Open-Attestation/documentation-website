@@ -28,11 +28,11 @@ To continue, follow the steps below:
 
     The screenshot below shows how the **Proceed** button works.
 
-   ![Resultant HTML](/docs/developer-section/quickstart/oa-embedded-html/html-proceed-verify.png)
+   ![Resultant HTML](/docs/distribute-section/oa-embed-html/html-proceed-verify.png)
 
 ## Prerequisites
 
-Ensure that you have followed the steps on how to issue an [Ethereum OA document](/docs/integrator-section/verifiable-document/ethereum/document-store-overview) or [DID OA document](/docs/integrator-section/verifiable-document/did/create), and have a valid OA document you want to use. 
+Ensure that you have followed the steps on how to issue an [Ethereum OA document](/docs/ethereum-section/overview-eth) or [DID OA document](/docs/did-section/create), and have a valid OA document you want to use. 
 
 In case you do not have an OA document, you can use [this sample HealthCert document](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json) to follow the guide.
 
@@ -46,7 +46,7 @@ This guide will use [the sample HealthCert document](https://github.com/Notarise
 
 1. Copy the [sample document contents](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json). 
 
-   ![Copy document data](/docs/developer-section/quickstart/oa-embedded-html/copy-healthcert-data.png)
+   ![Copy document data](/docs/distribute-section/oa-embed-html/copy-healthcert-data.png)
 
     If you are using your own OA document, open the file in a text editor and copy the file data.
 
@@ -57,7 +57,7 @@ This guide will use [the sample HealthCert document](https://github.com/Notarise
 
    - Copy the data and paste it into a text editor. Save it for later use.
 
-     ![Minify document data](/docs/developer-section/quickstart/oa-embedded-html/minify-document-data.png)
+     ![Minify document data](/docs/distribute-section/oa-embed-html/minify-document-data.png)
 
 3. Encode your data with a URL Encoder.
 
@@ -65,11 +65,11 @@ This guide will use [the sample HealthCert document](https://github.com/Notarise
    
       You will append it to the end of the Verify URL later on.
 
-   - Use online tools like [urlencoder.org](https://www.urlencoder.org/).
+   - Use online tools like [urlencoder.org](https://www.urlencoder.org/)
 
    - Copy the data and paste it into a text editor. Save it for later use.
 
-     ![Encode document data](/docs/developer-section/quickstart/oa-embedded-html/encode-document-data.png)
+     ![Encode document data](/docs/distribute-section/oa-embed-html/encode-document-data.png)
 
 ### Create the Verify URL with OA Document Data
 

@@ -13,7 +13,7 @@ The QR code used in the OpenAttestation framework is essentially a URL where you
 
 The following shows an example QR code:
 
-![Example QR Code](/docs/developer-section/quickstart/oa-embedded-qrcode/example-qrcode.png)
+![Example QR Code](/docs/distribute-section/oa-embed-qrcode/example-qrcode.png)
 
 
 The following shows the link in the QR code above: 

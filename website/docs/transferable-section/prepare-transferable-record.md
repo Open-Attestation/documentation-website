@@ -9,7 +9,7 @@ In this section, you will prepare the DNS and the content of the transferable re
 
 ## DNS configuration
 
-Similar to [binding the document store to a domain name](/docs/integrator-section/verifiable-document/ethereum/document-store), you will have to bind the identity of the token registry to a domain name. To do that, perform one of the following methods:
+Similar to [binding the document store to a domain name](/docs/ethereum-section/document-store), you will have to bind the identity of the token registry to a domain name. To do that, perform one of the following methods:
 
 1. create a `TXT` record on your domain with the following entry value:
 
@@ -17,7 +17,7 @@ Similar to [binding the document store to a domain name](/docs/integrator-sectio
   | ---- | ----------- | --------------------------------------------------------------- |
   |`TXT` | example.com | "openatts net=`ethereum` netId=`11155111` addr=`0x8431012Bc040942B59e3C5bf428221eab0b2f723`" |
 
-  You will need to replace the token registry address `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with the address you get from the [previous step](/docs/integrator-section/transferable-record/token-registry).
+  You will need to replace the token registry address `0x8431012Bc040942B59e3C5bf428221eab0b2f723` with the address you get from the [previous step](/docs/transferable-section/token-registry).
 
 2. If you want to use our sandbox DNS for the purpose of exercise, run the following command instead:
 
@@ -60,7 +60,7 @@ Create a file `sample.json` in a folder `raw-documents-transferable`:
 }
 ```
 
-Replace the `tokenRegistry` value with your token registry smart contract address from [previous section](/docs/integrator-section/transferable-record/token-registry) and `location` with the domain where you are issuing this document.
+Replace the `tokenRegistry` value with your token registry smart contract address from [previous section](/docs/transferable-section/token-registry) and `location` with the domain where you are issuing this document.
 
 The difference between a transferable record and a verifiable document is the use of `tokenRegistry` instead of `documentStore` in declaring the smart contract address.
 
@@ -97,4 +97,4 @@ This is an alternative way to wrap the Transferable Record.
 >**Note:** Save the merkle root somewhere for later steps.
 
 ## Additional reading
-You will find more details about configuring DNS on [this page](/docs/integrator-section/verifiable-document/ethereum/dns-proof).
+You will find more details about configuring DNS on [this page](/docs/ethereum-section/dns-proof).

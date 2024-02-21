@@ -281,7 +281,7 @@ ${content}`,
             },
 
             {
-              label: 'Frequently asked questions',
+              label: 'FAQ',
               to: '/docs/faq-section/overview-faq',
               activeBasePath: '/docs/faq-section',
             },

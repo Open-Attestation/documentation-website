@@ -63,7 +63,7 @@ This is a live preview to see the changes when you:
 1. Edit the raw document data in the **Knobs** tab
 1. Edit the template code to render the data
 
-![Default Story Book View](/docs/developer-section/quickstart/custom-renderer/default-storybook.png)
+![Default Story Book View](/docs/guides-section/renderer-template/default-storybook.png)
 
 
 ## Developing the document renderer
@@ -133,11 +133,11 @@ The `name` key is a compulsory key to describe the OA document type. In this cas
 
 OA documents do not have a strict data structure. Therefore, the issuers of documents need to define their own data schema. The `recipient` object is a user-defined object that describes who the certificate is conferred to. In this case, replace `John Doe` with the actual recipient name.
 
->**Note:** This guide focuses on the simple document. In the [next tutorial](/docs/developer-section/quickstart/create-custom-schema.md), you will learn more about the OA document schema and how to define a custom data structure. 
+>**Note:** This guide focuses on the simple document. In the [next tutorial](/docs/guides-section/custom-schema), you will learn more about the OA document schema and how to define a custom data structure. 
 
 #### 4. `issuers`
 
-For more details, see [Creating raw document](/docs/integrator-section/verifiable-document/ethereum/raw-document#creating-raw-document).
+For more details, see [Creating raw document](/docs/ethereum-section/raw-document-eth#creating-raw-document).
 
 ### Developing the COC template view
 
@@ -217,7 +217,7 @@ import { cocTemplateCertificate } from "../samples/customTemplateSample";
 
     Make sure your component looks like the following:
 
-![Completed Story Book View](/docs/developer-section/quickstart/custom-renderer/completed-storybook.png)
+![Completed Story Book View](/docs/guides-section/renderer-template/completed-storybook.png)
 
 ### Certificate of Completion template configuration
 
@@ -289,13 +289,13 @@ Once you have your code on GitHub, build and deploy the site onto [Netlify](http
 
 3. In the "Import an existing project" section, click **Import from Git**.
 
-![Import from Git](/docs/developer-section/quickstart/custom-renderer/netlify-new.png)
+![Import from Git](/docs/guides-section/renderer-template/netlify-new.png)
 
 4. Select **Deploy with GitHub**. The authorization page displays. 
 
     Authorize your GitHub account and select your repository. 
 
-![Deploy from GitHub](/docs/developer-section/quickstart/custom-renderer/netlify-deploy.png)
+![Deploy from GitHub](/docs/guides-section/renderer-template/netlify-deploy.png)
 
 5. Review the configuration for your repository. 
 
@@ -308,7 +308,7 @@ Once you have your code on GitHub, build and deploy the site onto [Netlify](http
     c. Configure other settings as you need.
 
 
-![Build settings](/docs/developer-section/quickstart/custom-renderer/netlify-build.png)
+![Build settings](/docs/guides-section/renderer-template/netlify-build.png)
 
 6. Click **Deploy <Repository_Name>**.
 
@@ -316,7 +316,7 @@ Once you have your code on GitHub, build and deploy the site onto [Netlify](http
 
     In this example, the URL is `https://frosty-joliot-c02c3d.netlify.com/`. The website will be an empty page when you view it directly. This is normal, because it is not meant for direct viewing through a web browser.
 
-![Sample Deployed URL](/docs/developer-section/quickstart/custom-renderer/netlify-deployed.png)
+![Sample Deployed URL](/docs/guides-section/renderer-template/netlify-deployed.png)
 
 
 >**Important:** Save the website URL for future reference. You should also update `$template.url` in your OA document.

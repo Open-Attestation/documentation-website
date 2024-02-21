@@ -26,7 +26,7 @@ You will need ethers to use Ethereum smart contracts. The following actions requ
 - Issuing a merkle root
 - Revoking a merkle root
 
-For more information, see the [FAQ](/docs/docs-section/faq). Other actions are free, for example, reading what is in the smart contract.
+For more information, see the [FAQ](/docs/faq-section/overview-faq). Other actions are free, for example, reading what is in the smart contract.
 
 With DID, you don't need to spend money with the precondition of not revoking any documents. Issuance works free of charge. If you need to revoke documents using the DID method without making any Ethereum transactions, consider deploying an OCSP responder.
 
@@ -40,9 +40,12 @@ For DID, it's the opposite and all transaction information is untraced by defaul
 
 Revocation is part of Ethereum smart contracts.
 
-As of today, it is possible to revoke a document if a document store has been declared in its revocation block. You can revoke a document [using a document store or an OCSP](/docs/integrator-section/verifiable-document/did/revoking-document-did).
+As of today, it is possible to revoke a document if a document store has been declared in its revocation block. You can revoke a document: 
 
->**Note:** If you use revocation for `DID`, you still need to have at least one transaction with the Ethereum blockchain to deploy a `documentStore`, which means `DID` flow is not free anymore.
+* [Using document store](/docs/did-section/revoke-document-did/revoke-using-document-store)
+* [Or using OCSP responder](/docs/did-section/revoke-document-did/revoke-using-ocsp)
+
+>**Note:** You don't need to pay for transactions when you use DID for issuance and OCSP for revocation. However, if you use DID for issuance and a `documentStore` for revocation, you still need to pay for at least one transaction with the Ethereum blockchain to deploy a `documentStore`.
 
 ## Throughput
 

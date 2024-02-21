@@ -3,14 +3,18 @@ id: wrap-document-did
 title: Wrap documents
 sidebar_label: Wrap documents
 ---
+import RawDocument from "/src/reusables/_raw-document.mdx";
+import WrapDocumentIntro from "/src/reusables/_wrap-document-intro.mdx";
 import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
 import WrapDocumentsInBatch from "/src/reusables/_wrap-documents-in-batch.mdx";
 
-This task is same with the one [in the Ethereum tutorial](/docs/integrator-section/verifiable-document/ethereum/wrapping-document).
+<RawDocument />
 
->**Note:** If you are using both the Ethereum and DID methods, use different folders to contain the wrapped documents. This will prevent the files from being overwritten.
+<WrapDocumentIntro />
 
 ## Replacing folder names
+
+>**Important:** If you are using both the Ethereum and DID methods, use different folders to contain the wrapped documents. This will prevent the files from being overwritten.
 
 Before running the command below, replace the folder names. For example:
 

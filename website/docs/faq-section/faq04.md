@@ -26,7 +26,7 @@ Below are the pros and cons of each approach.
     </thead>
     <tbody>
         <tr>
-            <td>Sharing a URL/scanning a QR code</td>
+            <td><a href="/docs/distribute-section/oa-embed-qrcode">Sharing a URL/scanning a QR code</a></td>
             <td>
                 <ul>
                     <li>The URL is lightweight and it does not require any local file storage.</li>
@@ -59,7 +59,7 @@ Below are the pros and cons of each approach.
             </td>
         </tr>
         <tr>
-            <td><a href="/docs/developer-section/quickstart/oa-embedded-html/">Sending an HTML page (with an OA document embedded)</a></td>
+            <td><a href="/docs/distribute-section/oa-embed-html">Sending an HTML page (with an OA document embedded)</a></td>
             <td>
                 <ul>
                     <li>The user can open HTML on most devices without installing any application.</li>

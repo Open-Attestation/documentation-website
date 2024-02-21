@@ -12,7 +12,7 @@ This guide will show you how to create a custom schema.
 
 The document below is used as an example in subsequent sections for creating an OA document.
 
-![Invoice](/docs/docs-section/roadmap/invoice-sample.png)
+![Invoice](/docs/guides-section/custom-schema/invoice-sample.png)
 
 
 ## JSON schema
@@ -94,4 +94,4 @@ Once you have created a custom schema for the document, you can use it during th
 
 
 ## Additional reading
-To learn more about the wrapping process, see [this guide](/docs/developer-section/libraries/remote-files/open-attestation-cli#wrapping-documents).
+To learn more about the wrapping process, see [this guide](/docs/lib-section/remote-files/open-attestation-cli#wrapping-documents).

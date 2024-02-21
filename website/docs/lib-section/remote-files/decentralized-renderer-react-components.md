@@ -7,39 +7,59 @@ sidebar_label: React components for decentralized renderer
 
 # React Components
 
-React components abstracting the communication with `Open Attestation` decentralized renderer. More information on this:
+[React components](https://github.com/Open-Attestation/decentralized-renderer-react-components) are used for abstracting the communication with OpenAttestation decentralized renderer. See more information below:
 
-- [Opencerts v2 announcement](https://docs.opencerts.io/announcements/schema2_update.html)
-- [Open Attestation](https://openattestation.com/)
+- [OpenCerts V2 announcement](https://docs.opencerts.io/docs/migrations/v1_to_v2#announcements)
+- [OpenAttestation](https://openattestation.com/)
 
 ## Features
 
-- [**React**](http://reactjs.org/) - A JavaScript library for building user interfaces.
-- [**Webpack**](https://webpack.js.org/) - Component bundler.
-- [**React testing library**](https://testing-library.com/) - Simple and complete testing utilities that encourage good testing practices.
-- [**Jest**](https://facebook.github.io/jest) - JavaScript testing framework used by Facebook.
-- [**ESLint**](http://eslint.org/) - Make sure you are writing a quality code.
-- [**Prettier**](https://prettier.io/) - Enforces a consistent style by parsing your code and re-printing it.
-- [**Typescript**](https://www.typescriptlang.org/) - JavaScript superset, providing optional static typing
-- [**Circle CI**](https://circleci.com/) - Automate tests and linting for every push or pull request.
-- [**Storybook**](https://storybook.js.org/) - Tool for developing UI components in isolation with documentation.
-- [**Semantic Release**](https://semantic-release.gitbook.io/semantic-release/) - Fully automated version management and package publishing.
-- [**Debug**](https://github.com/visionmedia/debug) - JS debugging utility that works both in node.js and browsers.
+- [**Debug**](https://github.com/visionmedia/debug) - A JS debugging utility that works in both node.js and browsers
+- [**ESLint**](http://eslint.org/) - With this tool, you write quality code.
+- [**Jest**](https://facebook.github.io/jest) - A JavaScript testing framework used by Facebook
+- [**Prettier**](https://prettier.io/) - It enforces a consistent style by parsing your code and re-printing it.
+- [**React**](http://reactjs.org/) - A JavaScript library for building user interfaces
+- [**React testing library**](https://testing-library.com/) - Simple and complete testing utilities that encourage good testing practices
+- [**TypeScript**](https://www.typescriptlang.org/) - A JavaScript superset that provides optional static typing
+- [**Semantic Release**](https://semantic-release.gitbook.io/semantic-release/) - A fully automated version management and package publishing tool
+- [**Storybook**](https://storybook.js.org/) - A tool for developing UI components in isolation with documentation
+- [**Webpack**](https://webpack.js.org/) - A component bundler
+
+
+## Installation
+<!--Flag: The "Installation" section was added based on similar steps in the "react-template" readme.-->
+
+To install the React components for the decentralized renderer, download or `git clone` [this repository](https://github.com/Open-Attestation/decentralized-renderer-react-components):
+
+```sh
+$ git clone https://github.com/Open-Attestation/decentralized-renderer-react-components.git my-components
+$ cd my-components
+$ rm -rf .git
+$ npm install
+```
+
+Be sure to edit the following files according to your module information:
+
+- `package.json` (module name and version)
+- `README.md`
+- `LICENSE`
+- Add your own template (in the `src` folder) and configure the template registry (in the `src/index.tsx` file).
+<!--Flag: The folder and file names above need confirmation.-->
 
 ## How it works
 
-To begin with, makes sure you read the initial introduction and explanation about [decentralized renderer](https://docs.opencerts.io/docs/migrations/v1_to_v2)
+To begin with, be sure to read the initial introduction and explanation about the [decentralized renderer](https://docs.opencerts.io/docs/migrations/v1_to_v2).
 
-In order to render a document, hosts will load the corresponding decentralized renderer (as specified by the document) and embed it using an iframe. Communication between host and iframe is made using [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) and has been designed using actions.
+To render a document, hosts will load the corresponding decentralized renderer (as the document specifies) and embed it using an iframe. Communication between the host and iframe is achieved using the [postMessage API](https://developer.mozilla.org/en-US/docs/Web/API/Window/postMessage) and has been designed using actions.
 
 ## Actions API
 
-All actions follow the same structure and are composed of `type` and `payload`
+All actions follow the same structure. They are composed of `type` and `payload`:
 
-- `type` indicates the kind of action being executed, for instance `RENDER_DOCUMENT` to render a document. The type of an action is _mandatory_
-- `payload` indicates optional data associated to the type, for instance the content of the document to render.
+- `type` indicates the kind of action being executed, for instance, `RENDER_DOCUMENT` means rendering a document. The type of an action is _mandatory_.
+- `payload` indicates optional data associated to the type, for instance, the content of the document to render.
 
-Example:
+The following is a code example:
 
 ```javascript
 const renderDocumentAction = {
@@ -56,13 +76,15 @@ const printAction = {
 
 ### From host to frame actions
 
-The following list of actions are made for host to communicate to the iframe (and thus must be handled by application embed in the iframe):
+The following shows a list of actions made for the host to communicate to the iframe, and thus must be handled by the application embedded in the iframe:
 
-- render a document:
+- Render a document:
   - type: `RENDER_DOCUMENT`
-  - payload: object with 2 properties
+  - payload: An object with two properties
     - document: (mandatory) document data as returned by `getData` method from [@govtechsg/open-attestation](https://github.com/Open-Attestation/open-attestation)
-    - rawDocument: (optional) Open Attestation document
+    - rawDocument: (optional) OpenAttestation document
+
+  The following is a code example: 
 
 ```javascript
 const action = {
@@ -74,9 +96,11 @@ const action = {
 };
 ```
 
-- select a template amongst the one provided by the decentralized renderer (A renderer may provide 1 to many different template to display a document):
-  - type: "SELECT_TEMPLATE"
-  - payload: (mandatory) template id to display
+- Select a template among those provided by the decentralized renderer (A renderer may provide one to many different templates to display a document):
+  - type: `SELECT_TEMPLATE`
+  - payload: (mandatory) The template ID to display
+
+  The following is a code example: 
 
 ```javascript
 const action = {
@@ -85,8 +109,10 @@ const action = {
 };
 ```
 
-- request for printing a document
-  - type: "PRINT"
+- Request for printing a document
+  - type: `PRINT`
+
+  The following is a code example: 
 
 ```javascript
 const action = {
@@ -94,11 +120,13 @@ const action = {
 };
 ```
 
-There is a 4th action that can be used in the context of react-native application (which doesn't use iframe under the hood)
+There is a fourth action that can be used in the context of React Native application (which doesn't use iframe under the hood)
 
-- request for the list of templates for a document. The action directly return the list of templates
+- Request for the list of templates for a document. The action directly returns the list of templates
   - type: `GET_TEMPLATES`
-  - payload: (mandatory) document data as returned by `getData` method from [@govtechsg/open-attestation](https://github.com/Open-Attestation/open-attestation)
+  - payload: (mandatory) document data as returned by the `getData` method from [@govtechsg/open-attestation](https://github.com/Open-Attestation/open-attestation)
+
+  The following is a code example: 
 
 ```javascript
 const action = {
@@ -109,11 +137,13 @@ const action = {
 
 ### From frame to host actions
 
-The following list of actions are made for iframe to communicate to the host (and thus must be handled by application embedding the iframe):
+The following shows a list of actions made for the iframe to communicate to the host (and thus must be handled by the application which embeds the iframe):
 
-- provide the full content height of the iframe so that the host can adapt the automatically the size of the embedded iframe.
-  - type: "UPDATE_HEIGHT"
+- Provide the full content height of the iframe, so that the host can adapt automatically to the embedded iframe size.
+  - type: `UPDATE_HEIGHT`
   - payload: (mandatory) full content height of the iframe
+
+  The following is a code example: 
 
 ```javascript
 const action = {
@@ -122,9 +152,11 @@ const action = {
 };
 ```
 
-- provide the name of a field on the document to obfuscate. The value must follow path property as handled by [lodash#get](https://lodash.com/docs/4.17.15#get)
-  - type: "OBFUSCATE"
+- Provide the name of a field on the document to obfuscate. The value must follow the path property as handled by [lodash#get](https://lodash.com/docs/4.17.15#get)
+  - type: `OBFUSCATE`
   - payload: (mandatory) path to the field
+
+  The following is a code example: 
 
 ```javascript
 const action = {
@@ -133,9 +165,11 @@ const action = {
 };
 ```
 
-- provide the list of templates that can be used to render a document
-  - type: "UPDATE_TEMPLATES"
+- Provide the list of templates that can be used to render a document
+  - type: `UPDATE_TEMPLATES`
   - payload: (mandatory) an array where each element is an object composed of a string and a label
+  
+  The following is a code example: 
 
 ```javascript
 const action = {
@@ -153,13 +187,13 @@ const action = {
 };
 ```
 
-## How to use
+## Usage
 
-The library provide 2 mains components
+The library provide two mains components, including `FrameConnector` and `FramedDocumentRenderer`.
 
 ### FrameConnector
 
-This component will create a frame and establish a connection with the provided decentralized renderer. Properties are:
+This component will create a frame and establish a connection with the provided decentralized renderer. Its properties include:
 
 - `source`: url to the decentralized renderer that will handle the document to display
 - `dispatch`: function listening for actions triggered by the decentralized renderer
@@ -170,44 +204,55 @@ Please check the code in `example/application` to see how to use this component.
 
 ### FramedDocumentRenderer
 
-This component will establish a connection with a host embedding the application within an iframe. Properties are:
+This component will establish a connection with a host embedding the application within an iframe. Its properties include:
 
-- `templateRegistry`: the configuration of the templates handled by the decentralized renderer. `templateRegistry` is an object where each key hold an array of `Template Configuration`. One `Template Configuration` consist of :
-  - id: a unique (withing the current array) identifier of the template
-  - label: a string to represent what's the template is,
-  - template: a `Template`, that is to say a react component that will render a document
-- `attachmentToComponent`: a function that map attachments to component depending on the attachment type. Currently the library exposes 2 functions:
-  - `noAttachmentRenderer`: which uses `UnsupportedRenderer` (basically it's doing nothing)
-  - `fullAttachmentRenderer`: which uses all the supported attachment type by the library (see the function).
-    This property default to `noAttachmentRenderer`, to avoid bundles growing huge unnecessarily.
+- `templateRegistry`: The configuration of the templates handled by the decentralized renderer. `templateRegistry` is an object where each key holds an array of `Template Configuration`. 
 
-`FramedDocumentRenderer` handle all the logic around the communication with the hosted application and the renderer:
+  One `Template Configuration` consists of:
+  - `id`: A unique identifier within the current array of the template
+  - `label`: A string to represent what the template is (used when verifiers display tabs)
+  - `template`: A `Template`, i.e. a React component that will render a document
+- `attachmentToComponent`: A function that maps attachments to the component depending on the attachment type. 
 
-- it will automatically call `UPDATE_HEIGHT` action, when the iframe is resized or when there is a change within the iframe (using [Mutation Observer](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver))
-- it will automatically call the `Template` to render depending on information provided by the host
-- it will automatically provide the available templates when a document has been requested for rendering (i.e. it will call `UPDATE_TEMPLATES` action once the document has been renderer)
-- it will automatically call `OBFUSCATE` action when requested by a `Template`
+  Currently the library exposes two functions:
+  1. `noAttachmentRenderer`: Uses `UnsupportedRenderer`
+  1. `fullAttachmentRenderer`: Uses all the supported attachment types by the library (see the function).
+    
+      This property defaults to `noAttachmentRenderer` to avoid the bundles from growing unnecessarily huge.
 
-Please check the code in `example/decentralized-renderer` to see how to use this component. You can also start the example application using the command `npm run example:renderer`
+`FramedDocumentRenderer` handles all the logic around the communication with the hosted application and the renderer:
+
+- It will automatically call the `UPDATE_HEIGHT` action, when the iframe is resized or when there is a change within the iframe (using [Mutation Observer](https://developer.mozilla.org/en-US/docs/Web/API/MutationObserver)).
+- It will automatically call the `Template` to render the document, depending on the information provided by the host.
+- It will automatically provide the available templates when a document has been requested for rendering (i.e. it will call the `UPDATE_TEMPLATES` action once the document has been rendered).
+- it will automatically call the `OBFUSCATE` action when it is requested by a `Template`.
+
+You need to check the code in `example/decentralized-renderer` to see how to use this component. You can also start the example application using the command `npm run example:renderer`
 
 #### Template (React component)
 
-Each configured `Template` will be provided the following properties, when rendering a document:
+When a document is being rendered, each configured `Template` will be provided with the following properties:
 
-- `document`: (mandatory) document data as returned by `getData` method from [@govtechsg/open-attestation](https://github.com/Open-Attestation/open-attestation)
-- `rawDocument`: (optional) Open Attestation document
-- `handleObfuscation`: (mandatory) A function to call to handle obfuscation in the document. The value provided must follow path property as handlded by [lodash#get](https://lodash.com/docs/4.17.15#get)
+- `document`: (mandatory) Document data as returned by the `getData` method from [@govtechsg/open-attestation](https://github.com/Open-Attestation/open-attestation)
+- `rawDocument`: (optional) OpenAttestation document
+- `handleObfuscation`: (mandatory) A function to call that will handle obfuscation in the document. The value provided must follow the path property as handled by [lodash#get](https://lodash.com/docs/4.17.15#get).
 
 ## Development
 
-- `npm run storybook`: to start storybook, create stories and visualize the different component
+Run the following commands for different development tasks:
+
+- `npm run storybook`: to start a storybook, create stories, and visualize the different components
 - `npm run test`: to run tests
 - `npm run lint`: to run lint
-- `npm run example:application`: to run the example build with the library to develop an hosting application. Don't forget to update the example if you update this library.
-- `npm run example:renderer`: to run the example build with the library to develop a decentralized renderer. Don't forget to update the example if you update this library.
+- `npm run example:application`: to run an example application built with this library
 
-We also provided a [github template](https://github.com/Open-Attestation/decentralized-renderer-react-template) to build your own decentralized-renderer based on this library
+  Be sure to update the example if you update this library.
+- `npm run example:renderer`: to run an example decentralized renderer built with this library
+
+  Be sure to update the example if you update this library.
+
+You can also build your own decentralized-renderer based on this [React template](https://github.com/Open-Attestation/decentralized-renderer-react-template).
 
 ## Penpal
 
-There is compatibility [issues](https://github.com/Aaronius/penpal/issues/52) between penpal version ^5 and ^4. In the event that penpal version ^4 must be used, use this version [4.1.1](https://github.com/Aaronius/penpal/releases/tag/v4.1.1)
+There are compatibility [issues](https://github.com/Aaronius/penpal/issues/52) between Penpal version ^5 and ^4. If you must use Penpal version ^4, get version [4.1.1](https://github.com/Aaronius/penpal/releases/tag/v4.1.1).

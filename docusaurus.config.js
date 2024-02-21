@@ -214,8 +214,7 @@ ${content}`,
         src: "img/logos/oa.svg",
         srcDark: "img/logos/oa.svg",
       },
-      items: [
-        
+      items: [        
         {
           type: 'dropdown',
           label: 'Issue/Revoke',
@@ -311,7 +310,6 @@ ${content}`,
           
           ],
         },
-        
       ],
     },
     footer: {

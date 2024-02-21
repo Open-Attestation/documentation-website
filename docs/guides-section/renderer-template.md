@@ -56,6 +56,7 @@ npm run storybook
 ```
 
 ### Development environment
+
 After running the Storybook, you will see the template samples at `http://localhost:6006/`.
 
 This is a live preview to see the changes when you:
@@ -65,10 +66,9 @@ This is a live preview to see the changes when you:
 
 ![Default Story Book View](/docs/guides-section/renderer-template/default-storybook.png)
 
-
 ## Developing the document renderer
 
-After setting up the development environment, start writing our document renderer. 
+After setting up the development environment, start writing our document renderer.
 
 1. Define the data structure of our 📜 Certificate of Completion (COC).
 
@@ -133,7 +133,7 @@ The `name` key is a compulsory key to describe the OA document type. In this cas
 
 OA documents do not have a strict data structure. Therefore, the issuers of documents need to define their own data schema. The `recipient` object is a user-defined object that describes who the certificate is conferred to. In this case, replace `John Doe` with the actual recipient name.
 
->**Note:** This guide focuses on the simple document. In the [next tutorial](/docs/guides-section/custom-schema), you will learn more about the OA document schema and how to define a custom data structure. 
+> **Note:** This guide focuses on the simple document. In the [next tutorial](/docs/guides-section/custom-schema), you will learn more about the OA document schema and how to define a custom data structure.
 
 #### 4. `issuers`
 
@@ -184,9 +184,9 @@ export const CocTemplate: FunctionComponent<TemplateProps<CocTemplateCertificate
 };
 ```
 
-2. Add a story to view it. 
+2. Add a story to view it.
 
-    At the same level with `src/templates/coc/template.tsx`, create a file named `template.stories.mdx` with the following content:
+   At the same level with `src/templates/coc/template.tsx`, create a file named `template.stories.mdx` with the following content:
 
 ```markdown
 import { Meta, Preview, Props, Description, Story } from "@storybook/addon-docs/blocks";
@@ -213,20 +213,19 @@ import { cocTemplateCertificate } from "../samples/customTemplateSample";
 </Preview>
 ```
 
-3. [Start the storybook](#running-the-development-preview). 
+3. [Start the storybook](#running-the-development-preview).
 
-    Make sure your component looks like the following:
+   Make sure your component looks like the following:
 
 ![Completed Story Book View](/docs/guides-section/renderer-template/completed-storybook.png)
 
 ### Certificate of Completion template configuration
 
-An OA document can have multiple views, with each rendered in a separate tab. For example, an OA document that is a degree certificate may have the actual certificate as one view, and the transcript as another view in a single template. 
-
+An OA document can have multiple views, with each rendered in a separate tab. For example, an OA document that is a degree certificate may have the actual certificate as one view, and the transcript as another view in a single template.
 
 A demo of the multiple-view feature is available [here](https://opencerts.io/?q=%7B%22type%22%3A%22DOCUMENT%22%2C%22payload%22%3A%7B%22uri%22%3A%22https%3A%2F%2Fwww.opencerts.io%2Fstatic%2Fdemo%2Fhomestead.opencert%22%2C%22permittedActions%22%3A%5B%22STORE%22%5D%2C%22redirect%22%3A%22https%3A%2F%2Fopencerts.io%22%7D%7D).
 
-Your 📜 Certificate of Completion will only use a single view. 
+Your 📜 Certificate of Completion will only use a single view.
 
 Create a file named `src/templates/coc/index.tsx` with the following content:
 
@@ -252,9 +251,9 @@ export const templates = [
 
 `src/templates/index.tsx` is a file containing the configuration of all the templates available in this renderer.
 
-To register a new template, add it as a key to the `registry` constant. 
+To register a new template, add it as a key to the `registry` constant.
 
->**Note:** The key is case sensitive and must match the `$template.name` value defined in the [document data](#updating-the-sample-document-data-and-type).
+> **Note:** The key is case sensitive and must match the `$template.name` value defined in the [document data](#updating-the-sample-document-data-and-type).
 
 To add the new `COC` template, replace the `src/templates/index.tsx` file content with the following code:
 
@@ -275,7 +274,7 @@ You are ready to build your document renderer and deploy it online.
 
 ### Push code to GitHub
 
-Create a new GitHub repository and push the code there. 
+Create a new GitHub repository and push the code there.
 
 For a step-by-step guide on importing source code to GitHub, read [this guide](https://help.github.com/en/github/importing-your-projects-to-github/adding-an-existing-project-to-github-using-the-command-line).
 
@@ -283,7 +282,7 @@ For a step-by-step guide on importing source code to GitHub, read [this guide](h
 
 Once you have your code on GitHub, build and deploy the site onto [Netlify](https://netlify.com).
 
-1. Log into [Netlify](https://netlify.com). 
+1. Log into [Netlify](https://netlify.com).
 
 2. Open your team's dashboard. Click **Sites** on the left navigation. The "Add your site to Netlify" page displays.
 
@@ -291,35 +290,33 @@ Once you have your code on GitHub, build and deploy the site onto [Netlify](http
 
 ![Import from Git](/docs/guides-section/renderer-template/netlify-new.png)
 
-4. Select **Deploy with GitHub**. The authorization page displays. 
+4. Select **Deploy with GitHub**. The authorization page displays.
 
-    Authorize your GitHub account and select your repository. 
+   Authorize your GitHub account and select your repository.
 
 ![Deploy from GitHub](/docs/guides-section/renderer-template/netlify-deploy.png)
 
-5. Review the configuration for your repository. 
+5. Review the configuration for your repository.
 
-    In the "Build settings" section: 
+   In the "Build settings" section:
 
-    a. For "Build command", enter `npm run build`.
+   a. For "Build command", enter `npm run build`.
 
-    b. For "Publish Directory", enter `dist`. 
+   b. For "Publish Directory", enter `dist`.
 
-    c. Configure other settings as you need.
-
+   c. Configure other settings as you need.
 
 ![Build settings](/docs/guides-section/renderer-template/netlify-build.png)
 
-6. Click **Deploy <Repository_Name>**.
+6. Click **Deploy \<Repository_Name\>**.
 
-7. Once the site has been deployed, you will get the URL to the document renderer site. 
+7. Once the site has been deployed, you will get the URL to the document renderer site.
 
-    In this example, the URL is `https://frosty-joliot-c02c3d.netlify.com/`. The website will be an empty page when you view it directly. This is normal, because it is not meant for direct viewing through a web browser.
+   In this example, the URL is `https://frosty-joliot-c02c3d.netlify.com/`. The website will be an empty page when you view it directly. This is normal, because it is not meant for direct viewing through a web browser.
 
 ![Sample Deployed URL](/docs/guides-section/renderer-template/netlify-deployed.png)
 
-
->**Important:** Save the website URL for future reference. You should also update `$template.url` in your OA document.
+> **Important:** Save the website URL for future reference. You should also update `$template.url` in your OA document.
 
 ## Additional note for production document renderer
 

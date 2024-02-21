@@ -28,7 +28,7 @@ To issue the transferable record, replace the following values:
 Then run the command:
 
 ```sh
-open-attestation token-registry issue -a 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --tokenId 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea --beneficiary 0x6FFeD6E6591b808130a9b248fEA32101b5220eca --holder 0x6FFeD6E6591b808130a9b248fEA32101b5220eca -n sepolia -f key.txt
+open-attestation token-registry issue --address 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --tokenId 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea --beneficiary 0x6FFeD6E6591b808130a9b248fEA32101b5220eca --holder 0x6FFeD6E6591b808130a9b248fEA32101b5220eca -n sepolia -f key.txt
 ```
 
 >**Note:** This tutorial uses the same wallet address for both the beneficiary and the holder for demonstration purposes. You can specify different wallet addresses for the beneficiary and holder if they are two different entities.
@@ -36,10 +36,10 @@ open-attestation token-registry issue -a 0x8431012Bc040942B59e3C5bf428221eab0b2f
 Once the document has been issued, you will be able to see an output similar to the following:
 
 ```txt
-ℹ  info      Issuing 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea to the initial recipient 0x6FFeD6E6591b808130a9b248fEA32101b5220eca and initial holder 0x6FFeD6E6591b808130a9b248fEA32101b5220eca in the registry 0x1E63411DC2fCd6Fab5EE938622f5f6A390F48272
+ℹ  info      Issuing 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea to the initial recipient 0x6FFeD6E6591b808130a9b248fEA32101b5220eca and initial holder 0x6FFeD6E6591b808130a9b248fEA32101b5220eca in the registry 0x8431012Bc040942B59e3C5bf428221eab0b2f723
 …  awaiting  Sending transaction to pool
 …  awaiting  Waiting for transaction 0xaff547d8f608ca17c4c33acef1788ee0b0cc177abb1efcb868250dbecdde46cf to be mined
-✔  success   Token with hash 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea has been issued on 0x1E63411DC2fCd6Fab5EE938622f5f6A390F48272 with the initial recipient being 0x6FFeD6E6591b808130a9b248fEA32101b5220eca and initial holder 0x6FFeD6E6591b808130a9b248fEA32101b5220eca
+✔  success   Token with hash 0x0d9839a8034cb783d98bd57bcbaafb4dc3614c4193d2edf8a655c1ec6635b7ea has been issued on 0x8431012Bc040942B59e3C5bf428221eab0b2f723 with the initial recipient being 0x6FFeD6E6591b808130a9b248fEA32101b5220eca and initial holder 0x6FFeD6E6591b808130a9b248fEA32101b5220eca
 ℹ  info      Find more details at https://sepolia.etherscan.io/tx/0xaff547d8f608ca17c4c33acef1788ee0b0cc177abb1efcb868250dbecdde46cf
 ```
 

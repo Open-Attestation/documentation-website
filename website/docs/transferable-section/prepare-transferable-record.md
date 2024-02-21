@@ -25,7 +25,6 @@ Similar to [binding the document store to a domain name](/docs/ethereum-section/
   open-attestation dns txt-record create --address 0x8431012Bc040942B59e3C5bf428221eab0b2f723 --network-id 11155111
   ```
 
-<!--Flag: To force open the below link in a new tab page.-->
 
 3. If you want to view more detailed setup instructions, see the [documentation for configuring DNS](https://www.openattestation.com/docs/developer-section/quickstart/configure-dns).
 

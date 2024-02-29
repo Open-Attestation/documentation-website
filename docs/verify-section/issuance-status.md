@@ -100,7 +100,7 @@ The example above contains three pieces of important information:
 
 - the DID identifier (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69`). It's used to identify the DID, and you must add it into the `issuer.id` property of the document.
 - The DID controller (here `did:ethr:0x6813Eb9362372EEF6200f3b1dbC3f819671cBA69#controller`). It's used to identify which public key control the DID, and you must add it into the `issuer.identityProof.key` property of the document. The value is equal to the DID identifier, appended with `#controller`.
-- The ethereum address associated to the DID controller (here `0x6813eb9362372eef6200f3b1dbc3f819671cba69`). you will use it to verify the signature.
+- The Ethereum address associated to the DID controller (here `0x6813eb9362372eef6200f3b1dbc3f819671cba69`). you will use it to verify the signature.
 
 >**Note:** See an example document using DID in [this guide](/docs/did-section/raw-document-did).
 
@@ -123,7 +123,7 @@ A proof of signature looks like:
 - `signature` is the signed `merkleRoot`.
 - `verificationMethod` is the DID controller.
 
-That's all the information OpenAttestation uses to verify that the document has been signed with the correct private key. The `ethr` DID uses [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) with [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) as parameter of the elliptic curve, which provides this property: when you verify a signature, use the initial value (`merkleRoot`) and the signed value (`signature`), so that they will recover the ethereum address associated with the private key. Compare the ethereum address from the DID document with the ethereum address returned by the verification. If they match, the signature is valid.
+That's all the information OpenAttestation uses to verify that the document has been signed with the correct private key. The `ethr` DID uses [ECDSA](https://en.wikipedia.org/wiki/Elliptic_Curve_Digital_Signature_Algorithm) with [Secp256k1](https://en.bitcoin.it/wiki/Secp256k1) as parameter of the elliptic curve, which provides this property: when you verify a signature, use the initial value (`merkleRoot`) and the signed value (`signature`), so that they will recover the Ethereum address associated with the private key. Compare the Ethereum address from the DID document with the Ethereum address returned by the verification. If they match, the signature is valid.
 
 If you want to learn more about ECDSA, read [this guide from Yos Riady](https://yos.io/2018/11/16/ethereum-signatures/).
 
@@ -134,7 +134,7 @@ It's possible to revoke a DID document if a document store has been declared in 
 * [Using document store](/docs/did-section/revoke-document-did/revoke-using-document-store)
 * [Or using OCSP responder](/docs/did-section/revoke-document-did/revoke-using-ocsp)
 
->**Note:** If you use revocation for `DID`, you still need to have at least one transaction with the ethereum blockchain to deploy a `documentStore`.
+>**Note:** If you use revocation for `DID`, you still need to have at least one transaction with the Ethereum blockchain to deploy a `documentStore`.
 
 ### Issuance process and verification
 
@@ -154,6 +154,6 @@ To issue a document, perform the following:
 
 An OpenAttestation verifier will perform the following:
 
-- Retrieve the ethereum address associated with the DID identifier and DID controller from the document.
-- Retrieve the ethereum used to sign the `merkleRoot`.
+- Retrieve the Ethereum address associated with the DID identifier and DID controller from the document.
+- Retrieve the Ethereum used to sign the `merkleRoot`.
 - Make sure both addresses match.

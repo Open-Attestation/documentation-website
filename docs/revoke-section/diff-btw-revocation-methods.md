@@ -11,5 +11,5 @@ If you want to revoke verifiable documents issued using DID, it will be good to 
 |:-----------------------|:-------------------------|
 | Relies on the blockchain | Relies on a backend server maintained by the issuer |
 | Revoked documents cannot be unrevoked, but will have to be re-issued. | Revoked documents can be unrevoked manually by the issuer. |
-| Costs involved will be for the initial smart contract deployment and for subsequent revocation transactions. Ideal for documents with very few revocations as no maintenance cost will be required. | There will be no ethereum deployment or transaction costs, but the OCSP responder will need to be maintained indefinitely for the documents to be verified continuously. |
+| Costs involved will be for the initial smart contract deployment and for subsequent revocation transactions. Ideal for documents with very few revocations as no maintenance cost will be required. | There will be no Ethereum deployment or transaction costs, but the OCSP responder will need to be maintained indefinitely for the documents to be verified continuously. |
 | Good for all kinds of documents, especially long-term and crucial ones. | Better suited for short-term and non-crucial documents. |

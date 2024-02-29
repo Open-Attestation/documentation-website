@@ -50,7 +50,7 @@ The response means you have successfully created the transferable record.
 
 To view your transferable record, visit https://dev.tradetrust.io/
 
-If you have issued the Ethereum mainnet, visit https://tradetrust.io/ instead. 
+If you have issued the Ethereum Mainnet, visit https://tradetrust.io/ instead. 
 
 You will be able to drag your transferable record from the `wrapped-documents-transferable` folder and drop it to see a page like the following:
 

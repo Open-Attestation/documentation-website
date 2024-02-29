@@ -15,7 +15,7 @@ DID won't require you to maintain any infrastructure for most cases. In certain 
 
 ## Environment
 
-Ethereum smart contracts are bound to the different Ethereum networks. That means if you create a document store on one network (e.g. sepolia), you won't be able to use the same document store on a different network (e.g. mainnet). It's very convenient for the separation of test and production use cases (like in centralized architecture, when you have staging and production environments).
+Ethereum smart contracts are bound to the different Ethereum networks. That means if you create a document store on one network (e.g. Sepolia), you won't be able to use the same document store on a different network (e.g. Mainnet). It's very convenient for the separation of test and production use cases (like in centralized architecture, when you have staging and production environments).
 
 DID works in a more convenient way. Even if a DID can be bound to a specific environment like `did:ethr:sepolia:0xabcd`, it can also be used everywhere, like `did:ethr:0xabc`. While this is true for ethr DID, it may not be applicable to any DID.
 

@@ -74,9 +74,9 @@ After adding the `TXT` record, it is recommended to check the record has been in
 
 ### Additional note for the identity proof in production
 
-The `TXT` record above is for the use of documents issued on the Ethereum `sepolia` network. To bind the identity in production where your documents are issued in the Ethereum `mainnet` network, you will have to change `netId` to `1`.
+The `TXT` record above is for the use of documents issued on the Ethereum `Sepolia` network. To bind the identity in production where your documents are issued in the Ethereum `Mainnet` network, you will have to change `netId` to `1`.
 
-An example of a valid `TXT` record for Ethereum `mainnet` network is in the following:
+An example of a valid `TXT` record for Ethereum `Mainnet` network is in the following:
 
 | Type | Name                     | Value                                                                           |
 | ---- | ------------------------ | ------------------------------------------------------------------------------- |

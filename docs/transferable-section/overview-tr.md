@@ -16,7 +16,7 @@ This makes Transferable Records usable for documents like:
 
 This tutorial builds on the knowledge from [verifiable document](/docs/overview-section/overview#verifiable-document). If you have not completed the tutorial, please head back to [the DID method](/docs/did-section/overview-did) or [the Ethereum method](/docs/ethereum-section/overview-eth).
 
-By the end of this tutorial, you will be able to create your "Electronic Bill of Lading" that is valid on any OA Viewer connected to the Ethereum sepolia network.
+By the end of this tutorial, you will be able to create your "Electronic Bill of Lading" that is valid on any OA Viewer connected to the Ethereum Sepolia network.
 
 With the knowledge, you will be able to create transferable records according to your own business needs by:
 

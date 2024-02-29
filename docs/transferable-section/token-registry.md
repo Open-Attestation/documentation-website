@@ -7,7 +7,7 @@ custom_edit_url: null
 
 The token registry is a smart contract on the Ethereum network that records the ownership information of a transferable record. It is compliant to the [ERC721 standards](https://eips.ethereum.org/EIPS/eip-721).
 
-In this guide, you will deploy a token registry smart contract on the Ethereum `sepolia` network which is a test network that does not require actual ethers for transactions.
+In this guide, you will deploy a token registry smart contract on the Ethereum `Sepolia` network which is a test network that does not require actual ethers for transactions.
 
 ## Prerequisites
 
@@ -52,7 +52,7 @@ The following shows an example, in which `<registry-name>`=`"My Token Registry"`
 open-attestation deploy token-registry "My Token Registry" MTR -n sepolia -f key.txt
 ```
 
-This will deploy the token registry on the `sepolia` network. 
+This will deploy the token registry on the `Sepolia` network. 
 
 When the deployment is successful, the response looks like the following:
 
@@ -64,6 +64,6 @@ When the deployment is successful, the response looks like the following:
 ℹ  info      Find more details at https://sepolia.etherscan.io/address/0x8431012Bc040942B59e3C5bf428221eab0b2f723
 ```
 
-In this case, our contract has been successfully deployed on sepolia at the address `0x8431012Bc040942B59e3C5bf428221eab0b2f723`.
+In this case, our contract has been successfully deployed on Sepolia at the address `0x8431012Bc040942B59e3C5bf428221eab0b2f723`.
 
 >**Important:** Save your token registry address for future reference.

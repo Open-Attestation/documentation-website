@@ -3,6 +3,7 @@ id: open-attestation-verify
 title: OpenAttestation (Verify)
 hide_title: true
 sidebar_label: OpenAttestation (Verify)
+custom_edit_url: null
 ---
 
 # OpenAttestation (Verify)

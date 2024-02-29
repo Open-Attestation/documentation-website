@@ -2,6 +2,7 @@
 id: faq04
 title: How are OpenAttestation documents distributed?
 sidebar_label: How are OpenAttestation documents distributed?
+custom_edit_url: null
 ---
 
 The distribution of OpenAttestation documents falls into two broad categories: 

@@ -2,6 +2,7 @@
 id: web-app-issue
 title: Issue document with web app
 sidebar_label: Issue document with web app
+custom_edit_url: null
 ---
 
 This guide shows how to issue a hash using one of the available web applications. 

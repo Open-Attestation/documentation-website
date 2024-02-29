@@ -2,6 +2,7 @@
 id: faq02
 title: What can I do using the OpenAttestation framework?
 sidebar_label: What can I do using the OpenAttestation framework?
+custom_edit_url: null
 ---
 
 You can perform the following actions using the OA framework:

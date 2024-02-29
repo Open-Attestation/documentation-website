@@ -3,6 +3,7 @@ id: decentralized-renderer-react-template
 title: React template for decentralized renderer
 hide_title: true
 sidebar_label: React template for decentralized renderer
+custom_edit_url: null
 ---
 
 # React Template

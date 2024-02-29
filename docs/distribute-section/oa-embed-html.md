@@ -2,6 +2,7 @@
 id: oa-embed-html
 title: Distribute a verifiable document via an HTML file
 sidebar_label: Distribute a verifiable document via an HTML file
+custom_edit_url: null
 ---
 
 > **Note**: This guide is currently for OA documents that are verifiable on [verify.gov.sg](https://www.verify.gov.sg). Before continuing with this guide, be sure to verify your OA document on [verify.gov.sg](https://www.verify.gov.sg)

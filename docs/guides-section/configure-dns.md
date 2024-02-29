@@ -2,6 +2,7 @@
 id: configure-dns
 title: Configure DNS with domain registrar
 sidebar_label: Configure DNS with domain registrar
+custom_edit_url: null
 ---
 import SupportedNetworks from "/src/reusables/_supported-networks.mdx";
 

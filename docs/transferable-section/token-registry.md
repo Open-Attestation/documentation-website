@@ -2,6 +2,7 @@
 id: token-registry
 title: Deploy transferable record registry
 sidebar_label: Deploy transferable record registry
+custom_edit_url: null
 ---
 
 The token registry is a smart contract on the Ethereum network that records the ownership information of a transferable record. It is compliant to the [ERC721 standards](https://eips.ethereum.org/EIPS/eip-721).

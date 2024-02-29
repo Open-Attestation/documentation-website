@@ -2,6 +2,7 @@
 id: sign-document
 title: Sign documents
 sidebar_label: Sign documents
+custom_edit_url: null
 ---
 
 After wrapping the documents and obtaining a merkle root, the documents are ready to be signed on the document store smart contract. Each documents will be signed individually, and the proof of the signature will be appended into the signed documents.

@@ -3,6 +3,7 @@ id: open-attestation-cli
 title: OpenAttestation (CLI)
 hide_title: true
 sidebar_label: OpenAttestation (CLI)
+custom_edit_url: null
 ---
 
 # OpenAttestation (CLI)

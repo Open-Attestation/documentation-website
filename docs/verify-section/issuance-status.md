@@ -2,6 +2,7 @@
 id: issuance-status
 title: Issuance status
 sidebar_label: Issuance status
+custom_edit_url: null
 ---
 
 OpenAttestation checks that the document has been issued and it is in a valid status of issuance (for instance, it hasn't been revoked). As of today, OpenAttestation supports two ways to issue documents: DIDs and Ethereum smart contracts.

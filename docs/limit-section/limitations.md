@@ -2,6 +2,7 @@
 id: limitations
 title: Limitations
 sidebar_label: Limitations
+custom_edit_url: null
 ---
 
 This article talks about the limitations of OpenAttestation credentials.

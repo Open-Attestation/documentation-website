@@ -2,6 +2,7 @@
 id: oa-embed-qrcode
 title: Distribute a verifiable document via a QR code (URL)
 sidebar_label: Distribute a verifiable document via a QR code (URL)
+custom_edit_url: null
 ---
 
 Using a QR code is one of the recommended [Universal Actions](https://github.com/Open-Attestation/adr/blob/master/universal_actions.md#universal-actions-for-open-attestation-documents) through which OpenAttestation documents can be distributed or communicated. The purpose of Universal Actions is to implement a standard for all parties to share OpenAttestation documents.

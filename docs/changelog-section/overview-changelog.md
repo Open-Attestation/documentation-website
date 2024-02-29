@@ -2,6 +2,7 @@
 id: overview-changelog
 title: About the changelog
 sidebar_label: Overview
+custom_edit_url: null
 ---
 
 <!--Flag: It maps with the old ID below. Content needs updating.

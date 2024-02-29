@@ -27,7 +27,7 @@ Similar to [binding the document store to a domain name](/docs/ethereum-section/
   ```
 
 
-3. If you want to view more detailed setup instructions, see the [documentation for configuring DNS](https://www.openattestation.com/docs/developer-section/quickstart/configure-dns).
+3. If you want to view more detailed setup instructions, see the [documentation for configuring DNS](https://www.openattestation.com/docs/guides-section/configure-dns).
 
 >**Important:** Take note of the domain where you are inserting the records, because you will need the domain name later.
 

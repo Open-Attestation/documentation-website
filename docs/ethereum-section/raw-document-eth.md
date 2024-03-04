@@ -10,6 +10,8 @@ import SchemaValidator from "/src/reusables/_schema-validator.mdx";
 
 <RawDocument />
 
+Only then, the document is ready to be issued onto the blockchain.
+
 In this guide, you will create a raw document for issuance via Ethereum. It will conform to the OpenAttestation v2.0 schema.
 
 <SchemaValidator />

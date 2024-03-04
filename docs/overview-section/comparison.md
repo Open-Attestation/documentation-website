@@ -9,7 +9,7 @@ This article compares the differences between Ethereum smart contract verifiable
 
 ## Infrastructure
 
-By using Ethereum smart contracts, you will be bound to the Ethereum infrastructure. Every transaction will be stored in the Blockchain permanently. For basic issuance, you won't need to maintain any infrastructure on your own. You can also monitor every transaction that happened and detect abnormal activities. For instance, if someone manages to steal your wallet private key, you will find the evidence directly on the Blockchain.
+By using Ethereum smart contracts, you will be bound to the Ethereum infrastructure. Every transaction will be stored in the blockchain permanently. For basic issuance, you won't need to maintain any infrastructure on your own. You can also monitor every transaction that happened and detect abnormal activities. For instance, if someone manages to steal your wallet private key, you will find the evidence directly on the blockchain.
 
 DID won't require you to maintain any infrastructure for most cases. In certain conditions, it will be required depending on your needs. None of your transaction records will be made by default. DID will work in a straightforward way. However, if you want to keep track on every transaction, you will have to trace it by yourself. Unlike Ethereum smart contracts, if a user manages to steal your signing private key and starts issuing documents, you will never be aware of it.
 

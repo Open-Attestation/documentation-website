@@ -10,7 +10,7 @@ OpenAttestation uses the Domain Name System (DNS) as the method to verify the is
 
 OpenAttestation uses records in the TXT format which store textual data. The textual data indicate the document stores that the domain administrators trust.
 
-To use the DNS system as an identity registry, the domain name owner must claim the ownership of an OpenAttestation Document Store smart contract on the Ethereum Blockchain.
+To use the DNS system as an identity registry, the domain name owner must claim the ownership of an OpenAttestation Document Store smart contract on the Ethereum blockchain.
 
 ## Rationale
 

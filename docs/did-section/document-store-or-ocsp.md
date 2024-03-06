@@ -4,7 +4,7 @@ title: Deploy document store or OCSP
 sidebar_label: Deploy document store or OCSP
 custom_edit_url: null
 ---
-For first-time users, it's recommended to skip this article.
+For first-time users, it's recommended to skip this article and [read the next one](/docs/did-section/dns).
 
 :::info 
 * It is **optional** to deploy either document store or OCSP responder. Perform this task **only** if you need to revoke documents. 

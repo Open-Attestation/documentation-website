@@ -43,7 +43,9 @@ To create data for your document, paste the following JSON data into the right p
 }
 ```
 
-To makes things simple, you will use an existing renderer at [here](https://tutorial-renderer.openattestation.com). However you will still need to replace the following values in your own document, including the issuer's document store and the identity proof location.
+To makes things simple, you will use the existing renderer  hosted at https://tutorial-renderer.openattestation.com/ 
+
+However, you will still need to replace the following values in your own document, including the issuer's document store and the identity proof location.
 
 ### Replacing the issuer's document store
 

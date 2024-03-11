@@ -2,7 +2,6 @@
 id: issuance-identity
 title: Issuance identity
 sidebar_label: Issuance identity
-
 ---
 import SupportedNetworks from "/src/reusables/_supported-networks.mdx";
 

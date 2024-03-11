@@ -2,7 +2,6 @@
 id: wallet
 title: Create a wallet
 sidebar_label: Create a wallet
-
 ---
 
 First, create the [wallet](https://ethereum.org/wallets).

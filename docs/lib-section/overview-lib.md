@@ -2,7 +2,6 @@
 id: overview-lib
 title: About the libraries
 sidebar_label: Overview
-
 ---
 
 As a developer, you may find multiple repositories or libraries used throughout this documentation website and want to find out the different packages you can use to implement your own components. This section provides an overview of what you can build with all the repositories and their respective documentation for you to get started.

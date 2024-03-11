@@ -2,7 +2,6 @@
 id: main-properties
 title: About the verification properties
 sidebar_label: Overview
-
 ---
 
 To gain a comprehensive understanding of how the verification process works, look into the various properties the OA framework provides for your documents:

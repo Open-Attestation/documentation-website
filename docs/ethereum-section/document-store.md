@@ -2,7 +2,6 @@
 id: document-store
 title: Deploy document store
 sidebar_label: Deploy document store
-
 ---
 
 The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, you will deploy a document store smart contract on the Ethereum `Sepolia` network, which is a test network that does not require actual [ethers](/docs/glossary-section/glossary#ether) for transactions.

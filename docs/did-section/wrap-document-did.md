@@ -2,7 +2,6 @@
 id: wrap-document-did
 title: Wrap documents
 sidebar_label: Wrap documents
-
 ---
 import RawDocument from "/src/reusables/_raw-document.mdx";
 import WrapDocumentIntro from "/src/reusables/_wrap-document-intro.mdx";

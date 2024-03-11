@@ -2,7 +2,6 @@
 id: distribute
 title: About distributing verifiable documents
 sidebar_label: Overview
-
 ---
 
 The OpenAttestation framework does not take into account how the document holder will be able to obtain the OA documents. They can be distributed through traditional channels such as email, messaging apps, and shared drives. 

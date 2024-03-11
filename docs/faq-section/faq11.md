@@ -2,7 +2,6 @@
 id: faq11
 title: How does OA framework handle the verification flow?
 sidebar_label: How does OA framework handle the verification flow?
-
 ---
 
 In brief, the verification flow runs three checks on the document:

@@ -2,7 +2,6 @@
 id: create
 title: Create a DID
 sidebar_label: Create a DID
-
 ---
 
 While there exists many [DIDs](https://www.w3.org/TR/did-core/), this tutorial will focus only on `ethr` DID. At the moment, OpenAttestation only supports `ethr` DID.

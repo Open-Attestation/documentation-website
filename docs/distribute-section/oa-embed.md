@@ -2,7 +2,6 @@
 id: oa-embed
 title: Embed OA documents into convenient file formats
 sidebar_label: Embed OA documents into convenient file formats
-
 ---
 
 When the users are handling the raw OA documents, they may come across the following difficulties: 

@@ -2,7 +2,6 @@
 id: custom-schema
 title: Create a custom JSON schema
 sidebar_label: Create a custom JSON schema
-
 ---
 
 According to its file content, every OA document follows a particular structure that makes it valid. To ensure the document adheres to the structure, you can create a custom schema to use the document as a validation upon the wrapping process.

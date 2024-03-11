@@ -2,7 +2,6 @@
 id: raw-document-did
 title: Create raw documents
 sidebar_label: Create raw documents
-
 ---
 
 import RawDocument from "/src/reusables/_raw-document.mdx";

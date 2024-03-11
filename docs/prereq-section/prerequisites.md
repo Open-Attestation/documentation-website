@@ -2,7 +2,6 @@
 id: prerequisites
 title: Prerequisites
 sidebar_label: Prerequisites
-
 ---
 
 Before getting started, you will need to set up the OpenAttestation CLI correctly. 

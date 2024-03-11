@@ -2,7 +2,6 @@
 id: overview-did
 title: About issuing verifiable documents using DID
 sidebar_label: Overview
-
 ---
 import OverviewDIDETH from "/src/reusables/_overview-did-eth.mdx";
 

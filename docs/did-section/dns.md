@@ -2,7 +2,6 @@
 id: dns
 title: Configure DNS
 sidebar_label: Configure DNS
-
 ---
 import DNSProof from "/src/reusables/_dns-proof.mdx";
 

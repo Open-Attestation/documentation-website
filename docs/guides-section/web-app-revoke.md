@@ -2,7 +2,6 @@
 id: web-app-revoke
 title: Revoke document with web app
 sidebar_label: Revoke document with web app
-
 ---
 
 This guide shows how to revoke a hash using one of the available web applications. 

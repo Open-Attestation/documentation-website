@@ -2,7 +2,6 @@
 id: overview
 title: About OpenAttestation
 sidebar_label: Overview
-
 ---
 
 <!--Merge

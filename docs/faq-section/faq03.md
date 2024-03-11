@@ -2,7 +2,6 @@
 id: faq03
 title: Can I use a Graphical User Interface (GUI) for OpenAttestation documents?
 sidebar_label: Can I use a Graphical User Interface (GUI) for OpenAttestation documents?
-
 ---
 
 You can use the [Toolkit](https://toolkit.openattestation.com/) to perform the following tasks with ease:

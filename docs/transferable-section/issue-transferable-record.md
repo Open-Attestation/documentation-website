@@ -2,7 +2,6 @@
 id: issue-transferable-record
 title: Issue transferable records
 sidebar_label: Issue transferable records
-
 ---
 
 In this final step, you will create the transferable record and initialize the first beneficiary and holder for the title escrow.

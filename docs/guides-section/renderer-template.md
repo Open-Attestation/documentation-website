@@ -2,7 +2,6 @@
 id: renderer-template
 title: Create a document renderer template
 sidebar_label: Create a document renderer template
-
 ---
 
 OA documents are both machine- and human-readable. Each OA document file is stored in a `.json` format, which makes it possible for any application to process the content more easily. To present the data file in a human-readable format, a renderer needs to be written.

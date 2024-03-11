@@ -2,7 +2,6 @@
 id: diff-btw-revocation-methods
 title: Differences between revocation methods
 sidebar_label: Differences between revocation methods
-
 ---
 
 If you want to revoke verifiable documents issued using DID, it will be good to get a better understanding of the differences between the revocation methods using document store or OCSP responder: 

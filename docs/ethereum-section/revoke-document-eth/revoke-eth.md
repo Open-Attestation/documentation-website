@@ -2,7 +2,6 @@
 id: revoke-eth
 title: Revoke documents using document store
 sidebar_label: Revoke documents using document store
-
 ---
 import RevokeIntro from "/src/reusables/_revoke-intro.mdx";
 

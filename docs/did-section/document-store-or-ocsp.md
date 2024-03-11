@@ -2,7 +2,6 @@
 id: document-store-or-ocsp
 title: Deploy document store or OCSP
 sidebar_label: Deploy document store or OCSP
-
 ---
 For first-time users, it's recommended to skip this article and [read the next one](/docs/did-section/dns).
 

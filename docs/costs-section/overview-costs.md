@@ -2,7 +2,6 @@
 id: overview-costs
 title: About the blockchain costs
 sidebar_label: Overview
-
 ---
 
 This section breaks down the estimated gas and costs involved in interacting with the contracts. The estimated gas usage can be slightly different depending on the states of the contract when it is called. The gas prices and fiat costs are constantly changing and you should check the numbers from a reliable source to get an accurate figure.

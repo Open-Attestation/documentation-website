@@ -2,7 +2,6 @@
 id: overview-faq
 title: About FAQ
 sidebar_label: Overview
-
 ---
 
 Find the answer to the frequently asked questions in the categories below:

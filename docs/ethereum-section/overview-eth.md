@@ -2,7 +2,6 @@
 id: overview-eth
 title: About issuing verifiable documents using Ethereum
 sidebar_label: Overview
-
 ---
 import OverviewDIDETH from "/src/reusables/_overview-did-eth.mdx";
 

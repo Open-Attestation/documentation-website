@@ -17,7 +17,6 @@ const siteConfig = {
           path: "./docs",
           // Sidebars file relative to website dir.
           sidebarPath: require.resolve("./sidebars.json"),
-          editUrl: "https://github.com/Open-Attestation/documentation-website/tree/master/website",
         },
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
@@ -41,7 +40,6 @@ id: open-attestation
 title: OpenAttestation
 hide_title: true
 sidebar_label: OpenAttestation
-custom_edit_url: null
 ---
 
 ${content}`,
@@ -64,7 +62,6 @@ id: open-attestation-cli
 title: OpenAttestation (CLI)
 hide_title: true
 sidebar_label: OpenAttestation (CLI)
-custom_edit_url: null
 ---
 
 ${content}`,
@@ -87,7 +84,6 @@ id: open-attestation-encryption
 title: OpenAttestation (Encryption)
 hide_title: true
 sidebar_label: OpenAttestation (Encryption)
-custom_edit_url: null
 ---
 
 ${content}`,
@@ -110,7 +106,6 @@ id: open-attestation-verify
 title: OpenAttestation (Verify)
 hide_title: true
 sidebar_label: OpenAttestation (Verify)
-custom_edit_url: null
 ---
 
 ${content}`,
@@ -134,7 +129,6 @@ id: decentralized-renderer-react-components
 title: React components for decentralized renderer
 hide_title: true
 sidebar_label: React components for decentralized renderer
-custom_edit_url: null
 ---
 
 ${content}`,
@@ -158,7 +152,6 @@ id: decentralized-renderer-react-template
 title: React template for decentralized renderer
 hide_title: true
 sidebar_label: React template for decentralized renderer
-custom_edit_url: null
 ---
 
 ${content}`,
@@ -181,7 +174,6 @@ id: document-store
 title: Document store
 hide_title: true
 sidebar_label: Document store
-custom_edit_url: null
 ---
 
 ${content}`,
@@ -204,7 +196,6 @@ id: token-registry
 title: Token registry
 hide_title: true
 sidebar_label: Token registry
-custom_edit_url: null
 ---
 
 ${content}`,

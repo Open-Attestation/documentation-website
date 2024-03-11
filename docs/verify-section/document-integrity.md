@@ -2,7 +2,7 @@
 id: document-integrity
 title: Document integrity
 sidebar_label: Document integrity
-custom_edit_url: null
+
 ---
 
 OpenAttestation ensures that the content of the document has not been modified since the document was created, with the exception of data removed using the built-in [obfuscation mechanism](/docs/lib-section/remote-files/open-attestation#obfuscating-data).

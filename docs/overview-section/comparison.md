@@ -2,7 +2,7 @@
 id: comparison
 title: Choose your workflow
 sidebar_label: Choose your workflow
-custom_edit_url: null
+
 ---
 
 This article compares the differences between Ethereum smart contract verifiable credentials and DID verifiable credentials. You can choose the correct workflow depending on your needs.

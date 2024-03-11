@@ -2,7 +2,7 @@
 id: web-app-deploy
 title: Deploy document store with web app
 sidebar_label: Deploy document store with web app
-custom_edit_url: null
+
 ---
 
 This guide shows how to deploy a document store using one of the available web applications.

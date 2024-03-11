@@ -3,7 +3,6 @@ id: token-registry
 title: Token registry
 hide_title: true
 sidebar_label: Token registry
-custom_edit_url: null
 ---
 
 <h1 align="center">

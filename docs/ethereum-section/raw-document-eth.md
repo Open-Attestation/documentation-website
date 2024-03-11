@@ -2,7 +2,7 @@
 id: raw-document-eth
 title: Create raw documents
 sidebar_label: Create raw documents
-custom_edit_url: null
+
 ---
 
 import RawDocument from "/src/reusables/_raw-document.mdx";

@@ -2,7 +2,7 @@
 id: verify
 title: About verifying documents
 sidebar_label: Overview
-custom_edit_url: null
+
 ---
 
 After issuing documents using Ethereum or signing documents using DID, you need to perform a verification on the documents to ensure that they are valid for distribution.

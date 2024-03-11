@@ -2,7 +2,7 @@
 id: create-issuer
 title: Create a verifiable document issuer
 sidebar_label: Create a verifiable document issuer
-custom_edit_url: null
+
 ---
 
 A verifiable document is a digital document, which you can issue and verify using blockchain technology.

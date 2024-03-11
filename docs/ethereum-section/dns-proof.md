@@ -2,7 +2,7 @@
 id: dns-proof
 title: Configure DNS
 sidebar_label: Configure DNS
-custom_edit_url: null
+
 ---
 import DNSProof from "/src/reusables/_dns-proof.mdx";
 import SupportedNetworks from "/src/reusables/_supported-networks.mdx";

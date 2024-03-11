@@ -2,7 +2,7 @@
 id: differences
 title: Differences between the methods to issue verifiable documents
 sidebar_label: Differences between issuance methods
-custom_edit_url: null
+
 ---
 
 The Ethereum method is writing to the blockchain & requires some ethers in the wallet, while the DID method performs digital signing and won’t require any ethers.

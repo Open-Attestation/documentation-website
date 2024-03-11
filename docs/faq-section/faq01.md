@@ -2,7 +2,7 @@
 id: faq01
 title: What are OpenAttestation documents?
 sidebar_label: What are OpenAttestation documents?
-custom_edit_url: null
+
 ---
 
 OpenAttestation documents (OA documents) are a type of verifiable documents or verifiable credentials.

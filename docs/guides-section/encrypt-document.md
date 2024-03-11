@@ -2,7 +2,7 @@
 id: encrypt-document
 title: Encrypt verifiable documents
 sidebar_label: Encrypt verifiable documents
-custom_edit_url: null
+
 ---
 
 Because the verifiable documents may include confidential information, it will be good to encrypt the documents before distributing them, so that all information can be securely transferred. 

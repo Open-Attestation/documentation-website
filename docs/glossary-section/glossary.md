@@ -2,7 +2,7 @@
 id: glossary
 title: Glossary
 sidebar_label: Glossary
-custom_edit_url: null
+
 ---
 
 This page provides the definition of the commonly-used terms in the OpenAttestation (OA) documentation.

@@ -2,7 +2,7 @@
 id: prepare-transferable-record
 title: Prepare transferable records
 sidebar_label: Prepare transferable records
-custom_edit_url: null
+
 ---
 import WrapSingleDocument from "/src/reusables/_wrap-single-document.mdx";
 

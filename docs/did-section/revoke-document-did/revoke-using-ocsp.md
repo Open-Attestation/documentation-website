@@ -2,7 +2,7 @@
 id: revoke-using-ocsp
 title: Revoke documents using OCSP responder
 sidebar_label: Revoke documents using OCSP responder
-custom_edit_url: null
+
 ---
 import RevokeIntro from "/src/reusables/_revoke-intro.mdx";
 

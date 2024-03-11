@@ -2,7 +2,7 @@
 id: revoke
 title: Revocation
 sidebar_label: Revocation
-custom_edit_url: null
+
 ---
 
 

@@ -3,7 +3,6 @@ id: decentralized-renderer-react-components
 title: React components for decentralized renderer
 hide_title: true
 sidebar_label: React components for decentralized renderer
-custom_edit_url: null
 ---
 
 # React Components

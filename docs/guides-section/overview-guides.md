@@ -2,7 +2,7 @@
 id: overview-guides
 title: About the guides for developers
 sidebar_label: Overview
-custom_edit_url: null
+
 ---
 
 If you are a developer, you can refer to these guides and use OpenAttestation by performing the following tasks:

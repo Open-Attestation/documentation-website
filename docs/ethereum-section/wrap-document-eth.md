@@ -2,7 +2,7 @@
 id: wrap-document-eth
 title: Wrap documents
 sidebar_label: Wrap documents
-custom_edit_url: null
+
 ---
 import RawDocument from "/src/reusables/_raw-document.mdx";
 import WrapDocumentIntro from "/src/reusables/_wrap-document-intro.mdx";

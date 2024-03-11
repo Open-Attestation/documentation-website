@@ -2,7 +2,7 @@
 id: sign-document
 title: Sign documents
 sidebar_label: Sign documents
-custom_edit_url: null
+
 ---
 
 After wrapping the documents and obtaining a merkle root, you can sign the documents with the `ether` DID you created. Each document will be signed individually, and the proof of the signature will be appended into the signed documents.

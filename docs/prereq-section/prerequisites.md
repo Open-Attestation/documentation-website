@@ -2,7 +2,7 @@
 id: prerequisites
 title: Prerequisites
 sidebar_label: Prerequisites
-custom_edit_url: null
+
 ---
 
 Before getting started, you will need to set up the OpenAttestation CLI correctly. 

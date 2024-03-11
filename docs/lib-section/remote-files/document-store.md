@@ -3,7 +3,6 @@ id: document-store
 title: Document store
 hide_title: true
 sidebar_label: Document store
-custom_edit_url: null
 ---
 
 # Document Store

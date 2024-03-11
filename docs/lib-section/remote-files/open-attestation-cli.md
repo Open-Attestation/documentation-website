@@ -3,7 +3,6 @@ id: open-attestation-cli
 title: OpenAttestation (CLI)
 hide_title: true
 sidebar_label: OpenAttestation (CLI)
-custom_edit_url: null
 ---
 
 # OpenAttestation (CLI)
@@ -96,7 +95,7 @@ The response looks like:
 ```bash
 /!\ Welcome to the fee table. Please read the information below to understand the transaction fee
 
-The table below displays information about the cost of the transaction on the Mainnet network, depending on the gas price selected. Multiple modes are displayed to help you choose a gas price depending on your needs:
+The table below displays information about the cost of the transaction on the mainnet network, depending on the gas price selected. Multiple modes are displayed to help you choose a gas price depending on your needs:
 
 Information about the network:
 Costs based on block number: 4275264

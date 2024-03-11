@@ -17,7 +17,6 @@ const siteConfig = {
           path: "./docs",
           // Sidebars file relative to website dir.
           sidebarPath: require.resolve("./sidebars.json"),
-          editUrl: "https://github.com/Open-Attestation/documentation-website/tree/master/website",
         },
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
@@ -335,13 +334,6 @@ ${content}`,
             {
               label: "Github",
               href: "https://github.com/Open-Attestation",
-            },
-            {
-              html: `
-                <a href="https://www.netlify.com" target="_blank" rel="noreferrer noopener" aria-label="Deploys by Netlify">
-                  <img src="https://www.netlify.com/img/global/badges/netlify-color-accent.svg" alt="Deploys by Netlify" />
-                </a>
-              `,
             },
           ],
         },

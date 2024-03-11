@@ -8,13 +8,13 @@ This article compares the differences between Ethereum smart contract verifiable
 
 ## Infrastructure
 
-By using Ethereum smart contracts, you will be bound to the Ethereum infrastructure. Every transaction will be stored in the Blockchain permanently. For basic issuance, you won't need to maintain any infrastructure on your own. You can also monitor every transaction that happened and detect abnormal activities. For instance, if someone manages to steal your wallet private key, you will find the evidence directly on the Blockchain.
+By using Ethereum smart contracts, you will be bound to the Ethereum infrastructure. Every transaction will be stored in the blockchain permanently. For basic issuance, you won't need to maintain any infrastructure on your own. You can also monitor every transaction that happened and detect abnormal activities. For instance, if someone manages to steal your wallet private key, you will find the evidence directly on the blockchain.
 
 DID won't require you to maintain any infrastructure for most cases. In certain conditions, it will be required depending on your needs. None of your transaction records will be made by default. DID will work in a straightforward way. However, if you want to keep track on every transaction, you will have to trace it by yourself. Unlike Ethereum smart contracts, if a user manages to steal your signing private key and starts issuing documents, you will never be aware of it.
 
 ## Environment
 
-Ethereum smart contracts are bound to the different Ethereum networks. That means if you create a document store on one network (e.g. sepolia), you won't be able to use the same document store on a different network (e.g. mainnet). It's very convenient for the separation of test and production use cases (like in centralized architecture, when you have staging and production environments).
+Ethereum smart contracts are bound to the different Ethereum networks. That means if you create a document store on one network (e.g. Sepolia), you won't be able to use the same document store on a different network (e.g. Mainnet). It's very convenient for the separation of test and production use cases (like in centralized architecture, when you have staging and production environments).
 
 DID works in a more convenient way. Even if a DID can be bound to a specific environment like `did:ethr:sepolia:0xabcd`, it can also be used everywhere, like `did:ethr:0xabc`. While this is true for ethr DID, it may not be applicable to any DID.
 
@@ -49,7 +49,7 @@ As of today, it is possible to revoke a document if a document store has been de
 
 ## Throughput
 
-Because of the way Ethereum works, you will never have control on how long a transaction takes with Ethereum smart contracts. You can pay more gas to speed up the transaction, but in the end you have no control. It's also worth to consider the workflow. If you issue a lot of documents and have to pay a transaction for each document issuance individually, it will quickly cost a lot. That's why it is recommended to use batch issuance. Whether you do it hourly, weekly, or monthly, it will depend on your need. Keep in mind that issuing document individually is a bad option and can become very costly (unless you issue one document every month, for instance). Issuing hourly or daily are viable options in terms of cost.
+Because of the way Ethereum works, you will never have control on how long a transaction takes with Ethereum smart contracts. You can pay more gas to speed up the transaction, but in the end you have no control. It's also worth to consider the workflow. If you issue a lot of documents and have to pay a transaction for each document issuance individually, it will quickly cost a lot. That's why it is recommended to use batch issuance. Whether you do it hourly, weekly, or monthly, it will depend on your need. Keep in mind that issuing documents individually is a bad option and can become very costly (unless you issue one document every month, for instance). Issuing hourly or daily are viable options in terms of cost.
 
 DID is a perfect match when you need to sign document in real time. Unlike issuing with the smart contract methods, there is no requirement to wait for a blockchain transaction to be finalized, and the issued document is immediately valid.
 

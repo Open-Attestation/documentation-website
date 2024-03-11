@@ -4,7 +4,7 @@ title: Sign documents
 sidebar_label: Sign documents
 ---
 
-After wrapping the documents and obtaining a merkle root, the documents are ready to be signed on the document store smart contract. Each documents will be signed individually, and the proof of the signature will be appended into the signed documents.
+After wrapping the documents and obtaining the merkle root(s), you can sign them with the `ether` DID you created. During signing, each document's merkle root is signed individually, with the proof of their signatures appended. 
 
 ## Signing the documents
 

@@ -4,7 +4,7 @@ title: About issuing transferable records using Ethereum
 sidebar_label: Overview
 ---
 
-A Transferable Record is an extended form of a verifiable document, which makes it possible for the document to have an owner. Transferable Records reference the properties listed in [the UNCITRAL Model Law on Electronic Transferable Records](https://www.uncitral.org/pdf/english/texts/electcom/MLETR_ebook.pdf).
+A Transferable Record is an extended form of a verifiable document, which makes it possible for the document to have an owner. Transferable Records reference the properties listed in [the UNCITRAL Model Law on Electronic Transferable Records](https://uncitral.un.org/sites/uncitral.un.org/files/media-documents/uncitral/en/mletr_ebook_e.pdf).
 
 This makes Transferable Records usable for documents like:
 
@@ -15,7 +15,7 @@ This makes Transferable Records usable for documents like:
 
 This tutorial builds on the knowledge from [verifiable document](/docs/overview-section/overview#verifiable-document). If you have not completed the tutorial, please head back to [the DID method](/docs/did-section/overview-did) or [the Ethereum method](/docs/ethereum-section/overview-eth).
 
-By the end of this tutorial, you will be able to create your "Electronic Bill of Lading" that is valid on any OA Viewer connected to the Ethereum sepolia network.
+By the end of this tutorial, you will be able to create your "Electronic Bill of Lading" that is valid on any OA Viewer connected to the Ethereum Sepolia network.
 
 With the knowledge, you will be able to create transferable records according to your own business needs by:
 

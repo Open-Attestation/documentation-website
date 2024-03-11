@@ -9,6 +9,8 @@ import SchemaValidator from "/src/reusables/_schema-validator.mdx";
 
 <RawDocument />
 
+Only then, the document is ready to be issued onto the blockchain.
+
 In this guide, you will create a raw document for issuance via Ethereum. It will conform to the OpenAttestation v2.0 schema.
 
 <SchemaValidator />
@@ -40,7 +42,9 @@ To create data for your document, paste the following JSON data into the right p
 }
 ```
 
-To makes things simple, you will use an existing renderer at [here](https://tutorial-renderer.openattestation.com). However you will still need to replace the following values in your own document, including the issuer's document store and the identity proof location.
+To makes things simple, you will use the existing renderer  hosted at https://tutorial-renderer.openattestation.com/ 
+
+However, you will still need to replace the following values in your own document, including the issuer's document store and the identity proof location.
 
 ### Replacing the issuer's document store
 
@@ -48,7 +52,7 @@ Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb3
 
 ### Replacing the identity proof location
 
-Replace the value of `issuers[0].identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the dns name used to bind the document store's identity in the [previous step](/docs/ethereum-section/dns-proof).
+Replace the value of `issuers[0].identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the DNS name used to bind the document store's identity in the [previous step](/docs/ethereum-section/dns-proof).
 
 ![Validator Completed](/docs/ethereum-section/document-data/validator-completed.png)
 

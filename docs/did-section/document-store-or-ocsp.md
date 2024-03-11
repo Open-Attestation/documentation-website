@@ -3,7 +3,7 @@ id: document-store-or-ocsp
 title: Deploy document store or OCSP
 sidebar_label: Deploy document store or OCSP
 ---
-For first-time users, it's recommended to skip this article.
+For first-time users, it's recommended to skip this article and [read the next one](/docs/did-section/dns).
 
 :::info 
 * It is **optional** to deploy either document store or OCSP responder. Perform this task **only** if you need to revoke documents. 
@@ -12,9 +12,9 @@ For first-time users, it's recommended to skip this article.
 
 ## Deploying Document Store
 
-> **Important:** If you have run the Ethereum method and created a document store, do not use it in the DID method.
+> **Important:** If you have run the Ethereum method and created a document store, it is technically possible to use the same document store as a revocation store for DID. However, the resulting revocation list will be shared between these two methods.
 
-The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, you will deploy a document store smart contract on the Ethereum `sepolia` network, which is a test network that does not require actual [ethers](/docs/glossary-section/glossary#ether) for transactions.
+The document store is a smart contract on the Ethereum network that records the issuance and revocation status of OA documents. In this guide, you will deploy a document store smart contract on the Ethereum `Sepolia` network, which is a test network that does not require actual [ethers](/docs/glossary-section/glossary#ether) for transactions.
 
 
 ### Running the deploy document-store command

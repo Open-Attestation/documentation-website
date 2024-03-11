@@ -9,7 +9,7 @@ OpenAttestation uses the Domain Name System (DNS) as the method to verify the is
 
 OpenAttestation uses records in the TXT format which store textual data. The textual data indicate the document stores that the domain administrators trust.
 
-To use the DNS system as an identity registry, the domain name owner must claim the ownership of an OpenAttestation Document Store smart contract on the Ethereum Blockchain.
+To use the DNS system as an identity registry, the domain name owner must claim the ownership of an OpenAttestation Document Store smart contract on the Ethereum blockchain.
 
 ## Rationale
 
@@ -21,7 +21,7 @@ Under [IETF RFC 1464](https://tools.ietf.org/html/rfc1464), it is possible to st
 
 Only domain name owners (and the registrar that they trust) have the authority to make changes to the records associated with that domain name. Thus, when a DNS record endorses a fact, it transitively asserts that the domain name owner believes this fact is true.
 
-In an OpenAttestation DNS-TXT identity proof, the OA framework records a document store address and the network (e.g. Ethereum mainnet) it is using. The OpenAttestation document declares the domain name for record searching and the document store Ethereum address. This forms a bi-directional trust assertion; if the Document's cryptographic proof is issued on that document store, it means the domain name owner has endorsed the issuance of this document.
+In an OpenAttestation DNS-TXT identity proof, the OA framework records a document store address and the network (e.g. Ethereum Mainnet) it is using. The OpenAttestation document declares the domain name for record searching and the document store Ethereum address. This forms a bi-directional trust assertion; if the Document's cryptographic proof is issued on that document store, it means the domain name owner has endorsed the issuance of this document.
 
 See a deeper technical discussion of this topic at [OpenAttestation's Decentralized Identity Proof using DNS-TXT Architecture Decision Record](https://github.com/Open-Attestation/adr/blob/master/decentralized_identity_proof_DNS-TXT.md).
 
@@ -85,9 +85,9 @@ After adding the `TXT` record, it is recommended to check the record has been in
 
 ### Additional note for identity proof in production
 
-The `TXT` record above is for use in the documents issued on the Ethereum `sepolia` network. To bind the identity in production where your documents are issued in the Ethereum `mainnet` network, you will have to change `netId` to `1`.
+The `TXT` record above is for use in the documents issued on the Ethereum `Sepolia` network. To bind the identity in production where your documents are issued in the Ethereum `Mainnet` network, you will have to change `netId` to `1`.
 
-An example of a valid `TXT` record for Ethereum `mainnet` network is as shown:
+An example of a valid `TXT` record for Ethereum `Mainnet` network is as shown:
 
 | Type | Name                     | Value                                                                           |
 | ---- | ------------------------ | ------------------------------------------------------------------------------- |

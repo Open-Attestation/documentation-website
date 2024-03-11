@@ -27,8 +27,8 @@ Before running the command below, replace the folder names. For example:
 
 <!--
 This file is mostly duplicated with the same content at the following locations:
-1. docs/integrator-section/verifiable-document/did/wrapping-document-did.md
-2. docs/integrator-section/verifiable-document/ethereum/wrapping-document.md
+1. docs/did-section/wrap-document-did.md
+2. docs/ethereum-section/wrap-document-eth.md
  -->
 
 ## Viewing the wrapped documents
@@ -45,7 +45,7 @@ wrapped-documents
   |-- certificate-2.json
 ```
 
-In the `wrapped-documents` directory, you will find the wrapped document which can be sent to the recipient later, once the `merkleRoot` has been issued to the document store.
+In the `wrapped-documents` directory, you will find the wrapped documents that will be issued to the document store in the next article. 
 
 ## Wrapping a single document
 This is an alternative way. Instead of wrapping all documents in a folder in a batch, you can also wrap a single document at a time.

@@ -4,7 +4,7 @@ title: Issue documents
 sidebar_label: Issue documents
 ---
 
-After wrapping the documents and obtaining a merkle root, the documents are ready to be issued to the document store smart contract. To issue a batch of documents to the document store, you will use the merkle root that will be appended to the list of documents during issuance. This issuance only needs to be done once for all documents in a batch.
+After wrapping the documents and obtaining a merkle root, the documents are ready to be issued to the document store smart contract. To issue a batch of documents to the document store, you will use the merkle root that was generated during the batch wrapping process. This issuance only needs to be done once for all documents in a batch.
 
 ## Issuing the documents
 

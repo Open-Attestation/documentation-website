@@ -44,7 +44,7 @@ wrapped-documents-did
   |-- certificate-2.json
 ```
 
-In the `wrapped-documents-did` directory, you will find the wrapped document which can be sent to the recipient later.
+In the `wrapped-documents-did` directory, you will find the wrapped documents that will be signed with your DID in the next article.
 
 ## Wrapping a single document
 This is an alternative way. Instead of wrapping all documents in a folder in a batch, you can also wrap a single document at a time.

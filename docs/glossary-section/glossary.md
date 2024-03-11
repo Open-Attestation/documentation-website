@@ -45,7 +45,7 @@ Know your customer or know your client (KYC) is a guideline in financial service
 
 ### OA document
 
-An OA document means an OpenAttestation document, which is issued using the OpenAttestation framework. The data in the OA document is stored in the JSON format, while the OA document file format can be `.oa`, `.tt`, or `.opencert`. It is a tamper-evident document that cryptographically proves the issuer.
+An OA document means an OpenAttestation document, which is issued using the OpenAttestation framework. The data in the OA document is stored in the JSON format, while OA document file extensions can be `.oa`, `.tt`, or `.opencert`. It is a tamper-evident document that cryptographically proves the issuer.
 
 There are two types of OA documents, one type being [verifiable documents](#verifiable-document), while the other being [transferable records](#transferable-record).
 

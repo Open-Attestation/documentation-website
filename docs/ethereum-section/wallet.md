@@ -45,7 +45,7 @@ For instance, for the wallet created above, the URL is https://sepolia.etherscan
 
 ## Adding ethers to your wallet
 
-You can use any of these ether faucet for Sepolia network to fund your wallet. For instance:
+You can use any of these ether faucets for the Sepolia network to fund your wallet. For instance:
 
 - https://sepoliafaucet.com
 - https://sepolia-faucet.pk910.de

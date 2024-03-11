@@ -5,7 +5,7 @@ sidebar_label: Sign documents
 
 ---
 
-After wrapping the documents and obtaining a merkle root, you can sign the documents with the `ether` DID you created. Each document will be signed individually, and the proof of the signature will be appended into the signed documents.
+After wrapping the documents and obtaining the merkle root(s), you can sign them with the `ether` DID you created. During signing, each document's merkle root is signed individually, with the proof of their signatures appended. 
 
 ## Signing the documents
 

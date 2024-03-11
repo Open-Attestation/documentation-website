@@ -45,7 +45,7 @@ wrapped-documents
   |-- certificate-2.json
 ```
 
-In the `wrapped-documents` directory, you will find the wrapped documents that will be issued on the document store using `merkleRoot` in the next article. 
+In the `wrapped-documents` directory, you will find the wrapped documents that will be issued to the document store in the next article. 
 
 ## Wrapping a single document
 This is an alternative way. Instead of wrapping all documents in a folder in a batch, you can also wrap a single document at a time.

@@ -22,13 +22,17 @@ To continue, follow the steps below:
 
     You will use a [sample template](https://github.com/Open-Attestation/oa-embedded-html/blob/master/samples/healthcert-pdt-oa-embedded-uri-fragment-sample.html).
 
-3. Modify the button in the HTML file to contain the Verify URL. 
+3. Modify the **Proceed** button in the HTML file to contain the Verify URL. 
 
-    This button will redirect the user to the [Verify page](https://www.verify.gov.sg/) which will verify and render the OA document.
+4. Double-click the HTML file to preview it in a browser.
 
-    The screenshot below shows how the **Proceed** button works.
+    ![Proceed button in the HTML page](/docs/distribute-section/oa-embed-html/html-proceed-verify.png)
 
-   ![Resultant HTML](/docs/distribute-section/oa-embed-html/html-proceed-verify.png)
+    The **Proceed** button will redirect the user to the [Verify page](https://www.verify.gov.sg/) which will verify and render the OA document.
+
+    The screenshot below shows the result after the user clicks **Proceed**.
+
+   ![Proceed button in the HTML page](/docs/distribute-section/oa-embed-html/html-proceed-verify-output.png)
 
 ## Prerequisites
 
@@ -44,7 +48,7 @@ This guide will use [the sample HealthCert document](https://github.com/Notarise
 
 ### Encoding the payload
 
-1. Copy the [sample document contents](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json). 
+1. Click **Copy raw file** to get a copy of the [sample document contents](https://github.com/Notarise-gov-sg/api-notarise-healthcerts/blob/master/test/fixtures/v2/pdt_pcr_notarized_with_nric_wrapped.json). 
 
    ![Copy document data](/docs/distribute-section/oa-embed-html/copy-healthcert-data.png)
 

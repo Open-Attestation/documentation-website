@@ -3,6 +3,7 @@ id: sign-document
 title: Sign documents
 sidebar_label: Sign documents
 ---
+import VerifyDocument from "/src/reusables/_verify-document.mdx";
 
 After wrapping the documents and obtaining the merkle root(s), you can sign them with the `ether` DID you created. During signing, each document's merkle root is signed individually, with the proof of their signatures appended. 
 
@@ -23,8 +24,4 @@ In the example above:
 
 ## Verifying the documents
 
-Head to `dev.tradetrust.io` and drag and drop one of the issued or signed documents. After being verified, the document will display.
-
-![Successful verification](/docs/did-section/sign-document/verifying.png)
-
-🎉 Congratulations, you have completed the getting started guide to create your own Verifiable Document!
+<VerifyDocument />

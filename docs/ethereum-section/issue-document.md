@@ -4,6 +4,8 @@ title: Issue documents
 sidebar_label: Issue documents
 ---
 
+import VerifyDocument from "/src/reusables/_verify-document.mdx";
+
 After wrapping the documents and obtaining a merkle root, the documents are ready to be issued to the document store smart contract. To issue a batch of documents to the document store, you will use the merkle root that was generated during the batch wrapping process. This issuance only needs to be done once for all documents in a batch.
 
 ## Issuing the documents
@@ -25,8 +27,4 @@ You will be prompted for the password that you used while creating the wallet. Y
 
 ## Verifying the documents
 
-Head to `dev.opencerts.io` or `dev.tradetrust.io` and drag and drop one of the wrapped documents. After being verified, the document will display.
-
-![Successful verification](/docs/ethereum-section/issue-document/verifying.png)
-
-🎉 Congratulations, you have completed the getting started guide to create your own Verifiable Document!
+<VerifyDocument />

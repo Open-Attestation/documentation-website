@@ -21,4 +21,4 @@ The screenshot below shows an example of a successful verification in OpenCerts:
 
 The screenshot below shows an example of a successful verification in TradeTrust:
 
-![Successful verification](/docs/did-section/sign-document/verifying.png)
+![Successful verification](/docs/verify-section/verify/verify-in-tradetrust.png)

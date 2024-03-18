@@ -3,10 +3,17 @@ id: dns-proof
 title: Configure DNS
 sidebar_label: Configure DNS
 ---
-import DNSProof from "/src/reusables/_dns-proof.mdx";
+import DNSProofIntro from "/src/reusables/_dns-proof-intro.mdx";
+import DNSProofGuide from "/src/reusables/_dns-proof-guide.mdx";
 import SupportedNetworks from "/src/reusables/_supported-networks.mdx";
 
-<DNSProof />
+<DNSProofIntro />
+
+![Example Issuer Identity](/docs/ethereum-section/dns-proof/example.png)
+
+In this example above, the document's issuer is bound to `demo.openattestation.com`.
+
+<DNSProofGuide />
 
 ## Creating temporary DNS proof
 

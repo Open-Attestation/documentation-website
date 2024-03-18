@@ -3,9 +3,16 @@ id: dns
 title: Configure DNS
 sidebar_label: Configure DNS
 ---
-import DNSProof from "/src/reusables/_dns-proof.mdx";
+import DNSProofIntro from "/src/reusables/_dns-proof-intro.mdx";
+import DNSProofGuide from "/src/reusables/_dns-proof-guide.mdx";
 
-<DNSProof />
+<DNSProofIntro />
+
+![Example Issuer Identity](/docs/did-section/dns-proof/signed-DID.png)
+
+In this example above, the document's issuer is bound to `horizontal-beige-goose.sandbox.openattestation.com`.
+
+<DNSProofGuide />
 
 In the DID method, you will only use the wallet address as signing credentials and bind it to a domain.
 
@@ -42,16 +49,16 @@ Check the values in the output. The `public-key` parameter in the creation comma
 Once the DNS TXT record has been successfully deployed, you will see the success message with the bound location.
 
 ```text
-✔  success   Record created at intermediate-sapphire-catfish.sandbox.openattestation.com and will stay valid until Fri Nov 27 2020 14:12:03 GMT+0800 (Singapore Standard Time)
+✔  success   Record created at horizontal-beige-goose.sandbox.openattestation.com and will stay valid until Fri Nov 27 2020 14:12:03 GMT+0800 (Singapore Standard Time)
 ```
 
-In the example above, the DID public key `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller` has been bound to the `intermediate-sapphire-catfish.sandbox.openattestation.com` location. 
+In the example above, the DID public key `did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller` has been bound to the `horizontal-beige-goose.sandbox.openattestation.com` location. 
 
 ## Verification
-Run the following command to make sure the entry has been propagated to the DNS:
+Replace `horizontal-beige-goose.sandbox.openattestation.com` with your DNS name, and then run the following command to make sure the entry has been propagated to the DNS:
 
 ```bash
-open-attestation dns txt-record get --location intermediate-sapphire-catfish.sandbox.openattestation.com
+open-attestation dns txt-record get --location horizontal-beige-goose.sandbox.openattestation.com
 ```
 
 It will display the list of the DNS TXT records associated to that location:

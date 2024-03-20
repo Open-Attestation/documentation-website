@@ -3,8 +3,6 @@ id: sign-document
 title: Sign documents
 sidebar_label: Sign documents
 ---
-import VerifyDocument from "/src/reusables/_verify-document.mdx";
-
 After wrapping the documents and obtaining the merkle root(s), you can sign them with the `ether` DID you created. During signing, each document's merkle root is signed individually, with the proof of their signatures appended. 
 
 ## Signing the documents
@@ -24,4 +22,8 @@ In the example above:
 
 ## Verifying the documents
 
-<VerifyDocument />
+Head to `dev.opencerts.io`. Drag and drop one of the wrapped documents. After being verified, the document will display.
+
+![Successful verification](/docs/did-section/sign-document/verifying-DID.png)
+
+🎉 Congratulations. You have completed the tutorial to create your own Verifiable Document.

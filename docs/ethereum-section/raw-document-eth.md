@@ -35,7 +35,7 @@ To create data for your document, paste the following JSON data into the right p
       "documentStore": "0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b",
       "identityProof": {
         "type": "DNS-TXT",
-        "location": "few-green-cat.sandbox.openattestation.com"
+        "location": "broad-tomato-ferret.sandbox.openattestation.com"
       }
     }
   ]
@@ -52,7 +52,7 @@ Replace the value of `issuers[0].documentStore` from `0xBBb55Bd1D709955241CAaCb3
 
 ### Replacing the identity proof location
 
-Replace the value of `issuers[0].identityProof.location` from `few-green-cat.sandbox.openattestation.com` to the DNS name used to bind the document store's identity in the [previous step](/docs/ethereum-section/dns-proof).
+Replace the value of `issuers[0].identityProof.location` from `broad-tomato-ferret.sandbox.openattestation.com` to the DNS name used to bind the document store's identity in the [previous step](/docs/ethereum-section/dns-proof).
 
 ![Validator Completed](/docs/ethereum-section/document-data/validator-completed.png)
 

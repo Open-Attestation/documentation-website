@@ -14,7 +14,7 @@ In addition to OpenCerts and TradeTrust, you can also use any other verifier com
 
 The screenshot below shows an example of a successful verification in OpenCerts:
 
-![Successful verification](/docs/ethereum-section/issue-document/verifying.png)
+![Successful verification](/docs/ethereum-section/issue-document/verifying-ETH.png)
 
 
 ## Verify documents using TradeTrust

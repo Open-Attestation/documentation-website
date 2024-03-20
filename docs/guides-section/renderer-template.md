@@ -95,7 +95,7 @@ export const cocTemplateCertificate: CocTemplateCertificate = {
       name: "My name",
       documentStore: "0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b",
       identityProof: {
-        location: "few-green-cat.sandbox.openattestation.com",
+        location: "broad-tomato-ferret.sandbox.openattestation.com",
         type: v2.IdentityProofType.DNSTxt,
       },
     },

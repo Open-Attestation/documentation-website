@@ -12,13 +12,13 @@ In addition to OpenCerts and TradeTrust, you can also use any other verifier com
 
 ## Verify documents using OpenCerts
 
-The screenshot below shows an example of a successful verification in OpenCerts:
+The screenshot below shows an example of a successful verification in `dev.opencerts.io`:
 
 ![Successful verification](/docs/ethereum-section/issue-document/verifying-ETH.png)
 
 
 ## Verify documents using TradeTrust
 
-The screenshot below shows an example of a successful verification in TradeTrust:
+The screenshot below shows an example of a successful verification in `dev.tradetrust.io`:
 
 ![Successful verification](/docs/verify-section/verify/verify-in-tradetrust.png)

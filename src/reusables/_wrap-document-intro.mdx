@@ -1,0 +1,7 @@
+Multiple documents can be wrapped at the same time in a single batch operation, creating a single checksum for the entire batch of raw documents. 
+
+In this task, you will learn how to generate the checksum by running the `wrapping` process.
+
+You will use the CLI tool to read all the files in the `raw-documents` folder, wrap them, and then output the files in another directory `wrapped-documents`.
+
+A `merkleRoot`, a 64 character long string prepended with `0x` will be generated. The `merkleRoot` represents documents either individually or in a batch, and is crucial for verifying the issuance status of OA documents.

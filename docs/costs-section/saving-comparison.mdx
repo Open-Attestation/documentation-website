@@ -1,0 +1,31 @@
+---
+id: saving-comparison
+title: Saving comparisons between v3 and v4
+sidebar_label: Saving comparisons between v3 and v4
+---
+
+import { PriceTable } from "/src/components/SavingsComparisonsTable";
+
+If you are a new user of TradeTrust or going to deploy a new token registry (i.e. transferable document), it is recommended to try V4.
+
+You will be able to try the new features in this version and benefit from massive cost savings when deploying your contracts. 
+
+This page provides an estimated breakdown of the differences in gas fees between the two versions and the amount of savings you can get using V4.
+
+Using V4 contracts, you can save up to approximately 92% in total gas fees compared to its previous versions. If the costs on Ethereum is still a concern despite the savings, you can deploy onto the Polygon network, where the V4 repository comes pre-configured. The estimations on this page are based on the current prices on the Ethereum and Polygon Mainnet.
+
+If you are interested in V4, check out [this repository](https://github.com/Open-Attestation/token-registry/tree/master).
+
+>**Note:** The following estimation is **not** a comprehensive list of all the costs involved and should be used as only a reference. The live gas fees and prices on this page are updated every 15s. The data is retrieved from [BlockNative Gas Estimator](https://www.blocknative.com/gas-estimator) and [CryptoCompare](https://www.cryptocompare.com/).
+
+## Estimated fees on Ethereum
+
+<PriceTable type="transferable" chain="ethereum" />
+
+## Estimated fees on Polygon
+
+<PriceTable
+  type="transferable"
+  chain="polygon"
+  priceFormatOptions={{ maximumSignificantDigits: 3, minimumFractionDigits: 2 }}
+/>

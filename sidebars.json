@@ -1,174 +1,183 @@
 {
-  "docs": [
-    "docs-section/introduction",
-    {
-      "type": "category",
-      "label": "How Does It Work?",
-      "items": [
-        "docs-section/how-does-it-work/introduction",
-        "docs-section/how-does-it-work/document-integrity",
-        "docs-section/how-does-it-work/issuance-status",
-        "docs-section/how-does-it-work/issuance-identity",
-        "docs-section/how-does-it-work/limitations",
-        "docs-section/how-does-it-work/comparison"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Appendix",
-      "items": [
-        "docs-section/appendix/glossary",
-        "docs-section/appendix/contract-costs",
-        "docs-section/appendix/savings-comparisons"
-      ]
-    },
-    "docs-section/faq",
-    {
-      "type": "category",
-      "label": "Roadmap",
-      "items": [
-        {
-          "type": "category",
-          "label": "W3C VC",
-          "items": [
-            "docs-section/roadmap/v3/overview",
-            "docs-section/roadmap/v3/major-changes",
-            "docs-section/roadmap/v3/quick-start",
-            "docs-section/roadmap/v3/different-files"
-          ]
-        },
-        "docs-section/roadmap/create-custom-context"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Deprecated",
-      "items": [
-        {
-          "type": "category",
-          "label": "Gas Station Network (GSN)",
-          "items": [
-            "docs-section/deprecated/gsn/gas-station-network",
-            "docs-section/deprecated/gsn/setup-paymaster",
-            "docs-section/deprecated/gsn/gsn-capable-document-store",
-            "docs-section/deprecated/gsn/creating-a-custom-relay-provider"
-          ]
-        }
-      ]
-    }
+  "overview": [
+    "overview-section/overview",
+    "overview-section/comparison",
+    "overview-section/differences"
   ],
-  "integrator": [
-    {
-      "type": "category",
-      "label": "Quickstart (CLI)",
-      "items": [
-        {
-          "type": "category",
-          "label": "Tutorial",
-          "items": [
-            {
-              "type": "category",
-              "label": "Verifiable Document",
-              "items": [
-                "integrator-section/verifiable-document/overview",
-                "integrator-section/verifiable-document/prerequisites",
-                {
-                  "label": "Ethereum",
-                  "type": "category",
-                  "items": [
-                    "integrator-section/verifiable-document/ethereum/document-store-overview",
-                    "integrator-section/verifiable-document/ethereum/wallet",
-                    "integrator-section/verifiable-document/ethereum/document-store",
-                    "integrator-section/verifiable-document/ethereum/dns-proof",
-                    "integrator-section/verifiable-document/ethereum/raw-document",
-                    "integrator-section/verifiable-document/ethereum/wrapping-document",
-                    "integrator-section/verifiable-document/ethereum/issuing-document",
-                    "integrator-section/verifiable-document/ethereum/revoking-document",
-                    "integrator-section/verifiable-document/ethereum/going-further"
-                  ]
-                },
-                {
-                  "label": "DID",
-                  "type": "category",
-                  "items": [
-                    "integrator-section/verifiable-document/did/create",
-                    "integrator-section/verifiable-document/did/dns",
-                    "integrator-section/verifiable-document/did/raw-document",
-                    "integrator-section/verifiable-document/did/wrapping-document",
-                    "integrator-section/verifiable-document/did/signing-document",
-                    "integrator-section/verifiable-document/did/revoking-document-ocsp",
-                    "integrator-section/verifiable-document/did/revoking-document"
-                  ]
-                }
-              ]
-            },
-            {
-              "type": "category",
-              "label": "Transferable Record",
-              "items": [
-                "integrator-section/transferable-record/overview",
-                "integrator-section/transferable-record/token-registry",
-                "integrator-section/transferable-record/preparing-transferable-record",
-                "integrator-section/transferable-record/issuing-transferable-record",
-                "integrator-section/transferable-record/going-further"
-              ]
-            }
-          ]
-        },
-        {
-          "type": "category",
-          "label": "Webapp Tutorial",
-          "items": [
-            "integrator-section/webapp-tutorial/deploy-document-store-webapp",
-            "integrator-section/webapp-tutorial/issue-document-store-webapp",
-            "integrator-section/webapp-tutorial/revoke-document-store-webapp"
-          ]
-        }
-      ]
-    }
-  ],
-  "developer": [
-    {
-      "type": "category",
-      "label": "Quickstart (Code)",
-      "items": [
-        "developer-section/quickstart/create-verifiable-document-issuer",
-        "developer-section/quickstart/create-custom-renderer",
-        "developer-section/quickstart/create-custom-schema",
-        "developer-section/quickstart/configure-dns",
-        "developer-section/quickstart/oa-embedded-html"
-      ]
-    },
-    {
-      "type": "category",
-      "label": "Libraries",
-      "items": [
-        "developer-section/libraries/overview",
-        "developer-section/libraries/remote-files/open-attestation",
-        "developer-section/libraries/remote-files/open-attestation-cli",
-        "developer-section/libraries/remote-files/open-attestation-encryption",
 
-        {
-          "type": "category",
-          "label": "Verification",
-          "items": [
-            "developer-section/libraries/remote-files/open-attestation-verify",
-            "developer-section/libraries/verification/verification-flow"
+  "prereq": [
+    "prereq-section/prerequisites"
+  ],
+
+  "did": [
+
+        "did-section/overview-did",
+        "did-section/create",
+        "did-section/document-store-or-ocsp",
+        "did-section/dns",
+        "did-section/raw-document-did",
+        "did-section/wrap-document-did",
+        "did-section/sign-document",
+        "did-section/additional-did",
+       
+          {
+            "type": "category",
+            "label": "Revoke documents issued using DID",
+            "collapsed": false,
+            "items": [
+              "did-section/revoke-document-did/revoke-using-ocsp",
+              "did-section/revoke-document-did/revoke-using-document-store"
+                ]
+              }
+
+  ],
+
+  "ethereum": [
+
+        "ethereum-section/overview-eth",
+        "ethereum-section/wallet",
+        "ethereum-section/document-store",
+        "ethereum-section/dns-proof",
+        "ethereum-section/raw-document-eth",
+        "ethereum-section/wrap-document-eth",
+        "ethereum-section/issue-document",
+        "ethereum-section/additional-eth",
+
+          {
+            "type": "category",
+            "label": "Revoke documents issued using Ethereum",
+            "collapsed": false,
+            "items": [
+              "ethereum-section/revoke-document-eth/revoke-eth"
+                ]
+              }
+
+  ],
+
+  "transferable": [
+        "transferable-section/overview-tr",
+        "transferable-section/token-registry",
+        "transferable-section/prepare-transferable-record",
+        "transferable-section/issue-transferable-record",
+        "transferable-section/additional-tr"
+  ],
+
+  "revoke": [
+      "revoke-section/revoke",
+      "revoke-section/diff-btw-revocation-methods"
+  ],
+
+  "verify": [
+    "verify-section/verify",
+    
+    {
+      "type": "category",
+      "label": "Three main verification properties",
+      "collapsed": false,
+      "items": [
+        "verify-section/main-properties",
+        "verify-section/document-integrity",
+        "verify-section/issuance-status",
+        "verify-section/issuance-identity"
+          ]
+      }
+  ],
+
+  "distribute": [
+    "distribute-section/distribute",
+    "distribute-section/oa-embed",
+    "distribute-section/oa-embed-html",
+    "distribute-section/oa-embed-qrcode"
+  ],
+
+  "lib": [
+        "lib-section/overview-lib",
+        "lib-section/remote-files/open-attestation",
+        "lib-section/remote-files/open-attestation-cli",
+        "lib-section/remote-files/open-attestation-encryption",
+        "lib-section/remote-files/open-attestation-verify",
+        "lib-section/remote-files/document-store",
+        "lib-section/remote-files/token-registry",
+        "lib-section/remote-files/decentralized-renderer-react-components",
+        "lib-section/remote-files/decentralized-renderer-react-template"
+  ],
+
+  "guides": [
+        "guides-section/overview-guides",
+        "guides-section/create-issuer",
+        "guides-section/renderer-template",
+        "guides-section/custom-schema",
+        "guides-section/configure-dns",
+        "guides-section/encrypt-document",
+        "guides-section/web-app-deploy",
+        "guides-section/web-app-issue",
+        "guides-section/web-app-revoke"
+  ],
+
+  "faq": [
+      "faq-section/overview-faq",
+      {
+      "type": "category",
+      "label": "Framework",
+      "items": [
+        "faq-section/faq01",
+        "faq-section/faq02",
+        "faq-section/faq04",
+        "faq-section/faq11"
           ]
         },
-        {
-          "type": "category",
-          "label": "Decentralized Renderer",
-          "items": [
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-components",
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-react-template",
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-svelte-template",
-            "developer-section/libraries/remote-files/decentralized-renderer/decentralized-renderer-vue-template"
-          ]
+      {
+        "type": "category",
+        "label": "User interface",
+        "items": [
+          "faq-section/faq03"
+           ]
         },
-        "developer-section/libraries/remote-files/document-store",
-        "developer-section/libraries/remote-files/token-registry"
-      ]
-    }
+      {
+        "type": "category",
+        "label": "Smart contract & costs",
+        "items": [
+          "faq-section/faq06",
+          "faq-section/faq07",
+          "faq-section/faq05",
+          "faq-section/faq09"
+            ]
+        },
+      {
+        "type": "category",
+        "label": "DNS",
+        "items": [
+          "faq-section/faq08"
+            ]
+        },       
+       {
+        "type": "category",
+        "label": "Revocation",
+        "items": [
+          "faq-section/faq10"
+            ]
+        }     
+
+  ],
+
+  "glossary": [
+    "glossary-section/glossary"
+  ],
+
+  "changelog": [
+        "changelog-section/overview-changelog",
+        "changelog-section/v3-v4",
+        "changelog-section/v2-v3"
+  ],
+
+  "costs": [
+        "costs-section/overview-costs",
+        "costs-section/costs-verifiable-documents",
+        "costs-section/costs-transferable-records",
+        "costs-section/saving-comparison"
+  ],
+
+  "limit": [
+    "limit-section/limitations"
   ]
 }

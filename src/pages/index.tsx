@@ -43,7 +43,7 @@ const features = [
   {
     imageUrl: `img/undraw_experience_design.svg`,
     description: "Render your document with custom templates",
-    title: "Decentralised Rendering",
+    title: "Decentralized Rendering",
   },
   {
     title: "Verified Issuer's Identity",
@@ -96,7 +96,7 @@ function Home() {
           <div className={styles.buttons}>
             <Link
               className={clsx("button button--outline button--secondary button--lg", styles.getStarted)}
-              to={useBaseUrl("docs/docs-section/introduction")}
+              to={useBaseUrl("docs/overview-section/overview")}
             >
               Get Started
             </Link>

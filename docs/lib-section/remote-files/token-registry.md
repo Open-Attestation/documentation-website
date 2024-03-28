@@ -287,7 +287,7 @@ await tokenRegistry.setRoleAdmin(roleHash.RestorerRole, roleHash.RestorerAdminRo
 await tokenRegistry.setRoleAdmin(roleHash.AccepterRole, roleHash.AccepterAdminRole);
 ```
 
-# Deployment
+## Deployment
 
 With Hardhat, you can manage the contract development environment and deployment. This repository provides a couple of Hardhat tasks to simplify the deployment process.
 
@@ -428,7 +428,7 @@ Only one of the following is needed:
 * `DEPLOYER_PK` 
 * `MNEMONIC`
 
-# Development
+## Development
 
 This repository's development framework uses [Hardhat](https://hardhat.org/getting-started/).
 

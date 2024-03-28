@@ -9,9 +9,9 @@ sidebar_label: OpenAttestation (Encryption)
 
 To share and store documents safely, encrypt the documents with the [OpenAttestation (Encryption)](https://github.com/Open-Attestation/oa-encryption) repository. It is the codebase for the `npm` module. This module does not provide the following functionalities:
 
-*   Programmatic wrapping of OA documents (refer to [OpenAttestation](https://www.openattestation.com/docs/developer-section/libraries/remote-files/open-attestation#wrapping-documents))
+*   Programmatic wrapping of OA documents (refer to [OpenAttestation](https://www.openattestation.com/docs/lib-section/remote-files/open-attestation#wrapping-documents))
 
-*   Programmatic verification of OA documents (refer to [OpenAttestation (Verify)](https://www.openattestation.com/docs/developer-section/libraries/remote-files/open-attestation-verify))
+*   Programmatic verification of OA documents (refer to [OpenAttestation (Verify)](https://www.openattestation.com/docs/lib-section/remote-files/open-attestation-verify))
 
 *   Programmatic issuance/revocation of document on the Ethereum blockchain
 

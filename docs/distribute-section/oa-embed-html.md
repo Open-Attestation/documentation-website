@@ -24,7 +24,7 @@ To continue, follow the steps below:
 
 3. Modify the **Proceed** button in the HTML file to contain the Verify URL. 
 
-4. Double-click the HTML file to preview it in a browser.
+4. Double-click the HTML file to view it in a browser.
 
     ![Proceed button in the HTML page](/docs/distribute-section/oa-embed-html/html-proceed-verify.png)
 

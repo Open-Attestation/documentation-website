@@ -36,7 +36,7 @@ Let's create our document:
       },
       "identityProof": {
         "type": "DNS-DID",
-        "location": "intermediate-sapphire-catfish.sandbox.openattestation.com",
+        "location": "horizontal-beige-goose.sandbox.openattestation.com",
         "key": "did:ethr:0xaCc51f664D647C9928196c4e33D46fd98FDaA91D#controller"
       }
     }
@@ -52,7 +52,7 @@ Change the value of `issuers[0].id` from `did:ethr:0xaCc51f664D647C9928196c4e33D
 
 ### Replacing the identity proof location
 
-Change the value of `issuers[0].identityProof.location` from `intermediate-sapphire-catfish.sandbox.openattestation.com` to the DNS name used to bind the wallet address in the [previous step](/docs/did-section/dns).
+Change the value of `issuers[0].identityProof.location` from `horizontal-beige-goose.sandbox.openattestation.com` to the DNS name used to bind the wallet address in the [previous step](/docs/did-section/dns).
 
 ### Replacing the identity proof key
 

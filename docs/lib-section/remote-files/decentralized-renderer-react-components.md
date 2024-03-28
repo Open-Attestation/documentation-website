@@ -16,7 +16,7 @@ sidebar_label: React components for decentralized renderer
 
 - [**Debug**](https://github.com/visionmedia/debug) - A JS debugging utility that works in both node.js and browsers
 - [**ESLint**](http://eslint.org/) - With this tool, you write quality code.
-- [**Jest**](https://facebook.github.io/jest) - A JavaScript testing framework used by Facebook
+- [**Jest**](https://jestjs.io/) - A JavaScript testing framework used by Facebook
 - [**Prettier**](https://prettier.io/) - It enforces a consistent style by parsing your code and re-printing it.
 - [**React**](http://reactjs.org/) - A JavaScript library for building user interfaces
 - [**React testing library**](https://testing-library.com/) - Simple and complete testing utilities that encourage good testing practices

@@ -3,10 +3,17 @@ id: dns-proof
 title: Configure DNS
 sidebar_label: Configure DNS
 ---
-import DNSProof from "/src/reusables/_dns-proof.mdx";
+import DNSProofIntro from "/src/reusables/_dns-proof-intro.mdx";
+import DNSProofGuide from "/src/reusables/_dns-proof-guide.mdx";
 import SupportedNetworks from "/src/reusables/_supported-networks.mdx";
 
-<DNSProof />
+<DNSProofIntro />
+
+![Example Issuer Identity](/docs/ethereum-section/dns-proof/issued-ETH.png)
+
+In this example above, the document's issuer is bound to `broad-tomato-ferret.sandbox.openattestation.com`.
+
+<DNSProofGuide />
 
 ## Creating temporary DNS proof
 
@@ -26,16 +33,16 @@ The `network-id` corresponds to the [network ID for the different Ethereum netwo
 Once the DNS TXT record has been successfully deployed, you will see the success message with the bound location.
 
 ```text
-✔  success   Record created at few-green-cat.sandbox.openattestation.com and will stay valid until Thu Jul 02 2020 14:51:40 GMT+0800 (Singapore Standard Time)
+✔  success   Record created at broad-tomato-ferret.sandbox.openattestation.com. and will stay valid until Thu Jul 02 2020 14:51:40 GMT+0800 (Singapore Standard Time)
 ```
 
-In the example above, the document store `0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b`, has been bound to the `few-green-cat.sandbox.openattestation.com` location. 
+In the example above, the document store `0xBBb55Bd1D709955241CAaCb327A765e2b6D69c8b`, has been bound to the `broad-tomato-ferret.sandbox.openattestation.com` location. 
 
 ## Verification
 Run the following command to make sure the entry has been propagated to the DNS:
 
 ```bash
-open-attestation dns txt-record get --location few-green-cat.sandbox.openattestation.com
+open-attestation dns txt-record get --location broad-tomato-ferret.sandbox.openattestation.com
 ```
 
 It will display to you the list of the DNS TXT records associated to that location:

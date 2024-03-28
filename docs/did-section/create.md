@@ -35,8 +35,8 @@ Run the command:
    ```
 The response looks like the following:
    ```text
-   ⚠  warning   You are about to reveal the private key of your wallet. Please type the following word into the terminal to prove that you understand the risks: environmental-maroon-scorpion
-   ? ack: environmental-maroon-scorpion
+   ⚠  warning   You are about to reveal the private key of your wallet. Please type "yes" (without quotes) into the terminal to prove that you understand the risks
+   ? ack: yes
    ℹ  info      User consented to risks
    ? Wallet password [hidden]
    …  awaiting  Decrypting Wallet [====================] [100/100%]

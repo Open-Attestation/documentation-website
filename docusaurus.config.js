@@ -343,7 +343,7 @@ ${content}`,
     algolia: {
       appId: "M0GN6T3PD5",
       apiKey: process.env.ALGOLIA_SEARCH_API_KEY || "DummyKey",
-      indexName: "openattestation",
+      indexName: "openattestation_2024",
       algoliaOptions: {}, // Optional, if provided by Algolia
       debug: false, // Set debug to true if you want to inspect the modal
     },

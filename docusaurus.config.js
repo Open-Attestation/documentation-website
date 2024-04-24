@@ -344,6 +344,7 @@ ${content}`,
       appId: "M0GN6T3PD5",
       apiKey: process.env.ALGOLIA_SEARCH_API_KEY || "DummyKey",
       indexName: "openattestation_2024",
+      contextualSearch: false, // To update if we ever want to split by language / OA docs version etc. See https://docusaurus.io/docs/search#contextual-search
       algoliaOptions: {}, // Optional, if provided by Algolia
       debug: false, // Set debug to true if you want to inspect the modal
     },

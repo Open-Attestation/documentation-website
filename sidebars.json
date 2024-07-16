@@ -4,72 +4,59 @@
     "overview-section/comparison",
     "overview-section/differences"
   ],
-
   "prereq": [
     "prereq-section/prerequisites"
   ],
-
   "did": [
-
-        "did-section/overview-did",
-        "did-section/create",
-        "did-section/document-store-or-ocsp",
-        "did-section/dns",
-        "did-section/raw-document-did",
-        "did-section/wrap-document-did",
-        "did-section/sign-document",
-        "did-section/additional-did",
-       
-          {
-            "type": "category",
-            "label": "Revoke documents issued using DID",
-            "collapsed": false,
-            "items": [
-              "did-section/revoke-document-did/revoke-using-ocsp",
-              "did-section/revoke-document-did/revoke-using-document-store"
-                ]
-              }
-
+    "did-section/overview-did",
+    "did-section/create",
+    "did-section/document-store-or-ocsp",
+    "did-section/dns",
+    "did-section/raw-document-did",
+    "did-section/wrap-document-did",
+    "did-section/sign-document",
+    "did-section/additional-did",
+    {
+      "type": "category",
+      "label": "Revoke documents issued using DID",
+      "collapsed": false,
+      "items": [
+        "did-section/revoke-document-did/revoke-using-ocsp",
+        "did-section/revoke-document-did/revoke-using-document-store"
+      ]
+    }
   ],
-
   "ethereum": [
-
-        "ethereum-section/overview-eth",
-        "ethereum-section/wallet",
-        "ethereum-section/document-store",
-        "ethereum-section/dns-proof",
-        "ethereum-section/raw-document-eth",
-        "ethereum-section/wrap-document-eth",
-        "ethereum-section/issue-document",
-        "ethereum-section/additional-eth",
-
-          {
-            "type": "category",
-            "label": "Revoke documents issued using Ethereum",
-            "collapsed": false,
-            "items": [
-              "ethereum-section/revoke-document-eth/revoke-eth"
-                ]
-              }
-
+    "ethereum-section/overview-eth",
+    "ethereum-section/wallet",
+    "ethereum-section/document-store",
+    "ethereum-section/dns-proof",
+    "ethereum-section/raw-document-eth",
+    "ethereum-section/wrap-document-eth",
+    "ethereum-section/issue-document",
+    "ethereum-section/additional-eth",
+    {
+      "type": "category",
+      "label": "Revoke documents issued using Ethereum",
+      "collapsed": false,
+      "items": [
+        "ethereum-section/revoke-document-eth/revoke-eth"
+      ]
+    }
   ],
-
   "transferable": [
-        "transferable-section/overview-tr",
-        "transferable-section/token-registry",
-        "transferable-section/prepare-transferable-record",
-        "transferable-section/issue-transferable-record",
-        "transferable-section/additional-tr"
+    "transferable-section/overview-tr",
+    "transferable-section/token-registry",
+    "transferable-section/prepare-transferable-record",
+    "transferable-section/issue-transferable-record",
+    "transferable-section/additional-tr"
   ],
-
   "revoke": [
-      "revoke-section/revoke",
-      "revoke-section/diff-btw-revocation-methods"
+    "revoke-section/revoke",
+    "revoke-section/diff-btw-revocation-methods"
   ],
-
   "verify": [
     "verify-section/verify",
-    
     {
       "type": "category",
       "label": "Three main verification properties",
@@ -79,44 +66,41 @@
         "verify-section/document-integrity",
         "verify-section/issuance-status",
         "verify-section/issuance-identity"
-          ]
-      }
+      ]
+    }
   ],
-
   "distribute": [
     "distribute-section/distribute",
     "distribute-section/oa-embed",
     "distribute-section/oa-embed-html",
     "distribute-section/oa-embed-qrcode"
   ],
-
   "lib": [
-        "lib-section/overview-lib",
-        "lib-section/remote-files/open-attestation",
-        "lib-section/remote-files/open-attestation-cli",
-        "lib-section/remote-files/open-attestation-encryption",
-        "lib-section/remote-files/open-attestation-verify",
-        "lib-section/remote-files/document-store",
-        "lib-section/remote-files/token-registry",
-        "lib-section/remote-files/decentralized-renderer-react-components",
-        "lib-section/remote-files/decentralized-renderer-react-template"
+    "lib-section/overview-lib",
+    "lib-section/remote-files/open-attestation",
+    "lib-section/remote-files/open-attestation-cli",
+    "lib-section/remote-files/open-attestation-encryption",
+    "lib-section/remote-files/open-attestation-verify",
+    "lib-section/remote-files/document-store",
+    "lib-section/remote-files/token-registry",
+    "lib-section/remote-files/decentralized-renderer-react-components",
+    "lib-section/remote-files/decentralized-renderer-react-template"
   ],
-
   "guides": [
-        "guides-section/overview-guides",
-        "guides-section/create-issuer",
-        "guides-section/renderer-template",
-        "guides-section/custom-schema",
-        "guides-section/configure-dns",
-        "guides-section/encrypt-document",
-        "guides-section/web-app-deploy",
-        "guides-section/web-app-issue",
-        "guides-section/web-app-revoke"
+    "guides-section/overview-guides",
+    "guides-section/create-issuer",
+    "guides-section/renderer-template",
+    "guides-section/custom-schema",
+    "guides-section/configure-dns",
+    "guides-section/encrypt-document",
+    "guides-section/web-app-deploy",
+    "guides-section/web-app-issue",
+    "guides-section/web-app-revoke",
+    "guides-section/upgrading-to-v4"
   ],
-
   "faq": [
-      "faq-section/overview-faq",
-      {
+    "faq-section/overview-faq",
+    {
       "type": "category",
       "label": "Framework",
       "items": [
@@ -124,59 +108,54 @@
         "faq-section/faq02",
         "faq-section/faq04",
         "faq-section/faq11"
-          ]
-        },
-      {
-        "type": "category",
-        "label": "User interface",
-        "items": [
-          "faq-section/faq03"
-           ]
-        },
-      {
-        "type": "category",
-        "label": "Smart contract & costs",
-        "items": [
-          "faq-section/faq06",
-          "faq-section/faq07",
-          "faq-section/faq05",
-          "faq-section/faq09"
-            ]
-        },
-      {
-        "type": "category",
-        "label": "DNS",
-        "items": [
-          "faq-section/faq08"
-            ]
-        },       
-       {
-        "type": "category",
-        "label": "Revocation",
-        "items": [
-          "faq-section/faq10"
-            ]
-        }     
-
+      ]
+    },
+    {
+      "type": "category",
+      "label": "User interface",
+      "items": [
+        "faq-section/faq03"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Smart contract & costs",
+      "items": [
+        "faq-section/faq06",
+        "faq-section/faq07",
+        "faq-section/faq05",
+        "faq-section/faq09"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "DNS",
+      "items": [
+        "faq-section/faq08"
+      ]
+    },
+    {
+      "type": "category",
+      "label": "Revocation",
+      "items": [
+        "faq-section/faq10"
+      ]
+    }
   ],
-
   "glossary": [
     "glossary-section/glossary"
   ],
-
   "changelog": [
-        "changelog-section/overview-changelog",
-        "changelog-section/v3-v4",
-        "changelog-section/v2-v3"
+    "changelog-section/overview-changelog",
+    "changelog-section/v3-v4",
+    "changelog-section/v2-v3"
   ],
-
   "costs": [
-        "costs-section/overview-costs",
-        "costs-section/costs-verifiable-documents",
-        "costs-section/costs-transferable-records",
-        "costs-section/saving-comparison"
+    "costs-section/overview-costs",
+    "costs-section/costs-verifiable-documents",
+    "costs-section/costs-transferable-records",
+    "costs-section/saving-comparison"
   ],
-
   "limit": [
     "limit-section/limitations"
   ]

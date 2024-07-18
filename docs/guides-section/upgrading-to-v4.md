@@ -14,11 +14,13 @@ This guide aims to help users looking to upgrade from earlier versions of OpenAt
 
 ## What's new
 
-Created with a focus on conforming to [W3C's Verifiable Credentials Data Model 2.0](https://www.w3.org/TR/vc-data-model-2.0/), v4 updates the structure of issued documents in order to take a step forward in terms of interoperability.
+Created with a focus on conforming to [W3C's Verifiable Credentials Data Model 2.0](https://www.w3.org/TR/vc-data-model-2.0/), v4 updates the structure of issued documents in order to take a step forward in terms of interoperability. In addition, v4 will provide issuers with added functionality, starting with support for an alternative render method - the [W3C SvgRenderingTemplate](https://w3c-ccg.github.io/vc-render-method/#svgrenderingtemplate).
 
-In addition, v4 will provide issuers with added functionality, starting with support for an alternative render method - the [W3C SvgRenderingTemplate](https://w3c-ccg.github.io/vc-render-method/#svgrenderingtemplate).
+Issuers of OA documents are encouraged to migrate to v4 in order to be W3C compliant and to make use of new features. The information below will cover how to create your own raw v4 document as well as the changes during the wrapping and signing processes. 
 
-Issuers of OA documents are encouraged to migrate to v4 in order to be W3C compliant and to make use of new features. The information below will cover how to create your own raw v4 document as well as the changes during the wrapping and signing processes. For more information on the newly support SVG render method, please visit [this repository](https://github.com/Open-Attestation/decentralized-renderer-react-components?tab=readme-ov-file#svg-rendering).
+For more information on how to wrap and sign documents using OA, visit [the OpenAttestation repository](https://github.com/Open-Attestation/open-attestation).
+
+For more information on the newly support SVG render method, visit [the renderer components repository](https://github.com/Open-Attestation/decentralized-renderer-react-components?tab=readme-ov-file#svg-rendering).
 
 ## Creating raw documents
 When creating documents, properties can be split into two categories:
@@ -132,7 +134,7 @@ In OA v2, the raw document can contain both OA properties and Data properties at
 In OA v4 this has been changed, and all information about the subject is placed within `credentialSubject`, with the issuance properties being placed within the `issuer`, `renderMethod`, and `credentialStatus` properties. There are also two new properties added in compliance with the W3C VC data model, namely `@context` and `type`. 
 
 For OA v4 documents their values will always be:
-- `@context`: [ "https://www.w3.org/ns/credentials/v2", "https://schemata.openattestation.com/com/openattestation/4.0/alpha-context.json" ]
+- `@context`: [ "https://www.w3.org/ns/credentials/v2", "https://schemata.openattestation.com/com/openattestation/4.0/context.json" ]
 - `type`: [ "VerifiableCredential", "OpenAttestationCredential" ]
 
 For example, a corresponding v4 document for the above v2 document would look like this:
@@ -144,7 +146,7 @@ For example, a corresponding v4 document for the above v2 document would look li
 {
   "@context": [
     "https://www.w3.org/ns/credentials/v2",
-    "https://schemata.openattestation.com/com/openattestation/4.0/alpha-context.json"
+    "https://schemata.openattestation.com/com/openattestation/4.0/context.json"
   ], // Points to external JSON-LD contexts in order for the document's schema to be validated
   "type": [
     "VerifiableCredential",
@@ -178,7 +180,7 @@ For example, a corresponding v4 document for the above v2 document would look li
 {
   "@context": [
     "https://www.w3.org/ns/credentials/v2",
-    "https://schemata.openattestation.com/com/openattestation/4.0/alpha-context.json"
+    "https://schemata.openattestation.com/com/openattestation/4.0/context.json"
   ], // Points to external JSON-LD contexts in order for the document's schema to be validated
   "type": [
     "VerifiableCredential",
@@ -220,7 +222,7 @@ For example, a corresponding v4 document for the above v2 document would look li
 {
   "@context": [
     "https://www.w3.org/ns/credentials/v2",
-    "https://schemata.openattestation.com/com/openattestation/4.0/alpha-context.json"
+    "https://schemata.openattestation.com/com/openattestation/4.0/context.json"
   ], // Points to external JSON-LD contexts in order for the document's schema to be validated
   "type": [
     "VerifiableCredential",
@@ -313,7 +315,7 @@ With respect to the wrapping of documents, two changes can be seen from v2 to v4
 {
   "@context": [
     "https://www.w3.org/ns/credentials/v2",
-    "https://schemata.openattestation.com/com/openattestation/4.0/alpha-context.json"
+    "https://schemata.openattestation.com/com/openattestation/4.0/context.json"
   ],
   "type": [
     "VerifiableCredential",
@@ -417,7 +419,7 @@ In v4, the signature and public key of the document that were previously isolate
 {
   "@context": [
     "https://www.w3.org/ns/credentials/v2",
-    "https://schemata.openattestation.com/com/openattestation/4.0/alpha-context.json"
+    "https://schemata.openattestation.com/com/openattestation/4.0/context.json"
   ],
   "type": [
     "VerifiableCredential",

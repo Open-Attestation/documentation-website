@@ -6,11 +6,11 @@ sidebar_label: Overview
 
 ## Goal
 
-The latest version of OpenAttestation aims to align with the data model to [W3C's Verifiable Credentials Data Model 2.0](https://www.w3.org/TR/vc-data-model-2.0/) for interoperability with other W3C VC wallets.
+The latest version of OpenAttestation v4.0 aims to comply with the [W3C Verifiable Credentials Data Model v2.0](https://www.w3.org/TR/vc-data-model-2.0/).
 
-## Major changes from V2
+## Major changes from OA v2.0
 
-See major changes from Version 2 [here](/docs/changelog-section/v2-v4).
+See major changes from OA v2.0 [here](/docs/changelog-section/v2-v4).
 
 <!--TODO: Update this portion below as needed or once everything is upgraded.>
 <!-- ## Tool compatibility
@@ -19,14 +19,14 @@ While the base data model has implemented all primary features, the tools and do
 
 - oa-verify
 
-    - URL: https://www.npmjs.com/package/@govtechsg/oa-verify 
-    
+    - URL: https://www.npmjs.com/package/@govtechsg/oa-verify
+
     - Status: Supported
 
 - oa-cli
 
     - URL: https://www.npmjs.com/package/@govtechsg/open-attestation-cli
-    
+
     - Status:
 
         - `wrap`: Supported
@@ -34,13 +34,13 @@ While the base data model has implemented all primary features, the tools and do
         - `verify`: Supported
 
 - TradeTrust website
-    
+
     - URL: https://tradetrust.io/
-    
+
     - Status: Pending
 
 - TradeTrust creator
-  
+
   - URL: https://creator.tradetrust.io/
 
   - Status: Pending

@@ -1,36 +1,39 @@
 ---
 id: upgrading-to-v4
-title: Upgrading to OA v4
-sidebar_label: Upgrading to OA v4
+title: Upgrading to OA v4.0
+sidebar_label: Upgrading to OA v4.0
 ---
+
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Upgrading to OA v4
 
-This guide aims to help users looking to upgrade from earlier versions of OpenAttestation to v4 and to understand the changes that have been introduced.
+This guide aims to help users looking to upgrade from earlier versions of OpenAttestation (OA) to v4.0 and to understand the changes that have been introduced.
 
-> Note: OA v4 currently supports DNS-DID signing only and does not support issuance via the Ethereum Document Store. 
+> Note: OA v4.0 currently only supports DID issuance and does not support issuance via the Ethereum Document Store.
 
 ## What's new
 
-Created with a focus on conforming to [W3C's Verifiable Credentials Data Model 2.0](https://www.w3.org/TR/vc-data-model-2.0/), v4 updates the structure of issued documents in order to take a step forward in terms of interoperability. In addition, v4 will provide issuers with added functionality, starting with support for an alternative render method - the [W3C SvgRenderingTemplate](https://w3c-ccg.github.io/vc-render-method/#svgrenderingtemplate).
+Created with a focus on conforming to the [W3C Verifiable Credentials Data Model v2.0](https://www.w3.org/TR/vc-data-model-2.0/), OA v4.0 updates the structure of issued documents in order to take a step forward in terms of interoperability. In addition, v4.0 will provide issuers with added functionality, starting with support for an alternative render method - the [W3C SvgRenderingTemplate](https://w3c-ccg.github.io/vc-render-method/#svgrenderingtemplate).
 
-Issuers of OA documents are encouraged to migrate to v4 in order to be W3C compliant and to make use of new features. The information below will cover how to create your own raw v4 document as well as the changes during the wrapping and signing processes. 
+Issuers of OA documents are encouraged to migrate to v4.0 in order to be W3C compliant and to make use of new features. The information below will cover how to create your own raw document in OA v4.0 as well as the changes during the wrapping and signing processes.
 
 For more information on how to wrap and sign documents using OA, visit [the OpenAttestation repository](https://github.com/Open-Attestation/open-attestation).
 
 For more information on the newly support SVG render method, visit [the renderer components repository](https://github.com/Open-Attestation/decentralized-renderer-react-components?tab=readme-ov-file#svg-rendering).
 
 ## Creating raw documents
+
 When creating documents, properties can be split into two categories:
+
 - OA properties - needed for the OA framework to properly sign, verify, and display the document; and
 - Data properties - which are information relating to the subject e.g. the name of the qualification or what scores the subject was awarded
 
-In OA v2, the raw document can contain both OA properties and Data properties at the root level. For example:
+For reference, the raw document in OA v2.0 can contain both OA properties and data properties at the root level. For example:
 
 <Tabs>
-<TabItem value="basic" label="Basic v2">
+<TabItem value="basic" label="Basic OA v2.0 (Raw)">
 
 ```js
 {
@@ -59,7 +62,7 @@ In OA v2, the raw document can contain both OA properties and Data properties at
 ```
 
 </TabItem>
-<TabItem value="withRenderer" label="v2 with Rendering">
+<TabItem value="withRenderer" label="OA v2.0 with Rendering (Raw)">
 
 ```js
 {
@@ -94,7 +97,7 @@ In OA v2, the raw document can contain both OA properties and Data properties at
 
 </TabItem>
 
-<TabItem value="withRenderAndRevoke" label="v2 with Rendering & Revocation">
+<TabItem value="withRenderAndRevoke" label="OA v2.0 with Rendering & Revocation (Raw)">
 
 ```js
 {
@@ -131,16 +134,25 @@ In OA v2, the raw document can contain both OA properties and Data properties at
 </TabItem>
 </Tabs>
 
-In OA v4 this has been changed, and all information about the subject is placed within `credentialSubject`, with the issuance properties being placed within the `issuer`, `renderMethod`, and `credentialStatus` properties. There are also two new properties added in compliance with the W3C VC data model, namely `@context` and `type`. 
+In OA v4.0 this has been changed, and all information about the subject is placed within `credentialSubject`, with the issuance properties being placed within the `issuer`, `renderMethod`, and `credentialStatus` properties.
 
-For OA v4 documents their values will always be:
-- `@context`: [ "https://www.w3.org/ns/credentials/v2", "https://schemata.openattestation.com/com/openattestation/4.0/context.json" ]
-- `type`: [ "VerifiableCredential", "OpenAttestationCredential" ]
+There are also two new properties added in compliance with the W3C VC data model, namely `@context` and `type`. For OA v4.0 documents their values will always be:
 
-For example, a corresponding v4 document for the above v2 document would look like this:
+```js
+{
+  "@context": [
+    "https://www.w3.org/ns/credentials/v2",
+    "https://schemata.openattestation.com/com/openattestation/4.0/context.json"
+  ],
+  "type": ["VerifiableCredential", "OpenAttestationCredential"],
+  // ...
+}
+```
+
+For example, here's how a corresponding OA v4.0 document would look like (based on the above v2.0 sample):
 
 <Tabs>
-<TabItem value="basic" label="Basic v4">
+<TabItem value="basic" label="Basic OA v4.0 (Raw)">
 
 ```js
 {
@@ -174,7 +186,7 @@ For example, a corresponding v4 document for the above v2 document would look li
 ```
 
 </TabItem>
-<TabItem value="withRenderer" label="v4 with Rendering">
+<TabItem value="withRenderer" label="OA v4.0 with Rendering (Raw)">
 
 ```js
 {
@@ -216,7 +228,7 @@ For example, a corresponding v4 document for the above v2 document would look li
 
 </TabItem>
 
-<TabItem value="withRenderAndRevoke" label="v4 with Rendering & Revocation">
+<TabItem value="withRenderAndRevoke" label="OA v4.0 with Rendering & Revocation (Raw)">
 
 ```js
 {
@@ -265,12 +277,13 @@ For example, a corresponding v4 document for the above v2 document would look li
 
 ## Wrapping
 
-With respect to the wrapping of documents, two changes can be seen from v2 to v4:
+With respect to the wrapping of documents, two changes can be seen from v2.0 to v4.0:
+
 - The type, merkle root, and target hash of the document are now placed within the `proof` property.
 - The generated salts which were originally prefixed behind each value have been consolidated and added under the `proof` section.
 
 <Tabs>
-<TabItem value="v2wrapped" label="Wrapped Basic v2">
+<TabItem value="v2wrapped" label="Basic OA v2.0 (Wrapped)">
 
 ```js
 {
@@ -309,7 +322,7 @@ With respect to the wrapping of documents, two changes can be seen from v2 to v4
 
 </TabItem>
 
-<TabItem value="v4wrapped" label="Wrapped Basic v4">
+<TabItem value="v4wrapped" label="Basic OA v4.0 (Wrapped)">
 
 ```js
 {
@@ -358,12 +371,12 @@ With respect to the wrapping of documents, two changes can be seen from v2 to v4
 
 ## Signing
 
-As external proofs are discouraged by the W3C, v4 currently supports issuance via DNS-DID signing only.
+As external proofs are discouraged by W3C, OA v4.0 currently supports DID issuance only.
 
-In v4, the signature and public key of the document that were previously isolated within their own `proof` property are now included directly under the `proof` property created during the wrapping process.
+In v4.0, the signature and public key of the document that were previously isolated within their own `proof` property are now included directly under the `proof` property created during the wrapping process.
 
 <Tabs>
-<TabItem value="v2wrappedAndSigned" label="Wrapped and Signed Basic v2">
+<TabItem value="v2wrappedAndSigned" label="Basic OA v2.0 (Wrapped & Signed)">
 
 ```js
 {
@@ -413,7 +426,7 @@ In v4, the signature and public key of the document that were previously isolate
 
 </TabItem>
 
-<TabItem value="v4wrappedAndSigned" label="Wrapped and Signed Basic v4">
+<TabItem value="v4wrappedAndSigned" label="Basic v4.0 (Wrapped & Signed)">
 
 ```js
 {

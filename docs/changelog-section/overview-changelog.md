@@ -4,44 +4,29 @@ title: About the changelog
 sidebar_label: Overview
 ---
 
-<!--Flag: It maps with the old ID below. Content needs updating.
-id: overview-v3-beta
-title: OpenAttestation (V3 Beta)
-sidebar_label: Overview
--->
-
 ## Goal
 
-The latest version of OpenAttestation aims to align with the data model to [W3C Verifiable Credentials Data Model](https://www.w3.org/TR/vc-data-model/) for interoperability with other W3C VC wallets.
+The latest version of OpenAttestation v4.0 aims to comply with the [W3C Verifiable Credentials Data Model v2.0](https://www.w3.org/TR/vc-data-model-2.0/).
 
-## Data model release status
+## Major changes from OA v2.0
 
-The Version 3 Data Model is currently in `Beta` release.
+See major changes from OA v2.0 [here](/docs/changelog-section/v2-v4).
 
-This means the OpenAttestation data model has implemented all primary features, but might contain certain bugs. Refrain from using version 3 in production environment until the release status becomes `General Availability`.
-
-## Beta program
-
-If you are using OpenAttestation to issue or verify a document, it is recommended to test out Version 3 at an early stage. Feel free to get started with the tools and report any issues to [this GitHub repository](https://github.com/Open-Attestation/open-attestation).
-
-## Major changes from V2
-
-See major changes from Version 2 [here](/docs/changelog-section/v2-v3).
-
-## Tool compatibility
+<!--TODO: Update this portion below as needed or once everything is upgraded.>
+<!-- ## Tool compatibility
 
 While the base data model has implemented all primary features, the tools and documentation are pending upgrade to support V3. The following shows the progress of update for different tools:
 
 - oa-verify
 
-    - URL: https://www.npmjs.com/package/@govtechsg/oa-verify 
-    
+    - URL: https://www.npmjs.com/package/@govtechsg/oa-verify
+
     - Status: Supported
 
 - oa-cli
 
     - URL: https://www.npmjs.com/package/@govtechsg/open-attestation-cli
-    
+
     - Status:
 
         - `wrap`: Supported
@@ -49,13 +34,13 @@ While the base data model has implemented all primary features, the tools and do
         - `verify`: Supported
 
 - TradeTrust website
-    
+
     - URL: https://tradetrust.io/
-    
+
     - Status: Pending
 
 - TradeTrust creator
-  
+
   - URL: https://creator.tradetrust.io/
 
   - Status: Pending
@@ -70,4 +55,4 @@ While the base data model has implemented all primary features, the tools and do
 
   - URL: https://verify.gov.sg
 
-  - Status: Pending
+  - Status: Pending -->

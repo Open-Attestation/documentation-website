@@ -21,6 +21,7 @@ const siteConfig = {
         theme: {
           customCss: [require.resolve("./src/css/custom.css")],
         },
+        gtag: { trackingID: "G-FT2KKZKBLR" },
       },
     ],
   ],

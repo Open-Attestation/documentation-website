@@ -214,100 +214,98 @@ ${content}`,
         src: "img/logos/oa.svg",
         srcDark: "img/logos/oa.svg",
       },
-      items: [        
+      items: [
         {
-          type: 'dropdown',
-          label: 'Issue/Revoke',
-          position: 'left',
+          type: "dropdown",
+          label: "Issue/Revoke",
+          position: "left",
           items: [
             {
-              label: 'Overview',
-              to: '/docs/overview-section/overview',
-              activeBasePath: '/docs/overview-section',
+              label: "Overview",
+              to: "/docs/overview-section/overview",
+              activeBasePath: "/docs/overview-section",
             },
 
             {
-              label: 'Prerequisites',
-              to: '/docs/prereq-section/prerequisites',
-              activeBasePath: '/docs/prereq-section',
+              label: "Prerequisites",
+              to: "/docs/prereq-section/prerequisites",
+              activeBasePath: "/docs/prereq-section",
             },
 
             {
-              label: 'Issue verifiable documents with DID',
-              to: '/docs/did-section/overview-did',
-              activeBasePath: '/docs/did-section',
+              label: "Issue verifiable documents with DID",
+              to: "/docs/did-section/overview-did",
+              activeBasePath: "/docs/did-section",
             },
 
             {
-              label: 'Issue verifiable documents with Ethereum',
-              to: '/docs/ethereum-section/overview-eth',
-              activeBasePath: '/docs/ethereum-section',
+              label: "Issue verifiable documents with Ethereum",
+              to: "/docs/ethereum-section/overview-eth",
+              activeBasePath: "/docs/ethereum-section",
             },
             {
-              label: 'Issue transferable records with Ethereum',
-              to: '/docs/transferable-section/overview-tr',
-              activeBasePath: '/docs/transferable-section',
+              label: "Issue transferable records with Ethereum",
+              to: "/docs/transferable-section/overview-tr",
+              activeBasePath: "/docs/transferable-section",
             },
 
             {
-              label: 'Revoke documents',
-              to: '/docs/revoke-section/revoke',
-              activeBasePath: '/docs/revoke-section',
+              label: "Revoke documents",
+              to: "/docs/revoke-section/revoke",
+              activeBasePath: "/docs/revoke-section",
             },
-
           ],
         },
-        
+
         { to: "docs/verify-section/verify", label: "Verify", position: "left" },
 
         { to: "docs/distribute-section/distribute", label: "Distribute", position: "left" },
 
         {
-          type: 'dropdown',
-          label: 'Resources',
-          position: 'left',
+          type: "dropdown",
+          label: "Resources",
+          position: "left",
           items: [
             {
-              label: 'Libraries',
-              to: '/docs/lib-section/overview-lib',
-              activeBasePath: '/docs/lib-section',
+              label: "Libraries",
+              to: "/docs/lib-section/overview-lib",
+              activeBasePath: "/docs/lib-section",
             },
 
             {
-              label: 'Guides',
-              to: '/docs/guides-section/overview-guides',
-              activeBasePath: '/docs/guides-section',
+              label: "Guides",
+              to: "/docs/guides-section/overview-guides",
+              activeBasePath: "/docs/guides-section",
             },
 
             {
-              label: 'FAQ',
-              to: '/docs/faq-section/overview-faq',
-              activeBasePath: '/docs/faq-section',
+              label: "FAQ",
+              to: "/docs/faq-section/overview-faq",
+              activeBasePath: "/docs/faq-section",
             },
             {
-              label: 'Glossary',
-              to: '/docs/glossary-section/glossary',
-              activeBasePath: '/docs/glossary-section',
+              label: "Glossary",
+              to: "/docs/glossary-section/glossary",
+              activeBasePath: "/docs/glossary-section",
             },
 
             {
-              label: 'Changelog',
-              to: '/docs/changelog-section/overview-changelog',
-              activeBasePath: '/docs/changelog-section',
+              label: "Changelog",
+              to: "/docs/changelog-section/overview-changelog",
+              activeBasePath: "/docs/changelog-section",
             },
 
             {
-              label: 'Blockchain costs',
-              to: '/docs/costs-section/overview-costs',
-              activeBasePath: '/docs/costs-section',
+              label: "Blockchain costs",
+              to: "/docs/costs-section/overview-costs",
+              activeBasePath: "/docs/costs-section",
             },
 
             {
-              label: 'Limitations',
-              to: '/docs/limit-section/limitations',
-              activeBasePath: '/docs/limit-section',
+              label: "Limitations",
+              to: "/docs/limit-section/limitations",
+              activeBasePath: "/docs/limit-section",
             },
-          
           ],
         },
       ],

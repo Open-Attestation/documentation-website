@@ -1,19 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useRefresh } from "@govtechsg/open-attestation-utils";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
 const gasApi = {
   ethereum: "https://api.blocknative.com/gasprices/blockprices",
   polygon: "https://api.blocknative.com/gasprices/blockprices?chainid=137",
-};
-
-const gasApiOptions = () => {
-  const { siteConfig } = useDocusaurusContext();
-  return {
-    headers: {
-      Authorization: siteConfig.blockNativeApiKey,
-    },
-  };
 };
 
 const parseGasRes = (res) => {
@@ -29,9 +20,20 @@ const priceApi = {
   polygon: "https://min-api.cryptocompare.com/data/price?fsym=MATIC&tsyms=USD",
 };
 
-const fetchGasCostData = async (chain) => {
+const fetchGasCostData = async (chain, opts) => {
   try {
-    const [ethReq, gweiReq] = await Promise.all([fetch(priceApi[chain]), fetch(gasApi[chain], gasApiOptions)]);
+    const { gasApiKey } = opts || {};
+    const [ethReq, gweiReq] = await Promise.all([
+      fetch(priceApi[chain]),
+      fetch(
+        gasApi[chain],
+        gasApiKey && {
+          headers: {
+            Authorization: gasApiKey,
+          },
+        }
+      ),
+    ]);
     const [ethRes, gweiRes] = await Promise.all([ethReq.json(), gweiReq.json()]);
     return {
       price: ethRes.USD,
@@ -46,20 +48,22 @@ export const useFetchGasPrice = (chain, interval = 0) => {
   const [price, setPrice] = useState(0);
   const [gwei, setGwei] = useState(0);
   const tick = useRefresh(interval);
+  const { siteConfig } = useDocusaurusContext();
+
   let isMounted = true;
-  const fetchData = async () => {
-    const data = await fetchGasCostData(chain);
+  const fetchData = useCallback(async () => {
+    const data = await fetchGasCostData(chain, { gasApiKey: siteConfig.customFields.blockNativeApiKey });
     if (!isMounted || !data) return;
     setPrice(data.price);
     setGwei(data.gwei);
-  };
+  }, [siteConfig]);
 
   useEffect(() => {
     fetchData();
     return () => {
-      isMounted = false
+      isMounted = false;
     };
-  }, [tick]);
+  }, [tick, fetchData]);
 
   return { price, gwei };
 };

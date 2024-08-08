@@ -74,8 +74,8 @@ const contractGasData = {
 };
 
 export const PriceTable = (props) => {
-  const { price, gwei } = useFetchGasPrice("ethereum", 30000);
-  const { price: maticPrice, gwei: maticGwei } = useFetchGasPrice("polygon", 30000);
+  const { price, gwei } = useFetchGasPrice("ethereum", 60000);
+  const { price: maticPrice, gwei: maticGwei } = useFetchGasPrice("polygon", 60000);
   const priceFactor = gwei * 0.000000001 * price;
   const maticPriceFactor = maticGwei * 0.000000001 * maticPrice;
   const { type, priceFormatOptions } = props;

@@ -107,7 +107,7 @@ const contractGasData = {
 };
 
 export const PriceTable = ({ type, chain, priceFormatOptions }) => {
-  const { price, gwei } = useFetchGasPrice(chain, 15000);
+  const { price, gwei } = useFetchGasPrice(chain, 60000);
   const priceFactor = gwei * 0.000000001 * price;
   const priceUnit = chain === "polygon" ? "MATIC" : "ETH";
   const costData = contractGasData[type];

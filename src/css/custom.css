@@ -40,7 +40,7 @@ blockquote {
 }
 
 .deploymentTypeDNS {
-  background-color: #2D5FAA;
+  background-color: #2d5faa;
   width: fit-content;
   padding: 2px 8px;
   border-radius: 8px;
@@ -49,7 +49,7 @@ blockquote {
 }
 
 .deploymentTypeDID {
-  background-color: #3AAF86;
+  background-color: #3aaf86;
   width: fit-content;
   padding: 2px 8px;
   border-radius: 8px;
@@ -59,9 +59,20 @@ blockquote {
 }
 
 .deploymentTypeRemark {
-  color: #89969F;
+  color: #89969f;
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
   text-align: center;
+}
+
+div[class*="announcementBar"][role="banner"] {
+  height: unset;
+  padding: 8px 16px;
+  justify-content: center;
+  background-image: linear-gradient(to right top, #ff8080, #f89898);
+}
+
+div[class*="announcementBarContent"] {
+  max-width: 1024px;
 }

@@ -338,6 +338,12 @@ ${content}`,
         },
       ],
     },
+    announcementBar: {
+      id: "oct-2025-announcement",
+      content:
+        '⚠️ As of 1 October 2025, OpenAttestation will no longer be maintained. Existing users can continue to access the archived library. Users are strongly encouraged to transition to TrustVC provided by Infocomm Media Development Authority (IMDA), which supports similar capabilities with added cross-border interoperability. For more information on TrustVC, please visit <a target="_blank" rel="noopener noreferrer" href="https://trustvc.io/">https://trustvc.io</a>',
+      isCloseable: false,
+    },
 
     algolia: {
       appId: "M0GN6T3PD5",
